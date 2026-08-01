@@ -1,0 +1,16 @@
+node_modules/
+dist/
+.next/
+out/
+*.tsbuildinfo
+.env
+.env.local
+.DS_Store
+.cache/
+web/public/index/
+web/.generated/
+web/out/
+statements/.lake/
+ingest/.cache/
+ingest/.sweep-state.json
+.env

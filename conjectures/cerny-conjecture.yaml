@@ -1,0 +1,59 @@
+aliases:
+  - Synchronizing word
+claims: []
+id: cerny-conjecture
+ids:
+  external:
+    - label: "Wikipedia: Synchronizing word"
+      url: https://en.wikipedia.org/wiki/Synchronizing_word
+    - label: "*Poznámka k homogénnym experimentom s konečnými automatmi*"
+      url: https://dml.cz/bitstream/handle/10338.dmlcz/126647/MathSlov_14-1964-3_2.pdf
+  formal_conjectures: FormalConjectures/Wikipedia/CernyConjecture.lean
+  wikidata: Q7662204
+  wikipedia: https://en.wikipedia.org/wiki/Synchronizing_word
+openness_basis:
+  asserted_by: google-deepmind/formal-conjectures
+  meaning: no_published_solution_known_to_curator
+  note: Categorized upstream as "research open" at v4.32.0.
+provenance:
+  - fields:
+      - title
+      - statement.informal
+      - statement.formal
+      - subject.msc
+      - ids.external
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: google-deepmind/formal-conjectures
+    upstream_version: v4.32.0
+    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/CernyConjecture.lean
+  - fields:
+      - aliases
+      - ids.wikidata
+      - ids.wikipedia
+      - ids.mathworld
+    license: CC0-1.0
+    retrieved: 2026-07-31
+    source: wikidata
+    url: https://www.wikidata.org/wiki/Q7662204
+statement:
+  formal:
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: cerny_conjecture
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/CernyConjecture.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: shitov_upper_bound
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/CernyConjecture.lean
+  informal: |-
+    **Černý Conjecture**: Every synchronizing DFA with $n$ states admits a
+    synchronizing word of length at most $(n - 1)^2$.
+subject:
+  msc:
+    - "68"
+title: Černý Conjecture

@@ -1,0 +1,51 @@
+claims: []
+id: written-on-the-wall-ii-conjecture-100
+ids:
+  external:
+    - label: E. DeLaVina, Written on the Wall II, Conjectures of Graffiti.pc
+      url: http://cms.dt.uh.edu/faculty/delavinae/research/wowII/
+  formal_conjectures: FormalConjectures/WrittenOnTheWallII/GraphConjecture100.lean
+openness_basis:
+  asserted_by: google-deepmind/formal-conjectures
+  meaning: no_published_solution_known_to_curator
+  note: Categorized upstream as "research open" at v4.32.0.
+provenance:
+  - fields:
+      - title
+      - statement.informal
+      - statement.formal
+      - subject.msc
+      - ids.external
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: google-deepmind/formal-conjectures
+    upstream_version: v4.32.0
+    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/WrittenOnTheWallII/GraphConjecture100.lean
+statement:
+  formal:
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: conjecture100
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/WrittenOnTheWallII/GraphConjecture100.lean
+  informal: |-
+    WOWII [Conjecture 100](http://cms.uhd.edu/faculty/delavinae/research/wowII/all.html#conj100)
+    (status O):
+
+    For a simple connected graph `G`,
+    `α(G) ≤ ⌈(max_v l(v) + 0.5 · diam(Gᶜ)) / 2⌉`
+    where `α(G) = G.indepNum` is the independence number,
+    `max_v l(v)` is the maximum over all vertices of the independence number of
+    the neighbourhood (in `G`), and `diam(Gᶜ)` is the diameter of the
+    complement `Gᶜ`.
+
+    **Note:** `length(Ḡ)` in DeLaVina's original is interpreted here as the
+    diameter of the complement. The hypothesis `hGc : Gᶜ.Connected` is added so
+    that `diam(Gᶜ)` is finite (otherwise `Gᶜ.ediam = ⊤` and
+    `Gᶜ.ediam.toNat` collapses silently to `0`); see the module
+    docstring above.
+subject:
+  msc:
+    - "05"
+title: Written on the Wall II - Conjecture 100

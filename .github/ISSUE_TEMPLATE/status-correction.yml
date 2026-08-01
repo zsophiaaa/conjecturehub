@@ -1,0 +1,54 @@
+name: Status correction
+description: A conjecture's status here is wrong or out of date
+labels: [status, needs-review]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this when we say a conjecture is open and it is not, or we record a resolution that is wrong, disputed or retracted.
+
+        If you can, open a pull request instead — it is faster and the diff makes the change reviewable. See [CONTRIBUTING.md](../blob/main/CONTRIBUTING.md).
+
+  - type: input
+    id: conjecture
+    attributes:
+      label: Which conjecture
+      description: The record id or the page URL.
+      placeholder: erdos-728, or https://conjecturehub.org/conjectures/erdos-728/
+    validations:
+      required: true
+
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What is wrong
+      options:
+        - We say it is open but it has been resolved
+        - We say it is resolved but it is not
+        - The claim type is wrong (e.g. it was already in the literature)
+        - The scope is wrong (it is only settled in some cases)
+        - The claim should be marked disputed or retracted
+        - Something else
+    validations:
+      required: true
+
+  - type: textarea
+    id: sources
+    attributes:
+      label: Sources
+      description: Links to the paper, post or page that supports this. A claim without a source cannot be recorded.
+    validations:
+      required: true
+
+  - type: input
+    id: scope
+    attributes:
+      label: Scope
+      description: If this only applies to part of the conjecture, say which part.
+      placeholder: dimensions >= 3, or assuming GRH
+
+  - type: textarea
+    id: detail
+    attributes:
+      label: Anything else
+      description: Especially useful if the situation is contested.

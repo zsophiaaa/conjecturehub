@@ -1,0 +1,84 @@
+claims: []
+id: erdos-18
+ids:
+  erdos: "18"
+  external:
+    - label: erdosproblems.com/18
+      url: https://www.erdosproblems.com/18
+  formal_conjectures: FormalConjectures/ErdosProblems/18.lean
+  oeis:
+    - A005153
+openness_basis:
+  asserted_by: erdosproblems.com
+  asserted_on: 2025-08-31
+  meaning: no_published_solution_known_to_curator
+  note: Categorized upstream as "research open" at v4.32.0.
+provenance:
+  - fields:
+      - title
+      - statement.informal
+      - statement.formal
+      - subject.msc
+      - ids.external
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: google-deepmind/formal-conjectures
+    upstream_version: v4.32.0
+    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/18.lean
+  - fields:
+      - ids.erdos
+      - ids.oeis
+      - subject.tags
+      - openness_basis
+      - claims
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: teorth/erdosproblems
+    upstream_version: d031865128a7ddccd85e8099f0f818211cfc9a41
+    url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
+statement:
+  formal:
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: erdos_18a
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/18.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: erdos_18b
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/18.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: erdos_18c
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/18.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: erdos_18_upper_bound
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/18.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: erdos_18_vose
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/18.lean
+  informal: |-
+    **Conjecture 1.**
+    Are there infinitely many practical numbers $m$ such that $h(m) < (\log \log m)^{O(1)}$?
+
+    More precisely: does there exist a constant $C > 0$ such that for infinitely many
+    practical numbers $m$, we have $h(m) < (\log \log m)^C$?
+subject:
+  msc:
+    - "11"
+  tags:
+    - number theory
+    - divisors
+    - factorials
+title: Erdős Problem 18

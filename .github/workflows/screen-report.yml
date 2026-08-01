@@ -1,0 +1,54 @@
+name: Post screening result
+
+# Posts the screening summary as a pull request comment.
+#
+# This is split out from the screening job on purpose. Screening checks out and
+# runs untrusted code, so it must stay on `pull_request` with a read-only token.
+# Commenting needs write access. `workflow_run` runs this in the context of the
+# base repository after the untrusted job has finished, and it only ever reads
+# an artifact -- it never checks out the contributor's code.
+on:
+  workflow_run:
+    workflows: ["Screen contributions"]
+    types: [completed]
+
+permissions:
+  pull-requests: write
+  actions: read
+
+jobs:
+  comment:
+    runs-on: ubuntu-latest
+    if: github.event.workflow_run.event == 'pull_request'
+    steps:
+      - name: Download the screening artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: screening
+          path: screening
+          run-id: ${{ github.event.workflow_run.id }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Post or update the comment
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+        run: |
+          set -euo pipefail
+          [ -f screening/screening.md ] || exit 0
+          [ -f screening/pr-number.txt ] || exit 0
+
+          PR="$(tr -dc '0-9' < screening/pr-number.txt)"
+          [ -n "$PR" ] || exit 0
+
+          MARKER="<!-- conjecturehub-screening -->"
+          printf '%s\n\n' "$MARKER" | cat - screening/screening.md > body.md
+
+          EXISTING="$(gh api "repos/$REPO/issues/$PR/comments" \
+            --jq "[.[] | select(.body | startswith(\"$MARKER\"))] | first | .id // empty")"
+
+          if [ -n "$EXISTING" ]; then
+            gh api -X PATCH "repos/$REPO/issues/comments/$EXISTING" -F body=@body.md >/dev/null
+          else
+            gh api -X POST "repos/$REPO/issues/$PR/comments" -F body=@body.md >/dev/null
+          fi

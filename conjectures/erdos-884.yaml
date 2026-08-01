@@ -1,0 +1,99 @@
+claims:
+  - evidence_tier: published
+    id: erdos-884-fc-solved
+    notes: Imported from the upstream `research solved` category. The statement is formalized; the proof has not been machine-checked by ConjectureHub.
+    recorded_on: 2026-07-31
+    reviewer: google-deepmind/formal-conjectures maintainers
+    source:
+      kind: dataset
+      title: formal-conjectures marks erdos_884 as research solved
+      url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/884.lean
+    state: active
+    type: proved
+  - asserted_on: 2026-07-03
+    evidence_tier: published
+    id: erdos-884-erdos-status
+    recorded_on: 2026-07-31
+    reviewer: teorth/erdosproblems maintainers
+    source:
+      kind: dataset
+      title: erdosproblems.com records this problem as "disproved"
+      url: https://www.erdosproblems.com/884
+    state: active
+    type: disproved
+id: erdos-884
+ids:
+  erdos: "884"
+  external:
+    - label: erdosproblems.com/884
+      url: https://www.erdosproblems.com/884
+    - label: Tao25
+      url: https://terrytao.wordpress.com/wp-content/uploads/2025/09/erdos-884.pdf
+    - label: Larsen
+      url: https://github.com/Larsen-Daniel/Erdos-884/blob/main/884.pdf
+  formal_conjectures: FormalConjectures/ErdosProblems/884.lean
+openness_basis:
+  asserted_by: erdosproblems.com
+  asserted_on: 2026-07-03
+  meaning: no_published_solution_known_to_curator
+provenance:
+  - fields:
+      - title
+      - statement.informal
+      - statement.formal
+      - subject.msc
+      - ids.external
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: google-deepmind/formal-conjectures
+    upstream_version: v4.32.0
+    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/884.lean
+  - fields:
+      - ids.erdos
+      - ids.oeis
+      - subject.tags
+      - openness_basis
+      - claims
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: teorth/erdosproblems
+    upstream_version: d031865128a7ddccd85e8099f0f818211cfc9a41
+    url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
+statement:
+  formal:
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: erdos_884
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/884.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: erdos_884_false_of_hardy_littlewood
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/884.lean
+  informal: |-
+    For a natural number n, let $1 = d_1 < \dotsc < d_{\tau(n)} = n$ denote the divisors of $n$
+    in increasing order.
+    Does it hold that
+    $\sum_{1 \le i < j \le \tau(n)} \frac{1}{d_j - d_i} \ll 1 + \sum_{1 \le i < \tau(n)}
+    \frac{1}{d_{i + 1} - d_i}$
+    for $n \to \infty`, i.e.
+    $\sum_{1 \le i < j \le \tau(n)} \frac{1}{d_j - d_i} \in O \left( 1 + \sum_{1 \le i < \tau(n)}
+    \frac{1}{d_{i + 1} - d_i}) \right)$?
+
+    This conjecture has been **disproved**:
+    - In September 2025, Terence Tao gave a conditional _negative_ answer assuming the prime tuples
+     conjecture, see `erdos_884_false_of_hardy_littlewood` for this implication.
+    - Daniel Larsen subsequently gave an
+     [unconditional disproof](https://github.com/Larsen-Daniel/Erdos-884/blob/main/884.pdf).
+
+    *Reference:* [erdosproblems.com/884](https://www.erdosproblems.com/884)
+subject:
+  msc:
+    - "11"
+  tags:
+    - number theory
+    - divisors
+title: Erdős Problem 884

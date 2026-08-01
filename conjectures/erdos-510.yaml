@@ -1,0 +1,70 @@
+claims: []
+id: erdos-510
+ids:
+  erdos: "510"
+  external:
+    - label: erdosproblems.com/510
+      url: https://www.erdosproblems.com/510
+    - label: Ben Green's Open Problem 81
+      url: https://people.maths.ox.ac.uk/greenbj/papers/open-problems.pdf#section.11
+  formal_conjectures: FormalConjectures/ErdosProblems/510.lean
+openness_basis:
+  asserted_by: erdosproblems.com
+  asserted_on: 2025-08-31
+  meaning: no_published_solution_known_to_curator
+  note: Categorized upstream as "research open" at v4.32.0.
+provenance:
+  - fields:
+      - title
+      - statement.informal
+      - statement.formal
+      - subject.msc
+      - ids.external
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: google-deepmind/formal-conjectures
+    upstream_version: v4.32.0
+    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/510.lean
+  - fields:
+      - ids.erdos
+      - ids.oeis
+      - subject.tags
+      - openness_basis
+      - claims
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: teorth/erdosproblems
+    upstream_version: d031865128a7ddccd85e8099f0f818211cfc9a41
+    url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
+statement:
+  formal:
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: erdos_510
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/510.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: erdos_510.variants.ruzsa
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/510.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: erdos_510.variants.bedert
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/510.lean
+  informal: |-
+    **Chowla's cosine problem**
+
+    If $A\subset \mathbb{N}$ is a finite set of positive integers of size $N > 0$ then is there some
+    absolute constant $c>0$ and $\theta$ such that
+    $$\sum_{n\in A}\cos(n\theta) < -cN^{1/2}?$$
+subject:
+  msc:
+    - "11"
+  tags:
+    - analysis
+title: Erdős Problem 510

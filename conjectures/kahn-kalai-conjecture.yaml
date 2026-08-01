@@ -1,0 +1,27 @@
+aliases:
+  - Kahn-Kalai conjecture
+  - Park-Pham Theorem
+  - expectation threshold conjecture
+  - expectation-threshold conjecture
+claims: []
+id: kahn-kalai-conjecture
+ids:
+  wikidata: Q111724047
+  wikipedia: https://en.wikipedia.org/wiki/Kahn%E2%80%93Kalai_conjecture
+openness_basis:
+  asserted_by: wikidata
+  meaning: unknown
+  note: Identity record only. No statement or status has been ingested for this conjecture yet.
+provenance:
+  - fields:
+      - aliases
+      - ids.wikidata
+      - ids.wikipedia
+      - ids.mathworld
+    license: CC0-1.0
+    retrieved: 2026-07-31
+    source: wikidata
+    url: https://www.wikidata.org/wiki/Q111724047
+statement: {}
+subject: {}
+title: Kahn–Kalai conjecture

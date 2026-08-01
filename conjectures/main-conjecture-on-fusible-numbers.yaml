@@ -1,0 +1,49 @@
+claims: []
+id: main-conjecture-on-fusible-numbers
+ids:
+  external:
+    - label: Fusible numbers and Peano Arithmetic
+      url: https://arxiv.org/abs/2003.14342
+    - label: Fusible numbers and Peano Arithmetic
+      url: https://doi.org/10.46298/lmcs-18%283%3A6%292022
+  formal_conjectures: FormalConjectures/Paper/FusibleNumber.lean
+openness_basis:
+  asserted_by: google-deepmind/formal-conjectures
+  meaning: no_published_solution_known_to_curator
+  note: Categorized upstream as "research open" at v4.32.0.
+provenance:
+  - fields:
+      - title
+      - statement.informal
+      - statement.formal
+      - subject.msc
+      - ids.external
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: google-deepmind/formal-conjectures
+    upstream_version: v4.32.0
+    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Paper/FusibleNumber.lean
+statement:
+  formal:
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: conj_7_1
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Paper/FusibleNumber.lean
+  informal: |-
+    If `x` is a fusible number and `y` is its successor, then the interval `[x + 1, y + 1)` can be
+    divided into intervals `[ℓₙ, ℓₙ₊₁)`, such that the fusible numbers in `[ℓₙ, ℓₙ₊₁)` are obtained by
+    fusing the `n + 1`st successor of `x` with a fusible number.
+    This formalization differs from Conjecture 7.1 in the paper in four ways:
+    (1) it is obtained from Conjecture 7.1 by plugging in `n + 1` into `n`, which simplifies the expressions
+     and removes the need to assume `n ≥ 1`;
+    (2) the `n + 1`st successor `s^(n+1)(x)` is replaced by the explicit value `x + (2 - 1 / 2 ^ n) * m`;
+    (3) instead of defining `y` to be the successor of `x`, we assert that there is no fusible number
+     strictly between `x` and `y`;
+    (4) instead of using `∃ z, IsFusible z ∧ q = s^(n+1)(x) ~ z` we use the value of `z` determined by the equality,
+     namely `z = 2 * q - 1 - s^(n+1)(x)`, and it is easy to see `z ∈ [x + 1 - m / 2 ^ n, x + 1)` as required.
+subject:
+  msc:
+    - "05"
+title: Main conjecture on fusible numbers

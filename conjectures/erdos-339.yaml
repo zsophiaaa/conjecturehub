@@ -1,0 +1,41 @@
+claims:
+  - asserted_on: 2025-10-12
+    evidence_tier: published
+    id: erdos-339-erdos-status
+    recorded_on: 2026-07-31
+    reviewer: teorth/erdosproblems maintainers
+    source:
+      kind: dataset
+      title: erdosproblems.com records this problem as "proved"
+      url: https://www.erdosproblems.com/339
+    state: active
+    type: proved
+id: erdos-339
+ids:
+  erdos: "339"
+  external:
+    - label: erdosproblems.com/339
+      url: https://www.erdosproblems.com/339
+openness_basis:
+  asserted_by: erdosproblems.com
+  asserted_on: 2025-10-12
+  meaning: no_published_solution_known_to_curator
+  note: No formalization is indexed for this problem yet; read the statement upstream.
+provenance:
+  - fields:
+      - ids.erdos
+      - ids.oeis
+      - subject.tags
+      - openness_basis
+      - claims
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: teorth/erdosproblems
+    upstream_version: d031865128a7ddccd85e8099f0f818211cfc9a41
+    url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
+statement: {}
+subject:
+  tags:
+    - number theory
+    - additive basis
+title: Erdős Problem 339

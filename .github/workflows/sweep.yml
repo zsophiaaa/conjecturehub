@@ -1,0 +1,123 @@
+name: Sweep
+
+# Watches free sources for claimed resolutions and opens a pull request adding
+# unverified claims. Merging that pull request is the review step -- nothing
+# here changes a conjecture's status on its own.
+#
+# This runs in Actions rather than on Vercel because the Vercel Hobby plan caps
+# cron at once per day, while Actions minutes are free and unmetered on public
+# repositories.
+on:
+  schedule:
+    # Every six hours, offset off the hour to avoid the scheduler's peak, where
+    # jobs are routinely delayed or dropped.
+    - cron: "17 */6 * * *"
+  workflow_dispatch:
+    inputs:
+      window_days:
+        description: How many days back to consider
+        required: false
+        default: "14"
+      budget:
+        description: Maximum classifier calls
+        required: false
+        default: "60"
+
+permissions:
+  contents: write
+  pull-requests: write
+  models: read
+
+concurrency:
+  group: sweep
+  cancel-in-progress: false
+
+jobs:
+  sweep:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      # Remembering what we have already looked at is what keeps the classifier
+      # budget from being spent re-reading the same arXiv listing every run.
+      - name: Restore sweep memory
+        uses: actions/cache/restore@v4
+        with:
+          path: ingest/.cache
+          key: sweep-cache-${{ github.run_id }}
+          restore-keys: sweep-cache-
+
+      - name: Run the sweep
+        id: sweep
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          LLM_BASE_URL: ${{ secrets.LLM_BASE_URL }}
+          LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
+          LLM_MODEL: ${{ vars.LLM_MODEL }}
+          ZULIP_EMAIL: ${{ secrets.ZULIP_EMAIL }}
+          ZULIP_API_KEY: ${{ secrets.ZULIP_API_KEY }}
+        run: |
+          npx tsx ingest/src/cli/sweep.ts \
+            --write \
+            --window "${{ inputs.window_days || '14' }}" \
+            --budget "${{ inputs.budget || '60' }}" \
+            --pr-body /tmp/pr-body.md \
+            --report /tmp/sweep-report.json
+
+      - name: Save sweep memory
+        if: always()
+        uses: actions/cache/save@v4
+        with:
+          path: ingest/.cache
+          key: sweep-cache-${{ github.run_id }}
+
+      # A pull request opened with GITHUB_TOKEN does not trigger other
+      # workflows, so Validate will not run on it. Validate here instead.
+      - name: Validate what the sweep wrote
+        if: steps.sweep.outputs.written != '0'
+        run: npm run validate
+
+      - name: Open or update the pull request
+        if: steps.sweep.outputs.written != '0'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          BRANCH="sweep/$(date -u +%Y-%m-%d)"
+
+          git config user.name "conjecturehub-bot"
+          git config user.email "bot@conjecturehub.org"
+
+          git fetch origin "$BRANCH" 2>/dev/null && git checkout "$BRANCH" || git checkout -b "$BRANCH"
+
+          git add conjectures/
+          git commit -m "sweep: ${{ steps.sweep.outputs.written }} unverified claim(s) from $(date -u +%Y-%m-%d)"
+          git push --set-upstream origin "$BRANCH"
+
+          if gh pr view "$BRANCH" --json number >/dev/null 2>&1; then
+            gh pr edit "$BRANCH" --body-file /tmp/pr-body.md
+          else
+            gh pr create \
+              --base main \
+              --head "$BRANCH" \
+              --title "Sweep: ${{ steps.sweep.outputs.written }} unverified claim(s), $(date -u +%Y-%m-%d)" \
+              --body-file /tmp/pr-body.md \
+              --label "sweep" \
+              --label "unverified"
+          fi
+
+      - name: Upload the report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: sweep-report
+          path: /tmp/sweep-report.json
+          if-no-files-found: ignore
+          retention-days: 14

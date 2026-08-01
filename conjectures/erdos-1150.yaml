@@ -1,0 +1,56 @@
+claims: []
+id: erdos-1150
+ids:
+  erdos: "1150"
+  external:
+    - label: erdosproblems.com/1150
+      url: https://www.erdosproblems.com/1150
+  formal_conjectures: FormalConjectures/ErdosProblems/1150.lean
+openness_basis:
+  asserted_by: erdosproblems.com
+  asserted_on: 2026-01-23
+  meaning: no_published_solution_known_to_curator
+  note: Categorized upstream as "research open" at v4.32.0.
+provenance:
+  - fields:
+      - title
+      - statement.informal
+      - statement.formal
+      - subject.msc
+      - ids.external
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: google-deepmind/formal-conjectures
+    upstream_version: v4.32.0
+    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/1150.lean
+  - fields:
+      - ids.erdos
+      - ids.oeis
+      - subject.tags
+      - openness_basis
+      - claims
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: teorth/erdosproblems
+    upstream_version: d031865128a7ddccd85e8099f0f818211cfc9a41
+    url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
+statement:
+  formal:
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: erdos_1150
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/1150.lean
+  informal: |-
+    Is there some constant $c > 0$ such that, for all large enough $n$ and all polynomials $P$ of
+    degree $n$ with coefficients in $\{-1, 1\}$,
+    $$\max_{|z|=1} |P(z)| > (1 + c) \sqrt{n}?$$
+subject:
+  msc:
+    - "12"
+    - "30"
+  tags:
+    - analysis
+    - polynomials
+title: Erdős Problem 1150

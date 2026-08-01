@@ -1,0 +1,94 @@
+aliases:
+  - Frankl's conjecture
+claims: []
+id: union-closed-sets-conjecture
+ids:
+  external:
+    - label: Wikipedia
+      url: https://en.wikipedia.org/wiki/Union-closed_sets_conjecture
+  formal_conjectures: FormalConjectures/Wikipedia/UnionClosed.lean
+  mathworld: https://mathworld.wolfram.com/Union-ClosedSetsConjecture.html
+  wikidata: Q2993338
+  wikipedia: https://en.wikipedia.org/wiki/Union-closed_sets_conjecture
+openness_basis:
+  asserted_by: google-deepmind/formal-conjectures
+  meaning: no_published_solution_known_to_curator
+  note: Categorized upstream as "research open" at v4.32.0.
+provenance:
+  - fields:
+      - title
+      - statement.informal
+      - statement.formal
+      - subject.msc
+      - ids.external
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: google-deepmind/formal-conjectures
+    upstream_version: v4.32.0
+    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/UnionClosed.lean
+  - fields:
+      - aliases
+      - ids.wikidata
+      - ids.wikipedia
+      - ids.mathworld
+    license: CC0-1.0
+    retrieved: 2026-07-31
+    source: wikidata
+    url: https://www.wikidata.org/wiki/Q2993338
+statement:
+  formal:
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: union_closed
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/UnionClosed.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: union_closed.variants.yu
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/UnionClosed.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: union_closed.variants.univ_card
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/UnionClosed.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: union_closed.variants.family_card
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/UnionClosed.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: union_closed.variants.univ_card_two
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/UnionClosed.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: union_closed.variants.singleton_mem
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/UnionClosed.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: union_closed.variants.sharpness
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/UnionClosed.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: union_closed.variants.cardinality_even_of_union_closed_tight
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/UnionClosed.lean
+  informal: |-
+    For every finite union-closed family of sets, other than the family containing only the empty set,
+    there exists an element that belongs to at least half of the sets in the family.
+subject:
+  msc:
+    - "05"
+title: Union-closed sets conjecture

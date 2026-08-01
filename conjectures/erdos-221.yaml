@@ -1,0 +1,70 @@
+claims:
+  - evidence_tier: published
+    id: erdos-221-fc-solved
+    notes: Imported from the upstream `research solved` category. The statement is formalized; the proof has not been machine-checked by ConjectureHub.
+    recorded_on: 2026-07-31
+    reviewer: google-deepmind/formal-conjectures maintainers
+    source:
+      kind: dataset
+      title: formal-conjectures marks erdos_221 as research solved
+      url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/221.lean
+    state: active
+    type: proved
+id: erdos-221
+ids:
+  erdos: "221"
+  external:
+    - label: erdosproblems.com/221
+      url: https://www.erdosproblems.com/221
+  formal_conjectures: FormalConjectures/ErdosProblems/221.lean
+openness_basis:
+  asserted_by: erdosproblems.com
+  asserted_on: 2026-01-31
+  meaning: no_published_solution_known_to_curator
+provenance:
+  - fields:
+      - title
+      - statement.informal
+      - statement.formal
+      - subject.msc
+      - ids.external
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: google-deepmind/formal-conjectures
+    upstream_version: v4.32.0
+    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/221.lean
+  - fields:
+      - ids.erdos
+      - ids.oeis
+      - subject.tags
+      - openness_basis
+      - claims
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: teorth/erdosproblems
+    upstream_version: d031865128a7ddccd85e8099f0f818211cfc9a41
+    url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
+statement:
+  formal:
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: erdos_221
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/221.lean
+  informal: |-
+    Is there a set $A\subset\mathbb{N}$ such that, for all large $N$,
+    \[\lvert A\cap\{1,\ldots,N\}\rvert \ll N/\log N\]
+    and such that every large integer can be written as $2^k+a$ for some
+    $k\geq 0$ and $a\in A$?
+
+    Lorentz [Lo54] proved there is such a set with, for all large $N$,
+    \[\lvert A\cap\{1,\ldots,N\}\rvert \ll \frac{\log\log N}{\log N}N\]
+    The answer is yes, proved by Ruzsa [Ru72].
+subject:
+  msc:
+    - "11"
+  tags:
+    - number theory
+    - additive basis
+title: Erdős Problem 221

@@ -1,0 +1,96 @@
+name: Record verification receipts
+
+# After a proof is merged, re-checks it on the default branch and writes the
+# machine-verified claim into the corpus.
+#
+# Verification runs a second time on purpose. The receipt is the strongest thing
+# this project asserts, so it is produced by a run on trusted `main` where no
+# part of the input came from a contributor's branch -- not by reusing the
+# result of a run that checked out their code.
+on:
+  push:
+    branches: [main]
+    paths:
+      - "statements/Solution/**"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: record-verification
+  cancel-in-progress: false
+
+env:
+  LEAN_TOOLCHAIN: v4.32.0
+  MATHLIB_REV: v4.32.0
+  COMPARATOR_REV: master
+
+jobs:
+  record:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Work out which challenges to check
+        id: targets
+        run: |
+          BASE="$(git rev-parse HEAD~1 2>/dev/null || git rev-parse HEAD)"
+          .github/scripts/select-challenges.sh "$BASE"
+
+      - uses: ./.github/actions/setup-lean
+        if: steps.targets.outputs.names != ''
+        with:
+          lean_toolchain: ${{ env.LEAN_TOOLCHAIN }}
+          mathlib_rev: ${{ env.MATHLIB_REV }}
+          comparator_rev: ${{ env.COMPARATOR_REV }}
+
+      - name: Verify on main
+        if: steps.targets.outputs.names != ''
+        working-directory: statements
+        env:
+          # More generous than the pull request budget: at this point the proof
+          # is already merged, so a slow check should still produce a receipt.
+          VERIFY_BUDGET_SECONDS: "3600"
+        run: |
+          set -uo pipefail
+          mkdir -p ../verify-results
+          for name in ${{ steps.targets.outputs.names }}; do
+            ./verify.sh "$name" "../verify-results/$name.json" || true
+          done
+
+      - name: Write the receipts
+        if: steps.targets.outputs.names != ''
+        id: record
+        run: |
+          npx tsx ingest/src/cli/record-verification.ts \
+            --results verify-results \
+            --toolchain "lean ${LEAN_TOOLCHAIN} / mathlib ${MATHLIB_REV}" \
+            --run-url "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+
+      - name: Validate and commit
+        if: steps.record.outputs.recorded != '0' && steps.record.outputs.recorded != ''
+        run: |
+          set -euo pipefail
+          npm run validate
+
+          git config user.name "conjecturehub-bot"
+          git config user.email "bot@conjecturehub.org"
+          git add conjectures/
+          git commit -m "verify: record ${{ steps.record.outputs.recorded }} machine-verified claim(s)"
+          git push
+
+      - name: Summarize
+        if: always() && steps.targets.outputs.names != ''
+        run: .github/scripts/summarize-verification.sh verify-results >> "$GITHUB_STEP_SUMMARY"

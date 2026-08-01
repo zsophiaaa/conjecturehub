@@ -1,0 +1,114 @@
+claims: []
+id: agoh-giuga-conjecture
+ids:
+  external:
+    - label: Wikipedia
+      url: https://en.wikipedia.org/wiki/Agoh-Giuga_conjecture
+  formal_conjectures: FormalConjectures/Wikipedia/AgohGiuga.lean
+  mathworld: https://mathworld.wolfram.com/AgohsConjecture.html
+  wikidata: Q2246542
+  wikipedia: https://en.wikipedia.org/wiki/Agoh-Giuga_conjecture
+openness_basis:
+  asserted_by: google-deepmind/formal-conjectures
+  meaning: no_published_solution_known_to_curator
+  note: Categorized upstream as "research open" at v4.32.0.
+provenance:
+  - fields:
+      - title
+      - statement.informal
+      - statement.formal
+      - subject.msc
+      - ids.external
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: google-deepmind/formal-conjectures
+    upstream_version: v4.32.0
+    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/AgohGiuga.lean
+  - fields:
+      - aliases
+      - ids.wikidata
+      - ids.wikipedia
+      - ids.mathworld
+    license: CC0-1.0
+    retrieved: 2026-07-31
+    source: wikidata
+    url: https://www.wikidata.org/wiki/Q2246542
+statement:
+  formal:
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: agoh_giuga
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/AgohGiuga.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: agoh_giuga.variants.giuga
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/AgohGiuga.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: agoh_giuga.variants.equivalence
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/AgohGiuga.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: isWeakGiuga_iff_prime_dvd
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/AgohGiuga.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: isWeakGiuga_iff_sum_primeFactors
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/AgohGiuga.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: isStrongGiuga_iff
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/AgohGiuga.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: agoh_giuga.variants.isStrongGiuga_implies_isCarmichael
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/AgohGiuga.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: agoh_giuga.variants.le_primeFactors_card_of_isStrongGiuga
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/AgohGiuga.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: agoh_giuga.variants._1000_le_digits_length_of_isStrongGiuga
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/AgohGiuga.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: agoh_giuga.variants._1700_le_digits_length_of_isStrongGiuga
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/AgohGiuga.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: agoh_giuga.variants._13000_le_digits_length_of_isStrongGiuga
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/AgohGiuga.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: agoh_giuga.variants.isStrongGiuga_growth
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/AgohGiuga.lean
+  informal: The **Agoh-Giuga Conjecture**, Agoh's formulation
+subject:
+  msc:
+    - "11"
+title: Agoh-Giuga conjecture

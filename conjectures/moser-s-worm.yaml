@@ -1,0 +1,70 @@
+claims: []
+id: moser-s-worm
+ids:
+  external:
+    - label: Wikipedia
+      url: https://en.wikipedia.org/wiki/Moser%27s_worm_problem
+  formal_conjectures: FormalConjectures/Wikipedia/MoserWorm.lean
+  wikipedia: https://en.wikipedia.org/wiki/Moser%27s_worm_problem
+openness_basis:
+  asserted_by: google-deepmind/formal-conjectures
+  meaning: no_published_solution_known_to_curator
+  note: Categorized upstream as "research open" at v4.32.0.
+provenance:
+  - fields:
+      - title
+      - statement.informal
+      - statement.formal
+      - subject.msc
+      - ids.external
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: google-deepmind/formal-conjectures
+    upstream_version: v4.32.0
+    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/MoserWorm.lean
+statement:
+  formal:
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: mosers_worm_problem
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/MoserWorm.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: mosers_worm_problem_upper_bound
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/MoserWorm.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: convex_mosers_worm_problem
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/MoserWorm.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: convex_mosers_worm_problem_bound_attained
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/MoserWorm.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: convex_mosers_worm_problem_upper_bound
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/MoserWorm.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: convex_mosers_worm_problem_lower_bound
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/MoserWorm.lean
+  informal: |-
+    **Moser's Worm Problem**
+    What is the minimal area (or greatest lower bound on the area)
+    of a shape that can cover every unit-length curve?
+subject:
+  msc:
+    - "52"
+title: Moser's Worm

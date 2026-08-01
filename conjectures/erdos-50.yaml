@@ -1,0 +1,66 @@
+claims: []
+id: erdos-50
+ids:
+  erdos: "50"
+  external:
+    - label: erdosproblems.com/50
+      url: https://www.erdosproblems.com/50
+  formal_conjectures: FormalConjectures/ErdosProblems/50.lean
+openness_basis:
+  asserted_by: erdosproblems.com
+  asserted_on: 2025-08-31
+  meaning: no_published_solution_known_to_curator
+  note: Categorized upstream as "research open" at v4.32.0.
+provenance:
+  - fields:
+      - title
+      - statement.informal
+      - statement.formal
+      - subject.msc
+      - ids.external
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: google-deepmind/formal-conjectures
+    upstream_version: v4.32.0
+    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/50.lean
+  - fields:
+      - ids.erdos
+      - ids.oeis
+      - subject.tags
+      - openness_basis
+      - claims
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: teorth/erdosproblems
+    upstream_version: d031865128a7ddccd85e8099f0f818211cfc9a41
+    url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
+statement:
+  formal:
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: erdos_50_schoenberg
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/50.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: erdos_50_singular
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/50.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: erdos_50
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/50.lean
+  informal: |-
+    Let $f$ be the asymptotic distribution function of $\varphi(n)/n$, so that for each $c \in [0,1]$,
+    $f(c)$ is the natural density of $\{n : \varphi(n) < cn\}$. Is it true that there is no $x$ such
+    that the derivative $f'(x)$ exists and is positive?
+subject:
+  msc:
+    - "11"
+  tags:
+    - number theory
+title: Erdős Problem 50

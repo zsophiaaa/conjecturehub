@@ -1,0 +1,40 @@
+claims: []
+id: conjecture-19-25
+ids:
+  external:
+    - label: The Kourovka Notebook
+      url: https://arxiv.org/abs/1401.0300v40
+  formal_conjectures: FormalConjectures/Kourovka/19_25.lean
+openness_basis:
+  asserted_by: google-deepmind/formal-conjectures
+  meaning: no_published_solution_known_to_curator
+  note: Categorized upstream as "research open" at v4.32.0.
+provenance:
+  - fields:
+      - title
+      - statement.informal
+      - statement.formal
+      - subject.msc
+      - ids.external
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: google-deepmind/formal-conjectures
+    upstream_version: v4.32.0
+    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Kourovka/19_25.lean
+statement:
+  formal:
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: kourovka_19_25
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Kourovka/19_25.lean
+  informal: |-
+    Let $G$ and $H$ be finite groups of the same order with
+    $\sum_{g \in G} \phi(|g|) = \sum_{h \in H} \phi(|h|)$,
+    where $\phi$ is the Euler totient function. Suppose that $G$ is simple. Is
+    $H$ necessarily simple?
+subject:
+  msc:
+    - "20"
+title: Conjecture 19.25

@@ -1,0 +1,40 @@
+claims: []
+id: hartshorne-s-conjecture-on-vector-bundles
+ids:
+  external:
+    - label: Varieties of small codimension in projective space
+      url: https://projecteuclid.org/journals/bulletin-of-the-american-mathematical-society-new-series/volume-80/issue-6/Varieties-of-small-codimension-in-projective-space/bams/1183535999.full
+    - label: Evidences on Hartshorne's conjecture? References?
+      url: https://mathoverflow.net/questions/13990/evidences-on-hartshornes-conjecture-references
+  formal_conjectures: FormalConjectures/Paper/HartshorneConjecture.lean
+openness_basis:
+  asserted_by: google-deepmind/formal-conjectures
+  meaning: no_published_solution_known_to_curator
+  note: Categorized upstream as "research open" at v4.32.0.
+provenance:
+  - fields:
+      - title
+      - statement.informal
+      - statement.formal
+      - subject.msc
+      - ids.external
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: google-deepmind/formal-conjectures
+    upstream_version: v4.32.0
+    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Paper/HartshorneConjecture.lean
+statement:
+  formal:
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: harthshorne_conjecture
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Paper/HartshorneConjecture.lean
+  informal: |-
+    There are no indecomposable vector bundles of rank 2 on $\mathbb{P}^n$ for $n \ge 7$.
+    This is Conjecture 6.3 in [Har1974].
+subject:
+  msc:
+    - "14"
+title: Hartshorne's conjecture on Vector Bundles

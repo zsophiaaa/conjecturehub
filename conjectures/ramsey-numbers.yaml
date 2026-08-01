@@ -1,0 +1,56 @@
+claims: []
+id: ramsey-numbers
+ids:
+  external:
+    - label: "Wikipedia: Ramsey number"
+      url: https://en.wikipedia.org/wiki/Ramsey_number
+    - label: OEIS A212954
+      url: https://oeis.org/A212954
+    - label: "MathWorld: Ramsey Number"
+      url: https://mathworld.wolfram.com/RamseyNumber.html
+  formal_conjectures: FormalConjectures/Wikipedia/RamseyNumbers.lean
+  wikipedia: https://en.wikipedia.org/wiki/Ramsey_number
+openness_basis:
+  asserted_by: google-deepmind/formal-conjectures
+  meaning: no_published_solution_known_to_curator
+  note: Categorized upstream as "research open" at v4.32.0.
+provenance:
+  - fields:
+      - title
+      - statement.informal
+      - statement.formal
+      - subject.msc
+      - ids.external
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: google-deepmind/formal-conjectures
+    upstream_version: v4.32.0
+    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/RamseyNumbers.lean
+statement:
+  formal:
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: ramsey_number_five_five
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/RamseyNumbers.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: ramsey_number_five_five_lower_bound
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/RamseyNumbers.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: ramsey_number_five_five_upper_bound
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/RamseyNumbers.lean
+  informal: |-
+    The open problem: determine the Ramsey number $R(5,5)$.
+
+    It is known that $43 \le R(5,5) \le 46$.
+subject:
+  msc:
+    - "05"
+title: Ramsey numbers

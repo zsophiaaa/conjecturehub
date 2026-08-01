@@ -1,0 +1,42 @@
+claims: []
+id: graceful-tree-conjecture-ringel-kotzig-conjecture
+ids:
+  external:
+    - label: Wikipedia/Graceful_labeling
+      url: https://en.wikipedia.org/wiki/Graceful_labeling
+  formal_conjectures: FormalConjectures/Wikipedia/GracefulLabeling.lean
+  wikipedia: https://en.wikipedia.org/wiki/Graceful_labeling
+openness_basis:
+  asserted_by: google-deepmind/formal-conjectures
+  meaning: no_published_solution_known_to_curator
+  note: Categorized upstream as "research open" at v4.32.0.
+provenance:
+  - fields:
+      - title
+      - statement.informal
+      - statement.formal
+      - subject.msc
+      - ids.external
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: google-deepmind/formal-conjectures
+    upstream_version: v4.32.0
+    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/GracefulLabeling.lean
+statement:
+  formal:
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: graceful_tree_conjecture
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/GracefulLabeling.lean
+  informal: |-
+    Every tree admits a graceful labeling.
+
+    A graceful labeling of a tree $T$ with $m$ edges is an injective map $f : V \to \{0, \dots, m\}$
+    such that the multiset of absolute differences $|f(u) - f(v)|$ over edges $\{u,v\}$ of $T$
+    equals $\{1, \dots, m\}$.
+subject:
+  msc:
+    - "05"
+title: Graceful Tree Conjecture (Ringel–Kotzig conjecture)

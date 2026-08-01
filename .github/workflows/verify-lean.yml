@@ -1,0 +1,99 @@
+name: Verify Lean proofs
+
+# Checks submitted Lean proofs with leanprover/comparator.
+#
+# Two things make this trustworthy, and both are easy to get wrong:
+#
+# 1. The event is `pull_request`, never `pull_request_target`. Fork code runs
+#    with a read-only token and no secrets. `pull_request_target` would run that
+#    same untrusted code with write access to this repository, which is the
+#    standard way a project gets compromised by a drive-by pull request.
+#
+# 2. Everything in `statements/` except the solution files is restored from the
+#    base commit before anything is built. A submitter who could edit the
+#    canonical statement, the lakefile, or this pipeline could make a proof of
+#    something trivial certify a conjecture.
+on:
+  pull_request:
+    paths:
+      - "statements/**"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: verify-lean-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+env:
+  LEAN_TOOLCHAIN: v4.32.0
+  MATHLIB_REV: v4.32.0
+  COMPARATOR_REV: master
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Restore the trusted half of statements/ from the base commit
+        run: |
+          set -euo pipefail
+          BASE="$(git merge-base "origin/${{ github.base_ref }}" HEAD)"
+          echo "base commit: $BASE"
+
+          # Everything a submitter could otherwise use to change what is proved.
+          git checkout "$BASE" -- \
+            statements/Challenge \
+            statements/challenges \
+            statements/lakefile.toml \
+            statements/lean-toolchain \
+            statements/verify.sh
+
+          echo "BASE_SHA=$BASE" >> "$GITHUB_ENV"
+
+      - name: Work out which challenges to check
+        id: targets
+        run: .github/scripts/select-challenges.sh "$BASE_SHA"
+
+      - uses: ./.github/actions/setup-lean
+        if: steps.targets.outputs.names != ''
+        with:
+          lean_toolchain: ${{ env.LEAN_TOOLCHAIN }}
+          mathlib_rev: ${{ env.MATHLIB_REV }}
+          comparator_rev: ${{ env.COMPARATOR_REV }}
+
+      - name: Verify
+        if: steps.targets.outputs.names != ''
+        working-directory: statements
+        env:
+          VERIFY_BUDGET_SECONDS: "600"
+        run: |
+          set -uo pipefail
+          mkdir -p ../verify-results
+          OVERALL=0
+          for name in ${{ steps.targets.outputs.names }}; do
+            ./verify.sh "$name" "../verify-results/$name.json"
+            case $? in
+              0) echo "::notice title=Verified::$name" ;;
+              2) echo "::warning title=Exceeded budget::$name ran past the time limit. This is not a rejection." ;;
+              *) echo "::error title=Rejected::$name"; OVERALL=1 ;;
+            esac
+          done
+          exit $OVERALL
+
+      - name: Summarize
+        if: always() && steps.targets.outputs.names != ''
+        run: .github/scripts/summarize-verification.sh verify-results >> "$GITHUB_STEP_SUMMARY"
+
+      - uses: actions/upload-artifact@v4
+        if: always() && steps.targets.outputs.names != ''
+        with:
+          name: verify-results
+          path: verify-results/
+          if-no-files-found: ignore
+          retention-days: 30

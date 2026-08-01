@@ -1,0 +1,46 @@
+claims: []
+id: written-on-the-wall-ii-conjecture-144
+ids:
+  external:
+    - label: E. DeLaVina, Written on the Wall II, Conjectures of Graffiti.pc
+      url: http://cms.dt.uh.edu/faculty/delavinae/research/wowII/
+  formal_conjectures: FormalConjectures/WrittenOnTheWallII/GraphConjecture144.lean
+openness_basis:
+  asserted_by: google-deepmind/formal-conjectures
+  meaning: no_published_solution_known_to_curator
+  note: Categorized upstream as "research open" at v4.32.0.
+provenance:
+  - fields:
+      - title
+      - statement.informal
+      - statement.formal
+      - subject.msc
+      - ids.external
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: google-deepmind/formal-conjectures
+    upstream_version: v4.32.0
+    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/WrittenOnTheWallII/GraphConjecture144.lean
+statement:
+  formal:
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: conjecture144
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/WrittenOnTheWallII/GraphConjecture144.lean
+  informal: |-
+    WOWII [Conjecture 144](http://cms.dt.uh.edu/faculty/delavinae/research/wowII/)
+
+    For a simple connected graph $G$,
+    $\mathrm{tree}(G) \ge \mathrm{girth}(G) - 1 + \mathrm{ecc}(\mathrm{Centers})$
+    where $\mathrm{tree}(G)$ is the largest induced tree size, $\mathrm{girth}(G)$ is
+    the length of the shortest cycle ($0$ if acyclic),
+    $\mathrm{Centers} = G.\mathrm{center}$ is the set of vertices with minimum
+    eccentricity (the center of $G$), and $\mathrm{ecc}(\mathrm{Centers})$ is the
+    eccentricity of the center set — the maximum distance from any non-center
+    vertex to the nearest center vertex.
+subject:
+  msc:
+    - "05"
+title: Written on the Wall II - Conjecture 144

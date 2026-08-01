@@ -1,0 +1,77 @@
+claims: []
+id: erdos-98
+ids:
+  erdos: "98"
+  external:
+    - label: "[Er75f"
+      url: https://mathscinet.ams.org/mathscinet/relay-station?mr=411984
+    - label: "[Er83c"
+      url: https://mathscinet.ams.org/mathscinet/relay-station?mr=706025
+    - label: "[Er87b"
+      url: https://mathscinet.ams.org/mathscinet/relay-station?mr=910710
+    - label: "[Er90"
+      url: https://mathscinet.ams.org/mathscinet/relay-station?mr=1117038
+    - label: "[Er92b"
+      url: https://mathscinet.ams.org/mathscinet/relay-station?mr=1275857
+    - label: "[EFPR93"
+      url: https://mathscinet.ams.org/mathscinet/relay-station?mr=1210096
+    - label: "[Er94b"
+      url: https://mathscinet.ams.org/mathscinet/relay-station?mr=1304854
+    - label: "[Er97e"
+      url: https://mathscinet.ams.org/mathscinet/relay-station?mr=1487304
+    - label: erdosproblems.com/98
+      url: https://www.erdosproblems.com/98
+  formal_conjectures: FormalConjectures/ErdosProblems/98.lean
+openness_basis:
+  asserted_by: erdosproblems.com
+  asserted_on: 2025-08-31
+  meaning: no_published_solution_known_to_curator
+  note: Categorized upstream as "research open" at v4.32.0.
+provenance:
+  - fields:
+      - title
+      - statement.informal
+      - statement.formal
+      - subject.msc
+      - ids.external
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: google-deepmind/formal-conjectures
+    upstream_version: v4.32.0
+    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/98.lean
+  - fields:
+      - ids.erdos
+      - ids.oeis
+      - subject.tags
+      - openness_basis
+      - claims
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: teorth/erdosproblems
+    upstream_version: d031865128a7ddccd85e8099f0f818211cfc9a41
+    url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
+statement:
+  formal:
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: erdos_98
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/98.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: erdos_98.variants.upper_bound
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/98.lean
+  informal: |-
+    Let $h(n)$ be such that any $n$ points in $\mathbb{R}^2$, with no three on a line
+    and no four on a circle, determine at least $h(n)$ distinct distances. Does
+    $h(n)/n\to \infty$?
+subject:
+  msc:
+    - "52"
+  tags:
+    - geometry
+    - distances
+title: Erdős Problem 98

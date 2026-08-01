@@ -1,0 +1,62 @@
+claims: []
+id: erdos-1108
+ids:
+  erdos: "1108"
+  external:
+    - label: erdosproblems.com/1108
+      url: https://www.erdosproblems.com/1108
+  formal_conjectures: FormalConjectures/ErdosProblems/1108.lean
+  oeis:
+    - A051761
+    - A115645
+    - A025494
+openness_basis:
+  asserted_by: erdosproblems.com
+  asserted_on: 2025-11-17
+  meaning: no_published_solution_known_to_curator
+  note: Categorized upstream as "research open" at v4.32.0.
+provenance:
+  - fields:
+      - title
+      - statement.informal
+      - statement.formal
+      - subject.msc
+      - ids.external
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: google-deepmind/formal-conjectures
+    upstream_version: v4.32.0
+    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/1108.lean
+  - fields:
+      - ids.erdos
+      - ids.oeis
+      - subject.tags
+      - openness_basis
+      - claims
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: teorth/erdosproblems
+    upstream_version: d031865128a7ddccd85e8099f0f818211cfc9a41
+    url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
+statement:
+  formal:
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: erdos_1108.parts.i
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/1108.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: erdos_1108.parts.ii
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/1108.lean
+  informal: "For each $k \\geq 2$, does the set $A = \\left\\{ \\sum_{n\\in S}n! : S\\subset \\mathbb{N}\\text{ finite}\\right\\}$ of all finite sums of distinct factorials contain only finitely many $k$-th powers?"
+subject:
+  msc:
+    - "11"
+  tags:
+    - number theory
+    - factorials
+title: Erdős Problem 1108

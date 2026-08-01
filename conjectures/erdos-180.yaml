@@ -1,0 +1,57 @@
+claims:
+  - id: erdos-180-openai-astra-2026
+    type: disproved
+    evidence_tier: machine_verified
+    state: active
+    asserted_on: 2026-08-01
+    recorded_on: 2026-08-01
+    ai_assistance:
+      used: yes
+      systems:
+        - OpenAI Astra
+      role: discovery
+    source:
+      kind: blog
+      url: https://openai.com/index/ten-advances-in-mathematics/
+      title: Ten advances in mathematics and theoretical computer science
+    verification:
+      tool: lean4
+      statement_path: external/openai/ten-proofs/CompactnessAndDegeneracy.lean
+      theorem: erdos180
+      toolchain: lean4
+      permitted_axioms:
+        - propext
+        - Classical.choice
+        - Quot.sound
+      verified_on: 2026-08-01
+      run_url: https://github.com/openai/ten-proofs
+    notes: Counterexample to the degeneracy conjecture in extremal graph theory. Lean certificate published by OpenAI; not peer-reviewed.
+id: erdos-180
+ids:
+  erdos: "180"
+  external:
+    - label: erdosproblems.com/180
+      url: https://www.erdosproblems.com/180
+openness_basis:
+  asserted_by: erdosproblems.com
+  asserted_on: 2025-08-31
+  meaning: no_published_solution_known_to_curator
+  note: No formalization is indexed for this problem yet; read the statement upstream.
+provenance:
+  - fields:
+      - ids.erdos
+      - ids.oeis
+      - subject.tags
+      - openness_basis
+      - claims
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: teorth/erdosproblems
+    upstream_version: d031865128a7ddccd85e8099f0f818211cfc9a41
+    url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
+statement: {}
+subject:
+  tags:
+    - graph theory
+    - turan number
+title: Erdős Problem 180

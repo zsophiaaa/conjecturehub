@@ -1,0 +1,39 @@
+claims: []
+id: toronto-spaces
+ids:
+  external:
+    - label: Wikipedia
+      url: https://en.wikipedia.org/wiki/Toronto_space
+    - label: The Toronto problem
+      url: https://wrbrian.wordpress.com/wp-content/uploads/2012/01/thetorontoproblem.pdf
+  formal_conjectures: FormalConjectures/Wikipedia/Toronto.lean
+  wikipedia: https://en.wikipedia.org/wiki/Toronto_space
+openness_basis:
+  asserted_by: google-deepmind/formal-conjectures
+  meaning: no_published_solution_known_to_curator
+  note: Categorized upstream as "research open" at v4.32.0.
+provenance:
+  - fields:
+      - title
+      - statement.informal
+      - statement.formal
+      - subject.msc
+      - ids.external
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: google-deepmind/formal-conjectures
+    upstream_version: v4.32.0
+    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/Toronto.lean
+statement:
+  formal:
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: DiscreteTopology.of_t2_of_torontoSpace
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/Toronto.lean
+  informal: Any T2, Toronto space is discrete.
+subject:
+  msc:
+    - "54"
+title: Toronto spaces

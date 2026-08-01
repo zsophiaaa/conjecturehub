@@ -1,0 +1,78 @@
+claims: []
+id: erdos-282
+ids:
+  erdos: "282"
+  external:
+    - label: erdosproblems.com/282
+      url: https://www.erdosproblems.com/282
+  formal_conjectures: FormalConjectures/ErdosProblems/282.lean
+openness_basis:
+  asserted_by: erdosproblems.com
+  asserted_on: 2025-08-31
+  meaning: no_published_solution_known_to_curator
+  note: Categorized upstream as "research open" at v4.32.0.
+provenance:
+  - fields:
+      - title
+      - statement.informal
+      - statement.formal
+      - subject.msc
+      - ids.external
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: google-deepmind/formal-conjectures
+    upstream_version: v4.32.0
+    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/282.lean
+  - fields:
+      - ids.erdos
+      - ids.oeis
+      - subject.tags
+      - openness_basis
+      - claims
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: teorth/erdosproblems
+    upstream_version: d031865128a7ddccd85e8099f0f818211cfc9a41
+    url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
+statement:
+  formal:
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: erdos_282
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/282.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: erdos_282.variants.general
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/282.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: erdos_282.variants.graham
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/282.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: erdos_282.variants.sq
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/282.lean
+  informal: |-
+    Let $A\subseteq \mathbb{N}$ be an infinite set and consider the following
+    greedy algorithm for a rational $x\in (0,1)$: choose the minimal $n\in A$ such
+    that $n\geq 1/x$ and repeat with $x$ replaced by $x-\frac{1}{n}$. If this
+    terminates after finitely many steps then this produces a representation of
+    $x$ as the sum of distinct unit fractions with denominators from $A$.
+
+    Does this process always terminate if $x$ has odd denominator and $A$ is the
+    set of odd numbers?
+subject:
+  msc:
+    - "05"
+  tags:
+    - number theory
+    - unit fractions
+title: Erdős Problem 282

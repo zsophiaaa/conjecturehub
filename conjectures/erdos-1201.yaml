@@ -1,0 +1,61 @@
+claims: []
+id: erdos-1201
+ids:
+  erdos: "1201"
+  external:
+    - label: erdosproblems.com/1201
+      url: https://www.erdosproblems.com/1201
+  formal_conjectures: FormalConjectures/ErdosProblems/1201.lean
+openness_basis:
+  asserted_by: erdosproblems.com
+  asserted_on: 2026-04-04
+  meaning: no_published_solution_known_to_curator
+  note: Categorized upstream as "research open" at v4.32.0.
+provenance:
+  - fields:
+      - title
+      - statement.informal
+      - statement.formal
+      - subject.msc
+      - ids.external
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: google-deepmind/formal-conjectures
+    upstream_version: v4.32.0
+    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/1201.lean
+  - fields:
+      - ids.erdos
+      - ids.oeis
+      - subject.tags
+      - openness_basis
+      - claims
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: teorth/erdosproblems
+    upstream_version: d031865128a7ddccd85e8099f0f818211cfc9a41
+    url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
+statement:
+  formal:
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: erdos_1201
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/1201.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: erdos_1201.variants.epsilon_half
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/1201.lean
+  informal: |-
+    Is it true that for every $\epsilon,\eta>0$ there exists a $k$ such that the density of $n$
+    for which $P(n(n+1)\cdots(n+k))>n^{1-\epsilon}$ is at least $1-\eta$ (where $P(m)$ is the greatest
+    prime divisor of $m$)?
+subject:
+  msc:
+    - "11"
+  tags:
+    - number theory
+    - primes
+title: Erdős Problem 1201

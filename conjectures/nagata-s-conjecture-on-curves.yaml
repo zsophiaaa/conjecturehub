@@ -1,0 +1,22 @@
+claims: []
+id: nagata-s-conjecture-on-curves
+ids:
+  wikidata: Q6958658
+  wikipedia: https://en.wikipedia.org/wiki/Nagata%27s_conjecture_on_curves
+openness_basis:
+  asserted_by: wikidata
+  meaning: unknown
+  note: Identity record only. No statement or status has been ingested for this conjecture yet.
+provenance:
+  - fields:
+      - aliases
+      - ids.wikidata
+      - ids.wikipedia
+      - ids.mathworld
+    license: CC0-1.0
+    retrieved: 2026-07-31
+    source: wikidata
+    url: https://www.wikidata.org/wiki/Q6958658
+statement: {}
+subject: {}
+title: Nagata's conjecture on curves

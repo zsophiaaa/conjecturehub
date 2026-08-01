@@ -1,0 +1,60 @@
+claims: []
+id: amicable-numbers
+ids:
+  external:
+    - label: Wikipedia
+      url: https://en.wikipedia.org/wiki/Amicable_numbers
+    - label: MathWorld
+      url: https://mathworld.wolfram.com/AmicableNumbers.html
+    - label: OEIS A063990
+      url: https://oeis.org/A063990
+  formal_conjectures: FormalConjectures/Wikipedia/AmicableNumbers.lean
+  wikipedia: https://en.wikipedia.org/wiki/Amicable_numbers
+openness_basis:
+  asserted_by: google-deepmind/formal-conjectures
+  meaning: no_published_solution_known_to_curator
+  note: Categorized upstream as "research open" at v4.32.0.
+provenance:
+  - fields:
+      - title
+      - statement.informal
+      - statement.formal
+      - subject.msc
+      - ids.external
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: google-deepmind/formal-conjectures
+    upstream_version: v4.32.0
+    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/AmicableNumbers.lean
+statement:
+  formal:
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: relatively_prime_amicable
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/AmicableNumbers.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: infinitely_many_amicable
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/AmicableNumbers.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: opposite_parity_amicable
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/AmicableNumbers.lean
+  informal: |-
+    **Relatively prime amicable numbers conjecture.**
+    Do there exist amicable numbers $(a, b)$ with $\gcd(a, b) = 1$?
+
+    All known amicable pairs share a common factor. It is an open question
+    whether a pair of relatively prime amicable numbers can exist.
+
+    *Reference:* [Wikipedia](https://en.wikipedia.org/wiki/Amicable_numbers)
+subject:
+  msc:
+    - "11"
+title: Amicable numbers

@@ -1,0 +1,158 @@
+claims: []
+id: open-questions-on-transcendence-of-numbers
+ids:
+  external:
+    - label: Wikipedia
+      url: https://en.wikipedia.org/wiki/Transcendental_number
+  formal_conjectures: FormalConjectures/Wikipedia/Transcendental.lean
+  wikipedia: https://en.wikipedia.org/wiki/Transcendental_number
+openness_basis:
+  asserted_by: google-deepmind/formal-conjectures
+  meaning: no_published_solution_known_to_curator
+  note: Categorized upstream as "research open" at v4.32.0.
+provenance:
+  - fields:
+      - title
+      - statement.informal
+      - statement.formal
+      - subject.msc
+      - ids.external
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: google-deepmind/formal-conjectures
+    upstream_version: v4.32.0
+    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/Transcendental.lean
+statement:
+  formal:
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: exp_add_pi_transcendental
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/Transcendental.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: exp_mul_pi_transcendental
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/Transcendental.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: exp_pow_pi_sq_transcendental
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/Transcendental.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: exp_exp_transcendental
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/Transcendental.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: pi_pow_exp_transcendental
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/Transcendental.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: pi_pow_sqrt_two_transcendental
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/Transcendental.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: pi_pow_pi_transcendental
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/Transcendental.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: pi_pow_pi_pow_pi_transcendental
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/Transcendental.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: pi_pow_pi_pow_pi_pow_pi_transcendental
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/Transcendental.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: pi_pow_pi_pow_pi_pow_pi_not_integer
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/Transcendental.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: rlog_pi_transcendental
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/Transcendental.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: rlog_rlog_two_transcendental
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/Transcendental.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: sin_exp_transcendental
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/Transcendental.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: transcendental_catalanConstant_or_gompertzConstant
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/Transcendental.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: transcendental_catalanConstant
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/Transcendental.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: transcendental_gompertzConstant
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/Transcendental.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: transcendental_gamma_one_div_two
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/Transcendental.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: transcendental_gamma_one_div_three
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/Transcendental.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: transcendental_gamma_one_div_four
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/Transcendental.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: transcendental_gamma_one_div_six
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/Transcendental.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: transcendental_gamma_one_div
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/Transcendental.lean
+  informal: $e + \pi$ is transcendental.
+subject:
+  msc:
+    - "11"
+    - "33"
+title: Open questions on transcendence of numbers

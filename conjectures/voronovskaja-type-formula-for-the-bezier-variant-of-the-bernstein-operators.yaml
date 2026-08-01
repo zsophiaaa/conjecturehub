@@ -1,0 +1,70 @@
+claims: []
+id: voronovskaja-type-formula-for-the-bezier-variant-of-the-bernstein-operators
+ids:
+  external:
+    - label: Voronovskaja-type Formula for the Bézier Variant of the Bernstein Operators
+      url: https://www.math.bas.bg/mathmod/Proceedings_CTF/CTF-2010/files_CTF-2010/Open_problems.pdf
+  formal_conjectures: FormalConjectures/Paper/VoronovskajaTypeFormula.lean
+openness_basis:
+  asserted_by: google-deepmind/formal-conjectures
+  meaning: no_published_solution_known_to_curator
+  note: Categorized upstream as "research open" at v4.32.0.
+provenance:
+  - fields:
+      - title
+      - statement.informal
+      - statement.formal
+      - subject.msc
+      - ids.external
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: google-deepmind/formal-conjectures
+    upstream_version: v4.32.0
+    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Paper/VoronovskajaTypeFormula.lean
+statement:
+  formal:
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: voronovskaja_theorem.bernstein_operators
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Paper/VoronovskajaTypeFormula.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: voronovskaja_theorem.bezier_bernstein_operators
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Paper/VoronovskajaTypeFormula.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: voronovskaja_theorem.bezier_bernstein_operators.variants.eventually_smooth
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Paper/VoronovskajaTypeFormula.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: voronovskaja_theorem.bezier_bernstein_operators.variants.eventually_smooth.limit_exists
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Paper/VoronovskajaTypeFormula.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: voronovskaja_theorem.bezier_bernstein_operators.variants.answer_smoothness
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Paper/VoronovskajaTypeFormula.lean
+  informal: |-
+    Conjecture: Voronovskaja-type formula for Bézier-Bernstein operators
+    with shape parameter $\alpha > 0$, $\alpha \neq 1$.
+
+    The source asks for sufficiently smooth functions. This concrete version uses
+    `ContDiffOn ℝ 2 f I` as a readable baseline regularity assumption; since the
+    domain is the compact interval $[0,1]$, this also explains why no separate
+    boundedness assumption is included here. The variants below record the unknown
+    smoothness threshold more explicitly.
+subject:
+  msc:
+    - "26"
+    - "40"
+    - "47"
+title: Voronovskaja-type Formula for the Bezier Variant of the Bernstein Operators

@@ -1,0 +1,341 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://conjecturehub.org/schema/conjecture.schema.json",
+  "title": "Conjecture record",
+  "description": "One mathematical conjecture. There is deliberately no `solved` boolean and no single `status` field: status is derived at build time from the append-only `claims` list. See docs/DATA-MODEL.md.",
+  "type": "object",
+  "required": ["id", "title", "ids", "openness_basis", "claims", "provenance"],
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Canonical slug, stable forever. Never reused, never renamed.",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Human-readable name, e.g. 'Erdős Problem 1' or 'Jacobian conjecture'."
+    },
+    "aliases": {
+      "type": "array",
+      "description": "Other names this conjecture is known by. Collatz alone has eight.",
+      "items": { "type": "string", "minLength": 1 },
+      "uniqueItems": true,
+      "default": []
+    },
+    "statement": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "informal": {
+          "type": ["string", "null"],
+          "description": "Natural-language statement, LaTeX permitted. May be null when the upstream license forbids redistributing the text; link out instead."
+        },
+        "formal": {
+          "type": "array",
+          "description": "Machine-checkable statements. A formal statement is the trusted base for verification, so each one needs a named reviewer before it can gate a proof.",
+          "items": {
+            "type": "object",
+            "required": ["language", "upstream"],
+            "additionalProperties": false,
+            "properties": {
+              "language": { "enum": ["lean4", "isabelle", "rocq", "metamath"] },
+              "path": {
+                "type": ["string", "null"],
+                "description": "Path in this repo to the canonical challenge statement, if we host one."
+              },
+              "theorem": {
+                "type": ["string", "null"],
+                "description": "Fully-qualified declaration name of the target theorem."
+              },
+              "upstream": {
+                "type": "string",
+                "format": "uri",
+                "description": "Where the formalization came from."
+              },
+              "toolchain": {
+                "type": ["string", "null"],
+                "description": "Pinned mathlib tag or equivalent. Formalizations rot; record what it compiled against."
+              },
+              "category": {
+                "type": ["string", "null"],
+                "description": "Upstream classification, e.g. formal-conjectures 'research open'."
+              },
+              "reviewed_by": {
+                "type": ["string", "null"],
+                "description": "Human who confirmed this statement faithfully expresses the informal one. Null means unreviewed; unreviewed statements must not gate a verified proof."
+              },
+              "definition_hole": {
+                "type": "boolean",
+                "default": false,
+                "description": "True when the challenge asks the solver to supply a definition (e.g. `def Answer : Prop := sorry`). These are auto-gameable by defining the hole to be the conjecture and closing with `rfl`, so they always require human review."
+              }
+            }
+          },
+          "default": []
+        }
+      },
+      "default": {}
+    },
+    "subject": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "msc": {
+          "type": "array",
+          "description": "Mathematics Subject Classification codes, top-level or finer.",
+          "items": { "type": "string", "pattern": "^[0-9]{2}([-0-9A-Zx]{0,4})$" },
+          "uniqueItems": true,
+          "default": []
+        },
+        "tags": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 },
+          "uniqueItems": true,
+          "default": []
+        }
+      },
+      "default": {}
+    },
+    "ids": {
+      "type": "object",
+      "description": "The crosswalk. The same conjecture exists under many identifiers in many databases and almost nothing links them; this field is the reason this project exists.",
+      "additionalProperties": false,
+      "properties": {
+        "wikidata": { "type": ["string", "null"], "pattern": "^Q[0-9]+$" },
+        "erdos": { "type": ["string", "null"], "description": "erdosproblems.com problem number." },
+        "oeis": {
+          "type": "array",
+          "items": { "type": "string", "pattern": "^A[0-9]{6}$" },
+          "uniqueItems": true,
+          "default": []
+        },
+        "formal_conjectures": {
+          "type": ["string", "null"],
+          "description": "Path within google-deepmind/formal-conjectures."
+        },
+        "wikipedia": { "type": ["string", "null"], "format": "uri" },
+        "arxiv": {
+          "type": "array",
+          "items": { "type": "string" },
+          "uniqueItems": true,
+          "default": []
+        },
+        "mathworld": { "type": ["string", "null"], "format": "uri" },
+        "external": {
+          "type": "array",
+          "description": "Anything else worth linking.",
+          "items": {
+            "type": "object",
+            "required": ["label", "url"],
+            "additionalProperties": false,
+            "properties": {
+              "label": { "type": "string" },
+              "url": { "type": "string", "format": "uri" }
+            }
+          },
+          "default": []
+        }
+      },
+      "default": {}
+    },
+    "openness_basis": {
+      "type": "object",
+      "description": "Why we believe this is open, and on whose authority. In October 2025 an AI lab announced ten solved Erdős problems that were in fact already solved in the literature; the curator's own definition of 'open' was 'I am personally unaware of a paper solving this'. This field makes that caveat structural instead of a footnote.",
+      "required": ["meaning"],
+      "additionalProperties": false,
+      "properties": {
+        "meaning": {
+          "enum": [
+            "no_published_solution_known_to_curator",
+            "no_solution_known_to_community",
+            "proven_undecidable",
+            "unknown"
+          ],
+          "description": "no_published_solution_known_to_curator is the honest default and means exactly what it says: absence of evidence from one source, not evidence of absence."
+        },
+        "asserted_by": { "type": ["string", "null"], "description": "Who asserts it, e.g. 'erdosproblems.com'." },
+        "asserted_on": { "type": ["string", "null"], "format": "date" },
+        "note": { "type": ["string", "null"] }
+      }
+    },
+    "claims": {
+      "type": "array",
+      "description": "Append-only. Never edit or delete a claim: to withdraw one, set its state to 'retracted' and add a new claim. The history is the point.",
+      "items": { "$ref": "#/$defs/claim" },
+      "default": []
+    },
+    "provenance": {
+      "type": "array",
+      "description": "Per-field attribution and licensing. Upstream sources fragment across Apache-2.0, CC BY-SA and noncommercial terms, so we track this per field rather than per file.",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["fields", "source", "license", "retrieved"],
+        "additionalProperties": false,
+        "properties": {
+          "fields": {
+            "type": "array",
+            "items": { "type": "string" },
+            "minItems": 1,
+            "description": "Dotted paths this attribution covers, e.g. 'statement.informal'."
+          },
+          "source": { "type": "string", "description": "Ingester or contributor name." },
+          "url": { "type": ["string", "null"], "format": "uri" },
+          "license": {
+            "type": "string",
+            "description": "SPDX identifier where possible, e.g. Apache-2.0, CC-BY-SA-4.0, CC0-1.0."
+          },
+          "retrieved": { "type": "string", "format": "date" },
+          "upstream_version": {
+            "type": ["string", "null"],
+            "description": "Commit, tag or snapshot date of the upstream source."
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "claim": {
+      "type": "object",
+      "required": ["id", "type", "evidence_tier", "state", "recorded_on", "source"],
+      "additionalProperties": false,
+      "properties": {
+        "id": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$" },
+        "type": {
+          "enum": [
+            "proved",
+            "disproved",
+            "counterexample",
+            "partial",
+            "independence",
+            "resolved_by_prior_literature",
+            "reformulation"
+          ],
+          "description": "resolved_by_prior_literature exists specifically to distinguish 'someone proved this' from 'someone found the existing proof'. Conflating those two caused the October 2025 Erdős incident."
+        },
+        "scope": {
+          "type": ["string", "null"],
+          "description": "Which part of the conjecture this claim settles. The Jacobian conjecture is false for n >= 3 and open for n = 2, so a claim that omits scope is often wrong."
+        },
+        "evidence_tier": {
+          "enum": [
+            "unverified_claim",
+            "preprint",
+            "published",
+            "community_accepted",
+            "machine_verified"
+          ],
+          "description": "Strictly ordered. machine_verified means a proof assistant kernel checked it against our canonical statement; it is the only tier no human opinion can grant. An LLM review is never a tier of its own and can never promote a claim."
+        },
+        "state": {
+          "enum": ["active", "disputed", "retracted"],
+          "default": "active"
+        },
+        "asserted_on": { "type": ["string", "null"], "format": "date", "description": "When the claimant made the claim." },
+        "recorded_on": { "type": "string", "format": "date", "description": "When we wrote it down." },
+        "source": {
+          "type": "object",
+          "required": ["kind", "url"],
+          "additionalProperties": false,
+          "properties": {
+            "kind": {
+              "enum": [
+                "arxiv",
+                "journal",
+                "preprint",
+                "x",
+                "mastodon",
+                "bluesky",
+                "zulip",
+                "blog",
+                "wikipedia",
+                "hackernews",
+                "mathoverflow",
+                "dataset",
+                "manual"
+              ]
+            },
+            "url": { "type": "string", "format": "uri" },
+            "title": { "type": ["string", "null"] },
+            "quote": { "type": ["string", "null"], "description": "Short excerpt supporting the claim. Keep it short; some sources restrict redistribution." }
+          }
+        },
+        "authors": {
+          "type": "array",
+          "items": { "type": "string" },
+          "default": []
+        },
+        "ai_assistance": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "used": { "enum": ["yes", "no", "unknown"], "default": "unknown" },
+            "systems": { "type": "array", "items": { "type": "string" }, "default": [] },
+            "role": {
+              "type": ["string", "null"],
+              "enum": ["discovery", "formalization", "literature_search", "verification", "writing", null]
+            }
+          },
+          "default": {}
+        },
+        "reviewer": {
+          "type": ["string", "null"],
+          "description": "Named human who assessed this claim. Required for any tier above unverified_claim. Automation may never fill this in."
+        },
+        "verification": {
+          "$ref": "#/$defs/verification",
+          "description": "Machine-check receipt. Present if and only if evidence_tier is machine_verified."
+        },
+        "supersedes": {
+          "type": ["string", "null"],
+          "description": "Claim id this one replaces, for retractions and corrections."
+        },
+        "notes": { "type": ["string", "null"] }
+      },
+      "allOf": [
+        {
+          "if": { "properties": { "evidence_tier": { "const": "machine_verified" } }, "required": ["evidence_tier"] },
+          "then": {
+            "required": ["verification"],
+            "description": "A machine_verified claim must carry its receipt so anyone can reproduce the check."
+          }
+        },
+        {
+          "if": {
+            "properties": { "evidence_tier": { "enum": ["published", "community_accepted"] } },
+            "required": ["evidence_tier"]
+          },
+          "then": {
+            "properties": { "reviewer": { "type": "string", "minLength": 1 } },
+            "required": ["reviewer"],
+            "description": "Human tiers require a named human."
+          }
+        }
+      ]
+    },
+    "verification": {
+      "type": "object",
+      "required": ["tool", "statement_path", "theorem", "toolchain", "permitted_axioms", "verified_on"],
+      "additionalProperties": false,
+      "properties": {
+        "tool": { "type": "string", "description": "e.g. 'leanprover/comparator'." },
+        "tool_version": { "type": ["string", "null"] },
+        "proof_path": { "type": ["string", "null"], "description": "Path to the accepted solution file in this repo." },
+        "statement_path": { "type": "string", "description": "Canonical challenge statement the proof was checked against." },
+        "theorem": { "type": "string" },
+        "toolchain": { "type": "string", "description": "Lean toolchain and mathlib tag." },
+        "permitted_axioms": {
+          "type": "array",
+          "items": { "type": "string" },
+          "minItems": 1,
+          "description": "Allowlist used. Denylisting axiom names is wrong since Lean 4.29, which emits a uniquely-named axiom per native_decide call."
+        },
+        "second_kernel": { "type": ["string", "null"], "description": "Independent kernel that agreed, e.g. 'nanoda'." },
+        "verified_on": { "type": "string", "format": "date" },
+        "run_url": { "type": ["string", "null"], "format": "uri", "description": "CI run that produced this result." }
+      }
+    }
+  }
+}

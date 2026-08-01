@@ -1,0 +1,22 @@
+claims: []
+id: sierpinski-problem
+ids:
+  wikidata: Q1287873
+  wikipedia: https://en.wikipedia.org/wiki/Sierpinski_problem
+openness_basis:
+  asserted_by: wikidata
+  meaning: unknown
+  note: Identity record only. No statement or status has been ingested for this conjecture yet.
+provenance:
+  - fields:
+      - aliases
+      - ids.wikidata
+      - ids.wikipedia
+      - ids.mathworld
+    license: CC0-1.0
+    retrieved: 2026-07-31
+    source: wikidata
+    url: https://www.wikidata.org/wiki/Q1287873
+statement: {}
+subject: {}
+title: Sierpinski problem

@@ -1,0 +1,60 @@
+claims: []
+id: bateman-horn-conjecture
+ids:
+  external:
+    - label: Wikipedia
+      url: https://en.wikipedia.org/wiki/Bateman%E2%80%93Horn_conjecture
+  formal_conjectures: FormalConjectures/Wikipedia/BatemanHornConjecture.lean
+  wikidata: Q2993304
+  wikipedia: https://en.wikipedia.org/wiki/Bateman%E2%80%93Horn_conjecture
+openness_basis:
+  asserted_by: google-deepmind/formal-conjectures
+  meaning: no_published_solution_known_to_curator
+  note: Categorized upstream as "research open" at v4.32.0.
+provenance:
+  - fields:
+      - title
+      - statement.informal
+      - statement.formal
+      - subject.msc
+      - ids.external
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: google-deepmind/formal-conjectures
+    upstream_version: v4.32.0
+    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/BatemanHornConjecture.lean
+  - fields:
+      - aliases
+      - ids.wikidata
+      - ids.wikipedia
+      - ids.mathworld
+    license: CC0-1.0
+    retrieved: 2026-07-31
+    source: wikidata
+    url: https://www.wikidata.org/wiki/Q2993304
+statement:
+  formal:
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: bateman_horn_conjecture
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/BatemanHornConjecture.lean
+  informal: |-
+    **The Bateman-Horn Conjecture**
+    Given a finite collection of distinct irreducible polynomials non-constant $f_1, f_2, \dots, f_k \in \mathbb{Z}[x]$
+    with positive leading coefficients that satisfy the Schinzel condition, the number
+    of positive integers n ≤ x for which all polynomials $f_i$ are simultaneously prime is asymptotic to:
+    $$C(f_1, f_2, \dots, f_k) x / (log x)^k$$
+    where $C$ is the Bateman-Horn constant given by the convergent infinite product:
+    $$C = \frac{1}{D}\prod_{p\in\mathbb{P}} (1 - 1/p)^(-k) · (1 - \omega_p/p)$$
+    Here $\omega_p/p$ is the number of residue classes modulo $p$ for which at least one polynomial vanishes.
+
+    The Schinzel condition ensures that for each prime $p$, there exists some integer $n$
+    such that $p$ does not divide the product $f_(n) f_2(n) \dotsb f_(n)$, which guarantees the
+    infinite product converges to a positive value.
+subject:
+  msc:
+    - "11"
+    - "12"
+title: Bateman-Horn Conjecture

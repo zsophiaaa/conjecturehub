@@ -1,0 +1,57 @@
+claims: []
+id: zariski-cancellation
+ids:
+  external:
+    - label: arxiv/2208.14736
+      url: https://arxiv.org/abs/2208.14736
+  formal_conjectures: FormalConjectures/Arxiv/2208.14736/ZariskiCancellation.lean
+openness_basis:
+  asserted_by: google-deepmind/formal-conjectures
+  meaning: no_published_solution_known_to_curator
+  note: Categorized upstream as "research open" at v4.32.0.
+provenance:
+  - fields:
+      - title
+      - statement.informal
+      - statement.formal
+      - subject.msc
+      - ids.external
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: google-deepmind/formal-conjectures
+    upstream_version: v4.32.0
+    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Arxiv/2208.14736/ZariskiCancellation.lean
+statement:
+  formal:
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: zariski_cancellation_problem
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Arxiv/2208.14736/ZariskiCancellation.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: zariski_cancellation_problem.variants.dim_one
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Arxiv/2208.14736/ZariskiCancellation.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: zariski_cancellation_problem.variants.dim_two
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Arxiv/2208.14736/ZariskiCancellation.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: zariski_cancellation_problem.variants.false_pos_card
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Arxiv/2208.14736/ZariskiCancellation.lean
+  informal: |-
+    The **Zariski Cancellation Problem**: every polynomial ring over a field `k` of characteristic
+    `0` is cancellative.
+subject:
+  msc:
+    - "13"
+    - "14"
+title: Zariski Cancellation

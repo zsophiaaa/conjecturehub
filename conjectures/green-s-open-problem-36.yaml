@@ -1,0 +1,50 @@
+claims: []
+id: green-s-open-problem-36
+ids:
+  external:
+    - label: "Green's Open Problems #36"
+      url: https://people.maths.ox.ac.uk/greenbj/papers/open-problems.pdf#problem.36
+  formal_conjectures: FormalConjectures/GreensOpenProblems/36.lean
+openness_basis:
+  asserted_by: google-deepmind/formal-conjectures
+  meaning: no_published_solution_known_to_curator
+  note: Categorized upstream as "research open" at v4.32.0.
+provenance:
+  - fields:
+      - title
+      - statement.informal
+      - statement.formal
+      - subject.msc
+      - ids.external
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: google-deepmind/formal-conjectures
+    upstream_version: v4.32.0
+    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/GreensOpenProblems/36.lean
+statement:
+  formal:
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: green_36
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/GreensOpenProblems/36.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: green_36.variants.cks05
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/GreensOpenProblems/36.lean
+  informal: |-
+    Do the following exist, for arbitrarily large $n$? An abelian group $H$ with $|H| = n^{2+o(1)}$,
+    together with subsets $A_1, ..., A_n, B_1, ..., B_n$ satisfying $|A_i||B_i| \ge n^{2-o(1)}$ and
+    $|A_i + B_i| = |A_i||B_i|$, such that the sets $A_i + B_i$ are disjoint from the sets $A_j + B_k$
+    ($j \neq k$)?
+
+    NOTE: according to [CKS05, 4.1], the conditions should be $A_i + B_j$ disjoint from $A_j + B_k$ for
+    $i \neq k$. See `green_36.variants.cks05`.
+subject:
+  msc:
+    - "05"
+    - "20"
+title: Green's Open Problem 36

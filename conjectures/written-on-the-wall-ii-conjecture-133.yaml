@@ -1,0 +1,49 @@
+claims: []
+id: written-on-the-wall-ii-conjecture-133
+ids:
+  external:
+    - label: E. DeLaVina, Written on the Wall II, Conjectures of Graffiti.pc
+      url: http://cms.dt.uh.edu/faculty/delavinae/research/wowII/
+  formal_conjectures: FormalConjectures/WrittenOnTheWallII/GraphConjecture133.lean
+openness_basis:
+  asserted_by: google-deepmind/formal-conjectures
+  meaning: no_published_solution_known_to_curator
+  note: Categorized upstream as "research open" at v4.32.0.
+provenance:
+  - fields:
+      - title
+      - statement.informal
+      - statement.formal
+      - subject.msc
+      - ids.external
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: google-deepmind/formal-conjectures
+    upstream_version: v4.32.0
+    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/WrittenOnTheWallII/GraphConjecture133.lean
+statement:
+  formal:
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: conjecture133
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/WrittenOnTheWallII/GraphConjecture133.lean
+  informal: |-
+    WOWII [Conjecture 133](http://cms.dt.uh.edu/faculty/delavinae/research/wowII/):
+
+    For a simple connected graph $G$,
+    $\operatorname{path}(G) \ge \operatorname{rad}(G) +
+    \lfloor \mathrm{avg}_v\, l(v) \rfloor^{cC_4(G)}$,
+    where $\operatorname{path}(G)$ is the path number of the graph (number of vertices of a largest induced path),
+    $\operatorname{rad}(G)$ is the radius (minimum eccentricity, as a natural number),
+    $\mathrm{avg}_v\, l(v) = l(G)$ is the average independence number of vertex
+    neighbourhoods, and $cC_4(G)$ is the $C_4$-free characteristic function
+    (1 if $G$ is $C_4$-free, not necessarily induced, and 0 otherwise).
+
+    We read DeLaVina's bracket notation `[average of λ(v)]` in the source as the
+    floor (a standard Graffiti.pc convention), hence `⌊l G⌋` in Lean.
+subject:
+  msc:
+    - "05"
+title: Written on the Wall II - Conjecture 133

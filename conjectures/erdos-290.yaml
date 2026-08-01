@@ -1,0 +1,73 @@
+claims:
+  - evidence_tier: published
+    id: erdos-290-fc-solved
+    notes: Imported from the upstream `research solved` category. The statement is formalized; the proof has not been machine-checked by ConjectureHub.
+    recorded_on: 2026-07-31
+    reviewer: google-deepmind/formal-conjectures maintainers
+    source:
+      kind: dataset
+      title: formal-conjectures marks erdos_290 as research solved
+      url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/290.lean
+    state: active
+    type: proved
+id: erdos-290
+ids:
+  erdos: "290"
+  external:
+    - label: erdosproblems.com/290
+      url: https://www.erdosproblems.com/290
+  formal_conjectures: FormalConjectures/ErdosProblems/290.lean
+  oeis:
+    - A375081
+openness_basis:
+  asserted_by: erdosproblems.com
+  asserted_on: 2026-01-14
+  meaning: no_published_solution_known_to_curator
+provenance:
+  - fields:
+      - title
+      - statement.informal
+      - statement.formal
+      - subject.msc
+      - ids.external
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: google-deepmind/formal-conjectures
+    upstream_version: v4.32.0
+    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/290.lean
+  - fields:
+      - ids.erdos
+      - ids.oeis
+      - subject.tags
+      - openness_basis
+      - claims
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: teorth/erdosproblems
+    upstream_version: d031865128a7ddccd85e8099f0f818211cfc9a41
+    url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
+statement:
+  formal:
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: erdos_290
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/290.lean
+  informal: |-
+    Let $a\geq 1$. Must there exist some $b>a$ such that
+    \[\sum_{a\leq n\leq b}\frac{1}{n}=\frac{r_1}{s_1}\textrm{ and }
+    \sum_{a\leq n\leq b+1}\frac{1}{n}=\frac{r_2}{s_2},\]
+    with $(r_i,s_i)=1$ and $s_2<s_1$? If so, how does this $b(a)$ grow with $a$?
+
+    This was resolved in the affirmative by van Doorn [vD24], who proved $b=b(a)$ always exists, and in
+    fact $b(a) \ll a$. Indeed, if $a\in (3^k,3^{k+1}]$ then one can take $b=2\cdot 3^{k+1}-1$. van Doorn
+    also proves that $b(a)>a+(1/2-o(1))\log a$, and considers various generalisations of the original
+    problem.
+subject:
+  msc:
+    - "11"
+  tags:
+    - number theory
+    - unit fractions
+title: Erdős Problem 290

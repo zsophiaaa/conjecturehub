@@ -1,0 +1,34 @@
+name = "conjecturehub_statements"
+version = "0.1.0"
+defaultTargets = ["Challenge"]
+
+# Only `lean_lib` targets here, deliberately. Adding a `lean_exe` forces Lake to
+# build native `.o` files for the whole of Mathlib, which turns a cached
+# five-minute job into an uncached multi-hour one.
+
+[leanOptions]
+# Without this a typo in a binder silently becomes a new universe-polymorphic
+# variable, which is how a challenge ends up stating something weaker than it
+# looks. Off is not an option for a file that proofs are checked against.
+autoImplicit = false
+relaxedAutoImplicit = false
+pp.unicode.fun = true
+
+[[require]]
+name = "mathlib"
+scope = "leanprover-community"
+rev = "v4.32.0"
+
+# Canonical statements. Trusted, reviewed, and always rebuilt from the base
+# commit -- never from a contributor's branch.
+[[lean_lib]]
+name = "Challenge"
+globs = ["Challenge.+"]
+[lean_lib.leanOptions]
+warn.sorry = false
+
+# Submitted proofs. Compiled only inside the comparator sandbox, never by a
+# plain `lake build`.
+[[lean_lib]]
+name = "Solution"
+globs = ["Solution.+"]

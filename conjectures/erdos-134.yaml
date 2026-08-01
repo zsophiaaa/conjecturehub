@@ -1,0 +1,66 @@
+claims:
+  - evidence_tier: published
+    id: erdos-134-fc-solved
+    notes: Imported from the upstream `research solved` category. The statement is formalized; the proof has not been machine-checked by ConjectureHub.
+    recorded_on: 2026-07-31
+    reviewer: google-deepmind/formal-conjectures maintainers
+    source:
+      kind: dataset
+      title: formal-conjectures marks erdos_134 as research solved
+      url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/134.lean
+    state: active
+    type: proved
+id: erdos-134
+ids:
+  erdos: "134"
+  external:
+    - label: erdosproblems.com/134
+      url: https://www.erdosproblems.com/134
+  formal_conjectures: FormalConjectures/ErdosProblems/134.lean
+openness_basis:
+  asserted_by: erdosproblems.com
+  asserted_on: 2026-02-07
+  meaning: no_published_solution_known_to_curator
+provenance:
+  - fields:
+      - title
+      - statement.informal
+      - statement.formal
+      - subject.msc
+      - ids.external
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: google-deepmind/formal-conjectures
+    upstream_version: v4.32.0
+    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/134.lean
+  - fields:
+      - ids.erdos
+      - ids.oeis
+      - subject.tags
+      - openness_basis
+      - claims
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: teorth/erdosproblems
+    upstream_version: d031865128a7ddccd85e8099f0f818211cfc9a41
+    url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
+statement:
+  formal:
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: erdos_134
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/134.lean
+  informal: |-
+    Let $\epsilon,\delta>0$ and $n$ be sufficiently large in terms of $\epsilon$ and $\delta$.
+    Let $G$ be a triangle-free graph on $n$ vertices with maximum degree $<n^{1/2-\epsilon}$.
+    Can $G$ be made into a triangle-free graph with diameter $2$ by adding at most $\delta n^2$ edges?
+
+    Asked by Erdős and Gyárfás, who proved that this is the case when $G$ has maximum degree $\ll \log n/\log\log n$. A construction of Simonovits shows that this conjecture is false if we just have maximum degree $\leq Cn^{1/2}$, for some large enough $C$. In this note Alon solves this problem in a strong form, in particular proving that a triangle-free graph on $n$ vertices with maximum degree $<n^{1/2-\epsilon}$ can be made into a triangle-free graph with diameter $2$ by adding at most $O(n^{2-\epsilon})$ edges.
+subject:
+  msc:
+    - "05"
+  tags:
+    - graph theory
+title: Erdős Problem 134

@@ -1,0 +1,11 @@
+{
+  "conjecture_id": "erdos-1",
+  "note": "Open. Statement copied verbatim from formal-conjectures v4.32.0.",
+  "comparator": {
+    "challenge_module": "Challenge.Erdos1",
+    "solution_module": "Solution.Erdos1",
+    "theorem_names": ["Challenge.Erdos1.erdos_1"],
+    "permitted_axioms": ["propext", "Quot.sound", "Classical.choice"],
+    "enable_nanoda": true
+  }
+}

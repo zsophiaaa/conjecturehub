@@ -1,0 +1,66 @@
+claims: []
+id: sidorenko-s-conjecture-1993
+ids:
+  external:
+    - label: Wikipedia
+      url: https://en.wikipedia.org/wiki/Sidorenko%27s_conjecture
+  formal_conjectures: FormalConjectures/Wikipedia/SidorenkoConjecture.lean
+  wikipedia: https://en.wikipedia.org/wiki/Sidorenko%27s_conjecture
+openness_basis:
+  asserted_by: google-deepmind/formal-conjectures
+  meaning: no_published_solution_known_to_curator
+  note: Categorized upstream as "research open" at v4.32.0.
+provenance:
+  - fields:
+      - title
+      - statement.informal
+      - statement.formal
+      - subject.msc
+      - ids.external
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: google-deepmind/formal-conjectures
+    upstream_version: v4.32.0
+    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/SidorenkoConjecture.lean
+statement:
+  formal:
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: sidorenko_conjecture
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/SidorenkoConjecture.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: sidorenko_K2
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/SidorenkoConjecture.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: sidorenko_K22
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/SidorenkoConjecture.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: sidorenko_tree_subsingleton
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/SidorenkoConjecture.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: sidorenko_tree
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/SidorenkoConjecture.lean
+  informal: |-
+    **Sidorenko's conjecture (1993).**
+
+    For every finite bipartite simple graph $H$ and every finite simple graph $G$:
+    $t(H, G) \ge t(K_2, G)^{e(H)}$, where $K_2$ denotes the single-edge graph on 2 vertices
+    (i.e. `completeGraph (Fin 2)`).
+subject:
+  msc:
+    - "05"
+title: Sidorenko's conjecture (1993)

@@ -1,0 +1,53 @@
+claims: []
+id: mahler-s-3-2-problem
+ids:
+  external:
+    - label: Wikipedia
+      url: https://en.wikipedia.org/wiki/Mahler%27s_3/2_problem
+  formal_conjectures: FormalConjectures/Wikipedia/Mahler32.lean
+  wikidata: Q15900447
+  wikipedia: https://en.wikipedia.org/wiki/Mahler%27s_3/2_problem
+openness_basis:
+  asserted_by: google-deepmind/formal-conjectures
+  meaning: no_published_solution_known_to_curator
+  note: Categorized upstream as "research open" at v4.32.0.
+provenance:
+  - fields:
+      - title
+      - statement.informal
+      - statement.formal
+      - subject.msc
+      - ids.external
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: google-deepmind/formal-conjectures
+    upstream_version: v4.32.0
+    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/Mahler32.lean
+  - fields:
+      - aliases
+      - ids.wikidata
+      - ids.wikipedia
+      - ids.mathworld
+    license: CC0-1.0
+    retrieved: 2026-07-31
+    source: wikidata
+    url: https://www.wikidata.org/wiki/Q15900447
+statement:
+  formal:
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: mahler_conjecture
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/Mahler32.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: mahler_conjecture.variants.flatto_lagarias_pollington
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/Mahler32.lean
+  informal: The **Mahler Conjecture** states that there are no non-zero Z-numbers.
+subject:
+  msc:
+    - "11"
+title: Mahler's 3/2 Problem

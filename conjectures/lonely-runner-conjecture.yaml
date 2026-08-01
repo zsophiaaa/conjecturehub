@@ -1,0 +1,59 @@
+claims: []
+id: lonely-runner-conjecture
+ids:
+  external:
+    - label: Wikipedia
+      url: https://en.wikipedia.org/wiki/Lonely_runner_conjecture
+  formal_conjectures: FormalConjectures/Wikipedia/LonelyRunnerConjecture.lean
+  wikidata: Q6671695
+  wikipedia: https://en.wikipedia.org/wiki/Lonely_runner_conjecture
+openness_basis:
+  asserted_by: google-deepmind/formal-conjectures
+  meaning: no_published_solution_known_to_curator
+  note: Categorized upstream as "research open" at v4.32.0.
+provenance:
+  - fields:
+      - title
+      - statement.informal
+      - statement.formal
+      - subject.msc
+      - ids.external
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: google-deepmind/formal-conjectures
+    upstream_version: v4.32.0
+    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/LonelyRunnerConjecture.lean
+  - fields:
+      - aliases
+      - ids.wikidata
+      - ids.wikipedia
+      - ids.mathworld
+    license: CC0-1.0
+    retrieved: 2026-07-31
+    source: wikidata
+    url: https://www.wikidata.org/wiki/Q6671695
+statement:
+  formal:
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: lonely_runner_conjecture
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/LonelyRunnerConjecture.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: lonely_runner_conjecture.variants.tao_2017
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/LonelyRunnerConjecture.lean
+  informal: |-
+    Consider $n$ runners on a circular track of unit length. At the initial time
+    $t = 0$, all runners are at the same position and start to run; the runners'
+    speeds are constant, all distinct, and may be negative. A runner is said to be
+    lonely at time $t$ if they are at a distance (measured along the circle) of at
+    least $\frac 1 n$ from every other runner. The lonely runner conjecture states that each
+    runner is lonely at some time, no matter the choice of speeds.
+subject:
+  msc:
+    - "11"
+title: Lonely runner conjecture

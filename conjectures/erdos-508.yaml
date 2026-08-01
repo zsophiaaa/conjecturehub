@@ -1,0 +1,74 @@
+claims: []
+id: erdos-508
+ids:
+  erdos: "508"
+  external:
+    - label: erdosproblems.com/508
+      url: https://www.erdosproblems.com/508
+    - label: Moser-Spindel graph
+      url: https://de.wikipedia.org/wiki/Moser-Spindel
+    - label: Golomb graph
+      url: https://en.wikipedia.org/wiki/Golomb_graph
+    - label: de Grey 2018
+      url: https://arxiv.org/abs/1804.02385
+  formal_conjectures: FormalConjectures/ErdosProblems/508.lean
+  wikipedia: https://en.wikipedia.org/wiki/Golomb_graph
+openness_basis:
+  asserted_by: erdosproblems.com
+  asserted_on: 2025-08-31
+  meaning: no_published_solution_known_to_curator
+  note: Categorized upstream as "research open" at v4.32.0.
+provenance:
+  - fields:
+      - title
+      - statement.informal
+      - statement.formal
+      - subject.msc
+      - ids.external
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: google-deepmind/formal-conjectures
+    upstream_version: v4.32.0
+    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/508.lean
+  - fields:
+      - ids.erdos
+      - ids.oeis
+      - subject.tags
+      - openness_basis
+      - claims
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: teorth/erdosproblems
+    upstream_version: d031865128a7ddccd85e8099f0f818211cfc9a41
+    url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
+statement:
+  formal:
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: HadwigerNelsonProblem
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/508.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: HadwigerNelsonAtLeastFive
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/508.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: HadwigerNelsonAtLeast4
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/508.lean
+  informal: |-
+    The Hadwiger–Nelson problem asks: How many colors are required to color the plane
+    such that no two points at distance 1 from each other have the same color?
+subject:
+  msc:
+    - "05"
+    - "52"
+  tags:
+    - geometry
+    - ramsey theory
+title: Erdős Problem 508

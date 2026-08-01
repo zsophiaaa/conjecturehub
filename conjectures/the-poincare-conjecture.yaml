@@ -1,0 +1,87 @@
+aliases:
+  - Гипотеза Пуанкаре
+  - Теорема Перельмана
+  - Теорема Пуанкаре
+claims:
+  - evidence_tier: published
+    id: the-poincare-conjecture-fc-solved
+    notes: Imported from the upstream `research solved` category. The statement is formalized; the proof has not been machine-checked by ConjectureHub.
+    recorded_on: 2026-07-31
+    reviewer: google-deepmind/formal-conjectures maintainers
+    source:
+      kind: dataset
+      title: formal-conjectures marks poincare_conjecture as research solved
+      url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Millenium/Poincare.lean
+    state: active
+    type: proved
+id: the-poincare-conjecture
+ids:
+  external:
+    - label: Miln2022
+      url: https://www.claymath.org/wp-content/uploads/2022/06/poincare.pdf
+    - label: Wang2017
+      url: https://annals.math.princeton.edu/2017/186-2/p03
+    - label: mo296171
+      url: https://mathoverflow.net/questions/296171/unique-smooth-structure-on-3-manifolds
+    - label: mathlib4
+      url: https://github.com/leanprover-community/mathlib4
+  formal_conjectures: FormalConjectures/Millenium/Poincare.lean
+  mathworld: https://mathworld.wolfram.com/PoincareConjecture.html
+  wikidata: Q203586
+  wikipedia: https://en.wikipedia.org/wiki/Poincar%C3%A9_conjecture
+openness_basis:
+  asserted_by: google-deepmind/formal-conjectures
+  meaning: no_published_solution_known_to_curator
+provenance:
+  - fields:
+      - title
+      - statement.informal
+      - statement.formal
+      - subject.msc
+      - ids.external
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: google-deepmind/formal-conjectures
+    upstream_version: v4.32.0
+    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Millenium/Poincare.lean
+  - fields:
+      - aliases
+      - ids.wikidata
+      - ids.wikipedia
+      - ids.mathworld
+    license: CC0-1.0
+    retrieved: 2026-07-31
+    source: wikidata
+    url: https://www.wikidata.org/wiki/Q203586
+statement:
+  formal:
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: poincare_conjecture
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Millenium/Poincare.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: poincare_conjecture.variants.smooth_known_cases
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Millenium/Poincare.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: poincare_conjecture.variants.smooth_dimension_four
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Millenium/Poincare.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: poincare_conjecture.variants.smooth_other_cases
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Millenium/Poincare.lean
+  informal: "The Millenium Problem, solved by Grigori Perelman in 2003: the Poincaré Conjecture holds."
+subject:
+  msc:
+    - "54"
+    - "57"
+title: The Poincaré Conjecture

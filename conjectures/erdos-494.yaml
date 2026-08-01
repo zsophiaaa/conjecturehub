@@ -1,0 +1,113 @@
+claims:
+  - evidence_tier: published
+    id: erdos-494-fc-solved
+    notes: Imported from the upstream `research solved` category. The statement is formalized; the proof has not been machine-checked by ConjectureHub.
+    recorded_on: 2026-07-31
+    reviewer: google-deepmind/formal-conjectures maintainers
+    source:
+      kind: dataset
+      title: formal-conjectures marks erdos_494.variants.k_eq_2_card_not_pow_two as research solved
+      url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/494.lean
+    state: active
+    type: proved
+id: erdos-494
+ids:
+  erdos: "494"
+  external:
+    - label: erdosproblems.com/494
+      url: https://www.erdosproblems.com/494
+  formal_conjectures: FormalConjectures/ErdosProblems/494.lean
+openness_basis:
+  asserted_by: erdosproblems.com
+  asserted_on: 2025-10-14
+  meaning: no_published_solution_known_to_curator
+provenance:
+  - fields:
+      - title
+      - statement.informal
+      - statement.formal
+      - subject.msc
+      - ids.external
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: google-deepmind/formal-conjectures
+    upstream_version: v4.32.0
+    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/494.lean
+  - fields:
+      - ids.erdos
+      - ids.oeis
+      - subject.tags
+      - openness_basis
+      - claims
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: teorth/erdosproblems
+    upstream_version: d031865128a7ddccd85e8099f0f818211cfc9a41
+    url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
+statement:
+  formal:
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: erdos_494.variants.k_eq_2_card_not_pow_two
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/494.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: erdos_494.variants.k_eq_2_card_pow_two
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/494.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: erdos_494.variants.k_eq_3_card_gt_6
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/494.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: erdos_494.variants.k_eq_4_card_gt_12
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/494.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: erdos_494.variants.card_divisible_by_prime_gt_k
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/494.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: erdos_494.variants.k_eq_card
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/494.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: erdos_494.variants.card_eq_2k
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/494.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: erdos_494.variants.gordon_fraenkel_straus
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/494.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: erdos_494.variants.product
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/494.lean
+  informal: |-
+    Selfridge and Straus [SeSt58] showed that the conjecture is true when $k = 2$ and
+    $|A| \ne 2^l$ for $l \ge 0$.
+    They also gave counterexamples when $k = 2$ and $|A| = 2^l$.
+subject:
+  msc:
+    - "05"
+  tags:
+    - analysis
+    - additive combinatorics
+title: Erdős Problem 494

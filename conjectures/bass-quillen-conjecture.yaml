@@ -1,0 +1,22 @@
+claims: []
+id: bass-quillen-conjecture
+ids:
+  wikidata: Q28455751
+  wikipedia: https://en.wikipedia.org/wiki/Bass%E2%80%93Quillen_conjecture
+openness_basis:
+  asserted_by: wikidata
+  meaning: unknown
+  note: Identity record only. No statement or status has been ingested for this conjecture yet.
+provenance:
+  - fields:
+      - aliases
+      - ids.wikidata
+      - ids.wikipedia
+      - ids.mathworld
+    license: CC0-1.0
+    retrieved: 2026-07-31
+    source: wikidata
+    url: https://www.wikidata.org/wiki/Q28455751
+statement: {}
+subject: {}
+title: Bass–Quillen conjecture

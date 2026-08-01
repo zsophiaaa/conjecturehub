@@ -1,0 +1,46 @@
+name: Missing conjecture
+description: A conjecture that should be indexed here is not
+labels: [corpus, needs-review]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        The seed corpus comes from formal-conjectures, the Erdős problem database and Wikidata, so plenty is missing. Tell us what.
+
+  - type: input
+    id: name
+    attributes:
+      label: Name
+      placeholder: Sendov's conjecture
+    validations:
+      required: true
+
+  - type: textarea
+    id: statement
+    attributes:
+      label: Statement
+      description: LaTeX is fine. If you are copying it from somewhere, say where and under what licence — we cannot redistribute text we have no rights to.
+    validations:
+      required: true
+
+  - type: textarea
+    id: identifiers
+    attributes:
+      label: Identifiers and links
+      description: Wikidata QID, Wikipedia article, OEIS sequences, arXiv papers, an Erdős number, a Lean formalization. At least one is required so we can tell it is not already indexed under another name.
+    validations:
+      required: true
+
+  - type: input
+    id: status
+    attributes:
+      label: Current status, as best you know
+      placeholder: Open as of 2026; partial results in dimension 2
+
+  - type: checkboxes
+    id: search
+    attributes:
+      label: Before filing
+      options:
+        - label: I searched the index, including under alternative names.
+          required: true

@@ -1,0 +1,22 @@
+claims: []
+id: rota-s-basis-conjecture
+ids:
+  wikidata: Q7370200
+  wikipedia: https://en.wikipedia.org/wiki/Rota%27s_basis_conjecture
+openness_basis:
+  asserted_by: wikidata
+  meaning: unknown
+  note: Identity record only. No statement or status has been ingested for this conjecture yet.
+provenance:
+  - fields:
+      - aliases
+      - ids.wikidata
+      - ids.wikipedia
+      - ids.mathworld
+    license: CC0-1.0
+    retrieved: 2026-07-31
+    source: wikidata
+    url: https://www.wikidata.org/wiki/Q7370200
+statement: {}
+subject: {}
+title: Rota's basis conjecture

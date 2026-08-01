@@ -1,0 +1,77 @@
+claims: []
+id: kothe-conjecture
+ids:
+  external:
+    - label: Wikipedia
+      url: https://en.wikipedia.org/wiki/K%C3%B6the_conjecture
+  formal_conjectures: FormalConjectures/Wikipedia/Koethe.lean
+  wikidata: Q6454025
+  wikipedia: https://en.wikipedia.org/wiki/K%C3%B6the_conjecture
+openness_basis:
+  asserted_by: google-deepmind/formal-conjectures
+  meaning: no_published_solution_known_to_curator
+  note: Categorized upstream as "research open" at v4.32.0.
+provenance:
+  - fields:
+      - title
+      - statement.informal
+      - statement.formal
+      - subject.msc
+      - ids.external
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: google-deepmind/formal-conjectures
+    upstream_version: v4.32.0
+    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/Koethe.lean
+  - fields:
+      - aliases
+      - ids.wikidata
+      - ids.wikipedia
+      - ids.mathworld
+    license: CC0-1.0
+    retrieved: 2026-07-31
+    source: wikidata
+    url: https://www.wikidata.org/wiki/Q6454025
+statement:
+  formal:
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: KotheConjecture
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/Koethe.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: KotherConjecture.variants.le_KotherRadical
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/Koethe.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: KotherConjecture.variants.general_matrix
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/Koethe.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: KotherConjecture.variants.two_by_two_matrix
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/Koethe.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: KotherConjecture.variants.matrixOver_KotherRadical
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/Koethe.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: amitsur_conjecture
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/Koethe.lean
+  informal: "The **Köthe conjecture**: In any ring, the sum of two nil left ideals is nil."
+subject:
+  msc:
+    - "16"
+title: Köthe conjecture

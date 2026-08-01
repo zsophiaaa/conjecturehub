@@ -1,0 +1,69 @@
+claims: []
+id: green-s-open-problem-25
+ids:
+  external:
+    - label: Green, Ben. "100 open problems." (2024).
+      url: https://people.maths.ox.ac.uk/greenbj/papers/open-problems.pdf#problem.25
+  formal_conjectures: FormalConjectures/GreensOpenProblems/25.lean
+openness_basis:
+  asserted_by: google-deepmind/formal-conjectures
+  meaning: no_published_solution_known_to_curator
+  note: Categorized upstream as "research open" at v4.32.0.
+provenance:
+  - fields:
+      - title
+      - statement.informal
+      - statement.formal
+      - subject.msc
+      - ids.external
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: google-deepmind/formal-conjectures
+    upstream_version: v4.32.0
+    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/GreensOpenProblems/25.lean
+statement:
+  formal:
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: green_25
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/GreensOpenProblems/25.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: green_25.upper
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/GreensOpenProblems/25.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: green_25.lower
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/GreensOpenProblems/25.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: green_25.variants.lower_ess89
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/GreensOpenProblems/25.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: green_25.variants.upper_ess89
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/GreensOpenProblems/25.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: green_25.variants.upper_ess89_trivial
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/GreensOpenProblems/25.lean
+  informal: |-
+    For which values of $k$ is the following true: whenever we partition $[N] = A_1 \cup \dots \cup A_k$,
+    $\left|\bigcup^k_{i=1} (A_i \hat{+} A_i)\right| \geq \frac{1}{10} N$?
+subject:
+  msc:
+    - "05"
+    - "11"
+title: Green's Open Problem 25

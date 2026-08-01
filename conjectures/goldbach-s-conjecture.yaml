@@ -1,0 +1,58 @@
+aliases:
+  - Goldbach conjecture
+claims: []
+id: goldbach-s-conjecture
+ids:
+  external:
+    - label: Landau Problems Wikipedia Page
+      url: https://en.wikipedia.org/wiki/Landau%27s_problems#Twin_prime_conjecture
+    - label: Goldbach's Conjecture Wikipedia Page
+      url: https://en.wikipedia.org/wiki/Goldbach%27s_conjecture
+  formal_conjectures: FormalConjectures/Wikipedia/GoldbachConjecture.lean
+  mathworld: https://mathworld.wolfram.com/GoldbachConjecture.html
+  wikidata: Q485520
+  wikipedia: https://en.wikipedia.org/wiki/Landau%27s_problems#Twin_prime_conjecture
+openness_basis:
+  asserted_by: google-deepmind/formal-conjectures
+  meaning: no_published_solution_known_to_curator
+  note: Categorized upstream as "research open" at v4.32.0.
+provenance:
+  - fields:
+      - title
+      - statement.informal
+      - statement.formal
+      - subject.msc
+      - ids.external
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: google-deepmind/formal-conjectures
+    upstream_version: v4.32.0
+    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/GoldbachConjecture.lean
+  - fields:
+      - aliases
+      - ids.wikidata
+      - ids.wikipedia
+      - ids.mathworld
+    license: CC0-1.0
+    retrieved: 2026-07-31
+    source: wikidata
+    url: https://www.wikidata.org/wiki/Q485520
+statement:
+  formal:
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: goldbach
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/GoldbachConjecture.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: ternaryGoldbach
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/GoldbachConjecture.lean
+  informal: Can every even integer greater than 2 be written as the sum of two primes?
+subject:
+  msc:
+    - "11"
+title: Goldbach's conjecture

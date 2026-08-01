@@ -1,0 +1,52 @@
+aliases:
+  - Beal's conjecture
+claims: []
+id: beal-conjecture
+ids:
+  external:
+    - label: Wikipedia
+      url: https://en.wikipedia.org/wiki/Beal_conjecture
+  formal_conjectures: FormalConjectures/Wikipedia/BealConjecture.lean
+  mathworld: https://mathworld.wolfram.com/BealsConjecture.html
+  wikidata: Q508173
+  wikipedia: https://en.wikipedia.org/wiki/Beal_conjecture
+openness_basis:
+  asserted_by: google-deepmind/formal-conjectures
+  meaning: no_published_solution_known_to_curator
+  note: Categorized upstream as "research open" at v4.32.0.
+provenance:
+  - fields:
+      - title
+      - statement.informal
+      - statement.formal
+      - subject.msc
+      - ids.external
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: google-deepmind/formal-conjectures
+    upstream_version: v4.32.0
+    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/BealConjecture.lean
+  - fields:
+      - aliases
+      - ids.wikidata
+      - ids.wikipedia
+      - ids.mathworld
+    license: CC0-1.0
+    retrieved: 2026-07-31
+    source: wikidata
+    url: https://www.wikidata.org/wiki/Q508173
+statement:
+  formal:
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: beal_conjecture
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/BealConjecture.lean
+  informal: |-
+    The **Beal Conjecture**: if we are given positive integers $A, B, C, x, y, z$ such that
+    $x, y, z > 2$ and $A^x + B^y = C^z$ then $A, B, C$ have a common divisor.
+subject:
+  msc:
+    - "11"
+title: Beal conjecture

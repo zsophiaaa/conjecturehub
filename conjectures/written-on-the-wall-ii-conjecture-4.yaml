@@ -1,0 +1,51 @@
+claims:
+  - evidence_tier: published
+    id: written-on-the-wall-ii-conjecture-4-fc-solved
+    notes: Imported from the upstream `research solved` category. The statement is formalized; the proof has not been machine-checked by ConjectureHub.
+    recorded_on: 2026-07-31
+    reviewer: google-deepmind/formal-conjectures maintainers
+    source:
+      kind: dataset
+      title: formal-conjectures marks conjecture4 as research solved
+      url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/WrittenOnTheWallII/GraphConjecture4.lean
+    state: active
+    type: proved
+id: written-on-the-wall-ii-conjecture-4
+ids:
+  external:
+    - label: E. DeLaVina, Written on the Wall II, Conjectures of Graffiti.pc
+      url: http://cms.dt.uh.edu/faculty/delavinae/research/wowII/
+  formal_conjectures: FormalConjectures/WrittenOnTheWallII/GraphConjecture4.lean
+openness_basis:
+  asserted_by: google-deepmind/formal-conjectures
+  meaning: no_published_solution_known_to_curator
+provenance:
+  - fields:
+      - title
+      - statement.informal
+      - statement.formal
+      - subject.msc
+      - ids.external
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: google-deepmind/formal-conjectures
+    upstream_version: v4.32.0
+    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/WrittenOnTheWallII/GraphConjecture4.lean
+statement:
+  formal:
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: conjecture4
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/WrittenOnTheWallII/GraphConjecture4.lean
+  informal: |-
+    WOWII [Conjecture 4](http://cms.dt.uh.edu/faculty/delavinae/research/wowII/)
+
+    If `G` is a connected graph then the maximum number of leaves over all spanning
+    trees satisfies `Ls(G) ≥ NG(G) - 1` where `NG(G)` is the minimal neighbourhood
+    size of a non-edge of `G`.
+subject:
+  msc:
+    - "05"
+title: Written on the Wall II - Conjecture 4

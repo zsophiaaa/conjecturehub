@@ -1,0 +1,64 @@
+claims: []
+id: agrawal-s-conjecture
+ids:
+  external:
+    - label: Wikipedia
+      url: https://en.wikipedia.org/wiki/Agrawal%27s_conjecture
+    - label: AIM Math
+      url: https://aimath.org/WWN/primesinp/articles/html/50a/
+    - label: Paper
+      url: https://eprint.iacr.org/2009/008.pdf
+  formal_conjectures: FormalConjectures/Wikipedia/Agrawal.lean
+  wikidata: Q4693778
+  wikipedia: https://en.wikipedia.org/wiki/Agrawal%27s_conjecture
+openness_basis:
+  asserted_by: google-deepmind/formal-conjectures
+  meaning: no_published_solution_known_to_curator
+  note: Categorized upstream as "research open" at v4.32.0.
+provenance:
+  - fields:
+      - title
+      - statement.informal
+      - statement.formal
+      - subject.msc
+      - ids.external
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: google-deepmind/formal-conjectures
+    upstream_version: v4.32.0
+    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/Agrawal.lean
+  - fields:
+      - aliases
+      - ids.wikidata
+      - ids.wikipedia
+      - ids.mathworld
+    license: CC0-1.0
+    retrieved: 2026-07-31
+    source: wikidata
+    url: https://www.wikidata.org/wiki/Q4693778
+statement:
+  formal:
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: agrawal_conjecture
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/Agrawal.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: agrawal_conjecture.variants.popovych
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/Agrawal.lean
+  informal: |-
+    **Agrawal's Primality Conjecture.**
+
+    Does the congruence $(X-1)^n \equiv X^n - 1 \pmod{n, X^r-1}$ imply
+    $n$ is prime (with a specific exception for $n^2 \equiv 1 \pmod{r}$)?
+
+    While the "if" direction is a known theorem, the "only if" direction
+    remains a conjecture.
+subject:
+  msc:
+    - "11"
+title: Agrawal's conjecture

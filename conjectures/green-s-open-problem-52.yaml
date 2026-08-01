@@ -1,0 +1,45 @@
+claims: []
+id: green-s-open-problem-52
+ids:
+  external:
+    - label: Green's Open Problems
+      url: https://people.maths.ox.ac.uk/greenbj/papers/open-problems.pdf#problem.52
+  formal_conjectures: FormalConjectures/GreensOpenProblems/52.lean
+openness_basis:
+  asserted_by: google-deepmind/formal-conjectures
+  meaning: no_published_solution_known_to_curator
+  note: Categorized upstream as "research open" at v4.32.0.
+provenance:
+  - fields:
+      - title
+      - statement.informal
+      - statement.formal
+      - subject.msc
+      - ids.external
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: google-deepmind/formal-conjectures
+    upstream_version: v4.32.0
+    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/GreensOpenProblems/52.lean
+statement:
+  formal:
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: green_52
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/GreensOpenProblems/52.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: green_52_log
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/GreensOpenProblems/52.lean
+  informal: |-
+    Suppose that $A \subset \mathbb{F}_2^n$ is a set with an additive complement of size $K$.
+    Does $2A$ contain a coset of codimension $O_K(1)$?
+subject:
+  msc:
+    - "05"
+    - "11"
+title: Green's Open Problem 52

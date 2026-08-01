@@ -1,0 +1,57 @@
+claims: []
+id: grimm-s-conjecture
+ids:
+  external:
+    - label: Wikipedia
+      url: https://en.wikipedia.org/wiki/Grimm%27s_conjecture
+  formal_conjectures: FormalConjectures/Wikipedia/Grimm.lean
+  mathworld: https://mathworld.wolfram.com/GrimmsConjecture.html
+  wikidata: Q2993317
+  wikipedia: https://en.wikipedia.org/wiki/Grimm%27s_conjecture
+openness_basis:
+  asserted_by: google-deepmind/formal-conjectures
+  meaning: no_published_solution_known_to_curator
+  note: Categorized upstream as "research open" at v4.32.0.
+provenance:
+  - fields:
+      - title
+      - statement.informal
+      - statement.formal
+      - subject.msc
+      - ids.external
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: google-deepmind/formal-conjectures
+    upstream_version: v4.32.0
+    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/Grimm.lean
+  - fields:
+      - aliases
+      - ids.wikidata
+      - ids.wikipedia
+      - ids.mathworld
+    license: CC0-1.0
+    retrieved: 2026-07-31
+    source: wikidata
+    url: https://www.wikidata.org/wiki/Q2993317
+statement:
+  formal:
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: grimm_conjecture
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/Grimm.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: grimm_conjecture_weak
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/Grimm.lean
+  informal: |-
+    **Grimm's Conjecture**
+    If $n, n+1, \dots, n+k-1$ are all composite numbers, then there are $k$ distinct primes $p_i$
+    such that $p_i$ divides $n + i$ for all $0 \le i \le k-1$.
+subject:
+  msc:
+    - "11"
+title: Grimm's conjecture

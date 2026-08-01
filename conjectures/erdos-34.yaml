@@ -1,0 +1,84 @@
+claims:
+  - evidence_tier: published
+    id: erdos-34-fc-solved
+    notes: Imported from the upstream `research solved` category. The statement is formalized; the proof has not been machine-checked by ConjectureHub.
+    recorded_on: 2026-07-31
+    reviewer: google-deepmind/formal-conjectures maintainers
+    source:
+      kind: dataset
+      title: formal-conjectures marks erdos_34 as research solved
+      url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/34.lean
+    state: active
+    type: proved
+  - asserted_on: 2026-02-05
+    evidence_tier: published
+    id: erdos-34-erdos-status
+    recorded_on: 2026-07-31
+    reviewer: teorth/erdosproblems maintainers
+    source:
+      kind: dataset
+      title: erdosproblems.com records this problem as "disproved"
+      url: https://www.erdosproblems.com/34
+    state: active
+    type: disproved
+id: erdos-34
+ids:
+  erdos: "34"
+  external:
+    - label: erdosproblems.com/34
+      url: https://www.erdosproblems.com/34
+  formal_conjectures: FormalConjectures/ErdosProblems/34.lean
+  oeis:
+    - A389241
+    - A234813
+    - A390187
+openness_basis:
+  asserted_by: erdosproblems.com
+  asserted_on: 2026-02-05
+  meaning: no_published_solution_known_to_curator
+provenance:
+  - fields:
+      - title
+      - statement.informal
+      - statement.formal
+      - subject.msc
+      - ids.external
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: google-deepmind/formal-conjectures
+    upstream_version: v4.32.0
+    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/34.lean
+  - fields:
+      - ids.erdos
+      - ids.oeis
+      - subject.tags
+      - openness_basis
+      - claims
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: teorth/erdosproblems
+    upstream_version: d031865128a7ddccd85e8099f0f818211cfc9a41
+    url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
+statement:
+  formal:
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: erdos_34
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/34.lean
+  informal: |-
+    For any permutation $\pi\in S_n$ of $\{1,\ldots,n\}$ let $S(\pi)$ count the number of distinct consecutive sums, that is, sums of the shape $\sum_{u\leq i\leq v}\pi(i)$. Is it true that
+    \[
+    S(\pi) = o(n^2)
+    \]
+    for all $\pi\in S_n$?
+
+    Hegyvári [He86] gave a counterexample.
+subject:
+  msc:
+    - "05"
+    - "11"
+  tags:
+    - number theory
+title: Erdős Problem 34

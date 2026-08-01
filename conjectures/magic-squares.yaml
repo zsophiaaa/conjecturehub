@@ -1,0 +1,55 @@
+claims: []
+id: magic-squares
+ids:
+  external:
+    - label: Magic Square of Squares - Wikipedia
+      url: https://en.wikipedia.org/wiki/Magic_square_of_squares
+    - label: multimagie.com
+      url: http://www.multimagie.com/English/SquaresOfSquaresSearch.htm
+    - label: Semi-Magic Square of Cubes
+      url: https://unsolvedproblems.org/index_files/SquareofCubes.htm
+    - label: Magic Square of Squares
+      url: https://static.nsta.org/pdfs/QuantumV6N3.pdf
+  formal_conjectures: FormalConjectures/Wikipedia/MagicSquares.lean
+  wikipedia: https://en.wikipedia.org/wiki/Magic_square_of_squares
+openness_basis:
+  asserted_by: google-deepmind/formal-conjectures
+  meaning: no_published_solution_known_to_curator
+  note: Categorized upstream as "research open" at v4.32.0.
+provenance:
+  - fields:
+      - title
+      - statement.informal
+      - statement.formal
+      - subject.msc
+      - ids.external
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: google-deepmind/formal-conjectures
+    upstream_version: v4.32.0
+    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/MagicSquares.lean
+statement:
+  formal:
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: exists_magic_square_squares
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/MagicSquares.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: exists_semi_magic_square_cubes
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/MagicSquares.lean
+  informal: |-
+    Does there exist a $3 \times 3$ matrix such that every entry is a distinct square,
+    and all rows, columns, and diagonals add up to the same value?
+
+    0 is excluded, as a Magic Square of Squares with 0 and 8 distinct squares is know is knownn.
+    See [Magic Square of Squares](https://static.nsta.org/pdfs/QuantumV6N3.pdf)
+subject:
+  msc:
+    - "05"
+    - "11"
+title: Magic Squares

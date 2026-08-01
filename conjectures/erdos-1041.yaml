@@ -1,0 +1,75 @@
+claims:
+  - asserted_on: 2025-09-15
+    evidence_tier: published
+    id: erdos-1041-erdos-status
+    recorded_on: 2026-07-31
+    reviewer: teorth/erdosproblems maintainers
+    source:
+      kind: dataset
+      title: erdosproblems.com records this problem as "falsifiable"
+      url: https://www.erdosproblems.com/1041
+    state: active
+    type: partial
+id: erdos-1041
+ids:
+  erdos: "1041"
+  external:
+    - label: erdosproblems.com/1041
+      url: https://www.erdosproblems.com/1041
+  formal_conjectures: FormalConjectures/ErdosProblems/1041.lean
+openness_basis:
+  asserted_by: erdosproblems.com
+  asserted_on: 2025-09-15
+  meaning: no_published_solution_known_to_curator
+  note: Categorized upstream as "research open" at v4.32.0.
+provenance:
+  - fields:
+      - title
+      - statement.informal
+      - statement.formal
+      - subject.msc
+      - ids.external
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: google-deepmind/formal-conjectures
+    upstream_version: v4.32.0
+    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/1041.lean
+  - fields:
+      - ids.erdos
+      - ids.oeis
+      - subject.tags
+      - openness_basis
+      - claims
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: teorth/erdosproblems
+    upstream_version: d031865128a7ddccd85e8099f0f818211cfc9a41
+    url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
+statement:
+  formal:
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: exists_connected_component_contains_two_roots
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/1041.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: erdos_1041
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/1041.lean
+  informal: |-
+    Let
+    $$ f(z) = \prod_{i=1}^{n} (z - z_i) \in \mathbb{C}[x] $$
+    with $|z_i| < 1$ for all $i$.
+
+    Conjecture: Must there always exist a path of length less than 2 in
+    $$ \{ z \in \mathbb{C} \mid |f(z)| < 1 \} $$
+    which connects two of the roots of $f$?
+subject:
+  msc:
+    - "32"
+  tags:
+    - analysis
+title: Erdős Problem 1041

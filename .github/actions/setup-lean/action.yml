@@ -1,0 +1,87 @@
+name: Set up the Lean verification toolchain
+description: >
+  Installs elan, builds landrun, lean4export, nanoda and comparator, restores
+  the Mathlib build cache, and compiles the canonical statements. Shared by the
+  pull request check and the post-merge receipt workflow so the two cannot drift
+  apart.
+
+inputs:
+  lean_toolchain:
+    description: Lean toolchain to install
+    required: true
+  comparator_rev:
+    description: Branch or commit of leanprover/comparator to build
+    required: false
+    default: master
+  mathlib_rev:
+    description: Mathlib tag, used only as part of the cache key
+    required: true
+
+runs:
+  using: composite
+  steps:
+    - name: Install elan
+      shell: bash
+      run: |
+        set -euo pipefail
+        cd "$(mktemp -d)"
+        curl -sSfL https://github.com/leanprover/elan/releases/latest/download/elan-x86_64-unknown-linux-gnu.tar.gz | tar xz
+        ./elan-init -y --default-toolchain "leanprover/lean4:${{ inputs.lean_toolchain }}"
+        echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
+
+    - name: Cache the verification toolchain
+      id: toolcache
+      uses: actions/cache@v4
+      with:
+        path: ~/.conjecturehub-tools
+        key: verify-tools-${{ inputs.lean_toolchain }}-${{ inputs.comparator_rev }}-v1
+
+    - name: Build landrun, nanoda, lean4export and comparator
+      if: steps.toolcache.outputs.cache-hit != 'true'
+      shell: bash
+      run: |
+        set -euo pipefail
+        TOOLS="$HOME/.conjecturehub-tools"
+        mkdir -p "$TOOLS/bin"
+        cd "$(mktemp -d)"
+
+        # landrun is the sandbox that submitted proofs compile inside. Upstream
+        # asks for a build from main rather than a release.
+        git clone --depth 1 https://github.com/Zouuup/landrun.git
+        (cd landrun && go build -o "$TOOLS/bin/landrun" ./cmd/landrun)
+
+        # nanoda is an independent kernel. Checking with both means a bug in
+        # Lean's kernel alone cannot certify a false theorem.
+        git clone --depth 1 https://github.com/ammkrn/nanoda_lib.git
+        (cd nanoda_lib && cargo build --release && cp target/release/nanoda_bin "$TOOLS/bin/")
+
+        git clone --branch "${{ inputs.comparator_rev }}" --depth 1 https://github.com/leanprover/comparator.git
+        cd comparator
+        lake build lean4export comparator
+        cp .lake/build/bin/comparator "$TOOLS/bin/"
+        cp .lake/packages/lean4export/.lake/build/bin/lean4export "$TOOLS/bin/"
+        git rev-parse HEAD > "$TOOLS/comparator-version"
+
+    - name: Put the tools on PATH
+      shell: bash
+      run: |
+        echo "$HOME/.conjecturehub-tools/bin" >> "$GITHUB_PATH"
+        echo "COMPARATOR_VERSION=$(cat "$HOME/.conjecturehub-tools/comparator-version" 2>/dev/null || echo unknown)" >> "$GITHUB_ENV"
+
+    - name: Cache the Mathlib build
+      uses: actions/cache@v4
+      with:
+        path: statements/.lake
+        key: mathlib-${{ inputs.mathlib_rev }}-${{ hashFiles('statements/lakefile.toml') }}-v1
+
+    # The canonical statements are built before any solution exists in compiled
+    # form. Comparator's guarantee depends on the challenge never having been
+    # built in an environment a solution could have influenced, so `lake build`
+    # names the Challenge library explicitly and never the default target.
+    - name: Build the canonical statements
+      shell: bash
+      working-directory: statements
+      run: |
+        set -euo pipefail
+        lake exe cache get
+        lake build Challenge

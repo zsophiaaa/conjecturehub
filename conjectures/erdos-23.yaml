@@ -1,0 +1,82 @@
+claims:
+  - asserted_on: 2025-08-31
+    evidence_tier: published
+    id: erdos-23-erdos-status
+    recorded_on: 2026-07-31
+    reviewer: teorth/erdosproblems maintainers
+    source:
+      kind: dataset
+      title: erdosproblems.com records this problem as "falsifiable"
+      url: https://www.erdosproblems.com/23
+    state: active
+    type: partial
+id: erdos-23
+ids:
+  erdos: "23"
+  external:
+    - label: erdosproblems.com/23
+      url: https://www.erdosproblems.com/23
+    - label: OEIS A389646
+      url: https://oeis.org/A389646
+    - label: Balogh-Clemen-Lidicky, Max Cuts in Triangle-free Graphs
+      url: https://arxiv.org/abs/2103.14179
+    - label: McKay, Extremal graphs for bipartization of triangle-free graphs
+      url: https://users.cecs.anu.edu.au/~bdm/data/graphs.html
+  formal_conjectures: FormalConjectures/ErdosProblems/23.lean
+  oeis:
+    - A389646
+openness_basis:
+  asserted_by: erdosproblems.com
+  asserted_on: 2025-08-31
+  meaning: no_published_solution_known_to_curator
+  note: Categorized upstream as "research open" at v4.32.0.
+provenance:
+  - fields:
+      - title
+      - statement.informal
+      - statement.formal
+      - subject.msc
+      - ids.external
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: google-deepmind/formal-conjectures
+    upstream_version: v4.32.0
+    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/23.lean
+  - fields:
+      - ids.erdos
+      - ids.oeis
+      - subject.tags
+      - openness_basis
+      - claims
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: teorth/erdosproblems
+    upstream_version: d031865128a7ddccd85e8099f0f818211cfc9a41
+    url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
+statement:
+  formal:
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: erdos_23.variants.n5
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/23.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: erdos_23.variants.n5_tight
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/23.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: erdos_23
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/23.lean
+  informal: Can every triangle-free graph on $5n$ vertices be made bipartite by deleting at most $n^2$ edges?
+subject:
+  msc:
+    - "05"
+  tags:
+    - graph theory
+title: Erdős Problem 23

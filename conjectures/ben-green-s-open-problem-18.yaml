@@ -1,0 +1,49 @@
+claims: []
+id: ben-green-s-open-problem-18
+ids:
+  external:
+    - label: Ben Green's Open Problem 18
+      url: https://people.maths.ox.ac.uk/greenbj/papers/open-problems.pdf#problem.18
+  formal_conjectures: FormalConjectures/GreensOpenProblems/18.lean
+openness_basis:
+  asserted_by: google-deepmind/formal-conjectures
+  meaning: no_published_solution_known_to_curator
+  note: Categorized upstream as "research open" at v4.32.0.
+provenance:
+  - fields:
+      - title
+      - statement.informal
+      - statement.formal
+      - subject.msc
+      - ids.external
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: google-deepmind/formal-conjectures
+    upstream_version: v4.32.0
+    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/GreensOpenProblems/18.lean
+statement:
+  formal:
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: green_18
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/GreensOpenProblems/18.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: green_18.bmz_corners
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/GreensOpenProblems/18.lean
+  informal: |-
+    Suppose that $G$ is a finite group, and let $A \subset G \times G$ be a subset of density $\alpha$.
+    Is it true that there are $\gg_\alpha |G|^3$ triples $x, y, g$ such that $(x, y), (gx, y), (x, gy)$
+    all lie in $A$?
+
+    Note: A is taken as $\alpha$-dense, i.e. $|A| \ge \alpha |G|^2$ [Au16, Question 2]
+subject:
+  msc:
+    - "05"
+    - "11"
+    - "20"
+title: Ben Green's Open Problem 18

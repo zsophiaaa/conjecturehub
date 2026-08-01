@@ -1,0 +1,42 @@
+claims: []
+id: tests-for-the-category-docstring-linter
+ids:
+  formal_conjectures: FormalConjectures/Util/Linters/CategoryDocstringLinterTest.lean
+openness_basis:
+  asserted_by: google-deepmind/formal-conjectures
+  meaning: no_published_solution_known_to_curator
+  note: Categorized upstream as "research open" at v4.32.0.
+provenance:
+  - fields:
+      - title
+      - statement.informal
+      - statement.formal
+      - subject.msc
+      - ids.external
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: google-deepmind/formal-conjectures
+    upstream_version: v4.32.0
+    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Util/Linters/CategoryDocstringLinterTest.lean
+statement:
+  formal:
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: flagged_open_missing_docstring
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Util/Linters/CategoryDocstringLinterTest.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: flagged_solved_missing_docstring
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Util/Linters/CategoryDocstringLinterTest.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: not_flagged_with_docstring
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Util/Linters/CategoryDocstringLinterTest.lean
+subject: {}
+title: Tests for the category docstring linter

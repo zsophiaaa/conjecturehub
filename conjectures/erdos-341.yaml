@@ -1,0 +1,59 @@
+claims: []
+id: erdos-341
+ids:
+  erdos: "341"
+  external:
+    - label: erdosproblems.com/341
+      url: https://www.erdosproblems.com/341
+    - label: Ben Green's Open Problem 7
+      url: https://people.maths.ox.ac.uk/greenbj/papers/open-problems.pdf#section.1
+  formal_conjectures: FormalConjectures/ErdosProblems/341.lean
+openness_basis:
+  asserted_by: erdosproblems.com
+  asserted_on: 2025-08-31
+  meaning: no_published_solution_known_to_curator
+  note: Categorized upstream as "research open" at v4.32.0.
+provenance:
+  - fields:
+      - title
+      - statement.informal
+      - statement.formal
+      - subject.msc
+      - ids.external
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: google-deepmind/formal-conjectures
+    upstream_version: v4.32.0
+    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/341.lean
+  - fields:
+      - ids.erdos
+      - ids.oeis
+      - subject.tags
+      - openness_basis
+      - claims
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: teorth/erdosproblems
+    upstream_version: d031865128a7ddccd85e8099f0f818211cfc9a41
+    url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
+statement:
+  formal:
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: erdos_341
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/341.lean
+  informal: |-
+    Let $A=\{a_1 < \cdots < a_k\}$ be a finite set of integers and extend it to an infinite
+    sequence $\overline{A}=\{a_1 < a_2 < \cdots \}$ by defining $a_{n+1}$ for $n \geq k$ to be
+    the least integer exceeding $a_n$ which is not of the form $a_i + a_j$ with $i,j \leq n$.
+    Is it true that the sequence of differences $a_{m+1}-a_m$ is eventually periodic?
+
+    This problem is discussed under Problem 7 on Green's open problems list.
+subject:
+  msc:
+    - "11"
+  tags:
+    - number theory
+title: Erdős Problem 341

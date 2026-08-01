@@ -1,0 +1,72 @@
+claims: []
+id: erdos-962
+ids:
+  erdos: "962"
+  external:
+    - label: erdosproblems.com/962
+      url: https://www.erdosproblems.com/962
+    - label: Tang
+      url: https://github.com/QuanyuTang/erdos-problem-962/blob/main/On_Erd%C5%91s_Problem_962.pdf
+    - label: Tao
+      url: https://www.erdosproblems.com/forum/thread/962
+  formal_conjectures: FormalConjectures/ErdosProblems/962.lean
+  oeis:
+    - A327909
+openness_basis:
+  asserted_by: erdosproblems.com
+  asserted_on: 2025-08-31
+  meaning: no_published_solution_known_to_curator
+  note: Categorized upstream as "research open" at v4.32.0.
+provenance:
+  - fields:
+      - title
+      - statement.informal
+      - statement.formal
+      - subject.msc
+      - ids.external
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: google-deepmind/formal-conjectures
+    upstream_version: v4.32.0
+    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/962.lean
+  - fields:
+      - ids.erdos
+      - ids.oeis
+      - subject.tags
+      - openness_basis
+      - claims
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: teorth/erdosproblems
+    upstream_version: d031865128a7ddccd85e8099f0f818211cfc9a41
+    url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
+statement:
+  formal:
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: erdos_962
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/962.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: erdos_962.variants.tang_lower_bound
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/962.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: erdos_962.variants.tao_upper_bound
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/962.lean
+  informal: |-
+    Main conjecture:
+
+    $\log k(n) \le (\log n)^{(1/2 + o(1))}$
+subject:
+  msc:
+    - "11"
+  tags:
+    - number theory
+title: Erdős Problem 962

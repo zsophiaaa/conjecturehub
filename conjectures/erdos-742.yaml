@@ -1,0 +1,88 @@
+claims:
+  - asserted_on: 2025-08-31
+    evidence_tier: published
+    id: erdos-742-erdos-status
+    recorded_on: 2026-07-31
+    reviewer: teorth/erdosproblems maintainers
+    source:
+      kind: dataset
+      title: erdosproblems.com records this problem as "decidable"
+      url: https://www.erdosproblems.com/742
+    state: active
+    type: partial
+id: erdos-742
+ids:
+  erdos: "742"
+  external:
+    - label: erdosproblems.com/742
+      url: https://www.erdosproblems.com/742
+  formal_conjectures: FormalConjectures/ErdosProblems/742.lean
+openness_basis:
+  asserted_by: erdosproblems.com
+  asserted_on: 2025-08-31
+  meaning: no_published_solution_known_to_curator
+  note: Categorized upstream as "research open" at v4.32.0.
+provenance:
+  - fields:
+      - title
+      - statement.informal
+      - statement.formal
+      - subject.msc
+      - ids.external
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: google-deepmind/formal-conjectures
+    upstream_version: v4.32.0
+    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/742.lean
+  - fields:
+      - ids.erdos
+      - ids.oeis
+      - subject.tags
+      - openness_basis
+      - claims
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: teorth/erdosproblems
+    upstream_version: d031865128a7ddccd85e8099f0f818211cfc9a41
+    url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
+statement:
+  formal:
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: erdos_742
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/742.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: plesnik_bound
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/742.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: fan_bound
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/742.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: furedi_bound
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/742.lean
+  informal: |-
+    **Murty-Simon Conjecture**
+
+    Let $G$ be a graph on $n$ vertices with diameter $2$ such that deleting any edge increases the
+    diameter. Is it true that $G$ has at most $\lfloor n^2 / 4 \rfloor$ edges? Equality is conjectured
+    to hold for the complete balanced bipartite graph $K_{\lceil n/2 \rceil, \lfloor n/2 \rfloor}$.
+
+    The conjecture is resolved up to a finite check: Fan [Fa87] verified it for $n \leq 24$ and
+    $n = 26$, and Füredi [Fü92] proved it for all sufficiently large $n$.
+subject:
+  msc:
+    - "05"
+  tags:
+    - graph theory
+title: Erdős Problem 742

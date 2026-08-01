@@ -1,0 +1,317 @@
+claims: []
+id: ben-green-s-open-problem-14
+ids:
+  external:
+    - label: Green, Ben. "100 open problems." (2024).
+      url: https://people.maths.ox.ac.uk/greenbj/papers/open-problems.pdf#problem.14
+  formal_conjectures: FormalConjectures/GreensOpenProblems/14.lean
+openness_basis:
+  asserted_by: google-deepmind/formal-conjectures
+  meaning: no_published_solution_known_to_curator
+  note: Categorized upstream as "research open" at v4.32.0.
+provenance:
+  - fields:
+      - title
+      - statement.informal
+      - statement.formal
+      - subject.msc
+      - ids.external
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: google-deepmind/formal-conjectures
+    upstream_version: v4.32.0
+    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/GreensOpenProblems/14.lean
+statement:
+  formal:
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: green_14_polynomial
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/GreensOpenProblems/14.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: green_14_polynomial_k_eq_3
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/GreensOpenProblems/14.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: green_14_quadratic
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/GreensOpenProblems/14.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: green_14_lower_bound_green
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/GreensOpenProblems/14.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: green_14_lower_bound_hunter
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/GreensOpenProblems/14.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: green_14_lower_bound_brown_landman_robertson
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/GreensOpenProblems/14.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: green_14_lower_bound_li_shu
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/GreensOpenProblems/14.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: green_14_upper_bound_schoen
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/GreensOpenProblems/14.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: green_14_upper_bound_kelley_meka
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/GreensOpenProblems/14.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: green_14_variant_2r2
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/GreensOpenProblems/14.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: W_3_3
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/GreensOpenProblems/14.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: W_3_4
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/GreensOpenProblems/14.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: W_3_5
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/GreensOpenProblems/14.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: W_3_6
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/GreensOpenProblems/14.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: W_3_7
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/GreensOpenProblems/14.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: W_3_8
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/GreensOpenProblems/14.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: W_3_9
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/GreensOpenProblems/14.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: W_3_10
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/GreensOpenProblems/14.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: W_3_11
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/GreensOpenProblems/14.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: W_3_12
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/GreensOpenProblems/14.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: W_3_13
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/GreensOpenProblems/14.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: W_3_14
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/GreensOpenProblems/14.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: W_3_15
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/GreensOpenProblems/14.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: W_3_16
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/GreensOpenProblems/14.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: W_3_17
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/GreensOpenProblems/14.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: W_3_18
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/GreensOpenProblems/14.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: W_3_19
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/GreensOpenProblems/14.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: W_3_20_lower
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/GreensOpenProblems/14.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: W_3_21_lower
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/GreensOpenProblems/14.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: W_3_22_lower
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/GreensOpenProblems/14.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: W_3_23_lower
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/GreensOpenProblems/14.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: W_3_24_lower
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/GreensOpenProblems/14.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: W_3_25_lower
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/GreensOpenProblems/14.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: W_3_26_lower
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/GreensOpenProblems/14.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: W_3_27_lower
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/GreensOpenProblems/14.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: W_3_28_lower
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/GreensOpenProblems/14.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: W_3_29_lower
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/GreensOpenProblems/14.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: W_3_30_lower
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/GreensOpenProblems/14.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: W_3_31_lower
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/GreensOpenProblems/14.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: W_3_32_lower
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/GreensOpenProblems/14.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: W_3_33_lower
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/GreensOpenProblems/14.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: W_3_34_lower
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/GreensOpenProblems/14.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: W_3_35_lower
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/GreensOpenProblems/14.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: W_3_36_lower
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/GreensOpenProblems/14.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: W_3_37_lower
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/GreensOpenProblems/14.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: W_3_38_lower
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/GreensOpenProblems/14.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: W_3_39_lower
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/GreensOpenProblems/14.lean
+  informal: |-
+    Is $W(k, r)$ a polynomial in $r$, for fixed $k$?
+
+    We formulate this as asking if $W(k, r)$ has polynomial growth in $r$.
+    We know it is not the case for $k = 3$ [Gr21, p.3].
+subject:
+  msc:
+    - "05"
+    - "11"
+title: Ben Green's Open Problem 14

@@ -1,0 +1,40 @@
+claims: []
+id: mathoverflow-21003
+ids:
+  external:
+    - label: mathoverflow/21003
+      url: https://mathoverflow.net/questions/21003
+    - label: "*Z.H.*"
+      url: https://mathoverflow.net/users/5098/z-h
+  formal_conjectures: FormalConjectures/Mathoverflow/21003.lean
+openness_basis:
+  asserted_by: google-deepmind/formal-conjectures
+  meaning: no_published_solution_known_to_curator
+  note: Categorized upstream as "research open" at v4.32.0.
+provenance:
+  - fields:
+      - title
+      - statement.informal
+      - statement.formal
+      - subject.msc
+      - ids.external
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: google-deepmind/formal-conjectures
+    upstream_version: v4.32.0
+    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Mathoverflow/21003.lean
+statement:
+  formal:
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: mathoverflow_21003
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Mathoverflow/21003.lean
+  informal: |-
+    Is there any polynomial $f(x, y) \in \mathbb{Q}[x, y]$ such that
+    $f : \mathbb{Q} \times \mathbb{Q} \rightarrow \mathbb{Q}$ is a bijection?
+subject:
+  msc:
+    - "12"
+title: Mathoverflow 21003

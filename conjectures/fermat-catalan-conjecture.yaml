@@ -1,0 +1,58 @@
+claims: []
+id: fermat-catalan-conjecture
+ids:
+  external:
+    - label: Wikipedia
+      url: https://en.wikipedia.org/wiki/Fermat-Catalan_conjecture
+  formal_conjectures: FormalConjectures/Wikipedia/FermatCatalanConjecture.lean
+  mathworld: https://mathworld.wolfram.com/Fermat-CatalanConjecture.html
+  wikidata: Q851604
+  wikipedia: https://en.wikipedia.org/wiki/Fermat-Catalan_conjecture
+openness_basis:
+  asserted_by: google-deepmind/formal-conjectures
+  meaning: no_published_solution_known_to_curator
+  note: Categorized upstream as "research open" at v4.32.0.
+provenance:
+  - fields:
+      - title
+      - statement.informal
+      - statement.formal
+      - subject.msc
+      - ids.external
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: google-deepmind/formal-conjectures
+    upstream_version: v4.32.0
+    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/FermatCatalanConjecture.lean
+  - fields:
+      - aliases
+      - ids.wikidata
+      - ids.wikipedia
+      - ids.mathworld
+    license: CC0-1.0
+    retrieved: 2026-07-31
+    source: wikidata
+    url: https://www.wikidata.org/wiki/Q851604
+statement:
+  formal:
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: fermat_catalan
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/FermatCatalanConjecture.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: fermat_catalan.variants.darmon_granville
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/FermatCatalanConjecture.lean
+  informal: |-
+    The **Fermat–Catalan conjecture** states that the equation
+    $a^m + b^n = c^k$ has only finitely many solutions $(a,b,c,m,n,k)$ with distinct triplets of values
+    $(a^m, b^n, c^k)$ where $a, b, c$ are positive coprime integers and $m, n, k$ are positive integers satisfying
+    $\frac 1 m + \frac 1 n + \frac 1 k < 1$.
+subject:
+  msc:
+    - "11"
+title: Fermat-Catalan conjecture

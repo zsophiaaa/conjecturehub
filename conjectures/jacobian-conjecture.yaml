@@ -1,0 +1,107 @@
+claims:
+  - id: jacobian-counterexample-alpoge-2026
+    type: counterexample
+    scope: "n ≥ 3"
+    evidence_tier: community_accepted
+    state: active
+    asserted_on: 2026-07-19
+    recorded_on: 2026-07-31
+    authors:
+      - Levent Alpöge
+    ai_assistance:
+      used: yes
+      systems:
+        - Claude Fable 5
+      role: discovery
+    reviewer: independent mathematicians and Lean formalizers (mathlib4 PR #42116)
+    source:
+      kind: x
+      url: https://x.com/__alpoge__/status/2079028340955197566
+      title: Explicit counterexample to the Jacobian conjecture
+    notes: A 216-character polynomial map on C³ with constant Jacobian determinant −2 but no polynomial inverse. Dimension two remains open.
+  - id: jacobian-counterexample-lean-2026
+    type: counterexample
+    scope: "n ≥ 3"
+    evidence_tier: machine_verified
+    state: active
+    asserted_on: 2026-07-21
+    recorded_on: 2026-07-31
+    authors:
+      - Levent Alpöge
+    ai_assistance:
+      used: yes
+      systems:
+        - Claude Fable 5
+      role: discovery
+    source:
+      kind: dataset
+      url: https://github.com/leanprover-community/mathlib4/pull/42116
+      title: "mathlib4: counterexample to the Jacobian conjecture"
+    verification:
+      tool: lean4
+      statement_path: Counterexamples/JacobianConjecture.lean
+      theorem: jacobianConjecture_false
+      toolchain: mathlib4 v4.32.0
+      permitted_axioms:
+        - propext
+        - Classical.choice
+        - Quot.sound
+      verified_on: 2026-07-26
+      run_url: https://github.com/leanprover-community/mathlib4/pull/42116
+    notes: Independently formalized in Lean 4 and merged into Mathlib. Also verified in Isabelle/HOL (AFP Jacobian_Counterexample).
+id: jacobian-conjecture
+ids:
+  external:
+    - label: Wikipedia
+      url: https://en.wikipedia.org/wiki/Jacobian_conjecture
+  formal_conjectures: FormalConjectures/Wikipedia/JacobianConjecture.lean
+  wikidata: Q2605695
+  wikipedia: https://en.wikipedia.org/wiki/Jacobian_conjecture
+openness_basis:
+  asserted_by: google-deepmind/formal-conjectures
+  meaning: no_published_solution_known_to_curator
+  note: Categorized upstream as "research open" at v4.32.0.
+provenance:
+  - fields:
+      - title
+      - statement.informal
+      - statement.formal
+      - subject.msc
+      - ids.external
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: google-deepmind/formal-conjectures
+    upstream_version: v4.32.0
+    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/JacobianConjecture.lean
+  - fields:
+      - claims
+    license: CC0-1.0
+    retrieved: 2026-07-31
+    source: conjecturehub-curator
+    url: https://github.com/leanprover-community/mathlib4/pull/42116
+  - fields:
+      - aliases
+      - ids.wikidata
+      - ids.wikipedia
+      - ids.mathworld
+    license: CC0-1.0
+    retrieved: 2026-07-31
+    source: wikidata
+    url: https://www.wikidata.org/wiki/Q2605695
+statement:
+  formal:
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: jacobian_conjecture
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/JacobianConjecture.lean
+  informal: |-
+    The **Jacobian Conjecture**: any regular function
+    (i.e. vector valued polynomial function from) `kⁿ → kᵐ`
+    whose Jacobian is a non-zero constant has an inverse that
+    is given by a regular function, where `k` is a field of characteristic `0`
+subject:
+  msc:
+    - "14"
+title: Jacobian conjecture

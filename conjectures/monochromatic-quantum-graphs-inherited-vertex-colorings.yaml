@@ -1,0 +1,310 @@
+claims: []
+id: monochromatic-quantum-graphs-inherited-vertex-colorings
+ids:
+  external:
+    - label: Vertex coloring inherited from perfect matchings (motivated by quantum physics)
+      url: https://mathoverflow.net/questions/311325
+    - label: Questions on the Structure of Perfect Matchings inspired by Quantum Physics
+      url: https://arxiv.org/abs/1902.06023
+    - label: Edge-coloured graphs with only monochromatic perfect matchings and their connection to quantum physics
+      url: https://arxiv.org/abs/2202.05562
+    - label: Krenn–Gu conjecture for sparse graphs
+      url: https://arxiv.org/abs/2407.00303
+  formal_conjectures: FormalConjectures/Paper/MonochromaticQuantumGraph.lean
+openness_basis:
+  asserted_by: google-deepmind/formal-conjectures
+  meaning: no_published_solution_known_to_curator
+  note: Categorized upstream as "research open" at v4.32.0.
+provenance:
+  - fields:
+      - title
+      - statement.informal
+      - statement.formal
+      - subject.msc
+      - ids.external
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: google-deepmind/formal-conjectures
+    upstream_version: v4.32.0
+    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Paper/MonochromaticQuantumGraph.lean
+statement:
+  formal:
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: eqSystem4_no_solution_nnreal_ge4
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Paper/MonochromaticQuantumGraph.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: eqSystem_no_solution_nnreal_even_ge6_ge3
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Paper/MonochromaticQuantumGraph.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: eqSystem_no_solution_even_ge4_d_eq_n_explicit
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Paper/MonochromaticQuantumGraph.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: eqSystem4_no_solution_d4
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Paper/MonochromaticQuantumGraph.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: eqSystem4_no_solution_ge4
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Paper/MonochromaticQuantumGraph.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: eqSystem6_no_solution_d3
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Paper/MonochromaticQuantumGraph.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: eqSystem6_no_solution_d4
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Paper/MonochromaticQuantumGraph.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: eqSystem6_no_solution_d5
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Paper/MonochromaticQuantumGraph.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: eqSystem6_no_solution_d6
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Paper/MonochromaticQuantumGraph.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: eqSystem6_no_solution_ge3
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Paper/MonochromaticQuantumGraph.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: eqSystem8_no_solution_d3
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Paper/MonochromaticQuantumGraph.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: eqSystem8_no_solution_d10
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Paper/MonochromaticQuantumGraph.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: eqSystem10_no_solution_d3
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Paper/MonochromaticQuantumGraph.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: eqSystem10_no_solution_d4
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Paper/MonochromaticQuantumGraph.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: eqSystem10_no_solution_d5
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Paper/MonochromaticQuantumGraph.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: eqSystem10_no_solution_d6
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Paper/MonochromaticQuantumGraph.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: eqSystem10_no_solution_d7
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Paper/MonochromaticQuantumGraph.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: eqSystem10_no_solution_d8
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Paper/MonochromaticQuantumGraph.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: eqSystem10_no_solution_d9
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Paper/MonochromaticQuantumGraph.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: eqSystem10_no_solution_d10
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Paper/MonochromaticQuantumGraph.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: eqSystem12_no_solution_d3
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Paper/MonochromaticQuantumGraph.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: eqSystem14_no_solution_d3
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Paper/MonochromaticQuantumGraph.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: eqSystem16_no_solution_d3
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Paper/MonochromaticQuantumGraph.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: eqSystem_no_solution_ge6_ge3
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Paper/MonochromaticQuantumGraph.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: eqSystem4_no_solution_ge4_real
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Paper/MonochromaticQuantumGraph.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: eqSystem6_no_solution_d3_real
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Paper/MonochromaticQuantumGraph.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: eqSystem6_no_solution_d5_real
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Paper/MonochromaticQuantumGraph.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: eqSystem6_no_solution_ge3_real
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Paper/MonochromaticQuantumGraph.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: eqSystem8_no_solution_d3_real
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Paper/MonochromaticQuantumGraph.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: eqSystem10_no_solution_d3_real
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Paper/MonochromaticQuantumGraph.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: eqSystem_no_solution_ge6_ge3_real
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Paper/MonochromaticQuantumGraph.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: eqSystem4_no_solution_ge4_int
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Paper/MonochromaticQuantumGraph.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: eqSystem6_no_solution_d3_int
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Paper/MonochromaticQuantumGraph.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: eqSystem6_no_solution_d5_int
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Paper/MonochromaticQuantumGraph.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: eqSystem6_no_solution_ge3_int
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Paper/MonochromaticQuantumGraph.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: eqSystem8_no_solution_d3_int
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Paper/MonochromaticQuantumGraph.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: eqSystem10_no_solution_d3_int
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Paper/MonochromaticQuantumGraph.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: eqSystem_no_solution_ge6_ge3_int
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Paper/MonochromaticQuantumGraph.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: eqSystem4_no_solution_ge4_trinary_int
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Paper/MonochromaticQuantumGraph.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: eqSystem6_no_solution_d3_trinary_int
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Paper/MonochromaticQuantumGraph.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: eqSystem6_no_solution_d5_trinary_int
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Paper/MonochromaticQuantumGraph.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: eqSystem6_no_solution_ge3_trinary_int
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Paper/MonochromaticQuantumGraph.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: eqSystem8_no_solution_d3_trinary_int
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Paper/MonochromaticQuantumGraph.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: eqSystem10_no_solution_d3_trinary_int
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Paper/MonochromaticQuantumGraph.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: eqSystem_no_solution_ge6_ge3_trinary_int
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Paper/MonochromaticQuantumGraph.lean
+  informal: |-
+    For $N = 6$ and $D = 3$, does there exist no solution to the monochromatic quantum graph
+    equation system over $\mathbb{C}$?
+subject:
+  msc:
+    - "05"
+    - "14"
+    - "81"
+title: Monochromatic quantum graphs (inherited vertex colorings)

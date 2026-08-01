@@ -1,0 +1,63 @@
+claims: []
+id: erdos-1002
+ids:
+  erdos: "1002"
+  external:
+    - label: erdosproblems.com/1002
+      url: https://www.erdosproblems.com/1002
+  formal_conjectures: FormalConjectures/ErdosProblems/1002.lean
+openness_basis:
+  asserted_by: erdosproblems.com
+  asserted_on: 2025-09-07
+  meaning: no_published_solution_known_to_curator
+  note: Categorized upstream as "research open" at v4.32.0.
+provenance:
+  - fields:
+      - title
+      - statement.informal
+      - statement.formal
+      - subject.msc
+      - ids.external
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: google-deepmind/formal-conjectures
+    upstream_version: v4.32.0
+    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/1002.lean
+  - fields:
+      - ids.erdos
+      - ids.oeis
+      - subject.tags
+      - openness_basis
+      - claims
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: teorth/erdosproblems
+    upstream_version: d031865128a7ddccd85e8099f0f818211cfc9a41
+    url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
+statement:
+  formal:
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: erdos_1002
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/1002.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: erdos_1002.variants.kesten
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/1002.lean
+  informal: |-
+    For any $0<\alpha<1$, let $f(\alpha,n)=\frac{1}{\log n}\sum_{1\leq k\leq n}(\tfrac{1}{2}-
+    \{ \alpha k\})$. Does $f(\alpha,n)$ have an asymptotic distribution function?
+
+    In other words, is there a non-decreasing function $g$ such that $g(-\infty)=0$, $g(\infty)=1$,
+    and $\lim_{n\to \infty}\lvert \{ \alpha\in (0,1): f(\alpha,n)\leq c\}\rvert=g(c)$?
+subject:
+  msc:
+    - "11"
+  tags:
+    - analysis
+    - diophantine approximation
+title: Erdős Problem 1002

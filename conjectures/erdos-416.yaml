@@ -1,0 +1,83 @@
+claims: []
+id: erdos-416
+ids:
+  erdos: "416"
+  external:
+    - label: erdosproblems.com/416
+      url: https://www.erdosproblems.com/416
+  formal_conjectures: FormalConjectures/ErdosProblems/416.lean
+  oeis:
+    - A264810
+openness_basis:
+  asserted_by: erdosproblems.com
+  asserted_on: 2025-08-31
+  meaning: no_published_solution_known_to_curator
+  note: Categorized upstream as "research open" at v4.32.0.
+provenance:
+  - fields:
+      - title
+      - statement.informal
+      - statement.formal
+      - subject.msc
+      - ids.external
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: google-deepmind/formal-conjectures
+    upstream_version: v4.32.0
+    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/416.lean
+  - fields:
+      - ids.erdos
+      - ids.oeis
+      - subject.tags
+      - openness_basis
+      - claims
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: teorth/erdosproblems
+    upstream_version: d031865128a7ddccd85e8099f0f818211cfc9a41
+    url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
+statement:
+  formal:
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: erdos_416.parts.i
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/416.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: erdos_416.parts.ii
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/416.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: erdos_416.variants.Pillai
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/416.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: erdos_416.variants.Erdos
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/416.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: erdos_416.variants.Maier_Pomerance
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/416.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: erdos_416.variants.Ford
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/416.lean
+  informal: Let `V(x)` count the number of `n≤x` such that `ϕ(m)=n` is solvable. Does `V(2x)/V(x)→2` ?
+subject:
+  msc:
+    - "11"
+  tags:
+    - number theory
+title: Erdős Problem 416

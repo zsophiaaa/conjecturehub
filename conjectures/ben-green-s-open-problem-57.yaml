@@ -1,0 +1,66 @@
+claims:
+  - evidence_tier: published
+    id: ben-green-s-open-problem-57-fc-solved
+    notes: Imported from the upstream `research solved` category. The statement is formalized; the proof has not been machine-checked by ConjectureHub.
+    recorded_on: 2026-07-31
+    reviewer: google-deepmind/formal-conjectures maintainers
+    source:
+      kind: dataset
+      title: formal-conjectures marks green_57 as research solved
+      url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/GreensOpenProblems/57.lean
+    state: active
+    type: proved
+id: ben-green-s-open-problem-57
+ids:
+  external:
+    - label: Ben Green's Open Problem 57
+      url: https://people.maths.ox.ac.uk/greenbj/papers/open-problems.pdf#section.8
+  formal_conjectures: FormalConjectures/GreensOpenProblems/57.lean
+openness_basis:
+  asserted_by: google-deepmind/formal-conjectures
+  meaning: no_published_solution_known_to_curator
+provenance:
+  - fields:
+      - title
+      - statement.informal
+      - statement.formal
+      - subject.msc
+      - ids.external
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: google-deepmind/formal-conjectures
+    upstream_version: v4.32.0
+    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/GreensOpenProblems/57.lean
+statement:
+  formal:
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: green_57.variants.z3_functional
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/GreensOpenProblems/57.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: green_57.variants.z3
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/GreensOpenProblems/57.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: green_57
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/GreensOpenProblems/57.lean
+  informal: |-
+    Is it true that for every finite abelian group $G$ the spaces $\Phi(G)$ and $\Phi'(G)$,
+    obtained from kernels $\phi(g) = \mathbb{E}_{x_1 + x_2 + x_3 = g} f_1(x_2, x_3)
+         f_2(x_1, x_3) f_3(x_1, x_2)$ with $\lVert f_i \rVert_\infty \le 1$
+    (where $f_i : G \times G \to \mathbb{C}$), still coincide when the
+    third kernel is required to depend only on $x_1 + x_2$?
+
+    Green guesses that the answer is probably 'no'.
+subject:
+  msc:
+    - "05"
+    - "11"
+title: Ben Green's Open Problem 57

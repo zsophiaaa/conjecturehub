@@ -1,0 +1,44 @@
+claims: []
+id: rational-distance-problem
+ids:
+  external:
+    - label: Wikipedia
+      url: https://en.wikipedia.org/wiki/Unit_square#Rational_distance_problem
+    - label: mathoverflow/418260
+      url: https://mathoverflow.net/questions/418260/
+    - label: Yuan Yang
+      url: https://mathoverflow.net/users/177957/yuan-yang
+    - label: Unsolved Problems in Number Theory
+      url: https://doi.org/10.1007/978-0-387-26677-0
+  formal_conjectures: FormalConjectures/Wikipedia/RationalDistanceProblem.lean
+  wikipedia: https://en.wikipedia.org/wiki/Unit_square#Rational_distance_problem
+openness_basis:
+  asserted_by: google-deepmind/formal-conjectures
+  meaning: no_published_solution_known_to_curator
+  note: Categorized upstream as "research open" at v4.32.0.
+provenance:
+  - fields:
+      - title
+      - statement.informal
+      - statement.formal
+      - subject.msc
+      - ids.external
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: google-deepmind/formal-conjectures
+    upstream_version: v4.32.0
+    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/RationalDistanceProblem.lean
+statement:
+  formal:
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: rational_distance_problem
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/RationalDistanceProblem.lean
+  informal: Does there exist a point in the plane at rational distance from all four vertices of the unit square?
+subject:
+  msc:
+    - "11"
+    - "51"
+title: Rational distance problem

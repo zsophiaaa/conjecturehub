@@ -1,0 +1,60 @@
+name: Screen contributions
+
+# Screens pull requests that touch the corpus: schema validity, the append-only
+# rule, source sanity, and an advisory quality check on genuinely new records.
+#
+# Uses `pull_request`, so fork submissions run with a read-only token and no
+# secrets. The screening job therefore cannot post a comment itself; it uploads
+# the comment as an artifact and a separate privileged workflow posts it.
+on:
+  pull_request:
+    paths:
+      - "conjectures/**"
+
+permissions:
+  contents: read
+
+jobs:
+  screen:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # The append-only check needs the base commit to diff against.
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Screen the changes
+        id: screen
+        env:
+          # Present for pull requests from branches in this repository; absent
+          # for forks, in which case the quality screen degrades to nothing.
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          npx tsx ingest/src/cli/screen.ts \
+            --base "origin/${{ github.base_ref }}" \
+            --comment screening.md
+
+      - name: Show the result in the run summary
+        if: always()
+        run: cat screening.md >> "$GITHUB_STEP_SUMMARY" || true
+
+      - name: Save the comment for the reporting workflow
+        if: always()
+        run: echo "${{ github.event.number }}" > pr-number.txt
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: screening
+          path: |
+            screening.md
+            pr-number.txt
+          if-no-files-found: ignore
+          retention-days: 7

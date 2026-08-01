@@ -1,0 +1,117 @@
+claims:
+  - evidence_tier: published
+    id: erdos-283-fc-solved
+    notes: Imported from the upstream `research solved` category. The statement is formalized; the proof has not been machine-checked by ConjectureHub.
+    recorded_on: 2026-07-31
+    reviewer: google-deepmind/formal-conjectures maintainers
+    source:
+      kind: dataset
+      title: formal-conjectures marks erdos_283 as research solved
+      url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/283.lean
+    state: active
+    type: proved
+id: erdos-283
+ids:
+  erdos: "283"
+  external:
+    - label: erdosproblems.com/283
+      url: https://www.erdosproblems.com/283
+  formal_conjectures: FormalConjectures/ErdosProblems/283.lean
+  oeis:
+    - A380791
+openness_basis:
+  asserted_by: erdosproblems.com
+  asserted_on: 2026-05-10
+  meaning: no_published_solution_known_to_curator
+provenance:
+  - fields:
+      - title
+      - statement.informal
+      - statement.formal
+      - subject.msc
+      - ids.external
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: google-deepmind/formal-conjectures
+    upstream_version: v4.32.0
+    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/283.lean
+  - fields:
+      - ids.erdos
+      - ids.oeis
+      - subject.tags
+      - openness_basis
+      - claims
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: teorth/erdosproblems
+    upstream_version: d031865128a7ddccd85e8099f0f818211cfc9a41
+    url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
+statement:
+  formal:
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: erdos_283
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/283.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: erdos_283.variants.graham
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/283.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: erdos_283.variants.graham_alpha
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/283.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: erdos_283.variants.cassels
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/283.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: erdos_283.variants.burr
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/283.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: erdos_283.variants.alekseyev
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/283.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: erdos_283.variants.van_doorn_linear
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/283.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: erdos_283.variants.van_doorn_quadratic
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/283.lean
+  informal: |-
+    Let $p\colon \mathbb{Z} \rightarrow \mathbb{Z}$ be a polynomial whose leading coefficient is
+    positive and such that there exists no $d≥2$ with $d ∣ p(n)$ for all $n≥1$. Is it true that,
+    for all sufficiently large $m$, there exist integers $1≤n_1<\dots < n_k$ such that
+    $$1=\frac{1}{n_1}+\cdots+\frac{1}{n_k}$$
+    and
+    $$m=p(n_1)+\cdots+p(n_k)$$?
+
+    GPT 5.5 Pro (prompted by Price) has given a proof that the answer is yes, for the stronger version
+    with $1$ replaced by any rational $\alpha>0$.
+
+    This was formalized in Lean by Ammanamanchi using Opus 4.6 and GPT 5.5 Pro.
+subject:
+  msc:
+    - "11"
+  tags:
+    - number theory
+    - unit fractions
+title: Erdős Problem 283

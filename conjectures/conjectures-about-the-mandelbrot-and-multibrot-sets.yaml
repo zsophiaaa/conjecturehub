@@ -1,0 +1,71 @@
+claims: []
+id: conjectures-about-the-mandelbrot-and-multibrot-sets
+ids:
+  external:
+    - label: Wikipedia
+      url: https://en.wikipedia.org/wiki/Mandelbrot_set#Local_connectivity
+    - label: arxiv/math/9902155
+      url: https://arxiv.org/abs/math/9902155
+    - label: mathoverflow/37229
+      url: https://mathoverflow.net/questions/37229/
+  formal_conjectures: FormalConjectures/Wikipedia/Mandelbrot.lean
+  wikipedia: https://en.wikipedia.org/wiki/Mandelbrot_set#Local_connectivity
+openness_basis:
+  asserted_by: google-deepmind/formal-conjectures
+  meaning: no_published_solution_known_to_curator
+  note: Categorized upstream as "research open" at v4.32.0.
+provenance:
+  - fields:
+      - title
+      - statement.informal
+      - statement.formal
+      - subject.msc
+      - ids.external
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: google-deepmind/formal-conjectures
+    upstream_version: v4.32.0
+    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/Mandelbrot.lean
+statement:
+  formal:
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: MLC
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/Mandelbrot.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: MLC_general_exponent
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/Mandelbrot.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: density_of_hyperbolicity
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/Mandelbrot.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: density_of_hyperbolicity_general_exponent
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/Mandelbrot.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: volume_frontier_mandelbrotSet_eq_zero
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/Mandelbrot.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: volume_frontier_multibrotSet_eq_zero
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/Mandelbrot.lean
+  informal: The MLC conjecture, stating that the mandelbrot set is locally connected.
+subject:
+  msc:
+    - "37"
+title: Conjectures about the Mandelbrot and Multibrot sets

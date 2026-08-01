@@ -1,0 +1,50 @@
+claims: []
+id: lehmer-s-totient-problem
+ids:
+  external:
+    - label: Wikipedia
+      url: https://en.wikipedia.org/wiki/Lehmer%27s_totient_problem
+  formal_conjectures: FormalConjectures/Wikipedia/LehmerTotient.lean
+  mathworld: https://mathworld.wolfram.com/LehmersTotientProblem.html
+  wikidata: Q3406228
+  wikipedia: https://en.wikipedia.org/wiki/Lehmer%27s_totient_problem
+openness_basis:
+  asserted_by: google-deepmind/formal-conjectures
+  meaning: no_published_solution_known_to_curator
+  note: Categorized upstream as "research open" at v4.32.0.
+provenance:
+  - fields:
+      - title
+      - statement.informal
+      - statement.formal
+      - subject.msc
+      - ids.external
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: google-deepmind/formal-conjectures
+    upstream_version: v4.32.0
+    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/LehmerTotient.lean
+  - fields:
+      - aliases
+      - ids.wikidata
+      - ids.wikipedia
+      - ids.mathworld
+    license: CC0-1.0
+    retrieved: 2026-07-31
+    source: wikidata
+    url: https://www.wikidata.org/wiki/Q3406228
+statement:
+  formal:
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: lehmer_totient
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/LehmerTotient.lean
+  informal: |-
+    Does there exist a composite number $n > 1$ such that Euler’s totient function
+    $\varphi(n)$ divides $n - 1$?
+subject:
+  msc:
+    - "11"
+title: Lehmer's totient problem

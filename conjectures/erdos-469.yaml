@@ -1,0 +1,72 @@
+claims:
+  - asserted_on: 2026-07-21
+    evidence_tier: published
+    id: erdos-469-erdos-status
+    recorded_on: 2026-07-31
+    reviewer: teorth/erdosproblems maintainers
+    source:
+      kind: dataset
+      title: erdosproblems.com records this problem as "proved"
+      url: https://www.erdosproblems.com/469
+    state: active
+    type: proved
+id: erdos-469
+ids:
+  erdos: "469"
+  external:
+    - label: erdosproblems.com/469
+      url: https://www.erdosproblems.com/469
+  formal_conjectures: FormalConjectures/ErdosProblems/469.lean
+  oeis:
+    - A006036
+    - A119425
+openness_basis:
+  asserted_by: erdosproblems.com
+  asserted_on: 2026-07-21
+  meaning: no_published_solution_known_to_curator
+  note: Categorized upstream as "research open" at v4.32.0.
+provenance:
+  - fields:
+      - title
+      - statement.informal
+      - statement.formal
+      - subject.msc
+      - ids.external
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: google-deepmind/formal-conjectures
+    upstream_version: v4.32.0
+    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/469.lean
+  - fields:
+      - ids.erdos
+      - ids.oeis
+      - subject.tags
+      - openness_basis
+      - claims
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: teorth/erdosproblems
+    upstream_version: d031865128a7ddccd85e8099f0f818211cfc9a41
+    url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
+statement:
+  formal:
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: erdos_469
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/469.lean
+  informal: |-
+    Let $A$ be the set of all $n$ such that $n = d_1 + ⋯ + d_k$ with $d_i$ distinct
+    proper divisors of $n$, but this is not true for any $m ∣ n$ with $m < n$. Does:
+    $$
+     \sum_{n ∈ A} \frac 1 n
+    $$
+    converge?
+subject:
+  msc:
+    - "11"
+  tags:
+    - number theory
+    - divisors
+title: Erdős Problem 469

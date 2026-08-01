@@ -1,0 +1,95 @@
+claims: []
+id: erdos-12
+ids:
+  erdos: "12"
+  external:
+    - label: erdosproblems.com/12
+      url: https://www.erdosproblems.com/12
+  formal_conjectures: FormalConjectures/ErdosProblems/12.lean
+openness_basis:
+  asserted_by: erdosproblems.com
+  asserted_on: 2025-08-31
+  meaning: no_published_solution_known_to_curator
+  note: Categorized upstream as "research open" at v4.32.0.
+provenance:
+  - fields:
+      - title
+      - statement.informal
+      - statement.formal
+      - subject.msc
+      - ids.external
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: google-deepmind/formal-conjectures
+    upstream_version: v4.32.0
+    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/12.lean
+  - fields:
+      - ids.erdos
+      - ids.oeis
+      - subject.tags
+      - openness_basis
+      - claims
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: teorth/erdosproblems
+    upstream_version: d031865128a7ddccd85e8099f0f818211cfc9a41
+    url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
+statement:
+  formal:
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: erdos_12.parts.i
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/12.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: erdos_12.parts.ii
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/12.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: erdos_12.parts.iii
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/12.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: erdos_12.variants.erdos_sarkozy_density_0
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/12.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: erdos_12.variants.erdos_sarkozy
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/12.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: erdos_12.variants.example
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/12.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: erdos_12.variants.schoen
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/12.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: erdos_12.variants.baier
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/12.lean
+  informal: |-
+    Let $A$ be an infinite set such that there are no distinct $a,b,c \in A$
+    such that $a \mid (b+c)$ and $b,c > a$. Is it true that $∑_{n \in A} \frac{1}{n} < \infty$?
+subject:
+  msc:
+    - "11"
+  tags:
+    - number theory
+title: Erdős Problem 12

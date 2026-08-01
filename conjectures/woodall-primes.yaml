@@ -1,0 +1,39 @@
+claims: []
+id: woodall-primes
+ids:
+  external:
+    - label: Wikipedia/Woodall Number
+      url: https://en.wikipedia.org/wiki/Woodall_number#Woodall_primes
+    - label: A2234
+      url: https://oeis.org/A2234
+  formal_conjectures: FormalConjectures/Wikipedia/WoodalPrimes.lean
+  wikipedia: https://en.wikipedia.org/wiki/Woodall_number#Woodall_primes
+openness_basis:
+  asserted_by: google-deepmind/formal-conjectures
+  meaning: no_published_solution_known_to_curator
+  note: Categorized upstream as "research open" at v4.32.0.
+provenance:
+  - fields:
+      - title
+      - statement.informal
+      - statement.formal
+      - subject.msc
+      - ids.external
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: google-deepmind/formal-conjectures
+    upstream_version: v4.32.0
+    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/WoodalPrimes.lean
+statement:
+  formal:
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: infinitely_many_woodall_primes
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/WoodalPrimes.lean
+  informal: There are infinitely many prime numbers of the form `k * 2 ^ k - 1` for `k > 1`.
+subject:
+  msc:
+    - "11"
+title: Woodall Primes

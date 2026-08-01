@@ -1,0 +1,11 @@
+{
+  "conjecture_id": null,
+  "note": "Pipeline smoke test. Not a conjecture; exists so CI can verify itself.",
+  "comparator": {
+    "challenge_module": "Challenge.Smoke",
+    "solution_module": "Solution.Smoke",
+    "theorem_names": ["Challenge.Smoke.smoke_prime_above_1000"],
+    "permitted_axioms": ["propext", "Quot.sound", "Classical.choice"],
+    "enable_nanoda": true
+  }
+}

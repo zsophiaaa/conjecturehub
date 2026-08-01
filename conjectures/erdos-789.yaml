@@ -1,0 +1,92 @@
+claims: []
+id: erdos-789
+ids:
+  erdos: "789"
+  external:
+    - label: erdosproblems.com/789
+      url: https://www.erdosproblems.com/789
+  formal_conjectures: FormalConjectures/ErdosProblems/789.lean
+openness_basis:
+  asserted_by: erdosproblems.com
+  asserted_on: 2025-08-31
+  meaning: no_published_solution_known_to_curator
+  note: Categorized upstream as "research open" at v4.32.0.
+provenance:
+  - fields:
+      - title
+      - statement.informal
+      - statement.formal
+      - subject.msc
+      - ids.external
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: google-deepmind/formal-conjectures
+    upstream_version: v4.32.0
+    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/789.lean
+  - fields:
+      - ids.erdos
+      - ids.oeis
+      - subject.tags
+      - openness_basis
+      - claims
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: teorth/erdosproblems
+    upstream_version: d031865128a7ddccd85e8099f0f818211cfc9a41
+    url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
+statement:
+  formal:
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: erdos_789
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/789.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: erdos_789.variants.sq
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/789.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: erdos_789.variants.isBigO_sq
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/789.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: erdos_789.variants.sq_isBigO
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/789.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: erdos_789.variants.cube_root_linearithmic
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/789.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: erdos_789.variants.cube_root_linearithmic_isBigO
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/789.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: erdos_789.variants.isBigO_cube_root_linearithmic
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/789.lean
+  informal: |-
+    Let $h(n)$ be maximal such that if $A\subseteq \mathbb{Z}$ with $\lvert A\rvert=n$
+    then there is $B\subseteq A$ with $\lvert B\rvert \geq h(n)$ such that if
+    $a_1+\cdots+a_r=b_1+\cdots+b_s$ with $a_i,b_i\in B$ then $r=s$.
+
+    Estimate $h(n)$.
+subject:
+  msc:
+    - "05"
+  tags:
+    - additive combinatorics
+title: Erdős Problem 789

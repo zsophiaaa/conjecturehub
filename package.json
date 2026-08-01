@@ -1,0 +1,22 @@
+{
+  "name": "conjecturehub",
+  "private": true,
+  "version": "0.1.0",
+  "description": "A living index of every mathematical conjecture, and who has proved what.",
+  "license": "Apache-2.0",
+  "workspaces": [
+    "ingest",
+    "web"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "validate": "npm run validate --workspace ingest",
+    "seed": "npm run seed --workspace ingest",
+    "sweep": "npm run sweep --workspace ingest",
+    "build:index": "npm run build:index --workspace ingest",
+    "dev": "npm run dev --workspace web",
+    "build": "npm run build:index && npm run build --workspace web"
+  }
+}

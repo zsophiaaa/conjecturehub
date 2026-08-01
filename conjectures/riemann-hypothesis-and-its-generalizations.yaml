@@ -1,0 +1,58 @@
+claims: []
+id: riemann-hypothesis-and-its-generalizations
+ids:
+  external:
+    - label: The Clay Institute
+      url: https://www.claymath.org/wp-content/uploads/2022/05/riemann.pdf
+    - label: "Wikipedia: Riemann hypothesis"
+      url: https://en.wikipedia.org/wiki/Riemann_hypothesis
+    - label: "Wikipedia: Generalized Riemann hypothesis"
+      url: https://en.wikipedia.org/wiki/Generalized_Riemann_hypothesis
+    - label: "Wikipedia: Dedekind zeta function"
+      url: https://en.wikipedia.org/wiki/Dedekind_zeta_function
+  formal_conjectures: FormalConjectures/Millenium/RiemannHypothesis.lean
+  wikipedia: https://en.wikipedia.org/wiki/Riemann_hypothesis
+openness_basis:
+  asserted_by: google-deepmind/formal-conjectures
+  meaning: no_published_solution_known_to_curator
+  note: Categorized upstream as "research open" at v4.32.0.
+provenance:
+  - fields:
+      - title
+      - statement.informal
+      - statement.formal
+      - subject.msc
+      - ids.external
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: google-deepmind/formal-conjectures
+    upstream_version: v4.32.0
+    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Millenium/RiemannHypothesis.lean
+statement:
+  formal:
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: riemannHypothesis
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Millenium/RiemannHypothesis.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: generalized_riemann_hypothesis
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Millenium/RiemannHypothesis.lean
+  informal: |-
+    The **Riemann Hypothesis**: all non-trivial zeros of the Riemann zeta function have real
+    part $\frac{1}{2}$. That is, if $\zeta(s) = 0$, $s \neq 1$, and $s$ is not a trivial zero
+    $-2(n+1)$ for some $n \in \mathbb{N}$, then $\operatorname{Re}(s) = \frac{1}{2}$.
+
+    This is the official Millennium Prize Problem as posed by the
+    [Clay Mathematics Institute](https://www.claymath.org/wp-content/uploads/2022/05/riemann.pdf).
+
+    This uses the `RiemannHypothesis` type from Mathlib, which is defined as
+    `∀ (s : ℂ), riemannZeta s = 0 → (¬∃ n : ℕ, s = -2 * (n + 1)) → s ≠ 1 → s.re = 1 / 2`.
+subject:
+  msc:
+    - "11"
+title: Riemann Hypothesis and its generalizations

@@ -1,0 +1,70 @@
+name: Apply approved proof proposal
+
+on:
+  repository_dispatch:
+    types: [verify-proof-proposal]
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch Lean source from site
+        id: fetch
+        env:
+          PROPOSAL_ID: ${{ github.event.client_payload.proposalId }}
+          JOB_ID: ${{ github.event.client_payload.jobId }}
+          SITE_URL: ${{ vars.SITE_URL || 'https://conjecturehub.org' }}
+          CRON_SECRET: ${{ secrets.CRON_SECRET }}
+        run: |
+          set -euo pipefail
+          curl -sf \
+            -H "x-cron-secret: $CRON_SECRET" \
+            "$SITE_URL/api/v1/internal/proof-proposals/$PROPOSAL_ID" \
+            -o proposal.json
+          echo "conjecture=$(jq -r .conjectureId proposal.json)" >> "$GITHUB_OUTPUT"
+          jq -r .leanBody proposal.json > /tmp/solution.lean
+
+      - name: Write solution file (placeholder path)
+        run: |
+          mkdir -p statements/Solution
+          cp /tmp/solution.lean "statements/Solution/proposal-${{ github.event.client_payload.proposalId }}.lean"
+
+      - name: Notify job running
+        env:
+          JOB_ID: ${{ github.event.client_payload.jobId }}
+          SITE_URL: ${{ vars.SITE_URL || 'https://conjecturehub.org' }}
+          CRON_SECRET: ${{ secrets.CRON_SECRET }}
+        run: |
+          curl -sf -X POST \
+            -H "content-type: application/json" \
+            -H "x-cron-secret: $CRON_SECRET" \
+            "$SITE_URL/api/v1/webhooks/verify" \
+            -d "{\"jobId\":$JOB_ID,\"status\":\"running\",\"workflowRunId\":\"${{ github.run_id }}\",\"logUrl\":\"${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}\"}"
+
+      - name: Open pull request
+        uses: peter-evans/create-pull-request@v7
+        with:
+          commit-message: "Proof proposal #${{ github.event.client_payload.proposalId }}"
+          title: "Proof proposal #${{ github.event.client_payload.proposalId }}"
+          body: "Curator-approved Lean proof from ConjectureHub community layer."
+          branch: "proof-proposal-${{ github.event.client_payload.proposalId }}"
+          delete-branch: true
+
+      - name: Mark job pending verification
+        if: always()
+        env:
+          JOB_ID: ${{ github.event.client_payload.jobId }}
+          SITE_URL: ${{ vars.SITE_URL || 'https://conjecturehub.org' }}
+          CRON_SECRET: ${{ secrets.CRON_SECRET }}
+        run: |
+          curl -sf -X POST \
+            -H "content-type: application/json" \
+            -H "x-cron-secret: $CRON_SECRET" \
+            "$SITE_URL/api/v1/webhooks/verify" \
+            -d "{\"jobId\":$JOB_ID,\"status\":\"pending\",\"logUrl\":\"${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}\"}" || true

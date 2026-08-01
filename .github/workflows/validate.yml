@@ -1,0 +1,59 @@
+name: Validate
+
+# Runs on every push and every pull request, including from forks. Fork pull
+# requests deliberately use the `pull_request` event and never
+# `pull_request_target`: the former checks out untrusted code with a read-only
+# token and no access to secrets, which is exactly what we want.
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: validate-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  schema:
+    name: Schema and semantics
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Validate every conjecture file
+        run: npm run validate
+
+      - name: Typecheck the ingest pipeline
+        run: npm run typecheck --workspace ingest
+
+  site:
+    name: Site build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Build the search index
+        run: npm run build:index
+
+      - name: Typecheck the site
+        run: npm run typecheck --workspace web
+
+      - name: Build the site
+        run: npm run build --workspace web

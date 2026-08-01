@@ -1,0 +1,61 @@
+claims: []
+id: erdos-1056
+ids:
+  erdos: "1056"
+  external:
+    - label: erdosproblems.com/1056
+      url: https://www.erdosproblems.com/1056
+  formal_conjectures: FormalConjectures/ErdosProblems/1056.lean
+  oeis:
+    - A060427
+openness_basis:
+  asserted_by: erdosproblems.com
+  asserted_on: 2025-09-28
+  meaning: no_published_solution_known_to_curator
+  note: Categorized upstream as "research open" at v4.32.0.
+provenance:
+  - fields:
+      - title
+      - statement.informal
+      - statement.formal
+      - subject.msc
+      - ids.external
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: google-deepmind/formal-conjectures
+    upstream_version: v4.32.0
+    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/1056.lean
+  - fields:
+      - ids.erdos
+      - ids.oeis
+      - subject.tags
+      - openness_basis
+      - claims
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: teorth/erdosproblems
+    upstream_version: d031865128a7ddccd85e8099f0f818211cfc9a41
+    url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
+statement:
+  formal:
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: erdos_1056
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/1056.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: erdos_1056.variants.noll_simmons
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/1056.lean
+  informal: |-
+    Let $k ≥ 2$. Does there exist a prime $p$ and consecutive intervals $I_0,\dots,I_k$
+    such that $\prod\limits_{n{\in}I_i}n \equiv 1 \mod n$ for all $1 \le i \le k$?
+subject:
+  msc:
+    - "11"
+  tags:
+    - number theory
+title: Erdős Problem 1056

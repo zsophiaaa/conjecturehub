@@ -1,0 +1,86 @@
+claims: []
+id: open-questions-on-irrationality-of-numbers
+ids:
+  external:
+    - label: Wikipedia
+      url: https://en.wikipedia.org/wiki/Irrational_number#Open_questions
+  formal_conjectures: FormalConjectures/Wikipedia/Irrational.lean
+  wikipedia: https://en.wikipedia.org/wiki/Irrational_number#Open_questions
+openness_basis:
+  asserted_by: google-deepmind/formal-conjectures
+  meaning: no_published_solution_known_to_curator
+  note: Categorized upstream as "research open" at v4.32.0.
+provenance:
+  - fields:
+      - title
+      - statement.informal
+      - statement.formal
+      - subject.msc
+      - ids.external
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: google-deepmind/formal-conjectures
+    upstream_version: v4.32.0
+    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/Irrational.lean
+statement:
+  formal:
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: algebraicIndependent_e_pi
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/Irrational.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: irrational_e_plus_pi
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/Irrational.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: irrational_e_times_pi
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/Irrational.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: irrational_e_to_e
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/Irrational.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: irrational_pi_to_e
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/Irrational.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: irrational_pi_to_pi
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/Irrational.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: irrational_ln_pi
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/Irrational.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: irrational_eulerMascheroniConstant
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/Irrational.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: irrational_catalanConstant
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/Irrational.lean
+  informal: Are $e$ and $\pi$ algebraically independent?
+subject:
+  msc:
+    - "11"
+    - "33"
+title: Open questions on irrationality of numbers

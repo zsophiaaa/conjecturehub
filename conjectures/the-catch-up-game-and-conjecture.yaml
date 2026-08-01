@@ -1,0 +1,37 @@
+claims: []
+id: the-catch-up-game-and-conjecture
+ids:
+  formal_conjectures: FormalConjectures/Paper/CatchUpConjecture.lean
+openness_basis:
+  asserted_by: google-deepmind/formal-conjectures
+  meaning: no_published_solution_known_to_curator
+  note: Categorized upstream as "research open" at v4.32.0.
+provenance:
+  - fields:
+      - title
+      - statement.informal
+      - statement.formal
+      - subject.msc
+      - ids.external
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: google-deepmind/formal-conjectures
+    upstream_version: v4.32.0
+    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Paper/CatchUpConjecture.lean
+statement:
+  formal:
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: value_of_even_mul_succ_self_div_two
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Paper/CatchUpConjecture.lean
+  informal: |-
+    Let \(T_N = \sum_{k=1}^{N} k = \frac{N(N+1)}{2}\).
+    If \(T_N\) is even (equivalently \(N \equiv 0 \pmod 4\) or \(N \equiv 3 \pmod 4\)),
+    then under optimal play the game `Catch-Up(\(\{1, \ldots, N\}\))` ends in a draw.
+subject:
+  msc:
+    - "11"
+    - "91"
+title: The Catch-Up game and conjecture

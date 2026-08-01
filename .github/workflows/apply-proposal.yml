@@ -1,0 +1,41 @@
+name: Apply approved claim proposal
+
+# Triggered when a curator approves a claim proposal on the site.
+# Appends the claim to conjectures/*.yaml, validates, and auto-merges if clean.
+on:
+  repository_dispatch:
+    types: [apply-claim-proposal]
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+
+      - run: npm ci
+
+      - name: Apply proposal to corpus
+        env:
+          PROPOSAL_JSON: ${{ toJson(github.event.client_payload) }}
+        run: echo "$PROPOSAL_JSON" | npm run apply-proposal --workspace ingest
+
+      - name: Validate corpus
+        run: npm run validate
+
+      - name: Commit and push
+        run: |
+          git config user.name "conjecturehub-bot"
+          git config user.email "bot@conjecturehub.org"
+          git add conjectures/
+          git diff --staged --quiet && echo "No changes" && exit 0
+          git commit -m "Apply approved claim proposal #${{ github.event.client_payload.proposalId }}"
+          git push origin HEAD:main

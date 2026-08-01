@@ -1,0 +1,53 @@
+claims: []
+id: catalan-s-conjecture-and-related-diophantine-equations
+ids:
+  external:
+    - label: Wikipedia - Catalan's conjecture
+      url: https://en.wikipedia.org/wiki/Catalan%27s_conjecture
+    - label: arXiv:2507.12397
+      url: https://arxiv.org/abs/2507.12397
+  formal_conjectures: FormalConjectures/Wikipedia/Catalan.lean
+  wikipedia: https://en.wikipedia.org/wiki/Catalan%27s_conjecture
+openness_basis:
+  asserted_by: google-deepmind/formal-conjectures
+  meaning: no_published_solution_known_to_curator
+  note: Categorized upstream as "research open" at v4.32.0.
+provenance:
+  - fields:
+      - title
+      - statement.informal
+      - statement.formal
+      - subject.msc
+      - ids.external
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: google-deepmind/formal-conjectures
+    upstream_version: v4.32.0
+    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/Catalan.lean
+statement:
+  formal:
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: catalans_conjecture
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/Catalan.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: pillais_conjecture
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/Catalan.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: lebesgue_nagell
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/Catalan.lean
+  informal: |-
+    For positive integers a, b, and c, there are only finitely many positive solutions (x, y, m, n) to the
+    equation $ax^n - by^m = c$ where $(m, n) \neq (2, 2)$ and $x, y > 1$.
+subject:
+  msc:
+    - "11"
+title: Catalan's conjecture and related Diophantine equations

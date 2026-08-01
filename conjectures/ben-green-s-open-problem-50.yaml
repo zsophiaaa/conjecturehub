@@ -1,0 +1,46 @@
+claims: []
+id: ben-green-s-open-problem-50
+ids:
+  formal_conjectures: FormalConjectures/GreensOpenProblems/50.lean
+openness_basis:
+  asserted_by: google-deepmind/formal-conjectures
+  meaning: no_published_solution_known_to_curator
+  note: Categorized upstream as "research open" at v4.32.0.
+provenance:
+  - fields:
+      - title
+      - statement.informal
+      - statement.formal
+      - subject.msc
+      - ids.external
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: google-deepmind/formal-conjectures
+    upstream_version: v4.32.0
+    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/GreensOpenProblems/50.lean
+statement:
+  formal:
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: green_50
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/GreensOpenProblems/50.lean
+  informal: |-
+    Let $A \subset \mathbb{F}_2^n$ be a set of density $\alpha > 0$. Does $10A$ contain a coset
+    of some subspace of dimension at least $n - O(\log(1/\alpha))$?
+
+    More precisely: does there exist an absolute constant $C > 0$ such that for all $n \geq 1$ and all
+    nonempty $A \subseteq \mathbb{F}_2^n$ with density $\alpha > 0$, the sumset $10A$ contains a coset
+    of some subspace of dimension at least $n - C \log_2(1/\alpha)$?
+
+    The sumset $10A$ is defined as $\{a_1 + a_2 + \cdots + a_{10} : a_i \in A\}$, using the pointwise
+    scalar multiplication notation `10 • A` where `•` denotes the iterated addition of a set.
+
+    Note: We model $\mathbb{F}_2^n$ as `Fin n → ZMod 2`, which is an $n$-dimensional vector space
+    over $\mathbb{F}_2$.
+subject:
+  msc:
+    - "05"
+    - "11"
+title: Ben Green's Open Problem 50

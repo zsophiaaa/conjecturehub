@@ -1,0 +1,99 @@
+claims:
+  - asserted_on: 2025-08-31
+    evidence_tier: published
+    id: erdos-321-erdos-status
+    notes: Upstream records this as solved without specifying the direction.
+    recorded_on: 2026-07-31
+    reviewer: teorth/erdosproblems maintainers
+    source:
+      kind: dataset
+      title: erdosproblems.com records this problem as "solved"
+      url: https://www.erdosproblems.com/321
+    state: active
+    type: proved
+id: erdos-321
+ids:
+  erdos: "321"
+  external:
+    - label: erdosproblems.com/321
+      url: https://www.erdosproblems.com/321
+  formal_conjectures: FormalConjectures/ErdosProblems/321.lean
+  oeis:
+    - A384927
+    - A391592
+openness_basis:
+  asserted_by: erdosproblems.com
+  asserted_on: 2025-08-31
+  meaning: no_published_solution_known_to_curator
+  note: Categorized upstream as "research open" at v4.32.0.
+provenance:
+  - fields:
+      - title
+      - statement.informal
+      - statement.formal
+      - subject.msc
+      - ids.external
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: google-deepmind/formal-conjectures
+    upstream_version: v4.32.0
+    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/321.lean
+  - fields:
+      - ids.erdos
+      - ids.oeis
+      - subject.tags
+      - openness_basis
+      - claims
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: teorth/erdosproblems
+    upstream_version: d031865128a7ddccd85e8099f0f818211cfc9a41
+    url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
+statement:
+  formal:
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: erdos_321
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/321.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: erdos_321.variants.isTheta
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/321.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: erdos_321.variants.isBigO
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/321.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: erdos_321.variants.isLittleO
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/321.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: erdos_321.variants.lower
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/321.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: erdos_321.variants.upper
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/321.lean
+  informal: |-
+    Let $R(N)$ be the size of the largest $A\subseteq\{1, ..., N\}$ such that all sums
+    $\sum_{n\in S} \frac{1}{n}$ are distinct for $S\subseteq A$. What is $R(N)$?
+subject:
+  msc:
+    - "11"
+  tags:
+    - number theory
+    - unit fractions
+title: Erdős Problem 321

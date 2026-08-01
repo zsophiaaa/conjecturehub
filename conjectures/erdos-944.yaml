@@ -1,0 +1,90 @@
+claims: []
+id: erdos-944
+ids:
+  erdos: "944"
+  external:
+    - label: erdosproblems.com/944
+      url: https://www.erdosproblems.com/944
+  formal_conjectures: FormalConjectures/ErdosProblems/944.lean
+openness_basis:
+  asserted_by: erdosproblems.com
+  asserted_on: 2025-08-31
+  meaning: no_published_solution_known_to_curator
+  note: Categorized upstream as "research open" at v4.32.0.
+provenance:
+  - fields:
+      - title
+      - statement.informal
+      - statement.formal
+      - subject.msc
+      - ids.external
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: google-deepmind/formal-conjectures
+    upstream_version: v4.32.0
+    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/944.lean
+  - fields:
+      - ids.erdos
+      - ids.oeis
+      - subject.tags
+      - openness_basis
+      - claims
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: teorth/erdosproblems
+    upstream_version: d031865128a7ddccd85e8099f0f818211cfc9a41
+    url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
+statement:
+  formal:
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: erdos_944
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/944.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: erdos_944.variants.dirac_conjecture
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/944.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: erdos_944.variants.dirac_conjecture.k_eq_5
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/944.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: erdos_944.variants.dirac_conjecture.k_sub_one_not_prime
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/944.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: erdos_944.variants.dirac_conjecture.k_ge_five
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/944.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: erdos_944.variants.dirac_conjecture.k_eq_four
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/944.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: erdos_944.variants.large_k_for_any_r
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/944.lean
+  informal: |-
+    Let $k \ge 4$ and $r\ge 1$. Must there exist a graph $G$ with chromatic number $k$
+    such that every vertex is critical, yet every critical set of edges has size $>r$?
+subject:
+  msc:
+    - "11"
+  tags:
+    - graph theory
+    - chromatic number
+title: Erdős Problem 944

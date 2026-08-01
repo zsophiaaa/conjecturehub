@@ -1,0 +1,78 @@
+claims:
+  - asserted_on: 2025-12-05
+    evidence_tier: published
+    id: erdos-287-erdos-status
+    recorded_on: 2026-07-31
+    reviewer: teorth/erdosproblems maintainers
+    source:
+      kind: dataset
+      title: erdosproblems.com records this problem as "falsifiable"
+      url: https://www.erdosproblems.com/287
+    state: active
+    type: partial
+id: erdos-287
+ids:
+  erdos: "287"
+  external:
+    - label: erdosproblems.com/287
+      url: https://www.erdosproblems.com/287
+  formal_conjectures: FormalConjectures/ErdosProblems/287.lean
+openness_basis:
+  asserted_by: erdosproblems.com
+  asserted_on: 2025-12-05
+  meaning: no_published_solution_known_to_curator
+  note: Categorized upstream as "research open" at v4.32.0.
+provenance:
+  - fields:
+      - title
+      - statement.informal
+      - statement.formal
+      - subject.msc
+      - ids.external
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: google-deepmind/formal-conjectures
+    upstream_version: v4.32.0
+    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/287.lean
+  - fields:
+      - ids.erdos
+      - ids.oeis
+      - subject.tags
+      - openness_basis
+      - claims
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: teorth/erdosproblems
+    upstream_version: d031865128a7ddccd85e8099f0f818211cfc9a41
+    url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
+statement:
+  formal:
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: erdos_287
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/287.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: erdos_287.variants.gap_at_least_two
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/287.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: erdos_287.variants.prime_conjecture
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/287.lean
+  informal: |-
+    Let $k\geq2$. Is it true that, for any distinct integers
+    $1 < n_1 < \cdots < n_k$ such that $\sum_{i=1}^k \frac{1}{n_i} = 1$,
+    we must have $\max(n_{i+1} - n_i) \geq 3$?
+subject:
+  msc:
+    - "11"
+  tags:
+    - number theory
+    - unit fractions
+title: Erdős Problem 287

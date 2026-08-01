@@ -1,0 +1,98 @@
+claims: []
+id: artin-s-conjecture-on-primitive-roots
+ids:
+  external:
+    - label: Wikipedia
+      url: https://en.wikipedia.org/wiki/Artin%27s_conjecture_on_primitive_roots
+    - label: A85397
+      url: https://oeis.org/A85397
+    - label: LMS14
+      url: https://arxiv.org/pdf/1112.4816
+  formal_conjectures: FormalConjectures/Wikipedia/ArtinPrimitiveRootsConjecture.lean
+  mathworld: https://mathworld.wolfram.com/ArtinsConstant.html
+  wikidata: Q2319635
+  wikipedia: https://en.wikipedia.org/wiki/Artin%27s_conjecture_on_primitive_roots
+openness_basis:
+  asserted_by: google-deepmind/formal-conjectures
+  meaning: no_published_solution_known_to_curator
+  note: Categorized upstream as "research open" at v4.32.0.
+provenance:
+  - fields:
+      - title
+      - statement.informal
+      - statement.formal
+      - subject.msc
+      - ids.external
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: google-deepmind/formal-conjectures
+    upstream_version: v4.32.0
+    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/ArtinPrimitiveRootsConjecture.lean
+  - fields:
+      - aliases
+      - ids.wikidata
+      - ids.wikipedia
+      - ids.mathworld
+    license: CC0-1.0
+    retrieved: 2026-07-31
+    source: wikidata
+    url: https://www.wikidata.org/wiki/Q2319635
+statement:
+  formal:
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: artin_primitive_roots.parts.i
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/ArtinPrimitiveRootsConjecture.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: conditional_artin_primitive_roots.parts.i
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/ArtinPrimitiveRootsConjecture.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: artin_primitive_roots.parts.ii
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/ArtinPrimitiveRootsConjecture.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: conditional_artin_primitive_roots.parts.ii
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/ArtinPrimitiveRootsConjecture.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: artin_primitive_roots.variants.part_ii_power_squarefreePart_not_modeq_one
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/ArtinPrimitiveRootsConjecture.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: conditional_artin_primitive_roots.variants.part_ii_power_squarefreePart_not_modeq_one
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/ArtinPrimitiveRootsConjecture.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: artin_primitive_roots.variants.part_ii_power_squarefreePart_modeq_one
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/ArtinPrimitiveRootsConjecture.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: conditional_artin_primitive_roots.variants.part_ii_power_squarefreePart_modeq_one
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/ArtinPrimitiveRootsConjecture.lean
+  informal: |-
+    **Artin's Conjecture on Primitive Roots**, first half.
+    Let $a$ be an integer that is not a square number and not $−1$. Then the set $S(a)$
+    of primes $p$ such that $a$ is a primitive root modulo $p$ has a positive asymptotic
+    density inside the set of primes. In particular, $S(a)$ is infinite.
+subject:
+  msc:
+    - "11"
+title: Artin's conjecture on primitive roots

@@ -1,0 +1,47 @@
+claims: []
+id: exponentials-conjectures-and-theorems
+ids:
+  external:
+    - label: Wikipedia
+      url: https://en.wikipedia.org/wiki/Four_exponentials_conjecture
+  formal_conjectures: FormalConjectures/Wikipedia/Exponentials.lean
+  wikipedia: https://en.wikipedia.org/wiki/Four_exponentials_conjecture
+openness_basis:
+  asserted_by: google-deepmind/formal-conjectures
+  meaning: no_published_solution_known_to_curator
+  note: Categorized upstream as "research open" at v4.32.0.
+provenance:
+  - fields:
+      - title
+      - statement.informal
+      - statement.formal
+      - subject.msc
+      - ids.external
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: google-deepmind/formal-conjectures
+    upstream_version: v4.32.0
+    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/Exponentials.lean
+statement:
+  formal:
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: four_exponentials_conjecture
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/Exponentials.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: two_pow_three_pow_transcendental
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/Exponentials.lean
+  informal: |-
+    **Four exponentials conjecture**
+    Let $x_0, x_1$ and $y_0, y_1$ be $\mathbb Q$-linearly independent pairs of complex numbers,
+    then some $e^{x_i y_j}$ is transcendental.
+subject:
+  msc:
+    - "11"
+    - "33"
+title: Exponentials conjectures and theorems

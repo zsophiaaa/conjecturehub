@@ -1,0 +1,22 @@
+claims: []
+id: black-hole-stability-conjecture
+ids:
+  wikidata: Q113447473
+  wikipedia: https://en.wikipedia.org/wiki/Black_hole_stability_conjecture
+openness_basis:
+  asserted_by: wikidata
+  meaning: unknown
+  note: Identity record only. No statement or status has been ingested for this conjecture yet.
+provenance:
+  - fields:
+      - aliases
+      - ids.wikidata
+      - ids.wikipedia
+      - ids.mathworld
+    license: CC0-1.0
+    retrieved: 2026-07-31
+    source: wikidata
+    url: https://www.wikidata.org/wiki/Q113447473
+statement: {}
+subject: {}
+title: black hole stability conjecture

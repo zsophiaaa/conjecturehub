@@ -1,0 +1,86 @@
+claims: []
+id: erdos-593
+ids:
+  erdos: "593"
+  external:
+    - label: erdosproblems.com/593
+      url: https://www.erdosproblems.com/593
+  formal_conjectures: FormalConjectures/ErdosProblems/593.lean
+openness_basis:
+  asserted_by: erdosproblems.com
+  asserted_on: 2025-08-31
+  meaning: no_published_solution_known_to_curator
+  note: Categorized upstream as "research open" at v4.32.0.
+provenance:
+  - fields:
+      - title
+      - statement.informal
+      - statement.formal
+      - subject.msc
+      - ids.external
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: google-deepmind/formal-conjectures
+    upstream_version: v4.32.0
+    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/593.lean
+  - fields:
+      - ids.erdos
+      - ids.oeis
+      - subject.tags
+      - openness_basis
+      - claims
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: teorth/erdosproblems
+    upstream_version: d031865128a7ddccd85e8099f0f818211cfc9a41
+    url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
+statement:
+  formal:
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: erdos_593
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/593.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: erdos_593.variants.obligatory_implies_two_colorable
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/593.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: erdos_593.variants.two_colorable_implies_obligatory
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/593.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: erdos_593.variants.graph_case_bipartite_obligatory
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/593.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: erdos_593.variants.graph_case_no_odd_cycle
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/593.lean
+  informal: |-
+    **Erdős Problem 593 ($500)**: Characterize those finite 3-uniform hypergraphs which appear
+    in every 3-uniform hypergraph of chromatic number $> \aleph_0$.
+
+    A natural conjectural characterization, recorded here, is that the obligatory finite 3-uniform
+    hypergraphs are exactly the 2-colorable ones (Property B). The forward direction
+    (`IsObligatory → IsTwoColorable`) and converse (`IsTwoColorable → IsObligatory`) are stated as
+    separate variants below; in the graph case ($r = 2$), Erdős–Galvin–Hajnal [EGH75] proved the
+    analogous result (obligatory ⇔ bipartite).
+subject:
+  msc:
+    - "05"
+  tags:
+    - set theory
+    - graph theory
+    - hypergraphs
+    - chromatic number
+title: Erdős Problem 593

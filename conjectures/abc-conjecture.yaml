@@ -1,0 +1,64 @@
+aliases:
+  - Oesterlé Masser conjecture
+  - Oesterlé-Masser conjecture
+  - Oesterlé–Masser conjecture
+claims: []
+id: abc-conjecture
+ids:
+  external:
+    - label: Wikipedia
+      url: https://en.wikipedia.org/wiki/Abc_conjecture
+  formal_conjectures: FormalConjectures/Wikipedia/ABC.lean
+  mathworld: https://mathworld.wolfram.com/abcConjecture.html
+  wikidata: Q306393
+  wikipedia: https://en.wikipedia.org/wiki/Abc_conjecture
+openness_basis:
+  asserted_by: google-deepmind/formal-conjectures
+  meaning: no_published_solution_known_to_curator
+  note: Categorized upstream as "research open" at v4.32.0.
+provenance:
+  - fields:
+      - title
+      - statement.informal
+      - statement.formal
+      - subject.msc
+      - ids.external
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: google-deepmind/formal-conjectures
+    upstream_version: v4.32.0
+    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/ABC.lean
+  - fields:
+      - aliases
+      - ids.wikidata
+      - ids.wikipedia
+      - ids.mathworld
+    license: CC0-1.0
+    retrieved: 2026-07-31
+    source: wikidata
+    url: https://www.wikidata.org/wiki/Q306393
+statement:
+  formal:
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: abc
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/ABC.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: abc.variants.lt_constant_mul
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/ABC.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: abc.variants.quality
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/ABC.lean
+  informal: For every positive real number `ε`, there exist only finitely many triples `(a, b, c)` of coprime positive integers, with `a + b = c`, such that `c > rad(abc)^(1+ε)`
+subject:
+  msc:
+    - "11"
+title: "*abc* conjecture"

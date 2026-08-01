@@ -1,0 +1,54 @@
+claims:
+  - evidence_tier: published
+    id: mathoverflow-486451-fc-solved
+    notes: Imported from the upstream `research solved` category. The statement is formalized; the proof has not been machine-checked by ConjectureHub.
+    recorded_on: 2026-07-31
+    reviewer: google-deepmind/formal-conjectures maintainers
+    source:
+      kind: dataset
+      title: formal-conjectures marks exists_semiring_unique_left_maximal_not_unique_right_maximal as research solved
+      url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Mathoverflow/486451.lean
+    state: active
+    type: proved
+id: mathoverflow-486451
+ids:
+  external:
+    - label: mathoverflow/486451
+      url: https://mathoverflow.net/questions/486451
+    - label: "*Junyan Xu*"
+      url: https://mathoverflow.net/users/3332/junyan-xu
+  formal_conjectures: FormalConjectures/Mathoverflow/486451.lean
+openness_basis:
+  asserted_by: google-deepmind/formal-conjectures
+  meaning: no_published_solution_known_to_curator
+provenance:
+  - fields:
+      - title
+      - statement.informal
+      - statement.formal
+      - subject.msc
+      - ids.external
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: google-deepmind/formal-conjectures
+    upstream_version: v4.32.0
+    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Mathoverflow/486451.lean
+statement:
+  formal:
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: exists_semiring_unique_left_maximal_not_unique_right_maximal
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Mathoverflow/486451.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: exists_semiring_unique_left_right_maximal_ne
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Mathoverflow/486451.lean
+  informal: There exists a semiring with a unique left maximal ideal but more than one right maximal ideals.
+subject:
+  msc:
+    - "16"
+title: Mathoverflow 486451

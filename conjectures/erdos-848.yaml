@@ -1,0 +1,87 @@
+claims:
+  - evidence_tier: published
+    id: erdos-848-fc-solved
+    notes: Imported from the upstream `research solved` category. The statement is formalized; the proof has not been machine-checked by ConjectureHub.
+    recorded_on: 2026-07-31
+    reviewer: google-deepmind/formal-conjectures maintainers
+    source:
+      kind: dataset
+      title: formal-conjectures marks erdos_848 as research solved
+      url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/848.lean
+    state: active
+    type: proved
+  - asserted_on: 2025-10-19
+    evidence_tier: published
+    id: erdos-848-erdos-status
+    recorded_on: 2026-07-31
+    reviewer: teorth/erdosproblems maintainers
+    source:
+      kind: dataset
+      title: erdosproblems.com records this problem as "decidable"
+      url: https://www.erdosproblems.com/848
+    state: active
+    type: partial
+id: erdos-848
+ids:
+  erdos: "848"
+  external:
+    - label: erdosproblems.com/848
+      url: https://www.erdosproblems.com/848
+  formal_conjectures: FormalConjectures/ErdosProblems/848.lean
+openness_basis:
+  asserted_by: erdosproblems.com
+  asserted_on: 2025-10-19
+  meaning: no_published_solution_known_to_curator
+provenance:
+  - fields:
+      - title
+      - statement.informal
+      - statement.formal
+      - subject.msc
+      - ids.external
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: google-deepmind/formal-conjectures
+    upstream_version: v4.32.0
+    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/848.lean
+  - fields:
+      - ids.erdos
+      - ids.oeis
+      - subject.tags
+      - openness_basis
+      - claims
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: teorth/erdosproblems
+    upstream_version: d031865128a7ddccd85e8099f0f818211cfc9a41
+    url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
+statement:
+  formal:
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: erdos_848
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/848.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: erdos_848.variants.asymptotic
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/848.lean
+  informal: |-
+    Is the maximum size of a set $A ⊆ \{1, \dots, N\}$ such that $ab + 1$ is never squarefree
+    (for all $a, b ∈ A$) achieved by taking those $n ≡ 7 \pmod{25}$?
+
+    This asks whether `Erdos848 N` holds for all $N$ (formulated using `A ⊆ Finset.range N`).
+
+    This was solved for all sufficiently large $N$ by Sawhney in this note. In fact, Sawhney proves
+    something slightly stronger, that there exists some constant $c>0$ such that if
+    $\lvert A\rvert \geq (\frac{1}{25}-c)N$ and $N$ is large then $A$ is contained in either
+    $\{ n\equiv 7\pmod{25}\}$ or $\{n\equiv 18\pmod{25}\}$.
+subject:
+  msc:
+    - "11"
+  tags:
+    - number theory
+title: Erdős Problem 848

@@ -1,0 +1,83 @@
+claims:
+  - evidence_tier: published
+    id: erdos-659-fc-solved
+    notes: Imported from the upstream `research solved` category. The statement is formalized; the proof has not been machine-checked by ConjectureHub.
+    recorded_on: 2026-07-31
+    reviewer: google-deepmind/formal-conjectures maintainers
+    source:
+      kind: dataset
+      title: formal-conjectures marks erdos_659 as research solved
+      url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/659.lean
+    state: active
+    type: proved
+id: erdos-659
+ids:
+  erdos: "659"
+  external:
+    - label: erdosproblems.com/659
+      url: https://www.erdosproblems.com/659
+    - label: Gr26
+      url: https://arxiv.org/abs/2601.09102
+  formal_conjectures: FormalConjectures/ErdosProblems/659.lean
+openness_basis:
+  asserted_by: erdosproblems.com
+  asserted_on: 2026-01-14
+  meaning: no_published_solution_known_to_curator
+provenance:
+  - fields:
+      - title
+      - statement.informal
+      - statement.formal
+      - subject.msc
+      - ids.external
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: google-deepmind/formal-conjectures
+    upstream_version: v4.32.0
+    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/659.lean
+  - fields:
+      - ids.erdos
+      - ids.oeis
+      - subject.tags
+      - openness_basis
+      - claims
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: teorth/erdosproblems
+    upstream_version: d031865128a7ddccd85e8099f0f818211cfc9a41
+    url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
+statement:
+  formal:
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: erdos_659
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/659.lean
+  informal: |-
+    Is there a set of $n$ points in $\mathbb{R}^2$ such that every subset of $4$ points determines at
+    least $3$ distances, yet the total number of distinct distances is $\ll \frac{n}{\sqrt{\log n}}$?
+
+    There does exist such a set: a suitable truncation of the lattice
+    $\{(a,b\sqrt{2}): a,b\in\mathbb{Z}\}$ suffices. This construction appears to have been first
+    considered by Moree and Osburn \cite{MoOs06}, who proved that it has
+    $\ll \frac{n}{\sqrt{\log n}}$ many distinct distances. This construction was independently found by
+    [Lund and Sheffer](https://adamsheffer.wordpress.com/2014/07/16/point-sets-with-few-distinct-distances/),
+    who further noted that this configuration contains no squares or equilateral triangles.
+
+    There are only six possible configurations of $4$ points which determine only $2$ distances
+    (first noted by Erdős and Fishburn [ErFi96]), and five of them contain either a square or an
+    equilateral triangle. The remaining configuration contains four points from a regular pentagon,
+    and Grayzel [Gr26] (using Gemini) has noted in the comments that this configuration can also be
+    ruled out, thus giving a complete solution to this problem.
+
+    Boris Alexeev provides a formalisation of the reduction, which is conditional on Bernays' theorem
+    (assumed as an axiom in the proof to obtain the $O(n/\sqrt{\log n})$ bound).
+    See the [formal proof](https://github.com/plby/lean-proofs/blob/226d5fad7143dcebea2bbb5ec87f18a3a1dcea69/src/v4.24.0/ErdosProblems/Erdos659.lean).
+subject:
+  msc:
+    - "52"
+  tags:
+    - geometry
+    - distances
+title: Erdős Problem 659

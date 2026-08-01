@@ -1,0 +1,52 @@
+claims: []
+id: the-bing-borsuk-conjecture
+ids:
+  external:
+    - label: Wikipedia
+      url: https://en.wikipedia.org/wiki/Bing%E2%80%93Borsuk_conjecture
+  formal_conjectures: FormalConjectures/Wikipedia/BingBorsuk.lean
+  wikidata: Q55605472
+  wikipedia: https://en.wikipedia.org/wiki/Bing%E2%80%93Borsuk_conjecture
+openness_basis:
+  asserted_by: google-deepmind/formal-conjectures
+  meaning: no_published_solution_known_to_curator
+  note: Categorized upstream as "research open" at v4.32.0.
+provenance:
+  - fields:
+      - title
+      - statement.informal
+      - statement.formal
+      - subject.msc
+      - ids.external
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: google-deepmind/formal-conjectures
+    upstream_version: v4.32.0
+    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/BingBorsuk.lean
+  - fields:
+      - aliases
+      - ids.wikidata
+      - ids.wikipedia
+      - ids.mathworld
+    license: CC0-1.0
+    retrieved: 2026-07-31
+    source: wikidata
+    url: https://www.wikidata.org/wiki/Q55605472
+statement:
+  formal:
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: bing_borsuk_conjecture
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/BingBorsuk.lean
+  informal: |-
+    The Bing-Borsuk Conjecture: every $n$-dimensional homogeneous absolute neighborhood retract
+    is a topological $n$-manifold. A topological space $X$ is an $n$-dimensional manifold
+    when `T2Space X ∧ Nonempty (ChartedSpace (Fin n → ℝ) X)`. The hypothesis `[MetrizableSpace X]`
+    implies `T2Space X` so this does not appear in the conclusion.
+subject:
+  msc:
+    - "54"
+    - "57"
+title: The Bing-Borsuk Conjecture

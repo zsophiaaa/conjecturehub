@@ -1,0 +1,66 @@
+claims: []
+id: tao-s-optimization-constant-1a-an-autocorrelation-constant-related-to-sidon-sets
+ids:
+  external:
+    - label: Tao's optimization constant 1a
+      url: https://teorth.github.io/optimizationproblems/constants/1a.html
+    - label: arXiv:0907.1379
+      url: https://arxiv.org/abs/0907.1379
+    - label: arXiv:2601.16175
+      url: https://arxiv.org/abs/2601.16175
+  formal_conjectures: FormalConjectures/OptimizationConstants/1a.lean
+openness_basis:
+  asserted_by: google-deepmind/formal-conjectures
+  meaning: no_published_solution_known_to_curator
+  note: Categorized upstream as "research open" at v4.32.0.
+provenance:
+  - fields:
+      - title
+      - statement.informal
+      - statement.formal
+      - subject.msc
+      - ids.external
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: google-deepmind/formal-conjectures
+    upstream_version: v4.32.0
+    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/OptimizationConstants/1a.lean
+statement:
+  formal:
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: c1a_lower_bound
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/OptimizationConstants/1a.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: c1a_upper_bound
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/OptimizationConstants/1a.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: mem_Ico_c1a
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/OptimizationConstants/1a.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: mem_Ioc_c1a
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/OptimizationConstants/1a.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: c1a_eq
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/OptimizationConstants/1a.lean
+  informal: How can the upper bound be improved?
+subject:
+  msc:
+    - "05"
+    - "11"
+    - "26"
+title: Tao's Optimization constant 1a / An autocorrelation constant related to Sidon sets

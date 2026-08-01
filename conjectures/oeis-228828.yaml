@@ -1,0 +1,36 @@
+claims: []
+id: oeis-228828
+ids:
+  external:
+    - label: A228828
+      url: https://oeis.org/A228828
+  formal_conjectures: FormalConjectures/OEIS/228828.lean
+openness_basis:
+  asserted_by: google-deepmind/formal-conjectures
+  meaning: no_published_solution_known_to_curator
+  note: Categorized upstream as "research open" at v4.32.0.
+provenance:
+  - fields:
+      - title
+      - statement.informal
+      - statement.formal
+      - subject.msc
+      - ids.external
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: google-deepmind/formal-conjectures
+    upstream_version: v4.32.0
+    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/OEIS/228828.lean
+statement:
+  formal:
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: a.infinite
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/OEIS/228828.lean
+  informal: "Conjecture: the sequence A228828 is infinite."
+subject:
+  msc:
+    - "11"
+title: a.infinite

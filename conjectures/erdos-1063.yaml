@@ -1,0 +1,83 @@
+claims: []
+id: erdos-1063
+ids:
+  erdos: "1063"
+  external:
+    - label: erdosproblems.com/1063
+      url: https://www.erdosproblems.com/1063
+  formal_conjectures: FormalConjectures/ErdosProblems/1063.lean
+  oeis:
+    - A389360
+openness_basis:
+  asserted_by: erdosproblems.com
+  asserted_on: 2025-10-01
+  meaning: no_published_solution_known_to_curator
+  note: Categorized upstream as "research open" at v4.32.0.
+provenance:
+  - fields:
+      - title
+      - statement.informal
+      - statement.formal
+      - subject.msc
+      - ids.external
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: google-deepmind/formal-conjectures
+    upstream_version: v4.32.0
+    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/1063.lean
+  - fields:
+      - ids.erdos
+      - ids.oeis
+      - subject.tags
+      - openness_basis
+      - claims
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: teorth/erdosproblems
+    upstream_version: d031865128a7ddccd85e8099f0f818211cfc9a41
+    url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
+statement:
+  formal:
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: erdos_1063.better_upper
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/1063.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: erdos_1063.variants.exists_exception
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/1063.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: erdos_1063.variants.small_values
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/1063.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: erdos_1063.variants.monier_upper_bound
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/1063.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: erdos_1063.variants.cambie_upper_bound
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/1063.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: erdos_1063.variants.exp_upper_bound
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/1063.lean
+  informal: Estimate $n_k$ by finding a better upper bound.
+subject:
+  msc:
+    - "11"
+  tags:
+    - number theory
+title: Erdős Problem 1063

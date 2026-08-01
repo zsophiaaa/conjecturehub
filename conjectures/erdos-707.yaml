@@ -1,0 +1,113 @@
+claims:
+  - evidence_tier: published
+    id: erdos-707-fc-solved
+    notes: Imported from the upstream `research solved` category. The statement is formalized; the proof has not been machine-checked by ConjectureHub.
+    recorded_on: 2026-07-31
+    reviewer: google-deepmind/formal-conjectures maintainers
+    source:
+      kind: dataset
+      title: formal-conjectures marks erdos_707 as research solved
+      url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/707.lean
+    state: active
+    type: proved
+  - asserted_on: 2025-10-21
+    evidence_tier: published
+    id: erdos-707-erdos-status
+    recorded_on: 2026-07-31
+    reviewer: teorth/erdosproblems maintainers
+    source:
+      kind: dataset
+      title: erdosproblems.com records this problem as "disproved"
+      url: https://www.erdosproblems.com/707
+    state: active
+    type: disproved
+id: erdos-707
+ids:
+  erdos: "707"
+  external:
+    - label: erdosproblems.com/707
+      url: https://www.erdosproblems.com/707
+    - label: arxiv/2510.19804
+      url: https://arxiv.org/abs/2510.19804
+  formal_conjectures: FormalConjectures/ErdosProblems/707.lean
+openness_basis:
+  asserted_by: erdosproblems.com
+  asserted_on: 2025-10-21
+  meaning: no_published_solution_known_to_curator
+provenance:
+  - fields:
+      - title
+      - statement.informal
+      - statement.formal
+      - subject.msc
+      - ids.external
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: google-deepmind/formal-conjectures
+    upstream_version: v4.32.0
+    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/707.lean
+  - fields:
+      - ids.erdos
+      - ids.oeis
+      - subject.tags
+      - openness_basis
+      - claims
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: teorth/erdosproblems
+    upstream_version: d031865128a7ddccd85e8099f0f818211cfc9a41
+    url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
+statement:
+  formal:
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: erdos_707
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/707.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: erdos_707.variants.prime_power
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/707.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: erdos_707.variants.prime
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/707.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: erdos_707.variants.counterexample_prime
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/707.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: erdos_707.variants.counterexample_mian_chowla
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/707.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: erdos_707.variants.counterexample_hall
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/707.lean
+  informal: |-
+    **Erdős Problem 707**: It is false that any finite Sidon set can be embedded in a perfect
+    different set modulo some $n$.
+
+    As described in [arxiv/2510.19804], a counterexample is provided in [Ha47], see below.
+    The proof of this has been formalized.
+
+    This was formalized in Lean by Alexeev using ChatGPT.
+subject:
+  msc:
+    - "05"
+    - "11"
+  tags:
+    - additive combinatorics
+    - sidon sets
+title: "Erdős Problem 707: Embedding Sidon Sets in Perfect Difference Sets"

@@ -1,0 +1,57 @@
+claims: []
+id: bugeaud-collection-of-conjectures-and-open-questions-fractional-parts-of-powers
+ids:
+  external:
+    - label: Wal03
+      url: http://webusers.imj-prg.fr/~michel.waldschmidt/articles/pdf/Cetraro.pdf
+  formal_conjectures: FormalConjectures/Books/BugeaudDistributionModuloOne/IntDistanceDistribution.lean
+openness_basis:
+  asserted_by: google-deepmind/formal-conjectures
+  meaning: no_published_solution_known_to_curator
+  note: Categorized upstream as "research open" at v4.32.0.
+provenance:
+  - fields:
+      - title
+      - statement.informal
+      - statement.formal
+      - subject.msc
+      - ids.external
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: google-deepmind/formal-conjectures
+    upstream_version: v4.32.0
+    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Books/BugeaudDistributionModuloOne/IntDistanceDistribution.lean
+statement:
+  formal:
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: problem_10_1
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Books/BugeaudDistributionModuloOne/IntDistanceDistribution.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: problem_10_2
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Books/BugeaudDistributionModuloOne/IntDistanceDistribution.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: problem_10_3
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Books/BugeaudDistributionModuloOne/IntDistanceDistribution.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: waldschmidt
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Books/BugeaudDistributionModuloOne/IntDistanceDistribution.lean
+  informal: |-
+    Problem 10.1. Are there a transcendental number $\alpha$ and a positive real
+    number $\xi$ such that $\lVert \xi \alpha^n \rVert$ tends to~$0$ as~$n$ tends to infinity? [Har19]
+    (Trivial for $|\alpha| < 1$)
+subject:
+  msc:
+    - "11"
+title: "Bugeaud Collection of Conjectures and Open Questions: Fractional Parts of Powers"

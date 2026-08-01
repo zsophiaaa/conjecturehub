@@ -1,0 +1,108 @@
+claims:
+  - evidence_tier: published
+    id: erdos-125-fc-solved
+    notes: Imported from the upstream `research solved` category. The statement is formalized; the proof has not been machine-checked by ConjectureHub.
+    recorded_on: 2026-07-31
+    reviewer: google-deepmind/formal-conjectures maintainers
+    source:
+      kind: dataset
+      title: formal-conjectures marks erdos_125 as research solved
+      url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/125.lean
+    state: active
+    type: proved
+  - asserted_on: 2026-03-30
+    evidence_tier: published
+    id: erdos-125-erdos-status
+    recorded_on: 2026-07-31
+    reviewer: teorth/erdosproblems maintainers
+    source:
+      kind: dataset
+      title: erdosproblems.com records this problem as "disproved"
+      url: https://www.erdosproblems.com/125
+    state: active
+    type: disproved
+id: erdos-125
+ids:
+  erdos: "125"
+  external:
+    - label: erdosproblems.com/125
+      url: https://www.erdosproblems.com/125
+  formal_conjectures: FormalConjectures/ErdosProblems/125.lean
+  oeis:
+    - A367090
+openness_basis:
+  asserted_by: erdosproblems.com
+  asserted_on: 2026-03-30
+  meaning: no_published_solution_known_to_curator
+provenance:
+  - fields:
+      - title
+      - statement.informal
+      - statement.formal
+      - subject.msc
+      - ids.external
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: google-deepmind/formal-conjectures
+    upstream_version: v4.32.0
+    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/125.lean
+  - fields:
+      - ids.erdos
+      - ids.oeis
+      - subject.tags
+      - openness_basis
+      - claims
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: teorth/erdosproblems
+    upstream_version: d031865128a7ddccd85e8099f0f818211cfc9a41
+    url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
+statement:
+  formal:
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: erdos_125
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/125.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: erdos_125.variants.positive_lower_density
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/125.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: erdos_125.variants.positive_upper_density
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/125.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: erdos_125.variants.zero_density
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/125.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: erdos_125.variants.zero_lower_positive_upper_density
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/125.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: erdos_125.variants.positive_unequal_density
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/125.lean
+  informal: |-
+    Case 3:
+    Does $A + B$ have positive upper and lower density that are equal?
+    This is the literal interpretation of "positive density" which was falsified.
+subject:
+  msc:
+    - "11"
+  tags:
+    - number theory
+    - base representations
+title: Erdős Problem 125

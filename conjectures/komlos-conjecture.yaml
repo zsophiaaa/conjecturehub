@@ -1,0 +1,58 @@
+claims: []
+id: komlos-conjecture
+ids:
+  external:
+    - label: Wikipedia
+      url: https://en.wikipedia.org/wiki/Discrepancy_theory#Major_open_problems
+    - label: |-
+        W. Banaszczyk, *Balancing vectors and Gaussian measures of n-dimensional convex bodies*,
+          Random Structures & Algorithms **12** (1998), 351–360
+      url: https://doi.org/10.1002/(SICI
+    - label: |-
+        J. Spencer, *Six standard deviations suffice*,
+          Trans. Amer. Math. Soc. **289** (1985), 679–706
+      url: https://doi.org/10.1090/S0002-9947-1985-0784009-0
+  formal_conjectures: FormalConjectures/Wikipedia/KomlosConjecture.lean
+  wikipedia: https://en.wikipedia.org/wiki/Discrepancy_theory#Major_open_problems
+openness_basis:
+  asserted_by: google-deepmind/formal-conjectures
+  meaning: no_published_solution_known_to_curator
+  note: Categorized upstream as "research open" at v4.32.0.
+provenance:
+  - fields:
+      - title
+      - statement.informal
+      - statement.formal
+      - subject.msc
+      - ids.external
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: google-deepmind/formal-conjectures
+    upstream_version: v4.32.0
+    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/KomlosConjecture.lean
+statement:
+  formal:
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: komlos_conjecture
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/KomlosConjecture.lean
+    - category: research solved
+      definition_hole: false
+      language: lean4
+      theorem: komlos_conjecture.variants.banaszczyk
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/KomlosConjecture.lean
+  informal: |-
+    **The Komlós conjecture**
+
+    There exists a universal constant $K > 0$ such that for all $n, m \in \mathbb{N}$ and
+    all vectors $v_1, \dots, v_n \in \mathbb{R}^m$ with $\|v_i\|_2 \le 1$ (encoded here as
+    $\sum_j v_{ij}^2 \le 1$), there exist signs $\varepsilon_i \in \{-1, +1\}$ such that
+    $\left\|\sum_i \varepsilon_i v_i\right\|_\infty \le K$, i.e.
+    $\left|\sum_i \varepsilon_i v_{ij}\right| \le K$ for every coordinate $j$.
+subject:
+  msc:
+    - "05"
+title: Komlós conjecture

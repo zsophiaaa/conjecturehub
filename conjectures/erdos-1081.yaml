@@ -1,0 +1,44 @@
+claims:
+  - asserted_on: 2025-10-14
+    evidence_tier: published
+    id: erdos-1081-erdos-status
+    recorded_on: 2026-07-31
+    reviewer: teorth/erdosproblems maintainers
+    source:
+      kind: dataset
+      title: erdosproblems.com records this problem as "disproved"
+      url: https://www.erdosproblems.com/1081
+    state: active
+    type: disproved
+id: erdos-1081
+ids:
+  erdos: "1081"
+  external:
+    - label: erdosproblems.com/1081
+      url: https://www.erdosproblems.com/1081
+  oeis:
+    - A076871
+    - A076872
+openness_basis:
+  asserted_by: erdosproblems.com
+  asserted_on: 2025-10-14
+  meaning: no_published_solution_known_to_curator
+  note: No formalization is indexed for this problem yet; read the statement upstream.
+provenance:
+  - fields:
+      - ids.erdos
+      - ids.oeis
+      - subject.tags
+      - openness_basis
+      - claims
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: teorth/erdosproblems
+    upstream_version: d031865128a7ddccd85e8099f0f818211cfc9a41
+    url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
+statement: {}
+subject:
+  tags:
+    - number theory
+    - powerful
+title: Erdős Problem 1081

@@ -1,0 +1,86 @@
+claims: []
+id: erdos-1167
+ids:
+  erdos: "1167"
+  external:
+    - label: erdosproblems.com/1167
+      url: https://www.erdosproblems.com/1167
+  formal_conjectures: FormalConjectures/ErdosProblems/1167.lean
+openness_basis:
+  asserted_by: erdosproblems.com
+  asserted_on: 2026-01-23
+  meaning: no_published_solution_known_to_curator
+  note: Categorized upstream as "research open" at v4.32.0.
+provenance:
+  - fields:
+      - title
+      - statement.informal
+      - statement.formal
+      - subject.msc
+      - ids.external
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: google-deepmind/formal-conjectures
+    upstream_version: v4.32.0
+    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/1167.lean
+  - fields:
+      - ids.erdos
+      - ids.oeis
+      - subject.tags
+      - openness_basis
+      - claims
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    source: teorth/erdosproblems
+    upstream_version: d031865128a7ddccd85e8099f0f818211cfc9a41
+    url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
+statement:
+  formal:
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: erdos_1167
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/1167.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: finite_targets
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/1167.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: binary_colors
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/1167.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: infinite_targets
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/1167.lean
+    - category: research open
+      definition_hole: false
+      language: lean4
+      theorem: r_eq_two
+      toolchain: v4.32.0
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/1167.lean
+  informal: |-
+    **Erdős Problem 1167.** Let $r \geq 2$ be finite, $\gamma \geq 2$, and $\lambda$ be an infinite
+    cardinal. Let $\kappa_\alpha$ be cardinals for all $\alpha < \gamma$. Is it true
+    that
+    $$2^\lambda \to (\kappa_\alpha + 1)_{\alpha < \gamma}^{r+1}$$
+    implies
+    $$\lambda \to (\kappa_\alpha)_{\alpha < \gamma}^r?$$
+    Here $+$ means cardinal addition, so that $\kappa_\alpha + 1 = \kappa_\alpha$
+    if $\kappa_\alpha$ is infinite.
+
+    A problem of Erdős, Hajnal, and Rado.
+subject:
+  msc:
+    - "05"
+  tags:
+    - set theory
+    - probability
+title: Erdős Problem 1167
