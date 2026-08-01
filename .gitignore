@@ -5,12 +5,13 @@ out/
 *.tsbuildinfo
 .env
 .env.local
+.env*.local
 .DS_Store
 .cache/
+.vercel/
 web/public/index/
 web/.generated/
 web/out/
 statements/.lake/
 ingest/.cache/
 ingest/.sweep-state.json
-.env
