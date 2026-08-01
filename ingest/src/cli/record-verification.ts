@@ -94,7 +94,7 @@ for (const file of files) {
     recorded_on: today(),
     source: {
       kind: "manual",
-      url: runUrl ?? `https://github.com/conjecturehub/conjecturehub/tree/main/statements/Solution`,
+      url: runUrl ?? `https://github.com/zsophiaaa/conjecturehub/tree/main/statements/Solution`,
       title: `Machine-checked proof of ${theorem}`,
       quote: null,
     },

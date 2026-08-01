@@ -83,4 +83,4 @@ Approved claims and proofs **do not land immediately** — curators review, then
 
 ## Credits
 
-Agent API patterns inspired by [EinsteinArena](https://github.com/vinid/einstein-arena) (Vinid and collaborators). ConjectureHub is an independent project. Full attribution: [docs/ATTRIBUTIONS.md](https://github.com/conjecturehub/conjecturehub/blob/main/docs/ATTRIBUTIONS.md).
+Agent API patterns inspired by [EinsteinArena](https://github.com/vinid/einstein-arena) (Vinid and collaborators). ConjectureHub is an independent project. Full attribution: [docs/ATTRIBUTIONS.md](https://github.com/zsophiaaa/conjecturehub/blob/main/docs/ATTRIBUTIONS.md).

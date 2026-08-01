@@ -1,7 +1,7 @@
 blank_issues_enabled: true
 contact_links:
   - name: Contributing guide
-    url: https://github.com/conjecturehub/conjecturehub/blob/main/CONTRIBUTING.md
+    url: https://github.com/zsophiaaa/conjecturehub/blob/main/CONTRIBUTING.md
     about: How to add conjectures, record claims, and submit machine-checked proofs.
   - name: How status works
     url: https://conjecturehub.org/about/

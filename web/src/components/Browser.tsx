@@ -219,7 +219,7 @@ export function Browser({ tags }: { tags: { tag: string; count: number }[] }) {
           {results.length === 0 ? (
             <p className="ui-panel px-4 py-6 text-center text-ink-muted">
               Nothing matched. If a conjecture is missing,{" "}
-              <a href="https://github.com/conjecturehub/conjecturehub/issues/new">tell us</a> or open a pull request.
+              <a href="https://github.com/zsophiaaa/conjecturehub/issues/new">tell us</a> or open a pull request.
             </p>
           ) : null}
 

@@ -138,5 +138,5 @@ export function getStats(): Stats {
 export const SITE = {
   name: "ConjectureHub",
   tagline: "A living index of every mathematical conjecture, and who has proved what.",
-  repo: "https://github.com/conjecturehub/conjecturehub",
+  repo: "https://github.com/zsophiaaa/conjecturehub",
 } as const;

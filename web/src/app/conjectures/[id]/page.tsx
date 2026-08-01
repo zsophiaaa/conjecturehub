@@ -360,7 +360,7 @@ export default async function ConjecturePage({ params }: { params: Promise<{ id:
         <p>
           Something wrong or missing?{" "}
           <a
-            href={`https://github.com/conjecturehub/conjecturehub/edit/main/conjectures/${conjecture.id}.yaml`}
+            href={`https://github.com/zsophiaaa/conjecturehub/edit/main/conjectures/${conjecture.id}.yaml`}
           >
             Edit this record
           </a>{" "}
