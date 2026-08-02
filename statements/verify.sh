@@ -94,13 +94,25 @@ cd "$HERE"
 LOG="$WORK/comparator.log"
 START="$(date +%s)"
 
+# `systemd-run --user` starts from a clean environment, so anything comparator
+# needs has to be forwarded explicitly. It reads COMPARATOR_LANDRUN,
+# COMPARATOR_LEAN4EXPORT and COMPARATOR_NANODA to locate its helper binaries;
+# without this they are silently ignored on the systemd path and honoured on the
+# fallback path, which is a difference that will waste somebody's afternoon.
+COMPARATOR_ENV=()
+for var in COMPARATOR_LANDRUN COMPARATOR_LEAN4EXPORT COMPARATOR_NANODA; do
+  if [ -n "${!var:-}" ]; then
+    COMPARATOR_ENV+=("-E" "$var=${!var}")
+  fi
+done
+
 # systemd-run blocks AF_UNIX, closing a landrun sandbox escape that is not fixed
 # until Linux 7.1. Where it is unavailable we still run, but we say so, because
 # the guarantee is weaker.
 if command -v systemd-run >/dev/null 2>&1 && systemd-run --user --quiet true 2>/dev/null; then
   timeout --signal=KILL "$BUDGET_SECONDS" \
     systemd-run --property=RestrictAddressFamilies=~AF_UNIX --user --pipe --quiet \
-      -E PATH="$PATH" --working-directory "$HERE" \
+      -E PATH="$PATH" "${COMPARATOR_ENV[@]}" --working-directory "$HERE" \
       -- bash -c "lake env comparator '$CONFIG'" >"$LOG" 2>&1
   STATUS=$?
 else
