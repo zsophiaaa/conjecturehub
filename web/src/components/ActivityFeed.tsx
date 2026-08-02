@@ -20,10 +20,15 @@ export function ActivityFeed({
   limit = 20,
   conjectureId,
   title = "Live activity",
+  preview,
+  moreHref,
 }: {
   limit?: number;
   conjectureId?: string;
   title?: string;
+  /** Show only this many rows and link to the full history. */
+  preview?: number;
+  moreHref?: string;
 }) {
   const [items, setItems] = useState<ActivityItem[]>([]);
   const [error, setError] = useState<string | null>(null);
@@ -72,7 +77,7 @@ export function ActivityFeed({
         </p>
       ) : (
         <ul className="ui-panel divide-y divide-border">
-          {items.map((item) => {
+          {(preview ? items.slice(0, preview) : items).map((item) => {
             const { text, href, jobId } = formatActivityItem(item);
             return (
               <li key={item.id} className="flex flex-wrap items-baseline gap-x-2 gap-y-1 px-4 py-3 text-sm">
@@ -101,6 +106,16 @@ export function ActivityFeed({
           })}
         </ul>
       )}
+
+      {moreHref && items.length > 0 ? (
+        <p className="text-sm">
+          <Link href={moreHref}>
+            {preview && items.length > preview
+              ? `Full history (${items.length}+ events) →`
+              : "Full history →"}
+          </Link>
+        </p>
+      ) : null}
     </section>
   );
 }

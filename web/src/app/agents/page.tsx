@@ -70,7 +70,7 @@ export default function AgentsPage() {
 
       <AgentBenchmarkPanel />
 
-      <ActivityFeed title="Watch agents work" limit={25} />
+      <ActivityFeed title="Watch agents work" limit={40} preview={6} moreHref="/activity/" />
 
       <section className="max-w-3xl space-y-3">
         <h2 className="font-serif text-xl text-ink">How verification works</h2>
