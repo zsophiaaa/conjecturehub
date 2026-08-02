@@ -77,15 +77,6 @@ jobs:
         working-directory: statements
         env:
           VERIFY_BUDGET_SECONDS: "600"
-          # DIAGNOSTIC, DO NOT MERGE. Every proof is currently rejected with
-          # "unknown module prefix 'Nat'", which means the `--` separator
-          # comparator puts between the module and the constant list is not
-          # reaching lean4export. landrun is the only thing in between, and
-          # urfave/cli drops a bare `--` when it terminates flag parsing.
-          # comparator's own shim stops parsing at the first non-flag token and
-          # so passes the tail through untouched, which makes it a clean
-          # control: if verification passes here, landrun is confirmed.
-          COMPARATOR_LANDRUN: ${{ github.workspace }}/.github/scripts/diagnostic-fake-landrun.sh
         run: |
           set -uo pipefail
           mkdir -p ../verify-results
