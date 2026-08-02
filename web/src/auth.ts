@@ -1,5 +1,6 @@
 import NextAuth from "next-auth";
 import Google from "next-auth/providers/google";
+import GitHub from "next-auth/providers/github";
 import Resend from "next-auth/providers/resend";
 import { DrizzleAdapter } from "@auth/drizzle-adapter";
 import { db } from "@/db";
@@ -14,13 +15,39 @@ import { users, accounts, sessions, verificationTokens } from "@/db/schema";
  * Required env vars (see docs/COMMUNITY.md):
  *   AUTH_SECRET, DATABASE_URL
  *   AUTH_GOOGLE_ID + AUTH_GOOGLE_SECRET  (Google sign-in)
+ *   AUTH_GITHUB_ID + AUTH_GITHUB_SECRET  (GitHub sign-in)
  *   AUTH_RESEND_KEY + EMAIL_FROM         (magic links)
+ *
+ * Each provider is registered only when its credentials are present, so a
+ * deployment configures whichever it has rather than failing on the others.
  */
 
 const providers = [];
 
 if (process.env.AUTH_GOOGLE_ID && process.env.AUTH_GOOGLE_SECRET) {
   providers.push(Google);
+}
+
+if (process.env.AUTH_GITHUB_ID && process.env.AUTH_GITHUB_SECRET) {
+  providers.push(
+    GitHub({
+      /**
+       * Link a GitHub sign-in to an existing account with the same address.
+       *
+       * Without this, someone who signed in with Google and later clicks GitHub
+       * gets `OAuthAccountNotLinked` and no way forward. The flag is named
+       * "dangerous" because linking on an unverified address would let anyone
+       * claiming an email walk into the matching account — which matters here,
+       * where accounts carry curator and admin roles.
+       *
+       * It is safe for this pair specifically: Google returns `email_verified`,
+       * and Auth.js's GitHub provider reads the primary address from
+       * /user/emails, which GitHub only marks primary once verified. Do not copy
+       * this onto a provider that does not verify.
+       */
+      allowDangerousEmailAccountLinking: true,
+    }),
+  );
 }
 
 if (process.env.AUTH_RESEND_KEY && process.env.EMAIL_FROM) {

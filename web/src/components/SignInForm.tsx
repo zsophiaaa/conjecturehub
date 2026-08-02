@@ -7,18 +7,22 @@ import type { ReactNode } from "react";
 
 interface SignInFormProps {
   hasGoogle: boolean;
+  hasGitHub?: boolean;
   hasEmail: boolean;
   emailDisabled?: boolean;
   emailDisabledReason?: string;
   googleButton: ReactNode;
+  githubButton?: ReactNode;
 }
 
 export function SignInForm({
   hasGoogle,
+  hasGitHub = false,
   hasEmail,
   emailDisabled = false,
   emailDisabledReason,
   googleButton,
+  githubButton,
 }: SignInFormProps) {
   const [email, setEmail] = useState("");
   const [sent, setSent] = useState(false);
@@ -57,7 +61,7 @@ export function SignInForm({
         </p>
       </div>
 
-      {!hasGoogle && !hasEmail ? (
+      {!hasGoogle && !hasGitHub && !hasEmail ? (
         <div className="ui-alert">
           <p className="text-ink">Sign-in is not configured on this server yet.</p>
           <p className="mt-2">
@@ -68,9 +72,18 @@ export function SignInForm({
       ) : null}
 
       <div className="space-y-4">
+        {hasGitHub ? githubButton : null}
         {hasGoogle ? googleButton : null}
 
-        {hasGoogle && hasEmail && !emailDisabled ? (
+        {hasGitHub ? (
+          <p className="text-sm text-ink-faint">
+            GitHub is the natural choice here: claims become pull requests and proofs are checked in
+            CI, so signing in with the account you would be attributed under keeps the record
+            consistent. Either provider reaches the same account if the verified email matches.
+          </p>
+        ) : null}
+
+        {(hasGoogle || hasGitHub) && hasEmail && !emailDisabled ? (
           <p className="text-center text-sm text-ink-faint">or</p>
         ) : null}
 

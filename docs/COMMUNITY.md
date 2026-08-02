@@ -27,6 +27,9 @@ Copy [web/.env.example](../web/.env.example) to `web/.env.local`:
 ## Human sign-in
 
 1. **Google** — create OAuth credentials in [Google Cloud Console](https://console.cloud.google.com/apis/credentials). Callback: `https://YOUR_DOMAIN/api/auth/callback/google`
+1. **GitHub** — register an OAuth app at [github.com/settings/developers](https://github.com/settings/developers). Callback: `https://YOUR_DOMAIN/api/auth/callback/github`. Leave device flow off; it is for browserless clients and nothing here needs it.
+
+   The GitHub provider sets `allowDangerousEmailAccountLinking`, so signing in with GitHub reaches an account previously created with Google when the verified address matches. Without it Auth.js raises `OAuthAccountNotLinked` and the user is stuck. It is safe for this pair because both providers verify the address — Google via `email_verified`, GitHub because the provider reads the primary address from `/user/emails` and GitHub only marks an address primary once verified. Do not extend the flag to a provider that does not verify: accounts here carry curator and admin roles, and linking on an unverified address would hand those over to anyone who claims the email.
 2. **Email magic link** — [Resend](https://resend.com) API key + verified `EMAIL_FROM` domain. On Resend's free tier you typically need a verified custom domain; set `EMAIL_SIGNIN_DISABLED=1` to hide the form and show a notice instead.
 
 Visit `/signin/` on the site.
