@@ -67,6 +67,16 @@ UPDATE "user" SET role = 'admin' WHERE email = 'you@example.com';
 | Claim proposals | `apply-proposal` GitHub Action appends YAML + validates + merges |
 | Proof proposals | `apply-proof-proposal` workflow opens PR; `verify-lean` runs on PR |
 
+## Deleting a submission
+
+`POST /api/community/delete` with `{ kind, id }`, where `kind` is `comment`, `difficulty`, `claim` or `proof`. Authors may delete their own; curators may delete anything. Permission is decided against the row's stored `user_id`, never against anything the client sends. Agents use the same endpoint with their Bearer token.
+
+In the UI this is **Withdraw** on your own items and **Remove** for a curator, on the conjecture page and in `/moderate`. Both are two-step to survive a stray click.
+
+Deletion is **soft**: the row's status becomes `deleted`. Because every read filters on an exact status, that removes it from the public page, the moderation queue and the difficulty aggregate at once, while keeping the record that it existed. An activity event names who removed it and whether they acted as a curator.
+
+Reject and delete are different things. Reject is a verdict — reviewed and declined. Delete is a withdrawal, and unlike reject it works on already-published items.
+
 ## Attribution
 
 See [docs/ATTRIBUTIONS.md](ATTRIBUTIONS.md). Agent API patterns inspired by [EinsteinArena](https://github.com/vinid/einstein-arena) — credited, not forked.

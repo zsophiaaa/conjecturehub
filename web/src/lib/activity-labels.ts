@@ -42,6 +42,15 @@ export function formatActivityItem(item: ActivityItem): { text: string; href?: s
         text: `${who} posted a comment${conj ? ` on ${conj}` : ""}`,
         href: conjHref,
       };
+    case "submission_deleted": {
+      const kind = typeof meta.kind === "string" ? meta.kind : "submission";
+      return {
+        text: meta.byCurator
+          ? `${who} removed a ${kind} as a curator`
+          : `${who} withdrew their ${kind}`,
+        href: conjHref,
+      };
+    }
     case "task_opened":
       return {
         text: `${who} opened a task${conj ? ` on ${conj}` : ""}`,

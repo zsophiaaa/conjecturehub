@@ -98,12 +98,19 @@ export const verificationTokens = pgTable(
  * until a curator approves it. During open testing, claim/proof proposals may
  * start as `unverified` (visible but not merged or CI-checked). `rejected` is
  * kept (not deleted) so a curator can see history.
+ *
+ * `deleted` is a withdrawal rather than a verdict: the author took it back, or a
+ * curator removed it. It is a status rather than a row deletion for the same
+ * reason `rejected` is — every read filters on an exact status, so a deleted row
+ * disappears from the site while the record of it having existed survives, and
+ * the accompanying activity event names who removed it.
  */
 export const moderationStatus = pgEnum("moderation_status", [
   "pending",
   "unverified",
   "approved",
   "rejected",
+  "deleted",
 ]);
 
 export const comments = pgTable(

@@ -28,6 +28,7 @@ interface PublicComment {
   authorKind: "human" | "agent";
   authorImage: string | null;
   createdAt: string;
+  mine: boolean;
 }
 interface PublicClaimProposal {
   id: number;
@@ -38,6 +39,7 @@ interface PublicClaimProposal {
   author: string;
   authorKind: "human" | "agent";
   createdAt: string;
+  mine: boolean;
 }
 interface PublicProofProposal {
   id: number;
@@ -45,6 +47,7 @@ interface PublicProofProposal {
   author: string;
   authorKind: "human" | "agent";
   createdAt: string;
+  mine: boolean;
 }
 interface CommunityData {
   comments: PublicComment[];
@@ -53,7 +56,75 @@ interface CommunityData {
   unverifiedProofs: PublicProofProposal[];
   mine: { tags: string[]; pendingComments: number } | null;
   signedIn: boolean;
+  canModerate?: boolean;
   moderationAutoApprove?: boolean;
+}
+
+type DeletableKind = "comment" | "claim" | "proof";
+
+/**
+ * Two-step delete. The first click arms it and the second commits, which is
+ * cheaper than a modal and enough to stop a stray click destroying someone's
+ * write-up. Curators see "Remove" because they are acting on someone else's
+ * submission; authors see "Withdraw" because they are taking back their own.
+ */
+function DeleteButton({
+  kind,
+  id,
+  own,
+  onDeleted,
+}: {
+  kind: DeletableKind;
+  id: number;
+  own: boolean;
+  onDeleted: () => void;
+}) {
+  const [armed, setArmed] = useState(false);
+  const [busy, setBusy] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
+  // Disarm on blur so an armed button never lingers between renders.
+  useEffect(() => {
+    if (!armed) return;
+    const t = setTimeout(() => setArmed(false), 5000);
+    return () => clearTimeout(t);
+  }, [armed]);
+
+  async function confirm() {
+    setBusy(true);
+    setError(null);
+    try {
+      const res = await fetch("/api/community/delete", {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({ kind, id }),
+      });
+      if (!res.ok) {
+        const json = (await res.json()) as { error?: string };
+        throw new Error(json.error ?? `HTTP ${res.status}`);
+      }
+      onDeleted();
+    } catch (err) {
+      setError((err as Error).message);
+      setArmed(false);
+    } finally {
+      setBusy(false);
+    }
+  }
+
+  return (
+    <span className="flex items-center gap-2">
+      {error ? <span className="text-xs text-ink-faint">{error}</span> : null}
+      <button
+        type="button"
+        disabled={busy}
+        onClick={() => (armed ? confirm() : setArmed(true))}
+        className="text-xs text-ink-faint underline underline-offset-2 hover:text-ink disabled:opacity-50"
+      >
+        {busy ? "Deleting…" : armed ? "Really delete?" : own ? "Withdraw" : "Remove"}
+      </button>
+    </span>
+  );
 }
 
 function formatDate(iso: string): string {
@@ -106,7 +177,7 @@ export function CommunitySection({ conjectureId }: { conjectureId: string }) {
       />
 
       {data && (data.unverifiedClaims.length > 0 || data.unverifiedProofs.length > 0) ? (
-        <ProposalsPanel data={data} />
+        <ProposalsPanel data={data} onChanged={load} />
       ) : null}
 
       <CommentsPanel
@@ -232,7 +303,14 @@ function DifficultyPanel({
   );
 }
 
-function ProposalsPanel({ data }: { data: CommunityData }) {
+function ProposalsPanel({
+  data,
+  onChanged,
+}: {
+  data: CommunityData;
+  onChanged: () => void;
+}) {
+  const canModerate = Boolean(data.canModerate);
   return (
     <div className="space-y-4">
       <div>
@@ -258,6 +336,9 @@ function ProposalsPanel({ data }: { data: CommunityData }) {
                   <span className="ml-auto text-xs tabular-nums text-ink-faint">
                     {formatDate(c.createdAt)}
                   </span>
+                  {c.mine || canModerate ? (
+                    <DeleteButton kind="claim" id={c.id} own={c.mine} onDeleted={onChanged} />
+                  ) : null}
                 </div>
                 <p className="mt-2 text-sm text-ink-muted">
                   <span className="font-medium text-ink">{c.claimType}</span>
@@ -289,6 +370,9 @@ function ProposalsPanel({ data }: { data: CommunityData }) {
                   <span className="ml-auto text-xs tabular-nums text-ink-faint">
                     {formatDate(p.createdAt)}
                   </span>
+                  {p.mine || canModerate ? (
+                    <DeleteButton kind="proof" id={p.id} own={p.mine} onDeleted={onChanged} />
+                  ) : null}
                 </div>
                 <pre className="mt-2 max-h-40 overflow-auto rounded-lg bg-surface-2 p-3 text-xs text-ink-muted">
                   {p.leanPreview}
@@ -372,6 +456,9 @@ function CommentsPanel({
                 <span className="ml-auto text-xs tabular-nums text-ink-faint">
                   {formatDate(c.createdAt)}
                 </span>
+                {c.mine || data?.canModerate ? (
+                  <DeleteButton kind="comment" id={c.id} own={c.mine} onDeleted={onChanged} />
+                ) : null}
               </div>
               <div
                 className="prose-comment mt-2 text-sm leading-relaxed text-ink-muted"
