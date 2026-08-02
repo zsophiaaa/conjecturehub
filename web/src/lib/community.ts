@@ -1,6 +1,6 @@
 import { and, desc, eq, gte, sql } from "drizzle-orm";
 import { db } from "@/db";
-import { comments, difficultyTags } from "@/db/schema";
+import { claimProposals, comments, difficultyTags, proofProposals } from "@/db/schema";
 import { renderCommentMarkdown } from "./markdown";
 import { difficultyLabel } from "./difficulty";
 
@@ -23,6 +23,25 @@ export interface DifficultyAggregate {
   slug: string;
   label: string;
   count: number;
+}
+
+export interface PublicClaimProposal {
+  id: number;
+  claimType: string;
+  scope: string | null;
+  sourceUrl: string;
+  sourceTitle: string | null;
+  author: string;
+  authorKind: "human" | "agent";
+  createdAt: string;
+}
+
+export interface PublicProofProposal {
+  id: number;
+  leanPreview: string;
+  author: string;
+  authorKind: "human" | "agent";
+  createdAt: string;
 }
 
 /** Approved comments for a conjecture, newest first, rendered to safe HTML. */
@@ -82,6 +101,69 @@ export async function getDifficultyAggregate(
   return rows
     .map((r) => ({ slug: r.slug, label: difficultyLabel(r.slug), count: r.count }))
     .sort((a, b) => b.count - a.count || a.label.localeCompare(b.label));
+}
+
+async function resolveAuthors(
+  userIds: string[],
+): Promise<Map<string, { name: string | null; kind: "human" | "agent" }>> {
+  const unique = [...new Set(userIds)];
+  if (unique.length === 0) return new Map();
+  const rows = await db.query.users.findMany({
+    where: (u, { inArray }) => inArray(u.id, unique),
+    columns: { id: true, name: true, kind: true },
+  });
+  return new Map(rows.map((r) => [r.id, { name: r.name, kind: r.kind }]));
+}
+
+/** Unverified claim proposals visible during open testing (not merged to corpus yet). */
+export async function getUnverifiedClaimProposals(
+  conjectureId: string,
+): Promise<PublicClaimProposal[]> {
+  const rows = await db.query.claimProposals.findMany({
+    where: and(
+      eq(claimProposals.conjectureId, conjectureId),
+      eq(claimProposals.status, "unverified"),
+    ),
+    orderBy: desc(claimProposals.createdAt),
+  });
+  const authors = await resolveAuthors(rows.map((r) => r.userId));
+  return rows.map((r) => {
+    const author = authors.get(r.userId);
+    return {
+      id: r.id,
+      claimType: r.claimType,
+      scope: r.scope,
+      sourceUrl: r.sourceUrl,
+      sourceTitle: r.sourceTitle,
+      author: author?.name ?? (author?.kind === "agent" ? "agent" : "Unknown"),
+      authorKind: author?.kind ?? "human",
+      createdAt: r.createdAt.toISOString(),
+    };
+  });
+}
+
+/** Unverified proof proposals visible during open testing (not run in CI yet). */
+export async function getUnverifiedProofProposals(
+  conjectureId: string,
+): Promise<PublicProofProposal[]> {
+  const rows = await db.query.proofProposals.findMany({
+    where: and(
+      eq(proofProposals.conjectureId, conjectureId),
+      eq(proofProposals.status, "unverified"),
+    ),
+    orderBy: desc(proofProposals.createdAt),
+  });
+  const authors = await resolveAuthors(rows.map((r) => r.userId));
+  return rows.map((r) => {
+    const author = authors.get(r.userId);
+    return {
+      id: r.id,
+      leanPreview: r.leanBody.slice(0, 400),
+      author: author?.name ?? (author?.kind === "agent" ? "agent" : "Unknown"),
+      authorKind: author?.kind ?? "human",
+      createdAt: r.createdAt.toISOString(),
+    };
+  });
 }
 
 /**

@@ -15,3 +15,5 @@ web/out/
 statements/.lake/
 ingest/.cache/
 ingest/.sweep-state.json
+.vercel
+.env*

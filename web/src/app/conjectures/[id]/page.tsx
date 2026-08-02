@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getConjecture, getCorpus, type Claim, type Conjecture } from "@/lib/corpus";
 import { StatusBadge, StatusCaveat, TIER_LABELS } from "@/components/StatusBadge";
+import { RecentDevelopmentBanner } from "@/components/RecentDevelopmentBanner";
 import { MathText } from "@/components/MathText";
 import { CommunitySection } from "@/components/CommunitySection";
 
@@ -225,6 +226,7 @@ export default async function ConjecturePage({ params }: { params: Promise<{ id:
 
         <StatusBadge status={conjecture.derived} />
         <StatusCaveat status={conjecture.derived} />
+        <RecentDevelopmentBanner conjecture={conjecture} />
       </header>
 
       {conjecture.statement?.informal ? (

@@ -1,6 +1,6 @@
-import { and, asc, eq } from "drizzle-orm";
+import { and, asc, eq, inArray } from "drizzle-orm";
 import { db } from "@/db";
-import { claimProposals, comments, difficultyTags, proofProposals } from "@/db/schema";
+import { claimProposals, comments, difficultyTags, proofProposals, verificationJobs } from "@/db/schema";
 import { dispatchApplyClaimProposal, dispatchVerifyProof } from "./github-dispatch";
 import { renderCommentMarkdown } from "./markdown";
 import { difficultyLabel } from "./difficulty";
@@ -130,6 +130,45 @@ export async function getPendingProofs(): Promise<PendingProof[]> {
   });
 }
 
+export async function getUnverifiedClaims(): Promise<PendingClaim[]> {
+  const rows = await db.query.claimProposals.findMany({
+    where: eq(claimProposals.status, "unverified"),
+    orderBy: asc(claimProposals.createdAt),
+  });
+  const authors = await resolveAuthors(rows.map((r) => r.userId));
+  return rows.map((r) => {
+    const author = authors.get(r.userId);
+    return {
+      id: r.id,
+      conjectureId: r.conjectureId,
+      claimType: r.claimType,
+      sourceUrl: r.sourceUrl,
+      author: author?.name ?? "Unknown",
+      authorKind: author?.kind ?? "human",
+      createdAt: r.createdAt.toISOString(),
+    };
+  });
+}
+
+export async function getUnverifiedProofs(): Promise<PendingProof[]> {
+  const rows = await db.query.proofProposals.findMany({
+    where: eq(proofProposals.status, "unverified"),
+    orderBy: asc(proofProposals.createdAt),
+  });
+  const authors = await resolveAuthors(rows.map((r) => r.userId));
+  return rows.map((r) => {
+    const author = authors.get(r.userId);
+    return {
+      id: r.id,
+      conjectureId: r.conjectureId,
+      leanPreview: r.leanBody.slice(0, 400),
+      author: author?.name ?? "Unknown",
+      authorKind: author?.kind ?? "human",
+      createdAt: r.createdAt.toISOString(),
+    };
+  });
+}
+
 interface AuthorInfo {
   name: string;
   kind: "human" | "agent";
@@ -168,7 +207,12 @@ export async function decide(
         reviewedBy: reviewerId,
         reviewedAt: new Date(),
       })
-      .where(and(eq(claimProposals.id, itemId), eq(claimProposals.status, "pending")))
+      .where(
+        and(
+          eq(claimProposals.id, itemId),
+          inArray(claimProposals.status, ["pending", "unverified"]),
+        ),
+      )
       .returning();
 
     if (!row || decision !== "approved") return Boolean(row);
@@ -194,14 +238,25 @@ export async function decide(
         reviewedBy: reviewerId,
         reviewedAt: new Date(),
       })
-      .where(and(eq(proofProposals.id, itemId), eq(proofProposals.status, "pending")))
+      .where(
+        and(
+          eq(proofProposals.id, itemId),
+          inArray(proofProposals.status, ["pending", "unverified"]),
+        ),
+      )
       .returning();
 
     if (!row || decision !== "approved") return Boolean(row);
 
-    const job = await db.query.verificationJobs.findFirst({
+    let job = await db.query.verificationJobs.findFirst({
       where: (j, { eq }) => eq(j.proofProposalId, row.id),
     });
+    if (!job) {
+      [job] = await db
+        .insert(verificationJobs)
+        .values({ proofProposalId: row.id, status: "pending" })
+        .returning();
+    }
     if (job) {
       await dispatchVerifyProof({
         proposalId: row.id,

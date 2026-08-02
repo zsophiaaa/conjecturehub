@@ -6,6 +6,8 @@ import { comments, difficultyTags } from "@/db/schema";
 import {
   getApprovedComments,
   getDifficultyAggregate,
+  getUnverifiedClaimProposals,
+  getUnverifiedProofProposals,
 } from "@/lib/community";
 import { moderationAutoApprove } from "@/lib/moderation-mode";
 
@@ -25,9 +27,11 @@ export async function GET(
   const { id } = await params;
   const session = await auth();
 
-  const [approvedComments, difficulty] = await Promise.all([
+  const [approvedComments, difficulty, unverifiedClaims, unverifiedProofs] = await Promise.all([
     getApprovedComments(id),
     getDifficultyAggregate(id),
+    getUnverifiedClaimProposals(id),
+    getUnverifiedProofProposals(id),
   ]);
 
   let mine: {
@@ -63,6 +67,8 @@ export async function GET(
   return NextResponse.json({
     comments: approvedComments,
     difficulty,
+    unverifiedClaims,
+    unverifiedProofs,
     mine,
     signedIn: Boolean(session?.user),
     moderationAutoApprove: moderationAutoApprove(),

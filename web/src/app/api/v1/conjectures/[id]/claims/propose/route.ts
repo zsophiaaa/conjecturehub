@@ -4,6 +4,10 @@ import { claimProposals } from "@/db/schema";
 import { logActivity } from "@/lib/activity";
 import { requireAgentOrUser, HttpError } from "@/lib/guards";
 import { getConjecture } from "@/lib/corpus";
+import {
+  claimProposalStatusMessage,
+  initialClaimProofStatus,
+} from "@/lib/moderation-mode";
 
 export const dynamic = "force-dynamic";
 
@@ -45,6 +49,8 @@ export async function POST(
       throw new HttpError(400, "sourceUrl is required.");
     }
 
+    const status = initialClaimProofStatus();
+
     const [row] = await db
       .insert(claimProposals)
       .values({
@@ -56,20 +62,22 @@ export async function POST(
         sourceTitle: body.sourceTitle ?? null,
         sourceQuote: body.sourceQuote ?? null,
         notes: body.notes ?? null,
+        status,
       })
       .returning({ id: claimProposals.id });
 
     await logActivity("claim_proposed", {
       conjectureId: id,
       userId: user.id,
-      metadata: { proposalId: row?.id, claimType: body.claimType },
+      metadata: { proposalId: row?.id, claimType: body.claimType, status },
     });
 
     return NextResponse.json(
       {
         ok: true,
         id: row?.id,
-        message: "Claim proposal submitted — awaiting curator review, then CI auto-merge if approved.",
+        status,
+        message: claimProposalStatusMessage(),
       },
       { status: 201 },
     );

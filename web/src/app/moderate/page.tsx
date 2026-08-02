@@ -55,18 +55,24 @@ export default async function ModeratePage() {
     getPendingDifficulty,
     getPendingClaims,
     getPendingProofs,
+    getUnverifiedClaims,
+    getUnverifiedProofs,
   } = await import("@/lib/moderation");
 
   let comments;
   let difficulty;
   let claims;
   let proofs;
+  let unverifiedClaims;
+  let unverifiedProofs;
   try {
-    [comments, difficulty, claims, proofs] = await Promise.all([
+    [comments, difficulty, claims, proofs, unverifiedClaims, unverifiedProofs] = await Promise.all([
       getPendingComments(),
       getPendingDifficulty(),
       getPendingClaims(),
       getPendingProofs(),
+      getUnverifiedClaims(),
+      getUnverifiedProofs(),
     ]);
   } catch (err) {
     console.error("moderation queue load failed", err);
@@ -82,15 +88,22 @@ export default async function ModeratePage() {
     );
   }
 
-  const pendingCount = comments.length + difficulty.length + claims.length + proofs.length;
+  const pendingCount =
+    comments.length +
+    difficulty.length +
+    claims.length +
+    proofs.length +
+    unverifiedClaims.length +
+    unverifiedProofs.length;
 
   return (
     <div className="space-y-8">
       <header className="space-y-2">
         <h1 className="font-serif text-3xl text-ink">Moderation queue</h1>
         <p className="text-ink-muted">
-          Pending community contributions ({pendingCount}). Approve to publish or trigger CI;
-          reject to hide. Nothing here is visible to the public until you approve it.
+          Community contributions awaiting review ({pendingCount}). Comments and tags stay hidden until
+          approved. Claim and proof proposals may already be visible as unverified during open testing —
+          verify them to trigger CI merge or Lean verification.
         </p>
       </header>
 
@@ -99,6 +112,8 @@ export default async function ModeratePage() {
         initialDifficulty={difficulty}
         initialClaims={claims}
         initialProofs={proofs}
+        initialUnverifiedClaims={unverifiedClaims}
+        initialUnverifiedProofs={unverifiedProofs}
       />
     </div>
   );

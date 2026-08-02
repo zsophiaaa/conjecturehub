@@ -66,7 +66,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {moderationAutoApprove() ? (
           <div className="border-b border-border bg-surface-2 px-5 py-2 text-center text-sm text-ink-muted">
             <strong className="text-ink">Open testing mode</strong> — comments and difficulty tags publish
-            immediately. Claim and proof proposals still require curator review.
+            immediately. Claim and proof proposals appear as unverified until a curator verifies them.
           </div>
         ) : null}
 

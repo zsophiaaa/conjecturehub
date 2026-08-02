@@ -56,16 +56,22 @@ export function ModerationQueue({
   initialDifficulty,
   initialClaims,
   initialProofs,
+  initialUnverifiedClaims,
+  initialUnverifiedProofs,
 }: {
   initialComments: PendingComment[];
   initialDifficulty: PendingDifficulty[];
   initialClaims: PendingClaim[];
   initialProofs: PendingProof[];
+  initialUnverifiedClaims: PendingClaim[];
+  initialUnverifiedProofs: PendingProof[];
 }) {
   const [comments, setComments] = useState(initialComments);
   const [difficulty, setDifficulty] = useState(initialDifficulty);
   const [claims, setClaims] = useState(initialClaims);
   const [proofs, setProofs] = useState(initialProofs);
+  const [unverifiedClaims, setUnverifiedClaims] = useState(initialUnverifiedClaims);
+  const [unverifiedProofs, setUnverifiedProofs] = useState(initialUnverifiedProofs);
   const [error, setError] = useState<string | null>(null);
 
   async function decide(
@@ -86,8 +92,13 @@ export function ModerationQueue({
       }
       if (kind === "comment") setComments((cs) => cs.filter((c) => c.id !== id));
       else if (kind === "difficulty") setDifficulty((ds) => ds.filter((d) => d.id !== id));
-      else if (kind === "claim") setClaims((cs) => cs.filter((c) => c.id !== id));
-      else setProofs((ps) => ps.filter((p) => p.id !== id));
+      else if (kind === "claim") {
+        setClaims((cs) => cs.filter((c) => c.id !== id));
+        setUnverifiedClaims((cs) => cs.filter((c) => c.id !== id));
+      } else {
+        setProofs((ps) => ps.filter((p) => p.id !== id));
+        setUnverifiedProofs((ps) => ps.filter((p) => p.id !== id));
+      }
     } catch (err) {
       setError((err as Error).message);
     }
@@ -97,7 +108,9 @@ export function ModerationQueue({
     comments.length === 0 &&
     difficulty.length === 0 &&
     claims.length === 0 &&
-    proofs.length === 0;
+    proofs.length === 0 &&
+    unverifiedClaims.length === 0 &&
+    unverifiedProofs.length === 0;
 
   return (
     <div className="space-y-10">
@@ -173,8 +186,11 @@ export function ModerationQueue({
       {claims.length > 0 ? (
         <section className="space-y-3">
           <h2 className="ui-label">
-            Claim proposals ({claims.length})
+            Pending claim proposals ({claims.length})
           </h2>
+          <p className="text-xs text-ink-faint">
+            Not yet visible to the public. Approve to publish and trigger CI merge.
+          </p>
           <ul className="space-y-3">
             {claims.map((c) => (
               <li key={c.id} className="ui-panel p-4">
@@ -199,11 +215,50 @@ export function ModerationQueue({
         </section>
       ) : null}
 
+      {unverifiedClaims.length > 0 ? (
+        <section className="space-y-3">
+          <h2 className="ui-label">
+            Unverified claim proposals ({unverifiedClaims.length})
+          </h2>
+          <p className="text-xs text-ink-faint">
+            Already visible on conjecture pages. Verify to merge into the corpus via CI.
+          </p>
+          <ul className="space-y-3">
+            {unverifiedClaims.map((c) => (
+              <li key={c.id} className="ui-panel p-4">
+                <div className="flex flex-wrap items-center gap-2 text-xs text-ink-faint">
+                  <span className="font-medium text-ink">{c.author}</span>
+                  <AuthorKindBadge kind={c.authorKind} />
+                  <span>{c.claimType}</span>
+                  <Link href={`/conjectures/${c.conjectureId}/`} className="font-medium">
+                    {c.conjectureId}
+                  </Link>
+                  <span className="ml-auto tabular-nums">{formatDate(c.createdAt)}</span>
+                </div>
+                <p className="mt-2 text-sm">
+                  <a href={c.sourceUrl} className="break-all">
+                    {c.sourceUrl}
+                  </a>
+                </p>
+                <Actions
+                  approveLabel="Verify & merge"
+                  onApprove={() => decide("claim", c.id, "approved")}
+                  onReject={() => decide("claim", c.id, "rejected")}
+                />
+              </li>
+            ))}
+          </ul>
+        </section>
+      ) : null}
+
       {proofs.length > 0 ? (
         <section className="space-y-3">
           <h2 className="ui-label">
-            Lean proof proposals ({proofs.length})
+            Pending Lean proof proposals ({proofs.length})
           </h2>
+          <p className="text-xs text-ink-faint">
+            Not yet visible to the public. Approve to publish and run Lean verification in CI.
+          </p>
           <ul className="space-y-3">
             {proofs.map((p) => (
               <li key={p.id} className="ui-panel p-4">
@@ -224,15 +279,56 @@ export function ModerationQueue({
           </ul>
         </section>
       ) : null}
+
+      {unverifiedProofs.length > 0 ? (
+        <section className="space-y-3">
+          <h2 className="ui-label">
+            Unverified Lean proof proposals ({unverifiedProofs.length})
+          </h2>
+          <p className="text-xs text-ink-faint">
+            Already visible on conjecture pages. Verify to run Lean verification in CI.
+          </p>
+          <ul className="space-y-3">
+            {unverifiedProofs.map((p) => (
+              <li key={p.id} className="ui-panel p-4">
+                <div className="flex flex-wrap items-center gap-2 text-xs text-ink-faint">
+                  <span className="font-medium text-ink">{p.author}</span>
+                  <AuthorKindBadge kind={p.authorKind} />
+                  <Link href={`/conjectures/${p.conjectureId}/`} className="font-medium">
+                    {p.conjectureId}
+                  </Link>
+                  <span className="ml-auto tabular-nums">{formatDate(p.createdAt)}</span>
+                </div>
+                <pre className="mt-2 max-h-40 overflow-auto rounded-lg bg-surface-2 p-3 text-xs text-ink-muted">
+                  {p.leanPreview}
+                </pre>
+                <Actions
+                  approveLabel="Verify & run CI"
+                  onApprove={() => decide("proof", p.id, "approved")}
+                  onReject={() => decide("proof", p.id, "rejected")}
+                />
+              </li>
+            ))}
+          </ul>
+        </section>
+      ) : null}
     </div>
   );
 }
 
-function Actions({ onApprove, onReject }: { onApprove: () => void; onReject: () => void }) {
+function Actions({
+  onApprove,
+  onReject,
+  approveLabel = "Approve",
+}: {
+  onApprove: () => void;
+  onReject: () => void;
+  approveLabel?: string;
+}) {
   return (
     <div className="mt-3 flex gap-2">
       <button type="button" onClick={onApprove} className="ui-btn ui-btn-primary text-sm">
-        Approve
+        {approveLabel}
       </button>
       <button type="button" onClick={onReject} className="ui-btn text-sm text-ink-muted">
         Reject

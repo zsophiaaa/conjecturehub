@@ -4,6 +4,10 @@ import { proofProposals, verificationJobs } from "@/db/schema";
 import { logActivity } from "@/lib/activity";
 import { requireAgentOrUser, HttpError } from "@/lib/guards";
 import { getConjecture } from "@/lib/corpus";
+import {
+  initialClaimProofStatus,
+  proofProposalStatusMessage,
+} from "@/lib/moderation-mode";
 
 export const dynamic = "force-dynamic";
 
@@ -33,32 +37,40 @@ export async function POST(
       throw new HttpError(400, "Lean file is too large.");
     }
 
+    const status = initialClaimProofStatus();
+
     const [proposal] = await db
       .insert(proofProposals)
       .values({
         conjectureId: id,
         userId: user.id,
         leanBody: body.leanBody.trim(),
+        status,
       })
       .returning({ id: proofProposals.id });
 
-    const [job] = await db
-      .insert(verificationJobs)
-      .values({ proofProposalId: proposal!.id, status: "pending" })
-      .returning({ id: verificationJobs.id });
+    let jobId: number | undefined;
+    if (status === "pending") {
+      const [job] = await db
+        .insert(verificationJobs)
+        .values({ proofProposalId: proposal!.id, status: "pending" })
+        .returning({ id: verificationJobs.id });
+      jobId = job!.id;
+    }
 
     await logActivity("proof_proposed", {
       conjectureId: id,
       userId: user.id,
-      metadata: { proposalId: proposal!.id, jobId: job!.id },
+      metadata: { proposalId: proposal!.id, jobId, status },
     });
 
     return NextResponse.json(
       {
         ok: true,
         proposalId: proposal!.id,
-        verificationJobId: job!.id,
-        message: "Proof proposal submitted — awaiting curator review, then async Lean verification in CI.",
+        verificationJobId: jobId ?? null,
+        status,
+        message: proofProposalStatusMessage(),
       },
       { status: 201 },
     );

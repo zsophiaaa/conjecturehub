@@ -95,12 +95,13 @@ export const verificationTokens = pgTable(
 
 /**
  * Everything a member submits starts `pending` and is invisible to the public
- * until a curator approves it — the curator approval queue the project asked
- * for. `rejected` is kept (not deleted) so a curator can see history and a
- * member is not silently shadow-dropped.
+ * until a curator approves it. During open testing, claim/proof proposals may
+ * start as `unverified` (visible but not merged or CI-checked). `rejected` is
+ * kept (not deleted) so a curator can see history.
  */
 export const moderationStatus = pgEnum("moderation_status", [
   "pending",
+  "unverified",
   "approved",
   "rejected",
 ]);

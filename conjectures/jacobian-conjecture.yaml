@@ -60,7 +60,7 @@ ids:
 openness_basis:
   asserted_by: google-deepmind/formal-conjectures
   meaning: no_published_solution_known_to_curator
-  note: Categorized upstream as "research open" at v4.32.0.
+  note: Upstream categorized as research open at v4.32.0. Counterexamples for n ≥ 3 recorded July 2026 (Alpöge, with AI assistance); machine-verified in Mathlib. Dimension 2 remains open.
 provenance:
   - fields:
       - title
@@ -79,6 +79,12 @@ provenance:
     retrieved: 2026-07-31
     source: conjecturehub-curator
     url: https://github.com/leanprover-community/mathlib4/pull/42116
+  - fields:
+      - claims
+    license: CC0-1.0
+    retrieved: 2026-07-31
+    source: Levent Alpöge / social announcement
+    url: https://x.com/__alpoge__/status/2079028340955197566
   - fields:
       - aliases
       - ids.wikidata

@@ -25,31 +25,44 @@ claims:
         - Quot.sound
       verified_on: 2026-08-01
       run_url: https://github.com/openai/ten-proofs
-    notes: Counterexample to the compactness conjecture in extremal graph theory. Lean certificate published by OpenAI; not peer-reviewed.
+    notes: Counterexample to the degeneracy conjecture in extremal graph theory (Erdős 146). Lean certificate published by OpenAI Astra; not peer-reviewed.
 id: erdos-146
 ids:
   erdos: "146"
   external:
     - label: erdosproblems.com/146
       url: https://www.erdosproblems.com/146
+    - label: openai/ten-proofs (CompactnessAndDegeneracy.lean)
+      url: https://github.com/openai/ten-proofs/blob/main/CompactnessAndDegeneracy.lean
 openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
   meaning: no_published_solution_known_to_curator
-  note: No formalization is indexed for this problem yet; read the statement upstream.
+  note: Listed open at erdosproblems.com as of 2025-08-31. A machine-verified disproof was recorded August 2026 (OpenAI Astra); not peer-reviewed.
 provenance:
   - fields:
       - ids.erdos
       - ids.oeis
       - subject.tags
       - openness_basis
-      - claims
     license: Apache-2.0
     retrieved: 2026-07-31
     source: teorth/erdosproblems
     upstream_version: d031865128a7ddccd85e8099f0f818211cfc9a41
     url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
-statement: {}
+  - fields:
+      - claims
+      - statement.informal
+    license: CC0-1.0
+    retrieved: 2026-08-01
+    source: openai/ten-proofs
+    url: https://github.com/openai/ten-proofs
+statement:
+  informal: |-
+    **Degeneracy conjecture (Erdős 146).** A conjecture in extremal graph theory on how
+    Turán/extremal numbers of bipartite graphs with bounded degeneracy grow with `n`. OpenAI
+    Astra (August 2026) announced a counterexample with a Lean 4 certificate in openai/ten-proofs.
+    Read the full problem statement at erdosproblems.com/146.
 subject:
   tags:
     - graph theory

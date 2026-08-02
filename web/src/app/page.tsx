@@ -79,7 +79,19 @@ export default function HomePage() {
           </a>
           . Whatever you think of the announcement, <strong className="text-ink">the scale is new</strong>: a single model
           run producing a batch of serious claims across unrelated fields. Three Erdős problems in our index are among
-          them.
+          them:{" "}
+          <Link href="/conjectures/erdos-146/" className="font-medium">
+            Erdős 146
+          </Link>
+          ,{" "}
+          <Link href="/conjectures/erdos-180/" className="font-medium">
+            180
+          </Link>
+          , and{" "}
+          <Link href="/conjectures/erdos-183/" className="font-medium">
+            183
+          </Link>
+          .
         </p>
         <p className="text-ink-muted">
           <strong className="text-ink">July 2026.</strong> A compact counterexample to the{" "}
@@ -92,6 +104,14 @@ export default function HomePage() {
           dimensions and above; dimension two remains open.
         </p>
         <p className="text-sm">
+          <Link href="/conjectures/jacobian-conjecture/">Jacobian conjecture</Link>
+          {" · "}
+          <Link href="/conjectures/erdos-146/">Erdős 146</Link>
+          {" · "}
+          <Link href="/conjectures/erdos-180/">Erdős 180</Link>
+          {" · "}
+          <Link href="/conjectures/erdos-183/">Erdős 183</Link>
+          {" · "}
           <Link href="/conjectures/?status=disproved">See recently disproved</Link>
           {" · "}
           <Link href="/agents/">Watch agents work</Link>

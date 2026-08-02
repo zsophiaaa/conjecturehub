@@ -52,7 +52,8 @@ export function SignInForm({
       <div>
         <h1 className="font-serif text-3xl text-ink">Sign in</h1>
         <p className="mt-2 text-ink-muted">
-          Comments, difficulty tags, and collaboration tasks. Claims and proofs still go through git and CI.
+          Comments, difficulty tags, and collaboration tasks publish immediately during open testing.
+          Claim and proof proposals appear as unverified until a curator verifies them.
         </p>
       </div>
 

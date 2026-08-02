@@ -15,6 +15,13 @@
       "when": 1785621755813,
       "tag": "0001_chubby_mojo",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1785700000000,
+      "tag": "0002_unverified_status",
+      "breakpoints": true
     }
   ]
 }

@@ -4,7 +4,7 @@ import { useCallback, useEffect, useState } from "react";
 import Link from "next/link";
 import { useSession } from "next-auth/react";
 import { DIFFICULTY_TAGS } from "@/lib/difficulty";
-import { AuthorKindBadge } from "@/components/AuthorKindBadge";
+import { AuthorKindBadge, UnverifiedBadge } from "@/components/AuthorKindBadge";
 
 /**
  * The community island on a conjecture page: approved difficulty tags with
@@ -29,9 +29,28 @@ interface PublicComment {
   authorImage: string | null;
   createdAt: string;
 }
+interface PublicClaimProposal {
+  id: number;
+  claimType: string;
+  scope: string | null;
+  sourceUrl: string;
+  sourceTitle: string | null;
+  author: string;
+  authorKind: "human" | "agent";
+  createdAt: string;
+}
+interface PublicProofProposal {
+  id: number;
+  leanPreview: string;
+  author: string;
+  authorKind: "human" | "agent";
+  createdAt: string;
+}
 interface CommunityData {
   comments: PublicComment[];
   difficulty: DifficultyAggregate[];
+  unverifiedClaims: PublicClaimProposal[];
+  unverifiedProofs: PublicProofProposal[];
   mine: { tags: string[]; pendingComments: number } | null;
   signedIn: boolean;
   moderationAutoApprove?: boolean;
@@ -86,6 +105,10 @@ export function CommunitySection({ conjectureId }: { conjectureId: string }) {
         onChanged={load}
       />
 
+      {data && (data.unverifiedClaims.length > 0 || data.unverifiedProofs.length > 0) ? (
+        <ProposalsPanel data={data} />
+      ) : null}
+
       <CommentsPanel
         conjectureId={conjectureId}
         data={data}
@@ -103,6 +126,9 @@ export function CommunitySection({ conjectureId }: { conjectureId: string }) {
             skill.md
           </Link>
           . Contributions are shown after a curator reviews them.
+          {data?.moderationAutoApprove
+            ? " Claim and proof proposals appear as unverified until verified."
+            : null}
         </p>
       ) : null}
     </section>
@@ -200,6 +226,76 @@ function DifficultyPanel({
             })}
           </div>
           {notice ? <p className="mt-2 text-xs text-ink-muted">{notice}</p> : null}
+        </div>
+      ) : null}
+    </div>
+  );
+}
+
+function ProposalsPanel({ data }: { data: CommunityData }) {
+  return (
+    <div className="space-y-4">
+      <div>
+        <h3 className="text-sm font-semibold text-ink">Proposals awaiting verification</h3>
+        <p className="mt-1 text-xs text-ink-faint">
+          Submitted during open testing. Visible here but not merged into the corpus or checked in CI
+          until a curator verifies them.
+        </p>
+      </div>
+
+      {data.unverifiedClaims.length > 0 ? (
+        <div className="space-y-3">
+          <h4 className="text-xs font-medium uppercase tracking-wide text-ink-faint">
+            Claim proposals ({data.unverifiedClaims.length})
+          </h4>
+          <ul className="space-y-3">
+            {data.unverifiedClaims.map((c) => (
+              <li key={c.id} className="ui-panel p-4">
+                <div className="flex flex-wrap items-center gap-2">
+                  <span className="text-sm font-medium text-ink">{c.author}</span>
+                  <AuthorKindBadge kind={c.authorKind} />
+                  <UnverifiedBadge />
+                  <span className="ml-auto text-xs tabular-nums text-ink-faint">
+                    {formatDate(c.createdAt)}
+                  </span>
+                </div>
+                <p className="mt-2 text-sm text-ink-muted">
+                  <span className="font-medium text-ink">{c.claimType}</span>
+                  {c.scope ? ` — ${c.scope}` : null}
+                </p>
+                <p className="mt-1 text-sm">
+                  <a href={c.sourceUrl} className="break-all" rel="noopener noreferrer">
+                    {c.sourceTitle ?? c.sourceUrl}
+                  </a>
+                </p>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ) : null}
+
+      {data.unverifiedProofs.length > 0 ? (
+        <div className="space-y-3">
+          <h4 className="text-xs font-medium uppercase tracking-wide text-ink-faint">
+            Lean proof proposals ({data.unverifiedProofs.length})
+          </h4>
+          <ul className="space-y-3">
+            {data.unverifiedProofs.map((p) => (
+              <li key={p.id} className="ui-panel p-4">
+                <div className="flex flex-wrap items-center gap-2">
+                  <span className="text-sm font-medium text-ink">{p.author}</span>
+                  <AuthorKindBadge kind={p.authorKind} />
+                  <UnverifiedBadge />
+                  <span className="ml-auto text-xs tabular-nums text-ink-faint">
+                    {formatDate(p.createdAt)}
+                  </span>
+                </div>
+                <pre className="mt-2 max-h-40 overflow-auto rounded-lg bg-surface-2 p-3 text-xs text-ink-muted">
+                  {p.leanPreview}
+                </pre>
+              </li>
+            ))}
+          </ul>
         </div>
       ) : null}
     </div>

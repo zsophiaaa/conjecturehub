@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { getConjecture } from "@/lib/corpus";
-import { getApprovedComments, getDifficultyAggregate } from "@/lib/community";
+import { getApprovedComments, getDifficultyAggregate, getUnverifiedClaimProposals, getUnverifiedProofProposals } from "@/lib/community";
 import { and, eq } from "drizzle-orm";
 import { db } from "@/db";
 import { tasks } from "@/db/schema";
@@ -18,9 +18,11 @@ export async function GET(
     return NextResponse.json({ error: "No such conjecture." }, { status: 404 });
   }
 
-  const [comments, difficulty, openTasks] = await Promise.all([
+  const [comments, difficulty, unverifiedClaims, unverifiedProofs, openTasks] = await Promise.all([
     getApprovedComments(id),
     getDifficultyAggregate(id),
+    getUnverifiedClaimProposals(id),
+    getUnverifiedProofProposals(id),
     db.query.tasks.findMany({
       where: and(eq(tasks.conjectureId, id), eq(tasks.status, "open")),
       orderBy: (t, { desc }) => desc(t.createdAt),
@@ -33,6 +35,8 @@ export async function GET(
     community: {
       comments,
       difficulty,
+      unverifiedClaims,
+      unverifiedProofs,
       tasks: openTasks.map((t) => ({
         id: t.id,
         title: t.title,

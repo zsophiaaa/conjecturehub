@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useCallback, useEffect, useState } from "react";
 import { formatActivityItem, type ActivityItem } from "@/lib/activity-labels";
+import { AuthorKindBadge } from "@/components/AuthorKindBadge";
 
 const POLL_MS = 30_000;
 
@@ -76,6 +77,7 @@ export function ActivityFeed({
             return (
               <li key={item.id} className="flex flex-wrap items-baseline gap-x-2 gap-y-1 px-4 py-3 text-sm">
                 <span className="shrink-0 tabular-nums text-xs text-ink-faint">{formatWhen(item.createdAt)}</span>
+                {item.actorKind ? <AuthorKindBadge kind={item.actorKind} /> : null}
                 <span className="text-ink-muted">
                   {href ? (
                     <Link href={href} className="text-ink no-underline hover:underline">
