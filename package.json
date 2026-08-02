@@ -19,6 +19,7 @@
     "sync:erdos-forum": "npm run sync:erdos-forum --workspace ingest",
     "check:links": "npm run check:links --workspace ingest",
     "selftest": "npm run selftest --workspace ingest",
+    "solve:sandbox": "npm run solve:sandbox --workspace ingest --",
     "dev": "npm run dev --workspace web",
     "build": "npm run build:index && npm run build --workspace web"
   }

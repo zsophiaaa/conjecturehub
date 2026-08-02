@@ -84,11 +84,25 @@ class OpenAiCompatibleProvider implements LlmProvider {
 
       if (res.ok) {
         const data = (await res.json()) as {
-          choices?: { message?: { content?: string }; finish_reason?: string }[];
+          choices?: {
+            message?: { content?: string; reasoning?: string };
+            finish_reason?: string;
+          }[];
         };
         const choice = data.choices?.[0];
         const content = choice?.message?.content;
-        if (!content) throw new Error(`${this.name} returned no content`);
+        if (!content) {
+          // Reasoning models keep their scratchpad in a separate field and only
+          // write `content` once they stop thinking. A budget too small to
+          // finish reasoning therefore returns an empty answer rather than a
+          // truncated one, which is a confusing way to learn maxTokens is low.
+          throw new Error(
+            choice?.message?.reasoning
+              ? `${this.name} used its entire token budget reasoning and never wrote an answer. ` +
+                "Raise maxTokens."
+              : `${this.name} returned no content`,
+          );
+        }
         // A truncated answer is usually unparseable JSON downstream, and saying
         // so beats letting the caller guess why extraction failed.
         if (choice?.finish_reason === "length") {
