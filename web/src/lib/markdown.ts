@@ -1,10 +1,11 @@
 import { marked } from "marked";
+import sanitizeHtml from "sanitize-html";
 
 /**
  * Render user-submitted comment markdown to safe HTML.
  *
- * DOMPurify is loaded lazily: `isomorphic-dompurify` pulls in jsdom and breaks
- * some Vercel serverless bundles if imported at module scope.
+ * Uses `sanitize-html` (pure Node) instead of isomorphic-dompurify/jsdom, which
+ * breaks on Vercel serverless with ERR_REQUIRE_ESM.
  */
 
 marked.setOptions({
@@ -12,41 +13,32 @@ marked.setOptions({
   breaks: true,
 });
 
-const ALLOWED_TAGS = [
-  "p",
-  "br",
-  "strong",
-  "em",
-  "del",
-  "code",
-  "pre",
-  "blockquote",
-  "ul",
-  "ol",
-  "li",
-  "a",
-  "h3",
-  "h4",
-  "hr",
-];
-
-const ALLOWED_ATTR = ["href", "title"];
-
-type Purify = typeof import("isomorphic-dompurify").default;
-let purifyPromise: Promise<Purify> | null = null;
-
-async function getPurify(): Promise<Purify> {
-  purifyPromise ??= import("isomorphic-dompurify").then((m) => m.default);
-  return purifyPromise;
-}
-
-export async function renderCommentMarkdown(source: string): Promise<string> {
+export function renderCommentMarkdown(source: string): string {
   const rawHtml = marked.parse(source, { async: false }) as string;
-  const DOMPurify = await getPurify();
-  return DOMPurify.sanitize(rawHtml, {
-    ALLOWED_TAGS,
-    ALLOWED_ATTR,
-    ALLOWED_URI_REGEXP: /^(?:https?:|mailto:|#)/i,
-    ADD_ATTR: ["target", "rel"],
+  return sanitizeHtml(rawHtml, {
+    allowedTags: [
+      "p",
+      "br",
+      "strong",
+      "em",
+      "del",
+      "code",
+      "pre",
+      "blockquote",
+      "ul",
+      "ol",
+      "li",
+      "a",
+      "h3",
+      "h4",
+      "hr",
+    ],
+    allowedAttributes: {
+      a: ["href", "title", "target", "rel"],
+    },
+    allowedSchemes: ["http", "https", "mailto"],
+    transformTags: {
+      a: sanitizeHtml.simpleTransform("a", { target: "_blank", rel: "noopener noreferrer" }),
+    },
   });
 }

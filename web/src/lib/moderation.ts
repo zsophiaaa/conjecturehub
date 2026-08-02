@@ -36,16 +36,14 @@ export async function getPendingComments(): Promise<PendingComment[]> {
     orderBy: asc(comments.createdAt),
   });
   const authors = await resolveAuthors(rows.map((r) => r.userId));
-  return Promise.all(
-    rows.map(async (r) => ({
-      id: r.id,
-      conjectureId: r.conjectureId,
-      bodyHtml: await renderCommentMarkdown(r.body),
-      bodyRaw: r.body,
-      author: authors.get(r.userId) ?? "Unknown",
-      createdAt: r.createdAt.toISOString(),
-    })),
-  );
+  return rows.map((r) => ({
+    id: r.id,
+    conjectureId: r.conjectureId,
+    bodyHtml: renderCommentMarkdown(r.body),
+    bodyRaw: r.body,
+    author: authors.get(r.userId) ?? "Unknown",
+    createdAt: r.createdAt.toISOString(),
+  }));
 }
 
 export async function getPendingDifficulty(): Promise<PendingDifficulty[]> {
