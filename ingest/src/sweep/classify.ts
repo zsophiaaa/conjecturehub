@@ -86,6 +86,21 @@ export interface ClassifyOptions {
   onProgress?: (used: number, total: number) => void;
 }
 
+/**
+ * Minimum gap between classifier calls.
+ *
+ * Free tiers meter requests per minute, not per day, so a burst of calls trips
+ * the limit no matter how modest the run's total budget is. Retrying recovers
+ * the verdict but spends the whole backoff to do it; pacing avoids most of the
+ * 429s in the first place. Groq's free tier allows roughly 30 requests a minute,
+ * and two seconds apart sits comfortably inside that.
+ */
+const MIN_CALL_INTERVAL_MS = Number(process.env.LLM_MIN_INTERVAL_MS ?? 2000);
+
+function sleep(ms: number): Promise<void> {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
 export async function classifyMatches(
   matches: CandidateMatch[],
   corpus: Map<string, Conjecture>,
@@ -95,6 +110,7 @@ export async function classifyMatches(
   const classified: ClassifiedMatch[] = [];
   let used = 0;
   let skipped = 0;
+  let lastCallAt = 0;
 
   for (const match of matches) {
     const conjecture = corpus.get(match.conjectureId);
@@ -117,6 +133,12 @@ export async function classifyMatches(
       });
       continue;
     }
+
+    const sinceLast = Date.now() - lastCallAt;
+    if (lastCallAt > 0 && sinceLast < MIN_CALL_INTERVAL_MS) {
+      await sleep(MIN_CALL_INTERVAL_MS - sinceLast);
+    }
+    lastCallAt = Date.now();
 
     let verdict: RawVerdict | null = null;
     let raw = "";

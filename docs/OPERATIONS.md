@@ -30,7 +30,10 @@ Everything is optional. Each degrades to something sensible rather than failing.
 | --- | --- | --- |
 | `LLM_BASE_URL`, `LLM_API_KEY`, `LLM_MODEL` | secrets / variable | **Required for auto-classification.** Without them the sweep still fetches, filters, and name-matches, but matches are reported for human triage instead of becoming claims. |
 | `ZULIP_EMAIL`, `ZULIP_API_KEY` | secrets | The Lean Zulip source is skipped; every other source still runs. |
-| `LLM_DAILY_BUDGET` | variable | Defaults to 120 classifier calls per sweep run. |
+| `LLM_DAILY_BUDGET` | variable | Defaults to 120. Despite the name this is a cap **per sweep run**, not per day. |
+| `LLM_MIN_INTERVAL_MS` | variable | Minimum gap between classifier calls, default 2000. |
+
+**Rate limits are per minute, not per day.** Free inference tiers meter requests per minute, so a burst trips the limit however small the run's total budget is. Calls are spaced by `LLM_MIN_INTERVAL_MS` and 429s are retried honouring `Retry-After`, which together took a Groq run from six lost classifications to none. The cost is wall-clock: twelve calls take about a minute. That is irrelevant to a six-hourly cron and worth knowing if you run the sweep by hand.
 
 **Note:** GitHub Models (`models.github.ai`) was retired 2026-07-30. This repo no longer uses `GITHUB_TOKEN` for inference. Point `LLM_BASE_URL` at any OpenAI-compatible API (OpenAI, OpenRouter, Groq, etc.) and store the key in Actions secrets.
 
