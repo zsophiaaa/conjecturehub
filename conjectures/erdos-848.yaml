@@ -1,7 +1,7 @@
 claims:
   - evidence_tier: published
     id: erdos-848-fc-solved
-    notes: Imported from the upstream `research solved` category. The statement is formalized; the proof has not been machine-checked by ConjectureHub.
+    notes: Imported from the upstream `research solved` category, which records that the problem is resolved without stating the direction. Direction taken from erdosproblems.com, which records it as "partial". The statement is formalized; the proof has not been machine-checked by ConjectureHub.
     recorded_on: 2026-07-31
     reviewer: google-deepmind/formal-conjectures maintainers
     source:
@@ -9,7 +9,7 @@ claims:
       title: formal-conjectures marks erdos_848 as research solved
       url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/848.lean
     state: active
-    type: proved
+    type: partial
   - asserted_on: 2025-10-19
     evidence_tier: published
     id: erdos-848-erdos-status

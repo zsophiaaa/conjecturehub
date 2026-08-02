@@ -1,7 +1,7 @@
 claims:
   - evidence_tier: published
     id: erdos-90-fc-solved
-    notes: Imported from the upstream `research solved` category. The statement is formalized; the proof has not been machine-checked by ConjectureHub.
+    notes: Imported from the upstream `research solved` category, which records that the problem is resolved without stating the direction. Direction taken from erdosproblems.com, which records it as "disproved". The statement is formalized; the proof has not been machine-checked by ConjectureHub.
     recorded_on: 2026-07-31
     reviewer: google-deepmind/formal-conjectures maintainers
     source:
@@ -9,7 +9,7 @@ claims:
       title: formal-conjectures marks erdos_90 as research solved
       url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/90.lean
     state: active
-    type: proved
+    type: disproved
   - asserted_on: 2026-06-07
     evidence_tier: published
     id: erdos-90-erdos-status
@@ -21,7 +21,12 @@ claims:
       url: https://www.erdosproblems.com/90
     state: active
     type: disproved
-  - asserted_on: 2026-05-26
+  - ai_assistance:
+      role: discovery
+      systems:
+        - OpenAI internal model
+      used: yes
+    asserted_on: 2026-05-26
     authors:
       - OpenAI internal model
       - Lijie Chen
@@ -29,20 +34,11 @@ claims:
       - Mehtaab Sawhney
     evidence_tier: preprint
     id: erdos-90-openai-disproof-forum
-    notes: >-
-      Internal OpenAI model produced a one-shot proof disproving the n^{1+o(1)} upper bound,
-      constructing infinitely many n-point sets with at least n^{1+c} unit distances (c>0 absolute).
-      Human verification by Sellke and Sawhney; method uses CM-field lattices and Golod–Shafarevich
-      towers. Forum announcement May 2026.
-    ai_assistance:
-      used: yes
-      systems:
-        - OpenAI internal model
-      role: discovery
+    notes: Internal OpenAI model produced a one-shot proof disproving the n^{1+o(1)} upper bound, constructing infinitely many n-point sets with at least n^{1+c} unit distances (c>0 absolute). Human verification by Sellke and Sawhney; method uses CM-field lattices and Golod–Shafarevich towers. Forum announcement May 2026.
     recorded_on: 2026-08-02
     source:
       kind: forum
-      title: erdosproblems.com forum #90 — OpenAI disproof announcement
+      title: erdosproblems.com forum
       url: https://www.erdosproblems.com/forum/thread/90
     state: active
     type: disproved
@@ -59,14 +55,11 @@ claims:
       - Melanie Matchett Wood
     evidence_tier: preprint
     id: erdos-90-remarks-human-digested
-    notes: >-
-      Companion "Remarks" paper (arXiv:2605.20695) gives a short human-verified digest of the AI
-      proof. Pipeline: number fields → norm-one vectors → lattice windows → projection to R².
-      Victor Wang simplified from 3-class to 2-class field towers.
+    notes: 'Companion "Remarks" paper (arXiv:2605.20695) gives a short human-verified digest of the AI proof. Pipeline: number fields → norm-one vectors → lattice windows → projection to R². Victor Wang simplified from 3-class to 2-class field towers.'
     recorded_on: 2026-08-02
     source:
       kind: forum
-      title: erdosproblems.com forum #90 — Remarks paper discussion
+      title: erdosproblems.com forum
       url: https://www.erdosproblems.com/forum/thread/90
     state: active
     type: disproved
@@ -75,35 +68,30 @@ claims:
       - Will Sawin
     evidence_tier: preprint
     id: erdos-90-sawin-explicit-exponent
-    notes: >-
-      Sharpened the construction to explicit exponent 1.014114…, making every step quantitative.
-      Disproves both Erdős's n^{1+o(1)} conjecture and the weaker n^{1+O(1/log log n)} bound.
-      Forum participants used ChatGPT to optimize finite parameters toward ~1.03–1.035.
+    notes: Sharpened the construction to explicit exponent 1.014114…, making every step quantitative. Disproves both Erdős's n^{1+o(1)} conjecture and the weaker n^{1+O(1/log log n)} bound. Forum participants used ChatGPT to optimize finite parameters toward ~1.03–1.035.
     recorded_on: 2026-08-02
     source:
       kind: forum
-      title: erdosproblems.com forum #90 — Sawin explicit bound
-      url: https://www.erdosproblems.com/forum/thread/90
       quote: Will Sawin seems to have shown eps = 0.014.
+      title: erdosproblems.com forum
+      url: https://www.erdosproblems.com/forum/thread/90
     state: active
     type: disproved
-  - asserted_on: 2026-06-01
+  - ai_assistance:
+      role: formalization
+      systems:
+        - Aleph Prover
+      used: yes
+    asserted_on: 2026-05-28
     authors:
       - Logical Intelligence
     evidence_tier: preprint
     id: erdos-90-aleph-formalization
-    notes: >-
-      Announced formalization of the OpenAI solution using Aleph Prover. Community converted to
-      standalone Lean; unconditional formalization subsequently reported on the thread.
-    ai_assistance:
-      used: yes
-      systems:
-        - Aleph Prover
-      role: formalization
+    notes: Announced formalization of the OpenAI solution using Aleph Prover. Community converted to standalone Lean; unconditional formalization subsequently reported on the thread.
     recorded_on: 2026-08-02
     source:
       kind: forum
-      title: erdosproblems.com forum #90 — Aleph Prover formalization
+      title: erdosproblems.com forum
       url: https://www.erdosproblems.com/forum/thread/90
     state: active
     type: partial
@@ -126,11 +114,7 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2026-06-07
   meaning: no_published_solution_known_to_curator
-  note: >-
-    Disproved (page edited Jun 2026; $500 bounty noted). ~44 forum comments: Sawin's explicit
-    exponent (arXiv:2605.20579), human-digested Remarks (arXiv:2605.20695), community parameter
-    optimization race, and Aleph Prover formalization. Side threads discuss restricted variants
-    and whether the constructions could attack distinct-distances or plane chromatic number.
+  note: "Disproved (page edited Jun 2026; $500 bounty noted). ~44 forum comments: Sawin's explicit exponent (arXiv:2605.20579), human-digested Remarks (arXiv:2605.20695), community parameter optimization race, and Aleph Prover formalization. Side threads discuss restricted variants and whether the constructions could attack distinct-distances or plane chromatic number."
 provenance:
   - fields:
       - title

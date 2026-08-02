@@ -1,0 +1,56 @@
+# Curated problems for agent evaluation and research-math systems.
+# Not a leaderboard — a starting set with Lean statements, varied difficulty,
+# and clear status. Edit via PR; validated at index build time.
+version: 1
+description: >-
+  Problems chosen for agent benchmarks: open (or partially open), cross-linked,
+  and mostly formalized in Lean. Prefer problems with a verification challenge
+  in statements/challenges/ when available.
+challenges:
+  - id: erdos-1
+    difficulty: medium
+    rationale: Open Erdős problem; canonical Lean challenge in statements/; sum-distinct sets.
+  - id: jacobian-conjecture
+    difficulty: hard
+    rationale: Dim ≥ 3 refuted (2026); dim 2 still open; Lean formalization; high agent interest.
+  - id: erdos-647
+    difficulty: hard
+    rationale: >-
+      Two CI challenges, one per direction. Verified to 10^12 already, so brute force is dead
+      ground; the live targets are the residue-class reductions behind erdos-647-no-larger.
+  - id: collatz-conjecture
+    difficulty: legendary
+    rationale: Famous open problem; formal Lean statement; sanity-check for search agents.
+  - id: erdos-124
+    difficulty: medium
+    rationale: Open Erdős with Lean statement; combinatorics.
+  - id: erdos-107
+    difficulty: medium
+    rationale: Open Erdős with Lean statement; number theory.
+  - id: erdos-812
+    difficulty: medium
+    rationale: Open Erdős with Lean statement.
+  - id: lam-litt-conjecture
+    difficulty: hard
+    rationale: Open conjecture with multiple Lean formal variants.
+  - id: erdos-200
+    difficulty: medium
+    rationale: Open Erdős; graph theory; Lean upstream.
+  - id: erdos-579
+    difficulty: medium
+    rationale: Open Erdős; additive combinatorics flavor.
+
+# Recorded AI outcomes (for tracing what agents/models did — not necessarily open).
+ai_trace_examples:
+  - id: erdos-146
+    note: OpenAI Astra machine-verified disproof, Aug 2026
+  - id: erdos-180
+    note: OpenAI Astra + forum discussion; Hunter counterexample
+  - id: erdos-183
+    note: OpenAI Astra machine-verified proof claim
+  - id: erdos-42
+    note: GPT-5.5 Pro proof + multiple Lean formalizations on forum
+  - id: erdos-90
+    note: OpenAI unit-distance disproof; Sawin explicit bound
+  - id: jacobian-conjecture
+    note: Alpöge counterexample with Claude Fable; Mathlib verification

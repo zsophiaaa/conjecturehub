@@ -1,0 +1,11 @@
+{
+  "conjecture_id": "jacobian-conjecture",
+  "note": "Open in general; n ≥ 3 refuted July 2026. Statement from formal-conjectures v4.32.0.",
+  "comparator": {
+    "challenge_module": "Challenge.JacobianConjecture",
+    "solution_module": "Solution.JacobianConjecture",
+    "theorem_names": ["Challenge.JacobianConjecture.jacobian_conjecture"],
+    "permitted_axioms": ["propext", "Quot.sound", "Classical.choice"],
+    "enable_nanoda": true
+  }
+}

@@ -33,6 +33,11 @@ jobs:
       - name: Validate every conjecture file
         run: npm run validate
 
+      # The semantic rules are easy to write so that they pass on every real
+      # record and catch nothing, so they are exercised against known-bad input.
+      - name: Self-test the semantic rules
+        run: npm run selftest
+
       - name: Typecheck the ingest pipeline
         run: npm run typecheck --workspace ingest
 

@@ -5,7 +5,7 @@ ids:
     - label: Wikipedia
       url: https://en.wikipedia.org/wiki/Amicable_numbers
     - label: MathWorld
-      url: https://mathworld.wolfram.com/AmicableNumbers.html
+      url: https://mathworld.wolfram.com/AmicablePair.html
     - label: OEIS A063990
       url: https://oeis.org/A063990
   formal_conjectures: FormalConjectures/Wikipedia/AmicableNumbers.lean
@@ -26,6 +26,12 @@ provenance:
     source: google-deepmind/formal-conjectures
     upstream_version: v4.32.0
     url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/AmicableNumbers.lean
+  - fields:
+      - ids.external
+    license: CC0-1.0
+    retrieved: 2026-08-02
+    source: conjecturehub-curator
+    url: https://mathworld.wolfram.com/AmicablePair.html
 statement:
   formal:
     - category: research open

@@ -28,6 +28,61 @@ function formatAjv(errors: ErrorObject[] | null | undefined): ValidationIssue[] 
   }));
 }
 
+/** Which way a resolving claim points. Scope is what makes two directions compatible. */
+function direction(type: string): "affirmative" | "negative" | "independent" | null {
+  if (type === "proved") return "affirmative";
+  if (type === "disproved" || type === "counterexample") return "negative";
+  if (type === "independence") return "independent";
+  return null;
+}
+
+/** A moving branch cannot back a reproducible machine check. */
+const MUTABLE_REF = /\/(blob|tree|raw)\/(main|master|HEAD)\//;
+
+/**
+ * Checks that a record does not contradict itself.
+ *
+ * Erdős 90 — the unit distance conjecture, publicly disproved — displayed as
+ * "Proved" because an imported claim said `proved` while the upstream status
+ * claim said `disproved`, both unscoped and at the same tier. Status derivation
+ * broke the tie on array order. Scope is the escape hatch: the Jacobian
+ * conjecture is legitimately false for n >= 3 and open for n = 2, and says so.
+ */
+function contradictionChecks(c: Conjecture): ValidationIssue[] {
+  const issues: ValidationIssue[] = [];
+  const unscoped = (c.claims ?? []).filter((cl) => cl.state === "active" && !cl.scope);
+
+  const byDirection = new Map<string, string[]>();
+  for (const claim of unscoped) {
+    const d = direction(claim.type);
+    if (!d) continue;
+    byDirection.set(d, [...(byDirection.get(d) ?? []), claim.id]);
+  }
+
+  if (byDirection.size > 1) {
+    const summary = [...byDirection.entries()]
+      .map(([d, ids]) => `${d} (${ids.join(", ")})`)
+      .join(" vs ");
+    issues.push({
+      path: "/claims",
+      message: `active claims contradict each other with no scope to separate them: ${summary}`,
+    });
+  }
+
+  for (const [i, claim] of (c.claims ?? []).entries()) {
+    if (claim.evidence_tier !== "machine_verified") continue;
+    if (MUTABLE_REF.test(claim.source.url)) {
+      issues.push({
+        path: `/claims/${i}/source/url`,
+        message:
+          "a machine_verified claim must cite an immutable ref (a commit SHA or tag), not a branch",
+      });
+    }
+  }
+
+  return issues;
+}
+
 /**
  * Rules the JSON Schema cannot express. These are the ones that protect the
  * integrity of the status model, so they are errors rather than warnings.
@@ -86,6 +141,8 @@ function semanticChecks(c: Conjecture): ValidationIssue[] {
       });
     }
   }
+
+  issues.push(...contradictionChecks(c));
 
   const covered = new Set((c.provenance ?? []).flatMap((p) => p.fields));
   if (c.statement?.informal && !covered.has("statement.informal")) {

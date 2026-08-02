@@ -84,7 +84,17 @@ function walk(dir: string, base: string, out: string[] = []): string[] {
 }
 
 const MODULE_DOC = /\/-!\s*([\s\S]*?)-\//;
-const MARKDOWN_LINK = /\[([^\]]+)\]\((https?:\/\/[^)\s]+)\)/g;
+/**
+ * A markdown link whose URL may itself contain balanced parentheses.
+ *
+ * The obvious `[^)\s]+` truncates at the first inner paren, which silently
+ * mangles exactly the URLs mathematicians cite most:
+ * `en.wikipedia.org/wiki/Sunflower_(mathematics)` became
+ * `en.wikipedia.org/wiki/Sunflower_(mathematics`, and old Wiley DOIs of the form
+ * `10.1002/(SICI)...` lost everything after `(SICI`. One balanced nesting level
+ * covers every case upstream actually uses.
+ */
+const MARKDOWN_LINK = /\[([^\]]+)\]\((https?:\/\/(?:[^()\s]|\([^()\s]*\))+)\)/g;
 
 /**
  * Matches the attribute block and declaration head. Upstream lints these

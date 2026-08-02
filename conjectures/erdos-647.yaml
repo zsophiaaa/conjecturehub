@@ -33,7 +33,7 @@ claims:
     state: active
     type: partial
     scope: n ≤ 10^12
-  - asserted_on: 2026-06-01
+  - asserted_on: 2026-05-27
     authors:
       - Scott D. Hughes
     evidence_tier: preprint
@@ -49,15 +49,15 @@ claims:
       url: https://www.erdosproblems.com/forum/thread/647
     state: active
     type: partial
-  - asserted_on: 2026-06-01
-    authors:
+  - authors:
       - Scott D. Hughes
     evidence_tier: preprint
     id: erdos-647-hughes-frontier-certificate
     notes: >-
       Independent Python certificate (verify.py): no solution with 24 < n ≤ 6.16×10^17 on the
       41-class frontier. 6549 sub-classes ruled out by fixed congruences; remainder by search to
-      u=10^7 with some shift k≤16 over budget.
+      u=10^7 with some shift k≤16 over budget. Date deliberately omitted: Hughes posted on 27 and
+      29 May and 8 and 15 June 2026, and this contribution was not pinned to one of them.
     recorded_on: 2026-08-02
     source:
       kind: forum
@@ -82,7 +82,7 @@ claims:
     state: active
     type: partial
     scope: n ≢ 0 (mod 12)
-  - asserted_on: 2026-06-01
+  - asserted_on: 2026-05-29
     authors:
       - Kenta Kitamura
     evidence_tier: preprint
@@ -100,9 +100,9 @@ claims:
       url: https://www.erdosproblems.com/forum/thread/647
     state: active
     type: partial
-  - asserted_on: 2026-01-01
+  - asserted_on: 2026-01-28
     authors:
-      - Anonymous (forum)
+      - JamalAgbanwa
     evidence_tier: unverified_claim
     id: erdos-647-claimed-complete-disputed
     notes: >-
@@ -125,7 +125,7 @@ claims:
     state: disputed
     type: partial
     scope: alleged proof that no n > 24 exists
-  - asserted_on: 2026-04-01
+  - asserted_on: 2025-10-02
     authors:
       - Terence Tao
     evidence_tier: community_accepted

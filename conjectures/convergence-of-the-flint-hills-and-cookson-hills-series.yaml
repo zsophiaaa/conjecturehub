@@ -3,7 +3,7 @@ id: convergence-of-the-flint-hills-and-cookson-hills-series
 ids:
   external:
     - label: "Wikipedia: Examples of numerical series"
-      url: https://en.wikipedia.org/wiki/Series_(mathematics
+      url: https://en.wikipedia.org/wiki/Series_(mathematics)#Examples_of_numerical_series
     - label: "MathWorld: Flint Hills Series"
       url: https://mathworld.wolfram.com/FlintHillsSeries.html
     - label: Alekseyev, On the Flint Hills series
@@ -11,7 +11,7 @@ ids:
     - label: "MathWorld: Cookson Hills Series"
       url: https://mathworld.wolfram.com/CooksonHillsSeries.html
   formal_conjectures: FormalConjectures/Wikipedia/FlintCooksonHills.lean
-  wikipedia: https://en.wikipedia.org/wiki/Series_(mathematics
+  wikipedia: https://en.wikipedia.org/wiki/Series_(mathematics)#Examples_of_numerical_series
 openness_basis:
   asserted_by: google-deepmind/formal-conjectures
   meaning: no_published_solution_known_to_curator

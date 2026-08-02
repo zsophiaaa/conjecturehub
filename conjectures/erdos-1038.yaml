@@ -1,4 +1,95 @@
-claims: []
+claims:
+  - asserted_on: 2026-01-01
+    authors:
+      - jspier
+    evidence_tier: unverified_claim
+    id: erdos-1038-two-atom-golden-ratio-bound
+    notes: >-
+      Building on Tao's reduction that a minimizing measure may be assumed supported on a
+      restricted set, jspier ran a brute-force search over two-atom measures, first reporting a
+      lower bound of 1.614 and then identifying the true extreme point of the admissible region at
+      the golden ratio. The dual-forcing step is a Fubini identity that forces at least one atom
+      into the positive region. Discussed but not refereed.
+    ai_assistance:
+      used: yes
+      systems:
+        - ChatGPT
+      role: discovery
+    recorded_on: 2026-08-02
+    scope: lower bound on the infimum only
+    source:
+      kind: forum
+      title: erdosproblems.com forum #1038 — two-atom dual forcing
+      url: https://www.erdosproblems.com/forum/thread/1038
+      quote: 'The $\inf$ lower bound is in fact $\phi = \frac{1+\sqrt{5}}{2} \approx 1.6180$.'
+    state: active
+    type: partial
+  - asserted_on: 2026-01-02
+    authors:
+      - J_Koizumi_144
+      - Nat Sothanaphan
+    evidence_tier: unverified_claim
+    id: erdos-1038-three-atom-sweep
+    notes: >-
+      Extends the two-atom method to three atoms, sweeping one parameter to obtain a lower bound of
+      1.7, found by hand in Desmos rather than by optimization. Sothanaphan then optimized the same
+      family to reach 1.7205, explicitly flagging the verification as empirical numerical checking
+      that would need rigorous computation later. This already exceeds the 1.519 lower bound
+      recorded on the problem page.
+    ai_assistance:
+      used: yes
+      systems:
+        - ChatGPT
+      role: discovery
+    recorded_on: 2026-08-02
+    scope: lower bound on the infimum; numerics described as empirical, not rigorous
+    source:
+      kind: forum
+      title: erdosproblems.com forum #1038 — three-atom dual measures
+      url: https://www.erdosproblems.com/forum/thread/1038
+      quote: Since I expect someone will quickly find a better strategy, I have not optimized the parameters.
+    state: active
+    type: partial
+  - asserted_on: 2026-05-09
+    authors:
+      - Hua Xu
+    evidence_tier: unverified_claim
+    id: erdos-1038-five-atom-lean-certificate
+    notes: >-
+      Pushes the finite-atom dual-forcing route to 1.806304 with a fixed five-atom certificate,
+      then to 1.814600 using a piecewise five-atom certificate splitting the tail interval into 560
+      blocks. Adding six or more atoms did not help because the extra atoms took near-zero weight.
+      A Lean and Mathlib certificate package is linked; it was not inspected or compiled for this
+      record.
+    recorded_on: 2026-08-02
+    scope: lower bound on the infimum; the Lean files check certificate arithmetic, not the reduction
+    source:
+      kind: forum
+      title: erdosproblems.com forum #1038 — finite-atom Lean certificates
+      url: https://www.erdosproblems.com/forum/thread/1038
+      quote: The useful gain came from making the five-atom certificate piecewise in the sweep parameter.
+    state: active
+    type: partial
+  - asserted_on: 2026-06-10
+    authors:
+      - mendozalab
+    evidence_tier: unverified_claim
+    id: erdos-1038-family-ceiling-extension
+    notes: >-
+      Extends the certificate to 1.814605, re-solving per-block weights by linear programming and
+      checking both computational legs in directed interval arithmetic with a second backend. The
+      more interesting claim is that the method appears to stop there, which the author is careful
+      to call evidence of a family ceiling rather than exhaustion. Sothanaphan pushed back on the
+      writeup's undefined terms and the author agreed to revise contradictory verification language.
+    recorded_on: 2026-08-02
+    scope: lower bound on the infimum; the claimed ceiling is evidence from local searches, not proof
+    source:
+      kind: forum
+      title: erdosproblems.com forum #1038 — 1.814605 extension and the ensuing clarity critique
+      url: https://www.erdosproblems.com/forum/thread/1038
+      quote: The searches are local, so that's evidence of a family ceiling, not exhaustion.
+    state: active
+    type: partial
 id: erdos-1038
 ids:
   erdos: "1038"
@@ -12,7 +103,14 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-09-15
   meaning: no_published_solution_known_to_curator
-  note: Categorized upstream as "research open" at v4.32.0.
+  note: >-
+    Open, and the site states it cannot be settled by a finite computation: the supremum is pinned
+    but the infimum is only bracketed. With 141 comments this is the busiest problem thread on the
+    forum. It has produced a steadily tightening lower bound on the infimum — 1.614, the golden
+    ratio, 1.7, 1.7205, 1.806304, 1.8146, 1.814605 — against a conjectured value near 1.8344, so
+    the remaining gap is roughly 0.02 rather than the 0.32 recorded on the problem page. Every one
+    of these is a forum-only claim resting on numerical certificates of varying rigor, and the
+    page's stated bound has not been updated, so page and thread currently disagree.
 provenance:
   - fields:
       - title
@@ -36,6 +134,13 @@ provenance:
     source: teorth/erdosproblems
     upstream_version: d031865128a7ddccd85e8099f0f818211cfc9a41
     url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
+  - fields:
+      - claims
+      - openness_basis.note
+    license: CC0-1.0
+    retrieved: 2026-08-02
+    source: erdosproblems.com forum (summaries with links)
+    url: https://www.erdosproblems.com/forum/thread/1038
 statement:
   formal:
     - category: research open

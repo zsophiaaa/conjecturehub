@@ -51,7 +51,69 @@ export default function HomePage() {
           />
           <Stat value={n(stats.claims)} label="Recorded claims" hint="Each with a source, a date and an evidence tier" />
         </div>
+        {(stats.withAiClaims ?? 0) > 0 || (stats.agentBenchmarkCount ?? 0) > 0 ? (
+          <div className="mt-3 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+            <Stat
+              value={n(stats.withAiClaims ?? 0)}
+              label="With AI-assisted claims"
+              hint="Declared ai_assistance on active claims — trace what models contributed"
+            />
+            <Stat
+              value={n(stats.withMachineVerified ?? 0)}
+              label="Machine-verified"
+              hint="Lean kernel receipts in the claim history"
+            />
+            <Stat
+              value={n(stats.agentBenchmarkCount ?? 0)}
+              label="Agent benchmark set"
+              hint="Curated open problems for research agents"
+            />
+            <Stat
+              value={n(stats.withVerificationChallenge ?? 0)}
+              label="CI verification challenges"
+              hint="Comparator configs in statements/challenges/"
+            />
+          </div>
+        ) : null}
       </section>
+
+      {stats.agentBenchmark && stats.agentBenchmark.length > 0 ? (
+        <section>
+          <div className="flex flex-wrap items-baseline justify-between gap-2">
+            <h2 className="ui-label">For agent researchers</h2>
+            <Link href="/agents/" className="text-sm">
+              Agents hub →
+            </Link>
+          </div>
+          <p className="mt-1 max-w-3xl text-sm text-ink-muted">
+            A curated benchmark set (not a leaderboard), filters for AI-assisted and machine-verified
+            claims, and an API to read problem state before you run experiments.
+          </p>
+          <ul className="ui-panel mt-3 divide-y divide-border overflow-hidden">
+            {stats.agentBenchmark.slice(0, 6).map((item) => (
+              <li key={item.id}>
+                <Link
+                  href={`/conjectures/${item.id}/`}
+                  className="flex flex-wrap items-center justify-between gap-3 px-4 py-3 no-underline hover:bg-surface-2"
+                >
+                  <span className="font-medium text-ink">{item.title}</span>
+                  <span className="text-xs text-ink-faint">
+                    {item.difficulty ?? "benchmark"}
+                    {item.hasVerificationChallenge ? " · CI challenge" : ""}
+                  </span>
+                </Link>
+              </li>
+            ))}
+          </ul>
+          <p className="mt-2 text-sm">
+            <Link href="/conjectures/?benchmark=1">Browse benchmark set</Link>
+            {" · "}
+            <Link href="/conjectures/?ai=1">AI-assisted claims</Link>
+            {" · "}
+            <Link href="/conjectures/?verified=1">Machine-verified</Link>
+          </p>
+        </section>
+      ) : null}
 
       {stats.topDiscussion && stats.topDiscussion.length > 0 ? (
         <section>
@@ -70,7 +132,12 @@ export default function HomePage() {
                 >
                   <span className="font-medium text-ink">{item.title}</span>
                   <span className="text-xs text-ink-faint">
-                    {item.forumClaims} forum claim{item.forumClaims === 1 ? "" : "s"}
+                    {item.forumComments
+                      ? `${item.forumComments} comments upstream`
+                      : `${item.forumClaims} forum claim${item.forumClaims === 1 ? "" : "s"}`}
+                    {item.forumComments && item.forumClaims > 0
+                      ? ` · ${item.forumClaims} summarized`
+                      : ""}
                   </span>
                 </Link>
               </li>

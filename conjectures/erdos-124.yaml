@@ -1,4 +1,85 @@
-claims: []
+claims:
+  - asserted_on: 2025-11-29
+    authors:
+      - Boris Alexeev
+    evidence_tier: community_accepted
+    id: erdos-124-aristotle-first-question-proof
+    notes: >-
+      Harmonic's Aristotle proved the first question working only from a formal Lean statement,
+      after the poster corrected a typo in the Formal Conjectures statement that had weakened it.
+      Aristotle took roughly six hours; Lean checked the result in about a minute. Both the
+      contributor and the maintainer agree this settles a version of the problem but not the
+      Burr–Erdős–Graham–Li version, which is why the problem remains marked open.
+    ai_assistance:
+      used: yes
+      systems:
+        - Aristotle (Harmonic)
+      role: discovery
+    recorded_on: 2026-08-02
+    reviewer: Thomas Bloom
+    scope: the gcd-free formulation permitting the power d^0 = 1, not the BEGL question
+    source:
+      kind: forum
+      title: erdosproblems.com forum #124 — Aristotle proves the gcd-free formulation
+      url: https://www.erdosproblems.com/forum/thread/124
+      quote: Aristotle solved "a" version of this problem (indeed, with an olympiad-style proof), but not "the" version.
+    state: active
+    type: partial
+  - asserted_on: 2025-11-30
+    evidence_tier: community_accepted
+    id: erdos-124-informal-proof-sketch
+    notes: >-
+      Posted by forum user tsaf (no real name given on the site). Translates the Lean proof into a
+      short informal argument: sort all powers of the d_i into one sequence with multiplicity, then
+      apply the standard completeness criterion that each term is at most one more than the sum of
+      its predecessors. The maintainer replied that the sketch confirms the proof is elementary
+      enough to pass as a competition problem.
+    recorded_on: 2026-08-02
+    reviewer: Thomas Bloom
+    scope: human-readable rendering of the Aristotle proof of the first question
+    source:
+      kind: forum
+      title: erdosproblems.com forum #124 — informal summary of Aristotle's argument
+      url: https://www.erdosproblems.com/forum/thread/124
+    state: active
+    type: reformulation
+  - asserted_on: 2025-12-01
+    authors:
+      - Terence Tao
+    evidence_tier: community_accepted
+    id: erdos-124-pomerance-necessity-finite-only
+    notes: >-
+      Reconstructs Pomerance's unpublished observation that the reciprocal condition is necessary,
+      and points out it applies only when the set is finite. For a finite set with reciprocal sum
+      below 1, Kronecker's approximation theorem produces infinitely many n just below a power of
+      every base simultaneously, so completeness fails. Notes the equality case is delicate and
+      plausibly needs Baker's theorem.
+    recorded_on: 2026-08-02
+    reviewer: Thomas Bloom
+    scope: scope and proof of the necessity of the reciprocal-sum condition
+    source:
+      kind: forum
+      title: erdosproblems.com forum #124 — scope of Pomerance's necessity argument
+      url: https://www.erdosproblems.com/forum/thread/124
+    state: active
+    type: partial
+  - asserted_on: 2025-11-30
+    evidence_tier: published
+    id: erdos-124-melfi-infinite-counterexample
+    notes: >-
+      Posted by forum user Alfaiz (no real name given on the site). Surfaces a 2004 survey by
+      Giuseppe Melfi containing an infinite set of bases that is complete even though the
+      reciprocal sum can be made smaller than any prescribed epsilon, refuting the converse
+      direction of the natural criterion for infinite sets. Now cited in the problem remarks.
+    recorded_on: 2026-08-02
+    reviewer: Thomas Bloom
+    scope: the infinite-set case only; says nothing about the finite-set questions posed
+    source:
+      kind: forum
+      title: erdosproblems.com forum #124 — Melfi's infinite complete set with small reciprocal sum
+      url: https://www.erdosproblems.com/forum/thread/124
+    state: active
+    type: resolved_by_prior_literature
 id: erdos-124
 ids:
   erdos: "124"
@@ -12,7 +93,14 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
   meaning: no_published_solution_known_to_curator
-  note: Categorized upstream as "research open" at v4.32.0.
+  note: >-
+    Still marked OPEN on erdosproblems.com, and the 14-comment forum thread is unusually clear
+    about why. Erdős stated the question in ways that differ from the Burr–Erdős–Graham–Li
+    original: his version permits the power d^0 = 1 and omits the gcd hypothesis, and Aristotle
+    proved exactly that easier variant with a short elementary argument formalised in Lean. Both
+    the contributor and the maintainer concluded this settles a different question, so the main
+    statement was rewritten to carry the gcd condition and the status left open. Tao's
+    contributions delimit what is known: Pomerance's necessity argument covers only finite sets.
 provenance:
   - fields:
       - title
@@ -36,6 +124,13 @@ provenance:
     source: teorth/erdosproblems
     upstream_version: d031865128a7ddccd85e8099f0f818211cfc9a41
     url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
+  - fields:
+      - claims
+      - openness_basis.note
+    license: CC0-1.0
+    retrieved: 2026-08-02
+    source: erdosproblems.com forum (summaries with links)
+    url: https://www.erdosproblems.com/forum/thread/124
 statement:
   formal:
     - category: research solved

@@ -8,10 +8,8 @@ ids:
       url: https://t5k.org/glossary/xpage/DicksonsConjecture.html
     - label: OEIS Wiki
       url: https://oeis.org/wiki/Dickson%27s_conjecture
-    - label: MathWorld
-      url: https://mathworld.wolfram.com/DicksonsConjecture.html
     - label: "Leonard Eugene Dickson, *History of the Theory of Numbers, Vol. I: Divisibility and Primality*"
-      url: https://archive.org/details/historyoftheoryo01dickuoft
+      url: https://archive.org/details/historyoftheoryo01dick
     - label: Arxiv
       url: https://arxiv.org/pdf/0906.3850
   formal_conjectures: FormalConjectures/Wikipedia/Dickson.lean

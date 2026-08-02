@@ -1,0 +1,12 @@
+{
+  "conjecture_id": "erdos-647",
+  "note": "Open. Statement copied verbatim from formal-conjectures v4.32.0. Settled only by exhibiting an n > 24; see erdos-647-no-larger.json for the other direction.",
+  "claim_type": "proved",
+  "comparator": {
+    "challenge_module": "Challenge.Erdos647",
+    "solution_module": "Solution.Erdos647",
+    "theorem_names": ["Challenge.Erdos647.erdos_647"],
+    "permitted_axioms": ["propext", "Quot.sound", "Classical.choice"],
+    "enable_nanoda": true
+  }
+}

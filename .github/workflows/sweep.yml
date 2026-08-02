@@ -26,7 +26,6 @@ on:
 permissions:
   contents: write
   pull-requests: write
-  models: read
 
 concurrency:
   group: sweep
@@ -57,10 +56,10 @@ jobs:
       - name: Run the sweep
         id: sweep
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           LLM_BASE_URL: ${{ secrets.LLM_BASE_URL }}
           LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
           LLM_MODEL: ${{ vars.LLM_MODEL }}
+          LLM_DAILY_BUDGET: ${{ vars.LLM_DAILY_BUDGET }}
           ZULIP_EMAIL: ${{ secrets.ZULIP_EMAIL }}
           ZULIP_API_KEY: ${{ secrets.ZULIP_API_KEY }}
         run: |

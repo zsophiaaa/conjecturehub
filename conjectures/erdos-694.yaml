@@ -10,6 +10,90 @@ claims:
       url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/694.lean
     state: active
     type: proved
+  - asserted_on: 2026-05-01
+    authors:
+      - Liam Price
+    evidence_tier: community_accepted
+    id: erdos-694-gpt55-asymptotic-solution
+    notes: >-
+      GPT-5.5 Pro, prompted by Price, proved that the maximum of the ratio over n up to x equals
+      (e^gamma + o(1)) log log x. The write-up was circulated as an Overleaf read-only link rather
+      than a preprint server, which drew a side discussion about citation practice. The problem
+      remarks now state this result and attribute it to GPT-5.5 Pro prompted by Price.
+    ai_assistance:
+      used: yes
+      systems:
+        - GPT-5.5 Pro
+      role: discovery
+    recorded_on: 2026-08-02
+    reviewer: Thomas Bloom
+    scope: the asymptotic order of the maximum ratio, up to the o(1) in the constant
+    source:
+      kind: forum
+      title: erdosproblems.com forum #694 — GPT-5.5 Pro solution announcement
+      url: https://www.erdosproblems.com/forum/thread/694
+    state: active
+    type: proved
+  - asserted_on: 2026-05-02
+    authors:
+      - Thomas Bloom
+    evidence_tier: unverified_claim
+    id: erdos-694-bloom-elementary-proof
+    notes: >-
+      The site maintainer gives a self-contained elementary derivation in a forum comment. The
+      upper bound follows from the classical maximal order of m/phi(m) plus the trivial bound on
+      f_max; the lower bound constructs an explicit pair with equal totient using a prime supplied
+      by Linnik's theorem, so the ratio matches the Mertens product. Recorded at the lowest tier
+      because it is an unreviewed forum comment by the maintainer himself.
+    recorded_on: 2026-08-02
+    scope: independent short proof of both the upper and the lower bound
+    source:
+      kind: forum
+      title: erdosproblems.com forum #694 — elementary proof of matching bounds
+      url: https://www.erdosproblems.com/forum/thread/694
+    state: active
+    type: proved
+  - asserted_on: 2026-05-03
+    evidence_tier: community_accepted
+    id: erdos-694-lean-formalisation
+    notes: >-
+      Posted by forum user paws (no real name given on the site). A Lean 4 and Mathlib
+      formalisation, type-checkable in browser and checked under Lean 4.27 and 4.28. Mertens'
+      product theorem and a divisibility form of Linnik's theorem are assumed as axioms rather
+      than proved. A later commenter reported that Aristotle subsequently discharged the Mertens
+      axiom, leaving Linnik as the only remaining assumption.
+    ai_assistance:
+      used: yes
+      systems:
+        - Claude Code 4.7
+        - GPT-5.5 Pro
+      role: formalization
+    recorded_on: 2026-08-02
+    reviewer: Nat Sothanaphan
+    scope: machine-checked statement of the asymptotic, modulo two number-theoretic axioms
+    source:
+      kind: forum
+      title: erdosproblems.com forum #694 — Lean formalisation with Mertens and Linnik as axioms
+      url: https://www.erdosproblems.com/forum/thread/694
+    state: active
+    type: reformulation
+  - asserted_on: 2026-05-01
+    evidence_tier: unverified_claim
+    id: erdos-694-linnik-ineffectivity-caveat
+    notes: >-
+      Posted by forum user kv07 (no real name given on the site). Observes that the lower bound
+      invokes Linnik's theorem, so without explicit constants one cannot exhibit a concrete
+      extremal pair or say at what scale of x the bound becomes meaningful. With the best known
+      exponent the threshold lies far beyond computational range. No rebuttal appears in the
+      thread.
+    recorded_on: 2026-08-02
+    scope: effectivity of the lower-bound construction, not its correctness
+    source:
+      kind: forum
+      title: erdosproblems.com forum #694 — non-explicitness of the Linnik-based construction
+      url: https://www.erdosproblems.com/forum/thread/694
+    state: active
+    type: partial
 id: erdos-694
 ids:
   erdos: "694"
@@ -23,6 +107,15 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2026-05-06
   meaning: no_published_solution_known_to_curator
+  note: >-
+    Marked SOLVED (LEAN) on erdosproblems.com. An AI-produced proof pinned the maximum ratio at
+    (e^gamma + o(1)) log log x on 1 May 2026, the maintainer independently re-derived it the next
+    day in a few lines from classical estimates plus Linnik's theorem, and a Lean formalisation
+    followed within two days. Remaining discussion in the 14-comment thread is scholarly hygiene
+    rather than correctness. The one substantive unanswered caveat is that the lower-bound
+    construction is wholly non-explicit because Linnik's constants are not pinned down, so the
+    result has no effective content at any computable scale; the Lean artefact still assumes
+    Linnik as an axiom.
 provenance:
   - fields:
       - title
@@ -46,6 +139,13 @@ provenance:
     source: teorth/erdosproblems
     upstream_version: d031865128a7ddccd85e8099f0f818211cfc9a41
     url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
+  - fields:
+      - claims
+      - openness_basis.note
+    license: CC0-1.0
+    retrieved: 2026-08-02
+    source: erdosproblems.com forum (summaries with links)
+    url: https://www.erdosproblems.com/forum/thread/694
 statement:
   formal:
     - category: research solved

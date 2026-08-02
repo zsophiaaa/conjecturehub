@@ -7,7 +7,7 @@ ids:
     - label: |-
         J. Beck and T. Fiala, *"Integer-making" theorems*,
           Discrete Applied Mathematics **3** (1981), 1–8
-      url: https://doi.org/10.1016/0166-218X(81
+      url: https://doi.org/10.1016/0166-218X(81)90022-6
     - label: |-
         B. Bukh, *An improvement of the Beck–Fiala theorem*,
           Combinatorics, Probability and Computing **25** (2016), 380–398
@@ -15,7 +15,7 @@ ids:
     - label: |-
         W. Banaszczyk, *Balancing vectors and Gaussian measures of n-dimensional convex bodies*,
           Random Structures & Algorithms **12** (1998), 351–360
-      url: https://doi.org/10.1002/(SICI
+      url: https://doi.org/10.1002/(SICI)1098-2418(199807)12:4%3C351::AID-RSA3%3E3.0.CO;2-S
   formal_conjectures: FormalConjectures/Wikipedia/BeckFialaConjecture.lean
   wikipedia: https://en.wikipedia.org/wiki/Beck%E2%80%93Fiala_theorem
 openness_basis:

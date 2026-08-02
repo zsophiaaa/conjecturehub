@@ -17,7 +17,7 @@ claims:
     verification:
       tool: lean4
       statement_path: external/openai/ten-proofs/MulticolorTriangleRamsey.lean
-      theorem: erdos183
+      theorem: ErdosProblems.MulticolourTriangleRamsey.erdos_183
       toolchain: lean4
       permitted_axioms:
         - propext
@@ -39,16 +39,17 @@ claims:
       url: https://www.erdosproblems.com/forum/thread/183
     state: active
     type: reformulation
-  - asserted_on: 2024-01-01
+  - asserted_on: 2025-12-02
     authors:
-      - Antonio Girao
+      - Wouter Cames van Batenburg
       - Anurag Bishnoi
       - Ananth Ravi
     evidence_tier: preprint
-    id: erdos-183-forum-girao-related-bound
+    id: erdos-183-forum-related-lower-bound
     notes: >-
-      Forum post (Girao): lim_{k→∞} R(3;k)^{1/k} ≥ 2^{(n-1)/(χ(n)-1)} where χ(n) is minimum
-      sum-free partition size of F_n^2∖{0}. Context for #183 lower bounds, predates OpenAI result.
+      Forum post by Wouter Cames van Batenburg reporting joint work with Bishnoi and Ravi:
+      lim_{k→∞} R(3;k)^{1/k} ≥ 2^{(n-1)/(χ(n)-1)} where χ(n) is the minimum sum-free partition
+      size of F_n^2 minus the origin. Context for #183 lower bounds; predates the OpenAI result.
     recorded_on: 2026-08-02
     source:
       kind: forum
@@ -63,7 +64,7 @@ ids:
     - label: erdosproblems.com/183
       url: https://www.erdosproblems.com/183
     - label: openai/ten-proofs (MulticolorTriangleRamsey.lean)
-      url: https://github.com/openai/ten-proofs/blob/main/MulticolorTriangleRamsey.lean
+      url: https://github.com/openai/ten-proofs/blob/a13547c6be4563746881d0b3b4c9fd03f72f0484/MulticolorTriangleRamsey.lean
     - label: "erdosproblems.com forum #183"
       url: https://www.erdosproblems.com/forum/thread/183
   oeis:

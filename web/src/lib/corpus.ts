@@ -94,6 +94,21 @@ export interface Conjecture {
     upstream_version?: string | null;
   }[];
   derived: DerivedStatus;
+  /** Resolved at index build time; see ingest/src/cli/build-index.ts. */
+  agent?: AgentMeta;
+}
+
+/** Agent-research metadata: benchmark membership and AI/verification counters. */
+export interface AgentMeta {
+  benchmark: boolean;
+  difficulty: string | null;
+  rationale: string | null;
+  hasVerificationChallenge: boolean;
+  aiAssistedClaims: number;
+  machineVerifiedClaims: number;
+  forumClaims: number;
+  /** Observed upstream forum comment count; null when not measured. */
+  forumComments: number | null;
 }
 
 export interface Stats {
@@ -108,8 +123,35 @@ export interface Stats {
   byStatus: Record<string, number>;
   byTier: Record<string, number>;
   topTags: { tag: string; count: number }[];
-  withForumClaims?: number;
-  topDiscussion?: { id: string; title: string; forumClaims: number; claims: number }[];
+  withForumClaims: number;
+  topDiscussion: {
+    id: string;
+    title: string;
+    forumClaims: number;
+    forumComments: number | null;
+    claims: number;
+  }[];
+  withAiClaims: number;
+  withMachineVerified: number;
+  agentBenchmarkCount: number;
+  withVerificationChallenge: number;
+  agentBenchmark: {
+    id: string;
+    title: string;
+    difficulty: string | null;
+    rationale: string | null;
+    statusKey: string;
+    hasLean: boolean;
+    hasVerificationChallenge: boolean;
+    aiClaimCount: number;
+  }[];
+  aiTraceExamples: {
+    id: string;
+    title: string;
+    note: string | null;
+    aiClaimCount: number;
+    machineVerified: boolean;
+  }[];
 }
 
 const GENERATED = path.join(process.cwd(), ".generated");

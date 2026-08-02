@@ -1,7 +1,7 @@
 claims:
   - evidence_tier: published
     id: erdos-884-fc-solved
-    notes: Imported from the upstream `research solved` category. The statement is formalized; the proof has not been machine-checked by ConjectureHub.
+    notes: Imported from the upstream `research solved` category, which records that the problem is resolved without stating the direction. Direction taken from erdosproblems.com, which records it as "disproved". The statement is formalized; the proof has not been machine-checked by ConjectureHub.
     recorded_on: 2026-07-31
     reviewer: google-deepmind/formal-conjectures maintainers
     source:
@@ -9,7 +9,7 @@ claims:
       title: formal-conjectures marks erdos_884 as research solved
       url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/884.lean
     state: active
-    type: proved
+    type: disproved
   - asserted_on: 2026-07-03
     evidence_tier: published
     id: erdos-884-erdos-status
@@ -26,31 +26,25 @@ claims:
       - Terence Tao
     evidence_tier: preprint
     id: erdos-884-tao-conditional-disproof
-    notes: >-
-      Conditional negative answer assuming qualitative Hardy–Littlewood prime tuples. Constructs
-      n from a K-separated admissible tuple so the pairwise-reciprocal-gap sum dominates the
-      consecutive-gap sum; ratio unbounded. Tao noted the construction almost works unconditionally.
+    notes: Conditional negative answer assuming qualitative Hardy–Littlewood prime tuples. Constructs n from a K-separated admissible tuple so the pairwise-reciprocal-gap sum dominates the consecutive-gap sum; ratio unbounded. Tao noted the construction almost works unconditionally.
     recorded_on: 2026-08-02
+    scope: conditional on Hardy–Littlewood prime tuples
     source:
       kind: forum
-      title: erdosproblems.com forum #884 — Terence Tao, Sep 2025
+      title: erdosproblems.com forum
       url: https://www.erdosproblems.com/forum/thread/884
     state: active
     type: disproved
-    scope: conditional on Hardy–Littlewood prime tuples
   - asserted_on: 2026-03-29
     authors:
       - Daniel Larsen
     evidence_tier: preprint
     id: erdos-884-larsen-unconditional-disproof
-    notes: >-
-      Unconditional disproof by repeating Tao's construction across many scales so the left-hand
-      pairwise sum grows without bound. Revised PDF posted 30 Mar 2026 after forum GPT-5.4 audit
-      suggestions.
+    notes: Unconditional disproof by repeating Tao's construction across many scales so the left-hand pairwise sum grows without bound. Revised PDF posted 30 Mar 2026 after forum GPT-5.4 audit suggestions.
     recorded_on: 2026-08-02
     source:
       kind: forum
-      title: erdosproblems.com forum #884 — Daniel Larsen, Mar 2026
+      title: erdosproblems.com forum
       url: https://www.erdosproblems.com/forum/thread/884
     state: active
     type: disproved
@@ -59,15 +53,12 @@ claims:
       - Terence Tao
     evidence_tier: community_accepted
     id: erdos-884-tao-larsen-endorsement
-    notes: >-
-      Tao endorsed Larsen's multiscale argument as "very nice" and judged formalization feasible
-      though nontrivial because of Brun sieve use. Nat Sothanaphan ran a GPT-5.4 audit that
-      suggested fixes; Larsen incorporated them.
+    notes: Tao endorsed Larsen's multiscale argument as "very nice" and judged formalization feasible though nontrivial because of Brun sieve use. Nat Sothanaphan ran a GPT-5.4 audit that suggested fixes; Larsen incorporated them.
     recorded_on: 2026-08-02
     reviewer: erdosproblems.com forum attribution
     source:
       kind: forum
-      title: erdosproblems.com forum #884 — Tao/Larsen exchange
+      title: erdosproblems.com forum
       url: https://www.erdosproblems.com/forum/thread/884
     state: active
     type: partial
@@ -76,14 +67,11 @@ claims:
       - honicky
     evidence_tier: preprint
     id: erdos-884-lean-formalization
-    notes: >-
-      Lean proof verified and flagged "DISPROVED (LEAN)" on the forum thread. Posted at Daniel
-      Chin's suggestion from google-deepmind/formal-conjectures; formal-conjectures indexes both
-      unconditional disproof and conditional Hardy–Littlewood route.
+    notes: Lean proof verified and flagged "DISPROVED (LEAN)" on the forum thread. Posted at Daniel Chin's suggestion from google-deepmind/formal-conjectures; formal-conjectures indexes both unconditional disproof and conditional Hardy–Littlewood route.
     recorded_on: 2026-08-02
     source:
       kind: forum
-      title: erdosproblems.com forum #884 — honicky Lean formalization
+      title: erdosproblems.com forum
       url: https://www.erdosproblems.com/forum/thread/884
     state: active
     type: partial
@@ -104,10 +92,7 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2026-04-01
   meaning: no_published_solution_known_to_curator
-  note: >-
-    Closed in the negative. Tao (Sep 2025) gave a conditional disproof; Larsen (Mar 2026) removed
-    the hypothesis with a multiscale variant, endorsed on the forum by Tao. Forum header marks
-    "DISPROVED (LEAN)"; honicky posted machine-checked Lean Jul 2026. ~11 forum comments.
+  note: Closed in the negative. Tao (Sep 2025) gave a conditional disproof; Larsen (Mar 2026) removed the hypothesis with a multiscale variant, endorsed on the forum by Tao. Forum header marks "DISPROVED (LEAN)"; honicky posted machine-checked Lean Jul 2026. ~11 forum comments.
 provenance:
   - fields:
       - title

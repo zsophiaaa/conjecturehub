@@ -2,6 +2,7 @@ import YAML from "yaml";
 import fs from "node:fs";
 import { listIds, conjecturePath } from "../lib/conjecture.js";
 import { validateConjecture } from "../lib/validate.js";
+import { loadAgentBenchmark } from "../lib/agent-benchmark.js";
 
 /**
  * Validates every conjecture file against the schema plus the semantic rules
@@ -46,10 +47,27 @@ for (const id of ids) {
   }
 }
 
+// The benchmark list points at conjecture ids by hand. A typo would quietly drop
+// a problem from the agent-facing set, so it is checked here rather than at
+// index build time.
+const known = new Set(ids);
+const benchmark = loadAgentBenchmark();
+const danglingBenchmarkIds = [
+  ...benchmark.challenges.map((c) => c.id),
+  ...(benchmark.ai_trace_examples ?? []).map((e) => e.id),
+].filter((id) => !known.has(id));
+
+if (danglingBenchmarkIds.length > 0) {
+  failed++;
+  console.error(
+    `\nbenchmarks/agent-challenges.yaml: unknown conjecture id(s) ${danglingBenchmarkIds.join(", ")}`,
+  );
+}
+
 console.log(
   failed === 0
-    ? `\nOK — ${ids.length} conjectures, ${claims} claims, all valid.`
-    : `\n${failed} of ${ids.length} conjecture file(s) failed validation.`,
+    ? `\nOK — ${ids.length} conjectures, ${claims} claims, ${benchmark.challenges.length} benchmark entries, all valid.`
+    : `\n${failed} check(s) failed across ${ids.length} conjecture file(s).`,
 );
 
 process.exit(failed === 0 ? 0 : 1);

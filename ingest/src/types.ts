@@ -33,6 +33,8 @@ export type SourceKind =
   | "wikipedia"
   | "hackernews"
   | "mathoverflow"
+  | "forum"
+  | "reddit"
   | "dataset"
   | "manual";
 

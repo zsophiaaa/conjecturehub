@@ -1,7 +1,6 @@
 claims: []
 id: no-three-in-line-problem
 ids:
-  mathworld: https://mathworld.wolfram.com/No-Three-in-a-Line-Problem.html
   wikidata: Q6580594
   wikipedia: https://en.wikipedia.org/wiki/No-three-in-line_problem
 openness_basis:

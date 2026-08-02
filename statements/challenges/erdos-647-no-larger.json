@@ -1,0 +1,12 @@
+{
+  "conjecture_id": "erdos-647",
+  "note": "Open. The negation of erdos-647: proving it answers Erdős's question in the negative, which is the direction the literature is actually pushing. Statement is the negation of the formal-conjectures v4.32.0 right-hand side.",
+  "claim_type": "disproved",
+  "comparator": {
+    "challenge_module": "Challenge.Erdos647",
+    "solution_module": "Solution.Erdos647NoLarger",
+    "theorem_names": ["Challenge.Erdos647.erdos_647_no_larger_example"],
+    "permitted_axioms": ["propext", "Quot.sound", "Classical.choice"],
+    "enable_nanoda": true
+  }
+}

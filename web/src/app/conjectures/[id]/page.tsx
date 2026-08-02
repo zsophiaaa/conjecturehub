@@ -5,6 +5,7 @@ import { getConjecture, getCorpus, type Claim, type Conjecture } from "@/lib/cor
 import { StatusBadge, StatusCaveat, TIER_LABELS } from "@/components/StatusBadge";
 import { RecentDevelopmentBanner } from "@/components/RecentDevelopmentBanner";
 import { ForumDiscussionSummary } from "@/components/ForumDiscussionSummary";
+import { AiTraceSection } from "@/components/AiTraceSection";
 import { MathText } from "@/components/MathText";
 import { CommunitySection } from "@/components/CommunitySection";
 
@@ -280,6 +281,8 @@ export default async function ConjecturePage({ params }: { params: Promise<{ id:
       )}
 
       <ForumDiscussionSummary conjecture={conjecture} />
+
+      <AiTraceSection conjecture={conjecture} />
 
       <Section title={`Claim history (${claims.length})`}>
         {claims.length === 0 ? (

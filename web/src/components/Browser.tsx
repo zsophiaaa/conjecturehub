@@ -20,7 +20,13 @@ interface Entry {
   a: string;
   l: 0 | 1;
   c: number;
-  f: number;
+  /** Counters below are absent rather than zero to keep the payload small. */
+  f?: number;
+  fc?: number;
+  ai?: number;
+  v?: 1;
+  b?: 1;
+  k?: 1;
 }
 
 const PAGE_SIZE = 60;
@@ -40,6 +46,7 @@ const STATUS_FILTERS = [
 const SORT_OPTIONS = [
   { key: "relevance", label: "Relevance" },
   { key: "discussion", label: "Most forum activity" },
+  { key: "ai", label: "Most AI-assisted claims" },
   { key: "claims", label: "Most claims" },
 ];
 
@@ -78,6 +85,9 @@ export function Browser({ tags }: { tags: { tag: string; count: number }[] }) {
   const [tag, setTag] = useState("");
   const [leanOnly, setLeanOnly] = useState(false);
   const [discussionOnly, setDiscussionOnly] = useState(false);
+  const [benchmarkOnly, setBenchmarkOnly] = useState(false);
+  const [aiOnly, setAiOnly] = useState(false);
+  const [verifiedOnly, setVerifiedOnly] = useState(false);
   const [sort, setSort] = useState("relevance");
   const [limit, setLimit] = useState(PAGE_SIZE);
 
@@ -88,8 +98,11 @@ export function Browser({ tags }: { tags: { tag: string; count: number }[] }) {
     const initialQuery = params.get("q");
     if (initialQuery) setQuery(initialQuery);
     if (params.get("discussion") === "1") setDiscussionOnly(true);
+    if (params.get("benchmark") === "1") setBenchmarkOnly(true);
+    if (params.get("ai") === "1") setAiOnly(true);
+    if (params.get("verified") === "1") setVerifiedOnly(true);
     const initialSort = params.get("sort");
-    if (initialSort === "discussion" || initialSort === "claims") setSort(initialSort);
+    if (initialSort === "discussion" || initialSort === "claims" || initialSort === "ai") setSort(initialSort);
   }, []);
 
   useEffect(() => {
@@ -125,7 +138,10 @@ export function Browser({ tags }: { tags: { tag: string; count: number }[] }) {
       if (status && entry.s !== status) continue;
       if (leanOnly && entry.l !== 1) continue;
       if (tag && !entry.g.includes(tag)) continue;
-      if (discussionOnly && entry.f === 0) continue;
+      if (discussionOnly && !entry.f && !entry.fc) continue;
+      if (benchmarkOnly && !entry.b) continue;
+      if (aiOnly && !entry.ai) continue;
+      if (verifiedOnly && !entry.v) continue;
 
       const s = score(entry, tokens, haystacks[idx]!);
       if (s < 0) continue;
@@ -133,21 +149,66 @@ export function Browser({ tags }: { tags: { tag: string; count: number }[] }) {
     }
 
     scored.sort((a, b) => {
+      const forum = (e: Entry) => e.f ?? 0;
+      const aiClaims = (e: Entry) => e.ai ?? 0;
+      // Prefer the observed upstream comment count; fall back to what we curated.
+      const activity = (e: Entry) => e.fc ?? 0;
+
       if (sort === "discussion") {
-        return b.entry.f - a.entry.f || b.entry.c - a.entry.c || a.entry.t.localeCompare(b.entry.t);
+        return (
+          activity(b.entry) - activity(a.entry) ||
+          forum(b.entry) - forum(a.entry) ||
+          a.entry.t.localeCompare(b.entry.t)
+        );
+      }
+      if (sort === "ai") {
+        return (
+          aiClaims(b.entry) - aiClaims(a.entry) ||
+          (b.entry.v ?? 0) - (a.entry.v ?? 0) ||
+          a.entry.t.localeCompare(b.entry.t)
+        );
       }
       if (sort === "claims") {
-        return b.entry.c - a.entry.c || b.entry.f - a.entry.f || a.entry.t.localeCompare(b.entry.t);
+        return (
+          b.entry.c - a.entry.c ||
+          forum(b.entry) - forum(a.entry) ||
+          a.entry.t.localeCompare(b.entry.t)
+        );
       }
-      return b.score - a.score || b.entry.f - a.entry.f || a.entry.t.localeCompare(b.entry.t);
+      return (
+        b.score - a.score || forum(b.entry) - forum(a.entry) || a.entry.t.localeCompare(b.entry.t)
+      );
     });
 
     return scored.map((s) => s.entry);
-  }, [entries, haystacks, query, status, tag, leanOnly, discussionOnly, sort]);
+  }, [entries, haystacks, query, status, tag, leanOnly, discussionOnly, benchmarkOnly, aiOnly, verifiedOnly, sort]);
 
   useEffect(() => {
     setLimit(PAGE_SIZE);
-  }, [query, status, tag, leanOnly, discussionOnly, sort]);
+  }, [query, status, tag, leanOnly, discussionOnly, benchmarkOnly, aiOnly, verifiedOnly, sort]);
+
+  const anyFilter =
+    Boolean(query) ||
+    Boolean(status) ||
+    Boolean(tag) ||
+    leanOnly ||
+    discussionOnly ||
+    benchmarkOnly ||
+    aiOnly ||
+    verifiedOnly ||
+    sort !== "relevance";
+
+  function clearFilters() {
+    setQuery("");
+    setStatus("");
+    setTag("");
+    setLeanOnly(false);
+    setDiscussionOnly(false);
+    setBenchmarkOnly(false);
+    setAiOnly(false);
+    setVerifiedOnly(false);
+    setSort("relevance");
+  }
 
   const inputClass = "ui-input";
 
@@ -216,7 +277,37 @@ export function Browser({ tags }: { tags: { tag: string; count: number }[] }) {
             onChange={(e) => setDiscussionOnly(e.target.checked)}
             className="size-4"
           />
-          Has forum summaries
+          Forum discussion
+        </label>
+
+        <label className="flex cursor-pointer items-center gap-2 border border-border-strong bg-surface-1 px-3 py-2 text-sm text-ink">
+          <input
+            type="checkbox"
+            checked={benchmarkOnly}
+            onChange={(e) => setBenchmarkOnly(e.target.checked)}
+            className="size-4"
+          />
+          Agent benchmark
+        </label>
+
+        <label className="flex cursor-pointer items-center gap-2 border border-border-strong bg-surface-1 px-3 py-2 text-sm text-ink">
+          <input
+            type="checkbox"
+            checked={aiOnly}
+            onChange={(e) => setAiOnly(e.target.checked)}
+            className="size-4"
+          />
+          AI-assisted claims
+        </label>
+
+        <label className="flex cursor-pointer items-center gap-2 border border-border-strong bg-surface-1 px-3 py-2 text-sm text-ink">
+          <input
+            type="checkbox"
+            checked={verifiedOnly}
+            onChange={(e) => setVerifiedOnly(e.target.checked)}
+            className="size-4"
+          />
+          Machine-verified
         </label>
       </div>
 
@@ -228,9 +319,19 @@ export function Browser({ tags }: { tags: { tag: string; count: number }[] }) {
         <p className="text-ink-muted">Loading index…</p>
       ) : (
         <>
-          <p className="text-sm text-ink-muted">
-            {results.length.toLocaleString("en-US")} of {entries.length.toLocaleString("en-US")} conjectures
-            {discussionOnly ? " with curated forum discussion" : ""}
+          <p className="flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-ink-muted">
+            <span>
+              {results.length.toLocaleString("en-US")} of {entries.length.toLocaleString("en-US")} conjectures
+              {discussionOnly ? " with forum discussion" : ""}
+              {benchmarkOnly ? " in agent benchmark" : ""}
+              {aiOnly ? " with AI-assisted claims" : ""}
+              {verifiedOnly ? " with machine-verified claims" : ""}
+            </span>
+            {anyFilter ? (
+              <button type="button" onClick={clearFilters} className="underline">
+                Clear filters
+              </button>
+            ) : null}
           </p>
 
           <ul className="ui-panel divide-y divide-border overflow-hidden">
@@ -249,12 +350,39 @@ export function Browser({ tags }: { tags: { tag: string; count: number }[] }) {
                     ) : null}
                   </span>
                   <span className="flex items-center gap-2">
-                    {entry.f > 0 ? (
+                    {entry.b ? (
+                      <span className="rounded border border-violet-500/30 bg-violet-500/10 px-1.5 py-0.5 text-[11px] text-ink-muted">
+                        benchmark
+                      </span>
+                    ) : null}
+                    {entry.ai ? (
+                      <span
+                        className="rounded border border-sky-500/30 bg-sky-500/10 px-1.5 py-0.5 text-[11px] text-ink-muted"
+                        title={`${entry.ai} AI-assisted claim(s)`}
+                      >
+                        AI×{entry.ai}
+                      </span>
+                    ) : null}
+                    {entry.v ? (
+                      <span className="rounded border border-emerald-600/30 bg-emerald-600/10 px-1.5 py-0.5 text-[11px] text-ink-muted">
+                        verified
+                      </span>
+                    ) : null}
+                    {entry.k ? (
+                      <span className="rounded border border-amber-600/30 bg-amber-600/10 px-1.5 py-0.5 font-mono text-[11px] text-ink-muted">
+                        CI
+                      </span>
+                    ) : null}
+                    {entry.fc || entry.f ? (
                       <span
                         className="rounded border border-accent/40 bg-accent/10 px-1.5 py-0.5 text-[11px] text-ink-muted"
-                        title={`${entry.f} forum-sourced claim(s)`}
+                        title={
+                          entry.fc
+                            ? `${entry.fc} comments on the upstream forum thread`
+                            : `${entry.f} forum-sourced claim(s) curated here`
+                        }
                       >
-                        {entry.f} forum
+                        {entry.fc ? `${entry.fc} comments` : `${entry.f} forum`}
                       </span>
                     ) : null}
                     {entry.l === 1 ? (

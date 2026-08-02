@@ -33,9 +33,9 @@ jobs:
       - name: Screen the changes
         id: screen
         env:
-          # Present for pull requests from branches in this repository; absent
-          # for forks, in which case the quality screen degrades to nothing.
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          LLM_BASE_URL: ${{ secrets.LLM_BASE_URL }}
+          LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
+          LLM_MODEL: ${{ vars.LLM_MODEL }}
         run: |
           npx tsx ingest/src/cli/screen.ts \
             --base "origin/${{ github.base_ref }}" \

@@ -10,7 +10,7 @@ claims:
       url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/42.lean
     state: active
     type: proved
-  - asserted_on: 2026-05-10
+  - asserted_on: 2026-04-27
     authors:
       - Harjas Sandhu
     evidence_tier: preprint
@@ -33,7 +33,7 @@ claims:
       quote: A proposed solution has been generated with ChatGPT 5.5 Pro.
     state: active
     type: proved
-  - asserted_on: 2026-04-01
+  - asserted_on: 2026-01-22
     authors:
       - Daniil Sedov
     evidence_tier: preprint

@@ -10,6 +10,72 @@ claims:
       url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/619.lean
     state: active
     type: proved
+  - asserted_on: 2026-06-14
+    authors:
+      - Nick Kuhn
+    evidence_tier: community_accepted
+    id: erdos-619-fable-counterexample-family
+    notes: >-
+      Disproof obtained 9 June 2026, with a Lean formalisation subsequently merged into the Formal
+      Conjectures project. For any eta the construction takes a triangle-free core with small
+      independence number and attaches pendant leaves to every core vertex. Any triangle-free
+      diameter-4 supergraph must spend nearly one edge per pendant, because pendant components can
+      only be joined through the core and triangle-freeness caps how many core pairs can be brought
+      within distance 2. The maintainer's hub-vertex objection was withdrawn on noticing the
+      supergraph must itself stay triangle-free.
+    ai_assistance:
+      used: yes
+      systems:
+        - Claude Fable 5
+        - Codex
+        - GPT-5.5
+      role: discovery
+    recorded_on: 2026-08-02
+    reviewer: Thomas Bloom
+    scope: refutes the existence of any constant c > 0, for connected triangle-free graphs
+    source:
+      kind: forum
+      title: erdosproblems.com forum #619 — pendant-and-core counterexample family
+      url: https://www.erdosproblems.com/forum/thread/619
+    state: active
+    type: disproved
+  - asserted_on: 2026-06-15
+    authors:
+      - Thomas Bloom
+    evidence_tier: unverified_claim
+    id: erdos-619-quantitative-optimisation
+    notes: >-
+      Optimises the counterexample parameters to show infinitely many connected graphs on n
+      vertices satisfy h_4 at least n minus O(n^(8/9) (log n)^(2/9)). Also observes the core
+      construction is standard and should be cited to Fiz Pontiveros, Griffiths and Morris. This
+      bound now appears in the problem remarks. Recorded at the lowest tier because it is an
+      unreviewed forum sketch by the maintainer himself.
+    recorded_on: 2026-08-02
+    scope: explicit error term; the finer-scale behaviour of h_4 remains undetermined
+    source:
+      kind: forum
+      title: erdosproblems.com forum #619 — parameter optimisation giving an explicit error term
+      url: https://www.erdosproblems.com/forum/thread/619
+    state: active
+    type: partial
+  - asserted_on: 2026-04-29
+    authors:
+      - Quanyu Tang
+    evidence_tier: unverified_claim
+    id: erdos-619-statement-typo
+    notes: >-
+      Notes the displayed definition should read "has diameter at most r" rather than "has
+      diameter r", matching the original definition in EGR98, and that the closing question should
+      specify a connected triangle-free graph. As of the 15 June 2026 page edit both wordings are
+      unchanged. No reply appears in the thread.
+    recorded_on: 2026-08-02
+    scope: wording of the displayed problem statement, not the mathematics
+    source:
+      kind: forum
+      title: erdosproblems.com forum #619 — diameter-at-most-r wording correction
+      url: https://www.erdosproblems.com/forum/thread/619
+    state: active
+    type: reformulation
 id: erdos-619
 ids:
   erdos: "619"
@@ -23,6 +89,14 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2026-06-22
   meaning: no_published_solution_known_to_curator
+  note: >-
+    Marked SOLVED (LEAN) on erdosproblems.com and settled in the negative. The 4-comment forum
+    thread is short and consensual: the counterexample is a pendant-decorated triangle-free core
+    whose key point is that triangle-freeness of the supergraph blocks the obvious hub shortcut,
+    an objection the maintainer raised and retracted himself. Remaining discussion is refinement —
+    an explicit error term, and a request that the core construction be attributed to Fiz
+    Pontiveros, Griffiths and Morris. The finer-scale behaviour of h_4 is the one genuinely open
+    loose end named by the maintainer.
 provenance:
   - fields:
       - title
@@ -46,6 +120,13 @@ provenance:
     source: teorth/erdosproblems
     upstream_version: d031865128a7ddccd85e8099f0f818211cfc9a41
     url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
+  - fields:
+      - claims
+      - openness_basis.note
+    license: CC0-1.0
+    retrieved: 2026-08-02
+    source: erdosproblems.com forum (summaries with links)
+    url: https://www.erdosproblems.com/forum/thread/619
 statement:
   formal:
     - category: research solved

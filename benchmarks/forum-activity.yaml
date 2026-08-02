@@ -1,0 +1,59 @@
+# Observed comment counts on erdosproblems.com forum threads.
+#
+# A dated snapshot, not a live feed. The forum index at
+# https://www.erdosproblems.com/forum lists every problem thread with a post-count
+# badge; these numbers were read from it (and cross-checked against individual
+# problem pages where noted). Builds must not hit the network, so the snapshot
+# lives here and is refreshed by hand or by a scheduled job.
+#
+# This exists because the first cut at a "popularity" sort ranked problems by how
+# many forum claims we had curated, which is circular: a problem looked popular
+# because we had already written about it. These are counts we did not author.
+version: 1
+observed_on: 2026-08-02
+source: https://www.erdosproblems.com/forum
+note: >-
+  The forum index lists 896 numbered problem threads plus 16 general threads. Only
+  threads inspected so far are recorded here; absence means unmeasured, not zero.
+  The highest-volume threads on the forum overall are general ones (AI Contributions
+  at 628 posts, Site suggestions at 262), which are not tied to a single problem.
+threads:
+  # Cross-checked against the problem page comment count.
+  - erdos: "1038"
+    comments: 141
+  - erdos: "1196"
+    comments: 90
+  - erdos: "728"
+    comments: 87
+  # Read from the forum index badges.
+  - erdos: "848"
+    comments: 48
+  - erdos: "421"
+    comments: 47
+  - erdos: "1041"
+    comments: 47
+  - erdos: "1045"
+    comments: 47
+  - erdos: "90"
+    comments: 44
+  - erdos: "42"
+    comments: 40
+  - erdos: "423"
+    comments: 38
+  - erdos: "872"
+    comments: 36
+  - erdos: "1054"
+    comments: 36
+  - erdos: "686"
+    comments: 36
+  - erdos: "396"
+    comments: 35
+  # Counted directly by parsing the thread documents.
+  - erdos: "124"
+    comments: 14
+  - erdos: "694"
+    comments: 14
+  - erdos: "26"
+    comments: 12
+  - erdos: "619"
+    comments: 4

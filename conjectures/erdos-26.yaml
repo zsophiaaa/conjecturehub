@@ -1,7 +1,7 @@
 claims:
   - evidence_tier: published
     id: erdos-26-fc-solved
-    notes: Imported from the upstream `research solved` category. The statement is formalized; the proof has not been machine-checked by ConjectureHub.
+    notes: Imported from the upstream `research solved` category, which records that the problem is resolved without stating the direction. Direction taken from erdosproblems.com, which records it as "disproved". The statement is formalized; the proof has not been machine-checked by ConjectureHub.
     recorded_on: 2026-07-31
     reviewer: google-deepmind/formal-conjectures maintainers
     source:
@@ -9,7 +9,7 @@ claims:
       title: formal-conjectures marks erdos_26 as research solved
       url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/26.lean
     state: active
-    type: proved
+    type: disproved
   - asserted_on: 2025-12-28
     evidence_tier: published
     id: erdos-26-erdos-status
@@ -21,6 +21,75 @@ claims:
       url: https://www.erdosproblems.com/26
     state: active
     type: disproved
+  - asserted_on: 2025-12-07
+    authors:
+      - Wouter van Doorn
+    evidence_tier: published
+    id: erdos-26-davenport-erdos-prior-literature
+    notes: Points out that the question is settled negatively by 1951 work of Davenport and Erdős, which shows any Behrend sequence must have divergent reciprocal sum. Taking any infinite A with convergent reciprocal sum makes it immediate that no shift k can work.
+    recorded_on: 2026-08-02
+    reviewer: Thomas Bloom
+    scope: the original question as stated, for arbitrary infinite A
+    source:
+      kind: forum
+      quote: So I don't see why this question was asked 40 years later, as it seems to be trivially false.
+      title: erdosproblems.com forum
+      url: https://www.erdosproblems.com/forum/thread/26
+    state: active
+    type: resolved_by_prior_literature
+  - asserted_on: 2025-11-24
+    authors:
+      - Wouter van Doorn
+    evidence_tier: community_accepted
+    id: erdos-26-divergent-reciprocal-counterexample
+    notes: Ruzsa's standard counterexample grows fast enough to have a convergent reciprocal sum, which made the refutation feel cheap. This modifies the construction by replacing the congruence range with one governed by any slowly growing function, so the density of A decays as slowly as desired and the reciprocal sum diverges while the counterexample survives.
+    recorded_on: 2026-08-02
+    reviewer: Thomas Bloom
+    scope: strengthens the refutation to the case where the reciprocal sum of A diverges
+    source:
+      kind: forum
+      title: erdosproblems.com forum
+      url: https://www.erdosproblems.com/forum/thread/26
+    state: active
+    type: counterexample
+  - ai_assistance:
+      role: discovery
+      systems:
+        - DeepMind prover agent (product name not disclosed in thread)
+      used: yes
+    asserted_on: 2026-04-06
+    evidence_tier: community_accepted
+    id: erdos-26-tenenbaum-variant-disproof
+    notes: Posted by forum user GTsoukalas (no real name given on the site). Reports that a DeepMind prover agent found a Lean proof refuting Tenenbaum's weaker density variant. The construction builds A in blocks using arithmetic progressions chosen by CRT, each block contributing a fixed amount to a divergent reciprocal sum, giving upper density below 0.34.
+    recorded_on: 2026-08-02
+    reviewer: Thomas Bloom
+    scope: Tenenbaum's weaker variant, not the original question
+    source:
+      kind: forum
+      title: erdosproblems.com forum
+      url: https://www.erdosproblems.com/forum/thread/26
+    state: active
+    type: disproved
+  - ai_assistance:
+      role: formalization
+      systems:
+        - Aristotle (Harmonic)
+      used: yes
+    asserted_on: 2025-12-28
+    authors:
+      - Boris Alexeev
+    evidence_tier: community_accepted
+    id: erdos-26-aristotle-lean-formalisation
+    notes: Harmonic's Aristotle auto-formalised Ruzsa's counterexample in Lean against the Formal Conjectures target statement. The poster explicitly notes he did not formalise the other results in the thread, including the divergent-reciprocal variant.
+    recorded_on: 2026-08-02
+    reviewer: Thomas Bloom
+    scope: Ruzsa's counterexample only, not the later strengthenings
+    source:
+      kind: forum
+      title: erdosproblems.com forum
+      url: https://www.erdosproblems.com/forum/thread/26
+    state: active
+    type: reformulation
 id: erdos-26
 ids:
   erdos: "26"
@@ -36,6 +105,7 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-12-28
   meaning: no_published_solution_known_to_curator
+  note: "Marked DISPROVED (LEAN) on erdosproblems.com. The original question was arguably never open, since Davenport and Erdős (1951) refutes it immediately — a point the 12-comment forum thread rediscovers with some bemusement. Live content moved to two strengthenings: van Doorn's slow-decay variant giving a counterexample with divergent reciprocal sum, and Tenenbaum's weaker density variant, reported refuted in April 2026 by a DeepMind prover agent. Remaining loose ends are bookkeeping: the page still describes Tenenbaum's variant as open."
 provenance:
   - fields:
       - title
@@ -59,6 +129,13 @@ provenance:
     source: teorth/erdosproblems
     upstream_version: d031865128a7ddccd85e8099f0f818211cfc9a41
     url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
+  - fields:
+      - claims
+      - openness_basis.note
+    license: CC0-1.0
+    retrieved: 2026-08-02
+    source: erdosproblems.com forum (summaries with links)
+    url: https://www.erdosproblems.com/forum/thread/26
 statement:
   formal:
     - category: research solved

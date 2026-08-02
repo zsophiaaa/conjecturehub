@@ -3,15 +3,15 @@ id: babai-seress-conjectures-on-the-diameter-of-finite-groups
 ids:
   external:
     - label: Wikipedia, *Diameter (group theory)*
-      url: https://en.wikipedia.org/wiki/Diameter_(group_theory
+      url: https://en.wikipedia.org/wiki/Diameter_(group_theory)
     - label: H. A. Helfgott and Á. Seress, *On the diameter of permutation groups*
       url: https://arxiv.org/abs/1109.3550
     - label: |-
         L. Babai and Á. Seress, *On the diameter of permutation groups*,
           European Journal of Combinatorics 13 (1992), 231–243
-      url: https://doi.org/10.1016/S0195-6698(05
+      url: https://doi.org/10.1016/S0195-6698(05)80029-0
   formal_conjectures: FormalConjectures/Wikipedia/DiameterSimpleFiniteGroups.lean
-  wikipedia: https://en.wikipedia.org/wiki/Diameter_(group_theory
+  wikipedia: https://en.wikipedia.org/wiki/Diameter_(group_theory)
 openness_basis:
   asserted_by: google-deepmind/formal-conjectures
   meaning: no_published_solution_known_to_curator

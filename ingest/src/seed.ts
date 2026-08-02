@@ -206,6 +206,28 @@ function buildFromFormalConjectures(registry: Registry, tag: string, files: fc.F
   return count;
 }
 
+/**
+ * formal-conjectures' "research solved" means *resolved*, in either direction, but
+ * the imported claim has to pick a `type` and defaults to `proved`. Where
+ * erdosproblems.com tells us the direction, adopt it, otherwise a refuted
+ * conjecture ends up displaying as proved: both claims sit at the `published`
+ * tier, so status derivation breaks the tie on array order and the import wins.
+ * That is precisely the "solved" vs "proved" conflation this project exists to
+ * avoid, so it is reconciled at ingest rather than left to the reader.
+ */
+function reconcileSolvedDirection(record: { id: string; claims: Claim[] }): void {
+  const imported = record.claims.find((c) => c.id === `${record.id}-fc-solved`);
+  const upstream = record.claims.find((c) => c.id === `${record.id}-erdos-status`);
+  if (!imported || !upstream) return;
+  if (imported.type === upstream.type || upstream.type === "resolved_by_prior_literature") return;
+
+  imported.type = upstream.type;
+  imported.notes =
+    "Imported from the upstream `research solved` category, which records that the problem is " +
+    `resolved without stating the direction. Direction taken from erdosproblems.com, which records it as "${upstream.type}". ` +
+    "The statement is formalized; the proof has not been machine-checked by ConjectureHub.";
+}
+
 function buildFromErdos(
   registry: Registry,
   problems: erdos.ErdosProblem[],
@@ -273,6 +295,7 @@ function buildFromErdos(
       if (claim && !existing.claims.some((c) => c.type === claim.type)) {
         existing.claims.push(claim);
       }
+      reconcileSolvedDirection(existing);
       existing.provenance.push(provenance);
       continue;
     }

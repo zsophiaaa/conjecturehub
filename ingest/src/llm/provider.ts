@@ -1,11 +1,12 @@
 /**
  * Swappable LLM access.
  *
- * Free inference tiers are small and unstable — GitHub Models allows 150
- * requests a day, and Google cut one Gemini free tier by 92% in 2026 without
- * notice — so nothing in this codebase may assume abundant LLM calls. Every
- * caller must work when the provider is `none`, and the pipeline is built so
- * that deterministic filtering does the heavy lifting.
+ * Free inference tiers are small and unstable — so nothing in this codebase may
+ * assume abundant LLM calls. Every caller must work when the provider is `none`,
+ * and the pipeline is built so that deterministic filtering does the heavy lifting.
+ *
+ * GitHub Models (models.github.ai) was retired 2026-07-30. Configure any
+ * OpenAI-compatible endpoint via LLM_BASE_URL + LLM_API_KEY.
  */
 
 export interface ChatMessage {
@@ -80,9 +81,8 @@ class OpenAiCompatibleProvider implements LlmProvider {
 
 /**
  * Resolution order:
- *   1. LLM_BASE_URL + LLM_API_KEY  — any OpenAI-compatible endpoint
- *   2. GITHUB_TOKEN                — GitHub Models, free inside Actions
- *   3. none                        — deterministic stages still run
+ *   1. LLM_BASE_URL + LLM_API_KEY — any OpenAI-compatible endpoint
+ *   2. none — deterministic sweep stages still run; matches need human triage
  */
 export function resolveProvider(env: NodeJS.ProcessEnv = process.env): LlmProvider {
   if (env.LLM_BASE_URL && env.LLM_API_KEY) {
@@ -91,18 +91,6 @@ export function resolveProvider(env: NodeJS.ProcessEnv = process.env): LlmProvid
       baseUrl: env.LLM_BASE_URL.replace(/\/$/, ""),
       apiKey: env.LLM_API_KEY,
       model: env.LLM_MODEL ?? "gpt-4o-mini",
-      dailyBudget: Number(env.LLM_DAILY_BUDGET ?? 500),
-    });
-  }
-
-  if (env.GITHUB_TOKEN) {
-    return new OpenAiCompatibleProvider({
-      name: "github-models",
-      baseUrl: "https://models.github.ai/inference",
-      apiKey: env.GITHUB_TOKEN,
-      // Low-complexity tier. Workflows must request `models: read` permission.
-      model: env.LLM_MODEL ?? "openai/gpt-4o-mini",
-      // The documented free allowance is 150 requests/day; leave headroom.
       dailyBudget: Number(env.LLM_DAILY_BUDGET ?? 120),
     });
   }

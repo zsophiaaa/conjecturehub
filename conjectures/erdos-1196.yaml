@@ -10,6 +10,94 @@ claims:
       url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/1196.lean
     state: active
     type: proved
+  - asserted_on: 2026-04-13
+    authors:
+      - Liam Price
+    evidence_tier: preprint
+    id: erdos-1196-gpt54pro-primitive-set-bound
+    notes: >-
+      Price posted a GPT-5.4 Pro solution proving that for any primitive set the tail sum is at
+      most 1 plus O(1/log x), superseding Lichtman's bound. The argument builds a downward Markov
+      chain driven by the von Mangoldt identity and bounds the primitive sum by the hitting
+      probability of a truncated adjoint chain. Price described it as a one-shot result in about
+      80 minutes. An account by eight authors appeared on arXiv as 2605.00301.
+    ai_assistance:
+      used: yes
+      systems:
+        - GPT-5.4 Pro
+      role: discovery
+    recorded_on: 2026-08-02
+    source:
+      kind: forum
+      title: erdosproblems.com forum #1196 — Price posts the GPT-5.4 Pro solution
+      url: https://www.erdosproblems.com/forum/thread/1196
+      quote: GPT-5.4 Pro claims a solution here.
+    state: active
+    type: proved
+  - asserted_on: 2026-04-17
+    authors:
+      - Terence Tao
+    evidence_tier: unverified_claim
+    id: erdos-1196-tao-discrete-divergence-reformulation
+    notes: >-
+      Tao rewrote the proof to eliminate explicit Markov chains, using a discrete divergence
+      theorem on a flow graph. The von Mangoldt identity makes the outflow exact and Mertens makes
+      the inflow match, so the flow is nearly divergence-free on the tail; primitivity enters at
+      exactly one point. Tao later called this rewriting obsolete in light of subsequent
+      streamlined proofs, and Sothanaphan produced a pure resummation variant.
+    recorded_on: 2026-08-02
+    source:
+      kind: forum
+      title: erdosproblems.com forum #1196 — Tao's discrete divergence theorem rewrite
+      url: https://www.erdosproblems.com/forum/thread/1196
+      quote: I've managed to rearrange the proof to not explicitly mention any Markov chains at all.
+    state: active
+    type: reformulation
+  - asserted_on: 2026-04-15
+    authors:
+      - Kevin Barreto
+      - Will Sawin
+      - Terence Tao
+    evidence_tier: unverified_claim
+    id: erdos-1196-canonical-invariant-measure
+    notes: >-
+      Tao conjectured a canonical measure exactly invariant under the downward process. Barreto
+      gave the closed form as a Mellin-type integral; Sawin independently verified the functional
+      equation, having reached the same formula via the function field model. This yields a clean
+      exact inequality for primitive sets, and elementary bounds then recover the main result.
+      Sawin also proposed a refinement that is sharp for a natural family but not asymptotically
+      smooth.
+    ai_assistance:
+      used: yes
+      systems:
+        - GPT-5.4 Pro
+      role: discovery
+    recorded_on: 2026-08-02
+    scope: sharpened error term and an exact inequality, not a new resolution
+    source:
+      kind: forum
+      title: erdosproblems.com forum #1196 — explicit form of the invariant measure
+      url: https://www.erdosproblems.com/forum/thread/1196
+    state: active
+    type: partial
+  - asserted_on: 2026-04-20
+    evidence_tier: unverified_claim
+    id: erdos-1196-permutation-analogue
+    notes: >-
+      Posted by forum user ofir; the linked writeup is hosted on Ofir Gorodetsky's site, so the
+      identification is inferred rather than stated in-thread. Proves that for a primitive set of
+      permutations an analogous sum is at most 1, with the role of the von Mangoldt identity played
+      by the fact that a permutation's size is the sum of its cycle sizes. Notable for being
+      nonasymptotic, since no Mertens-type estimate is needed.
+    recorded_on: 2026-08-02
+    scope: analogue on the poset of permutations, not the integer problem
+    source:
+      kind: forum
+      title: erdosproblems.com forum #1196 — permutation analogue of the primitive set bound
+      url: https://www.erdosproblems.com/forum/thread/1196
+      quote: It has the neat feature of being nonasymptotic, as no Mertens type estimates are needed.
+    state: active
+    type: reformulation
 id: erdos-1196
 ids:
   erdos: "1196"
@@ -23,6 +111,15 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2026-04-16
   meaning: no_published_solution_known_to_curator
+  note: >-
+    Marked PROVED (LEAN) on erdosproblems.com, so the question is not whether the result holds but
+    how much of the surrounding 90-comment discussion is settled. The core bound and the arXiv
+    account by eight named authors are solid, but a substantial fraction of the thread is
+    forum-only refinement — the exact invariant measure, a sharper variant, the constant in the
+    secondary term, and permutation and function-field analogues — none separately refereed. A
+    distinct unresolved thread concerns AI provenance: Tao repeatedly noted the published chain of
+    thought never mentions the von Mangoldt function, so the decisive step remains opaque, and ten
+    independent reruns reached the result by related but distinct routes without surfacing it.
 provenance:
   - fields:
       - title
@@ -46,6 +143,13 @@ provenance:
     source: teorth/erdosproblems
     upstream_version: d031865128a7ddccd85e8099f0f818211cfc9a41
     url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
+  - fields:
+      - claims
+      - openness_basis.note
+    license: CC0-1.0
+    retrieved: 2026-08-02
+    source: erdosproblems.com forum (summaries with links)
+    url: https://www.erdosproblems.com/forum/thread/1196
 statement:
   formal:
     - category: research solved

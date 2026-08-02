@@ -28,6 +28,14 @@ interface VerifyResult {
 
 interface ChallengeConfig {
   conjecture_id: string | null;
+  /**
+   * What proving this challenge would establish about the conjecture. A
+   * challenge stating the negation of a conjecture is settled by a proof, but
+   * what it records is a disproof, so the direction cannot be assumed.
+   */
+  claim_type?: Claim["type"];
+  /** Which part of the conjecture this challenge settles, if not all of it. */
+  claim_scope?: string | null;
   comparator: {
     challenge_module: string;
     solution_module: string;
@@ -36,6 +44,16 @@ interface ChallengeConfig {
     enable_nanoda?: boolean;
   };
 }
+
+const CLAIM_TYPES = new Set<string>([
+  "proved",
+  "disproved",
+  "counterexample",
+  "partial",
+  "independence",
+  "resolved_by_prior_literature",
+  "reformulation",
+]);
 
 function option(name: string, fallback?: string): string | undefined {
   const index = process.argv.indexOf(`--${name}`);
@@ -84,10 +102,16 @@ for (const file of files) {
   const conjecture = read(conjectureId);
   const theorem = config.comparator.theorem_names[0] ?? "unknown";
 
+  const claimType = config.claim_type ?? "proved";
+  if (!CLAIM_TYPES.has(claimType)) {
+    console.error(`${result.challenge}: claim_type "${claimType}" is not a valid claim type`);
+    continue;
+  }
+
   const claim: Claim = {
     id: `${conjectureId}-verified-${result.challenge}`,
-    type: "proved",
-    scope: null,
+    type: claimType,
+    scope: config.claim_scope ?? null,
     evidence_tier: "machine_verified",
     state: "active",
     asserted_on: today(),

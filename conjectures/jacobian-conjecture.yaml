@@ -13,7 +13,7 @@ claims:
       systems:
         - Claude Fable 5
       role: discovery
-    reviewer: independent mathematicians and Lean formalizers (mathlib4 PR #42116)
+    reviewer: Archive of Formal Proofs editors (Isabelle/HOL entry Jacobian_Counterexample)
     source:
       kind: x
       url: https://x.com/__alpoge__/status/2079028340955197566
@@ -22,33 +22,43 @@ claims:
   - id: jacobian-conjecture-counterexample-lean-2026
     type: counterexample
     scope: "n ≥ 3"
-    evidence_tier: machine_verified
+    evidence_tier: preprint
     state: active
-    asserted_on: 2026-07-21
+    asserted_on: 2026-07-26
     recorded_on: 2026-07-31
-    authors:
-      - Levent Alpöge
-    ai_assistance:
-      used: yes
-      systems:
-        - Claude Fable 5
-      role: discovery
     source:
       kind: dataset
       url: https://github.com/leanprover-community/mathlib4/pull/42116
-      title: "mathlib4: counterexample to the Jacobian conjecture"
-    verification:
-      tool: lean4
-      statement_path: Counterexamples/JacobianConjecture.lean
-      theorem: jacobianConjecture_false
-      toolchain: mathlib4 v4.32.0
-      permitted_axioms:
-        - propext
-        - Classical.choice
-        - Quot.sound
-      verified_on: 2026-07-26
-      run_url: https://github.com/leanprover-community/mathlib4/pull/42116
-    notes: Independently formalized in Lean 4 and merged into Mathlib. Also verified in Isabelle/HOL (AFP Jacobian_Counterexample).
+      title: "mathlib4 pull request 42116: the Jacobian conjecture is false (open, unmerged)"
+    notes: >-
+      A Lean 4 formalisation proposed to Mathlib on 2026-07-26 by GitHub user jyh. Recorded as a
+      proposed formalisation rather than a verification: as of 2026-08-02 the pull request is open
+      and unmerged with no approving reviews, its own build check is failing, and
+      Counterexamples/JacobianConjecture.lean does not exist on master. The theorems it adds are
+      not_jacobianConjecture and jacobian_conjecture_counterexample. An earlier version of this
+      record claimed the work was merged into Mathlib and tagged it machine_verified; both were
+      wrong and are corrected here.
+  - id: jacobian-conjecture-isabelle-afp-2026
+    type: counterexample
+    scope: "n ≥ 3"
+    evidence_tier: published
+    state: active
+    asserted_on: 2026-07-20
+    recorded_on: 2026-08-02
+    authors:
+      - Arthur Freitas Ramos
+      - David Barros Hulak
+      - Ruy Jose Guerra Barretto de Queiroz
+    reviewer: Archive of Formal Proofs editors
+    source:
+      kind: journal
+      url: https://isa-afp.org/entries/Jacobian_Counterexample.html
+      title: Formal Verification of an Explicit Counterexample to the Jacobian Conjecture
+    notes: >-
+      Isabelle/HOL formalisation accepted into the Archive of Formal Proofs. This is the one
+      completed machine check of the counterexample; the Lean route remains an open Mathlib pull
+      request. Not tagged machine_verified here because that tier is reserved for proofs checked
+      by ConjectureHub CI against our own canonical statement.
 id: jacobian-conjecture
 ids:
   external:
@@ -94,12 +104,6 @@ provenance:
     retrieved: 2026-07-31
     source: wikidata
     url: https://www.wikidata.org/wiki/Q2605695
-  - fields:
-      - claims
-    license: CC0-1.0
-    retrieved: 2026-08-02
-    source: erdosproblems.com forum (summaries with links)
-    url: https://www.erdosproblems.com/forum/thread/jacobian-conjecture
 statement:
   formal:
     - category: research open
