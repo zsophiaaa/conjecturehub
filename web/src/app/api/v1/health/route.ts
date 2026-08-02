@@ -20,6 +20,12 @@ export async function GET() {
 
   return NextResponse.json({
     ok: true,
+    // Which build is answering. Without this there is no way to tell a missing
+    // variable apart from a deployment that predates it being set.
+    deployment: {
+      commit: process.env.VERCEL_GIT_COMMIT_SHA?.slice(0, 7) ?? null,
+      target: process.env.VERCEL_ENV ?? null,
+    },
     signIn: {
       google: has("AUTH_GOOGLE_ID") && has("AUTH_GOOGLE_SECRET"),
       github: has("AUTH_GITHUB_ID") && has("AUTH_GITHUB_SECRET"),
