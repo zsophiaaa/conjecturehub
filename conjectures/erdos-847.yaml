@@ -29,6 +29,8 @@ ids:
       url: https://www.erdosproblems.com/847
     - label: arXiv:2311.08556
       url: https://arxiv.org/abs/2311.08556
+    - label: "erdosproblems.com forum #847"
+      url: https://www.erdosproblems.com/forum/thread/847
   formal_conjectures: FormalConjectures/ErdosProblems/847.lean
 openness_basis:
   asserted_by: erdosproblems.com

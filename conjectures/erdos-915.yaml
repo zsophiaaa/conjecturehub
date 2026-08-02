@@ -17,6 +17,8 @@ ids:
   external:
     - label: erdosproblems.com/915
       url: https://www.erdosproblems.com/915
+    - label: "erdosproblems.com forum #915"
+      url: https://www.erdosproblems.com/forum/thread/915
 openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-10-28

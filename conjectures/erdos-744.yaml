@@ -16,6 +16,8 @@ ids:
   external:
     - label: erdosproblems.com/744
       url: https://www.erdosproblems.com/744
+    - label: "erdosproblems.com forum #744"
+      url: https://www.erdosproblems.com/forum/thread/744
 openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31

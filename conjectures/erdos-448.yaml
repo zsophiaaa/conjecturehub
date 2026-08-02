@@ -27,6 +27,8 @@ ids:
   external:
     - label: erdosproblems.com/448
       url: https://www.erdosproblems.com/448
+    - label: "erdosproblems.com forum #448"
+      url: https://www.erdosproblems.com/forum/thread/448
   formal_conjectures: FormalConjectures/ErdosProblems/448.lean
   oeis:
     - A397433

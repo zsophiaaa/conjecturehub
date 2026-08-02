@@ -20,6 +20,8 @@ ids:
       url: https://www.ulam.ai/research/erdos258.pdf
     - label: Lean formalisation of Erdős problem 258
       url: https://live.lean-lang.org/#project=mathlib-v4.28.0&url=https://gist.githubusercontent.com/ster-oc/2b7adcf9d753cf6e29d782f7374cc57e/raw/689a8483895cbe147634dfbf2d7b1db93a3b5b5f/Erdos258.lean
+    - label: "erdosproblems.com forum #258"
+      url: https://www.erdosproblems.com/forum/thread/258
   formal_conjectures: FormalConjectures/ErdosProblems/258.lean
 openness_basis:
   asserted_by: erdosproblems.com

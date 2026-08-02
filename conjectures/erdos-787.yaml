@@ -5,6 +5,8 @@ ids:
   external:
     - label: erdosproblems.com/787
       url: https://www.erdosproblems.com/787
+    - label: "erdosproblems.com forum #787"
+      url: https://www.erdosproblems.com/forum/thread/787
 openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31

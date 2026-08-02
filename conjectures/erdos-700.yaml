@@ -7,6 +7,8 @@ ids:
       url: https://www.erdosproblems.com/700
     - label: OEIS A091963
       url: https://oeis.org/A091963
+    - label: "erdosproblems.com forum #700"
+      url: https://www.erdosproblems.com/forum/thread/700
   formal_conjectures: FormalConjectures/ErdosProblems/700.lean
   oeis:
     - A091963

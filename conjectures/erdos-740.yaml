@@ -7,6 +7,8 @@ ids:
       url: https://erdosproblems.com/740
     - label: erdosproblems.com/740
       url: https://www.erdosproblems.com/740
+    - label: "erdosproblems.com forum #740"
+      url: https://www.erdosproblems.com/forum/thread/740
   formal_conjectures: FormalConjectures/ErdosProblems/740.lean
 openness_basis:
   asserted_by: erdosproblems.com

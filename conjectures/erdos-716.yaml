@@ -16,6 +16,8 @@ ids:
   external:
     - label: erdosproblems.com/716
       url: https://www.erdosproblems.com/716
+    - label: "erdosproblems.com forum #716"
+      url: https://www.erdosproblems.com/forum/thread/716
 openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2026-06-21

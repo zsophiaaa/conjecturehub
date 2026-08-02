@@ -5,6 +5,8 @@ ids:
   external:
     - label: erdosproblems.com/276
       url: https://www.erdosproblems.com/276
+    - label: "erdosproblems.com forum #276"
+      url: https://www.erdosproblems.com/forum/thread/276
   formal_conjectures: FormalConjectures/ErdosProblems/276.lean
 openness_basis:
   asserted_by: erdosproblems.com

@@ -16,6 +16,8 @@ ids:
   external:
     - label: erdosproblems.com/898
       url: https://www.erdosproblems.com/898
+    - label: "erdosproblems.com forum #898"
+      url: https://www.erdosproblems.com/forum/thread/898
 openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2026-02-02

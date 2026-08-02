@@ -16,6 +16,8 @@ ids:
   external:
     - label: erdosproblems.com/127
       url: https://www.erdosproblems.com/127
+    - label: "erdosproblems.com forum #127"
+      url: https://www.erdosproblems.com/forum/thread/127
 openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31

@@ -20,6 +20,8 @@ ids:
       url: https://github.com/mo271/formal-conjectures/blob/29c60aa79729701905cf9e92517af23f588971f2/FormalConjectures/ErdosProblems/152.lean#L485
     - label: formal proof of the quadratic variant of Erdős problem 152
       url: https://github.com/mo271/formal-conjectures/blob/ff58c933d53bb807bf85d98a47402703f9f14ed3/FormalConjectures/ErdosProblems/152.lean#L496
+    - label: "erdosproblems.com forum #152"
+      url: https://www.erdosproblems.com/forum/thread/152
   formal_conjectures: FormalConjectures/ErdosProblems/152.lean
 openness_basis:
   asserted_by: erdosproblems.com

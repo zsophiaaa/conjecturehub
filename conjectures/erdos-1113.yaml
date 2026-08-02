@@ -9,6 +9,8 @@ ids:
       url: https://www.erdosproblems.com/203
     - label: "276"
       url: https://www.erdosproblems.com/276
+    - label: "erdosproblems.com forum #1113"
+      url: https://www.erdosproblems.com/forum/thread/1113
   formal_conjectures: FormalConjectures/ErdosProblems/1113.lean
   oeis:
     - A076336

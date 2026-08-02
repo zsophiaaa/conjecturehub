@@ -16,6 +16,8 @@ ids:
   external:
     - label: erdosproblems.com/977
       url: https://www.erdosproblems.com/977
+    - label: "erdosproblems.com forum #977"
+      url: https://www.erdosproblems.com/forum/thread/977
   oeis:
     - A005420
     - A002583

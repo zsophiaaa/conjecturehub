@@ -18,6 +18,8 @@ ids:
       url: https://www.erdosproblems.com/835
     - label: MT25
       url: https://github.com/QuanyuTang/erdos-problem-835/blob/main/On_Problem_835.pdf
+    - label: "erdosproblems.com forum #835"
+      url: https://www.erdosproblems.com/forum/thread/835
   formal_conjectures: FormalConjectures/ErdosProblems/835.lean
 openness_basis:
   asserted_by: erdosproblems.com

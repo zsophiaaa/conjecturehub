@@ -27,6 +27,8 @@ ids:
   external:
     - label: Erdős Problem 1092
       url: https://www.erdosproblems.com/1092
+    - label: "erdosproblems.com forum #1092"
+      url: https://www.erdosproblems.com/forum/thread/1092
   formal_conjectures: FormalConjectures/ErdosProblems/1092.lean
 openness_basis:
   asserted_by: erdosproblems.com

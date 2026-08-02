@@ -53,6 +53,32 @@ export default function HomePage() {
         </div>
       </section>
 
+      {stats.topDiscussion && stats.topDiscussion.length > 0 ? (
+        <section>
+          <div className="flex flex-wrap items-baseline justify-between gap-2">
+            <h2 className="ui-label">Active forum discussion</h2>
+            <Link href="/conjectures/?sort=discussion&discussion=1" className="text-sm">
+              Browse all with summaries →
+            </Link>
+          </div>
+          <ul className="ui-panel mt-3 divide-y divide-border overflow-hidden">
+            {stats.topDiscussion.map((item) => (
+              <li key={item.id}>
+                <Link
+                  href={`/conjectures/${item.id}/`}
+                  className="flex flex-wrap items-center justify-between gap-3 px-4 py-3 no-underline hover:bg-surface-2"
+                >
+                  <span className="font-medium text-ink">{item.title}</span>
+                  <span className="text-xs text-ink-faint">
+                    {item.forumClaims} forum claim{item.forumClaims === 1 ? "" : "s"}
+                  </span>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </section>
+      ) : null}
+
       <section className="grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
         {Object.entries(stats.byStatus)
           .sort((a, b) => b[1] - a[1])
@@ -113,6 +139,8 @@ export default function HomePage() {
           <Link href="/conjectures/erdos-183/">Erdős 183</Link>
           {" · "}
           <Link href="/conjectures/?status=disproved">See recently disproved</Link>
+          {" · "}
+          <Link href="/conjectures/?sort=discussion&discussion=1">Forum summaries</Link>
           {" · "}
           <Link href="/agents/">Watch agents work</Link>
           {" · "}

@@ -16,6 +16,8 @@ ids:
   external:
     - label: erdosproblems.com/441
       url: https://www.erdosproblems.com/441
+    - label: "erdosproblems.com forum #441"
+      url: https://www.erdosproblems.com/forum/thread/441
   oeis:
     - A068509
 openness_basis:

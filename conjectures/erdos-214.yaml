@@ -16,6 +16,8 @@ ids:
   external:
     - label: erdosproblems.com/214
       url: https://www.erdosproblems.com/214
+    - label: "erdosproblems.com forum #214"
+      url: https://www.erdosproblems.com/forum/thread/214
 openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2026-02-03

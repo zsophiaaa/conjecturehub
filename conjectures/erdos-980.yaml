@@ -16,6 +16,8 @@ ids:
   external:
     - label: erdosproblems.com/980
       url: https://www.erdosproblems.com/980
+    - label: "erdosproblems.com forum #980"
+      url: https://www.erdosproblems.com/forum/thread/980
   oeis:
     - A053760
     - A098990

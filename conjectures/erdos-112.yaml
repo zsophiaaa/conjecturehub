@@ -5,6 +5,8 @@ ids:
   external:
     - label: erdosproblems.com/112
       url: https://www.erdosproblems.com/112
+    - label: "erdosproblems.com forum #112"
+      url: https://www.erdosproblems.com/forum/thread/112
 openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31

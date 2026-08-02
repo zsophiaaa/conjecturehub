@@ -17,6 +17,8 @@ ids:
   external:
     - label: erdosproblems.com/440
       url: https://www.erdosproblems.com/440
+    - label: "erdosproblems.com forum #440"
+      url: https://www.erdosproblems.com/forum/thread/440
 openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-12-27

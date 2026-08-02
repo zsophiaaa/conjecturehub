@@ -9,6 +9,7 @@
     "seed": "tsx src/cli/seed.ts",
     "sweep": "tsx src/cli/sweep.ts",
     "build:index": "tsx src/cli/build-index.ts",
+    "sync:erdos-forum": "tsx src/cli/sync-erdos-forum-links.ts",
     "apply-proposal": "tsx src/cli/apply-proposal.ts",
     "typecheck": "tsc --noEmit"
   },

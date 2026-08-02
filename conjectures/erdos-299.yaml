@@ -29,6 +29,8 @@ ids:
       url: https://www.erdosproblems.com/298
     - label: erdosproblems.com/299
       url: https://www.erdosproblems.com/299
+    - label: "erdosproblems.com forum #299"
+      url: https://www.erdosproblems.com/forum/thread/299
   formal_conjectures: FormalConjectures/ErdosProblems/299.lean
 openness_basis:
   asserted_by: erdosproblems.com

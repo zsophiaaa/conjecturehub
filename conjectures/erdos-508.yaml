@@ -11,6 +11,8 @@ ids:
       url: https://en.wikipedia.org/wiki/Golomb_graph
     - label: de Grey 2018
       url: https://arxiv.org/abs/1804.02385
+    - label: "erdosproblems.com forum #508"
+      url: https://www.erdosproblems.com/forum/thread/508
   formal_conjectures: FormalConjectures/ErdosProblems/508.lean
   wikipedia: https://en.wikipedia.org/wiki/Golomb_graph
 openness_basis:

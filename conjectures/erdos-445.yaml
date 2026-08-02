@@ -7,6 +7,8 @@ ids:
       url: https://www.erdosproblems.com/445
     - label: MathOverflow
       url: https://mathoverflow.net/questions/69509/small-residue-classes-with-small-reciprocal
+    - label: "erdosproblems.com forum #445"
+      url: https://www.erdosproblems.com/forum/thread/445
   formal_conjectures: FormalConjectures/ErdosProblems/445.lean
 openness_basis:
   asserted_by: erdosproblems.com

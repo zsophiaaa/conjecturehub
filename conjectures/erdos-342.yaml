@@ -9,6 +9,8 @@ ids:
       url: https://people.maths.ox.ac.uk/greenbj/papers/open-problems.pdf#problem.7
     - label: OEIS A002858
       url: https://oeis.org/A002858
+    - label: "erdosproblems.com forum #342"
+      url: https://www.erdosproblems.com/forum/thread/342
   formal_conjectures: FormalConjectures/ErdosProblems/342.lean
   oeis:
     - A002858

@@ -7,6 +7,8 @@ ids:
       url: https://www.erdosproblems.com/477
     - label: Sek59
       url: http://dml.cz/dmlcz/100376
+    - label: "erdosproblems.com forum #477"
+      url: https://www.erdosproblems.com/forum/thread/477
   formal_conjectures: FormalConjectures/ErdosProblems/477.lean
 openness_basis:
   asserted_by: erdosproblems.com

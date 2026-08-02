@@ -26,6 +26,34 @@ claims:
       verified_on: 2026-08-01
       run_url: https://github.com/openai/ten-proofs
     notes: Counterexample to the degeneracy conjecture in extremal graph theory (Erdős 146). Lean certificate published by OpenAI Astra; not peer-reviewed.
+  - asserted_on: 2026-08-01
+    evidence_tier: unverified_claim
+    id: erdos-146-forum-openai-announcement
+    notes: >-
+      Forum post links to OpenAI ten-proofs CompactnessAndDegeneracy.lean (theorem
+      TwoDegenerateGraphs.not_erdos_146). No independent forum verification or maintainer
+      acceptance yet; erdosproblems.com still lists open with 0 claimed proofs.
+    recorded_on: 2026-08-02
+    source:
+      kind: forum
+      title: erdosproblems.com forum #146 — OpenAI announcement
+      url: https://www.erdosproblems.com/forum/thread/146
+    state: active
+    type: reformulation
+  - asserted_on: 2025-12-01
+    evidence_tier: community_accepted
+    id: erdos-146-forum-aks03-typo
+    notes: >-
+      Site maintainer updated problem page: AKS03 wording "in one component" should be "on one
+      side of the bipartition" (corollary 2.3).
+    recorded_on: 2026-08-02
+    reviewer: erdosproblems.com forum attribution
+    source:
+      kind: forum
+      title: erdosproblems.com forum #146 — AKS03 correction
+      url: https://www.erdosproblems.com/forum/thread/146
+    state: active
+    type: reformulation
 id: erdos-146
 ids:
   erdos: "146"
@@ -34,11 +62,16 @@ ids:
       url: https://www.erdosproblems.com/146
     - label: openai/ten-proofs (CompactnessAndDegeneracy.lean)
       url: https://github.com/openai/ten-proofs/blob/main/CompactnessAndDegeneracy.lean
+    - label: "erdosproblems.com forum #146"
+      url: https://www.erdosproblems.com/forum/thread/146
 openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
   meaning: no_published_solution_known_to_curator
-  note: Listed open at erdosproblems.com as of 2025-08-31. A machine-verified disproof was recorded August 2026 (OpenAI Astra); not peer-reviewed.
+  note: >-
+    Listed open at erdosproblems.com as of 2025-08-31. A machine-verified disproof was recorded
+    August 2026 (OpenAI Astra); not peer-reviewed. Forum thread (~3 comments): OpenAI announcement
+    post plus pre-existing editorial fixes (AKS03 typo). No maintainer status change on forum yet.
 provenance:
   - fields:
       - ids.erdos
@@ -57,6 +90,13 @@ provenance:
     retrieved: 2026-08-01
     source: openai/ten-proofs
     url: https://github.com/openai/ten-proofs
+  - fields:
+      - claims
+      - openness_basis.note
+    license: CC0-1.0
+    retrieved: 2026-08-02
+    source: erdosproblems.com forum (summaries with links)
+    url: https://www.erdosproblems.com/forum/thread/146
 statement:
   informal: |-
     **Degeneracy conjecture (Erdős 146).** A conjecture in extremal graph theory on how

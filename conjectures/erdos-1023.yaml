@@ -17,6 +17,8 @@ ids:
   external:
     - label: erdosproblems.com/1023
       url: https://www.erdosproblems.com/1023
+    - label: "erdosproblems.com forum #1023"
+      url: https://www.erdosproblems.com/forum/thread/1023
   oeis:
     - A347025
 openness_basis:

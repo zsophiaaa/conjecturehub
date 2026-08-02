@@ -94,6 +94,12 @@ provenance:
     retrieved: 2026-07-31
     source: wikidata
     url: https://www.wikidata.org/wiki/Q2605695
+  - fields:
+      - claims
+    license: CC0-1.0
+    retrieved: 2026-08-02
+    source: erdosproblems.com forum (summaries with links)
+    url: https://www.erdosproblems.com/forum/thread/jacobian-conjecture
 statement:
   formal:
     - category: research open

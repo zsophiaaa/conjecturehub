@@ -9,6 +9,8 @@ ids:
       url: https://oeis.org/A74741
     - label: Wikipedia
       url: https://en.wikipedia.org/wiki/Cram%C3%A9r%27s_conjecture
+    - label: "erdosproblems.com forum #233"
+      url: https://www.erdosproblems.com/forum/thread/233
   formal_conjectures: FormalConjectures/ErdosProblems/233.lean
   oeis:
     - A074741

@@ -7,6 +7,8 @@ ids:
       url: https://www.erdosproblems.com/952
     - label: Wikipedia
       url: https://wikipedia.org/wiki/Gaussian_moat
+    - label: "erdosproblems.com forum #952"
+      url: https://www.erdosproblems.com/forum/thread/952
   formal_conjectures: FormalConjectures/ErdosProblems/952.lean
 openness_basis:
   asserted_by: erdosproblems.com

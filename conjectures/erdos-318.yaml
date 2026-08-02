@@ -18,6 +18,8 @@ ids:
       url: https://www.erdosproblems.com/318
     - label: Erdős problem 318
       url: https://github.com/Larsen-Daniel/Erdos-318/blob/main/318.pdf
+    - label: "erdosproblems.com forum #318"
+      url: https://www.erdosproblems.com/forum/thread/318
   formal_conjectures: FormalConjectures/ErdosProblems/318.lean
 openness_basis:
   asserted_by: erdosproblems.com

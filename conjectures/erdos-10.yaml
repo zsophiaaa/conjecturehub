@@ -5,6 +5,8 @@ ids:
   external:
     - label: erdosproblems.com/10
       url: https://www.erdosproblems.com/10
+    - label: "erdosproblems.com forum #10"
+      url: https://www.erdosproblems.com/forum/thread/10
   formal_conjectures: FormalConjectures/ErdosProblems/10.lean
   oeis:
     - A387053

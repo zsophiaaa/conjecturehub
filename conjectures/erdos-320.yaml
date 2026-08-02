@@ -17,6 +17,8 @@ ids:
   external:
     - label: erdosproblems.com/320
       url: https://www.erdosproblems.com/320
+    - label: "erdosproblems.com forum #320"
+      url: https://www.erdosproblems.com/forum/thread/320
   oeis:
     - A072207
 openness_basis:

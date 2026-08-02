@@ -5,6 +5,8 @@ ids:
   external:
     - label: erdosproblems.com/301
       url: https://www.erdosproblems.com/301
+    - label: "erdosproblems.com forum #301"
+      url: https://www.erdosproblems.com/forum/thread/301
   oeis:
     - A390394
 openness_basis:

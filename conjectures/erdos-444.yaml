@@ -16,6 +16,8 @@ ids:
   external:
     - label: erdosproblems.com/444
       url: https://www.erdosproblems.com/444
+    - label: "erdosproblems.com forum #444"
+      url: https://www.erdosproblems.com/forum/thread/444
 openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31

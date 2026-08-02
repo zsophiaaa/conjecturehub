@@ -18,6 +18,8 @@ ids:
       url: https://www.erdosproblems.com/459
     - label: OEIS A289280
       url: https://oeis.org/A289280
+    - label: "erdosproblems.com forum #459"
+      url: https://www.erdosproblems.com/forum/thread/459
   formal_conjectures: FormalConjectures/ErdosProblems/459.lean
   oeis:
     - A289280

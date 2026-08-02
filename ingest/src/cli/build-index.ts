@@ -35,6 +35,16 @@ interface SearchEntry {
   a: string;
   /** true when a Lean statement exists */
   l: 0 | 1;
+  /** total claim count */
+  c: number;
+  /** forum/reddit-sourced claim count (discussion activity proxy) */
+  f: number;
+}
+
+function forumClaimCount(record: Conjecture): number {
+  return (record.claims ?? []).filter(
+    (c) => c.source.kind === "forum" || c.source.kind === "reddit",
+  ).length;
 }
 
 const records = readAll();
@@ -56,6 +66,8 @@ const search: SearchEntry[] = withStatus.map((r) => ({
   g: [...new Set([...(r.subject?.tags ?? []), ...(r.subject?.msc ?? []).map((m) => `msc:${m}`)])],
   a: (r.aliases ?? []).join(" "),
   l: (r.statement?.formal ?? []).some((f) => f.language === "lean4") ? 1 : 0,
+  c: r.claims?.length ?? 0,
+  f: forumClaimCount(r),
 }));
 
 const byStatus: Record<string, number> = {};
@@ -75,6 +87,12 @@ const stats = {
   withLeanStatement: search.filter((s) => s.l === 1).length,
   withWikidata: records.filter((r) => r.ids?.wikidata).length,
   withErdos: records.filter((r) => r.ids?.erdos).length,
+  withForumClaims: search.filter((s) => s.f > 0).length,
+  topDiscussion: search
+    .filter((s) => s.f > 0)
+    .sort((a, b) => b.f - a.f || b.c - a.c || a.t.localeCompare(b.t))
+    .slice(0, 12)
+    .map((s) => ({ id: s.i, title: s.t, forumClaims: s.f, claims: s.c })),
   withOeis: records.filter((r) => (r.ids?.oeis ?? []).length > 0).length,
   crossLinked: records.filter((r) => {
     const ids = r.ids ?? {};

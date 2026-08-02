@@ -16,6 +16,8 @@ ids:
   external:
     - label: erdosproblems.com/1104
       url: https://www.erdosproblems.com/1104
+    - label: "erdosproblems.com forum #1104"
+      url: https://www.erdosproblems.com/forum/thread/1104
   formal_conjectures: FormalConjectures/ErdosProblems/1104.lean
   oeis:
     - A292528

@@ -18,6 +18,8 @@ ids:
       url: https://www.erdosproblems.com/398
     - label: "Wikipedia: Brocard's problem"
       url: https://en.wikipedia.org/wiki/Brocard%27s_problem
+    - label: "erdosproblems.com forum #398"
+      url: https://www.erdosproblems.com/forum/thread/398
   formal_conjectures: FormalConjectures/ErdosProblems/398.lean
   oeis:
     - A146968

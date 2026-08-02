@@ -16,6 +16,8 @@ ids:
   external:
     - label: erdosproblems.com/391
       url: https://www.erdosproblems.com/391
+    - label: "erdosproblems.com forum #391"
+      url: https://www.erdosproblems.com/forum/thread/391
   oeis:
     - A034258
     - A034259

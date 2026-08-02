@@ -7,6 +7,8 @@ ids:
       url: https://www.erdosproblems.com/141
     - label: Wikipedia
       url: https://en.wikipedia.org/wiki/Primes_in_arithmetic_progression#Consecutive_primes_in_arithmetic_progression
+    - label: "erdosproblems.com forum #141"
+      url: https://www.erdosproblems.com/forum/thread/141
   formal_conjectures: FormalConjectures/ErdosProblems/141.lean
   oeis:
     - A006560

@@ -19,6 +19,8 @@ interface Entry {
   g: string[];
   a: string;
   l: 0 | 1;
+  c: number;
+  f: number;
 }
 
 const PAGE_SIZE = 60;
@@ -33,6 +35,12 @@ const STATUS_FILTERS = [
   { key: "disputed", label: "Disputed" },
   { key: "independent", label: "Independent" },
   { key: "resolved_by_prior_literature", label: "Already in the literature" },
+];
+
+const SORT_OPTIONS = [
+  { key: "relevance", label: "Relevance" },
+  { key: "discussion", label: "Most forum activity" },
+  { key: "claims", label: "Most claims" },
 ];
 
 function tokenize(input: string): string[] {
@@ -69,6 +77,8 @@ export function Browser({ tags }: { tags: { tag: string; count: number }[] }) {
   const [status, setStatus] = useState("");
   const [tag, setTag] = useState("");
   const [leanOnly, setLeanOnly] = useState(false);
+  const [discussionOnly, setDiscussionOnly] = useState(false);
+  const [sort, setSort] = useState("relevance");
   const [limit, setLimit] = useState(PAGE_SIZE);
 
   useEffect(() => {
@@ -77,6 +87,9 @@ export function Browser({ tags }: { tags: { tag: string; count: number }[] }) {
     if (initialStatus) setStatus(initialStatus);
     const initialQuery = params.get("q");
     if (initialQuery) setQuery(initialQuery);
+    if (params.get("discussion") === "1") setDiscussionOnly(true);
+    const initialSort = params.get("sort");
+    if (initialSort === "discussion" || initialSort === "claims") setSort(initialSort);
   }, []);
 
   useEffect(() => {
@@ -112,19 +125,29 @@ export function Browser({ tags }: { tags: { tag: string; count: number }[] }) {
       if (status && entry.s !== status) continue;
       if (leanOnly && entry.l !== 1) continue;
       if (tag && !entry.g.includes(tag)) continue;
+      if (discussionOnly && entry.f === 0) continue;
 
       const s = score(entry, tokens, haystacks[idx]!);
       if (s < 0) continue;
       scored.push({ entry, score: s });
     }
 
-    scored.sort((a, b) => b.score - a.score || a.entry.t.localeCompare(b.entry.t));
+    scored.sort((a, b) => {
+      if (sort === "discussion") {
+        return b.entry.f - a.entry.f || b.entry.c - a.entry.c || a.entry.t.localeCompare(b.entry.t);
+      }
+      if (sort === "claims") {
+        return b.entry.c - a.entry.c || b.entry.f - a.entry.f || a.entry.t.localeCompare(b.entry.t);
+      }
+      return b.score - a.score || b.entry.f - a.entry.f || a.entry.t.localeCompare(b.entry.t);
+    });
+
     return scored.map((s) => s.entry);
-  }, [entries, haystacks, query, status, tag, leanOnly]);
+  }, [entries, haystacks, query, status, tag, leanOnly, discussionOnly, sort]);
 
   useEffect(() => {
     setLimit(PAGE_SIZE);
-  }, [query, status, tag, leanOnly]);
+  }, [query, status, tag, leanOnly, discussionOnly, sort]);
 
   const inputClass = "ui-input";
 
@@ -140,6 +163,17 @@ export function Browser({ tags }: { tags: { tag: string; count: number }[] }) {
             placeholder="Search by name, alias, or tag"
             className={`w-full ${inputClass}`}
           />
+        </label>
+
+        <label className="flex items-center gap-2 text-sm text-ink-muted">
+          <span className="sr-only">Sort by</span>
+          <select value={sort} onChange={(e) => setSort(e.target.value)} className={inputClass}>
+            {SORT_OPTIONS.map((f) => (
+              <option key={f.key} value={f.key}>
+                {f.label}
+              </option>
+            ))}
+          </select>
         </label>
 
         <label className="flex items-center gap-2 text-sm text-ink-muted">
@@ -174,6 +208,16 @@ export function Browser({ tags }: { tags: { tag: string; count: number }[] }) {
           />
           Has a Lean statement
         </label>
+
+        <label className="flex cursor-pointer items-center gap-2 border border-border-strong bg-surface-1 px-3 py-2 text-sm text-ink">
+          <input
+            type="checkbox"
+            checked={discussionOnly}
+            onChange={(e) => setDiscussionOnly(e.target.checked)}
+            className="size-4"
+          />
+          Has forum summaries
+        </label>
       </div>
 
       {error ? (
@@ -186,6 +230,7 @@ export function Browser({ tags }: { tags: { tag: string; count: number }[] }) {
         <>
           <p className="text-sm text-ink-muted">
             {results.length.toLocaleString("en-US")} of {entries.length.toLocaleString("en-US")} conjectures
+            {discussionOnly ? " with curated forum discussion" : ""}
           </p>
 
           <ul className="ui-panel divide-y divide-border overflow-hidden">
@@ -204,6 +249,14 @@ export function Browser({ tags }: { tags: { tag: string; count: number }[] }) {
                     ) : null}
                   </span>
                   <span className="flex items-center gap-2">
+                    {entry.f > 0 ? (
+                      <span
+                        className="rounded border border-accent/40 bg-accent/10 px-1.5 py-0.5 text-[11px] text-ink-muted"
+                        title={`${entry.f} forum-sourced claim(s)`}
+                      >
+                        {entry.f} forum
+                      </span>
+                    ) : null}
                     {entry.l === 1 ? (
                       <span className="rounded border border-border-strong px-1.5 py-0.5 font-mono text-[11px] text-ink-muted">
                         Lean

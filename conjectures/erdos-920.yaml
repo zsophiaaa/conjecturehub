@@ -23,6 +23,8 @@ ids:
       url: https://www.erdosproblems.com/986
     - label: erdosproblems.com/1104
       url: https://www.erdosproblems.com/1104
+    - label: "erdosproblems.com forum #920"
+      url: https://www.erdosproblems.com/forum/thread/920
   formal_conjectures: FormalConjectures/ErdosProblems/920.lean
 openness_basis:
   asserted_by: erdosproblems.com

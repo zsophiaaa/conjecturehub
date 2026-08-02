@@ -9,6 +9,8 @@ ids:
       url: https://www.erdosproblems.com/1102
     - label: erdosproblems.com/1209
       url: https://www.erdosproblems.com/1209
+    - label: "erdosproblems.com forum #1209"
+      url: https://www.erdosproblems.com/forum/thread/1209
   formal_conjectures: FormalConjectures/ErdosProblems/1209.lean
 openness_basis:
   asserted_by: erdosproblems.com

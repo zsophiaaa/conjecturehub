@@ -16,6 +16,8 @@ ids:
   external:
     - label: erdosproblems.com/35
       url: https://www.erdosproblems.com/35
+    - label: "erdosproblems.com forum #35"
+      url: https://www.erdosproblems.com/forum/thread/35
 openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31

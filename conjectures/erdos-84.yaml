@@ -5,6 +5,8 @@ ids:
   external:
     - label: erdosproblems.com/84
       url: https://www.erdosproblems.com/84
+    - label: "erdosproblems.com forum #84"
+      url: https://www.erdosproblems.com/forum/thread/84
 openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31

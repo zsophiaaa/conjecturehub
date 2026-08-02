@@ -18,6 +18,8 @@ ids:
       url: https://www.erdosproblems.com/358
     - label: Erdős problem 358
       url: https://terrytao.wordpress.com/wp-content/uploads/2026/02/erdos-358-2.pdf
+    - label: "erdosproblems.com forum #358"
+      url: https://www.erdosproblems.com/forum/thread/358
   formal_conjectures: FormalConjectures/ErdosProblems/358.lean
 openness_basis:
   asserted_by: erdosproblems.com

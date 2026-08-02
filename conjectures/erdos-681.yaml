@@ -5,6 +5,8 @@ ids:
   external:
     - label: erdosproblems.com/681
       url: https://www.erdosproblems.com/681
+    - label: "erdosproblems.com forum #681"
+      url: https://www.erdosproblems.com/forum/thread/681
   formal_conjectures: FormalConjectures/ErdosProblems/681.lean
   oeis:
     - A389680

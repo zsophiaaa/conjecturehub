@@ -22,6 +22,8 @@ ids:
       url: https://arxiv.org/abs/2103.14179
     - label: McKay, Extremal graphs for bipartization of triangle-free graphs
       url: https://users.cecs.anu.edu.au/~bdm/data/graphs.html
+    - label: "erdosproblems.com forum #23"
+      url: https://www.erdosproblems.com/forum/thread/23
   formal_conjectures: FormalConjectures/ErdosProblems/23.lean
   oeis:
     - A389646

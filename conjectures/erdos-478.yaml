@@ -5,6 +5,8 @@ ids:
   external:
     - label: erdosproblems.com/478
       url: https://www.erdosproblems.com/478
+    - label: "erdosproblems.com forum #478"
+      url: https://www.erdosproblems.com/forum/thread/478
   oeis:
     - A210184
 openness_basis:

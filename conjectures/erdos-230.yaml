@@ -16,6 +16,8 @@ ids:
   external:
     - label: erdosproblems.com/230
       url: https://www.erdosproblems.com/230
+    - label: "erdosproblems.com forum #230"
+      url: https://www.erdosproblems.com/forum/thread/230
 openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31

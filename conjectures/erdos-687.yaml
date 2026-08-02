@@ -5,6 +5,8 @@ ids:
   external:
     - label: erdosproblems.com/687
       url: https://www.erdosproblems.com/687
+    - label: "erdosproblems.com forum #687"
+      url: https://www.erdosproblems.com/forum/thread/687
   oeis:
     - A048670
     - A058989

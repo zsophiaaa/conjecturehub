@@ -9,8 +9,9 @@ ConjectureHub combines data from several upstream sources, verification tooling 
 | [google-deepmind/formal-conjectures](https://github.com/google-deepmind/formal-conjectures) | Apache-2.0 (code), CC-BY-4.0 (other) | Titles, informal statements, Lean theorem names, MSC codes |
 | [teorth/erdosproblems](https://github.com/teorth/erdosproblems) | Apache-2.0 | Problem numbers, status, OEIS crosswalks, tags |
 | [Wikidata](https://www.wikidata.org) | CC0-1.0 | QIDs, labels, aliases, Wikipedia links |
+| [erdosproblems.com](https://www.erdosproblems.com) | Link + summarized claims | Forum comments are **not** copied verbatim; see [DISCUSSION-SOURCES.md](./DISCUSSION-SOURCES.md) |
 
-Statement prose from [erdosproblems.com](https://www.erdosproblems.com) is **not** redistributed — we link out. See [conjectures/LICENSE.md](../conjectures/LICENSE.md) for per-record `provenance`.
+Statement prose from erdosproblems.com is **not** redistributed — we link out. See [conjectures/LICENSE.md](../conjectures/LICENSE.md) for per-record `provenance`.
 
 ## Monitoring / sweep sources (metadata + links)
 

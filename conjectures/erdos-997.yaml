@@ -20,6 +20,8 @@ ids:
       url: https://arxiv.org/abs/2603.29961
     - label: Lean formalisation of Erdős problem 997
       url: https://live.lean-lang.org/#project=mathlib-v4.28.0&url=https://gist.githubusercontent.com/pitmonticone/016f2ed66b4cd1c4c4b9998095170e60/raw/b7dfc05c525ae385b5835f89f1ada721443e4305/Erdos997.lean
+    - label: "erdosproblems.com forum #997"
+      url: https://www.erdosproblems.com/forum/thread/997
   formal_conjectures: FormalConjectures/ErdosProblems/997.lean
 openness_basis:
   asserted_by: erdosproblems.com

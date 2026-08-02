@@ -7,6 +7,8 @@ ids:
       url: https://www.erdosproblems.com/689
     - label: Ben Green's Open Problem 45
       url: https://people.maths.ox.ac.uk/greenbj/papers/open-problems.pdf#problem.45
+    - label: "erdosproblems.com forum #689"
+      url: https://www.erdosproblems.com/forum/thread/689
   formal_conjectures: FormalConjectures/ErdosProblems/689.lean
 openness_basis:
   asserted_by: erdosproblems.com

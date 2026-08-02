@@ -21,6 +21,8 @@ ids:
       url: https://mathscinet.ams.org/mathscinet/relay-station?mr=1487304
     - label: erdosproblems.com/98
       url: https://www.erdosproblems.com/98
+    - label: "erdosproblems.com forum #98"
+      url: https://www.erdosproblems.com/forum/thread/98
   formal_conjectures: FormalConjectures/ErdosProblems/98.lean
 openness_basis:
   asserted_by: erdosproblems.com

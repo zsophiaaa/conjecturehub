@@ -17,6 +17,8 @@ ids:
   external:
     - label: erdosproblems.com/603
       url: https://www.erdosproblems.com/603
+    - label: "erdosproblems.com forum #603"
+      url: https://www.erdosproblems.com/forum/thread/603
 openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2026-07-06

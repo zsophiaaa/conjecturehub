@@ -9,6 +9,8 @@ ids:
       url: https://www.erdosproblems.com/950
     - label: mathoverflow/508491
       url: https://mathoverflow.net/questions/508491
+    - label: "erdosproblems.com forum #950"
+      url: https://www.erdosproblems.com/forum/thread/950
   formal_conjectures: FormalConjectures/ErdosProblems/950.lean
 openness_basis:
   asserted_by: erdosproblems.com

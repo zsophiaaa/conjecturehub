@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { getConjecture, getCorpus, type Claim, type Conjecture } from "@/lib/corpus";
 import { StatusBadge, StatusCaveat, TIER_LABELS } from "@/components/StatusBadge";
 import { RecentDevelopmentBanner } from "@/components/RecentDevelopmentBanner";
+import { ForumDiscussionSummary } from "@/components/ForumDiscussionSummary";
 import { MathText } from "@/components/MathText";
 import { CommunitySection } from "@/components/CommunitySection";
 
@@ -149,7 +150,7 @@ function ClaimCard({ claim }: { claim: Claim }) {
 
 function Identifiers({ conjecture }: { conjecture: Conjecture }) {
   const ids = conjecture.ids ?? {};
-  const links: { label: string; value: string; href?: string }[] = [];
+  const links: { label: string; value: string; href?: string; kind?: "discussion" | "other" }[] = [];
 
   if (ids.erdos) {
     links.push({
@@ -174,15 +175,47 @@ function Identifiers({ conjecture }: { conjecture: Conjecture }) {
     links.push({ label: "OEIS", value: seq, href: `https://oeis.org/${seq}` });
   }
   for (const ext of ids.external ?? []) {
-    links.push({ label: "Reference", value: ext.label, href: ext.url });
+    const isDiscussion =
+      /forum|reddit|mathoverflow|zulip|mastodon/i.test(ext.url) ||
+      /forum|reddit|discussion/i.test(ext.label);
+    links.push({
+      label: ext.label,
+      value: ext.label,
+      href: ext.url,
+      kind: isDiscussion ? "discussion" : "other",
+    });
   }
+
+  const discussion = links.filter((l) => l.kind === "discussion");
+  const other = links.filter((l) => l.kind !== "discussion");
 
   if (links.length === 0) return null;
 
   return (
-    <Section title={`Identifiers and links (${links.length})`}>
-      <dl className="ui-panel grid gap-x-6 gap-y-2 p-4 text-sm sm:grid-cols-2">
-        {links.map((link, i) => (
+    <>
+      {discussion.length > 0 ? (
+        <Section title={`Discussion links (${discussion.length})`}>
+          <p className="text-sm text-ink-muted">
+            Summarized contributions appear in claim history below. Full threads stay on the source
+            sites — we link and attribute, not mirror.
+          </p>
+          <dl className="ui-panel grid gap-x-6 gap-y-2 p-4 text-sm sm:grid-cols-2">
+            {discussion.map((link, i) => (
+              <div key={`d-${link.label}-${i}`} className="flex flex-wrap gap-x-2">
+                <dt className="font-medium text-ink-faint">{link.label}</dt>
+                <dd className="min-w-0 break-words">
+                  <a href={link.href}>{link.href}</a>
+                </dd>
+              </div>
+            ))}
+          </dl>
+        </Section>
+      ) : null}
+
+      {other.length > 0 ? (
+        <Section title={`Identifiers and links (${other.length})`}>
+          <dl className="ui-panel grid gap-x-6 gap-y-2 p-4 text-sm sm:grid-cols-2">
+            {other.map((link, i) => (
           <div key={`${link.label}-${i}`} className="flex flex-wrap gap-x-2">
             <dt className="font-medium text-ink-faint">{link.label}</dt>
             <dd className="min-w-0 break-words">
@@ -193,9 +226,11 @@ function Identifiers({ conjecture }: { conjecture: Conjecture }) {
               )}
             </dd>
           </div>
-        ))}
-      </dl>
-    </Section>
+            ))}
+          </dl>
+        </Section>
+      ) : null}
+    </>
   );
 }
 
@@ -243,6 +278,8 @@ export default async function ConjecturePage({ params }: { params: Promise<{ id:
           </p>
         </Section>
       )}
+
+      <ForumDiscussionSummary conjecture={conjecture} />
 
       <Section title={`Claim history (${claims.length})`}>
         {claims.length === 0 ? (

@@ -16,6 +16,8 @@ ids:
   external:
     - label: erdosproblems.com/990
       url: https://www.erdosproblems.com/990
+    - label: "erdosproblems.com forum #990"
+      url: https://www.erdosproblems.com/forum/thread/990
 openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2026-04-19

@@ -7,6 +7,8 @@ ids:
       url: https://www.erdosproblems.com/120
     - label: St20
       url: http://matwbn.icm.edu.pl/ksiazki/fm/fm1/fm1111.pdf
+    - label: "erdosproblems.com forum #120"
+      url: https://www.erdosproblems.com/forum/thread/120
   formal_conjectures: FormalConjectures/ErdosProblems/120.lean
 openness_basis:
   asserted_by: erdosproblems.com

@@ -18,6 +18,8 @@ ids:
       url: https://www.erdosproblems.com/66
     - label: erdosproblems.com/67
       url: https://www.erdosproblems.com/67
+    - label: "erdosproblems.com forum #67"
+      url: https://www.erdosproblems.com/forum/thread/67
   formal_conjectures: FormalConjectures/ErdosProblems/67.lean
   oeis:
     - A181740

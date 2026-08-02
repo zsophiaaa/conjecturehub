@@ -29,6 +29,8 @@ ids:
       url: https://www.erdosproblems.com/1138
     - label: Disproof of Erdős Problem 1138
       url: https://sourish-kumrawat.github.io/papers/Erdos_1138.pdf
+    - label: "erdosproblems.com forum #1138"
+      url: https://www.erdosproblems.com/forum/thread/1138
   formal_conjectures: FormalConjectures/ErdosProblems/1138.lean
 openness_basis:
   asserted_by: erdosproblems.com

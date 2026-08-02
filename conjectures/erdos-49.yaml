@@ -16,6 +16,8 @@ ids:
   external:
     - label: erdosproblems.com/49
       url: https://www.erdosproblems.com/49
+    - label: "erdosproblems.com forum #49"
+      url: https://www.erdosproblems.com/forum/thread/49
   oeis:
     - A365339
     - A365474

@@ -7,6 +7,8 @@ ids:
       url: https://www.erdosproblems.com/961
     - label: RaSh73
       url: https://eudml.org/doc/urn:eudml:doc:205214
+    - label: "erdosproblems.com forum #961"
+      url: https://www.erdosproblems.com/forum/thread/961
   formal_conjectures: FormalConjectures/ErdosProblems/961.lean
   oeis:
     - A213253

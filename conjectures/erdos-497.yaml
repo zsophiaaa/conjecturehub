@@ -17,6 +17,8 @@ ids:
   external:
     - label: erdosproblems.com/497
       url: https://www.erdosproblems.com/497
+    - label: "erdosproblems.com forum #497"
+      url: https://www.erdosproblems.com/forum/thread/497
   oeis:
     - A000372
 openness_basis:

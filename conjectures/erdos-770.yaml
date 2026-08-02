@@ -5,6 +5,8 @@ ids:
   external:
     - label: erdosproblems.com/770
       url: https://www.erdosproblems.com/770
+    - label: "erdosproblems.com forum #770"
+      url: https://www.erdosproblems.com/forum/thread/770
   formal_conjectures: FormalConjectures/ErdosProblems/770.lean
   oeis:
     - A263647

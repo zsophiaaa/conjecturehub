@@ -18,6 +18,8 @@ ids:
       url: https://www.erdosproblems.com/107
     - label: Wikipedia
       url: https://en.wikipedia.org/wiki/Happy_ending_problem
+    - label: "erdosproblems.com forum #107"
+      url: https://www.erdosproblems.com/forum/thread/107
   formal_conjectures: FormalConjectures/ErdosProblems/107.lean
   oeis:
     - A000051

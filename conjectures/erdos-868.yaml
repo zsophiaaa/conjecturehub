@@ -18,6 +18,8 @@ ids:
       url: https://www.erdosproblems.com/868
     - label: Erdős problem 868
       url: https://github.com/Larsen-Daniel/Erdos-868/blob/main/868.pdf
+    - label: "erdosproblems.com forum #868"
+      url: https://www.erdosproblems.com/forum/thread/868
   formal_conjectures: FormalConjectures/ErdosProblems/868.lean
 openness_basis:
   asserted_by: erdosproblems.com

@@ -16,6 +16,8 @@ ids:
   external:
     - label: erdosproblems.com/380
       url: https://www.erdosproblems.com/380
+    - label: "erdosproblems.com forum #380"
+      url: https://www.erdosproblems.com/forum/thread/380
   oeis:
     - A070003
     - A388654

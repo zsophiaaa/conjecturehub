@@ -17,6 +17,8 @@ ids:
   external:
     - label: erdosproblems.com/989
       url: https://www.erdosproblems.com/989
+    - label: "erdosproblems.com forum #989"
+      url: https://www.erdosproblems.com/forum/thread/989
 openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31

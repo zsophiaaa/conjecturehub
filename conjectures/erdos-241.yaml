@@ -7,6 +7,8 @@ ids:
       url: https://www.erdosproblems.com/30
     - label: erdosproblems.com/241
       url: https://www.erdosproblems.com/241
+    - label: "erdosproblems.com forum #241"
+      url: https://www.erdosproblems.com/forum/thread/241
   formal_conjectures: FormalConjectures/ErdosProblems/241.lean
   oeis:
     - A387704

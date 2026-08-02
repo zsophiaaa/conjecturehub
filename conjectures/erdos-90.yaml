@@ -21,6 +21,92 @@ claims:
       url: https://www.erdosproblems.com/90
     state: active
     type: disproved
+  - asserted_on: 2026-05-26
+    authors:
+      - OpenAI internal model
+      - Lijie Chen
+      - Mark Sellke
+      - Mehtaab Sawhney
+    evidence_tier: preprint
+    id: erdos-90-openai-disproof-forum
+    notes: >-
+      Internal OpenAI model produced a one-shot proof disproving the n^{1+o(1)} upper bound,
+      constructing infinitely many n-point sets with at least n^{1+c} unit distances (c>0 absolute).
+      Human verification by Sellke and Sawhney; method uses CM-field lattices and Golod–Shafarevich
+      towers. Forum announcement May 2026.
+    ai_assistance:
+      used: yes
+      systems:
+        - OpenAI internal model
+      role: discovery
+    recorded_on: 2026-08-02
+    source:
+      kind: forum
+      title: erdosproblems.com forum #90 — OpenAI disproof announcement
+      url: https://www.erdosproblems.com/forum/thread/90
+    state: active
+    type: disproved
+  - asserted_on: 2026-05-26
+    authors:
+      - Noga Alon
+      - Thomas F. Bloom
+      - W. T. Gowers
+      - Daniel Litt
+      - Will Sawin
+      - Arul Shankar
+      - Jacob Tsimerman
+      - Victor Wang
+      - Melanie Matchett Wood
+    evidence_tier: preprint
+    id: erdos-90-remarks-human-digested
+    notes: >-
+      Companion "Remarks" paper (arXiv:2605.20695) gives a short human-verified digest of the AI
+      proof. Pipeline: number fields → norm-one vectors → lattice windows → projection to R².
+      Victor Wang simplified from 3-class to 2-class field towers.
+    recorded_on: 2026-08-02
+    source:
+      kind: forum
+      title: erdosproblems.com forum #90 — Remarks paper discussion
+      url: https://www.erdosproblems.com/forum/thread/90
+    state: active
+    type: disproved
+  - asserted_on: 2026-05-26
+    authors:
+      - Will Sawin
+    evidence_tier: preprint
+    id: erdos-90-sawin-explicit-exponent
+    notes: >-
+      Sharpened the construction to explicit exponent 1.014114…, making every step quantitative.
+      Disproves both Erdős's n^{1+o(1)} conjecture and the weaker n^{1+O(1/log log n)} bound.
+      Forum participants used ChatGPT to optimize finite parameters toward ~1.03–1.035.
+    recorded_on: 2026-08-02
+    source:
+      kind: forum
+      title: erdosproblems.com forum #90 — Sawin explicit bound
+      url: https://www.erdosproblems.com/forum/thread/90
+      quote: Will Sawin seems to have shown eps = 0.014.
+    state: active
+    type: disproved
+  - asserted_on: 2026-06-01
+    authors:
+      - Logical Intelligence
+    evidence_tier: preprint
+    id: erdos-90-aleph-formalization
+    notes: >-
+      Announced formalization of the OpenAI solution using Aleph Prover. Community converted to
+      standalone Lean; unconditional formalization subsequently reported on the thread.
+    ai_assistance:
+      used: yes
+      systems:
+        - Aleph Prover
+      role: formalization
+    recorded_on: 2026-08-02
+    source:
+      kind: forum
+      title: erdosproblems.com forum #90 — Aleph Prover formalization
+      url: https://www.erdosproblems.com/forum/thread/90
+    state: active
+    type: partial
 id: erdos-90
 ids:
   erdos: "90"
@@ -31,6 +117,8 @@ ids:
       url: https://arxiv.org/abs/2605.20579
     - label: "*Remarks on the disproof of the unit distance conjecture*"
       url: https://arxiv.org/abs/2605.20695
+    - label: "erdosproblems.com forum #90"
+      url: https://www.erdosproblems.com/forum/thread/90
   formal_conjectures: FormalConjectures/ErdosProblems/90.lean
   oeis:
     - A186705
@@ -38,6 +126,11 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2026-06-07
   meaning: no_published_solution_known_to_curator
+  note: >-
+    Disproved (page edited Jun 2026; $500 bounty noted). ~44 forum comments: Sawin's explicit
+    exponent (arXiv:2605.20579), human-digested Remarks (arXiv:2605.20695), community parameter
+    optimization race, and Aleph Prover formalization. Side threads discuss restricted variants
+    and whether the constructions could attack distinct-distances or plane chromatic number.
 provenance:
   - fields:
       - title
@@ -61,6 +154,13 @@ provenance:
     source: teorth/erdosproblems
     upstream_version: d031865128a7ddccd85e8099f0f818211cfc9a41
     url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
+  - fields:
+      - claims
+      - openness_basis.note
+    license: CC0-1.0
+    retrieved: 2026-08-02
+    source: erdosproblems.com forum (summaries with links)
+    url: https://www.erdosproblems.com/forum/thread/90
 statement:
   formal:
     - category: research solved

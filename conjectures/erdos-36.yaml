@@ -7,6 +7,8 @@ ids:
       url: https://www.erdosproblems.com/36
     - label: "Wikipedial: Minimum overlap problem"
       url: https://en.wikipedia.org/wiki/Minimum_overlap_problem
+    - label: "erdosproblems.com forum #36"
+      url: https://www.erdosproblems.com/forum/thread/36
   formal_conjectures: FormalConjectures/ErdosProblems/36.lean
   oeis:
     - A393584

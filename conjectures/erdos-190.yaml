@@ -17,6 +17,8 @@ ids:
   external:
     - label: erdosproblems.com/190
       url: https://www.erdosproblems.com/190
+    - label: "erdosproblems.com forum #190"
+      url: https://www.erdosproblems.com/forum/thread/190
 openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2026-06-02

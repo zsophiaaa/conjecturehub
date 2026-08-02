@@ -7,6 +7,8 @@ ids:
       url: https://www.erdosproblems.com/329
     - label: arXiv:2510.19804
       url: https://arxiv.org/abs/2510.19804
+    - label: "erdosproblems.com forum #329"
+      url: https://www.erdosproblems.com/forum/thread/329
   formal_conjectures: FormalConjectures/ErdosProblems/329.lean
 openness_basis:
   asserted_by: erdosproblems.com

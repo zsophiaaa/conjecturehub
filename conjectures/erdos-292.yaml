@@ -16,6 +16,8 @@ ids:
   external:
     - label: erdosproblems.com/292
       url: https://www.erdosproblems.com/292
+    - label: "erdosproblems.com forum #292"
+      url: https://www.erdosproblems.com/forum/thread/292
   oeis:
     - A092671
 openness_basis:

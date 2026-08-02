@@ -33,6 +33,8 @@ ids:
       url: https://arxiv.org/abs/2604.06609
     - label: Lean formalisation of Erdős problem 1141
       url: https://github.com/yuta0x89/ErdosProblems/blob/a1319f732cdee5140faf47d984e2c451c1184803/Erdos1141.lean
+    - label: "erdosproblems.com forum #1141"
+      url: https://www.erdosproblems.com/forum/thread/1141
   formal_conjectures: FormalConjectures/ErdosProblems/1141.lean
   oeis:
     - A214583

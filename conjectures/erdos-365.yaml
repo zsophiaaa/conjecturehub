@@ -5,6 +5,8 @@ ids:
   external:
     - label: erdosproblems.com/365
       url: https://www.erdosproblems.com/365
+    - label: "erdosproblems.com forum #365"
+      url: https://www.erdosproblems.com/forum/thread/365
   oeis:
     - A060355
     - A060859

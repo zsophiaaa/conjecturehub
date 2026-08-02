@@ -16,6 +16,8 @@ ids:
   external:
     - label: erdosproblems.com/543
       url: https://www.erdosproblems.com/543
+    - label: "erdosproblems.com forum #543"
+      url: https://www.erdosproblems.com/forum/thread/543
 openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2026-01-23

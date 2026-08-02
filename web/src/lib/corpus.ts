@@ -108,6 +108,8 @@ export interface Stats {
   byStatus: Record<string, number>;
   byTier: Record<string, number>;
   topTags: { tag: string; count: number }[];
+  withForumClaims?: number;
+  topDiscussion?: { id: string; title: string; forumClaims: number; claims: number }[];
 }
 
 const GENERATED = path.join(process.cwd(), ".generated");

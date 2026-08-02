@@ -31,6 +31,8 @@ ids:
       url: https://archivara.org/paper/df04f023-6ef0-4c52-bd12-18cdaa8f0741
     - label: Lean formalisation of Erdős problem 897
       url: https://github.com/plby/lean-proofs/blob/main/src/v4.24.0/ErdosProblems/Erdos897.lean
+    - label: "erdosproblems.com forum #897"
+      url: https://www.erdosproblems.com/forum/thread/897
   formal_conjectures: FormalConjectures/ErdosProblems/897.lean
 openness_basis:
   asserted_by: erdosproblems.com

@@ -5,6 +5,8 @@ ids:
   external:
     - label: erdosproblems.com/201
       url: https://www.erdosproblems.com/201
+    - label: "erdosproblems.com forum #201"
+      url: https://www.erdosproblems.com/forum/thread/201
   oeis:
     - A003002
     - A003003

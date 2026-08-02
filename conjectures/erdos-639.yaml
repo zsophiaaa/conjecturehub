@@ -16,6 +16,8 @@ ids:
   external:
     - label: erdosproblems.com/639
       url: https://www.erdosproblems.com/639
+    - label: "erdosproblems.com forum #639"
+      url: https://www.erdosproblems.com/forum/thread/639
 openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2026-05-06

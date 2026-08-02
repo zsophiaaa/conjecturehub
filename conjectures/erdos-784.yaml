@@ -17,6 +17,8 @@ ids:
   external:
     - label: erdosproblems.com/784
       url: https://www.erdosproblems.com/784
+    - label: "erdosproblems.com forum #784"
+      url: https://www.erdosproblems.com/forum/thread/784
 openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-12-20

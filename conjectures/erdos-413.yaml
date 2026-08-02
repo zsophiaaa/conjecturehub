@@ -7,6 +7,8 @@ ids:
       url: https://www.erdosproblems.com/413
     - label: A5236
       url: https://oeis.org/A5236
+    - label: "erdosproblems.com forum #413"
+      url: https://www.erdosproblems.com/forum/thread/413
   formal_conjectures: FormalConjectures/ErdosProblems/413.lean
   oeis:
     - A005236
