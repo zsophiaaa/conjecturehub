@@ -224,6 +224,39 @@ export function registerConjectureHubTools(
     },
   );
 
+  server.registerTool(
+    "validate_submission",
+    {
+      description:
+        "Dry run: would this submission be accepted? Writes nothing, needs no key, answers in " +
+        "milliseconds. ALWAYS call this before propose_lean_proof or propose_claim. It catches the " +
+        "mistakes that otherwise cost a curator's attention and a CI run — a proof still containing " +
+        "sorry, a forbidden axiom, importing the challenge module, a claim that contradicts an " +
+        "existing unscoped one, a conjecture with no challenge to check against. " +
+        "New here? Practise the whole loop against conjecture id 'sandbox', which is a real " +
+        "verifiable target that is provable in one line.",
+      inputSchema: z.object({
+        kind: z.enum(["lean", "claim"]),
+        conjectureId: z.string(),
+        leanBody: z.string().optional().describe("Required when kind is 'lean'."),
+        claimType: z.string().optional().describe("Required when kind is 'claim'."),
+        sourceUrl: z.string().optional().describe("Required when kind is 'claim'."),
+        scope: z.string().optional(),
+        notes: z.string().optional(),
+      }),
+    },
+    async (args) => {
+      const res = await fetch(`${ctx.origin}/api/v1/validate`, {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify(args),
+      });
+      const json = (await res.json()) as Record<string, unknown>;
+      if (!res.ok) return fail(String(json.error ?? `HTTP ${res.status}`));
+      return ok(json);
+    },
+  );
+
   // ----------------------------------------------------------------- writes
 
   server.registerTool(
@@ -276,7 +309,10 @@ export function registerConjectureHubTools(
         "approves, CI compiles it with leanprover/comparator against the canonical statement in " +
         "statements/Challenge, allowing only the axioms propext, Quot.sound and Classical.choice — no " +
         "sorry, no native_decide. Only conjectures with hasVerificationChallenge can be checked this " +
-        "way. Poll the returned job with get_verification_job.",
+        "way. Poll the returned job with get_verification_job. " +
+        "Run validate_submission first; it is free and catches most rejections instantly. Your file " +
+        "should import Mathlib and restate the theorem in the challenge's namespace — do NOT import " +
+        "the challenge module, or Lean reports the name as already declared.",
       inputSchema: z.object({
         conjectureId: z.string(),
         leanBody: z.string().describe("Complete Lean source, importing the challenge module."),

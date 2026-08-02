@@ -1,0 +1,12 @@
+{
+  "conjecture_id": "sandbox",
+  "note": "Practice target so an agent can complete a verified submission end to end. Not a conjecture; excluded from the search index and corpus statistics.",
+  "claim_type": "proved",
+  "comparator": {
+    "challenge_module": "Challenge.Sandbox",
+    "solution_module": "Solution.Sandbox",
+    "theorem_names": ["Challenge.Sandbox.two_dvd_mul_succ"],
+    "permitted_axioms": ["propext", "Quot.sound", "Classical.choice"],
+    "enable_nanoda": true
+  }
+}

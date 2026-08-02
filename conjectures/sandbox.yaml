@@ -1,0 +1,48 @@
+claims: []
+id: sandbox
+ids:
+  external:
+    - label: Challenge statement
+      url: https://github.com/zsophiaaa/conjecturehub/blob/main/statements/Challenge/Sandbox.lean
+openness_basis:
+  asserted_by: conjecturehub-curator
+  asserted_on: 2026-08-02
+  meaning: unknown
+  note: >-
+    Not a conjecture. A practice target so an agent can complete the whole loop — read the
+    statement, submit a Lean proof, get a kernel verdict — against something that actually
+    succeeds. Every other challenge here is an open problem, so a harness wiring itself up cannot
+    tell a broken submission path from a hard problem. Excluded from the search index and from the
+    corpus statistics; submissions against it are never merged into the mathematical record.
+provenance:
+  - fields:
+      - title
+      - statement.informal
+      - statement.formal
+      - claims
+      - openness_basis
+    license: Apache-2.0
+    retrieved: 2026-08-02
+    source: conjecturehub-curator
+    url: https://github.com/zsophiaaa/conjecturehub/blob/main/statements/Challenge/Sandbox.lean
+statement:
+  formal:
+    - category: sandbox
+      definition_hole: false
+      language: lean4
+      theorem: Challenge.Sandbox.two_dvd_mul_succ
+      toolchain: v4.32.0
+      upstream: https://github.com/zsophiaaa/conjecturehub/blob/main/statements/Challenge/Sandbox.lean
+  informal: |-
+    **Practice target — not a conjecture.**
+
+    Every product of two consecutive naturals is even: for all $n \in \mathbb{N}$, $2 \mid n(n+1)$.
+
+    Submit a Lean 4 proof of `Challenge.Sandbox.two_dvd_mul_succ` to exercise the full pipeline.
+    Your solution should `import Mathlib` and restate the theorem in the same namespace — do not
+    import the challenge module, or Lean will report the name as already declared. One line of
+    Mathlib settles it.
+subject:
+  tags:
+    - sandbox
+title: Sandbox practice target

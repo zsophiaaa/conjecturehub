@@ -71,6 +71,12 @@ interface SearchEntry {
   k?: 1;
 }
 
+/**
+ * Fixtures live in the corpus so the API and MCP can serve them, but they are
+ * not mathematics and must not appear in a search or inflate a count.
+ */
+const FIXTURE_IDS = new Set(["sandbox"]);
+
 const records = readAll();
 if (records.length === 0) {
   console.error("No conjectures found. Run `npm run seed` first.");
@@ -111,7 +117,9 @@ const withStatus = records.map((record: Conjecture) => {
   };
 });
 
-const search: SearchEntry[] = withStatus.map((r) => {
+const indexable = withStatus.filter((r) => !FIXTURE_IDS.has(r.id));
+
+const search: SearchEntry[] = indexable.map((r) => {
   const entry: SearchEntry = {
     i: r.id,
     t: r.title,
@@ -135,7 +143,7 @@ const byStatus: Record<string, number> = {};
 const byTier: Record<string, number> = {};
 const byTag: Record<string, number> = {};
 
-for (const r of withStatus) {
+for (const r of indexable) {
   byStatus[r.derived.key] = (byStatus[r.derived.key] ?? 0) + 1;
   if (r.derived.tier) byTier[r.derived.tier] = (byTier[r.derived.tier] ?? 0) + 1;
   for (const tag of r.subject?.tags ?? []) byTag[tag] = (byTag[tag] ?? 0) + 1;
@@ -172,18 +180,18 @@ const aiTraceExamples = (benchmarkFile.ai_trace_examples ?? [])
 
 const stats = {
   generatedAt: new Date().toISOString(),
-  total: records.length,
-  claims: records.reduce((n, r) => n + (r.claims?.length ?? 0), 0),
+  total: indexable.length,
+  claims: indexable.reduce((n, r) => n + (r.claims?.length ?? 0), 0),
   withLeanStatement: search.filter((s) => s.l === 1).length,
-  withWikidata: records.filter((r) => r.ids?.wikidata).length,
-  withErdos: records.filter((r) => r.ids?.erdos).length,
-  withOeis: records.filter((r) => (r.ids?.oeis ?? []).length > 0).length,
-  withForumClaims: withStatus.filter((r) => r.agent.forumClaims > 0).length,
-  withAiClaims: withStatus.filter((r) => r.agent.aiAssistedClaims > 0).length,
-  withMachineVerified: withStatus.filter((r) => r.agent.machineVerifiedClaims > 0).length,
-  withVerificationChallenge: withStatus.filter((r) => r.agent.hasVerificationChallenge).length,
+  withWikidata: indexable.filter((r) => r.ids?.wikidata).length,
+  withErdos: indexable.filter((r) => r.ids?.erdos).length,
+  withOeis: indexable.filter((r) => (r.ids?.oeis ?? []).length > 0).length,
+  withForumClaims: indexable.filter((r) => r.agent.forumClaims > 0).length,
+  withAiClaims: indexable.filter((r) => r.agent.aiAssistedClaims > 0).length,
+  withMachineVerified: indexable.filter((r) => r.agent.machineVerifiedClaims > 0).length,
+  withVerificationChallenge: indexable.filter((r) => r.agent.hasVerificationChallenge).length,
   agentBenchmarkCount: agentBenchmark.length,
-  crossLinked: records.filter((r) => {
+  crossLinked: indexable.filter((r) => {
     const ids = r.ids ?? {};
     const sources = [
       ids.erdos ? 1 : 0,
@@ -201,7 +209,7 @@ const stats = {
     .map(([tag, count]) => ({ tag, count })),
   // Ranked by observed upstream comment count where we have one, so the list
   // reflects real activity rather than how much we happen to have curated.
-  topDiscussion: withStatus
+  topDiscussion: indexable
     .filter((r) => (r.agent.forumComments ?? 0) > 0 || r.agent.forumClaims > 0)
     .sort(
       (a, b) =>

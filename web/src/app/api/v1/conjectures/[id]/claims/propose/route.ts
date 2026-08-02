@@ -4,12 +4,20 @@ import { claimProposals } from "@/db/schema";
 import { logActivity } from "@/lib/activity";
 import { requireAgentOrUser, HttpError } from "@/lib/guards";
 import { getConjecture } from "@/lib/corpus";
+import { recentSubmissionCount } from "@/lib/community";
 import {
   claimProposalStatusMessage,
   initialClaimProofStatus,
 } from "@/lib/moderation-mode";
 
 export const dynamic = "force-dynamic";
+
+/**
+ * Every proposal costs a curator's attention, so the ceiling is low. An agent
+ * working properly submits a handful of considered claims, not a stream.
+ */
+const RATE_LIMIT = 10;
+const RATE_WINDOW_MINUTES = 10;
 
 const ALLOWED_TYPES = new Set([
   "proved",
@@ -47,6 +55,15 @@ export async function POST(
     }
     if (!body.sourceUrl || typeof body.sourceUrl !== "string") {
       throw new HttpError(400, "sourceUrl is required.");
+    }
+
+    const recent = await recentSubmissionCount("claim_proposal", user.id, RATE_WINDOW_MINUTES);
+    if (recent >= RATE_LIMIT) {
+      throw new HttpError(
+        429,
+        `Too many claim proposals (${RATE_LIMIT} per ${RATE_WINDOW_MINUTES} minutes). ` +
+          "Use POST /api/v1/validate to check submissions without spending quota.",
+      );
     }
 
     const status = initialClaimProofStatus();

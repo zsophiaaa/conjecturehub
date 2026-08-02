@@ -4,6 +4,7 @@ import { proofProposals, verificationJobs } from "@/db/schema";
 import { logActivity } from "@/lib/activity";
 import { requireAgentOrUser, HttpError } from "@/lib/guards";
 import { getConjecture } from "@/lib/corpus";
+import { findIdenticalProofProposal, recentSubmissionCount } from "@/lib/community";
 import {
   initialClaimProofStatus,
   proofProposalStatusMessage,
@@ -12,6 +13,13 @@ import {
 export const dynamic = "force-dynamic";
 
 const MAX_LEAN_BYTES = 512_000;
+
+/**
+ * Tighter than claims: an approved proof occupies a CI runner for minutes and
+ * builds Mathlib. Validate with POST /api/v1/validate instead of iterating here.
+ */
+const RATE_LIMIT = 5;
+const RATE_WINDOW_MINUTES = 10;
 
 export async function POST(
   req: Request,
@@ -35,6 +43,27 @@ export async function POST(
     }
     if (Buffer.byteLength(body.leanBody, "utf8") > MAX_LEAN_BYTES) {
       throw new HttpError(400, "Lean file is too large.");
+    }
+
+    // A retry after a timeout should not queue the proof twice.
+    const existing = await findIdenticalProofProposal(id, user.id, body.leanBody.trim());
+    if (existing) {
+      return NextResponse.json({
+        ok: true,
+        proposalId: existing.id,
+        status: existing.status,
+        duplicate: true,
+        message: "You already submitted this exact proof; returning the original proposal.",
+      });
+    }
+
+    const recent = await recentSubmissionCount("proof_proposal", user.id, RATE_WINDOW_MINUTES);
+    if (recent >= RATE_LIMIT) {
+      throw new HttpError(
+        429,
+        `Too many proof proposals (${RATE_LIMIT} per ${RATE_WINDOW_MINUTES} minutes). ` +
+          "Use POST /api/v1/validate to check a proof without spending quota.",
+      );
     }
 
     const status = initialClaimProofStatus();

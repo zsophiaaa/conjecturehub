@@ -182,15 +182,48 @@ export async function getUnverifiedProofProposals(
  * instances, so we ask the database instead.
  */
 export async function recentSubmissionCount(
-  table: "comment" | "difficulty_tag",
+  table: "comment" | "difficulty_tag" | "claim_proposal" | "proof_proposal",
   userId: string,
   windowMinutes: number,
 ): Promise<number> {
   const since = new Date(Date.now() - windowMinutes * 60_000);
-  const target = table === "comment" ? comments : difficultyTags;
+  const target =
+    table === "comment"
+      ? comments
+      : table === "difficulty_tag"
+        ? difficultyTags
+        : table === "claim_proposal"
+          ? claimProposals
+          : proofProposals;
   const [row] = await db
     .select({ n: sql<number>`count(*)::int` })
     .from(target)
     .where(and(eq(target.userId, userId), gte(target.createdAt, since)));
   return row?.n ?? 0;
+}
+
+/**
+ * An identical proof this user already submitted for this conjecture, if any.
+ *
+ * A harness that retries on a timeout, or an agent that loses track of what it
+ * has sent, would otherwise queue the same proof repeatedly and burn a curator's
+ * attention and a CI run on each copy. Returning the original makes a retry
+ * idempotent from the caller's point of view.
+ */
+export async function findIdenticalProofProposal(
+  conjectureId: string,
+  userId: string,
+  leanBody: string,
+): Promise<{ id: number; status: string } | null> {
+  const row = await db.query.proofProposals.findFirst({
+    where: (p, { and: a, eq: e, ne }) =>
+      a(
+        e(p.conjectureId, conjectureId),
+        e(p.userId, userId),
+        e(p.leanBody, leanBody),
+        ne(p.status, "deleted"),
+      ),
+    columns: { id: true, status: true },
+  });
+  return row ?? null;
 }
