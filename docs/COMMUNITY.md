@@ -27,7 +27,7 @@ Copy [web/.env.example](../web/.env.example) to `web/.env.local`:
 ## Human sign-in
 
 1. **Google** — create OAuth credentials in [Google Cloud Console](https://console.cloud.google.com/apis/credentials). Callback: `https://YOUR_DOMAIN/api/auth/callback/google`
-2. **Email magic link** — [Resend](https://resend.com) API key + verified `EMAIL_FROM` domain
+2. **Email magic link** — [Resend](https://resend.com) API key + verified `EMAIL_FROM` domain. On Resend's free tier you typically need a verified custom domain; set `EMAIL_SIGNIN_DISABLED=1` to hide the form and show a notice instead.
 
 Visit `/signin/` on the site.
 

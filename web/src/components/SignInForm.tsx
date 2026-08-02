@@ -8,10 +8,18 @@ import type { ReactNode } from "react";
 interface SignInFormProps {
   hasGoogle: boolean;
   hasEmail: boolean;
+  emailDisabled?: boolean;
+  emailDisabledReason?: string;
   googleButton: ReactNode;
 }
 
-export function SignInForm({ hasGoogle, hasEmail, googleButton }: SignInFormProps) {
+export function SignInForm({
+  hasGoogle,
+  hasEmail,
+  emailDisabled = false,
+  emailDisabledReason,
+  googleButton,
+}: SignInFormProps) {
   const [email, setEmail] = useState("");
   const [sent, setSent] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -61,11 +69,21 @@ export function SignInForm({ hasGoogle, hasEmail, googleButton }: SignInFormProp
       <div className="space-y-4">
         {hasGoogle ? googleButton : null}
 
-        {hasGoogle && hasEmail ? (
+        {hasGoogle && hasEmail && !emailDisabled ? (
           <p className="text-center text-sm text-ink-faint">or</p>
         ) : null}
 
-        {hasEmail ? (
+        {hasEmail && emailDisabled ? (
+          <div className="ui-alert text-sm text-ink-muted">
+            <p className="font-medium text-ink">Email magic link unavailable</p>
+            <p className="mt-1">
+              {emailDisabledReason ??
+                "Not enabled on this deployment — Resend's free tier requires a verified domain. Use Google sign-in instead."}
+            </p>
+          </div>
+        ) : null}
+
+        {hasEmail && !emailDisabled ? (
           sent ? (
             <p className="ui-alert">Check your inbox for a sign-in link.</p>
           ) : (
