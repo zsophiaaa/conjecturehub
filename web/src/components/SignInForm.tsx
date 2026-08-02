@@ -1,23 +1,21 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Link from "next/link";
-import { getProviders, signIn } from "next-auth/react";
+import { signIn } from "next-auth/react";
+import type { ReactNode } from "react";
 
-export function SignInForm() {
+interface SignInFormProps {
+  hasGoogle: boolean;
+  hasEmail: boolean;
+  googleButton: ReactNode;
+}
+
+export function SignInForm({ hasGoogle, hasEmail, googleButton }: SignInFormProps) {
   const [email, setEmail] = useState("");
   const [sent, setSent] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
-  const [providers, setProviders] = useState<Record<string, unknown> | null>(null);
-
-  useEffect(() => {
-    getProviders().then(setProviders);
-  }, []);
-
-  const hasGoogle = Boolean(providers?.google);
-  const hasEmail = Boolean(providers?.resend);
-  const ready = providers !== null;
 
   async function onEmailSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -50,9 +48,7 @@ export function SignInForm() {
         </p>
       </div>
 
-      {!ready ? <p className="text-sm text-ink-faint">Loading sign-in options…</p> : null}
-
-      {ready && !hasGoogle && !hasEmail ? (
+      {!hasGoogle && !hasEmail ? (
         <div className="ui-alert">
           <p className="text-ink">Sign-in is not configured on this server yet.</p>
           <p className="mt-2">
@@ -63,11 +59,7 @@ export function SignInForm() {
       ) : null}
 
       <div className="space-y-4">
-        {hasGoogle ? (
-          <button type="button" onClick={() => signIn("google", { callbackUrl: "/" })} className="ui-btn w-full">
-            Continue with Google
-          </button>
-        ) : null}
+        {hasGoogle ? googleButton : null}
 
         {hasGoogle && hasEmail ? (
           <p className="text-center text-sm text-ink-faint">or</p>

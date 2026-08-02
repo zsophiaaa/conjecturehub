@@ -12,6 +12,9 @@ const config: NextConfig = {
   // community API routes, and the curator moderation queue. See docs/COMMUNITY.md.
   images: { unoptimized: true },
   trailingSlash: true,
+  // Auth.js POSTs to /api/auth/signin/google (no slash). With trailingSlash
+  // enabled, Next.js 308-redirects that to …/google/ and drops the POST body.
+  skipTrailingSlashRedirect: true,
 };
 
 export default config;

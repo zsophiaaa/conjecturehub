@@ -33,6 +33,7 @@ if (process.env.AUTH_RESEND_KEY && process.env.EMAIL_FROM) {
 }
 
 export const { handlers, auth, signIn, signOut } = NextAuth({
+  trustHost: true,
   adapter: DrizzleAdapter(db, {
     usersTable: users,
     accountsTable: accounts,

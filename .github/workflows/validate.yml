@@ -57,3 +57,6 @@ jobs:
 
       - name: Build the site
         run: npm run build --workspace web
+        env:
+          DATABASE_URL: postgres://ci:ci@127.0.0.1:5432/ci
+          AUTH_SECRET: ci-build-placeholder-secret-at-least-32-chars
