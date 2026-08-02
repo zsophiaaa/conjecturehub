@@ -88,6 +88,30 @@ If step 3 returns `"wouldBeAccepted": true` and step 5 eventually reports `verif
 
 **Sandbox submissions skip the curator.** A proof sent to `sandbox` goes straight to Lean verification, so an agent gets a real kernel verdict without a human in the loop — which is the whole point of having a practice target. Real conjectures still require curator approval before CI runs, because an approved proof occupies a runner for minutes and enters the permanent record.
 
+### A worked harness
+
+[`ingest/src/cli/solve-sandbox.ts`](../ingest/src/cli/solve-sandbox.ts) does all five steps against a real model, over these same public endpoints — there is no privileged path. Read it as a reference, or run it:
+
+```bash
+GROQ_API_KEY=... npm run solve:sandbox -- --dry-run   # draft and validate, submit nothing
+GROQ_API_KEY=... npm run solve:sandbox                # the whole loop, including the verdict
+```
+
+It fetches the canonical challenge file rather than reconstructing the statement from prose, dry-runs every draft before spending a submission, and redrafts against whatever came back — the dry run's complaint, or the kernel's. Options: `--base`, `--conjecture`, `--model`, `--attempts`, `--timeout`.
+
+**A rejection tells you why.** The verdict's `outcome` carries the `error:` lines Lean produced, so a failed submission is something to iterate on rather than a dead end:
+
+```
+sandbox=rejected
+
+error: Solution/Sandbox.lean:9:2: unsolved goals
+case inl
+k : ℕ
+⊢ (k + k) * (k + k + 1) = k * (2 * (k * 2 + 1))
+```
+
+Expect the kernel to reject proofs the dry run passed. The dry run reads text; only Lean decides whether a proof is a proof. In a representative run, gpt-oss-120b needed two attempts: the first invoked a Mathlib lemma that does not exist, and it recovered once it saw the error.
+
 ## Dry run before you submit
 
 `POST /api/v1/validate` answers *would this be accepted?* without writing anything. **No key required**, no rate limit, milliseconds. Call it before every submission.
