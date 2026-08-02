@@ -97,12 +97,18 @@ export async function POST(
       jobId = job!.id;
     }
 
+    // A submission that cannot be verified must say so. Silently leaving the job
+    // at `pending` would have an agent poll a verdict that is never coming.
+    let dispatched = false;
     if (isSandbox && jobId) {
-      // Degrades quietly when GITHUB_DISPATCH_TOKEN is unset: the job stays
-      // pending rather than the submission failing.
-      await dispatchVerifyProof({ proposalId: proposal!.id, jobId, conjectureId: id }).catch(
-        (err: unknown) => console.error("sandbox verification dispatch failed", err),
-      );
+      dispatched = await dispatchVerifyProof({
+        proposalId: proposal!.id,
+        jobId,
+        conjectureId: id,
+      }).catch((err: unknown) => {
+        console.error("sandbox verification dispatch failed", err);
+        return false;
+      });
     }
 
     await logActivity("proof_proposed", {
@@ -117,12 +123,14 @@ export async function POST(
         proposalId: proposal!.id,
         verificationJobId: jobId ?? null,
         status,
-        message: isSandbox
-          ? "Sandbox submission accepted and sent straight to Lean verification — no curator " +
-            "needed. Poll GET /api/v1/verification-jobs/" +
-            jobId +
-            " for the kernel's verdict."
-          : proofProposalStatusMessage(),
+        verificationDispatched: isSandbox ? dispatched : undefined,
+        message: !isSandbox
+          ? proofProposalStatusMessage()
+          : dispatched
+            ? `Sandbox submission accepted and sent straight to Lean verification — no curator needed. Poll GET /api/v1/verification-jobs/${jobId} for the kernel's verdict.`
+            : "Sandbox submission recorded, but this deployment has no GITHUB_DISPATCH_TOKEN, so " +
+              "Lean verification was not triggered and the job will stay pending. Validate proofs " +
+              "with POST /api/v1/validate meanwhile, and tell the operator to set the token.",
       },
       { status: 201 },
     );

@@ -1,7 +1,16 @@
 /**
- * Dispatch GitHub repository events when curators approve proposals.
- * Requires GITHUB_DISPATCH_TOKEN (PAT with contents + actions on this repo).
+ * Dispatch GitHub repository events when curators approve proposals, and when a
+ * sandbox proof is submitted.
+ *
+ * Requires GITHUB_DISPATCH_TOKEN, a PAT with contents and actions on this repo.
+ * Without it nothing is dispatched and the verification job sits at `pending`
+ * forever — the submission still succeeds, so the failure is quiet. That is the
+ * right trade for a curator approving a claim, and a trap when an agent is
+ * waiting on a verdict, so the absence is logged loudly enough to find.
  */
+
+/** The repository CI runs in. Override only if this is deployed from a fork. */
+const DEFAULT_REPO = "zsophiaaa/conjecturehub";
 
 export async function dispatchApplyClaimProposal(payload: {
   proposalId: number;
@@ -14,10 +23,13 @@ export async function dispatchApplyClaimProposal(payload: {
   notes?: string | null;
 }): Promise<void> {
   const token = process.env.GITHUB_DISPATCH_TOKEN;
-  const repo = process.env.GITHUB_DISPATCH_REPO ?? "conjecturehub/conjecturehub";
+  const repo = process.env.GITHUB_DISPATCH_REPO ?? DEFAULT_REPO;
 
   if (!token) {
-    console.warn("GITHUB_DISPATCH_TOKEN not set — skipping claim auto-merge dispatch.");
+    console.error(
+      "GITHUB_DISPATCH_TOKEN is not set: the approved claim was recorded but CI was never " +
+        "triggered, so nothing will reach the corpus. See docs/COMMUNITY.md.",
+    );
     return;
   }
 
@@ -41,17 +53,21 @@ export async function dispatchApplyClaimProposal(payload: {
   }
 }
 
+/** Returns whether CI was actually triggered, so a caller can tell the submitter. */
 export async function dispatchVerifyProof(payload: {
   proposalId: number;
   jobId: number;
   conjectureId: string;
-}): Promise<void> {
+}): Promise<boolean> {
   const token = process.env.GITHUB_DISPATCH_TOKEN;
-  const repo = process.env.GITHUB_DISPATCH_REPO ?? "conjecturehub/conjecturehub";
+  const repo = process.env.GITHUB_DISPATCH_REPO ?? DEFAULT_REPO;
 
   if (!token) {
-    console.warn("GITHUB_DISPATCH_TOKEN not set — skipping proof verification dispatch.");
-    return;
+    console.error(
+      "GITHUB_DISPATCH_TOKEN is not set: the proof was recorded but Lean verification was never " +
+        "triggered, so the job will sit at pending. See docs/COMMUNITY.md.",
+    );
+    return false;
   }
 
   const res = await fetch(`https://api.github.com/repos/${repo}/dispatches`, {
@@ -72,4 +88,6 @@ export async function dispatchVerifyProof(payload: {
     const text = await res.text();
     throw new Error(`GitHub dispatch failed (${res.status}): ${text}`);
   }
+
+  return true;
 }
