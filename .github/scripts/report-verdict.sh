@@ -48,55 +48,69 @@ if [ -z "$JOB_ID" ]; then
   exit 0
 fi
 
-# One pull request can carry several challenges. `verified` only holds if every
-# one of them passed; a budget overrun is explicitly not a rejection, so it wins
-# over a pass but loses to a genuine failure.
-read -r STATUS DETAIL ELAPSED <<<"$(python3 - "$RESULTS_DIR" <<'PY'
-import glob, json, os, sys
+python3 - "$RESULTS_DIR" "$JOB_ID" "$RUN_URL" "$WORKFLOW_RUN_ID" >/tmp/verdict.json <<'PY'
+import glob, json, os, re, sys
+
+results_dir, job_id, log_url, run_id = sys.argv[1:5]
 
 results = []
-for path in sorted(glob.glob(os.path.join(sys.argv[1], "*.json"))):
+for path in sorted(glob.glob(os.path.join(results_dir, "*.json"))):
     with open(path) as fh:
         results.append(json.load(fh))
 
+# One pull request can carry several challenges. `verified` only holds if every
+# one of them passed; a budget overrun is explicitly not a rejection, so it wins
+# over a pass but loses to a genuine failure.
 if not results:
-    print("failed nothing-was-checked 0")
-    raise SystemExit
-
-outcomes = {r.get("outcome") for r in results}
-if "rejected" in outcomes:
-    status = "rejected"
-elif "setup_error" in outcomes:
     status = "failed"
-elif "exceeded_budget" in outcomes:
+elif any(r.get("outcome") == "rejected" for r in results):
+    status = "rejected"
+elif any(r.get("outcome") == "setup_error" for r in results):
+    status = "failed"
+elif any(r.get("outcome") == "exceeded_budget" for r in results):
     status = "exceeded_budget"
-elif outcomes == {"verified"}:
+elif all(r.get("outcome") == "verified" for r in results):
     status = "verified"
 else:
     status = "failed"
 
-detail = ",".join(f"{r.get('challenge')}={r.get('outcome')}" for r in results)
-elapsed = int(sum(float(r.get("elapsed_seconds") or 0) for r in results))
-print(f"{status} {detail} {elapsed}")
-PY
-)"
+summary = ",".join(f"{r.get('challenge')}={r.get('outcome')}" for r in results) or "nothing-was-checked"
 
-echo "Reporting job $JOB_ID (proposal $PROPOSAL_ID): $STATUS [$DETAIL]"
 
-python3 - "$JOB_ID" "$STATUS" "$DETAIL" "$ELAPSED" "$RUN_URL" "$WORKFLOW_RUN_ID" >/tmp/verdict.json <<'PY'
-import json, sys
-job, status, detail, elapsed, log_url, run_id = sys.argv[1:7]
+def reasons(result):
+    """The lines that say why, out of a build log that is mostly noise.
+
+    A verdict of "rejected" and nothing else leaves a submitter with no idea
+    what to change, which for an agent means it cannot iterate at all. Lean
+    already explains itself well; the job is to carry that explanation back
+    rather than to summarize it.
+    """
+    detail = result.get("detail") or ""
+    errors = re.findall(r"^error:.*(?:\n(?!error:|warning:|info:).*)*", detail, re.MULTILINE)
+    return "\n".join(errors) if errors else detail[-1200:]
+
+
+outcome = summary
+if status != "verified":
+    explanation = "\n\n".join(
+        f"{r.get('challenge')}:\n{reasons(r)}" for r in results if r.get("outcome") != "verified"
+    ).strip()
+    if explanation:
+        outcome = f"{summary}\n\n{explanation}"[:4000]
+
 payload = {
-    "jobId": int(job),
+    "jobId": int(job_id),
     "status": status,
-    "outcome": detail,
-    "elapsedSeconds": int(elapsed),
+    "outcome": outcome,
+    "elapsedSeconds": int(sum(float(r.get("elapsed_seconds") or 0) for r in results)),
 }
 if log_url:
     payload["logUrl"] = log_url
 if run_id:
     payload["workflowRunId"] = run_id
+
 json.dump(payload, sys.stdout)
+print(f"Reporting job {job_id} (status {status}): {summary}", file=sys.stderr)
 PY
 
 curl -sf -X POST \
