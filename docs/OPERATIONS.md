@@ -44,6 +44,13 @@ Everything is optional. Each degrades to something sensible rather than failing.
 
 **Mathlib cache misses and verification takes an hour.** Expected after a toolchain bump. Bump `LEAN_TOOLCHAIN` and `MATHLIB_REV` together in `verify-lean.yml` and `record-verification.yml`; the first run afterwards is slow and every run after that is cached.
 
+**Every proof is rejected with "incompatible header".** `lean4export` reads `.olean` files, and Lean refuses to read one written by a different version. comparator pins its own `lean-toolchain`, so if that pin and `LEAN_TOOLCHAIN` disagree, nothing can ever verify. `COMPARATOR_REV` is therefore a commit SHA rather than `master`: tracking the branch means an upstream toolchain bump silently breaks verification here. `setup-lean` compares the two and fails with an explicit message, so this should now surface at setup rather than as a rejection. When bumping `LEAN_TOOLCHAIN`, find a comparator revision on the same Lean version:
+
+```bash
+gh api "repos/leanprover/comparator/commits?path=lean-toolchain" \
+  --jq '.[] | .sha[0:12] + "  " + (.commit.message | split("\n")[0])'
+```
+
 **Fork pull requests cannot comment.** By design. `pull_request` gives untrusted code a read-only token, and the privileged reporting workflow runs separately via `workflow_run`. Do not "fix" this by switching to `pull_request_target`.
 
 **The bot's pull request has no checks on it.** Also expected: a pull request opened with `GITHUB_TOKEN` does not trigger other workflows. `sweep.yml` therefore runs validation itself before opening one.

@@ -55,8 +55,25 @@ runs:
         git clone --depth 1 https://github.com/ammkrn/nanoda_lib.git
         (cd nanoda_lib && cargo build --release && cp target/release/nanoda_bin "$TOOLS/bin/")
 
-        git clone --branch "${{ inputs.comparator_rev }}" --depth 1 https://github.com/leanprover/comparator.git
+        # Cloned then checked out by revision rather than `--branch`, because a
+        # pin has to be allowed to be a commit SHA. Tracking a branch is how the
+        # toolchain below silently drifted out from under the statements.
+        git clone https://github.com/leanprover/comparator.git
         cd comparator
+        git checkout --quiet "${{ inputs.comparator_rev }}"
+
+        # lean4export reads .olean files, and Lean refuses to read an .olean
+        # written by a different version. comparator pins its own toolchain, so
+        # if that pin and ours disagree every verification fails with
+        # "incompatible header" long after the useful context is gone. This is
+        # the check that turns a confusing rejection into an obvious one.
+        COMPARATOR_TOOLCHAIN="$(cat lean-toolchain)"
+        EXPECTED="leanprover/lean4:${{ inputs.lean_toolchain }}"
+        if [ "$COMPARATOR_TOOLCHAIN" != "$EXPECTED" ]; then
+          echo "::error title=Toolchain mismatch::comparator at ${{ inputs.comparator_rev }} builds against '$COMPARATOR_TOOLCHAIN' but the canonical statements use '$EXPECTED'. lean4export cannot read .olean files across versions, so every proof would be rejected. Pin comparator_rev to a revision on $EXPECTED, or bump the statements to match."
+          exit 1
+        fi
+
         lake build lean4export comparator
         cp .lake/build/bin/comparator "$TOOLS/bin/"
         cp .lake/packages/lean4export/.lake/build/bin/lean4export "$TOOLS/bin/"
