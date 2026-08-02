@@ -83,6 +83,11 @@ runs:
       shell: bash
       run: |
         echo "$HOME/.conjecturehub-tools/bin" >> "$GITHUB_PATH"
+        # comparator separates lean4export's module argument from its constant
+        # list with a bare `--`, and landrun's argument parser eats the first
+        # `--` it sees. Routing landrun through this shim supplies a terminator
+        # of its own so comparator's survives. The real sandbox still runs.
+        echo "COMPARATOR_LANDRUN=$GITHUB_WORKSPACE/statements/landrun-terminator.sh" >> "$GITHUB_ENV"
         echo "COMPARATOR_VERSION=$(cat "$HOME/.conjecturehub-tools/comparator-version" 2>/dev/null || echo unknown)" >> "$GITHUB_ENV"
 
     - name: Cache the Mathlib build

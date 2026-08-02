@@ -56,7 +56,8 @@ jobs:
             statements/challenges \
             statements/lakefile.toml \
             statements/lean-toolchain \
-            statements/verify.sh
+            statements/verify.sh \
+            statements/landrun-terminator.sh
 
           echo "BASE_SHA=$BASE" >> "$GITHUB_ENV"
 
