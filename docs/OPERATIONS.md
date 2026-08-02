@@ -44,6 +44,8 @@ Everything is optional. Each degrades to something sensible rather than failing.
 
 **Mathlib cache misses and verification takes an hour.** Expected after a toolchain bump. Bump `LEAN_TOOLCHAIN` and `MATHLIB_REV` together in `verify-lean.yml` and `record-verification.yml`; the first run afterwards is slow and every run after that is cached.
 
+**A fix to `verify.sh` has no effect on a pull request.** By design. `verify-lean.yml` restores `statements/verify.sh`, `Challenge/`, `challenges/`, `lakefile.toml` and `lean-toolchain` from the base commit before building anything, because a submitter who could edit the verifier could make a proof of something trivial certify a conjecture. The consequence is that changes to the verifier itself only take effect once they are on `main` — a pull request silently runs the old copy. Workflow files are *not* restored, so `verify-lean.yml` and `setup-lean` can still be iterated on from a branch.
+
 **Fork pull requests cannot comment.** By design. `pull_request` gives untrusted code a read-only token, and the privileged reporting workflow runs separately via `workflow_run`. Do not "fix" this by switching to `pull_request_target`.
 
 **The bot's pull request has no checks on it.** Also expected: a pull request opened with `GITHUB_TOKEN` does not trigger other workflows. `sweep.yml` therefore runs validation itself before opening one.
