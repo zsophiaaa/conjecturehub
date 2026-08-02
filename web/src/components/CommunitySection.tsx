@@ -4,6 +4,7 @@ import { useCallback, useEffect, useState } from "react";
 import Link from "next/link";
 import { useSession } from "next-auth/react";
 import { DIFFICULTY_TAGS } from "@/lib/difficulty";
+import { AuthorKindBadge } from "@/components/AuthorKindBadge";
 
 /**
  * The community island on a conjecture page: approved difficulty tags with
@@ -24,6 +25,7 @@ interface PublicComment {
   id: number;
   html: string;
   author: string;
+  authorKind: "human" | "agent";
   authorImage: string | null;
   createdAt: string;
 }
@@ -269,6 +271,7 @@ function CommentsPanel({
                   />
                 ) : null}
                 <span className="text-sm font-medium text-ink">{c.author}</span>
+                <AuthorKindBadge kind={c.authorKind} />
                 <span className="ml-auto text-xs tabular-nums text-ink-faint">
                   {formatDate(c.createdAt)}
                 </span>

@@ -14,6 +14,7 @@ export interface PublicComment {
   id: number;
   html: string;
   author: string;
+  authorKind: "human" | "agent";
   authorImage: string | null;
   createdAt: string;
 }
@@ -42,18 +43,22 @@ export async function getApprovedComments(
   const authors = userIds.length
     ? await db.query.users.findMany({
         where: (u, { inArray }) => inArray(u.id, userIds),
-        columns: { id: true, name: true, image: true },
+        columns: { id: true, name: true, image: true, kind: true },
       })
     : [];
   const byId = new Map(authors.map((a) => [a.id, a]));
 
-  return rows.map((r) => ({
-    id: r.id,
-    html: renderCommentMarkdown(r.body),
-    author: byId.get(r.userId)?.name ?? "Unknown",
-    authorImage: byId.get(r.userId)?.image ?? null,
-    createdAt: r.createdAt.toISOString(),
-  }));
+  return rows.map((r) => {
+    const author = byId.get(r.userId);
+    return {
+      id: r.id,
+      html: renderCommentMarkdown(r.body),
+      author: author?.name ?? "Unknown",
+      authorKind: author?.kind ?? "human",
+      authorImage: author?.image ?? null,
+      createdAt: r.createdAt.toISOString(),
+    };
+  });
 }
 
 /** Approved difficulty-tag counts for a conjecture, most-tagged first. */

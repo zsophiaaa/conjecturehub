@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { AuthorKindBadge } from "@/components/AuthorKindBadge";
 
 /**
  * Client half of the curator moderation queue.
@@ -12,6 +13,7 @@ interface PendingComment {
   conjectureId: string;
   bodyHtml: string;
   author: string;
+  authorKind: "human" | "agent";
   createdAt: string;
 }
 interface PendingDifficulty {
@@ -20,6 +22,7 @@ interface PendingDifficulty {
   tag: string;
   tagLabel: string;
   author: string;
+  authorKind: "human" | "agent";
   createdAt: string;
 }
 interface PendingClaim {
@@ -28,6 +31,7 @@ interface PendingClaim {
   claimType: string;
   sourceUrl: string;
   author: string;
+  authorKind: "human" | "agent";
   createdAt: string;
 }
 interface PendingProof {
@@ -35,6 +39,7 @@ interface PendingProof {
   conjectureId: string;
   leanPreview: string;
   author: string;
+  authorKind: "human" | "agent";
   createdAt: string;
 }
 
@@ -118,6 +123,7 @@ export function ModerationQueue({
               <li key={c.id} className="ui-panel p-4">
                 <div className="flex flex-wrap items-center gap-2 text-xs text-ink-faint">
                   <span className="font-medium text-ink">{c.author}</span>
+                  <AuthorKindBadge kind={c.authorKind} />
                   <span>on</span>
                   <Link href={`/conjectures/${c.conjectureId}/`} className="font-medium">
                     {c.conjectureId}
@@ -145,6 +151,7 @@ export function ModerationQueue({
               <li key={d.id} className="ui-panel p-4">
                 <div className="flex flex-wrap items-center gap-2 text-xs text-ink-faint">
                   <span className="font-medium text-ink">{d.author}</span>
+                  <AuthorKindBadge kind={d.authorKind} />
                   <span>tagged</span>
                   <Link href={`/conjectures/${d.conjectureId}/`} className="font-medium">
                     {d.conjectureId}
@@ -173,6 +180,7 @@ export function ModerationQueue({
               <li key={c.id} className="ui-panel p-4">
                 <div className="flex flex-wrap items-center gap-2 text-xs text-ink-faint">
                   <span className="font-medium text-ink">{c.author}</span>
+                  <AuthorKindBadge kind={c.authorKind} />
                   <span>{c.claimType}</span>
                   <Link href={`/conjectures/${c.conjectureId}/`} className="font-medium">
                     {c.conjectureId}
@@ -201,6 +209,7 @@ export function ModerationQueue({
               <li key={p.id} className="ui-panel p-4">
                 <div className="flex flex-wrap items-center gap-2 text-xs text-ink-faint">
                   <span className="font-medium text-ink">{p.author}</span>
+                  <AuthorKindBadge kind={p.authorKind} />
                   <Link href={`/conjectures/${p.conjectureId}/`} className="font-medium">
                     {p.conjectureId}
                   </Link>

@@ -18,6 +18,7 @@ export interface PendingComment {
   bodyHtml: string;
   bodyRaw: string;
   author: string;
+  authorKind: "human" | "agent";
   createdAt: string;
 }
 
@@ -27,6 +28,7 @@ export interface PendingDifficulty {
   tag: string;
   tagLabel: string;
   author: string;
+  authorKind: "human" | "agent";
   createdAt: string;
 }
 
@@ -36,14 +38,18 @@ export async function getPendingComments(): Promise<PendingComment[]> {
     orderBy: asc(comments.createdAt),
   });
   const authors = await resolveAuthors(rows.map((r) => r.userId));
-  return rows.map((r) => ({
-    id: r.id,
-    conjectureId: r.conjectureId,
-    bodyHtml: renderCommentMarkdown(r.body),
-    bodyRaw: r.body,
-    author: authors.get(r.userId) ?? "Unknown",
-    createdAt: r.createdAt.toISOString(),
-  }));
+  return rows.map((r) => {
+    const author = authors.get(r.userId);
+    return {
+      id: r.id,
+      conjectureId: r.conjectureId,
+      bodyHtml: renderCommentMarkdown(r.body),
+      bodyRaw: r.body,
+      author: author?.name ?? "Unknown",
+      authorKind: author?.kind ?? "human",
+      createdAt: r.createdAt.toISOString(),
+    };
+  });
 }
 
 export async function getPendingDifficulty(): Promise<PendingDifficulty[]> {
@@ -52,14 +58,18 @@ export async function getPendingDifficulty(): Promise<PendingDifficulty[]> {
     orderBy: asc(difficultyTags.createdAt),
   });
   const authors = await resolveAuthors(rows.map((r) => r.userId));
-  return rows.map((r) => ({
-    id: r.id,
-    conjectureId: r.conjectureId,
-    tag: r.tag,
-    tagLabel: difficultyLabel(r.tag),
-    author: authors.get(r.userId) ?? "Unknown",
-    createdAt: r.createdAt.toISOString(),
-  }));
+  return rows.map((r) => {
+    const author = authors.get(r.userId);
+    return {
+      id: r.id,
+      conjectureId: r.conjectureId,
+      tag: r.tag,
+      tagLabel: difficultyLabel(r.tag),
+      author: author?.name ?? "Unknown",
+      authorKind: author?.kind ?? "human",
+      createdAt: r.createdAt.toISOString(),
+    };
+  });
 }
 
 export interface PendingClaim {
@@ -68,6 +78,7 @@ export interface PendingClaim {
   claimType: string;
   sourceUrl: string;
   author: string;
+  authorKind: "human" | "agent";
   createdAt: string;
 }
 
@@ -76,6 +87,7 @@ export interface PendingProof {
   conjectureId: string;
   leanPreview: string;
   author: string;
+  authorKind: "human" | "agent";
   createdAt: string;
 }
 
@@ -85,14 +97,18 @@ export async function getPendingClaims(): Promise<PendingClaim[]> {
     orderBy: asc(claimProposals.createdAt),
   });
   const authors = await resolveAuthors(rows.map((r) => r.userId));
-  return rows.map((r) => ({
-    id: r.id,
-    conjectureId: r.conjectureId,
-    claimType: r.claimType,
-    sourceUrl: r.sourceUrl,
-    author: authors.get(r.userId) ?? "Unknown",
-    createdAt: r.createdAt.toISOString(),
-  }));
+  return rows.map((r) => {
+    const author = authors.get(r.userId);
+    return {
+      id: r.id,
+      conjectureId: r.conjectureId,
+      claimType: r.claimType,
+      sourceUrl: r.sourceUrl,
+      author: author?.name ?? "Unknown",
+      authorKind: author?.kind ?? "human",
+      createdAt: r.createdAt.toISOString(),
+    };
+  });
 }
 
 export async function getPendingProofs(): Promise<PendingProof[]> {
@@ -101,16 +117,25 @@ export async function getPendingProofs(): Promise<PendingProof[]> {
     orderBy: asc(proofProposals.createdAt),
   });
   const authors = await resolveAuthors(rows.map((r) => r.userId));
-  return rows.map((r) => ({
-    id: r.id,
-    conjectureId: r.conjectureId,
-    leanPreview: r.leanBody.slice(0, 400),
-    author: authors.get(r.userId) ?? "Unknown",
-    createdAt: r.createdAt.toISOString(),
-  }));
+  return rows.map((r) => {
+    const author = authors.get(r.userId);
+    return {
+      id: r.id,
+      conjectureId: r.conjectureId,
+      leanPreview: r.leanBody.slice(0, 400),
+      author: author?.name ?? "Unknown",
+      authorKind: author?.kind ?? "human",
+      createdAt: r.createdAt.toISOString(),
+    };
+  });
 }
 
-async function resolveAuthors(ids: string[]): Promise<Map<string, string>> {
+interface AuthorInfo {
+  name: string;
+  kind: "human" | "agent";
+}
+
+async function resolveAuthors(ids: string[]): Promise<Map<string, AuthorInfo>> {
   const unique = [...new Set(ids)];
   if (unique.length === 0) return new Map();
   const rows = await db.query.users.findMany({
@@ -120,7 +145,7 @@ async function resolveAuthors(ids: string[]): Promise<Map<string, string>> {
   return new Map(
     rows.map((r) => [
       r.id,
-      r.kind === "agent" ? `${r.name ?? "agent"} (agent)` : (r.name ?? "Unknown"),
+      { name: r.name ?? (r.kind === "agent" ? "agent" : "Unknown"), kind: r.kind },
     ]),
   );
 }
