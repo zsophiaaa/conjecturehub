@@ -29,12 +29,14 @@ jobs:
           CRON_SECRET: ${{ secrets.CRON_SECRET }}
         run: |
           set -euo pipefail
+          # Outside the working tree: create-pull-request commits whatever it
+          # finds there, and this response has no business in the repository.
           curl -sf \
             -H "x-cron-secret: $CRON_SECRET" \
             "$SITE_URL/api/v1/internal/proof-proposals/$PROPOSAL_ID" \
-            -o proposal.json
-          echo "conjecture=$(jq -r .conjectureId proposal.json)" >> "$GITHUB_OUTPUT"
-          jq -r .leanBody proposal.json > /tmp/solution.lean
+            -o /tmp/proposal.json
+          echo "conjecture=$(jq -r .conjectureId /tmp/proposal.json)" >> "$GITHUB_OUTPUT"
+          jq -r .leanBody /tmp/proposal.json > /tmp/solution.lean
 
       # The path is the whole mechanism: verify-lean.yml selects a challenge only
       # when the file its config names has changed, so a proof written anywhere
