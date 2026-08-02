@@ -24,7 +24,8 @@ concurrency:
 env:
   LEAN_TOOLCHAIN: v4.32.0
   MATHLIB_REV: v4.32.0
-  COMPARATOR_REV: master
+  # Must match verify-lean.yml; see the note there on why this is pinned.
+  COMPARATOR_REV: 07bc4ea40f2266dcb861820a2ec1fa3244ed307f
 
 jobs:
   record:

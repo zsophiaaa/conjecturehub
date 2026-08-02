@@ -28,7 +28,11 @@ concurrency:
 env:
   LEAN_TOOLCHAIN: v4.32.0
   MATHLIB_REV: v4.32.0
-  COMPARATOR_REV: master
+  # Pinned, not `master`. comparator carries its own lean-toolchain, and
+  # lean4export cannot read .olean files written by a different Lean, so a
+  # comparator that has moved ahead rejects every proof. This is the last
+  # comparator revision on v4.32.0; bump it together with LEAN_TOOLCHAIN.
+  COMPARATOR_REV: 07bc4ea40f2266dcb861820a2ec1fa3244ed307f
 
 jobs:
   verify:
