@@ -1,4 +1,4 @@
-import { and, asc, eq, inArray } from "drizzle-orm";
+import { and, asc, eq, inArray, ne } from "drizzle-orm";
 import { db } from "@/db";
 import { claimProposals, comments, difficultyTags, proofProposals, verificationJobs } from "@/db/schema";
 import { dispatchApplyClaimProposal, dispatchVerifyProof } from "./github-dispatch";
@@ -191,6 +191,53 @@ async function resolveAuthors(ids: string[]): Promise<Map<string, AuthorInfo>> {
 
 export type ModerationKind = "comment" | "difficulty" | "claim" | "proof";
 export type ModerationDecision = "approved" | "rejected";
+
+const TABLES = {
+  comment: comments,
+  difficulty: difficultyTags,
+  claim: claimProposals,
+  proof: proofProposals,
+} as const;
+
+export type RemoveOutcome = "deleted" | "not_found" | "forbidden";
+
+/**
+ * Withdraw a submission: its author taking it back, or a curator removing it.
+ *
+ * Soft, for the same reason `rejected` is kept. Every read filters on an exact
+ * status, so flipping to `deleted` removes the item from the public page, the
+ * moderation queue and the aggregates in one move, without destroying the
+ * evidence that it was posted. Curators can delete anything; everyone else only
+ * their own, and the check is against the row's `user_id` rather than anything
+ * the client sends.
+ *
+ * Unlike `decide`, this accepts a row in any live status — the point is to be
+ * able to take down something already published, which approve/reject cannot do.
+ */
+export async function remove(
+  kind: ModerationKind,
+  itemId: number,
+  actor: { id: string; role?: string | null },
+): Promise<RemoveOutcome> {
+  const table = TABLES[kind];
+  const isCurator = actor.role === "curator" || actor.role === "admin";
+
+  const [existing] = await db
+    .select({ id: table.id, userId: table.userId, status: table.status })
+    .from(table)
+    .where(eq(table.id, itemId));
+
+  if (!existing || existing.status === "deleted") return "not_found";
+  if (!isCurator && existing.userId !== actor.id) return "forbidden";
+
+  const result = await db
+    .update(table)
+    .set({ status: "deleted", reviewedBy: actor.id, reviewedAt: new Date() })
+    .where(and(eq(table.id, itemId), ne(table.status, "deleted")))
+    .returning({ id: table.id });
+
+  return result.length > 0 ? "deleted" : "not_found";
+}
 
 /** Apply an approve/reject decision, stamping the reviewing curator. */
 export async function decide(

@@ -27,11 +27,14 @@ export async function GET(
   const { id } = await params;
   const session = await auth();
 
+  const viewerId = session?.user?.id ?? null;
+  const canModerate = session?.user?.role === "curator" || session?.user?.role === "admin";
+
   const [approvedComments, difficulty, unverifiedClaims, unverifiedProofs] = await Promise.all([
-    getApprovedComments(id),
+    getApprovedComments(id, viewerId),
     getDifficultyAggregate(id),
-    getUnverifiedClaimProposals(id),
-    getUnverifiedProofProposals(id),
+    getUnverifiedClaimProposals(id, viewerId),
+    getUnverifiedProofProposals(id, viewerId),
   ]);
 
   let mine: {
@@ -71,6 +74,7 @@ export async function GET(
     unverifiedProofs,
     mine,
     signedIn: Boolean(session?.user),
+    canModerate,
     moderationAutoApprove: moderationAutoApprove(),
   });
 }

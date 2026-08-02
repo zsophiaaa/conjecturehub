@@ -74,6 +74,36 @@ export function ModerationQueue({
   const [unverifiedProofs, setUnverifiedProofs] = useState(initialUnverifiedProofs);
   const [error, setError] = useState<string | null>(null);
 
+  function dropFromQueue(kind: "comment" | "difficulty" | "claim" | "proof", id: number) {
+    if (kind === "comment") setComments((cs) => cs.filter((c) => c.id !== id));
+    else if (kind === "difficulty") setDifficulty((ds) => ds.filter((d) => d.id !== id));
+    else if (kind === "claim") {
+      setClaims((cs) => cs.filter((c) => c.id !== id));
+      setUnverifiedClaims((cs) => cs.filter((c) => c.id !== id));
+    } else {
+      setProofs((ps) => ps.filter((p) => p.id !== id));
+      setUnverifiedProofs((ps) => ps.filter((p) => p.id !== id));
+    }
+  }
+
+  async function remove(kind: "comment" | "difficulty" | "claim" | "proof", id: number) {
+    setError(null);
+    try {
+      const res = await fetch("/api/community/delete", {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({ kind, id }),
+      });
+      if (!res.ok) {
+        const json = (await res.json()) as { error?: string };
+        throw new Error(json.error ?? `HTTP ${res.status}`);
+      }
+      dropFromQueue(kind, id);
+    } catch (err) {
+      setError((err as Error).message);
+    }
+  }
+
   async function decide(
     kind: "comment" | "difficulty" | "claim" | "proof",
     id: number,
@@ -147,7 +177,11 @@ export function ModerationQueue({
                   className="prose-comment mt-2 text-sm leading-relaxed text-ink-muted"
                   dangerouslySetInnerHTML={{ __html: c.bodyHtml }}
                 />
-                <Actions onApprove={() => decide("comment", c.id, "approved")} onReject={() => decide("comment", c.id, "rejected")} />
+                <Actions
+                  onApprove={() => decide("comment", c.id, "approved")}
+                  onReject={() => decide("comment", c.id, "rejected")}
+                  onDelete={() => remove("comment", c.id)}
+                />
               </li>
             ))}
           </ul>
@@ -176,7 +210,11 @@ export function ModerationQueue({
                     {d.tagLabel}
                   </span>
                 </p>
-                <Actions onApprove={() => decide("difficulty", d.id, "approved")} onReject={() => decide("difficulty", d.id, "rejected")} />
+                <Actions
+                  onApprove={() => decide("difficulty", d.id, "approved")}
+                  onReject={() => decide("difficulty", d.id, "rejected")}
+                  onDelete={() => remove("difficulty", d.id)}
+                />
               </li>
             ))}
           </ul>
@@ -208,7 +246,11 @@ export function ModerationQueue({
                     {c.sourceUrl}
                   </a>
                 </p>
-                <Actions onApprove={() => decide("claim", c.id, "approved")} onReject={() => decide("claim", c.id, "rejected")} />
+                <Actions
+                  onApprove={() => decide("claim", c.id, "approved")}
+                  onReject={() => decide("claim", c.id, "rejected")}
+                  onDelete={() => remove("claim", c.id)}
+                />
               </li>
             ))}
           </ul>
@@ -244,6 +286,7 @@ export function ModerationQueue({
                   approveLabel="Verify & merge"
                   onApprove={() => decide("claim", c.id, "approved")}
                   onReject={() => decide("claim", c.id, "rejected")}
+                  onDelete={() => remove("claim", c.id)}
                 />
               </li>
             ))}
@@ -273,7 +316,11 @@ export function ModerationQueue({
                 <pre className="mt-2 max-h-40 overflow-auto rounded-lg bg-surface-2 p-3 text-xs text-ink-muted">
                   {p.leanPreview}
                 </pre>
-                <Actions onApprove={() => decide("proof", p.id, "approved")} onReject={() => decide("proof", p.id, "rejected")} />
+                <Actions
+                  onApprove={() => decide("proof", p.id, "approved")}
+                  onReject={() => decide("proof", p.id, "rejected")}
+                  onDelete={() => remove("proof", p.id)}
+                />
               </li>
             ))}
           </ul>
@@ -306,6 +353,7 @@ export function ModerationQueue({
                   approveLabel="Verify & run CI"
                   onApprove={() => decide("proof", p.id, "approved")}
                   onReject={() => decide("proof", p.id, "rejected")}
+                  onDelete={() => remove("proof", p.id)}
                 />
               </li>
             ))}
@@ -316,23 +364,46 @@ export function ModerationQueue({
   );
 }
 
+/**
+ * Reject and Delete both hide an item, and the difference is what they record.
+ * Reject is a verdict, kept so the queue shows a submission was considered and
+ * declined. Delete is removal, for spam and abuse that should not sit in the
+ * history as though it were judged on its merits.
+ */
 function Actions({
   onApprove,
   onReject,
+  onDelete,
   approveLabel = "Approve",
 }: {
   onApprove: () => void;
   onReject: () => void;
+  onDelete?: () => void;
   approveLabel?: string;
 }) {
+  const [armed, setArmed] = useState(false);
+
   return (
-    <div className="mt-3 flex gap-2">
+    <div className="mt-3 flex flex-wrap items-center gap-2">
       <button type="button" onClick={onApprove} className="ui-btn ui-btn-primary text-sm">
         {approveLabel}
       </button>
       <button type="button" onClick={onReject} className="ui-btn text-sm text-ink-muted">
         Reject
       </button>
+      {onDelete ? (
+        <button
+          type="button"
+          onClick={() => {
+            if (armed) onDelete();
+            else setArmed(true);
+          }}
+          onBlur={() => setArmed(false)}
+          className="ml-auto text-xs text-ink-faint underline underline-offset-2 hover:text-ink"
+        >
+          {armed ? "Really delete?" : "Delete"}
+        </button>
+      ) : null}
     </div>
   );
 }

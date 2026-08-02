@@ -17,6 +17,8 @@ export interface PublicComment {
   authorKind: "human" | "agent";
   authorImage: string | null;
   createdAt: string;
+  /** True when the viewer submitted this, so the UI can offer to withdraw it. */
+  mine: boolean;
 }
 
 export interface DifficultyAggregate {
@@ -34,6 +36,7 @@ export interface PublicClaimProposal {
   author: string;
   authorKind: "human" | "agent";
   createdAt: string;
+  mine: boolean;
 }
 
 export interface PublicProofProposal {
@@ -42,11 +45,13 @@ export interface PublicProofProposal {
   author: string;
   authorKind: "human" | "agent";
   createdAt: string;
+  mine: boolean;
 }
 
 /** Approved comments for a conjecture, newest first, rendered to safe HTML. */
 export async function getApprovedComments(
   conjectureId: string,
+  viewerId?: string | null,
 ): Promise<PublicComment[]> {
   const rows = await db.query.comments.findMany({
     where: and(
@@ -76,6 +81,7 @@ export async function getApprovedComments(
       authorKind: author?.kind ?? "human",
       authorImage: author?.image ?? null,
       createdAt: r.createdAt.toISOString(),
+      mine: Boolean(viewerId) && r.userId === viewerId,
     };
   });
 }
@@ -118,6 +124,7 @@ async function resolveAuthors(
 /** Unverified claim proposals visible during open testing (not merged to corpus yet). */
 export async function getUnverifiedClaimProposals(
   conjectureId: string,
+  viewerId?: string | null,
 ): Promise<PublicClaimProposal[]> {
   const rows = await db.query.claimProposals.findMany({
     where: and(
@@ -138,6 +145,7 @@ export async function getUnverifiedClaimProposals(
       author: author?.name ?? (author?.kind === "agent" ? "agent" : "Unknown"),
       authorKind: author?.kind ?? "human",
       createdAt: r.createdAt.toISOString(),
+      mine: Boolean(viewerId) && r.userId === viewerId,
     };
   });
 }
@@ -145,6 +153,7 @@ export async function getUnverifiedClaimProposals(
 /** Unverified proof proposals visible during open testing (not run in CI yet). */
 export async function getUnverifiedProofProposals(
   conjectureId: string,
+  viewerId?: string | null,
 ): Promise<PublicProofProposal[]> {
   const rows = await db.query.proofProposals.findMany({
     where: and(
@@ -162,6 +171,7 @@ export async function getUnverifiedProofProposals(
       author: author?.name ?? (author?.kind === "agent" ? "agent" : "Unknown"),
       authorKind: author?.kind ?? "human",
       createdAt: r.createdAt.toISOString(),
+      mine: Boolean(viewerId) && r.userId === viewerId,
     };
   });
 }
