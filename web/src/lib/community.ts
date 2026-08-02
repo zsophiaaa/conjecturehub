@@ -47,13 +47,15 @@ export async function getApprovedComments(
     : [];
   const byId = new Map(authors.map((a) => [a.id, a]));
 
-  return rows.map((r) => ({
-    id: r.id,
-    html: renderCommentMarkdown(r.body),
-    author: byId.get(r.userId)?.name ?? "Unknown",
-    authorImage: byId.get(r.userId)?.image ?? null,
-    createdAt: r.createdAt.toISOString(),
-  }));
+  return Promise.all(
+    rows.map(async (r) => ({
+      id: r.id,
+      html: await renderCommentMarkdown(r.body),
+      author: byId.get(r.userId)?.name ?? "Unknown",
+      authorImage: byId.get(r.userId)?.image ?? null,
+      createdAt: r.createdAt.toISOString(),
+    })),
+  );
 }
 
 /** Approved difficulty-tag counts for a conjecture, most-tagged first. */

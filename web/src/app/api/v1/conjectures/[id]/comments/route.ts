@@ -4,7 +4,7 @@ import { comments } from "@/db/schema";
 import { logActivity } from "@/lib/activity";
 import { recentSubmissionCount } from "@/lib/community";
 import { requireAgentOrUser, HttpError } from "@/lib/guards";
-import { COMMENT_MAX_LENGTH, COMMENT_MIN_LENGTH } from "@/lib/markdown";
+import { COMMENT_MAX_LENGTH, COMMENT_MIN_LENGTH } from "@/lib/comment-limits";
 import { getConjecture } from "@/lib/corpus";
 
 export const dynamic = "force-dynamic";

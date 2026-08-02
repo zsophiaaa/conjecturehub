@@ -3,7 +3,7 @@ import { db } from "@/db";
 import { comments } from "@/db/schema";
 import { requireUser, HttpError } from "@/lib/guards";
 import { recentSubmissionCount } from "@/lib/community";
-import { COMMENT_MAX_LENGTH, COMMENT_MIN_LENGTH } from "@/lib/markdown";
+import { COMMENT_MAX_LENGTH, COMMENT_MIN_LENGTH } from "@/lib/comment-limits";
 import { getConjecture } from "@/lib/corpus";
 
 export const dynamic = "force-dynamic";
