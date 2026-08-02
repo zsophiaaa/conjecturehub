@@ -58,8 +58,13 @@ jobs:
         env:
           LLM_BASE_URL: ${{ secrets.LLM_BASE_URL }}
           LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
-          LLM_MODEL: ${{ vars.LLM_MODEL }}
-          LLM_DAILY_BUDGET: ${{ vars.LLM_DAILY_BUDGET }}
+          # Neither is sensitive, so a repository variable is the natural home.
+          # Granting a token the Variables permission is a separate step from
+          # Secrets though, so fall back to a secret of the same name and let
+          # whoever is configuring this use whichever they can already write.
+          LLM_MODEL: ${{ vars.LLM_MODEL || secrets.LLM_MODEL }}
+          LLM_DAILY_BUDGET: ${{ vars.LLM_DAILY_BUDGET || secrets.LLM_DAILY_BUDGET }}
+          LLM_MIN_INTERVAL_MS: ${{ vars.LLM_MIN_INTERVAL_MS || secrets.LLM_MIN_INTERVAL_MS }}
           ZULIP_EMAIL: ${{ secrets.ZULIP_EMAIL }}
           ZULIP_API_KEY: ${{ secrets.ZULIP_API_KEY }}
         run: |
