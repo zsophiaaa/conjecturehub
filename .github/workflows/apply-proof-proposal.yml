@@ -1,5 +1,11 @@
 name: Apply approved proof proposal
 
+# The workflow calls back into the site to fetch the submitted Lean source and to
+# report progress, so SITE_URL has to point at the running deployment. The
+# fallback below is the current one; override it with a SITE_URL repository
+# variable (or secret, if the configuring token lacks the Variables permission)
+# once a custom domain is live. Getting it wrong fails with curl exit 6 and no
+# other explanation, because the host simply does not resolve.
 on:
   repository_dispatch:
     types: [verify-proof-proposal]
@@ -19,7 +25,7 @@ jobs:
         env:
           PROPOSAL_ID: ${{ github.event.client_payload.proposalId }}
           JOB_ID: ${{ github.event.client_payload.jobId }}
-          SITE_URL: ${{ vars.SITE_URL || 'https://conjecturehub.org' }}
+          SITE_URL: ${{ vars.SITE_URL || secrets.SITE_URL || 'https://conjecture-hub-test.vercel.app' }}
           CRON_SECRET: ${{ secrets.CRON_SECRET }}
         run: |
           set -euo pipefail
@@ -38,7 +44,7 @@ jobs:
       - name: Notify job running
         env:
           JOB_ID: ${{ github.event.client_payload.jobId }}
-          SITE_URL: ${{ vars.SITE_URL || 'https://conjecturehub.org' }}
+          SITE_URL: ${{ vars.SITE_URL || secrets.SITE_URL || 'https://conjecture-hub-test.vercel.app' }}
           CRON_SECRET: ${{ secrets.CRON_SECRET }}
         run: |
           curl -sf -X POST \
@@ -60,7 +66,7 @@ jobs:
         if: always()
         env:
           JOB_ID: ${{ github.event.client_payload.jobId }}
-          SITE_URL: ${{ vars.SITE_URL || 'https://conjecturehub.org' }}
+          SITE_URL: ${{ vars.SITE_URL || secrets.SITE_URL || 'https://conjecture-hub-test.vercel.app' }}
           CRON_SECRET: ${{ secrets.CRON_SECRET }}
         run: |
           curl -sf -X POST \
