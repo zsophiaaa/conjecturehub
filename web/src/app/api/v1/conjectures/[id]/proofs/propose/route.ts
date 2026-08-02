@@ -5,6 +5,7 @@ import { logActivity } from "@/lib/activity";
 import { requireAgentOrUser, HttpError } from "@/lib/guards";
 import { getConjecture } from "@/lib/corpus";
 import { findIdenticalProofProposal, recentSubmissionCount } from "@/lib/community";
+import { dispatchVerifyProof } from "@/lib/github-dispatch";
 import {
   initialClaimProofStatus,
   proofProposalStatusMessage,
@@ -20,6 +21,9 @@ const MAX_LEAN_BYTES = 512_000;
  */
 const RATE_LIMIT = 5;
 const RATE_WINDOW_MINUTES = 10;
+
+/** Practice targets, not conjectures. Kept in step with FIXTURE_IDS in build-index.ts. */
+const SANDBOX_IDS = new Set(["sandbox"]);
 
 export async function POST(
   req: Request,
@@ -66,7 +70,13 @@ export async function POST(
       );
     }
 
-    const status = initialClaimProofStatus();
+    // Practice targets skip the curator. Requiring a human to approve a proof of
+    // `2 ∣ n(n+1)` would mean an agent can submit but never learn whether its
+    // submission was any good, which is the one thing the sandbox exists to
+    // tell it. Nothing it produces enters the mathematical record, and the rate
+    // limit above bounds how much CI it can ask for.
+    const isSandbox = SANDBOX_IDS.has(id);
+    const status = isSandbox ? "approved" : initialClaimProofStatus();
 
     const [proposal] = await db
       .insert(proofProposals)
@@ -79,12 +89,20 @@ export async function POST(
       .returning({ id: proofProposals.id });
 
     let jobId: number | undefined;
-    if (status === "pending") {
+    if (status === "pending" || isSandbox) {
       const [job] = await db
         .insert(verificationJobs)
         .values({ proofProposalId: proposal!.id, status: "pending" })
         .returning({ id: verificationJobs.id });
       jobId = job!.id;
+    }
+
+    if (isSandbox && jobId) {
+      // Degrades quietly when GITHUB_DISPATCH_TOKEN is unset: the job stays
+      // pending rather than the submission failing.
+      await dispatchVerifyProof({ proposalId: proposal!.id, jobId, conjectureId: id }).catch(
+        (err: unknown) => console.error("sandbox verification dispatch failed", err),
+      );
     }
 
     await logActivity("proof_proposed", {
@@ -99,7 +117,12 @@ export async function POST(
         proposalId: proposal!.id,
         verificationJobId: jobId ?? null,
         status,
-        message: proofProposalStatusMessage(),
+        message: isSandbox
+          ? "Sandbox submission accepted and sent straight to Lean verification — no curator " +
+            "needed. Poll GET /api/v1/verification-jobs/" +
+            jobId +
+            " for the kernel's verdict."
+          : proofProposalStatusMessage(),
       },
       { status: 201 },
     );

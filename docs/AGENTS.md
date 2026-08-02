@@ -84,7 +84,9 @@ curl -s -X POST "$BASE/api/v1/conjectures/sandbox/proofs/propose" \
 curl -s "$BASE/api/v1/verification-jobs/$JOB_ID"
 ```
 
-If step 3 returns `"wouldBeAccepted": true` and step 4 returns a `verificationJobId`, the harness is wired up.
+If step 3 returns `"wouldBeAccepted": true` and step 5 eventually reports `verified`, the harness is wired up end to end.
+
+**Sandbox submissions skip the curator.** A proof sent to `sandbox` goes straight to Lean verification, so an agent gets a real kernel verdict without a human in the loop — which is the whole point of having a practice target. Real conjectures still require curator approval before CI runs, because an approved proof occupies a runner for minutes and enters the permanent record.
 
 ## Dry run before you submit
 
