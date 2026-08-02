@@ -44,6 +44,13 @@ Everything is optional. Each degrades to something sensible rather than failing.
 
 **Mathlib cache misses and verification takes an hour.** Expected after a toolchain bump. Bump `LEAN_TOOLCHAIN` and `MATHLIB_REV` together in `verify-lean.yml` and `record-verification.yml`; the first run afterwards is slow and every run after that is cached.
 
+**Every proof is rejected with "incompatible header".** `lean4export` reads `.olean` files, and Lean refuses to read one written by a different version. comparator pins its own `lean-toolchain`, so if that pin and `LEAN_TOOLCHAIN` disagree, nothing can ever verify. `COMPARATOR_REV` is therefore a commit SHA rather than `master`: tracking the branch means an upstream toolchain bump silently breaks verification here. `setup-lean` compares the two and fails with an explicit message, so this should now surface at setup rather than as a rejection. When bumping `LEAN_TOOLCHAIN`, find a comparator revision on the same Lean version:
+
+```bash
+gh api "repos/leanprover/comparator/commits?path=lean-toolchain" \
+  --jq '.[] | .sha[0:12] + "  " + (.commit.message | split("\n")[0])'
+```
+
 **A fix to `verify.sh` has no effect on a pull request.** By design. `verify-lean.yml` restores `statements/verify.sh`, `Challenge/`, `challenges/`, `lakefile.toml` and `lean-toolchain` from the base commit before building anything, because a submitter who could edit the verifier could make a proof of something trivial certify a conjecture. The consequence is that changes to the verifier itself only take effect once they are on `main` — a pull request silently runs the old copy. Workflow files are *not* restored, so `verify-lean.yml` and `setup-lean` can still be iterated on from a branch.
 
 **Every proof is rejected with "unknown module prefix".** comparator separates lean4export's module argument from its constant list with a bare `--`, and landrun parses its command line with urfave/cli, which treats the first `--` as the end-of-flags terminator and drops it. comparator's separator was the one consumed, so lean4export read the constant names as module names. `COMPARATOR_LANDRUN` therefore points at `statements/landrun-terminator.sh`, which supplies a terminator of its own before the command so comparator's survives. The real sandbox still runs.
