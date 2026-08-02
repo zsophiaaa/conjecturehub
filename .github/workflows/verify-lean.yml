@@ -95,6 +95,19 @@ jobs:
         if: always() && steps.targets.outputs.names != ''
         run: .github/scripts/summarize-verification.sh verify-results >> "$GITHUB_STEP_SUMMARY"
 
+      # Verification runs here, but the submitter is waiting on the site. Nothing
+      # else closes that loop: the workflow that opened this pull request left
+      # the job `pending` and has already finished.
+      - name: Report the verdict to the site
+        if: always() && steps.targets.outputs.names != ''
+        env:
+          HEAD_REF: ${{ github.head_ref }}
+          SITE_URL: ${{ vars.SITE_URL || secrets.SITE_URL || 'https://conjecture-hub-test.vercel.app' }}
+          CRON_SECRET: ${{ secrets.CRON_SECRET }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          WORKFLOW_RUN_ID: ${{ github.run_id }}
+        run: .github/scripts/report-verdict.sh verify-results
+
       - uses: actions/upload-artifact@v4
         if: always() && steps.targets.outputs.names != ''
         with:

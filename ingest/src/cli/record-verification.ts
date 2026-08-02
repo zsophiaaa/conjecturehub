@@ -1,6 +1,6 @@
 import fs from "node:fs";
 import path from "node:path";
-import { read, write, appendClaim, exists } from "../lib/conjecture.js";
+import { read, write, appendClaim, exists, FIXTURE_IDS } from "../lib/conjecture.js";
 import { validateConjecture } from "../lib/validate.js";
 import { today } from "../lib/http.js";
 import { REPO_ROOT } from "../lib/paths.js";
@@ -96,6 +96,14 @@ for (const file of files) {
 
   if (!exists(conjectureId)) {
     console.error(`${result.challenge}: conjecture "${conjectureId}" does not exist`);
+    continue;
+  }
+
+  // A practice target is provable by design, so a receipt for one would assert
+  // that a thing nobody conjectured is now settled. The kernel result still
+  // reaches the submitter; it just does not enter the mathematical record.
+  if (FIXTURE_IDS.has(conjectureId)) {
+    console.log(`${result.challenge}: practice target, no receipt written`);
     continue;
   }
 

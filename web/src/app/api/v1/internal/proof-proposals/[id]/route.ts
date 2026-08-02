@@ -1,7 +1,7 @@
-import { eq } from "drizzle-orm";
+import { desc, eq } from "drizzle-orm";
 import { NextResponse } from "next/server";
 import { db } from "@/db";
-import { proofProposals } from "@/db/schema";
+import { proofProposals, verificationJobs } from "@/db/schema";
 
 export const dynamic = "force-dynamic";
 
@@ -27,9 +27,19 @@ export async function GET(
     return NextResponse.json({ error: "Not found or not approved." }, { status: 404 });
   }
 
+  // The pull request that verifies this proof is a separate workflow run from
+  // the one that opened it, and only knows the proposal from its branch name.
+  // Without this it has no job to report the kernel's verdict against, and the
+  // submitter polls `pending` forever.
+  const job = await db.query.verificationJobs.findFirst({
+    where: eq(verificationJobs.proofProposalId, row.id),
+    orderBy: desc(verificationJobs.id),
+  });
+
   return NextResponse.json({
     id: row.id,
     conjectureId: row.conjectureId,
     leanBody: row.leanBody,
+    verificationJobId: job?.id ?? null,
   });
 }

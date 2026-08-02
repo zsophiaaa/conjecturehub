@@ -114,6 +114,16 @@ function prune<T>(value: T): T {
   return value;
 }
 
+/**
+ * Practice targets. They live in the corpus so the API and MCP can serve them,
+ * but they are not mathematics: they must not appear in a search, inflate a
+ * count, or collect a verification receipt.
+ *
+ * Kept in step with SANDBOX_IDS in the web proof-proposal route, which cannot
+ * import this across the workspace boundary.
+ */
+export const FIXTURE_IDS = new Set(["sandbox"]);
+
 export function conjecturePath(id: string): string {
   return path.join(CONJECTURES_DIR, `${id}.yaml`);
 }

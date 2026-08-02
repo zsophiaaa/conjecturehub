@@ -1,6 +1,6 @@
 import fs from "node:fs";
 import path from "node:path";
-import { readAll } from "../lib/conjecture.js";
+import { FIXTURE_IDS, readAll } from "../lib/conjecture.js";
 import { deriveStatus } from "../lib/status.js";
 import { REPO_ROOT, WEB_INDEX_DIR } from "../lib/paths.js";
 import {
@@ -70,12 +70,6 @@ interface SearchEntry {
   /** 1 when statements/challenges/{id}.json exists for comparator */
   k?: 1;
 }
-
-/**
- * Fixtures live in the corpus so the API and MCP can serve them, but they are
- * not mathematics and must not appear in a search or inflate a count.
- */
-const FIXTURE_IDS = new Set(["sandbox"]);
 
 const records = readAll();
 if (records.length === 0) {

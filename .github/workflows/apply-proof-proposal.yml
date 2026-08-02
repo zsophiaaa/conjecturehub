@@ -36,10 +36,18 @@ jobs:
           echo "conjecture=$(jq -r .conjectureId proposal.json)" >> "$GITHUB_OUTPUT"
           jq -r .leanBody proposal.json > /tmp/solution.lean
 
-      - name: Write solution file (placeholder path)
+      # The path is the whole mechanism: verify-lean.yml selects a challenge only
+      # when the file its config names has changed, so a proof written anywhere
+      # else sails through the pull request unchecked.
+      - name: Write the solution where its challenge expects it
+        env:
+          CONJECTURE: ${{ steps.fetch.outputs.conjecture }}
         run: |
-          mkdir -p statements/Solution
-          cp /tmp/solution.lean "statements/Solution/proposal-${{ github.event.client_payload.proposalId }}.lean"
+          set -euo pipefail
+          target="$(python3 .github/scripts/solution-path.py "$CONJECTURE" /tmp/solution.lean)"
+          mkdir -p "$(dirname "$target")"
+          cp /tmp/solution.lean "$target"
+          echo "wrote $target"
 
       - name: Notify job running
         env:
