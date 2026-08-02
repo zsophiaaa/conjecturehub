@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { auth } from "@/auth";
-import { getPendingClaims, getPendingComments, getPendingDifficulty, getPendingProofs } from "@/lib/moderation";
 import { ModerationQueue } from "@/components/ModerationQueue";
 
 export const dynamic = "force-dynamic";
+export const runtime = "nodejs";
 
 export const metadata: Metadata = {
   title: "Moderation queue",
@@ -50,12 +50,37 @@ export default async function ModeratePage() {
     );
   }
 
-  const [comments, difficulty, claims, proofs] = await Promise.all([
-    getPendingComments(),
-    getPendingDifficulty(),
-    getPendingClaims(),
-    getPendingProofs(),
-  ]);
+  const {
+    getPendingComments,
+    getPendingDifficulty,
+    getPendingClaims,
+    getPendingProofs,
+  } = await import("@/lib/moderation");
+
+  let comments;
+  let difficulty;
+  let claims;
+  let proofs;
+  try {
+    [comments, difficulty, claims, proofs] = await Promise.all([
+      getPendingComments(),
+      getPendingDifficulty(),
+      getPendingClaims(),
+      getPendingProofs(),
+    ]);
+  } catch (err) {
+    console.error("moderation queue load failed", err);
+    return (
+      <div className="max-w-xl space-y-4">
+        <h1 className="font-serif text-2xl text-ink">Moderation queue</h1>
+        <p className="text-ink-muted">
+          Could not load pending items. If this is a fresh deploy, run database migrations on Neon (
+          <code className="font-mono text-sm">npm run db:migrate</code> in <code className="font-mono text-sm">web/</code>
+          ).
+        </p>
+      </div>
+    );
+  }
 
   const pendingCount = comments.length + difficulty.length + claims.length + proofs.length;
 
