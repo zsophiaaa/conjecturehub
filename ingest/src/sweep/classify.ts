@@ -32,7 +32,9 @@ Rules that matter:
 - A paper that merely cites, surveys, restates, or makes incremental progress on a conjecture is NOT a resolution. Use "partial" for genuine partial progress and set about_this_conjecture=false for mere mentions.
 - "evidence" must be a short verbatim quote from the document. If you cannot quote it, set about_this_conjecture to false.
 - "confidence" is your probability from 0 to 1 that a domain expert would agree with your reading.
-- Do not speculate about correctness. You are recording what was claimed, not whether it is true.`;
+- Do not speculate about correctness. You are recording what was claimed, not whether it is true.
+- Keep "rationale" to a single short sentence, and "evidence" to one quoted sentence. A long answer risks being cut off mid-JSON and discarded.
+- "claim_type" must be exactly one of the listed values. "disproof", "solved" and "refuted" are not among them.`;
 
 function buildUserPrompt(match: CandidateMatch, conjecture: Conjecture): string {
   const statement = conjecture.statement?.informal?.slice(0, 700) ?? "(no statement on file)";
@@ -57,6 +59,15 @@ interface RawVerdict {
   evidence?: string | null;
   rationale?: string;
 }
+
+/**
+ * Room for the verdict plus a sentence of rationale. The previous 400 was enough
+ * for the fields but not the prose, and a reasoning model writing a careful
+ * explanation would blow the limit mid-string — leaving unterminated JSON that
+ * parsed to nothing and vanished. Observed with gpt-oss-120b on a correct
+ * classification of the Jacobian counterexample.
+ */
+const MAX_VERDICT_TOKENS = 1200;
 
 const VALID_TYPES = new Set([
   "proved",
@@ -108,15 +119,16 @@ export async function classifyMatches(
     }
 
     let verdict: RawVerdict | null = null;
+    let raw = "";
     try {
-      const response = await provider.complete(
+      raw = await provider.complete(
         [
           { role: "system", content: SYSTEM_PROMPT },
           { role: "user", content: buildUserPrompt(match, conjecture) },
         ],
-        { maxTokens: 400 },
+        { maxTokens: MAX_VERDICT_TOKENS },
       );
-      verdict = extractJson<RawVerdict>(response);
+      verdict = extractJson<RawVerdict>(raw);
     } catch (error) {
       classified.push({
         ...match,
@@ -135,11 +147,48 @@ export async function classifyMatches(
     used++;
     options.onProgress?.(used, budget);
 
-    if (!verdict?.about_this_conjecture) continue;
+    // Unparseable output used to be indistinguishable from "not relevant": both
+    // fell through the same `continue`, so a correct verdict cut off mid-JSON by
+    // the token limit was thrown away without trace. Surface it for triage
+    // instead — a match nobody looked at is recoverable, one silently dropped is
+    // not.
+    if (!verdict) {
+      classified.push({
+        ...match,
+        claimType: null,
+        scope: null,
+        confidence: match.matchScore * 0.5,
+        evidence: null,
+        rationale: `Classifier returned output that is not JSON${
+          raw.length > 0 ? ` (${raw.length} chars, possibly truncated)` : ""
+        }; needs human triage.`,
+        classifier: provider.name,
+      });
+      continue;
+    }
+
+    if (!verdict.about_this_conjecture) continue;
 
     const claimType =
       verdict.claim_type && VALID_TYPES.has(verdict.claim_type) ? verdict.claim_type : null;
-    if (!claimType) continue;
+
+    // A near-miss like "disproof" for "disproved" is the model being careless
+    // with the enum, not the document being irrelevant. Flag it rather than
+    // discard the match.
+    if (!claimType) {
+      classified.push({
+        ...match,
+        claimType: null,
+        scope: verdict.scope ?? null,
+        confidence: Math.max(0, Math.min(1, verdict.confidence ?? 0.5)),
+        evidence: verdict.evidence ?? null,
+        rationale: `Classifier judged this relevant but returned claim_type ${JSON.stringify(
+          verdict.claim_type,
+        )}, which is not a valid type; needs human triage.`,
+        classifier: provider.name,
+      });
+      continue;
+    }
 
     classified.push({
       ...match,

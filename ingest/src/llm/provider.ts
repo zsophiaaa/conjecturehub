@@ -22,6 +22,14 @@ export interface LlmProvider {
   complete(messages: ChatMessage[], options?: { maxTokens?: number }): Promise<string>;
 }
 
+const MAX_RETRIES = 4;
+const BASE_BACKOFF_MS = 2000;
+const MAX_BACKOFF_MS = 30_000;
+
+function sleep(ms: number): Promise<void> {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
 class NoopProvider implements LlmProvider {
   readonly name = "none";
   readonly available = false;
@@ -53,29 +61,59 @@ class OpenAiCompatibleProvider implements LlmProvider {
   }
 
   async complete(messages: ChatMessage[], options: { maxTokens?: number } = {}): Promise<string> {
-    const res = await fetch(`${this.#config.baseUrl}/chat/completions`, {
-      method: "POST",
-      headers: {
-        "content-type": "application/json",
-        authorization: `Bearer ${this.#config.apiKey}`,
-      },
-      body: JSON.stringify({
-        model: this.#config.model,
-        messages,
-        temperature: 0,
-        max_tokens: options.maxTokens ?? 400,
-      }),
-    });
+    // Free inference tiers are exactly the ones this project expects to run on,
+    // and they rate-limit aggressively: a sweep firing its classifier calls back
+    // to back will collect 429s partway through. Retrying with the server's own
+    // Retry-After turns that from lost classifications into a slower run.
+    let lastError: Error | null = null;
 
-    if (!res.ok) {
+    for (let attempt = 0; attempt <= MAX_RETRIES; attempt++) {
+      const res = await fetch(`${this.#config.baseUrl}/chat/completions`, {
+        method: "POST",
+        headers: {
+          "content-type": "application/json",
+          authorization: `Bearer ${this.#config.apiKey}`,
+        },
+        body: JSON.stringify({
+          model: this.#config.model,
+          messages,
+          temperature: 0,
+          max_tokens: options.maxTokens ?? 400,
+        }),
+      });
+
+      if (res.ok) {
+        const data = (await res.json()) as {
+          choices?: { message?: { content?: string }; finish_reason?: string }[];
+        };
+        const choice = data.choices?.[0];
+        const content = choice?.message?.content;
+        if (!content) throw new Error(`${this.name} returned no content`);
+        // A truncated answer is usually unparseable JSON downstream, and saying
+        // so beats letting the caller guess why extraction failed.
+        if (choice?.finish_reason === "length") {
+          console.warn(
+            `${this.name}: response hit the token limit and is probably truncated. ` +
+              "Raise maxTokens or ask the model for a shorter answer.",
+          );
+        }
+        return content;
+      }
+
       const body = await res.text().catch(() => "");
-      throw new Error(`${this.name} returned HTTP ${res.status}: ${body.slice(0, 300)}`);
+      lastError = new Error(`${this.name} returned HTTP ${res.status}: ${body.slice(0, 300)}`);
+
+      const retryable = res.status === 429 || res.status >= 500;
+      if (!retryable || attempt === MAX_RETRIES) break;
+
+      const retryAfter = Number(res.headers.get("retry-after"));
+      const waitMs = Number.isFinite(retryAfter) && retryAfter > 0
+        ? Math.min(retryAfter * 1000, MAX_BACKOFF_MS)
+        : Math.min(BASE_BACKOFF_MS * 2 ** attempt, MAX_BACKOFF_MS);
+      await sleep(waitMs);
     }
 
-    const data = (await res.json()) as { choices?: { message?: { content?: string } }[] };
-    const content = data.choices?.[0]?.message?.content;
-    if (!content) throw new Error(`${this.name} returned no content`);
-    return content;
+    throw lastError ?? new Error(`${this.name} failed`);
   }
 }
 
