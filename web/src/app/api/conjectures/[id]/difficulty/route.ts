@@ -5,6 +5,7 @@ import { requireUser, HttpError } from "@/lib/guards";
 import { recentSubmissionCount } from "@/lib/community";
 import { isDifficultyTag } from "@/lib/difficulty";
 import { getConjecture } from "@/lib/corpus";
+import { initialModerationStatus, moderationStatusMessage } from "@/lib/moderation-mode";
 
 export const dynamic = "force-dynamic";
 
@@ -44,6 +45,7 @@ export async function POST(
         conjectureId: id,
         userId: user.id,
         tag,
+        status: initialModerationStatus(),
       });
     } catch (err) {
       // Unique-violation → the user already applied this tag here.
@@ -54,7 +56,7 @@ export async function POST(
     }
 
     return NextResponse.json(
-      { ok: true, message: "Thanks — your tag is awaiting curator review." },
+      { ok: true, message: moderationStatusMessage("difficulty") },
       { status: 201 },
     );
   } catch (err) {

@@ -5,6 +5,7 @@ import { requireUser, HttpError } from "@/lib/guards";
 import { recentSubmissionCount } from "@/lib/community";
 import { COMMENT_MAX_LENGTH, COMMENT_MIN_LENGTH } from "@/lib/comment-limits";
 import { getConjecture } from "@/lib/corpus";
+import { initialModerationStatus, moderationStatusMessage } from "@/lib/moderation-mode";
 
 export const dynamic = "force-dynamic";
 
@@ -51,10 +52,11 @@ export async function POST(
       conjectureId: id,
       userId: user.id,
       body: trimmed,
+      status: initialModerationStatus(),
     });
 
     return NextResponse.json(
-      { ok: true, message: "Thanks — your comment is awaiting curator review." },
+      { ok: true, message: moderationStatusMessage("comment") },
       { status: 201 },
     );
   } catch (err) {

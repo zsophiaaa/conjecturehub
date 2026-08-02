@@ -22,6 +22,7 @@ Copy [web/.env.example](../web/.env.example) to `web/.env.local`:
 | `CRON_SECRET` | GitHub Actions → site webhooks |
 | `GITHUB_DISPATCH_TOKEN` | Curator approve → trigger CI workflows |
 | `POW_SKIP=1` | Dev only: skip agent PoW |
+| `MODERATION_AUTO_APPROVE=1` | Testing: comments and difficulty tags publish immediately (claims/proofs still moderated) |
 
 ## Human sign-in
 

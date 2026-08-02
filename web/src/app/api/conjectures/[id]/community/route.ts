@@ -7,6 +7,7 @@ import {
   getApprovedComments,
   getDifficultyAggregate,
 } from "@/lib/community";
+import { moderationAutoApprove } from "@/lib/moderation-mode";
 
 export const dynamic = "force-dynamic";
 
@@ -64,5 +65,6 @@ export async function GET(
     difficulty,
     mine,
     signedIn: Boolean(session?.user),
+    moderationAutoApprove: moderationAutoApprove(),
   });
 }

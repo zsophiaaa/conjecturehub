@@ -34,6 +34,7 @@ interface CommunityData {
   difficulty: DifficultyAggregate[];
   mine: { tags: string[]; pendingComments: number } | null;
   signedIn: boolean;
+  moderationAutoApprove?: boolean;
 }
 
 function formatDate(iso: string): string {
@@ -296,7 +297,8 @@ function CommentsPanel({
           className="space-y-2 ui-panel p-4"
         >
           <label htmlFor="comment-body" className="text-xs font-medium text-ink-faint">
-            Add a comment — Markdown supported. Held for curator review.
+            Add a comment — Markdown supported.
+            {data?.moderationAutoApprove ? " Publishes immediately." : " Held for curator review."}
           </label>
           <textarea
             id="comment-body"

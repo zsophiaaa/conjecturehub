@@ -6,6 +6,7 @@ import { SITE } from "@/lib/corpus";
 import { AuthMenu } from "@/components/AuthMenu";
 import { Providers } from "@/components/Providers";
 import { ThemeScript } from "@/components/ThemeScript";
+import { moderationAutoApprove } from "@/lib/moderation-mode";
 
 export const metadata: Metadata = {
   title: {
@@ -61,6 +62,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             </div>
           </div>
         </header>
+
+        {moderationAutoApprove() ? (
+          <div className="border-b border-border bg-surface-2 px-5 py-2 text-center text-sm text-ink-muted">
+            <strong className="text-ink">Open testing mode</strong> — comments and difficulty tags publish
+            immediately. Claim and proof proposals still require curator review.
+          </div>
+        ) : null}
 
         <main id="main" className="mx-auto max-w-6xl px-5 py-10">
           {children}

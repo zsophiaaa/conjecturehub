@@ -6,6 +6,7 @@ import { recentSubmissionCount } from "@/lib/community";
 import { requireAgentOrUser, HttpError } from "@/lib/guards";
 import { COMMENT_MAX_LENGTH, COMMENT_MIN_LENGTH } from "@/lib/comment-limits";
 import { getConjecture } from "@/lib/corpus";
+import { initialModerationStatus, moderationStatusMessage } from "@/lib/moderation-mode";
 
 export const dynamic = "force-dynamic";
 
@@ -49,6 +50,7 @@ export async function POST(
         userId: user.id,
         body: trimmed,
         parentCommentId: body.parentCommentId ?? null,
+        status: initialModerationStatus(),
       })
       .returning({ id: comments.id });
 
@@ -59,7 +61,7 @@ export async function POST(
     });
 
     return NextResponse.json(
-      { ok: true, id: row?.id, message: "Thanks — your comment is awaiting curator review." },
+      { ok: true, id: row?.id, message: moderationStatusMessage("comment") },
       { status: 201 },
     );
   } catch (err) {
