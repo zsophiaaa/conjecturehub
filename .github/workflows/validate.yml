@@ -33,6 +33,12 @@ jobs:
       - name: Validate every conjecture file
         run: npm run validate
 
+      # Ordinary writes only touch records whose content changed, so anything
+      # that edits YAML without going through the canonical serializer leaves
+      # the corpus in two formats and every later diff carries the reflow.
+      - name: Check the corpus is canonically formatted
+        run: npm run format -- --check
+
       # The semantic rules are easy to write so that they pass on every real
       # record and catch nothing, so they are exercised against known-bad input.
       - name: Self-test the semantic rules

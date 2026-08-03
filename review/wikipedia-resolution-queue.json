@@ -5,6 +5,7 @@
       "id": "black-hole-stability-conjecture",
       "title": "black hole stability conjecture",
       "article": "https://en.wikipedia.org/wiki/Black_hole_stability_conjecture",
+      "signal": "proved",
       "reason": "Wikipedia categorises this as proved",
       "categories": [
         "Category:Black holes",
@@ -17,6 +18,7 @@
       "id": "bogomolov-conjecture",
       "title": "Bogomolov conjecture",
       "article": "https://en.wikipedia.org/wiki/Bogomolov_conjecture",
+      "signal": "proved",
       "reason": "Wikipedia categorises this as proved",
       "categories": [
         "Category:Abelian varieties",
@@ -29,6 +31,7 @@
       "id": "borsuk-s-conjecture",
       "title": "Borsuk's conjecture",
       "article": "https://en.wikipedia.org/wiki/Borsuk's_conjecture",
+      "signal": "disproved",
       "reason": "Wikipedia categorises this as disproved",
       "categories": [
         "Category:Discrete geometry",
@@ -40,6 +43,7 @@
       "id": "bunkbed-conjecture",
       "title": "Bunkbed conjecture",
       "article": "https://en.wikipedia.org/wiki/Bunkbed_conjecture",
+      "signal": "disproved",
       "reason": "Wikipedia categorises this as disproved",
       "categories": [
         "Category:Disproved conjectures",
@@ -51,6 +55,7 @@
       "id": "catalan-s-conjecture",
       "title": "Catalan's conjecture",
       "article": "https://en.wikipedia.org/wiki/Catalan's_conjecture",
+      "signal": "proved",
       "reason": "Wikipedia categorises this as proved",
       "categories": [
         "Category:Abc conjecture",
@@ -65,6 +70,7 @@
       "id": "dinitz-garg-goemans-conjecture",
       "title": "Dinitz–Garg–Goemans conjecture",
       "article": "https://en.wikipedia.org/wiki/Dinitz%E2%80%93Garg%E2%80%93Goemans_conjecture",
+      "signal": "disproved",
       "reason": "Wikipedia categorises this as disproved",
       "categories": [
         "Category:Combinatorial optimization",
@@ -79,6 +85,7 @@
       "id": "dodecahedral-conjecture",
       "title": "dodecahedral conjecture",
       "article": "https://en.wikipedia.org/wiki/Dodecahedral_conjecture",
+      "signal": "proved",
       "reason": "Wikipedia categorises this as proved",
       "categories": [
         "Category:Conjectures that have been proved",
@@ -90,6 +97,7 @@
       "id": "duffin-schaeffer-theorem",
       "title": "Duffin–Schaeffer theorem",
       "article": "https://en.wikipedia.org/wiki/Duffin%E2%80%93Schaeffer_theorem",
+      "signal": "proved",
       "reason": "Wikipedia categorises this as proved",
       "categories": [
         "Category:Conjectures",
@@ -102,6 +110,7 @@
       "id": "dyson-conjecture",
       "title": "Dyson conjecture",
       "article": "https://en.wikipedia.org/wiki/Dyson_conjecture",
+      "signal": "proved",
       "reason": "Wikipedia categorises this as proved",
       "categories": [
         "Category:Algebraic combinatorics",
@@ -117,6 +126,7 @@
       "id": "egan-conjecture",
       "title": "Egan Conjecture",
       "article": "https://en.wikipedia.org/wiki/Egan_conjecture",
+      "signal": "proved",
       "reason": "Wikipedia categorises this as proved",
       "categories": [
         "Category:Conjectures that have been proved",
@@ -128,6 +138,7 @@
       "id": "ehrenpreis-conjecture",
       "title": "Ehrenpreis conjecture",
       "article": "https://en.wikipedia.org/wiki/Ehrenpreis_conjecture",
+      "signal": "proved",
       "reason": "Wikipedia categorises this as proved",
       "categories": [
         "Category:3-manifolds",
@@ -140,6 +151,7 @@
       "id": "erdos-graham-problem",
       "title": "Erdős–Graham problem",
       "article": "https://en.wikipedia.org/wiki/Erd%C5%91s%E2%80%93Graham_problem",
+      "signal": "proved",
       "reason": "Wikipedia categorises this as proved",
       "categories": [
         "Category:Combinatorics",
@@ -154,6 +166,7 @@
       "id": "ganea-conjecture",
       "title": "Ganea conjecture",
       "article": "https://en.wikipedia.org/wiki/Ganea_conjecture",
+      "signal": "disproved",
       "reason": "Wikipedia categorises this as disproved",
       "categories": [
         "Category:Algebraic topology",
@@ -165,6 +178,7 @@
       "id": "geometrization-conjecture",
       "title": "geometrization conjecture",
       "article": "https://en.wikipedia.org/wiki/Geometrization_conjecture",
+      "signal": "proved",
       "reason": "Wikipedia categorises this as proved",
       "categories": [
         "Category:3-manifolds",
@@ -179,6 +193,7 @@
       "id": "goldbach-s-weak-conjecture",
       "title": "Goldbach's weak conjecture",
       "article": "https://en.wikipedia.org/wiki/Goldbach's_weak_conjecture",
+      "signal": "proved",
       "reason": "Wikipedia categorises this as proved",
       "categories": [
         "Category:Additive number theory",
@@ -193,6 +208,7 @@
       "id": "gras-conjecture",
       "title": "Gras conjecture",
       "article": "https://en.wikipedia.org/wiki/Gras_conjecture",
+      "signal": "proved",
       "reason": "Wikipedia categorises this as proved",
       "categories": [
         "Category:Conjectures that have been proved",
@@ -204,6 +220,7 @@
       "id": "haboush-s-theorem",
       "title": "Haboush's theorem",
       "article": "https://en.wikipedia.org/wiki/Haboush's_theorem",
+      "signal": "proved",
       "reason": "Wikipedia categorises this as proved",
       "categories": [
         "Category:Conjectures that have been proved",
@@ -217,6 +234,7 @@
       "id": "hanna-neumann-conjecture",
       "title": "Hanna Neumann conjecture",
       "article": "https://en.wikipedia.org/wiki/Hanna_Neumann_conjecture",
+      "signal": "proved",
       "reason": "Wikipedia categorises this as proved",
       "categories": [
         "Category:Conjectures that have been proved",
@@ -229,6 +247,7 @@
       "id": "hauptvermutung",
       "title": "Hauptvermutung",
       "article": "https://en.wikipedia.org/wiki/Hauptvermutung",
+      "signal": "disproved",
       "reason": "Wikipedia categorises this as disproved",
       "categories": [
         "Category:Disproved conjectures",
@@ -242,6 +261,7 @@
       "id": "hedetniemi-s-conjecture",
       "title": "Hedetniemi's conjecture",
       "article": "https://en.wikipedia.org/wiki/Hedetniemi's_conjecture",
+      "signal": "disproved",
       "reason": "Wikipedia categorises this as disproved",
       "categories": [
         "Category:Disproved conjectures",
@@ -254,6 +274,7 @@
       "id": "hilbert-s-thirteenth-problem",
       "title": "Hilbert's thirteenth problem",
       "article": "https://en.wikipedia.org/wiki/Hilbert's_thirteenth_problem",
+      "signal": "disproved",
       "reason": "Wikipedia categorises this as disproved",
       "categories": [
         "Category:Disproved conjectures",
@@ -266,6 +287,7 @@
       "id": "hirsch-conjecture",
       "title": "Hirsch conjecture",
       "article": "https://en.wikipedia.org/wiki/Hirsch_conjecture",
+      "signal": "disproved",
       "reason": "Wikipedia categorises this as disproved",
       "categories": [
         "Category:Conjectures",
@@ -279,6 +301,7 @@
       "id": "honeycomb-conjecture",
       "title": "honeycomb conjecture",
       "article": "https://en.wikipedia.org/wiki/Honeycomb_theorem",
+      "signal": "proved",
       "reason": "Wikipedia categorises this as proved",
       "categories": [
         "Category:Conjectures that have been proved",
@@ -291,6 +314,7 @@
       "id": "hsiang-lawson-s-conjecture",
       "title": "Hsiang–Lawson's conjecture",
       "article": "https://en.wikipedia.org/wiki/Hsiang%E2%80%93Lawson's_conjecture",
+      "signal": "proved",
       "reason": "Wikipedia categorises this as proved",
       "categories": [
         "Category:Conjectures that have been proved",
@@ -304,6 +328,7 @@
       "id": "kalman-s-conjecture",
       "title": "Kalman's conjecture",
       "article": "https://en.wikipedia.org/wiki/Kalman's_conjecture",
+      "signal": "disproved",
       "reason": "Wikipedia categorises this as disproved",
       "categories": [
         "Category:Disproved conjectures",
@@ -316,6 +341,7 @@
       "id": "kato-s-conjecture",
       "title": "Kato's conjecture",
       "article": "https://en.wikipedia.org/wiki/Kato's_conjecture",
+      "signal": "proved",
       "reason": "Wikipedia categorises this as proved",
       "categories": [
         "Category:Conjectures that have been proved",
@@ -328,6 +354,7 @@
       "id": "keller-s-conjecture",
       "title": "Keller's conjecture",
       "article": "https://en.wikipedia.org/wiki/Keller's_conjecture",
+      "signal": "disproved",
       "reason": "Wikipedia categorises this as disproved",
       "categories": [
         "Category:Computer-assisted proofs",
@@ -342,6 +369,7 @@
       "id": "kepler-conjecture",
       "title": "Kepler conjecture",
       "article": "https://en.wikipedia.org/wiki/Kepler_conjecture",
+      "signal": "proved",
       "reason": "Wikipedia categorises this as proved",
       "categories": [
         "Category:Computer-assisted proofs",
@@ -359,6 +387,7 @@
       "id": "lange-s-conjecture",
       "title": "Lange's conjecture",
       "article": "https://en.wikipedia.org/wiki/Lange's_conjecture",
+      "signal": "proved",
       "reason": "Wikipedia categorises this as proved",
       "categories": [
         "Category:Algebraic curves",
@@ -372,6 +401,7 @@
       "id": "last-geometric-statement-of-jacobi",
       "title": "Last geometric statement of Jacobi",
       "article": "https://en.wikipedia.org/wiki/Last_geometric_statement_of_Jacobi",
+      "signal": "proved",
       "reason": "Wikipedia categorises this as proved",
       "categories": [
         "Category:Algebraic geometry",
@@ -384,6 +414,7 @@
       "id": "markus-yamabe-conjecture",
       "title": "Markus–Yamabe conjecture",
       "article": "https://en.wikipedia.org/wiki/Markus%E2%80%93Yamabe_conjecture",
+      "signal": "disproved",
       "reason": "Wikipedia categorises this as disproved",
       "categories": [
         "Category:Disproved conjectures",
@@ -397,6 +428,7 @@
       "id": "mckay-equality",
       "title": "McKay equality",
       "article": "https://en.wikipedia.org/wiki/McKay_conjecture",
+      "signal": "proved",
       "reason": "Wikipedia categorises this as proved",
       "categories": [
         "Category:Conjectures that have been proved",
@@ -408,6 +440,7 @@
       "id": "mertens-conjecture",
       "title": "Mertens conjecture",
       "article": "https://en.wikipedia.org/wiki/Mertens_conjecture",
+      "signal": "disproved",
       "reason": "Wikipedia categorises this as disproved",
       "categories": [
         "Category:Analytic number theory",
@@ -419,6 +452,7 @@
       "id": "milnor-conjecture",
       "title": "Milnor conjecture",
       "article": "https://en.wikipedia.org/wiki/Milnor_conjecture_(Ricci_curvature)",
+      "signal": "disproved",
       "reason": "Wikipedia categorises this as disproved",
       "categories": [
         "Category:Differential geometry",
@@ -431,6 +465,7 @@
       "id": "mizohata-takeuchi-conjecture",
       "title": "Mizohata–Takeuchi conjecture",
       "article": "https://en.wikipedia.org/wiki/Mizohata%E2%80%93Takeuchi_conjecture",
+      "signal": "disproved",
       "reason": "Wikipedia categorises this as disproved",
       "categories": [
         "Category:Disproved conjectures",
@@ -442,6 +477,7 @@
       "id": "nagata-s-conjecture",
       "title": "Nagata's conjecture",
       "article": "https://en.wikipedia.org/wiki/Nagata's_conjecture",
+      "signal": "proved",
       "reason": "Wikipedia categorises this as proved",
       "categories": [
         "Category:Conjectures that have been proved",
@@ -454,6 +490,7 @@
       "id": "nirenberg-s-conjecture",
       "title": "Nirenberg's conjecture",
       "article": "https://en.wikipedia.org/wiki/Osserman%E2%80%93Xavier%E2%80%93Fujimoto_theorem",
+      "signal": "proved",
       "reason": "Wikipedia categorises this as proved",
       "categories": [
         "Category:Conjectures that have been proved",
@@ -465,6 +502,7 @@
       "id": "oppenheim-conjecture",
       "title": "Oppenheim conjecture",
       "article": "https://en.wikipedia.org/wiki/Oppenheim_conjecture",
+      "signal": "proved",
       "reason": "Wikipedia categorises this as proved",
       "categories": [
         "Category:Conjectures that have been proved",
@@ -478,6 +516,7 @@
       "id": "painleve-conjecture",
       "title": "Painlevé conjecture",
       "article": "https://en.wikipedia.org/wiki/Painlev%C3%A9_conjecture",
+      "signal": "proved",
       "reason": "Wikipedia categorises this as proved",
       "categories": [
         "Category:Classical mechanics",
@@ -492,6 +531,7 @@
       "id": "pillai-s-conjecture",
       "title": "Pillai's conjecture",
       "article": "https://en.wikipedia.org/wiki/Catalan's_conjecture",
+      "signal": "proved",
       "reason": "Wikipedia categorises this as proved",
       "categories": [
         "Category:Abc conjecture",
@@ -506,6 +546,7 @@
       "id": "polya-conjecture",
       "title": "Pólya conjecture",
       "article": "https://en.wikipedia.org/wiki/P%C3%B3lya_conjecture",
+      "signal": "disproved",
       "reason": "Wikipedia categorises this as disproved",
       "categories": [
         "Category:Conjectures about prime numbers",
@@ -517,6 +558,7 @@
       "id": "property-p-conjecture",
       "title": "property P conjecture",
       "article": "https://en.wikipedia.org/wiki/Property_P_conjecture",
+      "signal": "proved",
       "reason": "Wikipedia categorises this as proved",
       "categories": [
         "Category:3-manifolds",
@@ -528,6 +570,7 @@
       "id": "ragsdale-conjecture",
       "title": "Ragsdale conjecture",
       "article": "https://en.wikipedia.org/wiki/Ragsdale_conjecture",
+      "signal": "disproved",
       "reason": "Wikipedia categorises this as disproved",
       "categories": [
         "Category:Disproved conjectures",
@@ -539,6 +582,7 @@
       "id": "read-s-conjecture",
       "title": "Read's conjecture",
       "article": "https://en.wikipedia.org/wiki/Read's_conjecture",
+      "signal": "proved",
       "reason": "Wikipedia categorises this as proved",
       "categories": [
         "Category:Conjectures that have been proved",
@@ -550,6 +594,7 @@
       "id": "ringel-youngs-theorem",
       "title": "Ringel–Youngs theorem",
       "article": "https://en.wikipedia.org/wiki/Heawood_conjecture",
+      "signal": "proved",
       "reason": "Wikipedia categorises this as proved",
       "categories": [
         "Category:Conjectures that have been proved",
@@ -563,6 +608,7 @@
       "id": "scheinerman-s-conjecture",
       "title": "Scheinerman's conjecture",
       "article": "https://en.wikipedia.org/wiki/Scheinerman's_conjecture",
+      "signal": "proved",
       "reason": "Wikipedia categorises this as proved",
       "categories": [
         "Category:Conjectures that have been proved",
@@ -574,6 +620,7 @@
       "id": "schoen-yau-conjecture",
       "title": "Schoen–Yau conjecture",
       "article": "https://en.wikipedia.org/wiki/Schoen%E2%80%93Yau_conjecture",
+      "signal": "disproved",
       "reason": "Wikipedia categorises this as disproved",
       "categories": [
         "Category:Disproved conjectures",
@@ -585,6 +632,7 @@
       "id": "schreier-conjecture",
       "title": "Schreier conjecture",
       "article": "https://en.wikipedia.org/wiki/Schreier_conjecture",
+      "signal": "proved",
       "reason": "Wikipedia categorises this as proved",
       "categories": [
         "Category:Conjectures that have been proved",
@@ -596,6 +644,7 @@
       "id": "seifert-conjecture",
       "title": "Seifert conjecture",
       "article": "https://en.wikipedia.org/wiki/Seifert_conjecture",
+      "signal": "disproved",
       "reason": "Wikipedia categorises this as disproved",
       "categories": [
         "Category:Differential topology",
@@ -607,6 +656,7 @@
       "id": "selberg-s-zeta-function-conjecture",
       "title": "Selberg's zeta function conjecture",
       "article": "https://en.wikipedia.org/wiki/Selberg's_zeta_function_conjecture",
+      "signal": "proved",
       "reason": "Wikipedia categorises this as proved",
       "categories": [
         "Category:Conjectures that have been proved",
@@ -618,6 +668,7 @@
       "id": "smale-conjecture",
       "title": "Smale conjecture",
       "article": "https://en.wikipedia.org/wiki/Smale_conjecture",
+      "signal": "proved",
       "reason": "Wikipedia categorises this as proved",
       "categories": [
         "Category:Conjectures that have been proved",
@@ -631,6 +682,7 @@
       "id": "spherical-space-form-conjecture",
       "title": "Spherical space form conjecture",
       "article": "https://en.wikipedia.org/wiki/Spherical_space_form_conjecture",
+      "signal": "proved",
       "reason": "Wikipedia categorises this as proved",
       "categories": [
         "Category:Conjectures that have been proved",
@@ -642,6 +694,7 @@
       "id": "sullivan-conjecture",
       "title": "Sullivan conjecture",
       "article": "https://en.wikipedia.org/wiki/Sullivan_conjecture",
+      "signal": "proved",
       "reason": "Wikipedia categorises this as proved",
       "categories": [
         "Category:Conjectures that have been proved",
@@ -654,6 +707,7 @@
       "id": "tait-s-conjecture",
       "title": "Tait's conjecture",
       "article": "https://en.wikipedia.org/wiki/Tait's_conjecture",
+      "signal": "disproved",
       "reason": "Wikipedia categorises this as disproved",
       "categories": [
         "Category:Disproved conjectures",
@@ -666,6 +720,7 @@
       "id": "takeuti-s-conjecture",
       "title": "Takeuti's conjecture",
       "article": "https://en.wikipedia.org/wiki/Takeuti's_conjecture",
+      "signal": "proved",
       "reason": "Wikipedia categorises this as proved",
       "categories": [
         "Category:Conjectures that have been proved",
@@ -677,6 +732,7 @@
       "id": "thom-conjecture",
       "title": "Thom conjecture",
       "article": "https://en.wikipedia.org/wiki/Thom_conjecture",
+      "signal": "proved",
       "reason": "Wikipedia categorises this as proved",
       "categories": [
         "Category:4-manifolds",
@@ -691,6 +747,7 @@
       "id": "thurston-elliptization-conjecture",
       "title": "Thurston elliptization conjecture",
       "article": "https://en.wikipedia.org/wiki/Thurston_elliptization_conjecture",
+      "signal": "proved",
       "reason": "Wikipedia categorises this as proved",
       "categories": [
         "Category:3-manifolds",
@@ -703,6 +760,7 @@
       "id": "toida-s-conjecture",
       "title": "Toida's conjecture",
       "article": "https://en.wikipedia.org/wiki/Toida's_conjecture",
+      "signal": "proved",
       "reason": "Wikipedia categorises this as proved",
       "categories": [
         "Category:Combinatorics",
@@ -714,6 +772,7 @@
       "id": "virtually-haken-conjecture",
       "title": "Virtually Haken conjecture",
       "article": "https://en.wikipedia.org/wiki/Virtually_Haken_conjecture",
+      "signal": "proved",
       "reason": "Wikipedia categorises this as proved",
       "categories": [
         "Category:3-manifolds",
@@ -726,6 +785,7 @@
       "id": "von-neumann-conjecture",
       "title": "von Neumann conjecture",
       "article": "https://en.wikipedia.org/wiki/Von_Neumann_conjecture",
+      "signal": "disproved",
       "reason": "Wikipedia categorises this as disproved",
       "categories": [
         "Category:Combinatorial group theory",
@@ -739,6 +799,7 @@
       "id": "waring-s-prime-number-conjecture",
       "title": "Waring's prime number conjecture",
       "article": "https://en.wikipedia.org/wiki/Waring's_prime_number_conjecture",
+      "signal": "proved",
       "reason": "Wikipedia categorises this as proved",
       "categories": [
         "Category:Additive number theory",
@@ -751,6 +812,7 @@
       "id": "williamson-conjecture",
       "title": "Williamson conjecture",
       "article": "https://en.wikipedia.org/wiki/Williamson_conjecture",
+      "signal": "disproved",
       "reason": "Wikipedia categorises this as disproved",
       "categories": [
         "Category:Combinatorial design",
@@ -762,6 +824,7 @@
       "id": "willmore-conjecture",
       "title": "Willmore conjecture",
       "article": "https://en.wikipedia.org/wiki/Willmore_conjecture",
+      "signal": "proved",
       "reason": "Wikipedia categorises this as proved",
       "categories": [
         "Category:Conjectures that have been proved",
@@ -774,6 +837,7 @@
       "id": "witten-conjecture",
       "title": "Witten conjecture",
       "article": "https://en.wikipedia.org/wiki/Witten_conjecture",
+      "signal": "proved",
       "reason": "Wikipedia categorises this as proved",
       "categories": [
         "Category:Algebraic geometry",
@@ -786,6 +850,7 @@
       "id": "zimmer-s-conjecture",
       "title": "Zimmer's conjecture",
       "article": "https://en.wikipedia.org/wiki/Zimmer's_conjecture",
+      "signal": "proved",
       "reason": "Wikipedia categorises this as proved",
       "categories": [
         "Category:Conjectures that have been proved",
@@ -801,6 +866,7 @@
       "id": "euler-s-sum-of-powers-conjecture",
       "title": "Euler's sum of powers conjecture",
       "article": "https://en.wikipedia.org/wiki/Euler's_sum_of_powers_conjecture",
+      "signal": "disproved",
       "reason": "we publish this as open on google-deepmind/formal-conjectures's word, but Wikipedia categorises it as disproved",
       "categories": [
         "Category:Diophantine equations",

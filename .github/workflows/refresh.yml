@@ -1,0 +1,105 @@
+name: Refresh
+
+# Re-measures the things we record from other people's databases, and re-checks
+# the statuses we inherited from them.
+#
+#   notability   Wikipedia language-edition counts per conjecture, from Wikidata
+#                sitelinks. Drifts continuously as articles are translated.
+#
+#   wikipedia    Gives a cited basis to records that arrived as bare identities,
+#                and audits the ones we publish as open against Wikipedia's
+#                categories. A status inherited with provenance can still be
+#                wrong -- formal-conjectures carried Euler's sum of powers
+#                conjecture as open though it was disproved in 1966 -- and this
+#                is what notices.
+#
+# Weekly, because both upstreams move on the scale of weeks and a daily run
+# would mostly open empty pull requests. No model calls, so this is free.
+#
+# Nothing here files a resolution claim. That needs a named human and happens
+# through `npm run file:resolutions`; this only maintains the queue of records
+# waiting for one.
+on:
+  schedule:
+    # Sunday, offset off the hour to avoid the scheduler's peak.
+    - cron: "23 6 * * 0"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Re-measure notability from Wikidata
+        run: npm run refresh:notability
+
+      - name: Re-check inherited statuses against Wikipedia
+        run: npm run enrich:wikipedia
+
+      # The serializer is the only thing allowed to write these files, so a
+      # difference here means something bypassed it.
+      - name: Check the corpus is canonically formatted
+        run: npm run format -- --check
+
+      - name: Validate
+        run: npm run validate
+
+      - name: Open or update the pull request
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+
+          if [ -z "$(git status --porcelain conjectures/ review/)" ]; then
+            echo "Nothing changed upstream this week."
+            exit 0
+          fi
+
+          BRANCH="refresh/$(date -u +%Y-%m-%d)"
+          git config user.name "conjecturehub-bot"
+          git config user.email "bot@conjecturehub.org"
+          git fetch origin "$BRANCH" 2>/dev/null && git checkout "$BRANCH" || git checkout -b "$BRANCH"
+
+          git add conjectures/ review/
+          RECORDS=$(git diff --cached --name-only -- conjectures/ | wc -l | tr -d ' ')
+          QUEUED=$(node -e "try{console.log(require('./review/wikipedia-resolution-queue.json').queue.length)}catch{console.log(0)}")
+
+          git commit -m "refresh: re-measure notability and re-check inherited statuses"
+          git push --set-upstream origin "$BRANCH"
+
+          cat > /tmp/pr-body.md <<EOF
+          Weekly re-measurement from Wikidata and Wikipedia. $RECORDS record(s) changed.
+
+          - Wikipedia language-edition counts refreshed from Wikidata sitelinks, each with the date it was taken.
+          - Records that arrived as bare identities given a cited openness basis where Wikipedia lists them as unsolved.
+          - $QUEUED record(s) now sit in \`review/wikipedia-resolution-queue.json\`, waiting for a named human to file a resolution claim via \`npm run file:resolutions\`.
+
+          No claim in this pull request asserts a resolution. Read the diff on the openness bases before merging.
+          EOF
+
+          if gh pr view "$BRANCH" --json number >/dev/null 2>&1; then
+            gh pr edit "$BRANCH" --body-file /tmp/pr-body.md
+          else
+            gh pr create \
+              --base main \
+              --head "$BRANCH" \
+              --title "Refresh: notability and inherited statuses, $(date -u +%Y-%m-%d)" \
+              --body-file /tmp/pr-body.md \
+              --label "refresh"
+          fi

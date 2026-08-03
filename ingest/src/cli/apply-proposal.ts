@@ -6,8 +6,8 @@
  * Usage: apply-proposal.ts < proposal.json
  */
 import fs from "node:fs";
-import path from "node:path";
-import YAML from "yaml";
+import { appendClaim, exists, read, write } from "../lib/conjecture.js";
+import type { Claim, SourceKind } from "../types.js";
 
 interface ProposalPayload {
   proposalId: number;
@@ -20,7 +20,7 @@ interface ProposalPayload {
   notes?: string | null;
 }
 
-function inferSourceKind(url: string): string {
+function inferSourceKind(url: string): SourceKind {
   if (url.includes("arxiv.org")) return "arxiv";
   if (url.includes("wikipedia.org")) return "wikipedia";
   if (url.includes("news.ycombinator.com")) return "hackernews";
@@ -31,23 +31,20 @@ function inferSourceKind(url: string): string {
 async function main() {
   const raw = fs.readFileSync(0, "utf8");
   const payload = JSON.parse(raw) as ProposalPayload;
-  const file = path.join(process.cwd(), "conjectures", `${payload.conjectureId}.yaml`);
 
-  if (!fs.existsSync(file)) {
-    console.error(`No conjecture file: ${file}`);
+  if (!exists(payload.conjectureId)) {
+    console.error(`No conjecture file for ${payload.conjectureId}`);
     process.exit(1);
   }
 
-  const doc = YAML.parse(fs.readFileSync(file, "utf8")) as {
-    claims: Record<string, unknown>[];
-  };
+  const conjecture = read(payload.conjectureId);
 
   const today = new Date().toISOString().slice(0, 10);
   const claimId = `community-proposal-${payload.proposalId}`;
 
-  const claim = {
+  const claim: Claim = {
     id: claimId,
-    type: payload.claimType,
+    type: payload.claimType as Claim["type"],
     scope: payload.scope ?? null,
     evidence_tier: "unverified_claim",
     state: "active",
@@ -62,14 +59,15 @@ async function main() {
     notes: payload.notes ?? `Approved from ConjectureHub proposal #${payload.proposalId}.`,
   };
 
-  doc.claims = doc.claims ?? [];
-  if (doc.claims.some((c) => c.id === claimId)) {
+  if (!appendClaim(conjecture, claim)) {
     console.log(`Claim ${claimId} already present — skipping.`);
     return;
   }
 
-  doc.claims.push(claim);
-  fs.writeFileSync(file, YAML.stringify(doc, { lineWidth: 0 }));
+  // Through the shared writer, not YAML.stringify: this file is one of several
+  // that append a claim, and any of them writing its own way puts the corpus
+  // into two formats and buries the next real diff under a reflow.
+  write(conjecture);
   console.log(`Appended claim ${claimId} to ${payload.conjectureId}`);
 }
 
