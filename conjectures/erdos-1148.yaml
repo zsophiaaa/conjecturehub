@@ -49,18 +49,19 @@ claims:
   - id: erdos-1148-fc-solved
     type: proved
     evidence_tier: published
+    attestation: secondary
     state: active
     recorded_on: 2026-07-31
     source:
       title: formal-conjectures marks erdos_1148 as research solved
       url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/1148.lean
       kind: dataset
-    reviewer: google-deepmind/formal-conjectures maintainers
     notes: Imported from the upstream `research solved` category. The statement is formalized; the proof has not been machine-checked by ConjectureHub.
   - id: erdos-1148-chojecki-proof
     asserted_on: 2026-03-16
     type: proved
     evidence_tier: preprint
+    attestation: secondary
     state: active
     recorded_on: 2026-08-02
     source:
@@ -80,6 +81,7 @@ claims:
     asserted_on: 2026-03-17
     type: partial
     evidence_tier: community_accepted
+    attestation: secondary
     state: active
     recorded_on: 2026-08-02
     source:
@@ -88,13 +90,13 @@ claims:
       kind: forum
     authors:
       - Terence Tao
-    reviewer: erdosproblems.com forum attribution
     notes: "Tao judged the ELMV-based approach plausible: Skubenko (1962) and Duke (1988) fall short; ELMV (2012) supplies the first convenient black-box statement. Stronger hyperboloid-density extension would need adapting ELMV proofs, not just quoting them."
   - id: erdos-1148-conditional-lean-formalization
     asserted_on: 2026-03-17
     type: partial
     scope: conditional on Duke/ELMV equidistribution
     evidence_tier: preprint
+    attestation: secondary
     state: active
     recorded_on: 2026-08-02
     source:
@@ -117,6 +119,7 @@ claims:
     type: partial
     scope: max coordinate bound (½+ε)n for non-square n
     evidence_tier: preprint
+    attestation: secondary
     state: active
     recorded_on: 2026-08-02
     source:

@@ -10,7 +10,22 @@ openness_basis:
   meaning: unknown
   asserted_by: wikidata
   note: Identity record only. No statement or status has been ingested for this conjecture yet.
-claims: []
+claims:
+  - id: sullivan-conjecture-wikipedia-status
+    type: proved
+    scope: Miller's corrected formulation
+    evidence_tier: community_accepted
+    attestation: secondary
+    state: active
+    recorded_on: 2026-08-03
+    source:
+      title: Sullivan conjecture
+      url: https://en.wikipedia.org/wiki/Sullivan_conjecture
+      kind: wikipedia
+    notes: |-
+      Standing taken from English Wikipedia's categorisation (Wikipedia categorises this as proved). Nobody here has read the paper that settled it, which is what the secondary attestation says; replace this claim with one citing that paper when someone has it to hand.
+
+      Reviewed 2026-08-03: Sullivan's literal 1971 p-completion statement was false and had to be restated before it could be proved. Miller's theorem (Annals, 1984) settles the standard form; the non-trivial-action version followed from Dwyer–Miller–Neisendorfer, Carlsson and Lannes. See https://en.wikipedia.org/wiki/Sullivan_conjecture.
 provenance:
   - url: https://www.wikidata.org/wiki/Q17089125
     source: wikidata
@@ -21,4 +36,10 @@ provenance:
       - ids.mathworld
       - notability.wikipedia_language_editions
     license: CC0-1.0
+    retrieved: 2026-08-03
+  - url: https://en.wikipedia.org/wiki/Sullivan_conjecture
+    source: wikipedia
+    fields:
+      - claims
+    license: CC-BY-SA-4.0
     retrieved: 2026-08-03

@@ -55,6 +55,7 @@ claims:
     type: partial
     scope: lower bound on the infimum only
     evidence_tier: unverified_claim
+    attestation: secondary
     state: active
     recorded_on: 2026-08-02
     source:
@@ -75,6 +76,7 @@ claims:
     type: partial
     scope: lower bound on the infimum; numerics described as empirical, not rigorous
     evidence_tier: unverified_claim
+    attestation: secondary
     state: active
     recorded_on: 2026-08-02
     source:
@@ -96,6 +98,7 @@ claims:
     type: partial
     scope: lower bound on the infimum; the Lean files check certificate arithmetic, not the reduction
     evidence_tier: unverified_claim
+    attestation: secondary
     state: active
     recorded_on: 2026-08-02
     source:
@@ -111,6 +114,7 @@ claims:
     type: partial
     scope: lower bound on the infimum; the claimed ceiling is evidence from local searches, not proof
     evidence_tier: unverified_claim
+    attestation: secondary
     state: active
     recorded_on: 2026-08-02
     source:

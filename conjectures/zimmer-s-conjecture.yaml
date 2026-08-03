@@ -10,7 +10,22 @@ openness_basis:
   meaning: unknown
   asserted_by: wikidata
   note: Identity record only. No statement or status has been ingested for this conjecture yet.
-claims: []
+claims:
+  - id: zimmer-s-conjecture-wikipedia-status
+    type: proved
+    scope: C^r (r > 1) actions of higher-rank cocompact lattices in SL(n,R) on manifolds of dimension < n-1, or < n when volume-preserving, together with non-uniform lattices in SL(m,Z) for m >= 4
+    evidence_tier: community_accepted
+    attestation: secondary
+    state: active
+    recorded_on: 2026-08-03
+    source:
+      title: Zimmer's conjecture
+      url: https://en.wikipedia.org/wiki/Zimmer's_conjecture
+      kind: wikipedia
+    notes: |-
+      Standing taken from English Wikipedia's categorisation (Wikipedia categorises this as proved). Nobody here has read the paper that settled it, which is what the secondary attestation says; replace this claim with one citing that paper when someone has it to hand.
+
+      Reviewed 2026-08-03: Brown–Fisher–Hurtado, Annals 196 (2022) and Inventiones 221 (2020). The dimension bounds are sharp only for SL(n,R) and Sp(2n,R), not for non-split or exceptional groups, and classifying actions above these thresholds is broadly open. See https://annals.math.princeton.edu/2022/196-3/p01.
 provenance:
   - url: https://www.wikidata.org/wiki/Q58087817
     source: wikidata
@@ -21,4 +36,10 @@ provenance:
       - ids.mathworld
       - notability.wikipedia_language_editions
     license: CC0-1.0
+    retrieved: 2026-08-03
+  - url: https://en.wikipedia.org/wiki/Zimmer's_conjecture
+    source: wikipedia
+    fields:
+      - claims
+    license: CC-BY-SA-4.0
     retrieved: 2026-08-03

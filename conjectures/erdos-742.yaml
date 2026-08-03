@@ -58,13 +58,13 @@ claims:
     asserted_on: 2025-08-31
     type: partial
     evidence_tier: published
+    attestation: secondary
     state: active
     recorded_on: 2026-07-31
     source:
       title: erdosproblems.com records this problem as "decidable"
       url: https://www.erdosproblems.com/742
       kind: dataset
-    reviewer: teorth/erdosproblems maintainers
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/742.lean
     source: google-deepmind/formal-conjectures

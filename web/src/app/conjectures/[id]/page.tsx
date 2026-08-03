@@ -1,7 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { getConjecture, getCorpus, type Claim, type Conjecture } from "@/lib/corpus";
+import {
+  getConjecture,
+  getCorpus,
+  type Attestation,
+  type Claim,
+  type Conjecture,
+} from "@/lib/corpus";
 import { StatusBadge, StatusCaveat, TIER_LABELS } from "@/components/StatusBadge";
 import { RecentDevelopmentBanner } from "@/components/RecentDevelopmentBanner";
 import { ForumDiscussionSummary } from "@/components/ForumDiscussionSummary";
@@ -52,6 +58,25 @@ const STATE_STYLES: Record<string, string> = {
   retracted: "border-border-strong text-ink-faint line-through decoration-1",
 };
 
+/**
+ * The tier above says where the result stands; this says how we know it. They
+ * are separate because a proof published in 2002 has the same standing whether
+ * we cite the journal or a Wikipedia category, and a reader deciding how much
+ * weight to put on the label needs both.
+ */
+const ATTESTATION_LABELS: Record<Attestation, string> = {
+  primary: "from the source",
+  secondary: "reported",
+  self_checked: "checked here",
+};
+
+const ATTESTATION_HINTS: Record<Attestation, string> = {
+  primary: "The link goes to where this result was announced, published or proved.",
+  secondary:
+    "The link goes to somebody else's report of the result — a catalogue row or an encyclopedia entry — not to the proof.",
+  self_checked: "We ran the check ourselves and the receipt is below.",
+};
+
 function ClaimCard({ claim }: { claim: Claim }) {
   const aiUsed = claim.ai_assistance?.used === "yes";
 
@@ -62,6 +87,13 @@ function ClaimCard({ claim }: { claim: Claim }) {
 
         <span className="border border-border-strong px-2 py-0.5 text-xs text-ink-muted">
           {TIER_LABELS[claim.evidence_tier]}
+        </span>
+
+        <span
+          className="border border-border-strong px-2 py-0.5 text-xs text-ink-muted italic"
+          title={ATTESTATION_HINTS[claim.attestation]}
+        >
+          {ATTESTATION_LABELS[claim.attestation]}
         </span>
 
         {claim.state !== "active" ? (
@@ -143,7 +175,11 @@ function ClaimCard({ claim }: { claim: Claim }) {
 
       <p className="mt-1 text-xs text-ink-faint">
         Recorded {claim.recorded_on}
-        {claim.reviewer ? ` · reviewed by ${claim.reviewer}` : " · no human reviewer"}
+        {claim.reviewer
+          ? ` · read and confirmed by ${claim.reviewer}`
+          : claim.attestation === "self_checked"
+            ? " · verified by proof assistant, no human review needed"
+            : " · nobody here has checked the source"}
       </p>
     </li>
   );

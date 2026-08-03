@@ -22,7 +22,7 @@ Each entry in `claims` records one assertion someone made, with:
 
 - **`type`** — `proved`, `disproved`, `counterexample`, `partial`, `independence`, `reformulation`, or `resolved_by_prior_literature`. That last one exists specifically so that "someone proved this" and "someone found the existing proof" are never the same event.
 - **`scope`** — which part of the conjecture this settles. Omitting scope on a partial resolution is the most common way to be wrong.
-- **`evidence_tier`** — how much weight the claim carries. Strictly ordered:
+- **`evidence_tier`** — where the result stands in mathematics. Strictly ordered:
 
   1. `unverified_claim` — someone said so. A rumour with a citation.
   2. `preprint` — a paper exists, unrefereed.
@@ -30,10 +30,19 @@ Each entry in `claims` records one assertion someone made, with:
   4. `community_accepted` — experts in the area endorse it.
   5. `machine_verified` — a proof assistant kernel checked it against our canonical statement.
 
+- **`attestation`** — how *we* know it. `primary` (we cite the paper, preprint or announcement itself), `secondary` (we cite somebody else's report of it — a catalogue row, an encyclopedia category), or `self_checked` (we ran the check and hold the receipt).
 - **`state`** — `active`, `disputed` or `retracted`. Claims are never edited or deleted. To withdraw one, set its state and append a new claim that `supersedes` it.
 - **`ai_assistance`** — declared, structured, and separate from authorship.
-- **`reviewer`** — a named human. Required for `published` and `community_accepted`. Automation may never fill this in.
-- **`verification`** — the machine-check receipt. Required for, and only valid at, `machine_verified`.
+- **`reviewer`** — the named human *here* who read the source and confirmed it says what the claim says. Optional, usually null, and never the upstream curator: they are the source, not our reviewer. Automation may never fill this in.
+- **`verification`** — the machine-check receipt. Required for, and only valid at, `self_checked`.
+
+### Standing and attestation are different axes
+
+A proof published in 2002 has the same standing whether we cite the journal or a Wikipedia category. What differs is how much of the chain we have actually seen. Squeezing both into one ladder forces a false choice — either overstate the sourcing to get the standing right, or understate the result to be honest about the sourcing.
+
+This is not hypothetical. The single-axis version produced 712 claims out of 775 carrying an organisation in `reviewer` — "teorth/erdosproblems maintainers", "google-deepmind/formal-conjectures maintainers" — because the field was mandatory above `preprint` and the importer had to write *something*. A mandatory field gets filled whether or not anyone did the work, so the requirement was dropped rather than tightened. Recording that nobody checked, and printing it on the page, beats demanding a name that does not exist.
+
+Most of the corpus is `secondary`, and that is the honest description of a project that indexes other people's catalogues. The site says so on every record rather than letting a tier imply otherwise.
 
 ### LLM review is not a tier
 

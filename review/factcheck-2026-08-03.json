@@ -1,0 +1,107 @@
+{
+  "reviewedOn": "2026-08-03",
+  "method": "Six independent reviewers checked all 66 claims filed by `file-resolutions` from English Wikipedia category membership, against primary sources. 51 were confirmed. No claim pointed the wrong way; every defect is an overstatement — a resolution recorded more broadly than the mathematics supports.",
+  "findings": [
+    {
+      "id": "black-hole-stability-conjecture",
+      "verdict": "needs_scope",
+      "scope": "the vacuum Kerr family in the subextremal range |a| < M",
+      "note": "Published work covers slowly rotating Kerr only (Dafermos–Holzegel–Rodnianski–Taylor; Giorgi–Klainerman–Szeftel, 2021–2022). The full subextremal range rests on Hintz, arXiv:2606.28253 (June 2026), which is not yet refereed. Extremal |a| = M and charged Kerr–Newman are excluded and open.",
+      "cite": "https://arxiv.org/abs/2606.28253"
+    },
+    {
+      "id": "borsuk-s-conjecture",
+      "verdict": "needs_scope",
+      "scope": "dimensions n >= 64",
+      "note": "True for n <= 3 and open for every dimension from 4 to 63, so the answer is dimension-dependent and partly unknown. Kahn–Kalai 1993 gave the first counterexample at n = 1325; Jenrich–Brouwer 2014 brought the threshold to 64.",
+      "cite": "https://en.wikipedia.org/wiki/Borsuk's_conjecture"
+    },
+    {
+      "id": "hauptvermutung",
+      "verdict": "needs_scope",
+      "scope": "polyhedra of dimension >= 6",
+      "note": "True for manifolds of dimension <= 3 (Radó, Moise). The polyhedral version fell to Milnor 1961; the manifold version was obstructed in dimension >= 5 by Casson–Sullivan and Kirby–Siebenmann. The two deserve separate records.",
+      "cite": "https://en.wikipedia.org/wiki/Hauptvermutung"
+    },
+    {
+      "id": "hilbert-s-thirteenth-problem",
+      "verdict": "needs_scope",
+      "scope": "the continuous variant only",
+      "note": "Kolmogorov (1956) and Arnold (1957) refuted Hilbert's expectation for continuous functions. The algebraic variant — solving the general degree-7 equation with algebraic functions of two variables, which is most likely what Hilbert meant — is still open. A bare 'disproved' is close to a false positive here.",
+      "cite": "https://en.wikipedia.org/wiki/Hilbert%27s_thirteenth_problem"
+    },
+    {
+      "id": "kalman-s-conjecture",
+      "verdict": "needs_scope",
+      "scope": "continuous-time systems of order n >= 4",
+      "note": "True for n <= 3 (Pliss; Leonov et al. 1996). The discrete-time version is true only for n = 1 and false from n = 2 up.",
+      "cite": "https://en.wikipedia.org/wiki/Kalman's_conjecture"
+    },
+    {
+      "id": "keller-s-conjecture",
+      "verdict": "needs_scope",
+      "scope": "dimensions n >= 8",
+      "note": "True in dimensions 1 through 7. Perron settled n <= 6 in 1940 and Brakensiek–Heule–Mackey–Narváez closed the last open case, n = 7, as TRUE in 2020; Mackey 2002 put the failure threshold at 8. Fully resolved in every dimension.",
+      "cite": "https://www.quantamagazine.org/computer-search-settles-90-year-old-math-problem-20200819/"
+    },
+    {
+      "id": "markus-yamabe-conjecture",
+      "verdict": "needs_scope",
+      "scope": "dimensions n >= 3",
+      "note": "True in dimension 2, where it is standardly called the Markus–Yamabe theorem (Gutiérrez 1993; Fessler 1995). The discrete version also fails from n = 3 up.",
+      "cite": "https://en.wikipedia.org/wiki/Markus%E2%80%93Yamabe_conjecture"
+    },
+    {
+      "id": "ringel-youngs-theorem",
+      "verdict": "needs_scope",
+      "scope": "every closed surface except the Klein bottle",
+      "note": "The Heawood formula predicts 7 for the Klein bottle and the true chromatic number is 6 (Franklin 1934), so the conjecture as originally formulated has a genuine counterexample.",
+      "cite": "https://en.wikipedia.org/wiki/Ringel%E2%80%93Youngs_theorem"
+    },
+    {
+      "id": "sullivan-conjecture",
+      "verdict": "needs_scope",
+      "scope": "Miller's corrected formulation",
+      "note": "Sullivan's literal 1971 p-completion statement was false and had to be restated before it could be proved. Miller's theorem (Annals, 1984) settles the standard form; the non-trivial-action version followed from Dwyer–Miller–Neisendorfer, Carlsson and Lannes.",
+      "cite": "https://en.wikipedia.org/wiki/Sullivan_conjecture"
+    },
+    {
+      "id": "waring-s-prime-number-conjecture",
+      "verdict": "needs_scope",
+      "scope": null,
+      "note": "A corollary of ternary Goldbach, and its only unconditional resolution is Helfgott's 2013 manuscript (arXiv:1312.7748), accepted in principle by Annals of Mathematics Studies in 2015 but still in revision and never printed. Before that the result was known only conditionally on GRH (Deshouillers–Effinger–te Riele–Zinoviev 1997). Experts treat it as settled; the literature does not yet record it as published.",
+      "cite": "https://arxiv.org/abs/1312.7748"
+    },
+    {
+      "id": "zimmer-s-conjecture",
+      "verdict": "needs_scope",
+      "scope": "C^r (r > 1) actions of higher-rank cocompact lattices in SL(n,R) on manifolds of dimension < n-1, or < n when volume-preserving, together with non-uniform lattices in SL(m,Z) for m >= 4",
+      "note": "Brown–Fisher–Hurtado, Annals 196 (2022) and Inventiones 221 (2020). The dimension bounds are sharp only for SL(n,R) and Sp(2n,R), not for non-split or exceptional groups, and classifying actions above these thresholds is broadly open.",
+      "cite": "https://annals.math.princeton.edu/2022/196-3/p01"
+    },
+    {
+      "id": "pillai-s-conjecture",
+      "verdict": "still_open",
+      "note": "False positive. Pillai's conjecture is unsolved: it follows from abc and is known only for C = 1 (Tijdeman 1976) and when one variable is fixed. The 'proved' status is an artefact of the record's source URL pointing at the Catalan's conjecture article — what Mihăilescu proved in 2002 is Catalan, the special case C = 1, not Pillai.",
+      "cite": "https://webusers.imj-prg.fr/~michel.waldschmidt/articles/pdf/PerfectPowers.pdf"
+    },
+    {
+      "id": "milnor-conjecture",
+      "verdict": "ambiguous_name",
+      "note": "Wikipedia's 'Milnor conjecture' is a disambiguation page. The K-theory version (Voevodsky) and the knot-theory version on the slice genus of torus knots (Kronheimer–Mrowka 1993) are proved; the Ricci-curvature version is disproved only in dimension >= 6 (Bruè–Naber–Semola) and open in dimensions 4 and 5. A bare 'disproved' under the bare name is wrong for two of the three. Needs splitting into separate records before any status can be filed.",
+      "cite": "https://en.wikipedia.org/wiki/Milnor_conjecture"
+    },
+    {
+      "id": "nagata-s-conjecture",
+      "verdict": "ambiguous_name",
+      "note": "Two distinct conjectures with opposite statuses. Nagata's automorphism conjecture is proved (Shestakov–Umirbaev, JAMS 17 (2004) 197–227). The far more widely cited Nagata conjecture on curves is open for every non-square r >= 10. Needs splitting before any status can be filed.",
+      "cite": "https://en.wikipedia.org/wiki/Nagata%27s_conjecture_on_curves"
+    },
+    {
+      "id": "witten-conjecture",
+      "verdict": "ambiguous_name",
+      "note": "At least two conjectures share the name. The moduli-of-curves/KdV version is fully proved (Kontsevich 1992). The gauge-theory version, that Donaldson invariants are determined by Seiberg–Witten invariants, is proved only for large classes of 4-manifolds and is not settled in general. Needs splitting before any status can be filed.",
+      "cite": "https://ncatlab.org/nlab/show/Witten+conjecture"
+    }
+  ]
+}

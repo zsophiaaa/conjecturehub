@@ -10,7 +10,18 @@ openness_basis:
   meaning: unknown
   asserted_by: wikidata
   note: Identity record only. No statement or status has been ingested for this conjecture yet.
-claims: []
+claims:
+  - id: toida-s-conjecture-wikipedia-status
+    type: proved
+    evidence_tier: community_accepted
+    attestation: secondary
+    state: active
+    recorded_on: 2026-08-03
+    source:
+      title: Toida's conjecture
+      url: https://en.wikipedia.org/wiki/Toida's_conjecture
+      kind: wikipedia
+    notes: Standing taken from English Wikipedia's categorisation (Wikipedia categorises this as proved). Nobody here has read the paper that settled it, which is what the secondary attestation says; replace this claim with one citing that paper when someone has it to hand.
 provenance:
   - url: https://www.wikidata.org/wiki/Q7813341
     source: wikidata
@@ -21,4 +32,10 @@ provenance:
       - ids.mathworld
       - notability.wikipedia_language_editions
     license: CC0-1.0
+    retrieved: 2026-08-03
+  - url: https://en.wikipedia.org/wiki/Toida's_conjecture
+    source: wikipedia
+    fields:
+      - claims
+    license: CC-BY-SA-4.0
     retrieved: 2026-08-03

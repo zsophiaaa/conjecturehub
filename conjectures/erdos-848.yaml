@@ -47,25 +47,25 @@ claims:
   - id: erdos-848-fc-solved
     type: partial
     evidence_tier: published
+    attestation: secondary
     state: active
     recorded_on: 2026-07-31
     source:
       title: formal-conjectures marks erdos_848 as research solved
       url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/848.lean
       kind: dataset
-    reviewer: google-deepmind/formal-conjectures maintainers
     notes: Imported from the upstream `research solved` category, which records that the problem is resolved without stating the direction. Direction taken from erdosproblems.com, which records it as "partial". The statement is formalized; the proof has not been machine-checked by ConjectureHub.
   - id: erdos-848-erdos-status
     asserted_on: 2025-10-19
     type: partial
     evidence_tier: published
+    attestation: secondary
     state: active
     recorded_on: 2026-07-31
     source:
       title: erdosproblems.com records this problem as "decidable"
       url: https://www.erdosproblems.com/848
       kind: dataset
-    reviewer: teorth/erdosproblems maintainers
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/848.lean
     source: google-deepmind/formal-conjectures

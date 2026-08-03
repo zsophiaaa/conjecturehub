@@ -15,7 +15,18 @@ openness_basis:
   meaning: unknown
   asserted_by: wikidata
   note: Identity record only. No statement or status has been ingested for this conjecture yet.
-claims: []
+claims:
+  - id: dinitz-garg-goemans-conjecture-wikipedia-status
+    type: disproved
+    evidence_tier: community_accepted
+    attestation: secondary
+    state: active
+    recorded_on: 2026-08-03
+    source:
+      title: Dinitz–Garg–Goemans conjecture
+      url: https://en.wikipedia.org/wiki/Dinitz%E2%80%93Garg%E2%80%93Goemans_conjecture
+      kind: wikipedia
+    notes: Standing taken from English Wikipedia's categorisation (Wikipedia categorises this as disproved). Nobody here has read the paper that settled it, which is what the secondary attestation says; replace this claim with one citing that paper when someone has it to hand.
 provenance:
   - url: https://www.wikidata.org/wiki/Q140738503
     source: wikidata
@@ -34,3 +45,9 @@ provenance:
     license: CC-BY-4.0
     retrieved: 2026-08-03
     upstream_version: 2026-08-03T16:16:11.083Z
+  - url: https://en.wikipedia.org/wiki/Dinitz%E2%80%93Garg%E2%80%93Goemans_conjecture
+    source: wikipedia
+    fields:
+      - claims
+    license: CC-BY-SA-4.0
+    retrieved: 2026-08-03

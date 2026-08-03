@@ -44,25 +44,25 @@ claims:
   - id: erdos-505-fc-solved
     type: disproved
     evidence_tier: published
+    attestation: secondary
     state: active
     recorded_on: 2026-07-31
     source:
       title: formal-conjectures marks erdos_505 as research solved
       url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/505.lean
       kind: dataset
-    reviewer: google-deepmind/formal-conjectures maintainers
     notes: Imported from the upstream `research solved` category, which records that the problem is resolved without stating the direction. Direction taken from erdosproblems.com, which records it as "disproved". The statement is formalized; the proof has not been machine-checked by ConjectureHub.
   - id: erdos-505-erdos-status
     asserted_on: 2026-02-02
     type: disproved
     evidence_tier: published
+    attestation: secondary
     state: active
     recorded_on: 2026-07-31
     source:
       title: erdosproblems.com records this problem as "disproved"
       url: https://www.erdosproblems.com/505
       kind: dataset
-    reviewer: teorth/erdosproblems maintainers
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/505.lean
     source: google-deepmind/formal-conjectures

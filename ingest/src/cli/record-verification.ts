@@ -121,6 +121,7 @@ for (const file of files) {
     type: claimType,
     scope: config.claim_scope ?? null,
     evidence_tier: "machine_verified",
+    attestation: "self_checked",
     state: "active",
     asserted_on: today(),
     recorded_on: today(),

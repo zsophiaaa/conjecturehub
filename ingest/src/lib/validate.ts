@@ -3,8 +3,6 @@ import Ajv2020, { type ErrorObject, type ValidateFunction } from "ajv/dist/2020.
 import addFormats from "ajv-formats";
 import { SCHEMA_PATH } from "./paths.js";
 import type { Conjecture } from "../types.js";
-import { TIER_ORDER } from "./status.js";
-
 let cached: ValidateFunction | null = null;
 
 function compile(): ValidateFunction {
@@ -38,6 +36,14 @@ function direction(type: string): "affirmative" | "negative" | "independent" | n
 
 /** A moving branch cannot back a reproducible machine check. */
 const MUTABLE_REF = /\/(blob|tree|raw)\/(main|master|HEAD)\//;
+
+/**
+ * Reviewer values that name a project, a committee or a process rather than a
+ * person. Every one of these was in the corpus, standing in for a review that
+ * never happened.
+ */
+const NOT_A_PERSON =
+  /\b(maintainers|editors|contributors|team|attribution|automated|bot|project|projects|foundation|institute|society|committee|group|initiative|collective|consortium|database|archive|wiki|encyclopedia|press|journal|university|department|laboratory|lab)\b\s*$|^\S+\/\S+$/i;
 
 /**
  * Checks that a record does not contradict itself.
@@ -118,13 +124,27 @@ function semanticChecks(c: Conjecture): ValidationIssue[] {
     }
 
     // Automation is allowed to record claims, never to bless them.
-    if (TIER_ORDER.indexOf(claim.evidence_tier) > TIER_ORDER.indexOf("preprint")) {
-      if (claim.evidence_tier !== "machine_verified" && !claim.reviewer) {
-        issues.push({
-          path: `${at}/reviewer`,
-          message: `evidence_tier "${claim.evidence_tier}" requires a named human reviewer`,
-        });
-      }
+    //
+    // This used to require a reviewer above `preprint`, and the requirement did
+    // the opposite of its job: 712 of 775 claims were seeded with an
+    // organisation in the field, because a mandatory field gets filled whether
+    // or not anybody did the work. Recording honestly and showing the gap beats
+    // demanding a value nobody has, so the check now runs the other way -- a
+    // reviewer is optional, and the only thing rejected is a name that is not a
+    // person's.
+    if (claim.reviewer && NOT_A_PERSON.test(claim.reviewer)) {
+      issues.push({
+        path: `${at}/reviewer`,
+        message: `reviewer must be a named human who checked this, not "${claim.reviewer}" — an upstream project is the source, not our reviewer`,
+      });
+    }
+
+    if (claim.reviewer && claim.attestation === "secondary") {
+      issues.push({
+        path: `${at}/reviewer`,
+        message:
+          "a secondary claim cites someone else's report, so nobody here reviewed it; name the reporting body in source instead",
+      });
     }
 
     if (claim.supersedes && !(c.claims ?? []).some((o) => o.id === claim.supersedes)) {

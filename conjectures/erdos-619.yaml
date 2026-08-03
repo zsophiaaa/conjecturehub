@@ -66,19 +66,20 @@ claims:
   - id: erdos-619-fc-solved
     type: proved
     evidence_tier: published
+    attestation: secondary
     state: active
     recorded_on: 2026-07-31
     source:
       title: formal-conjectures marks erdos_619 as research solved
       url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/619.lean
       kind: dataset
-    reviewer: google-deepmind/formal-conjectures maintainers
     notes: Imported from the upstream `research solved` category. The statement is formalized; the proof has not been machine-checked by ConjectureHub.
   - id: erdos-619-fable-counterexample-family
     asserted_on: 2026-06-14
     type: disproved
     scope: refutes the existence of any constant c > 0, for connected triangle-free graphs
     evidence_tier: community_accepted
+    attestation: secondary
     state: active
     recorded_on: 2026-08-02
     source:
@@ -94,13 +95,13 @@ claims:
         - Codex
         - GPT-5.5
       role: discovery
-    reviewer: Thomas Bloom
     notes: Disproof obtained 9 June 2026, with a Lean formalisation subsequently merged into the Formal Conjectures project. For any eta the construction takes a triangle-free core with small independence number and attaches pendant leaves to every core vertex. Any triangle-free diameter-4 supergraph must spend nearly one edge per pendant, because pendant components can only be joined through the core and triangle-freeness caps how many core pairs can be brought within distance 2. The maintainer's hub-vertex objection was withdrawn on noticing the supergraph must itself stay triangle-free.
   - id: erdos-619-quantitative-optimisation
     asserted_on: 2026-06-15
     type: partial
     scope: explicit error term; the finer-scale behaviour of h_4 remains undetermined
     evidence_tier: unverified_claim
+    attestation: secondary
     state: active
     recorded_on: 2026-08-02
     source:
@@ -115,6 +116,7 @@ claims:
     type: reformulation
     scope: wording of the displayed problem statement, not the mathematics
     evidence_tier: unverified_claim
+    attestation: secondary
     state: active
     recorded_on: 2026-08-02
     source:

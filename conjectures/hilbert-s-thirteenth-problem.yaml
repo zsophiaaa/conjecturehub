@@ -10,7 +10,22 @@ openness_basis:
   meaning: unknown
   asserted_by: wikidata
   note: Identity record only. No statement or status has been ingested for this conjecture yet.
-claims: []
+claims:
+  - id: hilbert-s-thirteenth-problem-wikipedia-status
+    type: disproved
+    scope: the continuous variant only
+    evidence_tier: community_accepted
+    attestation: secondary
+    state: active
+    recorded_on: 2026-08-03
+    source:
+      title: Hilbert's thirteenth problem
+      url: https://en.wikipedia.org/wiki/Hilbert's_thirteenth_problem
+      kind: wikipedia
+    notes: |-
+      Standing taken from English Wikipedia's categorisation (Wikipedia categorises this as disproved). Nobody here has read the paper that settled it, which is what the secondary attestation says; replace this claim with one citing that paper when someone has it to hand.
+
+      Reviewed 2026-08-03: Kolmogorov (1956) and Arnold (1957) refuted Hilbert's expectation for continuous functions. The algebraic variant — solving the general degree-7 equation with algebraic functions of two variables, which is most likely what Hilbert meant — is still open. A bare 'disproved' is close to a false positive here. See https://en.wikipedia.org/wiki/Hilbert%27s_thirteenth_problem.
 provenance:
   - url: https://www.wikidata.org/wiki/Q838094
     source: wikidata
@@ -21,4 +36,10 @@ provenance:
       - ids.mathworld
       - notability.wikipedia_language_editions
     license: CC0-1.0
+    retrieved: 2026-08-03
+  - url: https://en.wikipedia.org/wiki/Hilbert's_thirteenth_problem
+    source: wikipedia
+    fields:
+      - claims
+    license: CC-BY-SA-4.0
     retrieved: 2026-08-03

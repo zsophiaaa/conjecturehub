@@ -181,6 +181,10 @@ ai_assistance:
 
 Only **`machine_verified`** means a proof assistant kernel checked against a canonical statement. LLM review never promotes a tier.
 
+**Attestation** is a separate axis and every claim carries it: `primary` if the cited URL is the work itself, `secondary` if it is somebody's report of the work, `self_checked` if a kernel run backs it. The two do not move together — a proof from 2002 cited to a Wikipedia category is `community_accepted` standing with `secondary` attestation, and reading only the tier would tell you we had seen the paper.
+
+Filing `secondary` is normal and is what most of the corpus is. Do not reach for `primary` because the result is well established; reach for it when your link is the thing itself. Secondary claims must leave `reviewer` null, and you must leave it null regardless.
+
 ### AI trace examples
 
 Listed in `benchmarks/agent-challenges.yaml` under `ai_trace_examples` (Jacobian, Erdős 146/180/183/42/90, etc.) — problems with recorded AI-assisted or machine-verified outcomes for auditing, not competition.

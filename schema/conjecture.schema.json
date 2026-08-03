@@ -213,7 +213,7 @@
   "$defs": {
     "claim": {
       "type": "object",
-      "required": ["id", "type", "evidence_tier", "state", "recorded_on", "source"],
+      "required": ["id", "type", "evidence_tier", "attestation", "state", "recorded_on", "source"],
       "additionalProperties": false,
       "properties": {
         "id": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$" },
@@ -241,7 +241,11 @@
             "community_accepted",
             "machine_verified"
           ],
-          "description": "Strictly ordered. machine_verified means a proof assistant kernel checked it against our canonical statement; it is the only tier no human opinion can grant. An LLM review is never a tier of its own and can never promote a claim."
+          "description": "Where the result stands in mathematics, strictly ordered. Says nothing about how we came to know it -- that is attestation, and the two are independent. machine_verified means a proof assistant kernel checked it against our canonical statement; it is the only tier no human opinion can grant. An LLM review is never a tier of its own and can never promote a claim."
+        },
+        "attestation": {
+          "enum": ["primary", "secondary", "self_checked"],
+          "description": "How we know. primary: the cited source is where the result was announced, published or proved. secondary: the cited source is a third party reporting it -- a catalogue row, an encyclopedia category. self_checked: we ran the check and hold the receipt. A published proof cited from a Wikipedia category and the same proof cited from the journal have identical evidence_tier and different attestation, and collapsing them is how a catalogue row comes to look like somebody read the paper."
         },
         "state": {
           "enum": ["active", "disputed", "retracted"],
@@ -299,7 +303,7 @@
         },
         "reviewer": {
           "type": ["string", "null"],
-          "description": "Named human who assessed this claim. Required for any tier above unverified_claim. Automation may never fill this in."
+          "description": "The named human HERE who read the source and confirmed it says what this claim says. Not the upstream curator -- they are the source, not our reviewer. Deliberately optional: when it was required, 712 of 775 claims were filed with an organisation ('teorth/erdosproblems maintainers') because a mandatory field gets filled whether or not anyone did the work. Null is the honest value almost everywhere and the site says so out loud. Automation may never fill this in."
         },
         "verification": {
           "$ref": "#/$defs/verification",
@@ -321,13 +325,22 @@
         },
         {
           "if": {
-            "properties": { "evidence_tier": { "enum": ["published", "community_accepted"] } },
-            "required": ["evidence_tier"]
+            "properties": { "attestation": { "const": "secondary" } },
+            "required": ["attestation"]
           },
           "then": {
-            "properties": { "reviewer": { "type": "string", "minLength": 1 } },
-            "required": ["reviewer"],
-            "description": "Human tiers require a named human."
+            "properties": { "reviewer": { "type": "null" } },
+            "description": "Nobody here can have reviewed a source that is itself a report. The reporting body belongs in `source`, where it already is."
+          }
+        },
+        {
+          "if": {
+            "properties": { "attestation": { "const": "self_checked" } },
+            "required": ["attestation"]
+          },
+          "then": {
+            "required": ["verification"],
+            "description": "self_checked means we hold the receipt, so there has to be one."
           }
         }
       ]

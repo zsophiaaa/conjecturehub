@@ -31,6 +31,7 @@ claims:
     asserted_on: 2026-08-01
     type: disproved
     evidence_tier: machine_verified
+    attestation: self_checked
     state: active
     recorded_on: 2026-08-01
     source:
@@ -58,6 +59,7 @@ claims:
     asserted_on: 2026-08-01
     type: reformulation
     evidence_tier: unverified_claim
+    attestation: secondary
     state: active
     recorded_on: 2026-08-02
     source:
@@ -69,13 +71,13 @@ claims:
     asserted_on: 2025-12-28
     type: reformulation
     evidence_tier: community_accepted
+    attestation: secondary
     state: active
     recorded_on: 2026-08-02
     source:
       title: erdosproblems.com forum
       url: https://www.erdosproblems.com/forum/thread/146
       kind: forum
-    reviewer: erdosproblems.com forum attribution
     notes: 'Site maintainer updated problem page: AKS03 wording "in one component" should be "on one side of the bipartition" (corollary 2.3).'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml

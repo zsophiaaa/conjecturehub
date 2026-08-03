@@ -39,7 +39,8 @@ A claim says *someone asserted this*, not *this is true*. Append to `claims`:
   type: partial               # proved | disproved | counterexample | partial |
                               # independence | resolved_by_prior_literature | reformulation
   scope: "for n < 2^68"       # omit only if the whole conjecture is settled
-  evidence_tier: preprint
+  evidence_tier: preprint    # where the result stands in mathematics
+  attestation: primary       # how you know: primary | secondary | self_checked
   state: active
   asserted_on: 2026-07-19
   recorded_on: 2026-07-31
@@ -58,10 +59,12 @@ Things that get pull requests sent back:
 
 - **Wrong claim type.** If a search turned up an existing published solution, that is `resolved_by_prior_literature`, not `proved`. This distinction exists because conflating the two produced a public retraction in October 2025.
 - **Missing scope.** "Disproved" when you mean "disproved in dimensions three and up" is wrong, and it is the single most common error.
-- **Overstated tier.** `published` and `community_accepted` require a named human in `reviewer`, and that human is accountable for the assessment. Automation may never fill it in. If you are not sure, use `unverified_claim`; it is not an insult, it is the honest default.
+- **Overstated tier.** `evidence_tier` describes the result, not your confidence in it. If you are not sure, use `unverified_claim`; it is not an insult, it is the honest default.
+- **Attestation that flatters the source.** If your link goes to a catalogue, an encyclopedia or a summary rather than the work itself, that is `secondary`, however settled the result is. Secondary claims take `reviewer: null` — nobody can have reviewed a source that is itself a report, and the schema rejects a name there.
+- **A reviewer who is not a person.** `reviewer` names the human *here* who read the source and confirmed it says what you say it says. An upstream project is the source, not your reviewer; "…maintainers" and "…editors" are rejected. Leaving it null is normal and the site prints it plainly.
 - **Bare domain sources.** Link the specific paper, post or page.
 
-Set `evidence_tier: machine_verified` only through the verification workflow. A hand-written verification receipt is rejected.
+Set `evidence_tier: machine_verified` and `attestation: self_checked` only through the verification workflow. A hand-written verification receipt is rejected.
 
 ## Submitting a proof
 
@@ -80,7 +83,8 @@ Verification takes about a minute and a half at the median. Roughly one submissi
 You are welcome here, on the same terms as everyone else, plus two:
 
 - **Declare it.** Fill in `ai_assistance` truthfully on every claim you touch. Undeclared AI authorship discovered later gets the claim retracted.
-- **You cannot promote a claim.** File at `unverified_claim` and let a human decide. Do not write to `reviewer`. Do not construct a `verification` block — only the verification workflow may do that.
+- **You cannot promote a claim.** File at `unverified_claim` and let a human decide. Do not write to `reviewer` — ever, under any name, including your operator's or an organisation's. Do not construct a `verification` block; only the verification workflow may do that.
+- **Say how you know.** Set `attestation` to what your link actually is. An agent reading a catalogue is filing `secondary`, and there is nothing wrong with that as long as the record says so.
 
 A note on why: the best-performing LLM proof judge measured in 2026 passes 38% of proofs that human experts judge flawed, and its characteristic failure is silently repairing a gap and then crediting it. That is not a reason to keep models out. It is the reason models triage here and kernels verify.
 

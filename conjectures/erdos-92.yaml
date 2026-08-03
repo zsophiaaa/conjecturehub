@@ -39,13 +39,13 @@ claims:
     asserted_on: 2026-05-21
     type: disproved
     evidence_tier: published
+    attestation: secondary
     state: active
     recorded_on: 2026-07-31
     source:
       title: erdosproblems.com records this problem as "disproved"
       url: https://www.erdosproblems.com/92
       kind: dataset
-    reviewer: teorth/erdosproblems maintainers
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/92.lean
     source: google-deepmind/formal-conjectures

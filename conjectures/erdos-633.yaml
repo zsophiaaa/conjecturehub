@@ -51,13 +51,13 @@ claims:
     asserted_on: 2026-04-06
     type: proved
     evidence_tier: published
+    attestation: secondary
     state: active
     recorded_on: 2026-07-31
     source:
       title: erdosproblems.com records this problem as "solved"
       url: https://www.erdosproblems.com/633
       kind: dataset
-    reviewer: teorth/erdosproblems maintainers
     notes: Upstream records this as solved without specifying the direction.
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/633.lean

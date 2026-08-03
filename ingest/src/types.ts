@@ -3,12 +3,16 @@
  * The JSON Schema is authoritative; these types exist for editor support.
  */
 
+/** Where the result stands in mathematics. Independent of how we learned it. */
 export type EvidenceTier =
   | "unverified_claim"
   | "preprint"
   | "published"
   | "community_accepted"
   | "machine_verified";
+
+/** How we came to know it. Independent of where the result stands. */
+export type Attestation = "primary" | "secondary" | "self_checked";
 
 export type ClaimType =
   | "proved"
@@ -64,6 +68,7 @@ export interface Claim {
   type: ClaimType;
   scope?: string | null;
   evidence_tier: EvidenceTier;
+  attestation: Attestation;
   state: ClaimState;
   asserted_on?: string | null;
   recorded_on: string;

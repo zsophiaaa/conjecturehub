@@ -32,13 +32,13 @@ claims:
   - id: mathoverflow-486451-fc-solved
     type: proved
     evidence_tier: published
+    attestation: secondary
     state: active
     recorded_on: 2026-07-31
     source:
       title: formal-conjectures marks exists_semiring_unique_left_maximal_not_unique_right_maximal as research solved
       url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Mathoverflow/486451.lean
       kind: dataset
-    reviewer: google-deepmind/formal-conjectures maintainers
     notes: Imported from the upstream `research solved` category. The statement is formalized; the proof has not been machine-checked by ConjectureHub.
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Mathoverflow/486451.lean

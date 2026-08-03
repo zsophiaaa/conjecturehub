@@ -65,25 +65,25 @@ claims:
   - id: erdos-1119-fc-solved
     type: independence
     evidence_tier: published
+    attestation: secondary
     state: active
     recorded_on: 2026-07-31
     source:
       title: formal-conjectures marks erdos_1119 as research solved
       url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/1119.lean
       kind: dataset
-    reviewer: google-deepmind/formal-conjectures maintainers
     notes: Imported from the upstream `research solved` category, which records that the problem is resolved without stating the direction. Direction taken from erdosproblems.com, which records it as "independence". The statement is formalized; the proof has not been machine-checked by ConjectureHub.
   - id: erdos-1119-erdos-status
     asserted_on: 2025-12-30
     type: independence
     evidence_tier: published
+    attestation: secondary
     state: active
     recorded_on: 2026-07-31
     source:
       title: erdosproblems.com records this problem as "independent"
       url: https://www.erdosproblems.com/1119
       kind: dataset
-    reviewer: teorth/erdosproblems maintainers
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/1119.lean
     source: google-deepmind/formal-conjectures

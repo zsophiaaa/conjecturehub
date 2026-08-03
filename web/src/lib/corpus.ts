@@ -13,11 +13,15 @@ export type EvidenceTier =
   | "community_accepted"
   | "machine_verified";
 
+/** How we know a claim. Independent of `EvidenceTier`, which is where it stands. */
+export type Attestation = "primary" | "secondary" | "self_checked";
+
 export interface Claim {
   id: string;
   type: string;
   scope?: string | null;
   evidence_tier: EvidenceTier;
+  attestation: Attestation;
   state: "active" | "disputed" | "retracted";
   asserted_on?: string | null;
   recorded_on: string;
@@ -44,6 +48,7 @@ export interface DerivedStatus {
   key: string;
   label: string;
   tier: EvidenceTier | null;
+  attestation: Attestation | null;
   scoped: boolean;
   scope: string | null;
   caveat: string;

@@ -126,13 +126,15 @@ function buildFromFormalConjectures(registry: Registry, tag: string, files: fc.F
 
     const claims: Claim[] = [];
     if (solved) {
-      // Upstream marks this solved. That is a statement about the literature,
-      // not a proof we have checked, so it lands at `published` and credits the
-      // upstream maintainers as the reviewers.
+      // Upstream marks this solved. The result stands as published literature,
+      // but all we hold is a row in their catalogue, so attestation is
+      // secondary and the reviewer stays null. Naming their maintainers here
+      // would read as though somebody checked the paper.
       claims.push({
         id: "placeholder",
         type: "proved",
         evidence_tier: "published",
+        attestation: "secondary",
         state: "active",
         recorded_on: today(),
         source: {
@@ -140,7 +142,7 @@ function buildFromFormalConjectures(registry: Registry, tag: string, files: fc.F
           url: FC_BLOB(tag, file.path),
           title: `formal-conjectures marks ${primary.name} as research solved`,
         },
-        reviewer: "google-deepmind/formal-conjectures maintainers",
+        reviewer: null,
         notes:
           "Imported from the upstream `research solved` category. The statement is formalized; the proof has not been machine-checked by ConjectureHub.",
       });
@@ -257,6 +259,7 @@ function buildFromErdos(
           id: `${id}-erdos-status`,
           type: claimType,
           evidence_tier: "published",
+          attestation: "secondary",
           state: "active",
           asserted_on: lastUpdate,
           recorded_on: today(),
@@ -265,7 +268,7 @@ function buildFromErdos(
             url,
             title: `erdosproblems.com records this problem as "${resolution}"`,
           },
-          reviewer: "teorth/erdosproblems maintainers",
+          reviewer: null,
           notes:
             resolution === "solved"
               ? "Upstream records this as solved without specifying the direction."

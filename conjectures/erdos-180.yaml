@@ -32,6 +32,7 @@ claims:
     asserted_on: 2026-08-01
     type: disproved
     evidence_tier: machine_verified
+    attestation: self_checked
     state: active
     recorded_on: 2026-08-01
     source:
@@ -59,6 +60,7 @@ claims:
     asserted_on: 2025-08-19
     type: disproved
     evidence_tier: community_accepted
+    attestation: secondary
     state: active
     recorded_on: 2026-08-02
     source:
@@ -67,12 +69,12 @@ claims:
       kind: forum
     authors:
       - Zach Hunter
-    reviewer: teorth/erdosproblems maintainers
     notes: "Folklore counterexample: family {H1,H2} with H1 a star and H2 a matching gives ex(n;F)=O_F(1) but each Hi with ≥2 edges has ex(n,Hi)=Θ(n). Disproves the original compactness conjecture; conjecture may still hold for families outside this obstruction."
   - id: erdos-180-forum-star-matching-dichotomy
     asserted_on: 2026-04-28
     type: partial
     evidence_tier: preprint
+    attestation: secondary
     state: active
     recorded_on: 2026-08-02
     source:
@@ -90,6 +92,7 @@ claims:
     asserted_on: 2026-05-02
     type: partial
     evidence_tier: preprint
+    attestation: secondary
     state: active
     recorded_on: 2026-08-02
     source:
@@ -109,6 +112,7 @@ claims:
     asserted_on: 2026-08-01
     type: reformulation
     evidence_tier: unverified_claim
+    attestation: secondary
     state: active
     recorded_on: 2026-08-02
     source:

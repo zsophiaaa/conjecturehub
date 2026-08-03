@@ -47,18 +47,19 @@ claims:
   - id: erdos-42-fc-solved
     type: proved
     evidence_tier: published
+    attestation: secondary
     state: active
     recorded_on: 2026-07-31
     source:
       title: formal-conjectures marks erdos_42 as research solved
       url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/42.lean
       kind: dataset
-    reviewer: google-deepmind/formal-conjectures maintainers
     notes: Imported from the upstream `research solved` category. The statement is formalized; the proof has not been machine-checked by ConjectureHub.
   - id: erdos-42-sandhu-gpt55-all-m
     asserted_on: 2026-04-27
     type: proved
     evidence_tier: preprint
+    attestation: secondary
     state: active
     recorded_on: 2026-08-02
     source:
@@ -80,6 +81,7 @@ claims:
     type: partial
     scope: M = 3
     evidence_tier: preprint
+    attestation: secondary
     state: active
     recorded_on: 2026-08-02
     source:
@@ -99,6 +101,7 @@ claims:
     asserted_on: 2026-05-01
     type: partial
     evidence_tier: community_accepted
+    attestation: secondary
     state: active
     recorded_on: 2026-08-02
     source:
@@ -108,12 +111,12 @@ claims:
       quote: I am fairly convinced the idea is correct.
     authors:
       - Thomas F. Bloom
-    reviewer: erdosproblems.com forum attribution
     notes: Bloom extracted and restated the proof's key lemma, expressed confidence in the overall strategy, and noted the lemma appears novel. Linked to Ruzsa–Matolcsi Δ(A) machinery; quantitative effective bounds on N in terms of M remain open.
   - id: erdos-42-paws-lean-formalization
     asserted_on: 2026-05-15
     type: proved
     evidence_tier: preprint
+    attestation: secondary
     state: active
     recorded_on: 2026-08-02
     source:

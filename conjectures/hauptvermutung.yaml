@@ -10,7 +10,22 @@ openness_basis:
   meaning: unknown
   asserted_by: wikidata
   note: Identity record only. No statement or status has been ingested for this conjecture yet.
-claims: []
+claims:
+  - id: hauptvermutung-wikipedia-status
+    type: disproved
+    scope: polyhedra of dimension >= 6
+    evidence_tier: community_accepted
+    attestation: secondary
+    state: active
+    recorded_on: 2026-08-03
+    source:
+      title: Hauptvermutung
+      url: https://en.wikipedia.org/wiki/Hauptvermutung
+      kind: wikipedia
+    notes: |-
+      Standing taken from English Wikipedia's categorisation (Wikipedia categorises this as disproved). Nobody here has read the paper that settled it, which is what the secondary attestation says; replace this claim with one citing that paper when someone has it to hand.
+
+      Reviewed 2026-08-03: True for manifolds of dimension <= 3 (Radó, Moise). The polyhedral version fell to Milnor 1961; the manifold version was obstructed in dimension >= 5 by Casson–Sullivan and Kirby–Siebenmann. The two deserve separate records. See https://en.wikipedia.org/wiki/Hauptvermutung.
 provenance:
   - url: https://www.wikidata.org/wiki/Q5682772
     source: wikidata
@@ -21,4 +36,10 @@ provenance:
       - ids.mathworld
       - notability.wikipedia_language_editions
     license: CC0-1.0
+    retrieved: 2026-08-03
+  - url: https://en.wikipedia.org/wiki/Hauptvermutung
+    source: wikipedia
+    fields:
+      - claims
+    license: CC-BY-SA-4.0
     retrieved: 2026-08-03

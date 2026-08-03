@@ -11,20 +11,23 @@ import type { Claim, Conjecture, EvidenceTier } from "../types.js";
  * Turns entries in the Wikipedia review queue into resolution claims.
  *
  * Split from the command that builds the queue because the two are different
- * kinds of act. Building the queue is a measurement anyone can re-run. Filing a
- * claim puts a named person behind a status, and the schema is explicit that no
- * automation may do that -- so this command refuses to run without a name, and
- * refuses to file anything the caller has not listed by id or waved through
- * with --all.
+ * kinds of act: building the queue is a measurement anyone can re-run, filing a
+ * claim changes what the site says.
  *
- * The reviewer is attesting that they checked the entry, not that they refereed
- * the proof. That is what community_accepted means and why the note on every
- * claim it writes says where the status came from.
+ * This used to demand a --reviewer, on the reasoning that a resolution needs a
+ * human behind it. That was the wrong shape. What a Wikipedia category supports
+ * is not "a person here vouches for this proof" but "an encyclopedia reports
+ * this as settled" -- so these file as secondary attestation with no reviewer
+ * at all, and the site prints the difference. Demanding a name would only have
+ * produced one, which is exactly how 712 claims came to credit
+ * "teorth/erdosproblems maintainers" for reviews nobody performed.
  *
- *   --reviewer NAME   required; the human taking responsibility
+ * The standing is still a real judgement about the literature, so nothing is
+ * filed that the caller has not listed by id or waved through with --all.
+ *
  *   --ids a,b,c       file only these conjecture ids
  *   --all             file every entry in the queue
- *   --tier TIER       default community_accepted
+ *   --tier TIER       standing of the result; default community_accepted
  *   --dry-run         print the claims and write nothing
  */
 
@@ -35,17 +38,11 @@ function flag(name: string): string | null {
   return i >= 0 ? (process.argv[i + 1] ?? null) : null;
 }
 
-const reviewer = flag("reviewer");
 const idsArg = flag("ids");
 const all = process.argv.includes("--all");
 const dryRun = process.argv.includes("--dry-run");
 const tier = (flag("tier") ?? "community_accepted") as EvidenceTier;
 
-if (!reviewer) {
-  console.error("--reviewer NAME is required. A resolution claim has to carry the name of the");
-  console.error("person who checked it; the schema will reject one that does not.");
-  process.exit(2);
-}
 if (!idsArg && !all) {
   console.error("Pass --ids a,b,c to file specific entries, or --all to file the whole queue.");
   process.exit(2);
@@ -104,6 +101,7 @@ for (const entry of queueFile.queue) {
     id: claimId,
     type: entry.signal === "proved" ? "proved" : "disproved",
     evidence_tier: tier,
+    attestation: "secondary",
     state: "active",
     // The category carries no date. Inventing one from the article's revision
     // history would date our reading of it, not the mathematics.
@@ -114,11 +112,11 @@ for (const entry of queueFile.queue) {
       url: entry.article,
       title: entry.title,
     },
-    reviewer,
+    reviewer: null,
     notes:
-      `Status taken from English Wikipedia's categorisation and confirmed by ${reviewer}. ` +
-      "No referee report or primary citation has been recorded here yet; replace this claim " +
-      "with one citing the paper that settled it when someone has it to hand.",
+      `Standing taken from English Wikipedia's categorisation (${entry.reason}). Nobody here has ` +
+      "read the paper that settled it, which is what the secondary attestation says; replace " +
+      "this claim with one citing that paper when someone has it to hand.",
   };
 
   if (!appendClaim(record, claim)) {
@@ -165,7 +163,7 @@ if (!dryRun && filed.length > 0) {
 }
 
 console.log(
-  `${dryRun ? "Would file" : "Filed"} ${filed.length} claim(s) as ${reviewer} at tier ${tier}.`,
+  `${dryRun ? "Would file" : "Filed"} ${filed.length} claim(s) at standing ${tier}, secondary attestation.`,
 );
 if (skipped > 0) console.log(`  ${skipped} already had a claim from this source.`);
 console.log(`  ${remaining.length} entries left in the queue.`);

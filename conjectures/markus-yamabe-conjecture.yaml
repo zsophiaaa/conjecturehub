@@ -10,7 +10,22 @@ openness_basis:
   meaning: unknown
   asserted_by: wikidata
   note: Identity record only. No statement or status has been ingested for this conjecture yet.
-claims: []
+claims:
+  - id: markus-yamabe-conjecture-wikipedia-status
+    type: disproved
+    scope: dimensions n >= 3
+    evidence_tier: community_accepted
+    attestation: secondary
+    state: active
+    recorded_on: 2026-08-03
+    source:
+      title: Markus–Yamabe conjecture
+      url: https://en.wikipedia.org/wiki/Markus%E2%80%93Yamabe_conjecture
+      kind: wikipedia
+    notes: |-
+      Standing taken from English Wikipedia's categorisation (Wikipedia categorises this as disproved). Nobody here has read the paper that settled it, which is what the secondary attestation says; replace this claim with one citing that paper when someone has it to hand.
+
+      Reviewed 2026-08-03: True in dimension 2, where it is standardly called the Markus–Yamabe theorem (Gutiérrez 1993; Fessler 1995). The discrete version also fails from n = 3 up. See https://en.wikipedia.org/wiki/Markus%E2%80%93Yamabe_conjecture.
 provenance:
   - url: https://www.wikidata.org/wiki/Q6771536
     source: wikidata
@@ -21,4 +36,10 @@ provenance:
       - ids.mathworld
       - notability.wikipedia_language_editions
     license: CC0-1.0
+    retrieved: 2026-08-03
+  - url: https://en.wikipedia.org/wiki/Markus%E2%80%93Yamabe_conjecture
+    source: wikipedia
+    fields:
+      - claims
+    license: CC-BY-SA-4.0
     retrieved: 2026-08-03

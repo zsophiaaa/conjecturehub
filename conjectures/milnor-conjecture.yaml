@@ -11,7 +11,21 @@ openness_basis:
   meaning: unknown
   asserted_by: wikidata
   note: Identity record only. No statement or status has been ingested for this conjecture yet.
-claims: []
+claims:
+  - id: milnor-conjecture-wikipedia-status
+    type: disproved
+    evidence_tier: community_accepted
+    attestation: secondary
+    state: retracted
+    recorded_on: 2026-08-03
+    source:
+      title: Milnor conjecture
+      url: https://en.wikipedia.org/wiki/Milnor_conjecture_(Ricci_curvature)
+      kind: wikipedia
+    notes: |-
+      Standing taken from English Wikipedia's categorisation (Wikipedia categorises this as disproved). Nobody here has read the paper that settled it, which is what the secondary attestation says; replace this claim with one citing that paper when someone has it to hand.
+
+      Retracted 2026-08-03 after review: Wikipedia's 'Milnor conjecture' is a disambiguation page. The K-theory version (Voevodsky) and the knot-theory version on the slice genus of torus knots (Kronheimer–Mrowka 1993) are proved; the Ricci-curvature version is disproved only in dimension >= 6 (Bruè–Naber–Semola) and open in dimensions 4 and 5. A bare 'disproved' under the bare name is wrong for two of the three. Needs splitting into separate records before any status can be filed. See https://en.wikipedia.org/wiki/Milnor_conjecture.
 provenance:
   - url: https://www.wikidata.org/wiki/Q126193031
     source: wikidata
@@ -41,3 +55,9 @@ provenance:
       - ids.mathworld
     license: CC0-1.0
     retrieved: 2026-07-31
+  - url: https://en.wikipedia.org/wiki/Milnor_conjecture_(Ricci_curvature)
+    source: wikipedia
+    fields:
+      - claims
+    license: CC-BY-SA-4.0
+    retrieved: 2026-08-03

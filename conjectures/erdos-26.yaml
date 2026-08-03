@@ -53,30 +53,31 @@ claims:
   - id: erdos-26-fc-solved
     type: disproved
     evidence_tier: published
+    attestation: secondary
     state: active
     recorded_on: 2026-07-31
     source:
       title: formal-conjectures marks erdos_26 as research solved
       url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/26.lean
       kind: dataset
-    reviewer: google-deepmind/formal-conjectures maintainers
     notes: Imported from the upstream `research solved` category, which records that the problem is resolved without stating the direction. Direction taken from erdosproblems.com, which records it as "disproved". The statement is formalized; the proof has not been machine-checked by ConjectureHub.
   - id: erdos-26-erdos-status
     asserted_on: 2025-12-28
     type: disproved
     evidence_tier: published
+    attestation: secondary
     state: active
     recorded_on: 2026-07-31
     source:
       title: erdosproblems.com records this problem as "disproved"
       url: https://www.erdosproblems.com/26
       kind: dataset
-    reviewer: teorth/erdosproblems maintainers
   - id: erdos-26-davenport-erdos-prior-literature
     asserted_on: 2025-12-07
     type: resolved_by_prior_literature
     scope: the original question as stated, for arbitrary infinite A
     evidence_tier: published
+    attestation: secondary
     state: active
     recorded_on: 2026-08-02
     source:
@@ -86,13 +87,13 @@ claims:
       quote: So I don't see why this question was asked 40 years later, as it seems to be trivially false.
     authors:
       - Wouter van Doorn
-    reviewer: Thomas Bloom
     notes: Points out that the question is settled negatively by 1951 work of Davenport and Erdős, which shows any Behrend sequence must have divergent reciprocal sum. Taking any infinite A with convergent reciprocal sum makes it immediate that no shift k can work.
   - id: erdos-26-divergent-reciprocal-counterexample
     asserted_on: 2025-11-24
     type: counterexample
     scope: strengthens the refutation to the case where the reciprocal sum of A diverges
     evidence_tier: community_accepted
+    attestation: secondary
     state: active
     recorded_on: 2026-08-02
     source:
@@ -101,13 +102,13 @@ claims:
       kind: forum
     authors:
       - Wouter van Doorn
-    reviewer: Thomas Bloom
     notes: Ruzsa's standard counterexample grows fast enough to have a convergent reciprocal sum, which made the refutation feel cheap. This modifies the construction by replacing the congruence range with one governed by any slowly growing function, so the density of A decays as slowly as desired and the reciprocal sum diverges while the counterexample survives.
   - id: erdos-26-tenenbaum-variant-disproof
     asserted_on: 2026-04-06
     type: disproved
     scope: Tenenbaum's weaker variant, not the original question
     evidence_tier: community_accepted
+    attestation: secondary
     state: active
     recorded_on: 2026-08-02
     source:
@@ -119,13 +120,13 @@ claims:
       systems:
         - DeepMind prover agent (product name not disclosed in thread)
       role: discovery
-    reviewer: Thomas Bloom
     notes: Posted by forum user GTsoukalas (no real name given on the site). Reports that a DeepMind prover agent found a Lean proof refuting Tenenbaum's weaker density variant. The construction builds A in blocks using arithmetic progressions chosen by CRT, each block contributing a fixed amount to a divergent reciprocal sum, giving upper density below 0.34.
   - id: erdos-26-aristotle-lean-formalisation
     asserted_on: 2025-12-28
     type: reformulation
     scope: Ruzsa's counterexample only, not the later strengthenings
     evidence_tier: community_accepted
+    attestation: secondary
     state: active
     recorded_on: 2026-08-02
     source:
@@ -139,7 +140,6 @@ claims:
       systems:
         - Aristotle (Harmonic)
       role: formalization
-    reviewer: Thomas Bloom
     notes: Harmonic's Aristotle auto-formalised Ruzsa's counterexample in Lean against the Formal Conjectures target statement. The poster explicitly notes he did not formalise the other results in the thread, including the divergent-reciprocal variant.
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/26.lean

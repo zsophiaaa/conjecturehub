@@ -47,7 +47,18 @@ openness_basis:
   meaning: no_published_solution_known_to_curator
   asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: euler-s-sum-of-powers-conjecture-wikipedia-status
+    type: disproved
+    evidence_tier: community_accepted
+    attestation: secondary
+    state: active
+    recorded_on: 2026-08-03
+    source:
+      title: Euler's sum of powers conjecture
+      url: https://en.wikipedia.org/wiki/Euler's_sum_of_powers_conjecture
+      kind: wikipedia
+    notes: Standing taken from English Wikipedia's categorisation (we publish this as open on google-deepmind/formal-conjectures's word, but Wikipedia categorises it as disproved). Nobody here has read the paper that settled it, which is what the secondary attestation says; replace this claim with one citing that paper when someone has it to hand.
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/EulerSumOfPowers.lean
     source: google-deepmind/formal-conjectures
@@ -69,4 +80,10 @@ provenance:
       - ids.mathworld
       - notability.wikipedia_language_editions
     license: CC0-1.0
+    retrieved: 2026-08-03
+  - url: https://en.wikipedia.org/wiki/Euler's_sum_of_powers_conjecture
+    source: wikipedia
+    fields:
+      - claims
+    license: CC-BY-SA-4.0
     retrieved: 2026-08-03

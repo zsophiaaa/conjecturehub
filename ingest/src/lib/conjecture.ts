@@ -51,6 +51,7 @@ const KEY_ORDER = [
   "type",
   "scope",
   "evidence_tier",
+  "attestation",
   "state",
   "recorded_on",
   "source",

@@ -65,6 +65,7 @@ claims:
     type: partial
     scope: the gcd-free formulation permitting the power d^0 = 1, not the BEGL question
     evidence_tier: community_accepted
+    attestation: secondary
     state: active
     recorded_on: 2026-08-02
     source:
@@ -79,26 +80,26 @@ claims:
       systems:
         - Aristotle (Harmonic)
       role: discovery
-    reviewer: Thomas Bloom
     notes: Harmonic's Aristotle proved the first question working only from a formal Lean statement, after the poster corrected a typo in the Formal Conjectures statement that had weakened it. Aristotle took roughly six hours; Lean checked the result in about a minute. Both the contributor and the maintainer agree this settles a version of the problem but not the Burr–Erdős–Graham–Li version, which is why the problem remains marked open.
   - id: erdos-124-informal-proof-sketch
     asserted_on: 2025-11-30
     type: reformulation
     scope: human-readable rendering of the Aristotle proof of the first question
     evidence_tier: community_accepted
+    attestation: secondary
     state: active
     recorded_on: 2026-08-02
     source:
       title: erdosproblems.com forum
       url: https://www.erdosproblems.com/forum/thread/124
       kind: forum
-    reviewer: Thomas Bloom
     notes: "Posted by forum user tsaf (no real name given on the site). Translates the Lean proof into a short informal argument: sort all powers of the d_i into one sequence with multiplicity, then apply the standard completeness criterion that each term is at most one more than the sum of its predecessors. The maintainer replied that the sketch confirms the proof is elementary enough to pass as a competition problem."
   - id: erdos-124-pomerance-necessity-finite-only
     asserted_on: 2025-12-01
     type: partial
     scope: scope and proof of the necessity of the reciprocal-sum condition
     evidence_tier: community_accepted
+    attestation: secondary
     state: active
     recorded_on: 2026-08-02
     source:
@@ -107,20 +108,19 @@ claims:
       kind: forum
     authors:
       - Terence Tao
-    reviewer: Thomas Bloom
     notes: Reconstructs Pomerance's unpublished observation that the reciprocal condition is necessary, and points out it applies only when the set is finite. For a finite set with reciprocal sum below 1, Kronecker's approximation theorem produces infinitely many n just below a power of every base simultaneously, so completeness fails. Notes the equality case is delicate and plausibly needs Baker's theorem.
   - id: erdos-124-melfi-infinite-counterexample
     asserted_on: 2025-11-30
     type: resolved_by_prior_literature
     scope: the infinite-set case only; says nothing about the finite-set questions posed
     evidence_tier: published
+    attestation: secondary
     state: active
     recorded_on: 2026-08-02
     source:
       title: erdosproblems.com forum
       url: https://www.erdosproblems.com/forum/thread/124
       kind: forum
-    reviewer: Thomas Bloom
     notes: Posted by forum user Alfaiz (no real name given on the site). Surfaces a 2004 survey by Giuseppe Melfi containing an infinite set of bases that is complete even though the reciprocal sum can be made smaller than any prescribed epsilon, refuting the converse direction of the natural criterion for infinite sets. Now cited in the problem remarks.
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/124.lean

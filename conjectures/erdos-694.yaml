@@ -60,19 +60,20 @@ claims:
   - id: erdos-694-fc-solved
     type: proved
     evidence_tier: published
+    attestation: secondary
     state: active
     recorded_on: 2026-07-31
     source:
       title: formal-conjectures marks erdos_694 as research solved
       url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/694.lean
       kind: dataset
-    reviewer: google-deepmind/formal-conjectures maintainers
     notes: Imported from the upstream `research solved` category. The statement is formalized; the proof has not been machine-checked by ConjectureHub.
   - id: erdos-694-gpt55-asymptotic-solution
     asserted_on: 2026-05-01
     type: proved
     scope: the asymptotic order of the maximum ratio, up to the o(1) in the constant
     evidence_tier: community_accepted
+    attestation: secondary
     state: active
     recorded_on: 2026-08-02
     source:
@@ -86,13 +87,13 @@ claims:
       systems:
         - GPT-5.5 Pro
       role: discovery
-    reviewer: Thomas Bloom
     notes: GPT-5.5 Pro, prompted by Price, proved that the maximum of the ratio over n up to x equals (e^gamma + o(1)) log log x. The write-up was circulated as an Overleaf read-only link rather than a preprint server, which drew a side discussion about citation practice. The problem remarks now state this result and attribute it to GPT-5.5 Pro prompted by Price.
   - id: erdos-694-bloom-elementary-proof
     asserted_on: 2026-05-02
     type: proved
     scope: independent short proof of both the upper and the lower bound
     evidence_tier: unverified_claim
+    attestation: secondary
     state: active
     recorded_on: 2026-08-02
     source:
@@ -107,6 +108,7 @@ claims:
     type: reformulation
     scope: machine-checked statement of the asymptotic, modulo two number-theoretic axioms
     evidence_tier: community_accepted
+    attestation: secondary
     state: active
     recorded_on: 2026-08-02
     source:
@@ -119,13 +121,13 @@ claims:
         - Claude Code 4.7
         - GPT-5.5 Pro
       role: formalization
-    reviewer: Nat Sothanaphan
     notes: Posted by forum user paws (no real name given on the site). A Lean 4 and Mathlib formalisation, type-checkable in browser and checked under Lean 4.27 and 4.28. Mertens' product theorem and a divisibility form of Linnik's theorem are assumed as axioms rather than proved. A later commenter reported that Aristotle subsequently discharged the Mertens axiom, leaving Linnik as the only remaining assumption.
   - id: erdos-694-linnik-ineffectivity-caveat
     asserted_on: 2026-05-01
     type: partial
     scope: effectivity of the lower-bound construction, not its correctness
     evidence_tier: unverified_claim
+    attestation: secondary
     state: active
     recorded_on: 2026-08-02
     source:

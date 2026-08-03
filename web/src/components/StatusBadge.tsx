@@ -1,4 +1,4 @@
-import type { DerivedStatus, EvidenceTier } from "@/lib/corpus";
+import type { Attestation, DerivedStatus, EvidenceTier } from "@/lib/corpus";
 
 interface Style {
   label: string;
@@ -29,14 +29,28 @@ export const TIER_LABELS: Record<EvidenceTier, string> = {
 const chip =
   "inline-flex items-center gap-1 border border-border-strong bg-surface-1 text-ink-muted font-normal";
 
+/**
+ * Statuses where the difference between reading the proof and reading about it
+ * changes how much weight the label carries. "Open" does not need the marker;
+ * "Proved" very much does.
+ */
+const RESOLUTIONS = new Set([
+  "proved",
+  "disproved",
+  "independent",
+  "resolved_by_prior_literature",
+]);
+
 export function StatusChip({
   statusKey,
   tier,
+  attestation = null,
   scoped = false,
   size = "md",
 }: {
   statusKey: string;
   tier: EvidenceTier | null;
+  attestation?: Attestation | null;
   scoped?: boolean;
   size?: "sm" | "md";
 }) {
@@ -63,12 +77,30 @@ export function StatusChip({
       ) : tier ? (
         <span className={`${chip} ${padding}`}>{TIER_LABELS[tier]}</span>
       ) : null}
+
+      {attestation === "secondary" && RESOLUTIONS.has(statusKey) ? (
+        <span
+          className={`${chip} ${padding} italic`}
+          title="Our basis is someone else's report of this result — a catalogue row or an encyclopedia entry — not the proof itself."
+        >
+          <span aria-hidden="true">↗</span>
+          reported
+        </span>
+      ) : null}
     </span>
   );
 }
 
 export function StatusBadge({ status, size = "md" }: { status: DerivedStatus; size?: "sm" | "md" }) {
-  return <StatusChip statusKey={status.key} tier={status.tier} scoped={status.scoped} size={size} />;
+  return (
+    <StatusChip
+      statusKey={status.key}
+      tier={status.tier}
+      attestation={status.attestation}
+      scoped={status.scoped}
+      size={size}
+    />
+  );
 }
 
 export function StatusCaveat({ status }: { status: DerivedStatus }) {

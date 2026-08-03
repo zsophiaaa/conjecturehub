@@ -10,7 +10,22 @@ openness_basis:
   meaning: unknown
   asserted_by: wikidata
   note: Identity record only. No statement or status has been ingested for this conjecture yet.
-claims: []
+claims:
+  - id: black-hole-stability-conjecture-wikipedia-status
+    type: proved
+    scope: the vacuum Kerr family in the subextremal range |a| < M
+    evidence_tier: community_accepted
+    attestation: secondary
+    state: active
+    recorded_on: 2026-08-03
+    source:
+      title: black hole stability conjecture
+      url: https://en.wikipedia.org/wiki/Black_hole_stability_conjecture
+      kind: wikipedia
+    notes: |-
+      Standing taken from English Wikipedia's categorisation (Wikipedia categorises this as proved). Nobody here has read the paper that settled it, which is what the secondary attestation says; replace this claim with one citing that paper when someone has it to hand.
+
+      Reviewed 2026-08-03: Published work covers slowly rotating Kerr only (Dafermos–Holzegel–Rodnianski–Taylor; Giorgi–Klainerman–Szeftel, 2021–2022). The full subextremal range rests on Hintz, arXiv:2606.28253 (June 2026), which is not yet refereed. Extremal |a| = M and charged Kerr–Newman are excluded and open. See https://arxiv.org/abs/2606.28253.
 provenance:
   - url: https://www.wikidata.org/wiki/Q113447473
     source: wikidata
@@ -21,4 +36,10 @@ provenance:
       - ids.mathworld
       - notability.wikipedia_language_editions
     license: CC0-1.0
+    retrieved: 2026-08-03
+  - url: https://en.wikipedia.org/wiki/Black_hole_stability_conjecture
+    source: wikipedia
+    fields:
+      - claims
+    license: CC-BY-SA-4.0
     retrieved: 2026-08-03

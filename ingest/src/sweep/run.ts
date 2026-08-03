@@ -1,6 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import crypto from "node:crypto";
+import { defaultAttestation } from "../lib/attestation.js";
 import { readAll, read, write, appendClaim } from "../lib/conjecture.js";
 import { validateConjecture } from "../lib/validate.js";
 import { today } from "../lib/http.js";
@@ -165,6 +166,7 @@ function buildClaim(match: ClassifiedMatch): Claim {
     type: match.claimType as Claim["type"],
     scope: match.scope,
     evidence_tier: "unverified_claim",
+    attestation: defaultAttestation(candidate.kind),
     state: "active",
     asserted_on: candidate.published,
     recorded_on: today(),

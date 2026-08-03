@@ -12,6 +12,7 @@ function claim(over: Record<string, unknown>) {
     id: "x-a",
     type: "proved",
     evidence_tier: "published",
+    attestation: "primary",
     state: "active",
     recorded_on: "2026-08-02",
     reviewer: "someone",
@@ -41,7 +42,9 @@ function record(claims: unknown[]): unknown {
 let failures = 0;
 
 function expect(name: string, value: unknown, shouldMatch: RegExp | null) {
-  const messages = validateConjecture(value).map((i) => i.message);
+  // Matched against path and message together, because a schema error says
+  // "must be null" and only the path tells you which field it meant.
+  const messages = validateConjecture(value).map((i) => `${i.path} ${i.message}`);
   const hit = shouldMatch ? messages.some((m) => shouldMatch.test(m)) : messages.length === 0;
   console.log(`${hit ? "ok  " : "FAIL"}  ${name}${hit ? "" : ` -> ${JSON.stringify(messages)}`}`);
   if (!hit) failures++;
@@ -80,6 +83,46 @@ expect(
     }),
   ]),
   /immutable ref/,
+);
+
+// 712 claims once carried an organisation in the reviewer field, which made a
+// catalogue row look on the page like a person had read the paper.
+expect(
+  "an organisation as reviewer is rejected",
+  record([claim({ attestation: "primary", reviewer: "Erdős Problems Project" })]),
+  /reviewer/i,
+);
+
+expect(
+  "a person as reviewer is allowed",
+  record([claim({ attestation: "primary", reviewer: "Ada Lovelace" })]),
+  null,
+);
+
+// Secondary attestation means nobody here read the source, so naming a
+// reviewer would be a claim about work that did not happen.
+expect(
+  "secondary attestation with a reviewer is rejected",
+  record([
+    claim({
+      attestation: "secondary",
+      reviewer: "Ada Lovelace",
+      source: { kind: "wikipedia", url: "https://en.wikipedia.org/wiki/X" },
+    }),
+  ]),
+  /reviewer/i,
+);
+
+expect(
+  "secondary attestation with no reviewer is allowed",
+  record([
+    claim({
+      attestation: "secondary",
+      reviewer: null,
+      source: { kind: "wikipedia", url: "https://en.wikipedia.org/wiki/X" },
+    }),
+  ]),
+  null,
 );
 
 console.log(failures === 0 ? "\nAll self-tests passed." : `\n${failures} self-test(s) failed.`);

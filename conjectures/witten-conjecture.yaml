@@ -10,7 +10,21 @@ openness_basis:
   meaning: unknown
   asserted_by: wikidata
   note: Identity record only. No statement or status has been ingested for this conjecture yet.
-claims: []
+claims:
+  - id: witten-conjecture-wikipedia-status
+    type: proved
+    evidence_tier: community_accepted
+    attestation: secondary
+    state: retracted
+    recorded_on: 2026-08-03
+    source:
+      title: Witten conjecture
+      url: https://en.wikipedia.org/wiki/Witten_conjecture
+      kind: wikipedia
+    notes: |-
+      Standing taken from English Wikipedia's categorisation (Wikipedia categorises this as proved). Nobody here has read the paper that settled it, which is what the secondary attestation says; replace this claim with one citing that paper when someone has it to hand.
+
+      Retracted 2026-08-03 after review: At least two conjectures share the name. The moduli-of-curves/KdV version is fully proved (Kontsevich 1992). The gauge-theory version, that Donaldson invariants are determined by Seiberg–Witten invariants, is proved only for large classes of 4-manifolds and is not settled in general. Needs splitting before any status can be filed. See https://ncatlab.org/nlab/show/Witten+conjecture.
 provenance:
   - url: https://www.wikidata.org/wiki/Q8028565
     source: wikidata
@@ -21,4 +35,10 @@ provenance:
       - ids.mathworld
       - notability.wikipedia_language_editions
     license: CC0-1.0
+    retrieved: 2026-08-03
+  - url: https://en.wikipedia.org/wiki/Witten_conjecture
+    source: wikipedia
+    fields:
+      - claims
+    license: CC-BY-SA-4.0
     retrieved: 2026-08-03

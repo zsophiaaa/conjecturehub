@@ -21,13 +21,13 @@ claims:
     asserted_on: 2025-08-31
     type: proved
     evidence_tier: published
+    attestation: secondary
     state: active
     recorded_on: 2026-07-31
     source:
       title: erdosproblems.com records this problem as "solved"
       url: https://www.erdosproblems.com/54
       kind: dataset
-    reviewer: teorth/erdosproblems maintainers
     notes: Upstream records this as solved without specifying the direction.
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml

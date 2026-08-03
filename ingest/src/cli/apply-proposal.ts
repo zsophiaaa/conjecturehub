@@ -6,6 +6,7 @@
  * Usage: apply-proposal.ts < proposal.json
  */
 import fs from "node:fs";
+import { defaultAttestation } from "../lib/attestation.js";
 import { appendClaim, exists, read, write } from "../lib/conjecture.js";
 import type { Claim, SourceKind } from "../types.js";
 
@@ -42,16 +43,19 @@ async function main() {
   const today = new Date().toISOString().slice(0, 10);
   const claimId = `community-proposal-${payload.proposalId}`;
 
+  const sourceKind = inferSourceKind(payload.sourceUrl);
+
   const claim: Claim = {
     id: claimId,
     type: payload.claimType as Claim["type"],
     scope: payload.scope ?? null,
     evidence_tier: "unverified_claim",
+    attestation: defaultAttestation(sourceKind),
     state: "active",
     recorded_on: today,
     asserted_on: today,
     source: {
-      kind: inferSourceKind(payload.sourceUrl),
+      kind: sourceKind,
       url: payload.sourceUrl,
       title: payload.sourceTitle ?? null,
       quote: payload.sourceQuote ?? null,
