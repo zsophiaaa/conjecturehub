@@ -101,6 +101,8 @@ jobs:
           No claim in this pull request asserts a resolution. Read the diff on the openness bases before merging.
           EOF
 
+          gh label create refresh --color 0e8a16 --description "Opened by the weekly refresh" --force
+
           if gh pr view "$BRANCH" --json number >/dev/null 2>&1; then
             gh pr edit "$BRANCH" --body-file /tmp/pr-body.md
           else

@@ -138,6 +138,11 @@ jobs:
           git commit -m "sweep: ${{ steps.sweep.outputs.written }} unverified claim(s) from $(date -u +%Y-%m-%d)"
           git push --set-upstream origin "$BRANCH"
 
+          # A missing label makes gh pr create exit non-zero after the push,
+          # stranding the branch with no pull request. Ensure they exist.
+          gh label create sweep --color 1d76db --description "Opened by the automated sweep" --force
+          gh label create unverified --color fbca04 --description "Contains claims no one has verified" --force
+
           if gh pr view "$BRANCH" --json number >/dev/null 2>&1; then
             gh pr edit "$BRANCH" --body-file /tmp/pr-body.md
           else
