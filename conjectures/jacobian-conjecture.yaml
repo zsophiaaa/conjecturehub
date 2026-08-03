@@ -83,6 +83,37 @@ claims:
       - David Barros Hulak
       - Ruy Jose Guerra Barretto de Queiroz
     notes: Isabelle/HOL formalisation accepted into the Archive of Formal Proofs. This is the one completed machine check of the counterexample; the Lean route remains an open Mathlib pull request. Not tagged machine_verified here because that tier is reserved for proofs checked by ConjectureHub CI against our own canonical statement.
+  - id: jacobian-conjecture-sweep-a2ebddf8
+    asserted_on: 2026-07-26
+    type: disproved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-03
+    source:
+      title: "formal-conjectures: feat: add Jacobian disproof (#4474) This PR adds the disproof of the Jacobian conjecture. This makes a minor change to the statement, namely negating it (the original formalisation expected the conjec"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/393aa9ab2403a2fb6f00eabf56fe8bf977a38efa
+      kind: github
+      quote: This PR adds the disproof of the Jacobian conjecture.
+    authors:
+      - Paul-Lez
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Jacobian conjecture". Classifier rationale: The commit explicitly claims to provide a disproof of the Jacobian conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: jacobian-conjecture-sweep-93935854
+    asserted_on: 2026-07-28
+    type: disproved
+    scope: for any non-trivial commutative ring (arbitrary fields)
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-03
+    source:
+      title: "formal-conjectures: feat: rephrase the Jacobian conjecture and add bivariate open case (#4635) This PR rephrases the statement of the Jacobian conjecture in order to - allow arbitrary fields in the disproof - use the `an"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/f7349f32ba6df6e7b7baf77467a3c6c7777a634d
+      kind: github
+      quote: the general disproof (which is a variant of the Alpolge one). This holds for any non-trivial commutative ring.
+    authors:
+      - Paul-Lez
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Jacobian conjecture". Classifier rationale: The commit explicitly claims a general disproof of the Jacobian conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/JacobianConjecture.lean
     source: google-deepmind/formal-conjectures

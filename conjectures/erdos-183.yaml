@@ -85,6 +85,38 @@ claims:
       - Anurag Bishnoi
       - Ananth Ravi
     notes: "Forum post by Wouter Cames van Batenburg reporting joint work with Bishnoi and Ravi: lim_{k→∞} R(3;k)^{1/k} ≥ 2^{(n-1)/(χ(n)-1)} where χ(n) is the minimum sum-free partition size of F_n^2 minus the origin. Context for #183 lower bounds; predates the OpenAI result."
+  - id: erdos-183-sweep-df6afad5
+    asserted_on: 2026-08-02
+    type: partial
+    scope: proving (R_k)^{1/k} → ∞ (superexponential lower bound)
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-03
+    source:
+      title: "erdosproblems: Record Lean solution for Erdős problem 183"
+      url: https://github.com/teorth/erdosproblems/commit/fc45630d42bd579d3cfc4cd44b5203877820f3c5
+      kind: github
+      quote: OpenAI Astra (August 2026) announced a superexponential lower bound, proving `(R_k)^{1/k} → ∞`
+    authors:
+      - jkomkov
+    notes: 'Filed automatically by the erdosproblems commits sweep. Matched on "Erdős problem 183". Classifier rationale: The document claims a new lower‑bound result, which is a partial advance on the conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: erdos-183-sweep-99060fd3
+    asserted_on: 2026-08-02
+    type: partial
+    scope: superexponential lower bound
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-03
+    source:
+      title: "erdosproblems PR #373: Record Lean solution for Erdős problem 183"
+      url: https://github.com/teorth/erdosproblems/pull/373
+      kind: github
+      quote: the k-th roots of the multicolor triangle Ramsey numbers tend to `atTop`
+    authors:
+      - jkomkov
+    notes: 'Filed automatically by the erdosproblems pull requests sweep. Matched on "Erdős problem 183". Classifier rationale: The PR records a formal proof of a superexponential lower bound, which advances the conjecture but does not fully resolve it. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

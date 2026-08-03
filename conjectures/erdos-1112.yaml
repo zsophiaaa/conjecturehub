@@ -15,7 +15,22 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2026-07-25
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-1112-sweep-210450bf
+    asserted_on: 2026-08-03
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-03
+    source:
+      title: "formal-conjectures PR #4636: feat(ErdosProblems): add 1112"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/4636
+      kind: github
+      quote: The problem is resolved - r_k(d₁,d₂) exists iff d₂ ≥ k+1
+    authors:
+      - beetree
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős problem 1112". Classifier rationale: The pull request explicitly declares the conjecture solved with a formal Lean4 proof. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

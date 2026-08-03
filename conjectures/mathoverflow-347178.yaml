@@ -37,7 +37,22 @@ openness_basis:
   meaning: no_published_solution_known_to_curator
   asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: mathoverflow-347178-sweep-72c76138
+    asserted_on: 2026-07-21
+    type: counterexample
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-03
+    source:
+      title: "formal-conjectures: Updated 347178.lean (#4427) Added counterexample for Mathoverflow 347178 The proofs were made with help from Aristotle and GPT-5.5, so they look less nice than I would like, but they close 2 out of th"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/84d73c99d1f5a3a26a9537eae5b6d7792235e1f4
+      kind: github
+      quote: Added counterexample for Mathoverflow 347178
+    authors:
+      - TomasOrtega
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Mathoverflow 347178". Classifier rationale: The commit message explicitly states a counterexample has been added, indicating a claimed disproof. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Mathoverflow/347178.lean
     source: google-deepmind/formal-conjectures

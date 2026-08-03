@@ -15,7 +15,22 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-12-07
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-1110-sweep-95600097
+    asserted_on: 2026-08-03
+    type: reformulation
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-03
+    source:
+      title: "formal-conjectures: feat(Erdos): formalize problem 1110 (#4626) ## Summary - define finite divisibility antichains - define representation by sums of terms `p^k * q^l` - isolate non-representable numbers coprime to `p * "
+      url: https://github.com/google-deepmind/formal-conjectures/commit/9849b4eb5de6928bae4627aa09f42531334ecfb8
+      kind: github
+      quote: state the open coprime infinitude question from Erdős Problem 1110
+    authors:
+      - kernelpanic888
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 1110". Classifier rationale: The document formalizes the problem and notes it remains open, without claiming a proof or disproof. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

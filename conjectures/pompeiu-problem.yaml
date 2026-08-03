@@ -10,7 +10,39 @@ openness_basis:
   meaning: no_solution_known_to_community
   asserted_by: wikipedia
   note: Listed under "Unsolved problems in geometry" on English Wikipedia.
-claims: []
+claims:
+  - id: pompeiu-problem-sweep-f375f777
+    asserted_on: 2026-08-03
+    type: partial
+    scope: the direction that a Euclidean ball fails the Pompeiu property
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-03
+    source:
+      title: "formal-conjectures PR #4436: feat(Wikipedia): the Pompeiu problem"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/4436
+      kind: github
+      quote: "`ball_not_hasPompeiuProperty` (`research solved`) — the classical direction (a ball fails; witnesses are radial Bessel functions)."
+    authors:
+      - him1411
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Pompeiu problem". Classifier rationale: The PR marks the ball‑fails‑property direction as solved, indicating partial progress on the conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: pompeiu-problem-sweep-59f6d03b
+    asserted_on: 2026-08-03
+    type: proved
+    scope: the direction that Euclidean balls fail the Pompeiu property
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-03
+    source:
+      title: "formal-conjectures: feat(Wikipedia): the Pompeiu problem (#4436) Closes #3479. Formalizes the statement of the [Pompeiu problem](https://en.wikipedia.org/wiki/Pompeiu_problem). A bounded domain $\\Omega \\subset \\mathbb{R}"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/fadb320d8249b775de76dfe8320c9dd143822cbf
+      kind: github
+      quote: "`ball_not_hasPompeiuProperty` (`research solved`) — the classical direction (a ball fails; witnesses are radial Bessel functions)."
+    authors:
+      - him1411
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Pompeiu problem". Classifier rationale: The commit states that the ball direction of the Pompeiu conjecture is proved. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q3406234
     source: wikidata

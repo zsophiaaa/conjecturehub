@@ -29,7 +29,22 @@ openness_basis:
   meaning: no_published_solution_known_to_curator
   asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: written-on-the-wall-ii-conjecture-109-sweep-10f13a60
+    asserted_on: 2026-07-26
+    type: counterexample
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-03
+    source:
+      title: "formal-conjectures: feat(WrittenOnTheWallII): disprove Conjecture 109 (#4495) ## Summary - mark Written on the Wall II Conjecture 109 as solved with answer `False` - document the 13-vertex counterexample $\\overline K_7 \\"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/f1b3beeaa52d0e10d0b6443fe45e81d50e504120
+      kind: github
+      quote: mark Written on the Wall II Conjecture 109 as solved with answer `False` - document the 13-vertex counterexample \overline K_7 \vee (K_3 \sqcup K_3)
+    authors:
+      - chelokot
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Written on the Wall II - Conjecture 109". Classifier rationale: The document presents a concrete counterexample that violates the conjectured bound, thereby disproving the conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/WrittenOnTheWallII/GraphConjecture109.lean
     source: google-deepmind/formal-conjectures
