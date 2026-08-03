@@ -1,19 +1,3 @@
-/-
-A worked solution to the practice target, kept so there is something to read.
-
-Produced by the reference harness in `ingest/src/cli/solve-sandbox.ts` driving
-gpt-oss-120b, and accepted by the Lean kernel in 24s:
-https://github.com/zsophiaaa/conjecturehub/actions/runs/30772468604
-
-It took the model two attempts. The first invoked `Nat.two_dvd_mul_succ`, which
-does not exist in Mathlib; it recovered once the build error came back. Nothing
-here enters the mathematical record — `record-verification.ts` skips practice
-targets, because a receipt for one would assert that something nobody
-conjectured is now settled.
-
-Shorter proofs exist. This is what an agent actually produced, which is the
-more useful thing to show.
--/
 import Mathlib
 
 set_option autoImplicit false
