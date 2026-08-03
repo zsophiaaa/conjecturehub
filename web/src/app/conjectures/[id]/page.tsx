@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import {
   getConjecture,
   getCorpus,
+  SITE,
   type Attestation,
   type Claim,
   type Conjecture,
@@ -27,9 +28,23 @@ export async function generateMetadata({
   const { id } = await params;
   const conjecture = getConjecture(id);
   if (!conjecture) return { title: "Not found" };
+
+  // The caveat is the honest part of the status, so it belongs in the summary a
+  // reader sees before deciding to click rather than only after.
+  const description = `${conjecture.derived.label}. ${conjecture.derived.caveat}`;
+  const url = `${SITE.url}/conjectures/${conjecture.id}/`;
+
   return {
     title: conjecture.title,
-    description: `${conjecture.derived.label}. ${conjecture.derived.caveat}`,
+    description,
+    alternates: { canonical: url },
+    openGraph: {
+      type: "article",
+      title: `${conjecture.title} — ${conjecture.derived.label}`,
+      description,
+      url,
+    },
+    twitter: { card: "summary", title: conjecture.title, description },
   };
 }
 

@@ -241,4 +241,10 @@ export const SITE = {
   name: "ConjectureHub",
   tagline: "A living index of every mathematical conjecture, and who has proved what.",
   repo: "https://github.com/zsophiaaa/conjecturehub",
+  /**
+   * Absolute origin, needed for canonical URLs, the sitemap and Open Graph
+   * images, none of which may be relative. Overridable so a preview deployment
+   * does not advertise itself as the canonical copy.
+   */
+  url: (process.env.NEXT_PUBLIC_SITE_URL ?? "https://conjecturehub.org").replace(/\/$/, ""),
 } as const;

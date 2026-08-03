@@ -8,13 +8,30 @@ import { Providers } from "@/components/Providers";
 import { ThemeScript } from "@/components/ThemeScript";
 import { moderationAutoApprove } from "@/lib/moderation-mode";
 
+const DESCRIPTION =
+  "An open, continuously-updated index of mathematical conjectures. Status is recorded as sourced, timestamped claims rather than a solved flag, and Lean proofs are machine-checked.";
+
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE.url),
   title: {
     default: `${SITE.name} — ${SITE.tagline}`,
     template: `%s — ${SITE.name}`,
   },
-  description:
-    "An open, continuously-updated index of mathematical conjectures. Status is recorded as sourced, timestamped claims rather than a solved flag, and Lean proofs are machine-checked.",
+  description: DESCRIPTION,
+  // Without these, a link to a conjecture pasted into Slack or Mastodon renders
+  // as a bare URL, which is most of how anyone would ever share one.
+  openGraph: {
+    type: "website",
+    siteName: SITE.name,
+    title: `${SITE.name} — ${SITE.tagline}`,
+    description: DESCRIPTION,
+    url: SITE.url,
+  },
+  twitter: {
+    card: "summary",
+    title: `${SITE.name} — ${SITE.tagline}`,
+    description: DESCRIPTION,
+  },
 };
 
 const NAV = [
