@@ -83,6 +83,12 @@ jobs:
         env:
           LLM_BASE_URL: ${{ secrets.LLM_BASE_URL }}
           LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
+          # Set whichever one matches the account you have. ANTHROPIC_API_KEY on
+          # its own selects the Anthropic wire format, which is not a base-URL
+          # swap; LLM_PROVIDER only matters if more than one key is present.
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          LLM_PROVIDER: ${{ vars.LLM_PROVIDER || secrets.LLM_PROVIDER }}
           # Neither is sensitive, so a repository variable is the natural home.
           # Granting a token the Variables permission is a separate step from
           # Secrets though, so fall back to a secret of the same name and let
