@@ -5,14 +5,29 @@ aliases:
 ids:
   wikidata: Q57510
   wikipedia: https://en.wikipedia.org/wiki/Fundamental_lemma_(Langlands_program)
-notability:
-  wikipedia_language_editions: 3
-  measured_on: 2026-08-03
 openness_basis:
   meaning: unknown
   asserted_by: wikidata
   note: Identity record only. No statement or status has been ingested for this conjecture yet.
-claims: []
+claims:
+  - id: fundamental-lemma-of-langlands-and-shelstad-sweep-fc50180b
+    asserted_on: 2026-08-03
+    type: partial
+    scope: motivic version
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-03
+    source:
+      title: A motivic Fundamental Lemma
+      url: https://arxiv.org/abs/2308.12195
+      kind: arxiv
+      quote: In this paper we prove motivic versions of the Langlands-Shelstad Fundamental Lemma
+    authors:
+      - Arthur Forey
+      - François Loeser
+      - Dimitri Wyss
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Fundamental lemma". Classifier rationale: The paper claims a proof of a motivic version, not a full resolution of the original conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q57510
     source: wikidata
@@ -21,6 +36,5 @@ provenance:
       - ids.wikidata
       - ids.wikipedia
       - ids.mathworld
-      - notability.wikipedia_language_editions
     license: CC0-1.0
-    retrieved: 2026-08-03
+    retrieved: 2026-07-31

@@ -12,7 +12,35 @@ openness_basis:
   meaning: unknown
   asserted_by: wikidata
   note: Identity record only. No statement or status has been ingested for this conjecture yet.
-claims: []
+claims:
+  - id: mckay-equality-wikipedia-status
+    type: proved
+    evidence_tier: community_accepted
+    attestation: secondary
+    state: active
+    recorded_on: 2026-08-03
+    source:
+      title: McKay equality
+      url: https://en.wikipedia.org/wiki/McKay_conjecture
+      kind: wikipedia
+    notes: Standing taken from English Wikipedia's categorisation (Wikipedia categorises this as proved). Nobody here has read the paper that settled it, which is what the secondary attestation says; replace this claim with one citing that paper when someone has it to hand.
+  - id: mckay-equality-sweep-9765d0de
+    asserted_on: 2026-08-03
+    type: partial
+    scope: p-solvable groups with an A-invariant Sylow p-subgroup
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-03
+    source:
+      title: The McKay conjecture with coprime group automorphisms and the Okuyama-Wajima argument
+      url: https://arxiv.org/abs/2512.13406
+      kind: arxiv
+      quote: if $P$ is an $A$-invariant Sylow $p$-subgroup of $G$ and $G$ is $p$-solvable, then there exists an $A$-equivariant (McKay) bijection between the irreducible characters of degree prime to $p$ of $G$ and those of \textbf{N}_G(P).
+    authors:
+      - Adele Maltempo
+      - Carolina Vallejo
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "McKay conjecture". Classifier rationale: The paper proves a special case of the McKay conjecture, constituting partial progress. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q28401746
     source: wikidata
@@ -23,4 +51,10 @@ provenance:
       - ids.mathworld
       - notability.wikipedia_language_editions
     license: CC0-1.0
+    retrieved: 2026-08-03
+  - url: https://en.wikipedia.org/wiki/McKay_conjecture
+    source: wikipedia
+    fields:
+      - claims
+    license: CC-BY-SA-4.0
     retrieved: 2026-08-03

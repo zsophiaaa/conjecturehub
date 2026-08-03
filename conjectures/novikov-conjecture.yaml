@@ -3,14 +3,27 @@ title: Novikov conjecture
 ids:
   wikidata: Q7064908
   wikipedia: https://en.wikipedia.org/wiki/Novikov_conjecture
-notability:
-  wikipedia_language_editions: 2
-  measured_on: 2026-08-03
 openness_basis:
-  meaning: no_solution_known_to_community
-  asserted_by: wikipedia
-  note: Listed under "Unsolved problems in geometry" on English Wikipedia.
-claims: []
+  meaning: unknown
+  asserted_by: wikidata
+  note: Identity record only. No statement or status has been ingested for this conjecture yet.
+claims:
+  - id: novikov-conjecture-sweep-03904073
+    asserted_on: 2026-08-03
+    type: partial
+    scope: spaces admitting a coarse embedding into Hilbert space
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-03
+    source:
+      title: A groupoid approach to the equivariant coarse Baum--Connes conjecture
+      url: https://arxiv.org/abs/2604.25595
+      kind: arxiv
+      quote: we prove that ... if the space X admits a coarse embedding into Hilbert space ... then the equivariant coarse Novikov conjecture holds for (X, Γ)
+    authors:
+      - Liang Guo
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Novikov conjecture". Classifier rationale: The paper proves the equivariant coarse Novikov conjecture under a specific geometric hypothesis, which is a partial result for the Novikov conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q7064908
     source: wikidata
@@ -19,12 +32,5 @@ provenance:
       - ids.wikidata
       - ids.wikipedia
       - ids.mathworld
-      - notability.wikipedia_language_editions
     license: CC0-1.0
-    retrieved: 2026-08-03
-  - url: https://en.wikipedia.org/wiki/Novikov_conjecture
-    source: wikipedia
-    fields:
-      - openness_basis
-    license: CC-BY-SA-4.0
-    retrieved: 2026-08-03
+    retrieved: 2026-07-31
