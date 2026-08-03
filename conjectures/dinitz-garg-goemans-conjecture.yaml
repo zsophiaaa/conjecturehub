@@ -5,6 +5,9 @@ aliases:
 ids:
   wikidata: Q140738503
   wikipedia: https://en.wikipedia.org/wiki/Dinitz%E2%80%93Garg%E2%80%93Goemans_conjecture
+  external:
+    - label: VibeMathed
+      url: https://vibemathed.com/problem/dinitz-garg-goemans-unsplittable-flow
 notability:
   wikipedia_language_editions: 1
   measured_on: 2026-08-03
@@ -24,3 +27,10 @@ provenance:
       - notability.wikipedia_language_editions
     license: CC0-1.0
     retrieved: 2026-08-03
+  - url: https://vibemathed.com/api/dataset
+    source: vibemathed
+    fields:
+      - ids.external
+    license: CC-BY-4.0
+    retrieved: 2026-08-03
+    upstream_version: 2026-08-03T16:16:11.083Z

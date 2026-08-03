@@ -35,6 +35,8 @@ ids:
       url: https://github.com/mo271/formal-conjectures/blob/ff58c933d53bb807bf85d98a47402703f9f14ed3/FormalConjectures/ErdosProblems/152.lean#L496
     - label: "erdosproblems.com forum #152"
       url: https://www.erdosproblems.com/forum/thread/152
+    - label: VibeMathed
+      url: https://vibemathed.com/problem/erdos-152
 openness_basis:
   meaning: no_published_solution_known_to_curator
   asserted_by: erdosproblems.com
@@ -74,3 +76,10 @@ provenance:
     license: Apache-2.0
     retrieved: 2026-07-31
     upstream_version: d031865128a7ddccd85e8099f0f818211cfc9a41
+  - url: https://vibemathed.com/api/dataset
+    source: vibemathed
+    fields:
+      - ids.external
+    license: CC-BY-4.0
+    retrieved: 2026-08-03
+    upstream_version: 2026-08-03T16:16:11.083Z

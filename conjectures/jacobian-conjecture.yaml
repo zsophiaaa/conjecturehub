@@ -23,6 +23,8 @@ ids:
   external:
     - label: Wikipedia
       url: https://en.wikipedia.org/wiki/Jacobian_conjecture
+    - label: VibeMathed
+      url: https://vibemathed.com/problem/jacobian-conjecture
 notability:
   wikipedia_language_editions: 16
   measured_on: 2026-08-03
@@ -114,3 +116,10 @@ provenance:
       - notability.wikipedia_language_editions
     license: CC0-1.0
     retrieved: 2026-08-03
+  - url: https://vibemathed.com/api/dataset
+    source: vibemathed
+    fields:
+      - ids.external
+    license: CC-BY-4.0
+    retrieved: 2026-08-03
+    upstream_version: 2026-08-03T16:16:11.083Z

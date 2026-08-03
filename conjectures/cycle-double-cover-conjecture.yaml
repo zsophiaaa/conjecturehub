@@ -4,6 +4,9 @@ ids:
   wikidata: Q18217946
   wikipedia: https://en.wikipedia.org/wiki/Cycle_double_cover_conjecture
   mathworld: https://mathworld.wolfram.com/CycleDoubleCoverConjecture.html
+  external:
+    - label: VibeMathed
+      url: https://vibemathed.com/problem/cycle-double-cover-conjecture
 notability:
   wikipedia_language_editions: 1
   measured_on: 2026-08-03
@@ -29,3 +32,10 @@ provenance:
       - openness_basis
     license: CC-BY-SA-4.0
     retrieved: 2026-08-03
+  - url: https://vibemathed.com/api/dataset
+    source: vibemathed
+    fields:
+      - ids.external
+    license: CC-BY-4.0
+    retrieved: 2026-08-03
+    upstream_version: 2026-08-03T16:16:11.083Z

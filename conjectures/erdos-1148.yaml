@@ -38,6 +38,8 @@ ids:
       url: https://www.ulam.ai/research/erdos1148-full.pdf
     - label: "erdosproblems.com forum #1148"
       url: https://www.erdosproblems.com/forum/thread/1148
+    - label: VibeMathed
+      url: https://vibemathed.com/problem/erdos-1148
 openness_basis:
   meaning: no_published_solution_known_to_curator
   asserted_by: erdosproblems.com
@@ -159,3 +161,10 @@ provenance:
       - openness_basis.note
     license: CC0-1.0
     retrieved: 2026-08-02
+  - url: https://vibemathed.com/api/dataset
+    source: vibemathed
+    fields:
+      - ids.external
+    license: CC-BY-4.0
+    retrieved: 2026-08-03
+    upstream_version: 2026-08-03T16:16:11.083Z

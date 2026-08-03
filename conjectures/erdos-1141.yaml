@@ -41,6 +41,8 @@ ids:
       url: https://github.com/yuta0x89/ErdosProblems/blob/a1319f732cdee5140faf47d984e2c451c1184803/Erdos1141.lean
     - label: "erdosproblems.com forum #1141"
       url: https://www.erdosproblems.com/forum/thread/1141
+    - label: VibeMathed
+      url: https://vibemathed.com/problem/erdos-1141
 openness_basis:
   meaning: no_published_solution_known_to_curator
   asserted_by: erdosproblems.com
@@ -91,3 +93,10 @@ provenance:
     license: Apache-2.0
     retrieved: 2026-07-31
     upstream_version: d031865128a7ddccd85e8099f0f818211cfc9a41
+  - url: https://vibemathed.com/api/dataset
+    source: vibemathed
+    fields:
+      - ids.external
+    license: CC-BY-4.0
+    retrieved: 2026-08-03
+    upstream_version: 2026-08-03T16:16:11.083Z

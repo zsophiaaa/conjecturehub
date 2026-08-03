@@ -49,6 +49,8 @@ The seed corpus merges three permissively-licensed sources:
 - [`teorth/erdosproblems`](https://github.com/teorth/erdosproblems) (Apache-2.0) — the Erdős problem database, which already carries crosswalks to Lean and OEIS.
 - [Wikidata](https://www.wikidata.org) (CC0) — canonical QIDs and the alias table. The Collatz conjecture alone has eight names.
 
+Records also link out to the matching entry on [VibeMathed](https://vibemathed.com) (CC BY 4.0), a community-curated record of problems first solved with AI in the loop. The crosswalk carries the link and nothing else — no status, score or verification label of theirs is reproduced here, so where the two sites disagree you are seeing two projects that did the work separately. See [docs/ATTRIBUTIONS.md](docs/ATTRIBUTIONS.md).
+
 The scheduled sweep watches arXiv, Lean Zulip, Mathstodon, Wikipedia, Hacker News and mathematician blogs. It deliberately does not use the X API: as of February 2026 there is no free tier, reads are billed per post, and scraping X is both a permanent-ban offense under its developer terms and the subject of live CFAA litigation. Announcements made on X reliably surface on the free sources within hours anyway.
 
 ## Contributing

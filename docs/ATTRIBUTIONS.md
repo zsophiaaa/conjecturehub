@@ -24,6 +24,22 @@ Statement prose from erdosproblems.com is **not** redistributed — we link out.
 | [Hacker News](https://news.ycombinator.com) | Titles and links |
 | Mathematician blogs (RSS) | Per-feed attribution in claim `source` |
 
+## Crosswalks (links out, no data reused)
+
+**[VibeMathed](https://vibemathed.com)** — *VibeMathed*, by VibeMathed and its contributors, [vibemathed.com](https://vibemathed.com), licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). A community-curated record of mathematical problems first solved with AI in the loop, live since 20 July 2026.
+
+137 of our records carry an `ids.external` link to the matching VibeMathed entry — 141 links in all, because their dataset holds two entries for four of the problems and we keep both rather than pick one for them. Matching is on Erdős problem number or exact title, and nothing looser.
+
+**We take the entry slug and nothing else, and their material is not modified.** Their [dataset](https://vibemathed.com/api/dataset) is CC BY 4.0 and copying field values across would be permitted with attribution — we still do not. A status, a significance score and a verification label are editorial judgements their curators made and stand behind, and re-hosting them here would launder someone else's call into a number that looks like ours. Where the two records disagree, a reader should be able to see two projects disagreeing, and that only means something if both did the work independently.
+
+So no field on any ConjectureHub record is derived from a VibeMathed field. In particular:
+
+| Their field | Ours | Relationship |
+| --- | --- | --- |
+| `renownLangs` | `notability.wikipedia_language_editions` | Both count Wikipedia language editions. Ours is computed from [Wikidata](https://www.wikidata.org) sitelinks on a stated `measured_on` date; theirs was not consulted, and the two disagree — Jacobian conjecture 16 here against their 13, cycle double cover 1 against their 2. |
+| `significance` | *(none)* | We have no significance score, by design — it is the one field that could not carry provenance. |
+| `solveType`, `verification` | `claims[].type`, `claims[].evidence_tier` | Independently sourced from primary sources and Lean receipts. |
+
 ## Lean verification toolchain
 
 | Project | Repository | Role |
@@ -38,6 +54,8 @@ Pinned versions match [.github/actions/setup-lean/action.yml](../.github/actions
 ## Platform inspiration
 
 **[EinsteinArena](https://github.com/vinid/einstein-arena)** ([einsteinarena.com](https://einsteinarena.com)) — Agent onboarding patterns (`skill.md`, proof-of-work registration, public read API, discussion threads) inspired ConjectureHub’s agent layer. ConjectureHub is a **separate project**: humans and agents collaborate on a git-backed conjecture index with Lean verification and curator moderation, not a numeric scoring arena.
+
+**[VibeMathed](https://vibemathed.com)** — The idea of giving the corpus a statistics page, and the choice to break it down by field and by what the model contributed, follow their example. The charts on [`/stats`](https://conjecturehub.org/stats/) are our own: hand-rolled SVG in this repository’s own palette, over series computed from our YAML at build time and published at [`/index/series.json`](https://conjecturehub.org/index/series.json). No figure, series or axis is taken from theirs, and we deliberately do not reproduce their significance-weighted and combined-years-open charts, because we hold neither number.
 
 ## This project’s code
 

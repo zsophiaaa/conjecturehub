@@ -6,6 +6,10 @@ name: Refresh
 #   notability   Wikipedia language-edition counts per conjecture, from Wikidata
 #                sitelinks. Drifts continuously as articles are translated.
 #
+#   crosswalk    Links out to the matching VibeMathed entry. Their dataset is
+#                CC BY 4.0 and we take the slug and nothing else, so this only
+#                ever adds an ids.external link.
+#
 #   wikipedia    Gives a cited basis to records that arrived as bare identities,
 #                and audits the ones we publish as open against Wikipedia's
 #                categories. A status inherited with provenance can still be
@@ -51,6 +55,10 @@ jobs:
 
       - name: Re-check inherited statuses against Wikipedia
         run: npm run enrich:wikipedia
+
+      # Links only. See docs/ATTRIBUTIONS.md for why no field value crosses over.
+      - name: Refresh the VibeMathed crosswalk
+        run: npm run crosswalk:vibemathed
 
       # The serializer is the only thing allowed to write these files, so a
       # difference here means something bypassed it.

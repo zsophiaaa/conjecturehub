@@ -20,6 +20,7 @@
     "sync:erdos-forum": "npm run sync:erdos-forum --workspace ingest",
     "refresh:notability": "npm run refresh:notability --workspace ingest --",
     "enrich:wikipedia": "npm run enrich:wikipedia --workspace ingest --",
+    "crosswalk:vibemathed": "npm run crosswalk:vibemathed --workspace ingest --",
     "file:resolutions": "npm run file:resolutions --workspace ingest --",
     "check:links": "npm run check:links --workspace ingest",
     "selftest": "npm run selftest --workspace ingest",
