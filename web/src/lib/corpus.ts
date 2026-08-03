@@ -152,6 +152,47 @@ export interface Stats {
     aiClaimCount: number;
     machineVerified: boolean;
   }[];
+  claimTotals: {
+    total: number;
+    dated: number;
+    aiAssisted: number;
+    machineVerified: number;
+    disputed: number;
+    retracted: number;
+    priorLiterature: number;
+  };
+}
+
+/**
+ * Chart data, computed in ingest/src/lib/series.ts. Every series carries the
+ * count it plots and the count it had to leave out, and the charts render both:
+ * a reader who cannot see the denominator cannot read the chart.
+ */
+export interface CategorySeries {
+  id: string;
+  title: string;
+  description: string;
+  plotted: number;
+  excluded: number;
+  excludedNote: string | null;
+  data: { key: string; label: string; count: number }[];
+}
+
+export interface CumulativeSeries {
+  id: string;
+  title: string;
+  description: string;
+  plotted: number;
+  excluded: number;
+  excludedNote: string | null;
+  keys: { key: string; label: string; total: number }[];
+  points: { date: string; values: number[] }[];
+}
+
+export interface CorpusSeries {
+  generatedAt: string;
+  categories: CategorySeries[];
+  cumulative: CumulativeSeries[];
 }
 
 const GENERATED = path.join(process.cwd(), ".generated");
@@ -177,6 +218,18 @@ export function getConjecture(id: string): Conjecture | undefined {
 
 export function getStats(): Stats {
   return readGenerated<Stats>("stats.json", "it summarizes the corpus");
+}
+
+export function getSeries(): CorpusSeries {
+  return readGenerated<CorpusSeries>("series.json", "it computes the chart series");
+}
+
+export function findCategory(series: CorpusSeries, id: string): CategorySeries | undefined {
+  return series.categories.find((s) => s.id === id);
+}
+
+export function findCumulative(series: CorpusSeries, id: string): CumulativeSeries | undefined {
+  return series.cumulative.find((s) => s.id === id);
 }
 
 export const SITE = {

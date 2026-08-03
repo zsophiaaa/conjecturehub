@@ -37,6 +37,22 @@
   --ch-selection-bg: #d8d8d4;
   --ch-btn-primary-hover: #000000;
   --ch-btn-primary-fg: #ffffff;
+
+  /*
+   * Chart series. The palette is deliberately desaturated to sit inside the
+   * editorial greys rather than fight them, but every hue still clears 3:1
+   * against the panel it is drawn on, which is the WCAG floor for a graphical
+   * object you are expected to tell apart from its neighbour.
+   *
+   * Colour is never the only channel: every line is labelled at its right-hand
+   * end, so the chart still reads if the hues are indistinguishable.
+   */
+  --ch-series-1: #1c1c1a;
+  --ch-series-2: #9a5426;
+  --ch-series-3: #2f5d8a;
+  --ch-series-4: #4f6b2a;
+  --ch-series-5: #7d3560;
+  --ch-series-6: #6e6e68;
 }
 
 /* Dark */
@@ -55,6 +71,14 @@ html.dark {
   --ch-selection-bg: #3a3a36;
   --ch-btn-primary-hover: #ffffff;
   --ch-btn-primary-fg: #111110;
+
+  /* Same hues lifted for a dark panel; see the light-theme note above. */
+  --ch-series-1: #e8e8e4;
+  --ch-series-2: #e0a077;
+  --ch-series-3: #86b3dd;
+  --ch-series-4: #a9c47c;
+  --ch-series-5: #d99ec2;
+  --ch-series-6: #9a9a92;
 }
 
 html:not(.dark) {

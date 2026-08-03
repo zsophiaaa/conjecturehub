@@ -13,6 +13,7 @@ import {
   forumClaimCount,
   machineVerifiedClaimCount,
 } from "../lib/claim-metrics.js";
+import { buildSeries } from "../lib/series.js";
 import type { Conjecture } from "../types.js";
 
 /**
@@ -23,6 +24,7 @@ import type { Conjecture } from "../types.js";
  *                                       render static pages and serve the API
  *   web/public/index/search.json        compact payload shipped to the browser
  *   web/public/index/agent-benchmark.json  curated set for research agents
+ *   web/public/index/series.json        the numbers behind every chart on /stats
  *
  * Anything the API needs is resolved here rather than at request time: a
  * serverless function only ships the files inside `web/`, so reading
@@ -143,6 +145,23 @@ for (const r of indexable) {
   for (const tag of r.subject?.tags ?? []) byTag[tag] = (byTag[tag] ?? 0) + 1;
 }
 
+const allClaims = indexable.flatMap((r) => r.claims ?? []);
+
+/**
+ * Claim-level counters, as distinct from the record-level ones below. A record
+ * with four AI-assisted claims is one entry in `withAiClaims` and four here,
+ * and the two answer different questions.
+ */
+const claimTotals = {
+  total: allClaims.length,
+  dated: allClaims.filter((c) => c.asserted_on).length,
+  aiAssisted: allClaims.filter((c) => c.ai_assistance?.used === "yes").length,
+  machineVerified: allClaims.filter((c) => c.evidence_tier === "machine_verified").length,
+  disputed: allClaims.filter((c) => c.state === "disputed").length,
+  retracted: allClaims.filter((c) => c.state === "retracted").length,
+  priorLiterature: allClaims.filter((c) => c.type === "resolved_by_prior_literature").length,
+};
+
 const byId = new Map(withStatus.map((r) => [r.id, r]));
 
 const agentBenchmark = benchmarkFile.challenges.map((c) => {
@@ -221,15 +240,20 @@ const stats = {
     })),
   agentBenchmark,
   aiTraceExamples,
+  claimTotals,
 };
+
+const series = buildSeries(indexable);
 
 fs.mkdirSync(GENERATED_DIR, { recursive: true });
 fs.mkdirSync(WEB_INDEX_DIR, { recursive: true });
 
 fs.writeFileSync(path.join(GENERATED_DIR, "corpus.json"), JSON.stringify(withStatus), "utf8");
 fs.writeFileSync(path.join(GENERATED_DIR, "stats.json"), JSON.stringify(stats, null, 2), "utf8");
+fs.writeFileSync(path.join(GENERATED_DIR, "series.json"), JSON.stringify(series, null, 2), "utf8");
 fs.writeFileSync(path.join(WEB_INDEX_DIR, "search.json"), JSON.stringify(search), "utf8");
 fs.writeFileSync(path.join(WEB_INDEX_DIR, "stats.json"), JSON.stringify(stats, null, 2), "utf8");
+fs.writeFileSync(path.join(WEB_INDEX_DIR, "series.json"), JSON.stringify(series, null, 2), "utf8");
 fs.writeFileSync(
   path.join(WEB_INDEX_DIR, "agent-benchmark.json"),
   JSON.stringify(
