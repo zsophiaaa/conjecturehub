@@ -1,4 +1,4 @@
-import { and, desc, eq, gte, sql } from "drizzle-orm";
+import { and, desc, eq, gte, ne, sql } from "drizzle-orm";
 import { db } from "@/db";
 import {
   claimProposals,
@@ -65,6 +65,8 @@ export interface PublicVerifiedProof {
   status: string | null;
   kernelSeconds: number | null;
   logUrl: string | null;
+  /** True when the viewer submitted this, so the UI can offer to withdraw it. */
+  mine: boolean;
 }
 
 /** Approved comments for a conjecture, newest first, rendered to safe HTML. */
@@ -258,6 +260,7 @@ function sameApproach(a: Set<string>, b: Set<string>): boolean {
  */
 export async function getVerifiedProofs(
   conjectureId: string,
+  viewerId?: string | null,
   limit = MAX_VERIFIED_PROOFS,
 ): Promise<PublicVerifiedProof[]> {
   const rows = await db
@@ -275,6 +278,8 @@ export async function getVerifiedProofs(
       and(
         eq(proofProposals.conjectureId, conjectureId),
         eq(verificationJobs.status, "verified"),
+        // Withdrawn submissions are kept for the audit trail, not for display.
+        ne(proofProposals.status, "deleted"),
       ),
     )
     .orderBy(desc(proofProposals.createdAt));
@@ -299,6 +304,7 @@ export async function getVerifiedProofs(
       status: "verified",
       kernelSeconds: row.elapsedSeconds,
       logUrl: row.logUrl,
+      mine: Boolean(viewerId) && row.userId === viewerId,
     };
   });
 }
@@ -314,6 +320,7 @@ export async function getVerifiedProofs(
  */
 export async function getRecentSubmissions(
   conjectureId: string,
+  viewerId?: string | null,
   limit = MAX_SANDBOX_SUBMISSIONS,
 ): Promise<PublicVerifiedProof[]> {
   const rows = await db
@@ -328,7 +335,12 @@ export async function getRecentSubmissions(
     })
     .from(proofProposals)
     .leftJoin(verificationJobs, eq(verificationJobs.proofProposalId, proofProposals.id))
-    .where(eq(proofProposals.conjectureId, conjectureId))
+    .where(
+      and(
+        eq(proofProposals.conjectureId, conjectureId),
+        ne(proofProposals.status, "deleted"),
+      ),
+    )
     .orderBy(desc(proofProposals.createdAt))
     .limit(limit);
 
@@ -344,6 +356,7 @@ export async function getRecentSubmissions(
       status: row.status ?? null,
       kernelSeconds: row.elapsedSeconds,
       logUrl: row.logUrl,
+      mine: Boolean(viewerId) && row.userId === viewerId,
     };
   });
 }

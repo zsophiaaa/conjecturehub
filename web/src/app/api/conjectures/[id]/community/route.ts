@@ -43,7 +43,7 @@ export async function GET(
       getDifficultyAggregate(id),
       getUnverifiedClaimProposals(id, viewerId),
       getUnverifiedProofProposals(id, viewerId),
-      isSandbox ? getRecentSubmissions(id) : getVerifiedProofs(id),
+      isSandbox ? getRecentSubmissions(id, viewerId) : getVerifiedProofs(id, viewerId),
     ]);
 
   let mine: {

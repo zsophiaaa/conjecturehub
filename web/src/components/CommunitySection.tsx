@@ -62,6 +62,7 @@ interface PublicCheckedProof {
   status: string | null;
   kernelSeconds: number | null;
   logUrl: string | null;
+  mine: boolean;
 }
 interface CommunityData {
   comments: PublicComment[];
@@ -196,6 +197,8 @@ export function CommunitySection({ conjectureId }: { conjectureId: string }) {
         <CheckedProofsPanel
           proofs={data.checkedProofs}
           sandbox={Boolean(data.checkedProofsAreSandbox)}
+          canModerate={Boolean(data.canModerate)}
+          onChanged={load}
         />
       ) : null}
 
@@ -421,9 +424,13 @@ function ProposalsPanel({
 function CheckedProofsPanel({
   proofs,
   sandbox,
+  canModerate,
+  onChanged,
 }: {
   proofs: PublicCheckedProof[];
   sandbox: boolean;
+  canModerate: boolean;
+  onChanged: () => void;
 }) {
   return (
     <div className="space-y-3">
@@ -448,6 +455,9 @@ function CheckedProofsPanel({
               <span className="ml-auto text-xs tabular-nums text-ink-faint">
                 {formatDate(p.createdAt)}
               </span>
+              {p.mine || canModerate ? (
+                <DeleteButton kind="proof" id={p.id} own={p.mine} onDeleted={onChanged} />
+              ) : null}
             </div>
             <pre className="mt-2 max-h-96 overflow-auto rounded-lg bg-surface-2 p-3 text-xs text-ink">
               {p.leanBody}
