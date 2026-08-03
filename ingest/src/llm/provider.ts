@@ -71,8 +71,14 @@ export class LlmQuotaExhaustedError extends Error {}
  * burns CI minutes to arrive in the same place.
  */
 function isQuotaExhausted(status: number, body: string): boolean {
-  if (status !== 429 && status !== 402) return false;
-  return /tokens per day|TPD|requests per day|RPD|insufficient_quota|exceeded your current quota|credit balance|billing/i.test(
+  // 400 is included because Anthropic reports an exhausted credit balance as an
+  // invalid_request_error rather than as a rate limit. The pattern is specific
+  // enough that an ordinary 400 will not match.
+  if (status !== 429 && status !== 402 && status !== 400) return false;
+  // Must be precise about the *day*. Groq appends "Upgrade to Dev Tier today at
+  // .../settings/billing" to every rate-limit message including the per-minute
+  // ones, so matching "billing" reads a nine-second throttle as the day ending.
+  return /tokens per day|requests per day|\bTPD\b|\bRPD\b|insufficient_quota|exceeded your current quota|credit balance is too low/i.test(
     body,
   );
 }
