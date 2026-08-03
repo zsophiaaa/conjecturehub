@@ -7,9 +7,9 @@ notability:
   wikipedia_language_editions: 1
   measured_on: 2026-08-03
 openness_basis:
-  meaning: unknown
-  asserted_by: wikidata
-  note: Identity record only. No statement or status has been ingested for this conjecture yet.
+  meaning: no_solution_known_to_community
+  asserted_by: wikipedia
+  note: Listed under "Unsolved problems in geometry" on English Wikipedia.
 claims: []
 provenance:
   - url: https://www.wikidata.org/wiki/Q5507488
@@ -21,4 +21,10 @@ provenance:
       - ids.mathworld
       - notability.wikipedia_language_editions
     license: CC0-1.0
+    retrieved: 2026-08-03
+  - url: https://en.wikipedia.org/wiki/Fujita_conjecture
+    source: wikipedia
+    fields:
+      - openness_basis
+    license: CC-BY-SA-4.0
     retrieved: 2026-08-03

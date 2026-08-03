@@ -291,7 +291,7 @@ export function buildSeries(records: Conjecture[]): CorpusSeries {
     id: "notability-open",
     title: "Open problems that escaped their specialty",
     description:
-      "Wikipedia language editions carrying an article on each still-open problem, counted from Wikidata sitelinks. A count of reach, not of importance: nobody translates an article because a problem is hard, and plenty of deep problems appear here with a single-digit count or none at all. Open means the curator we cite records no solution, which is a weaker claim than no solution existing — Riemann and Hodge are missing because they reached us as bare Wikidata identity records and we have not established a basis for them.",
+      "Wikipedia language editions carrying an article on each still-open problem, counted from Wikidata sitelinks. A count of reach, not of importance: nobody translates an article because a problem is hard, and plenty of deep problems appear here with a single-digit count or none at all. Open means the curator we cite records no solution, which is a weaker claim than no solution existing, and records that reached us as bare identities with no stated basis are left out entirely rather than counted as open by default.",
     plotted: Math.min(openMeasured.length, 15),
     excluded: records.length - Math.min(openMeasured.length, 15),
     excludedNote: `Showing the top 15 of ${openMeasured.length} open problems with a measured count. ${records.length - measured.length} of ${records.length} records carry no Wikidata identifier, so no count could be taken, and a further ${measured.length - stated.length} are identity-only stubs whose status we have not established.`,
