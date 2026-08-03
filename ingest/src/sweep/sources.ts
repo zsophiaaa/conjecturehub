@@ -1,6 +1,6 @@
 import crypto from "node:crypto";
 import { XMLParser } from "fast-xml-parser";
-import { fetchJson, fetchText } from "../lib/http.js";
+import { fetchJson, fetchText, USER_AGENT } from "../lib/http.js";
 import type { Candidate } from "./types.js";
 
 /**
@@ -223,6 +223,16 @@ export const BLOG_FEEDS: { url: string; label: string }[] = [
   { url: "https://golem.ph.utexas.edu/category/atom10.xml", label: "The n-Category Café" },
 ];
 
+/**
+ * Lab announcements. The October 2025 episode and the August 2026 ten-proofs
+ * post both broke here first, so the primary announcement is worth reading
+ * directly rather than waiting for it to reach a blog that covers it.
+ */
+export const LAB_FEEDS: { url: string; label: string }[] = [
+  { url: "https://openai.com/news/rss.xml", label: "OpenAI news" },
+  { url: "https://deepmind.google/blog/rss.xml", label: "Google DeepMind blog" },
+];
+
 export async function fetchFeed(feed: { url: string; label: string }): Promise<Candidate[]> {
   const xml = await fetchText(feed.url, { ttl: 1800 });
   const doc = parser.parse(xml) as Record<string, any>;
@@ -297,36 +307,330 @@ export async function fetchLeanZulip(env: NodeJS.ProcessEnv = process.env): Prom
   }));
 }
 
+// ---------------------------------------------------------------- GitHub
+
+export interface RepoWatch {
+  repo: string;
+  label: string;
+  /** Restricts the commit listing to one subtree; the API takes a single path. */
+  path?: string;
+}
+
+/**
+ * The upstream catalogues we seed from are git repositories, and a commit or a
+ * pull request that flips a problem from open to solved is the highest-precision
+ * signal available anywhere: it is a specific person editing a specific record,
+ * with a diff attached, rather than a headline that might be about something
+ * else entirely.
+ *
+ * Seeding pins formal-conjectures to a tagged release, because formalizations
+ * stop compiling within months. Watching is a different job with a different
+ * trade-off, so this reads the moving head instead.
+ *
+ * Unauthenticated the GitHub API allows 60 requests an hour, which two watches
+ * at four requests a run fit inside comfortably. GITHUB_TOKEN raises it to
+ * 5,000 and is present by default inside Actions.
+ */
+export async function fetchGitHubActivity(
+  watch: RepoWatch,
+  env: NodeJS.ProcessEnv = process.env,
+): Promise<Candidate[]> {
+  const token = env.GITHUB_TOKEN ?? env.GH_TOKEN;
+  const headers: Record<string, string> = {
+    accept: "application/vnd.github+json",
+    "x-github-api-version": "2022-11-28",
+  };
+  if (token) headers.authorization = `Bearer ${token}`;
+
+  const out: Candidate[] = [];
+
+  const pulls = await fetchJson<
+    {
+      number: number;
+      title: string;
+      body: string | null;
+      html_url: string;
+      updated_at: string;
+      merged_at: string | null;
+      state: string;
+      user: { login: string } | null;
+    }[]
+  >(
+    `https://api.github.com/repos/${watch.repo}/pulls?state=all&sort=updated&direction=desc&per_page=50`,
+    { ttl: 900, headers },
+  );
+
+  for (const pull of pulls) {
+    out.push({
+      key: `github:${watch.repo}:pr:${pull.number}:${pull.updated_at.slice(0, 10)}`,
+      kind: "github",
+      url: pull.html_url,
+      title: `${watch.label} PR #${pull.number}: ${stripHtml(pull.title)}`,
+      // Whether it merged decides how much the pull request is worth, so say so
+      // in the text the classifier reads rather than leaving it to infer.
+      text: [
+        `Pull request #${pull.number} against ${watch.repo}, currently ${pull.state}`,
+        pull.merged_at ? `and merged on ${pull.merged_at.slice(0, 10)}` : "and not merged",
+        `. ${stripHtml(pull.title)}. ${stripHtml(pull.body ?? "")}`,
+      ]
+        .join(" ")
+        .slice(0, 4000),
+      authors: pull.user ? [pull.user.login] : [],
+      published: (pull.merged_at ?? pull.updated_at).slice(0, 10),
+      origin: `${watch.label} pull requests`,
+    });
+  }
+
+  const commitUrl =
+    `https://api.github.com/repos/${watch.repo}/commits?per_page=50` +
+    (watch.path ? `&path=${encodeURIComponent(watch.path)}` : "");
+
+  const commits = await fetchJson<
+    {
+      sha: string;
+      html_url: string;
+      commit: { message: string; author: { name: string; date: string } | null };
+      author: { login: string } | null;
+    }[]
+  >(commitUrl, { ttl: 900, headers });
+
+  for (const commit of commits) {
+    const message = stripHtml(commit.commit.message);
+    out.push({
+      key: `github:${watch.repo}:commit:${commit.sha}`,
+      kind: "github",
+      url: commit.html_url,
+      title: `${watch.label}: ${message.split("\n")[0]!.slice(0, 200)}`,
+      text: `Commit to ${watch.repo}${watch.path ? ` touching ${watch.path}` : ""}. ${message}`.slice(0, 4000),
+      authors: [commit.author?.login ?? commit.commit.author?.name ?? ""].filter(Boolean),
+      published: commit.commit.author?.date?.slice(0, 10) ?? null,
+      origin: `${watch.label} commits`,
+    });
+  }
+
+  return out;
+}
+
+export const REPO_WATCHES: RepoWatch[] = [
+  {
+    repo: "google-deepmind/formal-conjectures",
+    label: "formal-conjectures",
+    path: "FormalConjectures",
+  },
+  { repo: "teorth/erdosproblems", label: "erdosproblems", path: "data/problems.yaml" },
+];
+
+// ---------------------------------------------------------- MathOverflow
+
+/**
+ * MathOverflow is where a research mathematician asks whether a claimed proof
+ * holds up, and the answer often lands there before it lands anywhere citable.
+ * The Stack Exchange API is free and needs no key below 300 requests a day.
+ */
+export async function fetchMathOverflow(): Promise<Candidate[]> {
+  const tags = ["open-problem", "conjectures"];
+  const out: Candidate[] = [];
+
+  for (const tag of tags) {
+    const url =
+      "https://api.stackexchange.com/2.3/questions" +
+      `?site=mathoverflow.net&order=desc&sort=activity&tagged=${encodeURIComponent(tag)}` +
+      "&pagesize=50&filter=withbody";
+
+    const data = await fetchJson<{
+      items?: {
+        question_id: number;
+        title: string;
+        body?: string;
+        link: string;
+        last_activity_date: number;
+        is_answered: boolean;
+        accepted_answer_id?: number;
+        owner?: { display_name?: string };
+      }[];
+    }>(url, { ttl: 1800 });
+
+    for (const item of data.items ?? []) {
+      out.push({
+        key: `mathoverflow:${item.question_id}:${new Date(item.last_activity_date * 1000).toISOString().slice(0, 10)}`,
+        kind: "mathoverflow",
+        url: item.link,
+        title: stripHtml(item.title),
+        text: [
+          stripHtml(item.title),
+          item.accepted_answer_id ? "This question has an accepted answer." : "",
+          stripHtml(item.body ?? ""),
+        ]
+          .filter(Boolean)
+          .join(" ")
+          .slice(0, 4000),
+        authors: item.owner?.display_name ? [item.owner.display_name] : [],
+        published: new Date(item.last_activity_date * 1000).toISOString().slice(0, 10),
+        origin: `MathOverflow [${tag}]`,
+      });
+    }
+  }
+
+  return out;
+}
+
+// ---------------------------------------------------------------- Reddit
+
+/**
+ * r/math surfaces a claimed resolution within hours, and its comments usually
+ * carry the first informed scepticism about it.
+ *
+ * The unauthenticated .json endpoints answer 403 to a server, and have done
+ * since Reddit closed off free API access in 2023. A browser user agent gets
+ * through, which is exactly why we do not send one: presenting as something we
+ * are not to evade an access control is the same objection that keeps X out of
+ * this file. So this source uses the documented OAuth application flow and
+ * stays switched off until credentials exist, rather than failing every run.
+ */
+export async function fetchReddit(env: NodeJS.ProcessEnv = process.env): Promise<Candidate[]> {
+  const clientId = env.REDDIT_CLIENT_ID;
+  const clientSecret = env.REDDIT_CLIENT_SECRET;
+  if (!clientId || !clientSecret) return [];
+
+  const auth = Buffer.from(`${clientId}:${clientSecret}`).toString("base64");
+  const tokenRes = await fetch("https://www.reddit.com/api/v1/access_token", {
+    method: "POST",
+    headers: {
+      authorization: `Basic ${auth}`,
+      "content-type": "application/x-www-form-urlencoded",
+      "user-agent": USER_AGENT,
+    },
+    body: "grant_type=client_credentials",
+  });
+  if (!tokenRes.ok) throw new Error(`Reddit token exchange failed: HTTP ${tokenRes.status}`);
+  const { access_token: token } = (await tokenRes.json()) as { access_token?: string };
+  if (!token) throw new Error("Reddit token exchange returned no access_token");
+
+  const url =
+    "https://oauth.reddit.com/r/math/search" +
+    "?q=conjecture+OR+proved+OR+disproved+OR+counterexample&restrict_sr=1&sort=new&t=month&limit=75";
+
+  const data = await fetchJson<{
+    data?: {
+      children?: {
+        data: {
+          id: string;
+          title: string;
+          selftext: string;
+          permalink: string;
+          created_utc: number;
+          author: string;
+        };
+      }[];
+    };
+  }>(url, { ttl: 1800, headers: { authorization: `Bearer ${token}` } });
+
+  return (data.data?.children ?? []).map(({ data: post }) => ({
+    key: `reddit:${post.id}`,
+    kind: "reddit" as const,
+    url: `https://www.reddit.com${post.permalink}`,
+    title: stripHtml(post.title),
+    text: stripHtml(`${post.title} ${post.selftext ?? ""}`).slice(0, 4000),
+    authors: post.author ? [post.author] : [],
+    published: new Date(post.created_utc * 1000).toISOString().slice(0, 10),
+    origin: "r/math",
+  }));
+}
+
 // ------------------------------------------------------------ orchestrate
 
+export interface SourceContext {
+  env: NodeJS.ProcessEnv;
+  windowDays: number;
+}
+
+/**
+ * One watched source. Registering a source rather than appending to an inline
+ * task list buys two things the flat version could not: a stable `id` to report
+ * health against, and an explicit `unavailable` check so a source that is
+ * switched off for want of credentials is reported as configured-off rather
+ * than silently returning nothing and looking healthy.
+ */
+export interface SweepSource {
+  id: string;
+  label: string;
+  /** Returns why the source cannot run, or null when it can. */
+  unavailable?: (ctx: SourceContext) => string | null;
+  run: (ctx: SourceContext) => Promise<Candidate[]>;
+}
+
 export interface SourceResult {
+  id: string;
   origin: string;
   candidates: Candidate[];
   error?: string;
+  /** Set when the source was deliberately not run. */
+  skipped?: string;
 }
 
-/** Runs every source, isolating failures so one dead feed cannot kill the sweep. */
-export async function fetchAllSources(): Promise<SourceResult[]> {
-  const tasks: { origin: string; run: () => Promise<Candidate[]> }[] = [
-    { origin: "arXiv", run: fetchArxiv },
-    { origin: "Hacker News", run: fetchHackerNews },
-    { origin: "Mathstodon", run: fetchMathstodon },
-    { origin: "Wikipedia", run: fetchWikipediaEdits },
-    { origin: "Lean Zulip", run: () => fetchLeanZulip() },
-    ...BLOG_FEEDS.map((feed) => ({ origin: feed.label, run: () => fetchFeed(feed) })),
-  ];
+export const SOURCES: SweepSource[] = [
+  { id: "arxiv", label: "arXiv", run: () => fetchArxiv() },
+  { id: "hackernews", label: "Hacker News", run: () => fetchHackerNews() },
+  { id: "mathstodon", label: "Mathstodon", run: () => fetchMathstodon() },
+  { id: "mathoverflow", label: "MathOverflow", run: () => fetchMathOverflow() },
+  {
+    id: "reddit",
+    label: "r/math",
+    unavailable: (ctx) =>
+      ctx.env.REDDIT_CLIENT_ID && ctx.env.REDDIT_CLIENT_SECRET
+        ? null
+        : "REDDIT_CLIENT_ID and REDDIT_CLIENT_SECRET are not set",
+    run: (ctx) => fetchReddit(ctx.env),
+  },
+  {
+    id: "wikipedia",
+    label: "Wikipedia",
+    run: (ctx) => fetchWikipediaEdits(Math.min(ctx.windowDays, 14)),
+  },
+  {
+    id: "zulip",
+    label: "Lean Zulip",
+    unavailable: (ctx) =>
+      ctx.env.ZULIP_EMAIL && ctx.env.ZULIP_API_KEY
+        ? null
+        : "ZULIP_EMAIL and ZULIP_API_KEY are not set",
+    run: (ctx) => fetchLeanZulip(ctx.env),
+  },
+  ...REPO_WATCHES.map((watch) => ({
+    id: `github:${watch.repo}`,
+    label: watch.label,
+    run: (ctx: SourceContext) => fetchGitHubActivity(watch, ctx.env),
+  })),
+  ...[...BLOG_FEEDS, ...LAB_FEEDS].map((feed) => ({
+    id: `feed:${new URL(feed.url).host}`,
+    label: feed.label,
+    run: () => fetchFeed(feed),
+  })),
+];
 
+/** Runs every source, isolating failures so one dead feed cannot kill the sweep. */
+export async function fetchAllSources(
+  ctx: SourceContext = { env: process.env, windowDays: 14 },
+): Promise<SourceResult[]> {
   const results: SourceResult[] = [];
-  for (const task of tasks) {
+
+  for (const source of SOURCES) {
+    const reason = source.unavailable?.(ctx) ?? null;
+    if (reason) {
+      results.push({ id: source.id, origin: source.label, candidates: [], skipped: reason });
+      continue;
+    }
     try {
-      results.push({ origin: task.origin, candidates: await task.run() });
+      results.push({ id: source.id, origin: source.label, candidates: await source.run(ctx) });
     } catch (error) {
       results.push({
-        origin: task.origin,
+        id: source.id,
+        origin: source.label,
         candidates: [],
         error: (error as Error).message,
       });
     }
   }
+
   return results;
 }

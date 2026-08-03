@@ -4,16 +4,36 @@ name: Sweep
 # unverified claims. Merging that pull request is the review step -- nothing
 # here changes a conjecture's status on its own.
 #
+# Two phases on two schedules, sharing a queue in the Actions cache:
+#
+#   watch     hourly. Fetches every source, drops what we have already seen,
+#             matches the rest to conjectures by name and enqueues. No model
+#             calls, so an extra run costs nothing but Actions minutes.
+#
+#   classify  every three hours. Drains the front of the queue through the
+#             classifier under a budget, writes claims and opens the pull
+#             request.
+#
+# Splitting them cut detection latency from six hours to one without changing
+# what we spend on the classifier, which is the part that actually costs money.
+#
 # This runs in Actions rather than on Vercel because the Vercel Hobby plan caps
 # cron at once per day, while Actions minutes are free and unmetered on public
 # repositories.
 on:
   schedule:
-    # Every six hours, offset off the hour to avoid the scheduler's peak, where
-    # jobs are routinely delayed or dropped.
-    - cron: "17 */6 * * *"
+    # Offset off the hour to avoid the scheduler's peak, where jobs are
+    # routinely delayed or dropped.
+    - cron: "17 * * * *"
+    - cron: "47 */3 * * *"
   workflow_dispatch:
     inputs:
+      phase:
+        description: Which phase to run
+        required: false
+        default: both
+        type: choice
+        options: [both, watch, classify]
       window_days:
         description: How many days back to consider
         required: false
@@ -27,6 +47,8 @@ permissions:
   contents: write
   pull-requests: write
 
+# The two phases share one cache lineage and one queue file, so they must never
+# run concurrently.
 concurrency:
   group: sweep
   cancel-in-progress: false
@@ -34,6 +56,8 @@ concurrency:
 jobs:
   sweep:
     runs-on: ubuntu-latest
+    env:
+      PHASE: ${{ inputs.phase || (github.event.schedule == '47 */3 * * *' && 'classify' || 'watch') }}
     steps:
       - uses: actions/checkout@v5
 
@@ -45,7 +69,8 @@ jobs:
       - run: npm ci
 
       # Remembering what we have already looked at is what keeps the classifier
-      # budget from being spent re-reading the same arXiv listing every run.
+      # budget from being spent re-reading the same arXiv listing every run, and
+      # it is how the watch phase hands work to the classify phase.
       - name: Restore sweep memory
         uses: actions/cache/restore@v5
         with:
@@ -67,13 +92,21 @@ jobs:
           LLM_MIN_INTERVAL_MS: ${{ vars.LLM_MIN_INTERVAL_MS || secrets.LLM_MIN_INTERVAL_MS }}
           ZULIP_EMAIL: ${{ secrets.ZULIP_EMAIL }}
           ZULIP_API_KEY: ${{ secrets.ZULIP_API_KEY }}
+          REDDIT_CLIENT_ID: ${{ secrets.REDDIT_CLIENT_ID }}
+          REDDIT_CLIENT_SECRET: ${{ secrets.REDDIT_CLIENT_SECRET }}
+          # Lifts the GitHub API from 60 requests an hour to 5,000, which the
+          # formal-conjectures and erdosproblems watches need at this cadence.
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          npx tsx ingest/src/cli/sweep.ts \
-            --write \
-            --window "${{ inputs.window_days || '14' }}" \
-            --budget "${{ inputs.budget || '60' }}" \
-            --pr-body /tmp/pr-body.md \
-            --report /tmp/sweep-report.json
+          set -euo pipefail
+          ARGS=(--phase "$PHASE"
+                --window "${{ inputs.window_days || '14' }}"
+                --budget "${{ inputs.budget || '60' }}"
+                --report /tmp/sweep-report.json)
+          if [ "$PHASE" != "watch" ]; then
+            ARGS+=(--write --pr-body /tmp/pr-body.md)
+          fi
+          npx tsx ingest/src/cli/sweep.ts "${ARGS[@]}"
 
       - name: Save sweep memory
         if: always()
@@ -85,11 +118,11 @@ jobs:
       # A pull request opened with GITHUB_TOKEN does not trigger other
       # workflows, so Validate will not run on it. Validate here instead.
       - name: Validate what the sweep wrote
-        if: steps.sweep.outputs.written != '0'
+        if: env.PHASE != 'watch' && steps.sweep.outputs.written != '0'
         run: npm run validate
 
       - name: Open or update the pull request
-        if: steps.sweep.outputs.written != '0'
+        if: env.PHASE != 'watch' && steps.sweep.outputs.written != '0'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
@@ -121,7 +154,7 @@ jobs:
         if: always()
         uses: actions/upload-artifact@v6
         with:
-          name: sweep-report
+          name: sweep-report-${{ env.PHASE }}-${{ github.run_id }}
           path: /tmp/sweep-report.json
           if-no-files-found: ignore
           retention-days: 14
