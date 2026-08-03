@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://conjecturehub.org/schema/conjecture.schema.json",
+  "$id": "https://conjecture-hub-test.vercel.app/schema/conjecture.schema.json",
   "title": "Conjecture record",
   "description": "One mathematical conjecture. There is deliberately no `solved` boolean and no single `status` field: status is derived at build time from the append-only `claims` list. See docs/DATA-MODEL.md.",
   "type": "object",

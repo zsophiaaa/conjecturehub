@@ -246,11 +246,12 @@ export const SITE = {
    * cards, none of which may be relative.
    *
    * Resolution order matters more than it looks: a canonical URL pointing at a
-   * domain that does not resolve is worse than having none at all, so the
-   * fallback is the deployment that actually answers rather than the name we
-   * would like to use. Set NEXT_PUBLIC_SITE_URL once a domain is live.
+   * domain that does not resolve is worse than having none at all. The Vercel
+   * deployment is the real home of this site, not a placeholder for a custom
+   * domain — conjecturehub.org was never registered and is not planned.
    * VERCEL_PROJECT_PRODUCTION_URL is supplied at build time and keeps preview
-   * deployments from advertising themselves as canonical.
+   * deployments from advertising themselves as canonical; NEXT_PUBLIC_SITE_URL
+   * is there for forks and for anyone who does put this behind their own name.
    */
   url: (
     process.env.NEXT_PUBLIC_SITE_URL ||

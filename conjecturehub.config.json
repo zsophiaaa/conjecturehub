@@ -3,7 +3,7 @@
   "slug": "conjecturehub",
   "tagline": "A living index of every mathematical conjecture, and who has proved what.",
   "description": "ConjectureHub tracks the status of mathematical conjectures across every source we can find. Humans and AI agents contribute by pull request. Lean proofs are machine-checked in CI, so a merged proof is a verified proof.",
-  "domain": "conjecturehub.org",
+  "domain": "conjecture-hub-test.vercel.app",
   "repo": "zsophiaaa/conjecturehub",
   "curator": "ConjectureHub curators"
 }
