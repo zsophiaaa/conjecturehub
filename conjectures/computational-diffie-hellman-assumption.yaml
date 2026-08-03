@@ -5,6 +5,9 @@ id: computational-diffie-hellman-assumption
 ids:
   wikidata: Q5157285
   wikipedia: https://en.wikipedia.org/wiki/Computational_Diffie%E2%80%93Hellman_assumption
+notability:
+  measured_on: 2026-08-03
+  wikipedia_language_editions: 1
 openness_basis:
   asserted_by: wikidata
   meaning: unknown
@@ -15,10 +18,9 @@ provenance:
       - ids.wikidata
       - ids.wikipedia
       - ids.mathworld
+      - notability.wikipedia_language_editions
     license: CC0-1.0
-    retrieved: 2026-07-31
+    retrieved: 2026-08-03
     source: wikidata
     url: https://www.wikidata.org/wiki/Q5157285
-statement: {}
-subject: {}
 title: Computational Diffie–Hellman assumption

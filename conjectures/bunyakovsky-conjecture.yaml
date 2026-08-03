@@ -10,6 +10,9 @@ ids:
   mathworld: https://mathworld.wolfram.com/BouniakowskyConjecture.html
   wikidata: Q1139180
   wikipedia: https://en.wikipedia.org/wiki/Bunyakovsky_conjecture
+notability:
+  measured_on: 2026-08-03
+  wikipedia_language_editions: 12
 openness_basis:
   asserted_by: google-deepmind/formal-conjectures
   meaning: no_published_solution_known_to_curator
@@ -31,8 +34,9 @@ provenance:
       - ids.wikidata
       - ids.wikipedia
       - ids.mathworld
+      - notability.wikipedia_language_editions
     license: CC0-1.0
-    retrieved: 2026-07-31
+    retrieved: 2026-08-03
     source: wikidata
     url: https://www.wikidata.org/wiki/Q1139180
 statement:

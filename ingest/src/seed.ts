@@ -342,12 +342,23 @@ function buildFromWikidata(
 
   for (const item of items) {
     const provenance: Provenance = {
-      fields: ["aliases", "ids.wikidata", "ids.wikipedia", "ids.mathworld"],
+      fields: [
+        "aliases",
+        "ids.wikidata",
+        "ids.wikipedia",
+        "ids.mathworld",
+        "notability.wikipedia_language_editions",
+      ],
       source: "wikidata",
       url: `https://www.wikidata.org/wiki/${item.qid}`,
       license: wikidata.LICENSE,
       retrieved: today(),
       upstream_version: null,
+    };
+
+    const notability = {
+      wikipedia_language_editions: item.wikipediaLanguageEditions,
+      measured_on: today(),
     };
 
     const candidates = [item.label, ...item.aliases];
@@ -358,6 +369,7 @@ function buildFromWikidata(
       existing.ids!.wikidata = item.qid;
       existing.ids!.wikipedia ??= item.wikipedia;
       existing.ids!.mathworld ??= item.mathworld;
+      existing.notability = notability;
       existing.aliases = [
         ...new Set([
           ...(existing.aliases ?? []),
@@ -382,6 +394,7 @@ function buildFromWikidata(
           oeis: [],
           arxiv: [],
         },
+        notability,
         openness_basis: {
           meaning: "unknown",
           asserted_by: "wikidata",

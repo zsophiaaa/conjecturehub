@@ -3,6 +3,9 @@ id: erdos-distinct-distances-problem
 ids:
   wikidata: Q3406261
   wikipedia: https://en.wikipedia.org/wiki/Erd%C5%91s_distinct_distances_problem
+notability:
+  measured_on: 2026-08-03
+  wikipedia_language_editions: 6
 openness_basis:
   asserted_by: wikidata
   meaning: unknown
@@ -13,10 +16,9 @@ provenance:
       - ids.wikidata
       - ids.wikipedia
       - ids.mathworld
+      - notability.wikipedia_language_editions
     license: CC0-1.0
-    retrieved: 2026-07-31
+    retrieved: 2026-08-03
     source: wikidata
     url: https://www.wikidata.org/wiki/Q3406261
-statement: {}
-subject: {}
 title: Erdős distinct distances problem

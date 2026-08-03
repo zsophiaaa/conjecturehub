@@ -8,6 +8,9 @@ id: kahn-kalai-conjecture
 ids:
   wikidata: Q111724047
   wikipedia: https://en.wikipedia.org/wiki/Kahn%E2%80%93Kalai_conjecture
+notability:
+  measured_on: 2026-08-03
+  wikipedia_language_editions: 4
 openness_basis:
   asserted_by: wikidata
   meaning: unknown
@@ -18,10 +21,9 @@ provenance:
       - ids.wikidata
       - ids.wikipedia
       - ids.mathworld
+      - notability.wikipedia_language_editions
     license: CC0-1.0
-    retrieved: 2026-07-31
+    retrieved: 2026-08-03
     source: wikidata
     url: https://www.wikidata.org/wiki/Q111724047
-statement: {}
-subject: {}
 title: Kahn–Kalai conjecture

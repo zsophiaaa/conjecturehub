@@ -4,6 +4,9 @@ ids:
   mathworld: https://mathworld.wolfram.com/Erdos-StrausConjecture.html
   wikidata: Q1349651
   wikipedia: https://en.wikipedia.org/wiki/Erd%C5%91s%E2%80%93Straus_conjecture
+notability:
+  measured_on: 2026-08-03
+  wikipedia_language_editions: 17
 openness_basis:
   asserted_by: wikidata
   meaning: unknown
@@ -14,10 +17,9 @@ provenance:
       - ids.wikidata
       - ids.wikipedia
       - ids.mathworld
+      - notability.wikipedia_language_editions
     license: CC0-1.0
-    retrieved: 2026-07-31
+    retrieved: 2026-08-03
     source: wikidata
     url: https://www.wikidata.org/wiki/Q1349651
-statement: {}
-subject: {}
 title: Erdős–Straus conjecture

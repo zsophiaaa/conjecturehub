@@ -140,6 +140,20 @@
       },
       "default": {}
     },
+    "notability": {
+      "type": "object",
+      "description": "How widely known the problem is, measured rather than judged. Deliberately not a significance or importance score: those cannot cite a source, and every other field here can. Absent when the record has no Wikidata QID to measure against, which is most of them.",
+      "additionalProperties": false,
+      "properties": {
+        "wikipedia_language_editions": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Wikipedia language editions carrying a dedicated article, counted from Wikidata sitelinks. Goldbach's conjecture scores 58; a specialist conjecture scores 0. A low score means obscure, not unimportant."
+        },
+        "measured_on": { "type": "string", "format": "date" }
+      },
+      "required": ["wikipedia_language_editions", "measured_on"]
+    },
     "openness_basis": {
       "type": "object",
       "description": "Why we believe this is open, and on whose authority. In October 2025 an AI lab announced ten solved Erdős problems that were in fact already solved in the literature; the curator's own definition of 'open' was 'I am personally unaware of a paper solving this'. This field makes that caveat structural instead of a footnote.",
@@ -255,6 +269,7 @@
                 "mathoverflow",
                 "forum",
                 "reddit",
+                "github",
                 "dataset",
                 "manual"
               ]

@@ -2,6 +2,9 @@ claims: []
 id: aharoni-korman-conjecture
 ids:
   wikidata: Q131679304
+notability:
+  measured_on: 2026-08-03
+  wikipedia_language_editions: 0
 openness_basis:
   asserted_by: wikidata
   meaning: unknown
@@ -12,10 +15,9 @@ provenance:
       - ids.wikidata
       - ids.wikipedia
       - ids.mathworld
+      - notability.wikipedia_language_editions
     license: CC0-1.0
-    retrieved: 2026-07-31
+    retrieved: 2026-08-03
     source: wikidata
     url: https://www.wikidata.org/wiki/Q131679304
-statement: {}
-subject: {}
 title: Aharoni-Korman conjecture

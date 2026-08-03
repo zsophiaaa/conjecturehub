@@ -3,6 +3,9 @@ id: prime-power-conjecture
 ids:
   mathworld: https://mathworld.wolfram.com/PrimePowerConjecture.html
   wikidata: Q131465796
+notability:
+  measured_on: 2026-08-03
+  wikipedia_language_editions: 0
 openness_basis:
   asserted_by: wikidata
   meaning: unknown
@@ -13,10 +16,9 @@ provenance:
       - ids.wikidata
       - ids.wikipedia
       - ids.mathworld
+      - notability.wikipedia_language_editions
     license: CC0-1.0
-    retrieved: 2026-07-31
+    retrieved: 2026-08-03
     source: wikidata
     url: https://www.wikidata.org/wiki/Q131465796
-statement: {}
-subject: {}
 title: prime power conjecture

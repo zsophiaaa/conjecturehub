@@ -7,6 +7,9 @@ id: goldbach-s-weak-conjecture
 ids:
   wikidata: Q2272638
   wikipedia: https://en.wikipedia.org/wiki/Goldbach%27s_weak_conjecture
+notability:
+  measured_on: 2026-08-03
+  wikipedia_language_editions: 24
 openness_basis:
   asserted_by: wikidata
   meaning: unknown
@@ -17,10 +20,9 @@ provenance:
       - ids.wikidata
       - ids.wikipedia
       - ids.mathworld
+      - notability.wikipedia_language_editions
     license: CC0-1.0
-    retrieved: 2026-07-31
+    retrieved: 2026-08-03
     source: wikidata
     url: https://www.wikidata.org/wiki/Q2272638
-statement: {}
-subject: {}
 title: Goldbach's weak conjecture

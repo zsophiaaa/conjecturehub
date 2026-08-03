@@ -3,6 +3,9 @@ id: khabibullin-s-conjecture-on-integral-inequalities
 ids:
   wikidata: Q16253127
   wikipedia: https://en.wikipedia.org/wiki/Khabibullin%27s_conjecture_on_integral_inequalities
+notability:
+  measured_on: 2026-08-03
+  wikipedia_language_editions: 1
 openness_basis:
   asserted_by: wikidata
   meaning: unknown
@@ -13,10 +16,9 @@ provenance:
       - ids.wikidata
       - ids.wikipedia
       - ids.mathworld
+      - notability.wikipedia_language_editions
     license: CC0-1.0
-    retrieved: 2026-07-31
+    retrieved: 2026-08-03
     source: wikidata
     url: https://www.wikidata.org/wiki/Q16253127
-statement: {}
-subject: {}
 title: Khabibullin's conjecture on integral inequalities

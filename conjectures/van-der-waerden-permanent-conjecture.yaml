@@ -5,6 +5,9 @@ id: van-der-waerden-permanent-conjecture
 ids:
   wikidata: Q16636852
   wikipedia: https://en.wikipedia.org/wiki/Van_der_Waerden%27s_conjecture
+notability:
+  measured_on: 2026-08-03
+  wikipedia_language_editions: 3
 openness_basis:
   asserted_by: wikidata
   meaning: unknown
@@ -15,10 +18,9 @@ provenance:
       - ids.wikidata
       - ids.wikipedia
       - ids.mathworld
+      - notability.wikipedia_language_editions
     license: CC0-1.0
-    retrieved: 2026-07-31
+    retrieved: 2026-08-03
     source: wikidata
     url: https://www.wikidata.org/wiki/Q16636852
-statement: {}
-subject: {}
 title: van der Waerden Permanent Conjecture

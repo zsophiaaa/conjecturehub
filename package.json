@@ -17,6 +17,7 @@
     "sweep": "npm run sweep --workspace ingest",
     "build:index": "npm run build:index --workspace ingest",
     "sync:erdos-forum": "npm run sync:erdos-forum --workspace ingest",
+    "refresh:notability": "npm run refresh:notability --workspace ingest --",
     "check:links": "npm run check:links --workspace ingest",
     "selftest": "npm run selftest --workspace ingest",
     "solve:sandbox": "npm run solve:sandbox --workspace ingest --",

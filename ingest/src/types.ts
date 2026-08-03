@@ -35,6 +35,7 @@ export type SourceKind =
   | "mathoverflow"
   | "forum"
   | "reddit"
+  | "github"
   | "dataset"
   | "manual";
 
@@ -120,6 +121,11 @@ export interface Conjecture {
     arxiv?: string[];
     mathworld?: string | null;
     external?: { label: string; url: string }[];
+  };
+  /** Measured reach, not judged importance. Absent without a Wikidata QID. */
+  notability?: {
+    wikipedia_language_editions: number;
+    measured_on: string;
   };
   openness_basis: {
     meaning:

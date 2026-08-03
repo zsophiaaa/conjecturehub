@@ -3,6 +3,9 @@ id: baum-connes-conjecture
 ids:
   wikidata: Q2993305
   wikipedia: https://en.wikipedia.org/wiki/Baum%E2%80%93Connes_conjecture
+notability:
+  measured_on: 2026-08-03
+  wikipedia_language_editions: 3
 openness_basis:
   asserted_by: wikidata
   meaning: unknown
@@ -13,10 +16,9 @@ provenance:
       - ids.wikidata
       - ids.wikipedia
       - ids.mathworld
+      - notability.wikipedia_language_editions
     license: CC0-1.0
-    retrieved: 2026-07-31
+    retrieved: 2026-08-03
     source: wikidata
     url: https://www.wikidata.org/wiki/Q2993305
-statement: {}
-subject: {}
 title: Baum–Connes conjecture

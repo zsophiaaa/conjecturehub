@@ -3,6 +3,9 @@ id: black-hole-stability-conjecture
 ids:
   wikidata: Q113447473
   wikipedia: https://en.wikipedia.org/wiki/Black_hole_stability_conjecture
+notability:
+  measured_on: 2026-08-03
+  wikipedia_language_editions: 2
 openness_basis:
   asserted_by: wikidata
   meaning: unknown
@@ -13,10 +16,9 @@ provenance:
       - ids.wikidata
       - ids.wikipedia
       - ids.mathworld
+      - notability.wikipedia_language_editions
     license: CC0-1.0
-    retrieved: 2026-07-31
+    retrieved: 2026-08-03
     source: wikidata
     url: https://www.wikidata.org/wiki/Q113447473
-statement: {}
-subject: {}
 title: black hole stability conjecture

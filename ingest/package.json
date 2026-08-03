@@ -10,6 +10,7 @@
     "sweep": "tsx src/cli/sweep.ts",
     "build:index": "tsx src/cli/build-index.ts",
     "sync:erdos-forum": "tsx src/cli/sync-erdos-forum-links.ts",
+    "refresh:notability": "tsx src/cli/refresh-notability.ts",
     "check:links": "tsx src/cli/check-links.ts",
     "selftest": "tsx src/cli/selftest-validate.ts",
     "solve:sandbox": "tsx src/cli/solve-sandbox.ts",

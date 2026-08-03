@@ -4,6 +4,9 @@ ids:
   mathworld: https://mathworld.wolfram.com/FourExponentialsConjecture.html
   wikidata: Q5475668
   wikipedia: https://en.wikipedia.org/wiki/Four_exponentials_conjecture
+notability:
+  measured_on: 2026-08-03
+  wikipedia_language_editions: 2
 openness_basis:
   asserted_by: wikidata
   meaning: unknown
@@ -14,10 +17,9 @@ provenance:
       - ids.wikidata
       - ids.wikipedia
       - ids.mathworld
+      - notability.wikipedia_language_editions
     license: CC0-1.0
-    retrieved: 2026-07-31
+    retrieved: 2026-08-03
     source: wikidata
     url: https://www.wikidata.org/wiki/Q5475668
-statement: {}
-subject: {}
 title: Four exponentials conjecture

@@ -3,6 +3,9 @@ id: atiyah-conjecture-on-configurations
 ids:
   wikidata: Q4815875
   wikipedia: https://en.wikipedia.org/wiki/Atiyah_conjecture_on_configurations
+notability:
+  measured_on: 2026-08-03
+  wikipedia_language_editions: 1
 openness_basis:
   asserted_by: wikidata
   meaning: unknown
@@ -13,10 +16,9 @@ provenance:
       - ids.wikidata
       - ids.wikipedia
       - ids.mathworld
+      - notability.wikipedia_language_editions
     license: CC0-1.0
-    retrieved: 2026-07-31
+    retrieved: 2026-08-03
     source: wikidata
     url: https://www.wikidata.org/wiki/Q4815875
-statement: {}
-subject: {}
 title: Atiyah conjecture on configurations
