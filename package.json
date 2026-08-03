@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.1.0",
   "description": "A living index of every mathematical conjecture, and who has proved what.",
-  "license": "Apache-2.0",
+  "license": "AGPL-3.0-or-later",
   "workspaces": [
     "ingest",
     "web"

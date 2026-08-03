@@ -65,4 +65,8 @@ See [`CONTRIBUTING.md`](CONTRIBUTING.md).
 
 ## Licensing
 
-Code is Apache-2.0 (see [`LICENSE`](LICENSE)). The conjecture data is mixed, because upstream sources are mixed — every record carries per-field `provenance` with an SPDX identifier. See [`conjectures/LICENSE.md`](conjectures/LICENSE.md) and [`docs/ATTRIBUTIONS.md`](docs/ATTRIBUTIONS.md).
+Code is [AGPL-3.0-or-later](LICENSE). Use it, fork it, run it. If you deploy a modified version where other people can reach it, publish your changes — running it as a service counts, which is the whole reason for the Affero clause rather than plain GPL. Nothing here asks anything of you for merely *using* the site or calling the API.
+
+ConjectureHub is a name, not just a codebase. The license covers the code; it grants no rights in the name, and a fork should run under its own.
+
+The conjecture data is mixed, because upstream sources are mixed — every record carries per-field `provenance` with an SPDX identifier, and the code license does not reach it. See [`conjectures/LICENSE.md`](conjectures/LICENSE.md) and [`docs/ATTRIBUTIONS.md`](docs/ATTRIBUTIONS.md).

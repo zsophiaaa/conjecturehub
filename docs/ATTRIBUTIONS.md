@@ -59,7 +59,11 @@ Pinned versions match [.github/actions/setup-lean/action.yml](../.github/actions
 
 ## This project’s code
 
-Application code in this repository is [Apache-2.0](../LICENSE). Conjecture **data** carries mixed licenses via per-field `provenance` — do not assume a single license over the whole corpus.
+Application code in this repository is [AGPL-3.0-or-later](../LICENSE): use it and fork it freely, but a modified version you let other people reach has to publish its source. Calling the API or the MCP server is use, not conveyance, and asks nothing of you.
+
+The licence grants no rights in the **ConjectureHub** name. A fork should run under its own.
+
+Conjecture **data** carries mixed licenses via per-field `provenance`, and the code licence does not reach it — do not assume a single license over the whole corpus. Much of it is CC0 or permissive upstream and is genuinely free for you to take; the point of the `provenance` block is that you can tell which parts those are.
 
 ## Related projects (context only)
 

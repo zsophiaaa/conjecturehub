@@ -83,7 +83,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               the literature before investing effort.
             </p>
             <p className="mt-4">
-              Data is mixed-licence with per-field provenance. Code is Apache-2.0.{" "}
+              Data is mixed-licence with per-field provenance. Code is{" "}
+              {/* AGPL section 13: anyone interacting with this over a network is
+                  entitled to the source, so the offer belongs on every page
+                  rather than buried in a licence file. */}
+              <a href={SITE.repo}>AGPL-3.0, source here</a>.{" "}
               <Link href="/about/credits/" className="font-medium">
                 Sources and credits
               </Link>
