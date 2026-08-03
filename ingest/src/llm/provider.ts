@@ -58,6 +58,26 @@ interface ProviderConfig {
 }
 
 /**
+ * The account is out of quota until it resets, rather than merely being asked
+ * to slow down. Callers should stop rather than work through their remaining
+ * items, and the distinction is worth a type: one classify run spent fifty
+ * minutes in backoff, and every call it eventually made had already failed.
+ */
+export class LlmQuotaExhaustedError extends Error {}
+
+/**
+ * Free tiers publish two different 429s. A per-minute throttle is worth waiting
+ * out. A daily token cap is not — the reset is hours away, so retrying only
+ * burns CI minutes to arrive in the same place.
+ */
+function isQuotaExhausted(status: number, body: string): boolean {
+  if (status !== 429 && status !== 402) return false;
+  return /tokens per day|TPD|requests per day|RPD|insufficient_quota|exceeded your current quota|credit balance|billing/i.test(
+    body,
+  );
+}
+
+/**
  * Retries the calls worth retrying and gives up immediately on the ones that
  * are not. Free tiers rate-limit aggressively — a sweep firing classifier calls
  * back to back collects 429s partway through — and honouring the server's own
@@ -74,6 +94,13 @@ async function sendWithRetries(name: string, send: () => Promise<Response>): Pro
     if (res.ok) return res;
 
     const body = await res.text().catch(() => "");
+
+    if (isQuotaExhausted(res.status, body)) {
+      throw new LlmQuotaExhaustedError(
+        `${name} is out of quota until it resets: ${body.slice(0, 200)}`,
+      );
+    }
+
     lastError = new Error(`${name} returned HTTP ${res.status}: ${body.slice(0, 300)}`);
 
     const retryable = res.status === 429 || res.status >= 500;

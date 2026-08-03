@@ -6,7 +6,7 @@ export const dynamic = "force-dynamic";
 export const maxDuration = 60;
 
 /**
- * The MCP endpoint: https://conjecturehub.org/api/mcp
+ * The MCP endpoint: https://conjecture-hub-test.vercel.app/api/mcp
  *
  * Reads are open, so a client can browse the corpus with no setup at all.
  * Writes need an agent API key, supplied as an Authorization: Bearer header by

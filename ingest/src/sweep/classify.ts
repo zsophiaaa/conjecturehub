@@ -1,4 +1,4 @@
-import { extractJson, type LlmProvider } from "../llm/provider.js";
+import { extractJson, LlmQuotaExhaustedError, type LlmProvider } from "../llm/provider.js";
 import type { Conjecture } from "../types.js";
 import type { CandidateMatch, ClassifiedMatch } from "./types.js";
 
@@ -111,24 +111,31 @@ export async function classifyMatches(
   let used = 0;
   let skipped = 0;
   let lastCallAt = 0;
+  // Set once the account is out of quota. Every remaining item then takes the
+  // requeue path above instead of spending two minutes in backoff discovering
+  // the same thing, which is what turned one run into a fifty-minute no-op.
+  let outOfQuota = false;
 
   for (const match of matches) {
     const conjecture = corpus.get(match.conjectureId);
     if (!conjecture) continue;
 
-    if (!provider.available || used >= budget) {
+    if (!provider.available || used >= budget || outOfQuota) {
       skipped++;
       // Without a classifier the match still surfaces, flagged for a human and
-      // carrying no claim type, rather than being silently dropped.
+      // carrying no claim type, rather than being silently dropped. `none` also
+      // tells the caller it was never spent, so it goes back on the queue.
       classified.push({
         ...match,
         claimType: null,
         scope: null,
         confidence: match.matchScore * 0.5,
         evidence: null,
-        rationale: provider.available
-          ? "LLM budget exhausted for this run; needs human triage."
-          : "No LLM provider configured; needs human triage.",
+        rationale: outOfQuota
+          ? "Provider quota exhausted for the day; requeued for the next run."
+          : provider.available
+            ? "LLM budget exhausted for this run; needs human triage."
+            : "No LLM provider configured; needs human triage.",
         classifier: "none",
       });
       continue;
@@ -152,6 +159,23 @@ export async function classifyMatches(
       );
       verdict = extractJson<RawVerdict>(raw);
     } catch (error) {
+      if (error instanceof LlmQuotaExhaustedError) {
+        // Not this item's fault, and nothing was spent on it. Requeue it and
+        // send everything after it down the same path.
+        outOfQuota = true;
+        skipped++;
+        console.warn(`  ${(error as Error).message}`);
+        classified.push({
+          ...match,
+          claimType: null,
+          scope: null,
+          confidence: match.matchScore * 0.5,
+          evidence: null,
+          rationale: "Provider quota exhausted for the day; requeued for the next run.",
+          classifier: "none",
+        });
+        continue;
+      }
       classified.push({
         ...match,
         claimType: null,

@@ -10,7 +10,7 @@ import { CACHE_DIR } from "./paths.js";
  */
 
 export const USER_AGENT =
-  "ConjectureHub/0.1 (+https://conjecturehub.org; conjecture status index; contact via GitHub issues)";
+  "ConjectureHub/0.1 (+https://github.com/zsophiaaa/conjecturehub; conjecture status index; contact via GitHub issues)";
 
 /** Minimum milliseconds between requests, per host. arXiv's published limit is one request per three seconds. */
 const HOST_INTERVAL_MS: Record<string, number> = {

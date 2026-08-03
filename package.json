@@ -23,7 +23,7 @@
     "crosswalk:vibemathed": "npm run crosswalk:vibemathed --workspace ingest --",
     "file:resolutions": "npm run file:resolutions --workspace ingest --",
     "check:links": "npm run check:links --workspace ingest",
-    "selftest": "npm run selftest --workspace ingest",
+    "selftest": "npm run selftest --workspace ingest && npm run selftest --workspace web",
     "solve:sandbox": "npm run solve:sandbox --workspace ingest --",
     "dev": "npm run dev --workspace web",
     "build": "npm run build:index && npm run build --workspace web"
