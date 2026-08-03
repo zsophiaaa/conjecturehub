@@ -116,7 +116,10 @@ jobs:
 
           gh label create refresh --color 0e8a16 --description "Opened by the weekly refresh" --force
 
-          if gh pr view "$BRANCH" --json number >/dev/null 2>&1; then
+          # Must be an *open* pull request; `gh pr view` also matches closed and
+          # merged ones, which silently turns "open a pull request" into
+          # "update one nobody is looking at".
+          if [ -n "$(gh pr list --head "$BRANCH" --state open --json number --jq '.[0].number // empty')" ]; then
             gh pr edit "$BRANCH" --body-file /tmp/pr-body.md
           else
             gh pr create \

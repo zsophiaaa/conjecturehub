@@ -158,7 +158,11 @@ jobs:
           gh label create sweep --color 1d76db --description "Opened by the automated sweep" --force
           gh label create unverified --color fbca04 --description "Contains claims no one has verified" --force
 
-          if gh pr view "$BRANCH" --json number >/dev/null 2>&1; then
+          # Must be an *open* pull request. `gh pr view` also matches closed and
+          # merged ones, so a branch whose previous pull request was closed took
+          # the edit path and quietly updated the closed one — the step passed,
+          # the claims were pushed, and nothing reviewable existed.
+          if [ -n "$(gh pr list --head "$BRANCH" --state open --json number --jq '.[0].number // empty')" ]; then
             gh pr edit "$BRANCH" --body-file /tmp/pr-body.md
           else
             gh pr create \
