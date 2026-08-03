@@ -71,6 +71,12 @@ interface SearchEntry {
   b?: 1;
   /** 1 when statements/challenges/{id}.json exists for comparator */
   k?: 1;
+  /**
+   * 1 when our basis for the resolution is someone else's report of it rather
+   * than the proof. Only the secondary case is carried: it is the one the badge
+   * renders, and the other two would cost every visitor bytes to say nothing.
+   */
+  r?: 1;
 }
 
 const records = readAll();
@@ -132,6 +138,7 @@ const search: SearchEntry[] = indexable.map((r) => {
   if (r.agent.machineVerifiedClaims > 0) entry.v = 1;
   if (r.agent.benchmark) entry.b = 1;
   if (r.agent.hasVerificationChallenge) entry.k = 1;
+  if (r.derived.attestation === "secondary") entry.r = 1;
   return entry;
 });
 

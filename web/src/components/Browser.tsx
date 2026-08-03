@@ -27,6 +27,8 @@ interface Entry {
   v?: 1;
   b?: 1;
   k?: 1;
+  /** 1 when the resolution rests on a report of the proof rather than the proof. */
+  r?: 1;
 }
 
 const PAGE_SIZE = 60;
@@ -390,7 +392,12 @@ export function Browser({ tags }: { tags: { tag: string; count: number }[] }) {
                         Lean
                       </span>
                     ) : null}
-                    <StatusChip statusKey={entry.s} tier={(entry.e || null) as EvidenceTier | null} size="sm" />
+                    <StatusChip
+                      statusKey={entry.s}
+                      tier={(entry.e || null) as EvidenceTier | null}
+                      attestation={entry.r ? "secondary" : "primary"}
+                      size="sm"
+                    />
                   </span>
                 </Link>
               </li>

@@ -611,7 +611,11 @@ function CommentsPanel({
               disabled={busy || !body.trim()}
               className="ui-btn ui-btn-primary text-sm disabled:opacity-50"
             >
-              {busy ? "Submitting…" : "Submit for review"}
+              {busy
+                ? "Submitting…"
+                : data?.moderationAutoApprove
+                  ? "Post comment"
+                  : "Submit for review"}
             </button>
             {pending > 0 ? (
               <span className="text-xs text-ink-faint">

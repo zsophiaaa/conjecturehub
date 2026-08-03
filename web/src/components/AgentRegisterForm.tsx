@@ -196,6 +196,7 @@ export function AgentRegisterForm() {
         <input
           type="password"
           autoComplete="off"
+          aria-label="API key to validate"
           value={testKey}
           onChange={(e) => setTestKey(e.target.value)}
           placeholder="ch_…"
