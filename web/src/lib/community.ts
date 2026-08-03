@@ -200,54 +200,61 @@ const MAX_VERIFIED_PROOFS = 3;
 /** How much of a practice target's recent traffic to show. */
 const MAX_SANDBOX_SUBMISSIONS = 5;
 
+/** Tactics worth treating as part of a proof's method rather than punctuation. */
+const TACTIC_NAMES = new Set([
+  "rcases", "obtain", "induction", "cases", "rintro", "refine", "calc", "simpa",
+  "simp", "ring", "ring_nf", "omega", "decide", "linarith", "nlinarith", "aesop",
+  "norm_num", "constructor", "apply", "unfold", "rw", "rwa", "field_simp",
+  "positivity", "gcongr", "interval_cases",
+]);
+
 /**
- * Identifiers a proof leans on, as a rough fingerprint of its approach.
+ * The lemmas and tactics a proof is built from.
  *
- * Tactic names and lemma names are what distinguish an induction from a case
- * split from a one-line appeal to Mathlib. Binders and syntax are not, so the
- * obvious noise is dropped along with comments and the import block.
+ * Deliberately narrow: dotted names, which is what Mathlib lemmas look like,
+ * plus the tactics above. An earlier version kept every identifier and was
+ * useless — local names and numerals swamped the signal, so two proofs
+ * identical but for renaming `k` to `j` scored as unrelated.
  */
-function approachTokens(leanBody: string): Set<string> {
+function proofFingerprint(leanBody: string): Set<string> {
   const stripped = leanBody
     .replace(/\/-[\s\S]*?-\//g, " ")
     .replace(/--[^\n]*/g, " ")
     .replace(/^\s*(import|set_option|open|namespace|end)\b[^\n]*/gm, " ");
 
-  const noise = new Set([
-    "theorem", "lemma", "by", "have", "this", "fun", "with", "at", "using",
-    "let", "show", "from", "intro", "exact",
-  ]);
-
-  return new Set(
-    (stripped.match(/[A-Za-z_][A-Za-z0-9_.']*/g) ?? [])
-      .map((t) => t.toLowerCase())
-      .filter((t) => t.length > 1 && !noise.has(t)),
-  );
+  const tokens = new Set<string>();
+  for (const token of stripped.match(/[A-Za-z_][A-Za-z0-9_.']*/g) ?? []) {
+    const lower = token.toLowerCase();
+    if (token.includes(".") && token.length > 3) tokens.add(lower);
+    else if (TACTIC_NAMES.has(lower)) tokens.add(lower);
+  }
+  return tokens;
 }
 
 /**
- * Whether two proofs are close enough to be the same idea written twice.
+ * Whether one proof is a restatement of another.
  *
- * This is a heuristic and is meant to be: it cannot tell a genuinely new
- * argument from a rephrasing, only that two proofs reach for nearly the same
- * lemmas. It errs toward calling things duplicates, because three listings of
- * one idea are worth less than one, and the alternative — a wall of near
- * identical proofs — is what makes such a list useless.
+ * Honest about its reach: it catches the same proof written twice — reformatted,
+ * recommented, variables renamed — which is the duplication that actually fills
+ * up a list. It cannot tell whether two genuinely different arguments amount to
+ * the same mathematical idea, and does not try. Two proofs that case split the
+ * same way but discharge the branches with different lemmas are kept as
+ * separate, which seems right: the machinery is the interesting part.
  */
 function sameApproach(a: Set<string>, b: Set<string>): boolean {
   if (a.size === 0 || b.size === 0) return a.size === b.size;
   let shared = 0;
   for (const token of a) if (b.has(token)) shared += 1;
-  return shared / (a.size + b.size - shared) >= 0.7;
+  return shared / (a.size + b.size - shared) >= 0.5;
 }
 
 /**
- * Proofs a Lean kernel accepted, newest first, one per distinct approach.
+ * Proofs a Lean kernel accepted, newest first, restatements collapsed.
  *
  * Capped because the point is to show that a proof exists and what it looks
- * like, not to archive every attempt. Distinctness is what makes the extra
- * entries worth the space: a second proof of the same theorem is interesting
- * when it argues differently and noise when it does not.
+ * like, not to archive every attempt. A second proof of the same theorem earns
+ * its space by arguing differently; the same proof twice just pushes the
+ * comments further down the page.
  */
 export async function getVerifiedProofs(
   conjectureId: string,
@@ -275,7 +282,7 @@ export async function getVerifiedProofs(
   const chosen: { row: (typeof rows)[number]; tokens: Set<string> }[] = [];
   for (const row of rows) {
     if (chosen.length >= limit) break;
-    const tokens = approachTokens(row.leanBody);
+    const tokens = proofFingerprint(row.leanBody);
     if (chosen.some((c) => sameApproach(c.tokens, tokens))) continue;
     chosen.push({ row, tokens });
   }

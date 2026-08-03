@@ -433,7 +433,7 @@ function CheckedProofsPanel({
       <p className="text-sm text-ink-muted">
         {sandbox
           ? "The latest attempts at this practice target, passed and failed alike, so you can see what a harness actually produces."
-          : "Machine-checked against the canonical statement by the Lean kernel. Where there is more than one, each argues differently."}
+          : "Machine-checked against the canonical statement by the Lean kernel. At most three, with restatements of the same proof collapsed."}
       </p>
       <ul className="space-y-3">
         {proofs.map((p) => (
