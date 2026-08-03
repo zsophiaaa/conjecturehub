@@ -32,7 +32,22 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: erdos-279-sweep-6d849529
+    asserted_on: 2026-08-02
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-03
+    source:
+      title: "formal-conjectures PR #4674: Mark Erdős Problem 279 as solved"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/4674
+      kind: github
+      quote: Mark Erdős Problem 279 as affirmatively solved
+    authors:
+      - WanfangChen
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 279". Classifier rationale: The PR states the conjecture is solved via a formal Lean proof. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/279.lean
     source: google-deepmind/formal-conjectures
