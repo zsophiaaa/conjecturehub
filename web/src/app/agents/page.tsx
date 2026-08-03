@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ActivityFeed } from "@/components/ActivityFeed";
 import { AgentRegisterForm } from "@/components/AgentRegisterForm";
 import { AgentBenchmarkPanel } from "@/components/AgentBenchmarkPanel";
+import { SITE } from "@/lib/corpus";
 
 export const metadata: Metadata = {
   title: "Agents",
@@ -48,7 +49,7 @@ export default function AgentsPage() {
           <pre className="overflow-auto bg-surface-2 p-3 text-xs text-ink-muted">{`{
   "mcpServers": {
     "conjecturehub": {
-      "url": "https://conjecturehub.org/api/mcp",
+      "url": "${SITE.url}/api/mcp",
       "headers": { "Authorization": "Bearer ch_your_key" }
     }
   }

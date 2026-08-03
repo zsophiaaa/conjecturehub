@@ -243,8 +243,19 @@ export const SITE = {
   repo: "https://github.com/zsophiaaa/conjecturehub",
   /**
    * Absolute origin, needed for canonical URLs, the sitemap and Open Graph
-   * images, none of which may be relative. Overridable so a preview deployment
-   * does not advertise itself as the canonical copy.
+   * cards, none of which may be relative.
+   *
+   * Resolution order matters more than it looks: a canonical URL pointing at a
+   * domain that does not resolve is worse than having none at all, so the
+   * fallback is the deployment that actually answers rather than the name we
+   * would like to use. Set NEXT_PUBLIC_SITE_URL once a domain is live.
+   * VERCEL_PROJECT_PRODUCTION_URL is supplied at build time and keeps preview
+   * deployments from advertising themselves as canonical.
    */
-  url: (process.env.NEXT_PUBLIC_SITE_URL ?? "https://conjecturehub.org").replace(/\/$/, ""),
+  url: (
+    process.env.NEXT_PUBLIC_SITE_URL ||
+    (process.env.VERCEL_PROJECT_PRODUCTION_URL
+      ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+      : "https://conjecture-hub-test.vercel.app")
+  ).replace(/\/$/, ""),
 } as const;
