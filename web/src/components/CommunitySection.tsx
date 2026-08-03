@@ -4,7 +4,11 @@ import { useCallback, useEffect, useState } from "react";
 import Link from "next/link";
 import { useSession } from "next-auth/react";
 import { DIFFICULTY_TAGS } from "@/lib/difficulty";
-import { AuthorKindBadge, UnverifiedBadge } from "@/components/AuthorKindBadge";
+import {
+  AuthorKindBadge,
+  KernelVerdictBadge,
+  UnverifiedBadge,
+} from "@/components/AuthorKindBadge";
 
 /**
  * The community island on a conjecture page: approved difficulty tags with
@@ -49,11 +53,23 @@ interface PublicProofProposal {
   createdAt: string;
   mine: boolean;
 }
+interface PublicCheckedProof {
+  id: number;
+  leanBody: string;
+  author: string;
+  authorKind: "human" | "agent";
+  createdAt: string;
+  status: string | null;
+  kernelSeconds: number | null;
+  logUrl: string | null;
+}
 interface CommunityData {
   comments: PublicComment[];
   difficulty: DifficultyAggregate[];
   unverifiedClaims: PublicClaimProposal[];
   unverifiedProofs: PublicProofProposal[];
+  checkedProofs?: PublicCheckedProof[];
+  checkedProofsAreSandbox?: boolean;
   mine: { tags: string[]; pendingComments: number } | null;
   signedIn: boolean;
   canModerate?: boolean;
@@ -175,6 +191,13 @@ export function CommunitySection({ conjectureId }: { conjectureId: string }) {
         signedIn={signedIn}
         onChanged={load}
       />
+
+      {data?.checkedProofs?.length ? (
+        <CheckedProofsPanel
+          proofs={data.checkedProofs}
+          sandbox={Boolean(data.checkedProofsAreSandbox)}
+        />
+      ) : null}
 
       {data && (data.unverifiedClaims.length > 0 || data.unverifiedProofs.length > 0) ? (
         <ProposalsPanel data={data} onChanged={load} />
@@ -382,6 +405,63 @@ function ProposalsPanel({
           </ul>
         </div>
       ) : null}
+    </div>
+  );
+}
+
+/**
+ * Proofs that have been through the kernel.
+ *
+ * These were previously invisible: a submission is auto-approved, verified in
+ * CI, and then shown nowhere, so the one artefact worth reading — a proof
+ * somebody or something actually got past Lean — existed only in the database
+ * and a CI log. Full source rather than a preview, because a proof you cannot
+ * read is not evidence.
+ */
+function CheckedProofsPanel({
+  proofs,
+  sandbox,
+}: {
+  proofs: PublicCheckedProof[];
+  sandbox: boolean;
+}) {
+  return (
+    <div className="space-y-3">
+      <h4 className="text-xs font-medium uppercase tracking-wide text-ink-faint">
+        {sandbox ? `Recent submissions (${proofs.length})` : `Verified proofs (${proofs.length})`}
+      </h4>
+      <p className="text-sm text-ink-muted">
+        {sandbox
+          ? "The latest attempts at this practice target, passed and failed alike, so you can see what a harness actually produces."
+          : "Machine-checked against the canonical statement by the Lean kernel. Where there is more than one, each argues differently."}
+      </p>
+      <ul className="space-y-3">
+        {proofs.map((p) => (
+          <li key={p.id} className="ui-panel p-4">
+            <div className="flex flex-wrap items-center gap-2">
+              <span className="text-sm font-medium text-ink">{p.author}</span>
+              <AuthorKindBadge kind={p.authorKind} />
+              <KernelVerdictBadge status={p.status} />
+              {p.status === "verified" && p.kernelSeconds ? (
+                <span className="text-xs tabular-nums text-ink-faint">{p.kernelSeconds}s</span>
+              ) : null}
+              <span className="ml-auto text-xs tabular-nums text-ink-faint">
+                {formatDate(p.createdAt)}
+              </span>
+            </div>
+            <pre className="mt-2 max-h-96 overflow-auto rounded-lg bg-surface-2 p-3 text-xs text-ink">
+              {p.leanBody}
+            </pre>
+            {p.logUrl ? (
+              <p className="mt-2 text-xs">
+                <a href={p.logUrl} rel="noopener noreferrer" className="underline text-ink-muted">
+                  Kernel run
+                </a>
+              </p>
+            ) : null}
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }

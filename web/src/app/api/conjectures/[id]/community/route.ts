@@ -6,10 +6,15 @@ import { comments, difficultyTags } from "@/db/schema";
 import {
   getApprovedComments,
   getDifficultyAggregate,
+  getRecentSubmissions,
   getUnverifiedClaimProposals,
   getUnverifiedProofProposals,
+  getVerifiedProofs,
 } from "@/lib/community";
 import { moderationAutoApprove } from "@/lib/moderation-mode";
+
+/** Practice targets, where every attempt is on show rather than only the wins. */
+const SANDBOX_IDS = new Set(["sandbox"]);
 
 export const dynamic = "force-dynamic";
 
@@ -30,12 +35,16 @@ export async function GET(
   const viewerId = session?.user?.id ?? null;
   const canModerate = session?.user?.role === "curator" || session?.user?.role === "admin";
 
-  const [approvedComments, difficulty, unverifiedClaims, unverifiedProofs] = await Promise.all([
-    getApprovedComments(id, viewerId),
-    getDifficultyAggregate(id),
-    getUnverifiedClaimProposals(id, viewerId),
-    getUnverifiedProofProposals(id, viewerId),
-  ]);
+  const isSandbox = SANDBOX_IDS.has(id);
+
+  const [approvedComments, difficulty, unverifiedClaims, unverifiedProofs, checkedProofs] =
+    await Promise.all([
+      getApprovedComments(id, viewerId),
+      getDifficultyAggregate(id),
+      getUnverifiedClaimProposals(id, viewerId),
+      getUnverifiedProofProposals(id, viewerId),
+      isSandbox ? getRecentSubmissions(id) : getVerifiedProofs(id),
+    ]);
 
   let mine: {
     tags: string[];
@@ -72,6 +81,10 @@ export async function GET(
     difficulty,
     unverifiedClaims,
     unverifiedProofs,
+    checkedProofs,
+    // The sandbox lists every recent attempt; everywhere else these are proofs
+    // the kernel accepted, so the UI has to label them differently.
+    checkedProofsAreSandbox: isSandbox,
     mine,
     signedIn: Boolean(session?.user),
     canModerate,

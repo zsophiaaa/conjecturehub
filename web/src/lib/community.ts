@@ -1,6 +1,12 @@
 import { and, desc, eq, gte, sql } from "drizzle-orm";
 import { db } from "@/db";
-import { claimProposals, comments, difficultyTags, proofProposals } from "@/db/schema";
+import {
+  claimProposals,
+  comments,
+  difficultyTags,
+  proofProposals,
+  verificationJobs,
+} from "@/db/schema";
 import { renderCommentMarkdown } from "./markdown";
 import { difficultyLabel } from "./difficulty";
 
@@ -46,6 +52,19 @@ export interface PublicProofProposal {
   authorKind: "human" | "agent";
   createdAt: string;
   mine: boolean;
+}
+
+export interface PublicVerifiedProof {
+  id: number;
+  /** The full source. A proof nobody can read is not evidence of anything. */
+  leanBody: string;
+  author: string;
+  authorKind: "human" | "agent";
+  createdAt: string;
+  /** Null while a submission is still waiting on CI, which sandbox listings show. */
+  status: string | null;
+  kernelSeconds: number | null;
+  logUrl: string | null;
 }
 
 /** Approved comments for a conjecture, newest first, rendered to safe HTML. */
@@ -172,6 +191,152 @@ export async function getUnverifiedProofProposals(
       authorKind: author?.kind ?? "human",
       createdAt: r.createdAt.toISOString(),
       mine: Boolean(viewerId) && r.userId === viewerId,
+    };
+  });
+}
+
+/** How many verified proofs of a real conjecture are worth showing. */
+const MAX_VERIFIED_PROOFS = 3;
+/** How much of a practice target's recent traffic to show. */
+const MAX_SANDBOX_SUBMISSIONS = 5;
+
+/**
+ * Identifiers a proof leans on, as a rough fingerprint of its approach.
+ *
+ * Tactic names and lemma names are what distinguish an induction from a case
+ * split from a one-line appeal to Mathlib. Binders and syntax are not, so the
+ * obvious noise is dropped along with comments and the import block.
+ */
+function approachTokens(leanBody: string): Set<string> {
+  const stripped = leanBody
+    .replace(/\/-[\s\S]*?-\//g, " ")
+    .replace(/--[^\n]*/g, " ")
+    .replace(/^\s*(import|set_option|open|namespace|end)\b[^\n]*/gm, " ");
+
+  const noise = new Set([
+    "theorem", "lemma", "by", "have", "this", "fun", "with", "at", "using",
+    "let", "show", "from", "intro", "exact",
+  ]);
+
+  return new Set(
+    (stripped.match(/[A-Za-z_][A-Za-z0-9_.']*/g) ?? [])
+      .map((t) => t.toLowerCase())
+      .filter((t) => t.length > 1 && !noise.has(t)),
+  );
+}
+
+/**
+ * Whether two proofs are close enough to be the same idea written twice.
+ *
+ * This is a heuristic and is meant to be: it cannot tell a genuinely new
+ * argument from a rephrasing, only that two proofs reach for nearly the same
+ * lemmas. It errs toward calling things duplicates, because three listings of
+ * one idea are worth less than one, and the alternative — a wall of near
+ * identical proofs — is what makes such a list useless.
+ */
+function sameApproach(a: Set<string>, b: Set<string>): boolean {
+  if (a.size === 0 || b.size === 0) return a.size === b.size;
+  let shared = 0;
+  for (const token of a) if (b.has(token)) shared += 1;
+  return shared / (a.size + b.size - shared) >= 0.7;
+}
+
+/**
+ * Proofs a Lean kernel accepted, newest first, one per distinct approach.
+ *
+ * Capped because the point is to show that a proof exists and what it looks
+ * like, not to archive every attempt. Distinctness is what makes the extra
+ * entries worth the space: a second proof of the same theorem is interesting
+ * when it argues differently and noise when it does not.
+ */
+export async function getVerifiedProofs(
+  conjectureId: string,
+  limit = MAX_VERIFIED_PROOFS,
+): Promise<PublicVerifiedProof[]> {
+  const rows = await db
+    .select({
+      id: proofProposals.id,
+      userId: proofProposals.userId,
+      leanBody: proofProposals.leanBody,
+      createdAt: proofProposals.createdAt,
+      elapsedSeconds: verificationJobs.elapsedSeconds,
+      logUrl: verificationJobs.logUrl,
+    })
+    .from(proofProposals)
+    .innerJoin(verificationJobs, eq(verificationJobs.proofProposalId, proofProposals.id))
+    .where(
+      and(
+        eq(proofProposals.conjectureId, conjectureId),
+        eq(verificationJobs.status, "verified"),
+      ),
+    )
+    .orderBy(desc(proofProposals.createdAt));
+
+  const chosen: { row: (typeof rows)[number]; tokens: Set<string> }[] = [];
+  for (const row of rows) {
+    if (chosen.length >= limit) break;
+    const tokens = approachTokens(row.leanBody);
+    if (chosen.some((c) => sameApproach(c.tokens, tokens))) continue;
+    chosen.push({ row, tokens });
+  }
+
+  const authors = await resolveAuthors(chosen.map((c) => c.row.userId));
+  return chosen.map(({ row }) => {
+    const author = authors.get(row.userId);
+    return {
+      id: row.id,
+      leanBody: row.leanBody,
+      author: author?.name ?? (author?.kind === "agent" ? "agent" : "Unknown"),
+      authorKind: author?.kind ?? "human",
+      createdAt: row.createdAt.toISOString(),
+      status: "verified",
+      kernelSeconds: row.elapsedSeconds,
+      logUrl: row.logUrl,
+    };
+  });
+}
+
+/**
+ * Recent submissions against a practice target, whatever the kernel made of
+ * them.
+ *
+ * A sandbox is for watching harnesses work, so the failures are the useful
+ * part: someone wiring up an agent wants to see what a rejection looks like and
+ * that other people's attempts get answered too. Filtering to successes would
+ * hide exactly that.
+ */
+export async function getRecentSubmissions(
+  conjectureId: string,
+  limit = MAX_SANDBOX_SUBMISSIONS,
+): Promise<PublicVerifiedProof[]> {
+  const rows = await db
+    .select({
+      id: proofProposals.id,
+      userId: proofProposals.userId,
+      leanBody: proofProposals.leanBody,
+      createdAt: proofProposals.createdAt,
+      status: verificationJobs.status,
+      elapsedSeconds: verificationJobs.elapsedSeconds,
+      logUrl: verificationJobs.logUrl,
+    })
+    .from(proofProposals)
+    .leftJoin(verificationJobs, eq(verificationJobs.proofProposalId, proofProposals.id))
+    .where(eq(proofProposals.conjectureId, conjectureId))
+    .orderBy(desc(proofProposals.createdAt))
+    .limit(limit);
+
+  const authors = await resolveAuthors(rows.map((r) => r.userId));
+  return rows.map((row) => {
+    const author = authors.get(row.userId);
+    return {
+      id: row.id,
+      leanBody: row.leanBody,
+      author: author?.name ?? (author?.kind === "agent" ? "agent" : "Unknown"),
+      authorKind: author?.kind ?? "human",
+      createdAt: row.createdAt.toISOString(),
+      status: row.status ?? null,
+      kernelSeconds: row.elapsedSeconds,
+      logUrl: row.logUrl,
     };
   });
 }
