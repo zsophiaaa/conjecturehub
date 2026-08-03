@@ -27,6 +27,21 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/674
       kind: dataset
+  - id: erdos-674-sweep-58cd37df
+    asserted_on: 2026-08-03
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-03
+    source:
+      title: "formal-conjectures PR #4546: ErdosProblems: add 674 with plby formal_proof links (#3998 sync)"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/4546
+      kind: github
+      quote: "`plby's file proves `solutionSet.Nonempty` and `solutionSet.Infinite` over a `solutionSet` definition identical to the one here, with no `sorry` and no `axiom``"
+    authors:
+      - williamjblair
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős problem 674". Classifier rationale: The pull request claims a formal Lean proof establishes both existence and infinitude of solutions, i.e., resolves the conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
