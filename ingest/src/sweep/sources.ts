@@ -35,6 +35,50 @@ function stripHtml(input: string): string {
     .trim();
 }
 
+/**
+ * arXiv's dc:creator carries names in TeX, so François arrives as
+ * `Fran\c{c}ois`. Left alone it is written into the corpus verbatim and a
+ * person's name is misspelt on their own record, which is the kind of small
+ * disrespect that is worth a dozen lines to avoid.
+ *
+ * This covers the accents that actually appear in mathematicians' names. It is
+ * not a TeX parser and does not try to be; anything left over is passed
+ * through, so an unhandled escape is visible rather than silently mangled.
+ */
+const TEX_ACCENTS: ReadonlyArray<[RegExp, string]> = [
+  [/\\c\{c\}/g, "ç"],
+  [/\\c\{C\}/g, "Ç"],
+  [/\\'\{?([aeiounycsz])\}?/gi, "$1\u0301"],
+  [/\\`\{?([aeiou])\}?/gi, "$1\u0300"],
+  [/\\\^\{?([aeiouwy])\}?/gi, "$1\u0302"],
+  [/\\"\{?([aeiouy])\}?/gi, "$1\u0308"],
+  [/\\~\{?([anou])\}?/gi, "$1\u0303"],
+  [/\\v\{?([cszrdtlneg])\}?/gi, "$1\u030C"],
+  [/\\u\{?([ag])\}?/gi, "$1\u0306"],
+  [/\\H\{?([ou])\}?/gi, "$1\u030B"],
+  [/\\r\{?([au])\}?/gi, "$1\u030A"],
+  [/\\=\{?([aeiou])\}?/gi, "$1\u0304"],
+  [/\\\.\{?([zcgeI])\}?/g, "$1\u0307"],
+  [/\\k\{?([ae])\}?/gi, "$1\u0328"],
+  [/\\l\b/g, "ł"],
+  [/\\L\b/g, "Ł"],
+  [/\\o\b/g, "ø"],
+  [/\\O\b/g, "Ø"],
+  [/\\aa\b/g, "å"],
+  [/\\AA\b/g, "Å"],
+  [/\\ss\b/g, "ß"],
+  [/\\ae\b/g, "æ"],
+  [/\\AE\b/g, "Æ"],
+];
+
+export function deTex(input: string): string {
+  let out = input;
+  for (const [pattern, replacement] of TEX_ACCENTS) out = out.replace(pattern, replacement);
+  // Combining marks above are composed into single code points so the result
+  // compares equal to a name typed normally.
+  return out.replace(/[{}]/g, "").normalize("NFC").trim();
+}
+
 function asArray<T>(value: T | T[] | undefined): T[] {
   if (value === undefined) return [];
   return Array.isArray(value) ? value : [value];
@@ -90,7 +134,7 @@ export async function fetchArxiv(): Promise<Candidate[]> {
       url: link,
       title,
       text: description,
-      authors: creators ? creators.split(/,\s*/).filter(Boolean) : [],
+      authors: creators ? creators.split(/,\s*/).map(deTex).filter(Boolean) : [],
       published: item.pubDate ? new Date(String(item.pubDate)).toISOString().slice(0, 10) : null,
       origin: "arXiv new submissions",
     };

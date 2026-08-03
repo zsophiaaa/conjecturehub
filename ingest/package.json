@@ -16,7 +16,7 @@
     "crosswalk:vibemathed": "tsx src/cli/crosswalk-vibemathed.ts",
     "file:resolutions": "tsx src/cli/file-resolutions.ts",
     "check:links": "tsx src/cli/check-links.ts",
-    "selftest": "tsx src/cli/selftest-validate.ts",
+    "selftest": "tsx src/cli/selftest-validate.ts && tsx src/cli/selftest-sweep.ts",
     "solve:sandbox": "tsx src/cli/solve-sandbox.ts",
     "apply-proposal": "tsx src/cli/apply-proposal.ts",
     "typecheck": "tsc --noEmit"
