@@ -114,13 +114,6 @@ jobs:
           fi
           npx tsx ingest/src/cli/sweep.ts "${ARGS[@]}"
 
-      - name: Save sweep memory
-        if: always()
-        uses: actions/cache/save@v5
-        with:
-          path: ingest/.cache
-          key: sweep-cache-${{ github.run_id }}
-
       # A pull request opened with GITHUB_TOKEN does not trigger other
       # workflows, so Validate will not run on it. Validate here instead.
       - name: Validate what the sweep wrote
@@ -138,10 +131,26 @@ jobs:
           git config user.name "conjecturehub-bot"
           git config user.email "bot@conjecturehub.org"
 
-          git fetch origin "$BRANCH" 2>/dev/null && git checkout "$BRANCH" || git checkout -b "$BRANCH"
-
+          # Commit before going anywhere near the branch. The sweep has already
+          # written to conjectures/, and `git checkout` of an existing branch
+          # refuses to move a dirty tree — which is how a run's claims got
+          # written, validated, and then thrown away with the runner.
+          git checkout -B "$BRANCH"
           git add conjectures/
           git commit -m "sweep: ${{ steps.sweep.outputs.written }} unverified claim(s) from $(date -u +%Y-%m-%d)"
+
+          # The day's branch usually exists already, because classify runs every
+          # three hours. Land on top of it rather than trying to fast-forward
+          # over it, which is a guaranteed rejected push.
+          if git fetch origin "$BRANCH" 2>/dev/null; then
+            if ! git rebase FETCH_HEAD; then
+              git rebase --abort
+              BRANCH="$BRANCH-run${GITHUB_RUN_ID}"
+              git checkout -B "$BRANCH"
+              echo "::warning::Could not rebase onto today's branch; opening $BRANCH instead."
+            fi
+          fi
+
           git push --set-upstream origin "$BRANCH"
 
           # A missing label makes gh pr create exit non-zero after the push,
@@ -161,6 +170,20 @@ jobs:
               --label "unverified"
           fi
 
+      # Saved only once the claims are durable. Recording a drained queue while
+      # the pull request step is still ahead of us is how 16 classified claims
+      # were written, validated, and then lost: nothing would ever rediscover
+      # them, because the queue already said they had been handled. Redoing the
+      # classifier calls is cheap by comparison.
+      - name: Save sweep memory
+        if: success()
+        uses: actions/cache/save@v5
+        with:
+          path: ingest/.cache
+          key: sweep-cache-${{ github.run_id }}
+
+      # Always, and deliberately: this artifact is the only surviving record of
+      # what a failed classify run wrote, and apply-sweep-report.ts replays it.
       - name: Upload the report
         if: always()
         uses: actions/upload-artifact@v6

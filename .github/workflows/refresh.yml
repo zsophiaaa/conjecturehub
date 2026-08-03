@@ -82,13 +82,26 @@ jobs:
           BRANCH="refresh/$(date -u +%Y-%m-%d)"
           git config user.name "conjecturehub-bot"
           git config user.email "bot@conjecturehub.org"
-          git fetch origin "$BRANCH" 2>/dev/null && git checkout "$BRANCH" || git checkout -b "$BRANCH"
+          # Commit before switching. `git checkout` of a branch that already
+          # exists refuses to move a dirty tree, and everything written above is
+          # sitting in the working tree unstaged.
+          git checkout -B "$BRANCH"
 
           git add conjectures/ review/
           RECORDS=$(git diff --cached --name-only -- conjectures/ | wc -l | tr -d ' ')
           QUEUED=$(node -e "try{console.log(require('./review/wikipedia-resolution-queue.json').queue.length)}catch{console.log(0)}")
 
           git commit -m "refresh: re-measure notability and re-check inherited statuses"
+
+          if git fetch origin "$BRANCH" 2>/dev/null; then
+            if ! git rebase FETCH_HEAD; then
+              git rebase --abort
+              BRANCH="$BRANCH-run${GITHUB_RUN_ID}"
+              git checkout -B "$BRANCH"
+              echo "::warning::Could not rebase onto this week's branch; opening $BRANCH instead."
+            fi
+          fi
+
           git push --set-upstream origin "$BRANCH"
 
           cat > /tmp/pr-body.md <<EOF
