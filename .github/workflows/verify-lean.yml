@@ -40,7 +40,7 @@ jobs:
     timeout-minutes: 120
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           fetch-depth: 0
 
@@ -108,7 +108,7 @@ jobs:
           WORKFLOW_RUN_ID: ${{ github.run_id }}
         run: .github/scripts/report-verdict.sh verify-results
 
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v6
         if: always() && steps.targets.outputs.names != ''
         with:
           name: verify-results

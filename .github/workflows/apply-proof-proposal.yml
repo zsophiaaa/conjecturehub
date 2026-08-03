@@ -18,7 +18,7 @@ jobs:
   apply:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Fetch Lean source from site
         id: fetch
@@ -64,7 +64,7 @@ jobs:
             -d "{\"jobId\":$JOB_ID,\"status\":\"running\",\"workflowRunId\":\"${{ github.run_id }}\",\"logUrl\":\"${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}\"}"
 
       - name: Open pull request
-        uses: peter-evans/create-pull-request@v7
+        uses: peter-evans/create-pull-request@v8
         with:
           commit-message: "Proof proposal #${{ github.event.client_payload.proposalId }}"
           title: "Proof proposal #${{ github.event.client_payload.proposalId }}"

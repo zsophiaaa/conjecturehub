@@ -31,7 +31,7 @@ runs:
 
     - name: Cache the verification toolchain
       id: toolcache
-      uses: actions/cache@v4
+      uses: actions/cache@v5
       with:
         path: ~/.conjecturehub-tools
         key: verify-tools-${{ inputs.lean_toolchain }}-${{ inputs.comparator_rev }}-v1
@@ -91,7 +91,7 @@ runs:
         echo "COMPARATOR_VERSION=$(cat "$HOME/.conjecturehub-tools/comparator-version" 2>/dev/null || echo unknown)" >> "$GITHUB_ENV"
 
     - name: Cache the Mathlib build
-      uses: actions/cache@v4
+      uses: actions/cache@v5
       with:
         path: statements/.lake
         key: mathlib-${{ inputs.mathlib_rev }}-${{ hashFiles('statements/lakefile.toml') }}-v1
