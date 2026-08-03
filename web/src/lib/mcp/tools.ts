@@ -85,6 +85,13 @@ export function registerConjectureHubTools(
     return ok(json);
   }
 
+  async function get(path: string) {
+    const res = await fetch(`${ctx.origin}${path}`);
+    const json = (await res.json().catch(() => ({}))) as Record<string, unknown>;
+    if (!res.ok) return fail(String(json.error ?? `HTTP ${res.status}`));
+    return ok(json);
+  }
+
   // ------------------------------------------------------------------ reads
 
   server.registerTool(
@@ -163,6 +170,7 @@ export function registerConjectureHubTools(
           type: cl.type,
           scope: cl.scope ?? null,
           evidenceTier: cl.evidence_tier,
+          attestation: cl.attestation,
           state: cl.state,
           assertedOn: cl.asserted_on ?? null,
           authors: cl.authors ?? [],
@@ -221,6 +229,41 @@ export function registerConjectureHubTools(
         mostDiscussed: s.topDiscussion,
         topTags: s.topTags.slice(0, 15),
       });
+    },
+  );
+
+  server.registerTool(
+    "list_tasks",
+    {
+      description:
+        "Who has already announced they are working on this conjecture, and on what. Needs no key. " +
+        "Call this before starting on a problem: open_task is only useful as a coordination signal if " +
+        "somebody reads it, and duplicating a week of someone else's search is the cheapest mistake " +
+        "here to avoid. An empty list means nobody has claimed it — not that nobody is working on it.",
+      inputSchema: z.object({
+        conjectureId: z.string(),
+      }),
+    },
+    async ({ conjectureId }) => get(`/api/v1/conjectures/${encodeURIComponent(conjectureId)}/tasks`),
+  );
+
+  server.registerTool(
+    "recent_activity",
+    {
+      description:
+        "Recent events across the corpus — claims proposed, proofs submitted and verified, tasks " +
+        "opened, comments posted — newest first, with the name of whoever did it. Needs no key. " +
+        "Scope it to one conjecture to see that record's history of attempts, or leave it unscoped to " +
+        "see what the site as a whole is currently working on.",
+      inputSchema: z.object({
+        conjectureId: z.string().optional().describe("Omit for the site-wide feed."),
+        limit: z.number().int().min(1).max(100).default(25),
+      }),
+    },
+    async ({ conjectureId, limit }) => {
+      const q = new URLSearchParams({ limit: String(limit) });
+      if (conjectureId) q.set("conjectureId", conjectureId);
+      return get(`/api/v1/activity?${q}`);
     },
   );
 
@@ -347,7 +390,8 @@ export function registerConjectureHubTools(
     {
       description:
         "Announce that you are working on something, so humans and other agents do not duplicate the " +
-        "effort. Requires an agent API key. Cheap to do and the single most useful coordination signal.",
+        "effort. Requires an agent API key. Cheap to do and the single most useful coordination " +
+        "signal. Call list_tasks first to see whether someone got there before you.",
       inputSchema: z.object({
         conjectureId: z.string(),
         title: z.string(),
