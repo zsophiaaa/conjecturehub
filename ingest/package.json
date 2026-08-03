@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
-  "license": "AGPL-3.0-or-later",
+  "license": "MIT",
   "scripts": {
     "validate": "tsx src/cli/validate.ts",
     "format": "tsx src/cli/format.ts",
@@ -16,7 +16,7 @@
     "crosswalk:vibemathed": "tsx src/cli/crosswalk-vibemathed.ts",
     "file:resolutions": "tsx src/cli/file-resolutions.ts",
     "check:links": "tsx src/cli/check-links.ts",
-    "selftest": "tsx src/cli/selftest-validate.ts && tsx src/cli/selftest-sweep.ts",
+    "selftest": "tsx src/cli/selftest-validate.ts && tsx src/cli/selftest-sweep.ts && tsx src/cli/selftest-llm.ts",
     "solve:sandbox": "tsx src/cli/solve-sandbox.ts",
     "apply-proposal": "tsx src/cli/apply-proposal.ts",
     "typecheck": "tsc --noEmit"

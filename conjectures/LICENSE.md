@@ -6,13 +6,24 @@ Upstream sources fragment across Apache-2.0, CC BY-SA, CC0 and, in some cases, t
 
 Before reusing anything here, read the `provenance` block of the specific records you intend to use.
 
-## Sources in the seed corpus
+The repository's own code is MIT. That licence stops at this directory and has no bearing on anything below.
 
-| Source | License | What we take |
-| --- | --- | --- |
-| [google-deepmind/formal-conjectures](https://github.com/google-deepmind/formal-conjectures) | Apache-2.0 (code), CC-BY-4.0 (other materials) | Titles, informal statements from docstrings, Lean theorem names, MSC codes, reference links |
-| [teorth/erdosproblems](https://github.com/teorth/erdosproblems) | Apache-2.0 | Problem numbers, status, OEIS crosswalks, tags |
-| [Wikidata](https://www.wikidata.org) | CC0-1.0 | QIDs, labels, aliases, Wikipedia and MathWorld links |
+## Where the problems come from
+
+Counts are provenance entries currently in the corpus, not records — one record usually cites several sources.
+
+| Source | License | Entries | What we take |
+| --- | --- | --- | --- |
+| [teorth/erdosproblems](https://github.com/teorth/erdosproblems) | Apache-2.0 | 1,217 | Problem numbers, status, OEIS crosswalks, tags |
+| [google-deepmind/formal-conjectures](https://github.com/google-deepmind/formal-conjectures) | Apache-2.0 | 812 | Titles, informal statements from docstrings, Lean theorem names, MSC codes, reference links |
+| [Wikidata](https://www.wikidata.org) | CC0-1.0 | 282 | QIDs, labels, aliases, Wikipedia and MathWorld links, sitelink counts |
+| [Wikipedia](https://en.wikipedia.org) | CC-BY-SA-4.0 | 157 | Category-derived status, article links |
+| [VibeMathed](https://vibemathed.com) | CC-BY-4.0 | 137 | Crosswalk identifiers linking our records to theirs |
+| erdosproblems.com forum, curator notes, announcements | CC0-1.0 | 21 | Summaries with links, never full text |
+
+**CC-BY-SA-4.0 is share-alike.** The 157 Wikipedia-derived entries carry that obligation with them wherever they go, and no licence chosen for the code changes it. If you redistribute those fields, your derivative of them is share-alike too.
+
+Live sources the sweep adds to continuously — arXiv, MathOverflow, Hacker News, Reddit, Mastodon, GitHub — supply claim metadata and short quotes under each venue's own terms, recorded per claim in `source`. We store metadata and a quotation, never a paper.
 
 Upstream flags a caveat we inherit and pass on: individual conjectures in formal-conjectures may carry third-party terms of their own. Material originating from Wikipedia, MathOverflow or OEIS is CC BY-SA 4.0; material derived from arXiv papers follows each paper's own license.
 

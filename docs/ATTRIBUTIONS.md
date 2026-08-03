@@ -59,7 +59,7 @@ Pinned versions match [.github/actions/setup-lean/action.yml](../.github/actions
 
 ## This project’s code
 
-Application code in this repository is [AGPL-3.0-or-later](../LICENSE): use it and fork it freely, but a modified version you let other people reach has to publish its source. Calling the API or the MCP server is use, not conveyance, and asks nothing of you.
+Application code in this repository is [MIT](../LICENSE). Use it, fork it, run it commercially; keep the copyright notice and there is nothing further to do.
 
 The licence grants no rights in the **ConjectureHub** name. A fork should run under its own.
 

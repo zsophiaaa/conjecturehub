@@ -65,8 +65,21 @@ See [`CONTRIBUTING.md`](CONTRIBUTING.md).
 
 ## Licensing
 
-Code is [AGPL-3.0-or-later](LICENSE). Use it, fork it, run it. If you deploy a modified version where other people can reach it, publish your changes — running it as a service counts, which is the whole reason for the Affero clause rather than plain GPL. Nothing here asks anything of you for merely *using* the site or calling the API.
+Two different things live in this repository and they are licensed differently.
 
-ConjectureHub is a name, not just a codebase. The license covers the code; it grants no rights in the name, and a fork should run under its own.
+**The code is [MIT](LICENSE).** Use it, fork it, run it, sell it. Keep the copyright notice and you are done.
 
-The conjecture data is mixed, because upstream sources are mixed — every record carries per-field `provenance` with an SPDX identifier, and the code license does not reach it. See [`conjectures/LICENSE.md`](conjectures/LICENSE.md) and [`docs/ATTRIBUTIONS.md`](docs/ATTRIBUTIONS.md).
+**The conjecture data is not MIT, and cannot be**, because it is aggregated from upstream sources that set their own terms. Every record carries a per-field `provenance` block naming the source, the SPDX identifier and the date it was retrieved, so the licence question is answerable per field rather than by guessing. Across the corpus today:
+
+| Source | Upstream licence | Provenance entries |
+| --- | --- | --- |
+| [teorth/erdosproblems](https://github.com/teorth/erdosproblems) | Apache-2.0 | 1,217 |
+| [google-deepmind/formal-conjectures](https://github.com/google-deepmind/formal-conjectures) | Apache-2.0 | 812 |
+| [Wikidata](https://www.wikidata.org) | CC0-1.0 | 282 |
+| [Wikipedia](https://en.wikipedia.org) | CC-BY-SA-4.0 | 157 |
+| [VibeMathed](https://vibemathed.com) | CC-BY-4.0 | 137 |
+| erdosproblems.com forum, curator notes, other | CC0-1.0 | 21 |
+
+CC-BY-SA-4.0 is share-alike and travels with the data whatever this repository's code licence says. Read [`conjectures/LICENSE.md`](conjectures/LICENSE.md) before reusing records, and [`docs/ATTRIBUTIONS.md`](docs/ATTRIBUTIONS.md) for who is owed credit.
+
+ConjectureHub is a name, not just a codebase. The licence covers the code; it grants no rights in the name, and a fork should run under its own.
