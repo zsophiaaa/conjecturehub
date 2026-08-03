@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { auth } from "@/auth";
-import { and, eq } from "drizzle-orm";
+import { and, eq, ne } from "drizzle-orm";
 import { db } from "@/db";
 import { comments, difficultyTags } from "@/db/schema";
 import {
@@ -47,7 +47,8 @@ export async function GET(
     ]);
 
   let mine: {
-    tags: string[];
+    /** Row ids alongside slugs, so the viewer can take a tag back. */
+    tags: { id: number; tag: string }[];
     pendingComments: number;
   } | null = null;
 
@@ -58,8 +59,10 @@ export async function GET(
         where: and(
           eq(difficultyTags.conjectureId, id),
           eq(difficultyTags.userId, userId),
+          // A withdrawn tag should be offerable again, not shown as still cast.
+          ne(difficultyTags.status, "deleted"),
         ),
-        columns: { tag: true, status: true },
+        columns: { id: true, tag: true, status: true },
       }),
       db.query.comments.findMany({
         where: and(
@@ -71,7 +74,7 @@ export async function GET(
       }),
     ]);
     mine = {
-      tags: myTags.map((t) => t.tag),
+      tags: myTags.map((t) => ({ id: t.id, tag: t.tag })),
       pendingComments: myPending.length,
     };
   }

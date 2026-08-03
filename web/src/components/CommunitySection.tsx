@@ -71,7 +71,7 @@ interface CommunityData {
   unverifiedProofs: PublicProofProposal[];
   checkedProofs?: PublicCheckedProof[];
   checkedProofsAreSandbox?: boolean;
-  mine: { tags: string[]; pendingComments: number } | null;
+  mine: { tags: { id: number; tag: string }[]; pendingComments: number } | null;
   signedIn: boolean;
   canModerate?: boolean;
   moderationAutoApprove?: boolean;
@@ -246,7 +246,7 @@ function DifficultyPanel({
   const [busy, setBusy] = useState<string | null>(null);
   const [notice, setNotice] = useState<string | null>(null);
 
-  const mine = new Set(data?.mine?.tags ?? []);
+  const mine = new Map((data?.mine?.tags ?? []).map((t) => [t.tag, t.id]));
   const maxCount = Math.max(1, ...(data?.difficulty ?? []).map((d) => d.count));
 
   async function submit(tag: string) {
@@ -260,6 +260,29 @@ function DifficultyPanel({
       });
       const json = (await res.json()) as { message?: string; error?: string };
       setNotice(res.ok ? json.message ?? "Submitted." : json.error ?? "Failed.");
+      if (res.ok) onChanged();
+    } catch {
+      setNotice("Network error.");
+    } finally {
+      setBusy(null);
+    }
+  }
+
+  /**
+   * Take a tag back. A single click, unlike the two-step delete on comments and
+   * proofs: this destroys no writing, and the same click puts it straight back.
+   */
+  async function withdraw(tag: string, id: number) {
+    setBusy(tag);
+    setNotice(null);
+    try {
+      const res = await fetch("/api/community/delete", {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({ kind: "difficulty", id }),
+      });
+      const json = (await res.json()) as { error?: string };
+      setNotice(res.ok ? "Tag withdrawn." : json.error ?? "Failed.");
       if (res.ok) onChanged();
     } catch {
       setNotice("Network error.");
@@ -302,17 +325,18 @@ function DifficultyPanel({
           <p className="text-xs font-medium text-ink-faint">Suggest a tag</p>
           <div className="mt-2 flex flex-wrap gap-2">
             {DIFFICULTY_TAGS.map((t) => {
-              const already = mine.has(t.slug);
+              const castId = mine.get(t.slug);
+              const already = castId !== undefined;
               return (
                 <button
                   key={t.slug}
                   type="button"
-                  disabled={already || busy === t.slug}
-                  title={t.description}
-                  onClick={() => submit(t.slug)}
+                  disabled={busy === t.slug}
+                  title={already ? "You suggested this. Click to withdraw it." : t.description}
+                  onClick={() => (already ? withdraw(t.slug, castId) : submit(t.slug))}
                   className={`border px-2.5 py-1 text-xs transition-colors ${
                     already
-                      ? "cursor-default border-border bg-surface-2 text-ink-faint"
+                      ? "border-border-strong bg-surface-2 text-ink hover:line-through"
                       : "border-border-strong text-ink-muted hover:bg-surface-2"
                   }`}
                 >
