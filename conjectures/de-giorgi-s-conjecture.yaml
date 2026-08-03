@@ -1,6 +1,73 @@
-claims: []
 id: de-giorgi-s-conjecture
+title: De Giorgi's conjecture
+statement:
+  informal: De Giorgi's conjecture holds in dimension $n ≤ 8$.
+  formal:
+    - language: lean4
+      theorem: DeGiorgi_le_eight
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Paper/DeGiorgi.lean
+      toolchain: v4.32.0
+      category: research open
+      definition_hole: false
+    - language: lean4
+      theorem: DeGiorgi_ge_nine
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Paper/DeGiorgi.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
+    - language: lean4
+      theorem: DeGiorgi_one
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Paper/DeGiorgi.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
+    - language: lean4
+      theorem: DeGiorgi_two
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Paper/DeGiorgi.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
+    - language: lean4
+      theorem: DeGiorgi_three
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Paper/DeGiorgi.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
+    - language: lean4
+      theorem: DeGiorgi_four
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Paper/DeGiorgi.lean
+      toolchain: v4.32.0
+      category: research open
+      definition_hole: false
+    - language: lean4
+      theorem: DeGiorgi_five
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Paper/DeGiorgi.lean
+      toolchain: v4.32.0
+      category: research open
+      definition_hole: false
+    - language: lean4
+      theorem: DeGiorgi_six
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Paper/DeGiorgi.lean
+      toolchain: v4.32.0
+      category: research open
+      definition_hole: false
+    - language: lean4
+      theorem: DeGiorgi_seven
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Paper/DeGiorgi.lean
+      toolchain: v4.32.0
+      category: research open
+      definition_hole: false
+    - language: lean4
+      theorem: DeGiorgi_eight
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Paper/DeGiorgi.lean
+      toolchain: v4.32.0
+      category: research open
+      definition_hole: false
+subject:
+  msc:
+    - "35"
 ids:
+  formal_conjectures: FormalConjectures/Paper/DeGiorgi.lean
   external:
     - label: Ghoussoub, Gui
       url: https://doi.org/10.1007/s002080050196
@@ -10,13 +77,15 @@ ids:
       url: https://doi.org/10.4007/annals.2009.169.41
     - label: Del Pino, Kowalczyk, Wei
       url: http://dx.doi.org/10.4007/annals.2011.174.3.3
-  formal_conjectures: FormalConjectures/Paper/DeGiorgi.lean
 openness_basis:
-  asserted_by: google-deepmind/formal-conjectures
   meaning: no_published_solution_known_to_curator
+  asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
+claims: []
 provenance:
-  - fields:
+  - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Paper/DeGiorgi.lean
+    source: google-deepmind/formal-conjectures
+    fields:
       - title
       - statement.informal
       - statement.formal
@@ -24,73 +93,4 @@ provenance:
       - ids.external
     license: Apache-2.0
     retrieved: 2026-07-31
-    source: google-deepmind/formal-conjectures
     upstream_version: v4.32.0
-    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Paper/DeGiorgi.lean
-statement:
-  formal:
-    - category: research open
-      definition_hole: false
-      language: lean4
-      theorem: DeGiorgi_le_eight
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Paper/DeGiorgi.lean
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: DeGiorgi_ge_nine
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Paper/DeGiorgi.lean
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: DeGiorgi_one
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Paper/DeGiorgi.lean
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: DeGiorgi_two
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Paper/DeGiorgi.lean
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: DeGiorgi_three
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Paper/DeGiorgi.lean
-    - category: research open
-      definition_hole: false
-      language: lean4
-      theorem: DeGiorgi_four
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Paper/DeGiorgi.lean
-    - category: research open
-      definition_hole: false
-      language: lean4
-      theorem: DeGiorgi_five
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Paper/DeGiorgi.lean
-    - category: research open
-      definition_hole: false
-      language: lean4
-      theorem: DeGiorgi_six
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Paper/DeGiorgi.lean
-    - category: research open
-      definition_hole: false
-      language: lean4
-      theorem: DeGiorgi_seven
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Paper/DeGiorgi.lean
-    - category: research open
-      definition_hole: false
-      language: lean4
-      theorem: DeGiorgi_eight
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Paper/DeGiorgi.lean
-  informal: De Giorgi's conjecture holds in dimension $n ≤ 8$.
-subject:
-  msc:
-    - "35"
-title: De Giorgi's conjecture

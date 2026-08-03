@@ -1,63 +1,106 @@
+id: erdos-1148
+title: Erdős Problem 1148
+statement:
+  informal: |-
+    Can every large integer $n$ be written as $n=x^2+y^2-z^2$ with $\max(x^2,y^2,z^2)\leq n$?
+
+    This was proved affirmatively by Chojecki [Ch26], using a Duke-type equidistribution theorem.
+    A Lean formalisation of the reduction (conditional on a Duke-type equidistribution theorem) exists;
+    see the [forum discussion](https://www.erdosproblems.com/forum/thread/1148#post-4849).
+  formal:
+    - language: lean4
+      theorem: erdos_1148
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/1148.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
+    - language: lean4
+      theorem: erdos_1148.variants.weaker
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/1148.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
+subject:
+  msc:
+    - "11"
+  tags:
+    - number theory
+ids:
+  erdos: "1148"
+  oeis:
+    - A390380
+    - A393168
+  formal_conjectures: FormalConjectures/ErdosProblems/1148.lean
+  external:
+    - label: erdosproblems.com/1148
+      url: https://www.erdosproblems.com/1148
+    - label: Bounded Representations by $x^2 + y^2 - z^2$
+      url: https://www.ulam.ai/research/erdos1148-full.pdf
+    - label: "erdosproblems.com forum #1148"
+      url: https://www.erdosproblems.com/forum/thread/1148
+openness_basis:
+  meaning: no_published_solution_known_to_curator
+  asserted_by: erdosproblems.com
+  asserted_on: 2026-05-28
+  note: "Resolved affirmatively. Chojecki (Mar 2026, with GPT-5.4 Pro) proved every sufficiently large n admits n = x²+y²−z² with max{x²,y²,z²} ≤ n via ELMV equidistribution; Tao validated on forum. Largest known exception remains 6563. Conditional Lean reduction at post #4849; full machine-checked resolution awaits ELMV in Mathlib. ~30 forum comments."
 claims:
-  - evidence_tier: published
-    id: erdos-1148-fc-solved
-    notes: Imported from the upstream `research solved` category. The statement is formalized; the proof has not been machine-checked by ConjectureHub.
+  - id: erdos-1148-fc-solved
+    type: proved
+    evidence_tier: published
+    state: active
     recorded_on: 2026-07-31
-    reviewer: google-deepmind/formal-conjectures maintainers
     source:
-      kind: dataset
       title: formal-conjectures marks erdos_1148 as research solved
       url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/1148.lean
-    state: active
+      kind: dataset
+    reviewer: google-deepmind/formal-conjectures maintainers
+    notes: Imported from the upstream `research solved` category. The statement is formalized; the proof has not been machine-checked by ConjectureHub.
+  - id: erdos-1148-chojecki-proof
+    asserted_on: 2026-03-16
     type: proved
-  - asserted_on: 2026-03-16
+    evidence_tier: preprint
+    state: active
+    recorded_on: 2026-08-02
+    source:
+      title: erdosproblems.com forum
+      url: https://www.erdosproblems.com/forum/thread/1148
+      kind: forum
     authors:
       - Przemek Chojecki
-    evidence_tier: preprint
-    id: erdos-1148-chojecki-proof
-    notes: >-
-      Affirmative resolution for all sufficiently large n. Elementary reductions plus Duke-type
-      equidistribution (ELMV 2012) on binary quadratic forms; developed with GPT-5.4 Pro after a
-      flawed GPT-5.2 route. Full note linked from forum (ulam.ai PDF).
     ai_assistance:
       used: yes
       systems:
         - GPT-5.4 Pro
         - Gemini 3.1
       role: discovery
+    notes: Affirmative resolution for all sufficiently large n. Elementary reductions plus Duke-type equidistribution (ELMV 2012) on binary quadratic forms; developed with GPT-5.4 Pro after a flawed GPT-5.2 route. Full note linked from forum (ulam.ai PDF).
+  - id: erdos-1148-tao-plausibility-review
+    asserted_on: 2026-03-17
+    type: partial
+    evidence_tier: community_accepted
+    state: active
     recorded_on: 2026-08-02
     source:
-      kind: forum
-      title: erdosproblems.com forum #1148 — Chojecki proof announcement
+      title: erdosproblems.com forum
       url: https://www.erdosproblems.com/forum/thread/1148
-    state: active
-    type: proved
-  - asserted_on: 2026-03-17
+      kind: forum
     authors:
       - Terence Tao
-    evidence_tier: community_accepted
-    id: erdos-1148-tao-plausibility-review
-    notes: >-
-      Tao judged the ELMV-based approach plausible: Skubenko (1962) and Duke (1988) fall short;
-      ELMV (2012) supplies the first convenient black-box statement. Stronger hyperboloid-density
-      extension would need adapting ELMV proofs, not just quoting them.
-    recorded_on: 2026-08-02
     reviewer: erdosproblems.com forum attribution
-    source:
-      kind: forum
-      title: erdosproblems.com forum #1148 — Terence Tao review
-      url: https://www.erdosproblems.com/forum/thread/1148
-    state: active
+    notes: "Tao judged the ELMV-based approach plausible: Skubenko (1962) and Duke (1988) fall short; ELMV (2012) supplies the first convenient black-box statement. Stronger hyperboloid-density extension would need adapting ELMV proofs, not just quoting them."
+  - id: erdos-1148-conditional-lean-formalization
+    asserted_on: 2026-03-17
     type: partial
-  - asserted_on: 2026-03-17
+    scope: conditional on Duke/ELMV equidistribution
+    evidence_tier: preprint
+    state: active
+    recorded_on: 2026-08-02
+    source:
+      title: erdosproblems.com forum
+      url: https://www.erdosproblems.com/forum/thread/1148#post-4849
+      kind: forum
     authors:
       - Przemek Chojecki
-    evidence_tier: preprint
-    id: erdos-1148-conditional-lean-formalization
-    notes: >-
-      Conditional Lean formalization (post #4849): assumes Duke/ELMV equidistribution as a black
-      box and verifies the rest. Built with Gemini 3.1, Opus 4.6, GPT-5.4, and UlamAI Prover.
-      Tao judged ELMV formalization expert-level and beyond current autoformalization.
     ai_assistance:
       used: yes
       systems:
@@ -66,61 +109,30 @@ claims:
         - GPT-5.4
         - UlamAI Prover
       role: formalization
+    notes: "Conditional Lean formalization (post #4849): assumes Duke/ELMV equidistribution as a black box and verifies the rest. Built with Gemini 3.1, Opus 4.6, GPT-5.4, and UlamAI Prover. Tao judged ELMV formalization expert-level and beyond current autoformalization."
+  - id: erdos-1148-sharper-bound-refinement
+    asserted_on: 2026-05-19
+    type: partial
+    scope: max coordinate bound (½+ε)n for non-square n
+    evidence_tier: preprint
+    state: active
     recorded_on: 2026-08-02
     source:
+      title: erdosproblems.com forum
+      url: https://www.erdosproblems.com/forum/thread/1148
       kind: forum
-      title: erdosproblems.com forum #1148 — post #4849
-      url: https://www.erdosproblems.com/forum/thread/1148#post-4849
-    state: active
-    type: partial
-    scope: conditional on Duke/ELMV equidistribution
-  - asserted_on: 2026-05-19
     authors:
       - Przemek Chojecki
-    evidence_tier: preprint
-    id: erdos-1148-sharper-bound-refinement
-    notes: >-
-      Follow-up (GPT-5.5 Pro assisted): for non-square n, representation with max{x²,y²,z²} <
-      (½+ε)n via Pell-parameter correction matrices and ELMV point-counting. Bound ½ is sharp by
-      normalization identity 1 = x²/n + y²/n − z²/n.
     ai_assistance:
       used: yes
       systems:
         - GPT-5.5 Pro
       role: discovery
-    recorded_on: 2026-08-02
-    source:
-      kind: forum
-      title: erdosproblems.com forum #1148 — (½+ε) bound refinement
-      url: https://www.erdosproblems.com/forum/thread/1148
-    state: active
-    type: partial
-    scope: max coordinate bound (½+ε)n for non-square n
-id: erdos-1148
-ids:
-  erdos: "1148"
-  external:
-    - label: erdosproblems.com/1148
-      url: https://www.erdosproblems.com/1148
-    - label: Bounded Representations by $x^2 + y^2 - z^2$
-      url: https://www.ulam.ai/research/erdos1148-full.pdf
-    - label: "erdosproblems.com forum #1148"
-      url: https://www.erdosproblems.com/forum/thread/1148
-  formal_conjectures: FormalConjectures/ErdosProblems/1148.lean
-  oeis:
-    - A390380
-    - A393168
-openness_basis:
-  asserted_by: erdosproblems.com
-  asserted_on: 2026-05-28
-  meaning: no_published_solution_known_to_curator
-  note: >-
-    Resolved affirmatively. Chojecki (Mar 2026, with GPT-5.4 Pro) proved every sufficiently large n
-    admits n = x²+y²−z² with max{x²,y²,z²} ≤ n via ELMV equidistribution; Tao validated on forum.
-    Largest known exception remains 6563. Conditional Lean reduction at post #4849; full
-    machine-checked resolution awaits ELMV in Mathlib. ~30 forum comments.
+    notes: "Follow-up (GPT-5.5 Pro assisted): for non-square n, representation with max{x²,y²,z²} < (½+ε)n via Pell-parameter correction matrices and ELMV point-counting. Bound ½ is sharp by normalization identity 1 = x²/n + y²/n − z²/n."
 provenance:
-  - fields:
+  - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/1148.lean
+    source: google-deepmind/formal-conjectures
+    fields:
       - title
       - statement.informal
       - statement.formal
@@ -128,10 +140,10 @@ provenance:
       - ids.external
     license: Apache-2.0
     retrieved: 2026-07-31
-    source: google-deepmind/formal-conjectures
     upstream_version: v4.32.0
-    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/1148.lean
-  - fields:
+  - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
+    source: teorth/erdosproblems
+    fields:
       - ids.erdos
       - ids.oeis
       - subject.tags
@@ -139,39 +151,11 @@ provenance:
       - claims
     license: Apache-2.0
     retrieved: 2026-07-31
-    source: teorth/erdosproblems
     upstream_version: d031865128a7ddccd85e8099f0f818211cfc9a41
-    url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
-  - fields:
+  - url: https://www.erdosproblems.com/forum/thread/1148
+    source: erdosproblems.com forum (summaries with links)
+    fields:
       - claims
       - openness_basis.note
     license: CC0-1.0
     retrieved: 2026-08-02
-    source: erdosproblems.com forum (summaries with links)
-    url: https://www.erdosproblems.com/forum/thread/1148
-statement:
-  formal:
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: erdos_1148
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/1148.lean
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: erdos_1148.variants.weaker
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/1148.lean
-  informal: |-
-    Can every large integer $n$ be written as $n=x^2+y^2-z^2$ with $\max(x^2,y^2,z^2)\leq n$?
-
-    This was proved affirmatively by Chojecki [Ch26], using a Duke-type equidistribution theorem.
-    A Lean formalisation of the reduction (conditional on a Duke-type equidistribution theorem) exists;
-    see the [forum discussion](https://www.erdosproblems.com/forum/thread/1148#post-4849).
-subject:
-  msc:
-    - "11"
-  tags:
-    - number theory
-title: Erdős Problem 1148

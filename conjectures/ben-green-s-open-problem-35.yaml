@@ -1,6 +1,45 @@
-claims: []
 id: ben-green-s-open-problem-35
+title: Ben Green's Open Problem 35
+statement:
+  informal: Lower bound for $c(p)$ for $1 < p \le \infty$, improving the known value at $p = 2$ or $p = \infty$.
+  formal:
+    - language: lean4
+      theorem: green_35.lower
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/GreensOpenProblems/35.lean
+      toolchain: v4.32.0
+      category: research open
+      definition_hole: false
+    - language: lean4
+      theorem: green_35.upper
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/GreensOpenProblems/35.lean
+      toolchain: v4.32.0
+      category: research open
+      definition_hole: false
+    - language: lean4
+      theorem: c_2_lower
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/GreensOpenProblems/35.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
+    - language: lean4
+      theorem: c_inf_lower
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/GreensOpenProblems/35.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
+    - language: lean4
+      theorem: c_inf_upper
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/GreensOpenProblems/35.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
+subject:
+  msc:
+    - "26"
+    - "28"
+    - "42"
 ids:
+  formal_conjectures: FormalConjectures/GreensOpenProblems/35.lean
   external:
     - label: Ben Green's Open Problem 35
       url: https://people.maths.ox.ac.uk/greenbj/papers/open-problems.pdf#problem.35
@@ -10,13 +49,15 @@ ids:
       url: https://arxiv.org/abs/1403.7988
     - label: MV10
       url: https://arxiv.org/abs/0907.1379
-  formal_conjectures: FormalConjectures/GreensOpenProblems/35.lean
 openness_basis:
-  asserted_by: google-deepmind/formal-conjectures
   meaning: no_published_solution_known_to_curator
+  asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
+claims: []
 provenance:
-  - fields:
+  - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/GreensOpenProblems/35.lean
+    source: google-deepmind/formal-conjectures
+    fields:
       - title
       - statement.informal
       - statement.formal
@@ -24,45 +65,4 @@ provenance:
       - ids.external
     license: Apache-2.0
     retrieved: 2026-07-31
-    source: google-deepmind/formal-conjectures
     upstream_version: v4.32.0
-    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/GreensOpenProblems/35.lean
-statement:
-  formal:
-    - category: research open
-      definition_hole: false
-      language: lean4
-      theorem: green_35.lower
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/GreensOpenProblems/35.lean
-    - category: research open
-      definition_hole: false
-      language: lean4
-      theorem: green_35.upper
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/GreensOpenProblems/35.lean
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: c_2_lower
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/GreensOpenProblems/35.lean
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: c_inf_lower
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/GreensOpenProblems/35.lean
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: c_inf_upper
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/GreensOpenProblems/35.lean
-  informal: Lower bound for $c(p)$ for $1 < p \le \infty$, improving the known value at $p = 2$ or $p = \infty$.
-subject:
-  msc:
-    - "26"
-    - "28"
-    - "42"
-title: Ben Green's Open Problem 35

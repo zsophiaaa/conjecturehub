@@ -1,8 +1,50 @@
+id: inscribed-square-problem
+title: Inscribed square problem
 aliases:
   - Toeplitz's conjecture
-claims: []
-id: inscribed-square-problem
+statement:
+  informal: |-
+    **Inscribed square problem**
+    Does every Jordan curve admit an inscribed square?
+  formal:
+    - language: lean4
+      theorem: inscribed_square_problem
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/InscribedSquare.lean
+      toolchain: v4.32.0
+      category: research open
+      definition_hole: false
+    - language: lean4
+      theorem: inscribed_rectangle_problem
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/InscribedSquare.lean
+      toolchain: v4.32.0
+      category: research open
+      definition_hole: false
+    - language: lean4
+      theorem: exists_inscribed_rectangle
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/InscribedSquare.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
+    - language: lean4
+      theorem: exists_inscribed_rectangle_of_smooth
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/InscribedSquare.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
+    - language: lean4
+      theorem: exists_inscribed_square_of_C2
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/InscribedSquare.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
+subject:
+  msc:
+    - "51"
 ids:
+  wikidata: Q2264221
+  formal_conjectures: FormalConjectures/Wikipedia/InscribedSquare.lean
+  wikipedia: https://en.wikipedia.org/wiki/Inscribed_square_problem
+  mathworld: https://mathworld.wolfram.com/SquareInscribing.html
   external:
     - label: Wikipedia
       url: https://en.wikipedia.org/wiki/Inscribed_square_problem
@@ -10,19 +52,18 @@ ids:
       url: https://www.researchgate.net/publication/274622766_A_Survey_on_the_Square_Peg_Problem
     - label: arxiv/2005.09193
       url: https://arxiv.org/abs/2005.09193
-  formal_conjectures: FormalConjectures/Wikipedia/InscribedSquare.lean
-  mathworld: https://mathworld.wolfram.com/SquareInscribing.html
-  wikidata: Q2264221
-  wikipedia: https://en.wikipedia.org/wiki/Inscribed_square_problem
 notability:
-  measured_on: 2026-08-03
   wikipedia_language_editions: 15
+  measured_on: 2026-08-03
 openness_basis:
-  asserted_by: google-deepmind/formal-conjectures
   meaning: no_published_solution_known_to_curator
+  asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
+claims: []
 provenance:
-  - fields:
+  - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/InscribedSquare.lean
+    source: google-deepmind/formal-conjectures
+    fields:
       - title
       - statement.informal
       - statement.formal
@@ -30,10 +71,10 @@ provenance:
       - ids.external
     license: Apache-2.0
     retrieved: 2026-07-31
-    source: google-deepmind/formal-conjectures
     upstream_version: v4.32.0
-    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/InscribedSquare.lean
-  - fields:
+  - url: https://www.wikidata.org/wiki/Q2264221
+    source: wikidata
+    fields:
       - aliases
       - ids.wikidata
       - ids.wikipedia
@@ -41,44 +82,3 @@ provenance:
       - notability.wikipedia_language_editions
     license: CC0-1.0
     retrieved: 2026-08-03
-    source: wikidata
-    url: https://www.wikidata.org/wiki/Q2264221
-statement:
-  formal:
-    - category: research open
-      definition_hole: false
-      language: lean4
-      theorem: inscribed_square_problem
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/InscribedSquare.lean
-    - category: research open
-      definition_hole: false
-      language: lean4
-      theorem: inscribed_rectangle_problem
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/InscribedSquare.lean
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: exists_inscribed_rectangle
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/InscribedSquare.lean
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: exists_inscribed_rectangle_of_smooth
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/InscribedSquare.lean
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: exists_inscribed_square_of_C2
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/InscribedSquare.lean
-  informal: |-
-    **Inscribed square problem**
-    Does every Jordan curve admit an inscribed square?
-subject:
-  msc:
-    - "51"
-title: Inscribed square problem

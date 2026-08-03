@@ -1,16 +1,10 @@
-claims:
-  - asserted_on: 2026-04-05
-    evidence_tier: published
-    id: erdos-110-erdos-status
-    recorded_on: 2026-07-31
-    reviewer: teorth/erdosproblems maintainers
-    source:
-      kind: dataset
-      title: erdosproblems.com records this problem as "disproved"
-      url: https://www.erdosproblems.com/110
-    state: active
-    type: disproved
 id: erdos-110
+title: Erdős Problem 110
+subject:
+  tags:
+    - graph theory
+    - chromatic number
+    - cycles
 ids:
   erdos: "110"
   external:
@@ -19,12 +13,26 @@ ids:
     - label: "erdosproblems.com forum #110"
       url: https://www.erdosproblems.com/forum/thread/110
 openness_basis:
+  meaning: no_published_solution_known_to_curator
   asserted_by: erdosproblems.com
   asserted_on: 2026-04-05
-  meaning: no_published_solution_known_to_curator
   note: No formalization is indexed for this problem yet; read the statement upstream.
+claims:
+  - id: erdos-110-erdos-status
+    asserted_on: 2026-04-05
+    type: disproved
+    evidence_tier: published
+    state: active
+    recorded_on: 2026-07-31
+    source:
+      title: erdosproblems.com records this problem as "disproved"
+      url: https://www.erdosproblems.com/110
+      kind: dataset
+    reviewer: teorth/erdosproblems maintainers
 provenance:
-  - fields:
+  - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
+    source: teorth/erdosproblems
+    fields:
       - ids.erdos
       - ids.oeis
       - subject.tags
@@ -32,13 +40,4 @@ provenance:
       - claims
     license: Apache-2.0
     retrieved: 2026-07-31
-    source: teorth/erdosproblems
     upstream_version: d031865128a7ddccd85e8099f0f818211cfc9a41
-    url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
-statement: {}
-subject:
-  tags:
-    - graph theory
-    - chromatic number
-    - cycles
-title: Erdős Problem 110

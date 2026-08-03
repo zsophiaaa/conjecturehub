@@ -1,25 +1,63 @@
-claims: []
 id: erdos-142
+title: Erdős Problem 142
+statement:
+  informal: |-
+    Prove an asymptotic formula for $r_k(N)$, the largest possible size of a subset
+    of $\{1, \dots, N\}$ that does not contain any non-trivial $k$-term arithmetic progression.
+  formal:
+    - language: lean4
+      theorem: erdos_142
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/142.lean
+      toolchain: v4.32.0
+      category: research open
+      definition_hole: false
+    - language: lean4
+      theorem: erdos_142.variants.lower
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/142.lean
+      toolchain: v4.32.0
+      category: research open
+      definition_hole: false
+    - language: lean4
+      theorem: erdos_142.variants.upper
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/142.lean
+      toolchain: v4.32.0
+      category: research open
+      definition_hole: false
+    - language: lean4
+      theorem: erdos_142.variants.three
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/142.lean
+      toolchain: v4.32.0
+      category: research open
+      definition_hole: false
+subject:
+  msc:
+    - "11"
+  tags:
+    - additive combinatorics
+    - arithmetic progressions
 ids:
   erdos: "142"
-  external:
-    - label: erdosproblems.com/142
-      url: https://www.erdosproblems.com/142
-    - label: "erdosproblems.com forum #142"
-      url: https://www.erdosproblems.com/forum/thread/142
-  formal_conjectures: FormalConjectures/ErdosProblems/142.lean
   oeis:
     - A003002
     - A003003
     - A003004
     - A003005
+  formal_conjectures: FormalConjectures/ErdosProblems/142.lean
+  external:
+    - label: erdosproblems.com/142
+      url: https://www.erdosproblems.com/142
+    - label: "erdosproblems.com forum #142"
+      url: https://www.erdosproblems.com/forum/thread/142
 openness_basis:
+  meaning: no_published_solution_known_to_curator
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
-  meaning: no_published_solution_known_to_curator
   note: Categorized upstream as "research open" at v4.32.0.
+claims: []
 provenance:
-  - fields:
+  - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/142.lean
+    source: google-deepmind/formal-conjectures
+    fields:
       - title
       - statement.informal
       - statement.formal
@@ -27,10 +65,10 @@ provenance:
       - ids.external
     license: Apache-2.0
     retrieved: 2026-07-31
-    source: google-deepmind/formal-conjectures
     upstream_version: v4.32.0
-    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/142.lean
-  - fields:
+  - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
+    source: teorth/erdosproblems
+    fields:
       - ids.erdos
       - ids.oeis
       - subject.tags
@@ -38,42 +76,4 @@ provenance:
       - claims
     license: Apache-2.0
     retrieved: 2026-07-31
-    source: teorth/erdosproblems
     upstream_version: d031865128a7ddccd85e8099f0f818211cfc9a41
-    url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
-statement:
-  formal:
-    - category: research open
-      definition_hole: false
-      language: lean4
-      theorem: erdos_142
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/142.lean
-    - category: research open
-      definition_hole: false
-      language: lean4
-      theorem: erdos_142.variants.lower
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/142.lean
-    - category: research open
-      definition_hole: false
-      language: lean4
-      theorem: erdos_142.variants.upper
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/142.lean
-    - category: research open
-      definition_hole: false
-      language: lean4
-      theorem: erdos_142.variants.three
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/142.lean
-  informal: |-
-    Prove an asymptotic formula for $r_k(N)$, the largest possible size of a subset
-    of $\{1, \dots, N\}$ that does not contain any non-trivial $k$-term arithmetic progression.
-subject:
-  msc:
-    - "11"
-  tags:
-    - additive combinatorics
-    - arithmetic progressions
-title: Erdős Problem 142

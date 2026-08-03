@@ -1,94 +1,6 @@
-claims:
-  - evidence_tier: published
-    id: erdos-399-fc-solved
-    notes: Imported from the upstream `research solved` category, which records that the problem is resolved without stating the direction. Direction taken from erdosproblems.com, which records it as "disproved". The statement is formalized; the proof has not been machine-checked by ConjectureHub.
-    recorded_on: 2026-07-31
-    reviewer: google-deepmind/formal-conjectures maintainers
-    source:
-      kind: dataset
-      title: formal-conjectures marks erdos_399 as research solved
-      url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/399.lean
-    state: active
-    type: disproved
-  - asserted_on: 2026-02-04
-    evidence_tier: published
-    id: erdos-399-erdos-status
-    recorded_on: 2026-07-31
-    reviewer: teorth/erdosproblems maintainers
-    source:
-      kind: dataset
-      title: erdosproblems.com records this problem as "disproved"
-      url: https://www.erdosproblems.com/399
-    state: active
-    type: disproved
 id: erdos-399
-ids:
-  erdos: "399"
-  external:
-    - label: erdosproblems.com/399
-      url: https://www.erdosproblems.com/399
-    - label: "erdosproblems.com forum #399"
-      url: https://www.erdosproblems.com/forum/thread/399
-  formal_conjectures: FormalConjectures/ErdosProblems/399.lean
-openness_basis:
-  asserted_by: erdosproblems.com
-  asserted_on: 2026-02-04
-  meaning: no_published_solution_known_to_curator
-provenance:
-  - fields:
-      - title
-      - statement.informal
-      - statement.formal
-      - subject.msc
-      - ids.external
-    license: Apache-2.0
-    retrieved: 2026-07-31
-    source: google-deepmind/formal-conjectures
-    upstream_version: v4.32.0
-    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/399.lean
-  - fields:
-      - ids.erdos
-      - ids.oeis
-      - subject.tags
-      - openness_basis
-      - claims
-    license: Apache-2.0
-    retrieved: 2026-07-31
-    source: teorth/erdosproblems
-    upstream_version: d031865128a7ddccd85e8099f0f818211cfc9a41
-    url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
+title: Erdős Problem 399
 statement:
-  formal:
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: erdos_399
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/399.lean
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: erdos_399.variants.erdos_oblath
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/399.lean
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: erdos_399.variants.pollack_shapiro
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/399.lean
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: erdos_399.variants.cambie
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/399.lean
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: erdos_399.variants.sum_two_squares
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/399.lean
   informal: |-
     Is it true that there are no solutions to `n! = x^k ± y^k` with `x,y,n ∈ ℕ`, `x*y > 1`, and
     `k > 2`?
@@ -99,10 +11,98 @@ statement:
     This is discussed in problem D2 of Guy's collection [Gu04].
 
     This was formalized in Lean by Lu using Codex.
+  formal:
+    - language: lean4
+      theorem: erdos_399
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/399.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
+    - language: lean4
+      theorem: erdos_399.variants.erdos_oblath
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/399.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
+    - language: lean4
+      theorem: erdos_399.variants.pollack_shapiro
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/399.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
+    - language: lean4
+      theorem: erdos_399.variants.cambie
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/399.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
+    - language: lean4
+      theorem: erdos_399.variants.sum_two_squares
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/399.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
 subject:
   msc:
     - "11"
   tags:
     - number theory
     - factorials
-title: Erdős Problem 399
+ids:
+  erdos: "399"
+  formal_conjectures: FormalConjectures/ErdosProblems/399.lean
+  external:
+    - label: erdosproblems.com/399
+      url: https://www.erdosproblems.com/399
+    - label: "erdosproblems.com forum #399"
+      url: https://www.erdosproblems.com/forum/thread/399
+openness_basis:
+  meaning: no_published_solution_known_to_curator
+  asserted_by: erdosproblems.com
+  asserted_on: 2026-02-04
+claims:
+  - id: erdos-399-fc-solved
+    type: disproved
+    evidence_tier: published
+    state: active
+    recorded_on: 2026-07-31
+    source:
+      title: formal-conjectures marks erdos_399 as research solved
+      url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/399.lean
+      kind: dataset
+    reviewer: google-deepmind/formal-conjectures maintainers
+    notes: Imported from the upstream `research solved` category, which records that the problem is resolved without stating the direction. Direction taken from erdosproblems.com, which records it as "disproved". The statement is formalized; the proof has not been machine-checked by ConjectureHub.
+  - id: erdos-399-erdos-status
+    asserted_on: 2026-02-04
+    type: disproved
+    evidence_tier: published
+    state: active
+    recorded_on: 2026-07-31
+    source:
+      title: erdosproblems.com records this problem as "disproved"
+      url: https://www.erdosproblems.com/399
+      kind: dataset
+    reviewer: teorth/erdosproblems maintainers
+provenance:
+  - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/399.lean
+    source: google-deepmind/formal-conjectures
+    fields:
+      - title
+      - statement.informal
+      - statement.formal
+      - subject.msc
+      - ids.external
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    upstream_version: v4.32.0
+  - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
+    source: teorth/erdosproblems
+    fields:
+      - ids.erdos
+      - ids.oeis
+      - subject.tags
+      - openness_basis
+      - claims
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    upstream_version: d031865128a7ddccd85e8099f0f818211cfc9a41

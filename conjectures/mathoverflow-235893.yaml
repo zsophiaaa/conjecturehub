@@ -1,18 +1,43 @@
-claims: []
 id: mathoverflow-235893
+title: Mathoverflow 235893
+statement:
+  informal: |-
+    Assume for $n>1$, $f:\mathbb{R}^n\to\mathbb{R}^n$ is a bijection, where $\mathbb{R}^n$ is equipped
+    with the standard topology. Does the connectedness of (the induced power set map) $f$ imply
+    that of $f^{-1}$?
+  formal:
+    - language: lean4
+      theorem: mathoverflow_235893
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Mathoverflow/235893.lean
+      toolchain: v4.32.0
+      category: research open
+      definition_hole: false
+    - language: lean4
+      theorem: mathoverflow_260589
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Mathoverflow/235893.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
+subject:
+  msc:
+    - "26"
+    - "54"
 ids:
+  formal_conjectures: FormalConjectures/Mathoverflow/235893.lean
   external:
     - label: mathoverflow/235893
       url: https://mathoverflow.net/questions/235893
     - label: "*Willie Wong*"
       url: https://mathoverflow.net/users/3948/willie-wong
-  formal_conjectures: FormalConjectures/Mathoverflow/235893.lean
 openness_basis:
-  asserted_by: google-deepmind/formal-conjectures
   meaning: no_published_solution_known_to_curator
+  asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
+claims: []
 provenance:
-  - fields:
+  - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Mathoverflow/235893.lean
+    source: google-deepmind/formal-conjectures
+    fields:
       - title
       - statement.informal
       - statement.formal
@@ -20,29 +45,4 @@ provenance:
       - ids.external
     license: Apache-2.0
     retrieved: 2026-07-31
-    source: google-deepmind/formal-conjectures
     upstream_version: v4.32.0
-    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Mathoverflow/235893.lean
-statement:
-  formal:
-    - category: research open
-      definition_hole: false
-      language: lean4
-      theorem: mathoverflow_235893
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Mathoverflow/235893.lean
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: mathoverflow_260589
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Mathoverflow/235893.lean
-  informal: |-
-    Assume for $n>1$, $f:\mathbb{R}^n\to\mathbb{R}^n$ is a bijection, where $\mathbb{R}^n$ is equipped
-    with the standard topology. Does the connectedness of (the induced power set map) $f$ imply
-    that of $f^{-1}$?
-subject:
-  msc:
-    - "26"
-    - "54"
-title: Mathoverflow 235893

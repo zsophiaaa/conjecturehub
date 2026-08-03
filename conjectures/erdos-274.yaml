@@ -1,7 +1,41 @@
-claims: []
 id: erdos-274
+title: Erdős Problem 274
+statement:
+  informal: |-
+    If $G$ is a group, can there exist an exact covering of $G$ by more than one coset
+    of different sizes? (i.e. each element is contained in exactly one of the cosets.)
+
+    The conjectured answer is no: in every such exact covering, two of the subgroups have
+    the same cardinality.
+  formal:
+    - language: lean4
+      theorem: erdos_274
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/274.lean
+      toolchain: v4.32.0
+      category: research open
+      definition_hole: false
+    - language: lean4
+      theorem: erdos_274.variants.abelian
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/274.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
+    - language: lean4
+      theorem: herzog_schonheim
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/274.lean
+      toolchain: v4.32.0
+      category: research open
+      definition_hole: false
+subject:
+  msc:
+    - "20"
+  tags:
+    - group theory
+    - covering systems
 ids:
   erdos: "274"
+  formal_conjectures: FormalConjectures/ErdosProblems/274.lean
+  wikipedia: https://en.wikipedia.org/wiki/Herzog%E2%80%93Sch%C3%B6nheim_conjecture
   external:
     - label: erdosproblems.com/274
       url: https://www.erdosproblems.com/274
@@ -17,15 +51,16 @@ ids:
       url: https://arxiv.org/abs/1804.11103
     - label: "erdosproblems.com forum #274"
       url: https://www.erdosproblems.com/forum/thread/274
-  formal_conjectures: FormalConjectures/ErdosProblems/274.lean
-  wikipedia: https://en.wikipedia.org/wiki/Herzog%E2%80%93Sch%C3%B6nheim_conjecture
 openness_basis:
+  meaning: no_published_solution_known_to_curator
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
-  meaning: no_published_solution_known_to_curator
   note: Categorized upstream as "research open" at v4.32.0.
+claims: []
 provenance:
-  - fields:
+  - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/274.lean
+    source: google-deepmind/formal-conjectures
+    fields:
       - title
       - statement.informal
       - statement.formal
@@ -33,10 +68,10 @@ provenance:
       - ids.external
     license: Apache-2.0
     retrieved: 2026-07-31
-    source: google-deepmind/formal-conjectures
     upstream_version: v4.32.0
-    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/274.lean
-  - fields:
+  - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
+    source: teorth/erdosproblems
+    fields:
       - ids.erdos
       - ids.oeis
       - subject.tags
@@ -44,39 +79,4 @@ provenance:
       - claims
     license: Apache-2.0
     retrieved: 2026-07-31
-    source: teorth/erdosproblems
     upstream_version: d031865128a7ddccd85e8099f0f818211cfc9a41
-    url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
-statement:
-  formal:
-    - category: research open
-      definition_hole: false
-      language: lean4
-      theorem: erdos_274
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/274.lean
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: erdos_274.variants.abelian
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/274.lean
-    - category: research open
-      definition_hole: false
-      language: lean4
-      theorem: herzog_schonheim
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/274.lean
-  informal: |-
-    If $G$ is a group, can there exist an exact covering of $G$ by more than one coset
-    of different sizes? (i.e. each element is contained in exactly one of the cosets.)
-
-    The conjectured answer is no: in every such exact covering, two of the subgroups have
-    the same cardinality.
-subject:
-  msc:
-    - "20"
-  tags:
-    - group theory
-    - covering systems
-title: Erdős Problem 274

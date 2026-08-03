@@ -1,22 +1,53 @@
-claims: []
 id: erdos-1003
+title: Erdős Problem 1003
+statement:
+  informal: |-
+    Are there infinitely many solutions to $\phi(n) = \phi(n+1)$, where $\phi$ is the Euler totient
+    function?
+  formal:
+    - language: lean4
+      theorem: erdos_1003
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/1003.lean
+      toolchain: v4.32.0
+      category: research open
+      definition_hole: false
+    - language: lean4
+      theorem: erdos_1003.variants.Icc
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/1003.lean
+      toolchain: v4.32.0
+      category: research open
+      definition_hole: false
+    - language: lean4
+      theorem: erdos_1003.variants.eps87
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/1003.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
+subject:
+  msc:
+    - "11"
+  tags:
+    - number theory
 ids:
   erdos: "1003"
+  oeis:
+    - A001274
+  formal_conjectures: FormalConjectures/ErdosProblems/1003.lean
   external:
     - label: erdosproblems.com/1003
       url: https://www.erdosproblems.com/1003
     - label: "erdosproblems.com forum #1003"
       url: https://www.erdosproblems.com/forum/thread/1003
-  formal_conjectures: FormalConjectures/ErdosProblems/1003.lean
-  oeis:
-    - A001274
 openness_basis:
+  meaning: no_published_solution_known_to_curator
   asserted_by: erdosproblems.com
   asserted_on: 2025-09-08
-  meaning: no_published_solution_known_to_curator
   note: Categorized upstream as "research open" at v4.32.0.
+claims: []
 provenance:
-  - fields:
+  - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/1003.lean
+    source: google-deepmind/formal-conjectures
+    fields:
       - title
       - statement.informal
       - statement.formal
@@ -24,10 +55,10 @@ provenance:
       - ids.external
     license: Apache-2.0
     retrieved: 2026-07-31
-    source: google-deepmind/formal-conjectures
     upstream_version: v4.32.0
-    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/1003.lean
-  - fields:
+  - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
+    source: teorth/erdosproblems
+    fields:
       - ids.erdos
       - ids.oeis
       - subject.tags
@@ -35,35 +66,4 @@ provenance:
       - claims
     license: Apache-2.0
     retrieved: 2026-07-31
-    source: teorth/erdosproblems
     upstream_version: d031865128a7ddccd85e8099f0f818211cfc9a41
-    url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
-statement:
-  formal:
-    - category: research open
-      definition_hole: false
-      language: lean4
-      theorem: erdos_1003
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/1003.lean
-    - category: research open
-      definition_hole: false
-      language: lean4
-      theorem: erdos_1003.variants.Icc
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/1003.lean
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: erdos_1003.variants.eps87
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/1003.lean
-  informal: |-
-    Are there infinitely many solutions to $\phi(n) = \phi(n+1)$, where $\phi$ is the Euler totient
-    function?
-subject:
-  msc:
-    - "11"
-  tags:
-    - number theory
-title: Erdős Problem 1003

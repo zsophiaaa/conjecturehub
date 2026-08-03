@@ -1,32 +1,68 @@
-claims:
-  - asserted_on: 2026-04-06
-    evidence_tier: published
-    id: erdos-633-erdos-status
-    notes: Upstream records this as solved without specifying the direction.
-    recorded_on: 2026-07-31
-    reviewer: teorth/erdosproblems maintainers
-    source:
-      kind: dataset
-      title: erdosproblems.com records this problem as "solved"
-      url: https://www.erdosproblems.com/633
-    state: active
-    type: proved
 id: erdos-633
+title: Erdős Problem 633
+statement:
+  informal: Which triangles can only be decomposed into a square number of congruent triangles?
+  formal:
+    - language: lean4
+      theorem: isCuttable_iff_isSquare_of_linearIndependent
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/633.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
+    - language: lean4
+      theorem: erdos_633
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/633.lean
+      toolchain: v4.32.0
+      category: research open
+      definition_hole: false
+    - language: lean4
+      theorem: IsSimiliCuttable.of_ne_zero_two_three_five
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/633.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
+    - language: lean4
+      theorem: exists_isSimiliCuttable_iff_ne_zero_two_three_five
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/633.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
+subject:
+  msc:
+    - "05"
+    - "51"
+  tags:
+    - geometry
 ids:
   erdos: "633"
+  formal_conjectures: FormalConjectures/ErdosProblems/633.lean
   external:
     - label: erdosproblems.com/633
       url: https://www.erdosproblems.com/633
     - label: "erdosproblems.com forum #633"
       url: https://www.erdosproblems.com/forum/thread/633
-  formal_conjectures: FormalConjectures/ErdosProblems/633.lean
 openness_basis:
+  meaning: no_published_solution_known_to_curator
   asserted_by: erdosproblems.com
   asserted_on: 2026-04-06
-  meaning: no_published_solution_known_to_curator
   note: Categorized upstream as "research open" at v4.32.0.
+claims:
+  - id: erdos-633-erdos-status
+    asserted_on: 2026-04-06
+    type: proved
+    evidence_tier: published
+    state: active
+    recorded_on: 2026-07-31
+    source:
+      title: erdosproblems.com records this problem as "solved"
+      url: https://www.erdosproblems.com/633
+      kind: dataset
+    reviewer: teorth/erdosproblems maintainers
+    notes: Upstream records this as solved without specifying the direction.
 provenance:
-  - fields:
+  - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/633.lean
+    source: google-deepmind/formal-conjectures
+    fields:
       - title
       - statement.informal
       - statement.formal
@@ -34,10 +70,10 @@ provenance:
       - ids.external
     license: Apache-2.0
     retrieved: 2026-07-31
-    source: google-deepmind/formal-conjectures
     upstream_version: v4.32.0
-    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/633.lean
-  - fields:
+  - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
+    source: teorth/erdosproblems
+    fields:
       - ids.erdos
       - ids.oeis
       - subject.tags
@@ -45,40 +81,4 @@ provenance:
       - claims
     license: Apache-2.0
     retrieved: 2026-07-31
-    source: teorth/erdosproblems
     upstream_version: d031865128a7ddccd85e8099f0f818211cfc9a41
-    url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
-statement:
-  formal:
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: isCuttable_iff_isSquare_of_linearIndependent
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/633.lean
-    - category: research open
-      definition_hole: false
-      language: lean4
-      theorem: erdos_633
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/633.lean
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: IsSimiliCuttable.of_ne_zero_two_three_five
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/633.lean
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: exists_isSimiliCuttable_iff_ne_zero_two_three_five
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/633.lean
-  informal: Which triangles can only be decomposed into a square number of congruent triangles?
-subject:
-  msc:
-    - "05"
-    - "51"
-  tags:
-    - geometry
-title: Erdős Problem 633

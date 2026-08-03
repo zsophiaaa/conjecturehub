@@ -1,43 +1,6 @@
-claims: []
 id: bugeaud-collection-of-conjectures-and-open-questions-p-adic-littlewood-conjectur
-ids:
-  formal_conjectures: FormalConjectures/Books/BugeaudDistributionModuloOne/Problem10_8.lean
-openness_basis:
-  asserted_by: google-deepmind/formal-conjectures
-  meaning: no_published_solution_known_to_curator
-  note: Categorized upstream as "research open" at v4.32.0.
-provenance:
-  - fields:
-      - title
-      - statement.informal
-      - statement.formal
-      - subject.msc
-      - ids.external
-    license: Apache-2.0
-    retrieved: 2026-07-31
-    source: google-deepmind/formal-conjectures
-    upstream_version: v4.32.0
-    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Books/BugeaudDistributionModuloOne/Problem10_8.lean
+title: "Bugeaud Collection of Conjectures and Open Questions: $p$-adic Littlewood Conjecture"
 statement:
-  formal:
-    - category: research open
-      definition_hole: false
-      language: lean4
-      theorem: problem_10_8
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Books/BugeaudDistributionModuloOne/Problem10_8.lean
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: problem_10_8.variants.quadratic
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Books/BugeaudDistributionModuloOne/Problem10_8.lean
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: problem_10_8.variants.exceptional_set_dimH_zero
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Books/BugeaudDistributionModuloOne/Problem10_8.lean
   informal: |-
     Problem 10.8 ($p$-adic Littlewood conjecture). For every real number $\xi$ and
     every prime number $p$,
@@ -45,7 +8,44 @@ statement:
     where $\lVert \cdot \rVert$ denotes the distance to the nearest integer and
     $|\cdot|_p$ denotes the $p$-adic absolute value. Posed by de Mathan and
     Teulié [dMT04].
+  formal:
+    - language: lean4
+      theorem: problem_10_8
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Books/BugeaudDistributionModuloOne/Problem10_8.lean
+      toolchain: v4.32.0
+      category: research open
+      definition_hole: false
+    - language: lean4
+      theorem: problem_10_8.variants.quadratic
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Books/BugeaudDistributionModuloOne/Problem10_8.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
+    - language: lean4
+      theorem: problem_10_8.variants.exceptional_set_dimH_zero
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Books/BugeaudDistributionModuloOne/Problem10_8.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
 subject:
   msc:
     - "11"
-title: "Bugeaud Collection of Conjectures and Open Questions: $p$-adic Littlewood Conjecture"
+ids:
+  formal_conjectures: FormalConjectures/Books/BugeaudDistributionModuloOne/Problem10_8.lean
+openness_basis:
+  meaning: no_published_solution_known_to_curator
+  asserted_by: google-deepmind/formal-conjectures
+  note: Categorized upstream as "research open" at v4.32.0.
+claims: []
+provenance:
+  - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Books/BugeaudDistributionModuloOne/Problem10_8.lean
+    source: google-deepmind/formal-conjectures
+    fields:
+      - title
+      - statement.informal
+      - statement.formal
+      - subject.msc
+      - ids.external
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    upstream_version: v4.32.0

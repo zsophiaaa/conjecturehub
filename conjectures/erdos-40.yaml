@@ -1,20 +1,41 @@
-claims: []
 id: erdos-40
+title: Erdős Problem 40
+statement:
+  informal: |-
+    For what functions $g(N) → \infty$ is it true that
+    $$\lvert A\cap \{1,\ldots,N\}\rvert \gg \frac{N^{1/2}}{g(N)}$$
+    implies $\limsup 1_A\ast 1_A(n)=\infty$?
+  formal:
+    - language: lean4
+      theorem: erdos_40
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/40.lean
+      toolchain: v4.32.0
+      category: research open
+      definition_hole: false
+subject:
+  msc:
+    - "11"
+  tags:
+    - number theory
+    - additive basis
 ids:
   erdos: "40"
+  formal_conjectures: FormalConjectures/ErdosProblems/40.lean
   external:
     - label: erdosproblems.com/40
       url: https://www.erdosproblems.com/40
     - label: "erdosproblems.com forum #40"
       url: https://www.erdosproblems.com/forum/thread/40
-  formal_conjectures: FormalConjectures/ErdosProblems/40.lean
 openness_basis:
+  meaning: no_published_solution_known_to_curator
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
-  meaning: no_published_solution_known_to_curator
   note: Categorized upstream as "research open" at v4.32.0.
+claims: []
 provenance:
-  - fields:
+  - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/40.lean
+    source: google-deepmind/formal-conjectures
+    fields:
       - title
       - statement.informal
       - statement.formal
@@ -22,10 +43,10 @@ provenance:
       - ids.external
     license: Apache-2.0
     retrieved: 2026-07-31
-    source: google-deepmind/formal-conjectures
     upstream_version: v4.32.0
-    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/40.lean
-  - fields:
+  - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
+    source: teorth/erdosproblems
+    fields:
       - ids.erdos
       - ids.oeis
       - subject.tags
@@ -33,25 +54,4 @@ provenance:
       - claims
     license: Apache-2.0
     retrieved: 2026-07-31
-    source: teorth/erdosproblems
     upstream_version: d031865128a7ddccd85e8099f0f818211cfc9a41
-    url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
-statement:
-  formal:
-    - category: research open
-      definition_hole: false
-      language: lean4
-      theorem: erdos_40
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/40.lean
-  informal: |-
-    For what functions $g(N) → \infty$ is it true that
-    $$\lvert A\cap \{1,\ldots,N\}\rvert \gg \frac{N^{1/2}}{g(N)}$$
-    implies $\limsup 1_A\ast 1_A(n)=\infty$?
-subject:
-  msc:
-    - "11"
-  tags:
-    - number theory
-    - additive basis
-title: Erdős Problem 40

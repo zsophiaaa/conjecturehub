@@ -1,19 +1,42 @@
-claims: []
 id: balanced-prime-conjecture
+title: Balanced prime conjecture
+statement:
+  informal: |-
+    Let $p_k$ be the $k$-th prime number.
+    Are there infinitely many $n$ such that $(p_n + p_{n+2}) / 2$ is prime?
+  formal:
+    - language: lean4
+      theorem: balanced_primes
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/BalancedPrimes.lean
+      toolchain: v4.32.0
+      category: research open
+      definition_hole: false
+    - language: lean4
+      theorem: balanced_primes_order
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/BalancedPrimes.lean
+      toolchain: v4.32.0
+      category: research open
+      definition_hole: false
+subject:
+  msc:
+    - "11"
 ids:
+  formal_conjectures: FormalConjectures/Wikipedia/BalancedPrimes.lean
+  wikipedia: https://en.wikipedia.org/wiki/Balanced_prime
   external:
     - label: Wikipedia
       url: https://en.wikipedia.org/wiki/Balanced_prime
     - label: OEIS A6562
       url: https://oeis.org/A6562
-  formal_conjectures: FormalConjectures/Wikipedia/BalancedPrimes.lean
-  wikipedia: https://en.wikipedia.org/wiki/Balanced_prime
 openness_basis:
-  asserted_by: google-deepmind/formal-conjectures
   meaning: no_published_solution_known_to_curator
+  asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
+claims: []
 provenance:
-  - fields:
+  - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/BalancedPrimes.lean
+    source: google-deepmind/formal-conjectures
+    fields:
       - title
       - statement.informal
       - statement.formal
@@ -21,27 +44,4 @@ provenance:
       - ids.external
     license: Apache-2.0
     retrieved: 2026-07-31
-    source: google-deepmind/formal-conjectures
     upstream_version: v4.32.0
-    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/BalancedPrimes.lean
-statement:
-  formal:
-    - category: research open
-      definition_hole: false
-      language: lean4
-      theorem: balanced_primes
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/BalancedPrimes.lean
-    - category: research open
-      definition_hole: false
-      language: lean4
-      theorem: balanced_primes_order
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/BalancedPrimes.lean
-  informal: |-
-    Let $p_k$ be the $k$-th prime number.
-    Are there infinitely many $n$ such that $(p_n + p_{n+2}) / 2$ is prime?
-subject:
-  msc:
-    - "11"
-title: Balanced prime conjecture

@@ -1,78 +1,6 @@
-claims:
-  - asserted_on: 2025-08-31
-    evidence_tier: published
-    id: erdos-123-erdos-status
-    recorded_on: 2026-07-31
-    reviewer: teorth/erdosproblems maintainers
-    source:
-      kind: dataset
-      title: erdosproblems.com records this problem as "proved"
-      url: https://www.erdosproblems.com/123
-    state: active
-    type: proved
 id: erdos-123
-ids:
-  erdos: "123"
-  external:
-    - label: erdosproblems.com/123
-      url: https://www.erdosproblems.com/123
-    - label: "erdosproblems.com forum #123"
-      url: https://www.erdosproblems.com/forum/thread/123
-  formal_conjectures: FormalConjectures/ErdosProblems/123.lean
-openness_basis:
-  asserted_by: erdosproblems.com
-  asserted_on: 2025-08-31
-  meaning: no_published_solution_known_to_curator
-  note: Categorized upstream as "research open" at v4.32.0.
-provenance:
-  - fields:
-      - title
-      - statement.informal
-      - statement.formal
-      - subject.msc
-      - ids.external
-    license: Apache-2.0
-    retrieved: 2026-07-31
-    source: google-deepmind/formal-conjectures
-    upstream_version: v4.32.0
-    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/123.lean
-  - fields:
-      - ids.erdos
-      - ids.oeis
-      - subject.tags
-      - openness_basis
-      - claims
-    license: Apache-2.0
-    retrieved: 2026-07-31
-    source: teorth/erdosproblems
-    upstream_version: d031865128a7ddccd85e8099f0f818211cfc9a41
-    url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
+title: Erdős Problem 123
 statement:
-  formal:
-    - category: research open
-      definition_hole: false
-      language: lean4
-      theorem: erdos_123
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/123.lean
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: erdos_123.variants.erdos_lewin_3_5_7
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/123.lean
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: erdos_123.variants.powers_2_3
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/123.lean
-    - category: research open
-      definition_hole: false
-      language: lean4
-      theorem: erdos_123.variants.powers_2_3_5_snug
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/123.lean
   informal: |-
     **Erdős Problem #123**
 
@@ -84,9 +12,81 @@ statement:
 
     Note: For this not to reduce to the two-integer case, we need the integers
     to be greater than one and distinct.
+  formal:
+    - language: lean4
+      theorem: erdos_123
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/123.lean
+      toolchain: v4.32.0
+      category: research open
+      definition_hole: false
+    - language: lean4
+      theorem: erdos_123.variants.erdos_lewin_3_5_7
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/123.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
+    - language: lean4
+      theorem: erdos_123.variants.powers_2_3
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/123.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
+    - language: lean4
+      theorem: erdos_123.variants.powers_2_3_5_snug
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/123.lean
+      toolchain: v4.32.0
+      category: research open
+      definition_hole: false
 subject:
   msc:
     - "11"
   tags:
     - number theory
-title: Erdős Problem 123
+ids:
+  erdos: "123"
+  formal_conjectures: FormalConjectures/ErdosProblems/123.lean
+  external:
+    - label: erdosproblems.com/123
+      url: https://www.erdosproblems.com/123
+    - label: "erdosproblems.com forum #123"
+      url: https://www.erdosproblems.com/forum/thread/123
+openness_basis:
+  meaning: no_published_solution_known_to_curator
+  asserted_by: erdosproblems.com
+  asserted_on: 2025-08-31
+  note: Categorized upstream as "research open" at v4.32.0.
+claims:
+  - id: erdos-123-erdos-status
+    asserted_on: 2025-08-31
+    type: proved
+    evidence_tier: published
+    state: active
+    recorded_on: 2026-07-31
+    source:
+      title: erdosproblems.com records this problem as "proved"
+      url: https://www.erdosproblems.com/123
+      kind: dataset
+    reviewer: teorth/erdosproblems maintainers
+provenance:
+  - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/123.lean
+    source: google-deepmind/formal-conjectures
+    fields:
+      - title
+      - statement.informal
+      - statement.formal
+      - subject.msc
+      - ids.external
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    upstream_version: v4.32.0
+  - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
+    source: teorth/erdosproblems
+    fields:
+      - ids.erdos
+      - ids.oeis
+      - subject.tags
+      - openness_basis
+      - claims
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    upstream_version: d031865128a7ddccd85e8099f0f818211cfc9a41

@@ -1,13 +1,27 @@
-claims: []
 id: erdos-82
+title: Erdős Problem 82
+statement:
+  informal: $F(n) / \log n \to \infty as n \to \infty$
+  formal:
+    - language: lean4
+      theorem: erdos_82
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/82.lean
+      toolchain: v4.32.0
+      category: research open
+      definition_hole: false
+    - language: lean4
+      theorem: erdos_82.variants.F_upper_bound
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/82.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
+subject:
+  msc:
+    - "05"
+  tags:
+    - graph theory
 ids:
   erdos: "82"
-  external:
-    - label: erdosproblems.com/82
-      url: https://www.erdosproblems.com/82
-    - label: "erdosproblems.com forum #82"
-      url: https://www.erdosproblems.com/forum/thread/82
-  formal_conjectures: FormalConjectures/ErdosProblems/82.lean
   oeis:
     - A120414
     - A390256
@@ -23,13 +37,22 @@ ids:
     - A394574
     - A394930
     - A394933
+  formal_conjectures: FormalConjectures/ErdosProblems/82.lean
+  external:
+    - label: erdosproblems.com/82
+      url: https://www.erdosproblems.com/82
+    - label: "erdosproblems.com forum #82"
+      url: https://www.erdosproblems.com/forum/thread/82
 openness_basis:
+  meaning: no_published_solution_known_to_curator
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
-  meaning: no_published_solution_known_to_curator
   note: Categorized upstream as "research open" at v4.32.0.
+claims: []
 provenance:
-  - fields:
+  - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/82.lean
+    source: google-deepmind/formal-conjectures
+    fields:
       - title
       - statement.informal
       - statement.formal
@@ -37,10 +60,10 @@ provenance:
       - ids.external
     license: Apache-2.0
     retrieved: 2026-07-31
-    source: google-deepmind/formal-conjectures
     upstream_version: v4.32.0
-    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/82.lean
-  - fields:
+  - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
+    source: teorth/erdosproblems
+    fields:
       - ids.erdos
       - ids.oeis
       - subject.tags
@@ -48,27 +71,4 @@ provenance:
       - claims
     license: Apache-2.0
     retrieved: 2026-07-31
-    source: teorth/erdosproblems
     upstream_version: d031865128a7ddccd85e8099f0f818211cfc9a41
-    url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
-statement:
-  formal:
-    - category: research open
-      definition_hole: false
-      language: lean4
-      theorem: erdos_82
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/82.lean
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: erdos_82.variants.F_upper_bound
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/82.lean
-  informal: $F(n) / \log n \to \infty as n \to \infty$
-subject:
-  msc:
-    - "05"
-  tags:
-    - graph theory
-title: Erdős Problem 82

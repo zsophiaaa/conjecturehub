@@ -1,19 +1,43 @@
-claims: []
 id: conjectures-in-complexity-theory
+title: Conjectures in Complexity Theory
+statement:
+  informal: |-
+    **P ≠ NP**:
+
+    The conjecture that the complexity classes P and NP are not equal.
+  formal:
+    - language: lean4
+      theorem: P_ne_NP
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Millenium/PvsNP.lean
+      toolchain: v4.32.0
+      category: research open
+      definition_hole: false
+    - language: lean4
+      theorem: NP_ne_coNP
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Millenium/PvsNP.lean
+      toolchain: v4.32.0
+      category: research open
+      definition_hole: false
+subject:
+  msc:
+    - "68"
 ids:
+  formal_conjectures: FormalConjectures/Millenium/PvsNP.lean
+  wikipedia: https://en.wikipedia.org/wiki/P_versus_NP_problem
   external:
     - label: Wikipedia
       url: https://en.wikipedia.org/wiki/P_versus_NP_problem
     - label: The Clay Institute
       url: https://www.claymath.org/millennium/p-vs-np/
-  formal_conjectures: FormalConjectures/Millenium/PvsNP.lean
-  wikipedia: https://en.wikipedia.org/wiki/P_versus_NP_problem
 openness_basis:
-  asserted_by: google-deepmind/formal-conjectures
   meaning: no_published_solution_known_to_curator
+  asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
+claims: []
 provenance:
-  - fields:
+  - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Millenium/PvsNP.lean
+    source: google-deepmind/formal-conjectures
+    fields:
       - title
       - statement.informal
       - statement.formal
@@ -21,28 +45,4 @@ provenance:
       - ids.external
     license: Apache-2.0
     retrieved: 2026-07-31
-    source: google-deepmind/formal-conjectures
     upstream_version: v4.32.0
-    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Millenium/PvsNP.lean
-statement:
-  formal:
-    - category: research open
-      definition_hole: false
-      language: lean4
-      theorem: P_ne_NP
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Millenium/PvsNP.lean
-    - category: research open
-      definition_hole: false
-      language: lean4
-      theorem: NP_ne_coNP
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Millenium/PvsNP.lean
-  informal: |-
-    **P ≠ NP**:
-
-    The conjecture that the complexity classes P and NP are not equal.
-subject:
-  msc:
-    - "68"
-title: Conjectures in Complexity Theory

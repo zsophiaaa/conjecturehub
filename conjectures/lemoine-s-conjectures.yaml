@@ -1,17 +1,38 @@
-claims: []
 id: lemoine-s-conjectures
+title: Lemoine's conjectures
+statement:
+  informal: For all odd integers $n ≥ 7$ there are prime numbers $p,q$ such that $n = p+2q$.
+  formal:
+    - language: lean4
+      theorem: lemoine_conjecture
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/Lemoine.lean
+      toolchain: v4.32.0
+      category: research open
+      definition_hole: false
+    - language: lean4
+      theorem: lemoine_conjecture_extension
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/Lemoine.lean
+      toolchain: v4.32.0
+      category: research open
+      definition_hole: false
+subject:
+  msc:
+    - "11"
 ids:
+  formal_conjectures: FormalConjectures/Wikipedia/Lemoine.lean
+  wikipedia: https://en.wikipedia.org/wiki/%C3%89mile_Lemoine#Lemoine's_conjecture_and_extensions
   external:
     - label: Wikipedia
       url: https://en.wikipedia.org/wiki/%C3%89mile_Lemoine#Lemoine's_conjecture_and_extensions
-  formal_conjectures: FormalConjectures/Wikipedia/Lemoine.lean
-  wikipedia: https://en.wikipedia.org/wiki/%C3%89mile_Lemoine#Lemoine's_conjecture_and_extensions
 openness_basis:
-  asserted_by: google-deepmind/formal-conjectures
   meaning: no_published_solution_known_to_curator
+  asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
+claims: []
 provenance:
-  - fields:
+  - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/Lemoine.lean
+    source: google-deepmind/formal-conjectures
+    fields:
       - title
       - statement.informal
       - statement.formal
@@ -19,25 +40,4 @@ provenance:
       - ids.external
     license: Apache-2.0
     retrieved: 2026-07-31
-    source: google-deepmind/formal-conjectures
     upstream_version: v4.32.0
-    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/Lemoine.lean
-statement:
-  formal:
-    - category: research open
-      definition_hole: false
-      language: lean4
-      theorem: lemoine_conjecture
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/Lemoine.lean
-    - category: research open
-      definition_hole: false
-      language: lean4
-      theorem: lemoine_conjecture_extension
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/Lemoine.lean
-  informal: For all odd integers $n ≥ 7$ there are prime numbers $p,q$ such that $n = p+2q$.
-subject:
-  msc:
-    - "11"
-title: Lemoine's conjectures

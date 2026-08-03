@@ -1,5 +1,10 @@
-claims: []
 id: erdos-1177
+title: Erdős Problem 1177
+subject:
+  tags:
+    - set theory
+    - chromatic number
+    - hypergraphs
 ids:
   erdos: "1177"
   external:
@@ -8,12 +13,15 @@ ids:
     - label: "erdosproblems.com forum #1177"
       url: https://www.erdosproblems.com/forum/thread/1177
 openness_basis:
+  meaning: no_published_solution_known_to_curator
   asserted_by: erdosproblems.com
   asserted_on: 2026-01-23
-  meaning: no_published_solution_known_to_curator
   note: No formalization is indexed for this problem yet; read the statement upstream.
+claims: []
 provenance:
-  - fields:
+  - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
+    source: teorth/erdosproblems
+    fields:
       - ids.erdos
       - ids.oeis
       - subject.tags
@@ -21,13 +29,4 @@ provenance:
       - claims
     license: Apache-2.0
     retrieved: 2026-07-31
-    source: teorth/erdosproblems
     upstream_version: d031865128a7ddccd85e8099f0f818211cfc9a41
-    url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
-statement: {}
-subject:
-  tags:
-    - set theory
-    - chromatic number
-    - hypergraphs
-title: Erdős Problem 1177

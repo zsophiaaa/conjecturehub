@@ -1,24 +1,41 @@
+id: beal-conjecture
+title: Beal conjecture
 aliases:
   - Beal's conjecture
-claims: []
-id: beal-conjecture
+statement:
+  informal: |-
+    The **Beal Conjecture**: if we are given positive integers $A, B, C, x, y, z$ such that
+    $x, y, z > 2$ and $A^x + B^y = C^z$ then $A, B, C$ have a common divisor.
+  formal:
+    - language: lean4
+      theorem: beal_conjecture
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/BealConjecture.lean
+      toolchain: v4.32.0
+      category: research open
+      definition_hole: false
+subject:
+  msc:
+    - "11"
 ids:
+  wikidata: Q508173
+  formal_conjectures: FormalConjectures/Wikipedia/BealConjecture.lean
+  wikipedia: https://en.wikipedia.org/wiki/Beal_conjecture
+  mathworld: https://mathworld.wolfram.com/BealsConjecture.html
   external:
     - label: Wikipedia
       url: https://en.wikipedia.org/wiki/Beal_conjecture
-  formal_conjectures: FormalConjectures/Wikipedia/BealConjecture.lean
-  mathworld: https://mathworld.wolfram.com/BealsConjecture.html
-  wikidata: Q508173
-  wikipedia: https://en.wikipedia.org/wiki/Beal_conjecture
 notability:
-  measured_on: 2026-08-03
   wikipedia_language_editions: 17
+  measured_on: 2026-08-03
 openness_basis:
-  asserted_by: google-deepmind/formal-conjectures
   meaning: no_published_solution_known_to_curator
+  asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
+claims: []
 provenance:
-  - fields:
+  - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/BealConjecture.lean
+    source: google-deepmind/formal-conjectures
+    fields:
       - title
       - statement.informal
       - statement.formal
@@ -26,10 +43,10 @@ provenance:
       - ids.external
     license: Apache-2.0
     retrieved: 2026-07-31
-    source: google-deepmind/formal-conjectures
     upstream_version: v4.32.0
-    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/BealConjecture.lean
-  - fields:
+  - url: https://www.wikidata.org/wiki/Q508173
+    source: wikidata
+    fields:
       - aliases
       - ids.wikidata
       - ids.wikipedia
@@ -37,20 +54,3 @@ provenance:
       - notability.wikipedia_language_editions
     license: CC0-1.0
     retrieved: 2026-08-03
-    source: wikidata
-    url: https://www.wikidata.org/wiki/Q508173
-statement:
-  formal:
-    - category: research open
-      definition_hole: false
-      language: lean4
-      theorem: beal_conjecture
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/BealConjecture.lean
-  informal: |-
-    The **Beal Conjecture**: if we are given positive integers $A, B, C, x, y, z$ such that
-    $x, y, z > 2$ and $A^x + B^y = C^z$ then $A, B, C$ have a common divisor.
-subject:
-  msc:
-    - "11"
-title: Beal conjecture

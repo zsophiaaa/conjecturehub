@@ -1,33 +1,39 @@
-claims:
-  - asserted_on: 2025-08-31
-    evidence_tier: published
-    id: erdos-438-erdos-status
-    notes: Upstream records this as solved without specifying the direction.
-    recorded_on: 2026-07-31
-    reviewer: teorth/erdosproblems maintainers
-    source:
-      kind: dataset
-      title: erdosproblems.com records this problem as "solved"
-      url: https://www.erdosproblems.com/438
-    state: active
-    type: proved
 id: erdos-438
+title: Erdős Problem 438
+subject:
+  tags:
+    - number theory
 ids:
   erdos: "438"
+  oeis:
+    - A363069
   external:
     - label: erdosproblems.com/438
       url: https://www.erdosproblems.com/438
     - label: "erdosproblems.com forum #438"
       url: https://www.erdosproblems.com/forum/thread/438
-  oeis:
-    - A363069
 openness_basis:
+  meaning: no_published_solution_known_to_curator
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
-  meaning: no_published_solution_known_to_curator
   note: No formalization is indexed for this problem yet; read the statement upstream.
+claims:
+  - id: erdos-438-erdos-status
+    asserted_on: 2025-08-31
+    type: proved
+    evidence_tier: published
+    state: active
+    recorded_on: 2026-07-31
+    source:
+      title: erdosproblems.com records this problem as "solved"
+      url: https://www.erdosproblems.com/438
+      kind: dataset
+    reviewer: teorth/erdosproblems maintainers
+    notes: Upstream records this as solved without specifying the direction.
 provenance:
-  - fields:
+  - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
+    source: teorth/erdosproblems
+    fields:
       - ids.erdos
       - ids.oeis
       - subject.tags
@@ -35,11 +41,4 @@ provenance:
       - claims
     license: Apache-2.0
     retrieved: 2026-07-31
-    source: teorth/erdosproblems
     upstream_version: d031865128a7ddccd85e8099f0f818211cfc9a41
-    url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
-statement: {}
-subject:
-  tags:
-    - number theory
-title: Erdős Problem 438

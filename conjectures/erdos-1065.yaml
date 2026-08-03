@@ -1,58 +1,6 @@
-claims: []
 id: erdos-1065
-ids:
-  erdos: "1065"
-  external:
-    - label: erdosproblems.com/1065
-      url: https://www.erdosproblems.com/1065
-    - label: "erdosproblems.com forum #1065"
-      url: https://www.erdosproblems.com/forum/thread/1065
-  formal_conjectures: FormalConjectures/ErdosProblems/1065.lean
-  oeis:
-    - A074781
-    - A339465
-openness_basis:
-  asserted_by: erdosproblems.com
-  asserted_on: 2025-10-01
-  meaning: no_published_solution_known_to_curator
-  note: Categorized upstream as "research open" at v4.32.0.
-provenance:
-  - fields:
-      - title
-      - statement.informal
-      - statement.formal
-      - subject.msc
-      - ids.external
-    license: Apache-2.0
-    retrieved: 2026-07-31
-    source: google-deepmind/formal-conjectures
-    upstream_version: v4.32.0
-    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/1065.lean
-  - fields:
-      - ids.erdos
-      - ids.oeis
-      - subject.tags
-      - openness_basis
-      - claims
-    license: Apache-2.0
-    retrieved: 2026-07-31
-    source: teorth/erdosproblems
-    upstream_version: d031865128a7ddccd85e8099f0f818211cfc9a41
-    url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
+title: Erdős Problem 1065
 statement:
-  formal:
-    - category: research open
-      definition_hole: false
-      language: lean4
-      theorem: erdos_1065.parts.i
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/1065.lean
-    - category: research open
-      definition_hole: false
-      language: lean4
-      theorem: erdos_1065.parts.ii
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/1065.lean
   informal: |-
     Are there infinitely many primes $p$ such that $p = 2^k * q + 1$
     for some prime $q$ and $k ≥ 0$?
@@ -60,9 +8,61 @@ statement:
     This is mentioned as B46
     in [Unsolved Problems in Number Theory](https://doi.org/10.1007/978-0-387-26677-0)
     by *Richard K. Guy*
+  formal:
+    - language: lean4
+      theorem: erdos_1065.parts.i
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/1065.lean
+      toolchain: v4.32.0
+      category: research open
+      definition_hole: false
+    - language: lean4
+      theorem: erdos_1065.parts.ii
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/1065.lean
+      toolchain: v4.32.0
+      category: research open
+      definition_hole: false
 subject:
   msc:
     - "11"
   tags:
     - number theory
-title: Erdős Problem 1065
+ids:
+  erdos: "1065"
+  oeis:
+    - A074781
+    - A339465
+  formal_conjectures: FormalConjectures/ErdosProblems/1065.lean
+  external:
+    - label: erdosproblems.com/1065
+      url: https://www.erdosproblems.com/1065
+    - label: "erdosproblems.com forum #1065"
+      url: https://www.erdosproblems.com/forum/thread/1065
+openness_basis:
+  meaning: no_published_solution_known_to_curator
+  asserted_by: erdosproblems.com
+  asserted_on: 2025-10-01
+  note: Categorized upstream as "research open" at v4.32.0.
+claims: []
+provenance:
+  - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/1065.lean
+    source: google-deepmind/formal-conjectures
+    fields:
+      - title
+      - statement.informal
+      - statement.formal
+      - subject.msc
+      - ids.external
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    upstream_version: v4.32.0
+  - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
+    source: teorth/erdosproblems
+    fields:
+      - ids.erdos
+      - ids.oeis
+      - subject.tags
+      - openness_basis
+      - claims
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    upstream_version: d031865128a7ddccd85e8099f0f818211cfc9a41

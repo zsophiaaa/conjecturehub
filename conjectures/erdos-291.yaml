@@ -1,22 +1,74 @@
-claims: []
 id: erdos-291
+title: Erdős Problem 291
+statement:
+  informal: |-
+    Let $n\geq 1$ and define $L_n$ to be the least common multiple of $\{1,\ldots,n\}$ and $a_n$ by
+    $\sum_{1\leq k\leq n}\frac{1}{k}=\frac{a_n}{L_n}$.
+
+    Is it true that $(a_n,L_n)=1$ occurs for infinitely many $n$?
+  formal:
+    - language: lean4
+      theorem: erdos_291.parts.i
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/291.lean
+      toolchain: v4.32.0
+      category: research open
+      definition_hole: false
+    - language: lean4
+      theorem: erdos_291.parts.ii
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/291.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
+    - language: lean4
+      theorem: erdos_291.variants.steinerberger_generalization
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/291.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
+    - language: lean4
+      theorem: erdos_291.variants.shiu_heuristic_asymptotic
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/291.lean
+      toolchain: v4.32.0
+      category: research open
+      definition_hole: false
+    - language: lean4
+      theorem: erdos_291.variants.shiu_heuristic_density_zero
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/291.lean
+      toolchain: v4.32.0
+      category: research open
+      definition_hole: false
+    - language: lean4
+      theorem: erdos_291.variants.wu_yan
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/291.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
+subject:
+  msc:
+    - "11"
+  tags:
+    - number theory
+    - unit fractions
 ids:
   erdos: "291"
+  oeis:
+    - A110566
+  formal_conjectures: FormalConjectures/ErdosProblems/291.lean
   external:
     - label: erdosproblems.com/291
       url: https://www.erdosproblems.com/291
     - label: "erdosproblems.com forum #291"
       url: https://www.erdosproblems.com/forum/thread/291
-  formal_conjectures: FormalConjectures/ErdosProblems/291.lean
-  oeis:
-    - A110566
 openness_basis:
+  meaning: no_published_solution_known_to_curator
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
-  meaning: no_published_solution_known_to_curator
   note: Categorized upstream as "research open" at v4.32.0.
+claims: []
 provenance:
-  - fields:
+  - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/291.lean
+    source: google-deepmind/formal-conjectures
+    fields:
       - title
       - statement.informal
       - statement.formal
@@ -24,10 +76,10 @@ provenance:
       - ids.external
     license: Apache-2.0
     retrieved: 2026-07-31
-    source: google-deepmind/formal-conjectures
     upstream_version: v4.32.0
-    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/291.lean
-  - fields:
+  - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
+    source: teorth/erdosproblems
+    fields:
       - ids.erdos
       - ids.oeis
       - subject.tags
@@ -35,56 +87,4 @@ provenance:
       - claims
     license: Apache-2.0
     retrieved: 2026-07-31
-    source: teorth/erdosproblems
     upstream_version: d031865128a7ddccd85e8099f0f818211cfc9a41
-    url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
-statement:
-  formal:
-    - category: research open
-      definition_hole: false
-      language: lean4
-      theorem: erdos_291.parts.i
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/291.lean
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: erdos_291.parts.ii
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/291.lean
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: erdos_291.variants.steinerberger_generalization
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/291.lean
-    - category: research open
-      definition_hole: false
-      language: lean4
-      theorem: erdos_291.variants.shiu_heuristic_asymptotic
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/291.lean
-    - category: research open
-      definition_hole: false
-      language: lean4
-      theorem: erdos_291.variants.shiu_heuristic_density_zero
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/291.lean
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: erdos_291.variants.wu_yan
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/291.lean
-  informal: |-
-    Let $n\geq 1$ and define $L_n$ to be the least common multiple of $\{1,\ldots,n\}$ and $a_n$ by
-    $\sum_{1\leq k\leq n}\frac{1}{k}=\frac{a_n}{L_n}$.
-
-    Is it true that $(a_n,L_n)=1$ occurs for infinitely many $n$?
-subject:
-  msc:
-    - "11"
-  tags:
-    - number theory
-    - unit fractions
-title: Erdős Problem 291

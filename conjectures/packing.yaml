@@ -1,6 +1,47 @@
-claims: []
 id: packing
+title: Packing
+statement:
+  informal: |-
+    What is the smallest square that can contain 11 unit squares?
+
+    Reference: [Wikipedia](https://en.wikipedia.org/wiki/Square_packing#In_a_square)
+  formal:
+    - language: lean4
+      theorem: least_eleven_square_packing_in_square
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/SquarePacking.lean
+      toolchain: v4.32.0
+      category: research open
+      definition_hole: false
+    - language: lean4
+      theorem: least_seventeen_square_packing_in_square
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/SquarePacking.lean
+      toolchain: v4.32.0
+      category: research open
+      definition_hole: false
+    - language: lean4
+      theorem: least_three_square_packing_in_circle
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/SquarePacking.lean
+      toolchain: v4.32.0
+      category: research open
+      definition_hole: false
+    - language: lean4
+      theorem: least_twenty_one_circle_packing_in_square
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/SquarePacking.lean
+      toolchain: v4.32.0
+      category: research open
+      definition_hole: false
+    - language: lean4
+      theorem: least_fifteen_circle_packing_in_circle
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/SquarePacking.lean
+      toolchain: v4.32.0
+      category: research open
+      definition_hole: false
+subject:
+  msc:
+    - "51"
 ids:
+  formal_conjectures: FormalConjectures/Wikipedia/SquarePacking.lean
+  wikipedia: https://en.wikipedia.org/wiki/Square_packing
   external:
     - label: Wikipedia on packing of squares
       url: https://en.wikipedia.org/wiki/Square_packing
@@ -10,14 +51,15 @@ ids:
       url: https://en.wikipedia.org/wiki/Circle_packing_in_a_square
     - label: link
       url: https://erich-friedman.github.io/packing/
-  formal_conjectures: FormalConjectures/Wikipedia/SquarePacking.lean
-  wikipedia: https://en.wikipedia.org/wiki/Square_packing
 openness_basis:
-  asserted_by: google-deepmind/formal-conjectures
   meaning: no_published_solution_known_to_curator
+  asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
+claims: []
 provenance:
-  - fields:
+  - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/SquarePacking.lean
+    source: google-deepmind/formal-conjectures
+    fields:
       - title
       - statement.informal
       - statement.formal
@@ -25,46 +67,4 @@ provenance:
       - ids.external
     license: Apache-2.0
     retrieved: 2026-07-31
-    source: google-deepmind/formal-conjectures
     upstream_version: v4.32.0
-    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/SquarePacking.lean
-statement:
-  formal:
-    - category: research open
-      definition_hole: false
-      language: lean4
-      theorem: least_eleven_square_packing_in_square
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/SquarePacking.lean
-    - category: research open
-      definition_hole: false
-      language: lean4
-      theorem: least_seventeen_square_packing_in_square
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/SquarePacking.lean
-    - category: research open
-      definition_hole: false
-      language: lean4
-      theorem: least_three_square_packing_in_circle
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/SquarePacking.lean
-    - category: research open
-      definition_hole: false
-      language: lean4
-      theorem: least_twenty_one_circle_packing_in_square
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/SquarePacking.lean
-    - category: research open
-      definition_hole: false
-      language: lean4
-      theorem: least_fifteen_circle_packing_in_circle
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/SquarePacking.lean
-  informal: |-
-    What is the smallest square that can contain 11 unit squares?
-
-    Reference: [Wikipedia](https://en.wikipedia.org/wiki/Square_packing#In_a_square)
-subject:
-  msc:
-    - "51"
-title: Packing

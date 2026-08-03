@@ -1,21 +1,27 @@
-claims: []
 id: erdos-104
+title: Erdős Problem 104
+subject:
+  tags:
+    - geometry
 ids:
   erdos: "104"
+  oeis:
+    - A003829
   external:
     - label: erdosproblems.com/104
       url: https://www.erdosproblems.com/104
     - label: "erdosproblems.com forum #104"
       url: https://www.erdosproblems.com/forum/thread/104
-  oeis:
-    - A003829
 openness_basis:
+  meaning: no_published_solution_known_to_curator
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
-  meaning: no_published_solution_known_to_curator
   note: No formalization is indexed for this problem yet; read the statement upstream.
+claims: []
 provenance:
-  - fields:
+  - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
+    source: teorth/erdosproblems
+    fields:
       - ids.erdos
       - ids.oeis
       - subject.tags
@@ -23,11 +29,4 @@ provenance:
       - claims
     license: Apache-2.0
     retrieved: 2026-07-31
-    source: teorth/erdosproblems
     upstream_version: d031865128a7ddccd85e8099f0f818211cfc9a41
-    url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
-statement: {}
-subject:
-  tags:
-    - geometry
-title: Erdős Problem 104

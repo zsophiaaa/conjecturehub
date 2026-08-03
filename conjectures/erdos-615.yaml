@@ -1,41 +1,76 @@
-claims:
-  - evidence_tier: published
-    id: erdos-615-fc-solved
-    notes: Imported from the upstream `research solved` category, which records that the problem is resolved without stating the direction. Direction taken from erdosproblems.com, which records it as "disproved". The statement is formalized; the proof has not been machine-checked by ConjectureHub.
-    recorded_on: 2026-07-31
-    reviewer: google-deepmind/formal-conjectures maintainers
-    source:
-      kind: dataset
-      title: formal-conjectures marks erdos_615 as research solved
-      url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/615.lean
-    state: active
-    type: disproved
-  - asserted_on: 2025-08-31
-    evidence_tier: published
-    id: erdos-615-erdos-status
-    recorded_on: 2026-07-31
-    reviewer: teorth/erdosproblems maintainers
-    source:
-      kind: dataset
-      title: erdosproblems.com records this problem as "disproved"
-      url: https://www.erdosproblems.com/615
-    state: active
-    type: disproved
 id: erdos-615
+title: Erdős Problem 615
+statement:
+  informal: |-
+    Does there exist some constant $c > 0$ such that for all sufficiently large $n$, if $G$ is a
+    graph with $n$ vertices and at least $(1/8 - c)n^2$ edges then $G$ must contain either a $K_4$
+    or an independent set on at least $n/\log n$ vertices?
+
+    The answer is no, as shown by Fox, Loh, and Zhao [FLZ15].
+  formal:
+    - language: lean4
+      theorem: erdos_615
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/615.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
+    - language: lean4
+      theorem: erdos_615.variants.fox_loh_zhao
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/615.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
+    - language: lean4
+      theorem: erdos_615.variants.sudakov
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/615.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
+subject:
+  msc:
+    - "05"
+  tags:
+    - graph theory
+    - ramsey theory
 ids:
   erdos: "615"
+  formal_conjectures: FormalConjectures/ErdosProblems/615.lean
   external:
     - label: erdosproblems.com/615
       url: https://www.erdosproblems.com/615
     - label: "erdosproblems.com forum #615"
       url: https://www.erdosproblems.com/forum/thread/615
-  formal_conjectures: FormalConjectures/ErdosProblems/615.lean
 openness_basis:
+  meaning: no_published_solution_known_to_curator
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
-  meaning: no_published_solution_known_to_curator
+claims:
+  - id: erdos-615-fc-solved
+    type: disproved
+    evidence_tier: published
+    state: active
+    recorded_on: 2026-07-31
+    source:
+      title: formal-conjectures marks erdos_615 as research solved
+      url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/615.lean
+      kind: dataset
+    reviewer: google-deepmind/formal-conjectures maintainers
+    notes: Imported from the upstream `research solved` category, which records that the problem is resolved without stating the direction. Direction taken from erdosproblems.com, which records it as "disproved". The statement is formalized; the proof has not been machine-checked by ConjectureHub.
+  - id: erdos-615-erdos-status
+    asserted_on: 2025-08-31
+    type: disproved
+    evidence_tier: published
+    state: active
+    recorded_on: 2026-07-31
+    source:
+      title: erdosproblems.com records this problem as "disproved"
+      url: https://www.erdosproblems.com/615
+      kind: dataset
+    reviewer: teorth/erdosproblems maintainers
 provenance:
-  - fields:
+  - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/615.lean
+    source: google-deepmind/formal-conjectures
+    fields:
       - title
       - statement.informal
       - statement.formal
@@ -43,10 +78,10 @@ provenance:
       - ids.external
     license: Apache-2.0
     retrieved: 2026-07-31
-    source: google-deepmind/formal-conjectures
     upstream_version: v4.32.0
-    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/615.lean
-  - fields:
+  - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
+    source: teorth/erdosproblems
+    fields:
       - ids.erdos
       - ids.oeis
       - subject.tags
@@ -54,39 +89,4 @@ provenance:
       - claims
     license: Apache-2.0
     retrieved: 2026-07-31
-    source: teorth/erdosproblems
     upstream_version: d031865128a7ddccd85e8099f0f818211cfc9a41
-    url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
-statement:
-  formal:
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: erdos_615
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/615.lean
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: erdos_615.variants.fox_loh_zhao
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/615.lean
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: erdos_615.variants.sudakov
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/615.lean
-  informal: |-
-    Does there exist some constant $c > 0$ such that for all sufficiently large $n$, if $G$ is a
-    graph with $n$ vertices and at least $(1/8 - c)n^2$ edges then $G$ must contain either a $K_4$
-    or an independent set on at least $n/\log n$ vertices?
-
-    The answer is no, as shown by Fox, Loh, and Zhao [FLZ15].
-subject:
-  msc:
-    - "05"
-  tags:
-    - graph theory
-    - ramsey theory
-title: Erdős Problem 615

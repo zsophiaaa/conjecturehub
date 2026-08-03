@@ -1,6 +1,28 @@
-claims: []
 id: sum-of-three-cubes
+title: Sum of three cubes
+statement:
+  informal: |-
+    An integer `n : ℤ` can be written as a sum of three cubes (of integers) if and only if
+    `n` is not `4` or `5` mod `9`.
+  formal:
+    - language: lean4
+      theorem: isSumOfThreeCubesRat_any
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/SumOfThreeCubes.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
+    - language: lean4
+      theorem: isSumOfThreeCubes_iff_mod_9
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/SumOfThreeCubes.lean
+      toolchain: v4.32.0
+      category: research open
+      definition_hole: false
+subject:
+  msc:
+    - "11"
 ids:
+  formal_conjectures: FormalConjectures/Wikipedia/SumOfThreeCubes.lean
+  wikipedia: https://en.wikipedia.org/wiki/Sums_of_three_cubes
   external:
     - label: Wikipedia
       url: https://en.wikipedia.org/wiki/Sums_of_three_cubes
@@ -8,14 +30,15 @@ ids:
       url: https://mathoverflow.net/a/100324
     - label: "*David Feldman*"
       url: https://mathoverflow.net/users/10909/david-feldman
-  formal_conjectures: FormalConjectures/Wikipedia/SumOfThreeCubes.lean
-  wikipedia: https://en.wikipedia.org/wiki/Sums_of_three_cubes
 openness_basis:
-  asserted_by: google-deepmind/formal-conjectures
   meaning: no_published_solution_known_to_curator
+  asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
+claims: []
 provenance:
-  - fields:
+  - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/SumOfThreeCubes.lean
+    source: google-deepmind/formal-conjectures
+    fields:
       - title
       - statement.informal
       - statement.formal
@@ -23,27 +46,4 @@ provenance:
       - ids.external
     license: Apache-2.0
     retrieved: 2026-07-31
-    source: google-deepmind/formal-conjectures
     upstream_version: v4.32.0
-    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/SumOfThreeCubes.lean
-statement:
-  formal:
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: isSumOfThreeCubesRat_any
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/SumOfThreeCubes.lean
-    - category: research open
-      definition_hole: false
-      language: lean4
-      theorem: isSumOfThreeCubes_iff_mod_9
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/SumOfThreeCubes.lean
-  informal: |-
-    An integer `n : ℤ` can be written as a sum of three cubes (of integers) if and only if
-    `n` is not `4` or `5` mod `9`.
-subject:
-  msc:
-    - "11"
-title: Sum of three cubes

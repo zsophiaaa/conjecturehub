@@ -1,30 +1,69 @@
-claims:
-  - evidence_tier: published
-    id: erdos-1102-fc-solved
-    notes: Imported from the upstream `research solved` category. The statement is formalized; the proof has not been machine-checked by ConjectureHub.
-    recorded_on: 2026-07-31
-    reviewer: google-deepmind/formal-conjectures maintainers
-    source:
-      kind: dataset
-      title: formal-conjectures marks erdos_1102.density_zero_of_P as research solved
-      url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/1102.lean
-    state: active
-    type: proved
 id: erdos-1102
+title: Erdős Problem 1102
+statement:
+  informal: |-
+    If `A = {a₁ < a₂ < …}` has property P,
+    then `A` has natural density `0`.
+    Equivalently, `(a_j / j) → ∞` as `j → ∞`.
+    -
+  formal:
+    - language: lean4
+      theorem: erdos_1102.density_zero_of_P
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/1102.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
+    - language: lean4
+      theorem: erdos_1102.exists_sequence_with_P
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/1102.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
+    - language: lean4
+      theorem: erdos_1102.upper_density_Q
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/1102.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
+    - language: lean4
+      theorem: erdos_1102.lower_density_Q_exists
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/1102.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
+subject:
+  msc:
+    - "11"
+  tags:
+    - number theory
 ids:
   erdos: "1102"
+  formal_conjectures: FormalConjectures/ErdosProblems/1102.lean
   external:
     - label: erdosproblems.com/1102
       url: https://www.erdosproblems.com/1102
     - label: "erdosproblems.com forum #1102"
       url: https://www.erdosproblems.com/forum/thread/1102
-  formal_conjectures: FormalConjectures/ErdosProblems/1102.lean
 openness_basis:
+  meaning: no_published_solution_known_to_curator
   asserted_by: erdosproblems.com
   asserted_on: 2026-02-23
-  meaning: no_published_solution_known_to_curator
+claims:
+  - id: erdos-1102-fc-solved
+    type: proved
+    evidence_tier: published
+    state: active
+    recorded_on: 2026-07-31
+    source:
+      title: formal-conjectures marks erdos_1102.density_zero_of_P as research solved
+      url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/1102.lean
+      kind: dataset
+    reviewer: google-deepmind/formal-conjectures maintainers
+    notes: Imported from the upstream `research solved` category. The statement is formalized; the proof has not been machine-checked by ConjectureHub.
 provenance:
-  - fields:
+  - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/1102.lean
+    source: google-deepmind/formal-conjectures
+    fields:
       - title
       - statement.informal
       - statement.formal
@@ -32,10 +71,10 @@ provenance:
       - ids.external
     license: Apache-2.0
     retrieved: 2026-07-31
-    source: google-deepmind/formal-conjectures
     upstream_version: v4.32.0
-    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/1102.lean
-  - fields:
+  - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
+    source: teorth/erdosproblems
+    fields:
       - ids.erdos
       - ids.oeis
       - subject.tags
@@ -43,43 +82,4 @@ provenance:
       - claims
     license: Apache-2.0
     retrieved: 2026-07-31
-    source: teorth/erdosproblems
     upstream_version: d031865128a7ddccd85e8099f0f818211cfc9a41
-    url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
-statement:
-  formal:
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: erdos_1102.density_zero_of_P
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/1102.lean
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: erdos_1102.exists_sequence_with_P
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/1102.lean
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: erdos_1102.upper_density_Q
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/1102.lean
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: erdos_1102.lower_density_Q_exists
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/1102.lean
-  informal: |-
-    If `A = {a₁ < a₂ < …}` has property P,
-    then `A` has natural density `0`.
-    Equivalently, `(a_j / j) → ∞` as `j → ∞`.
-    -
-subject:
-  msc:
-    - "11"
-  tags:
-    - number theory
-title: Erdős Problem 1102

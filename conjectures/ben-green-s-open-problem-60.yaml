@@ -1,13 +1,30 @@
-claims: []
 id: ben-green-s-open-problem-60
+title: Ben Green's Open Problem 60
+statement:
+  informal: |-
+    Is there an absolute constant $c > 0$ such that, whenever $A ⊆ \mathbb{N}$ is a set of squares
+    with $|A| ≥ 2$, the sumset $A + A$ satisfies $|A + A| ≥ |A|^{1 + c}$?
+  formal:
+    - language: lean4
+      theorem: green_60
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/GreensOpenProblems/60.lean
+      toolchain: v4.32.0
+      category: research open
+      definition_hole: false
+subject:
+  msc:
+    - "11"
 ids:
   formal_conjectures: FormalConjectures/GreensOpenProblems/60.lean
 openness_basis:
-  asserted_by: google-deepmind/formal-conjectures
   meaning: no_published_solution_known_to_curator
+  asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
+claims: []
 provenance:
-  - fields:
+  - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/GreensOpenProblems/60.lean
+    source: google-deepmind/formal-conjectures
+    fields:
       - title
       - statement.informal
       - statement.formal
@@ -15,21 +32,4 @@ provenance:
       - ids.external
     license: Apache-2.0
     retrieved: 2026-07-31
-    source: google-deepmind/formal-conjectures
     upstream_version: v4.32.0
-    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/GreensOpenProblems/60.lean
-statement:
-  formal:
-    - category: research open
-      definition_hole: false
-      language: lean4
-      theorem: green_60
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/GreensOpenProblems/60.lean
-  informal: |-
-    Is there an absolute constant $c > 0$ such that, whenever $A ⊆ \mathbb{N}$ is a set of squares
-    with $|A| ≥ 2$, the sumset $A + A$ satisfies $|A + A| ≥ |A|^{1 + c}$?
-subject:
-  msc:
-    - "11"
-title: Ben Green's Open Problem 60

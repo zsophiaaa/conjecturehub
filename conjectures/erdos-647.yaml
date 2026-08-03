@@ -1,227 +1,6 @@
-claims:
-  - asserted_on: 2025-08-31
-    evidence_tier: published
-    id: erdos-647-erdos-status
-    recorded_on: 2026-07-31
-    reviewer: teorth/erdosproblems maintainers
-    source:
-      kind: dataset
-      title: erdosproblems.com records this problem as "verifiable"
-      url: https://www.erdosproblems.com/647
-    state: active
-    type: partial
-  - asserted_on: 2026-06-13
-    authors:
-      - Patrik Idén
-    evidence_tier: preprint
-    id: erdos-647-iden-verification-10e12
-    notes: >-
-      Computational verification to n=10^12 via segmented multiplicative sieve. No n in (24, 10^12]
-      satisfies the inequality. Minimum gap R(n)-n was 224 near 10^11. Extends OEIS A087280 bound
-      of 10^10. C source and report on Zenodo.
-    ai_assistance:
-      used: yes
-      systems:
-        - Claude (Anthropic)
-      role: writing
-    recorded_on: 2026-08-02
-    source:
-      kind: forum
-      title: erdosproblems.com forum — Patrik Idén, June 2026
-      url: https://www.erdosproblems.com/forum/thread/647
-      quote: No solution was found in (24, 10^12].
-    state: active
-    type: partial
-    scope: n ≤ 10^12
-  - asserted_on: 2026-05-27
-    authors:
-      - Scott D. Hughes
-    evidence_tier: preprint
-    id: erdos-647-hughes-modular-reduction
-    notes: >-
-      Lean-verified reduction for n>84 to n=2520N with 41 open residue classes mod 46189 (55 of 96
-      survivors closed). Includes prime-chain reduction and density bounds; explicitly not a full
-      resolution — one intentional Stage-1 axiom remains in the Lean development.
-    recorded_on: 2026-08-02
-    source:
-      kind: forum
-      title: erdosproblems.com forum — Scott D. Hughes
-      url: https://www.erdosproblems.com/forum/thread/647
-    state: active
-    type: partial
-  - authors:
-      - Scott D. Hughes
-    evidence_tier: preprint
-    id: erdos-647-hughes-frontier-certificate
-    notes: >-
-      Independent Python certificate (verify.py): no solution with 24 < n ≤ 6.16×10^17 on the
-      41-class frontier. 6549 sub-classes ruled out by fixed congruences; remainder by search to
-      u=10^7 with some shift k≤16 over budget. Date deliberately omitted: Hughes posted on 27 and
-      29 May and 8 and 15 June 2026, and this contribution was not pinned to one of them.
-    recorded_on: 2026-08-02
-    source:
-      kind: forum
-      title: erdosproblems.com forum — Scott D. Hughes frontier-certificate
-      url: https://www.erdosproblems.com/forum/thread/647
-    state: active
-    type: partial
-    scope: n ≤ 6.16×10^17 on 41-class frontier
-  - asserted_on: 2026-05-27
-    authors:
-      - Matteas Ellis
-    evidence_tier: preprint
-    id: erdos-647-ellis-mod12-partial
-    notes: >-
-      Proves G(n)=max_{m<n}(m+τ(m))-n ≥ 3 for all n>24 with n≢0 (mod 12). Remaining class n≡0
-      (mod 12) verified to 10^8 and reduced to nested Sophie Germain primality condition.
-    recorded_on: 2026-08-02
-    source:
-      kind: preprint
-      title: Partial Resolution of Erdős Problem #647 (Zenodo)
-      url: https://doi.org/10.5281/zenodo.20405507
-    state: active
-    type: partial
-    scope: n ≢ 0 (mod 12)
-  - asserted_on: 2026-05-29
-    authors:
-      - Kenta Kitamura
-    evidence_tier: preprint
-    id: erdos-647-kitamura-sieve-bound
-    notes: >-
-      Combining forced shifts k∈{2,3,4,6,12} with prime-chain forms yields admissible 7-tuples;
-      Brun sieve gives |C(x)| ≪ x/(log x)^7 unconditionally. Density-zero refinement only.
-    ai_assistance:
-      used: yes
-      role: writing
-    recorded_on: 2026-08-02
-    source:
-      kind: forum
-      title: erdosproblems.com forum — Kenta Kitamura
-      url: https://www.erdosproblems.com/forum/thread/647
-    state: active
-    type: partial
-  - asserted_on: 2026-01-28
-    authors:
-      - JamalAgbanwa
-    evidence_tier: unverified_claim
-    id: erdos-647-claimed-complete-disputed
-    notes: >-
-      Forum post claimed a complete proof via record-holder domination intervals covering all n>24,
-      with Lean on Zenodo 18390414. Other forum contributors noted the asymptotic overlap step is
-      unproven and axiomized in Lean — not accepted as a resolution. erdosproblems.com lists 0
-      claimed proofs for this problem.
-    ai_assistance:
-      used: yes
-      systems:
-        - ChatGPT 5.2
-        - Gemini
-        - Deepseek Thinking
-      role: discovery
-    recorded_on: 2026-08-02
-    source:
-      kind: forum
-      title: erdosproblems.com forum — disputed complete-proof claim
-      url: https://www.erdosproblems.com/forum/thread/647
-    state: disputed
-    type: partial
-    scope: alleged proof that no n > 24 exists
-  - asserted_on: 2025-10-02
-    authors:
-      - Terence Tao
-    evidence_tier: community_accepted
-    id: erdos-647-tao-problem-relation
-    notes: >-
-      τ(m) is similar to 2^ω(m); #647 is similar to but slightly weaker than part of Erdős #679,
-      and much stronger than #413 or #248. Context for proof strategy, not a resolution.
-    recorded_on: 2026-08-02
-    reviewer: erdosproblems.com forum attribution
-    source:
-      kind: forum
-      title: erdosproblems.com problem page — Tao comment (via Bloom)
-      url: https://www.erdosproblems.com/647
-    state: active
-    type: reformulation
 id: erdos-647
-ids:
-  erdos: "647"
-  external:
-    - label: erdosproblems.com/647
-      url: https://www.erdosproblems.com/647
-    - label: erdosproblems.com forum #647
-      url: https://www.erdosproblems.com/forum/thread/647
-    - label: Hughes erdos647-proof-chain (GitHub)
-      url: https://github.com/scottdhughes/erdos647-proof-chain
-    - label: Idén computational verification (Zenodo)
-      url: https://doi.org/10.5281/zenodo.20677388
-    - label: Ellis partial proof (Zenodo)
-      url: https://doi.org/10.5281/zenodo.20405507
-  formal_conjectures: FormalConjectures/ErdosProblems/647.lean
-  oeis:
-    - A062249
-    - A087280
-openness_basis:
-  asserted_by: erdosproblems.com
-  asserted_on: 2025-08-31
-  meaning: no_published_solution_known_to_curator
-  note: >-
-    Listed open Aug 2025. Known solutions n∈{5,8,10,12,24} (OEIS A087280). Heavy 2026 forum
-    activity — partial proofs, computation to 10^12, and disputed complete-proof claims — but no
-    accepted resolution. See forum thread link.
-provenance:
-  - fields:
-      - title
-      - statement.informal
-      - statement.formal
-      - subject.msc
-      - ids.external
-    license: Apache-2.0
-    retrieved: 2026-07-31
-    source: google-deepmind/formal-conjectures
-    upstream_version: v4.32.0
-    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/647.lean
-  - fields:
-      - ids.erdos
-      - ids.oeis
-      - subject.tags
-      - openness_basis
-    license: Apache-2.0
-    retrieved: 2026-07-31
-    source: teorth/erdosproblems
-    upstream_version: d031865128a7ddccd85e8099f0f818211cfc9a41
-    url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
-  - fields:
-      - claims
-      - openness_basis.note
-    license: CC0-1.0
-    retrieved: 2026-08-02
-    source: erdosproblems.com forum (summaries with links; no full-text copy)
-    url: https://www.erdosproblems.com/forum/thread/647
+title: Erdős Problem 647
 statement:
-  formal:
-    - category: research open
-      definition_hole: false
-      language: lean4
-      theorem: erdos_647
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/647.lean
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: erdos_647.variants.twenty_four
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/647.lean
-    - category: research open
-      definition_hole: false
-      language: lean4
-      theorem: erdos_647.variants.lim
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/647.lean
-    - category: research open
-      definition_hole: false
-      language: lean4
-      theorem: erdos_647.variants.infinite
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/647.lean
   informal: |-
     Let $\tau(n)$ count the number of divisors of $n$. Is there some $n > 24$ such that
     $$
@@ -229,9 +8,207 @@ statement:
     $$
     Known solutions: 5, 8, 10, 12, 24 (OEIS A087280). Erdős offered £25 for any larger example.
     Discussion and partial results: [erdosproblems.com forum #647](https://www.erdosproblems.com/forum/thread/647).
+  formal:
+    - language: lean4
+      theorem: erdos_647
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/647.lean
+      toolchain: v4.32.0
+      category: research open
+      definition_hole: false
+    - language: lean4
+      theorem: erdos_647.variants.twenty_four
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/647.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
+    - language: lean4
+      theorem: erdos_647.variants.lim
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/647.lean
+      toolchain: v4.32.0
+      category: research open
+      definition_hole: false
+    - language: lean4
+      theorem: erdos_647.variants.infinite
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/647.lean
+      toolchain: v4.32.0
+      category: research open
+      definition_hole: false
 subject:
   msc:
     - "11"
   tags:
     - number theory
-title: Erdős Problem 647
+ids:
+  erdos: "647"
+  oeis:
+    - A062249
+    - A087280
+  formal_conjectures: FormalConjectures/ErdosProblems/647.lean
+  external:
+    - label: erdosproblems.com/647
+      url: https://www.erdosproblems.com/647
+    - label: erdosproblems.com forum
+      url: https://www.erdosproblems.com/forum/thread/647
+    - label: Hughes erdos647-proof-chain (GitHub)
+      url: https://github.com/scottdhughes/erdos647-proof-chain
+    - label: Idén computational verification (Zenodo)
+      url: https://doi.org/10.5281/zenodo.20677388
+    - label: Ellis partial proof (Zenodo)
+      url: https://doi.org/10.5281/zenodo.20405507
+openness_basis:
+  meaning: no_published_solution_known_to_curator
+  asserted_by: erdosproblems.com
+  asserted_on: 2025-08-31
+  note: Listed open Aug 2025. Known solutions n∈{5,8,10,12,24} (OEIS A087280). Heavy 2026 forum activity — partial proofs, computation to 10^12, and disputed complete-proof claims — but no accepted resolution. See forum thread link.
+claims:
+  - id: erdos-647-erdos-status
+    asserted_on: 2025-08-31
+    type: partial
+    evidence_tier: published
+    state: active
+    recorded_on: 2026-07-31
+    source:
+      title: erdosproblems.com records this problem as "verifiable"
+      url: https://www.erdosproblems.com/647
+      kind: dataset
+    reviewer: teorth/erdosproblems maintainers
+  - id: erdos-647-iden-verification-10e12
+    asserted_on: 2026-06-13
+    type: partial
+    scope: n ≤ 10^12
+    evidence_tier: preprint
+    state: active
+    recorded_on: 2026-08-02
+    source:
+      title: erdosproblems.com forum — Patrik Idén, June 2026
+      url: https://www.erdosproblems.com/forum/thread/647
+      kind: forum
+      quote: No solution was found in (24, 10^12].
+    authors:
+      - Patrik Idén
+    ai_assistance:
+      used: yes
+      systems:
+        - Claude (Anthropic)
+      role: writing
+    notes: Computational verification to n=10^12 via segmented multiplicative sieve. No n in (24, 10^12] satisfies the inequality. Minimum gap R(n)-n was 224 near 10^11. Extends OEIS A087280 bound of 10^10. C source and report on Zenodo.
+  - id: erdos-647-hughes-modular-reduction
+    asserted_on: 2026-05-27
+    type: partial
+    evidence_tier: preprint
+    state: active
+    recorded_on: 2026-08-02
+    source:
+      title: erdosproblems.com forum — Scott D. Hughes
+      url: https://www.erdosproblems.com/forum/thread/647
+      kind: forum
+    authors:
+      - Scott D. Hughes
+    notes: Lean-verified reduction for n>84 to n=2520N with 41 open residue classes mod 46189 (55 of 96 survivors closed). Includes prime-chain reduction and density bounds; explicitly not a full resolution — one intentional Stage-1 axiom remains in the Lean development.
+  - id: erdos-647-hughes-frontier-certificate
+    type: partial
+    scope: n ≤ 6.16×10^17 on 41-class frontier
+    evidence_tier: preprint
+    state: active
+    recorded_on: 2026-08-02
+    source:
+      title: erdosproblems.com forum — Scott D. Hughes frontier-certificate
+      url: https://www.erdosproblems.com/forum/thread/647
+      kind: forum
+    authors:
+      - Scott D. Hughes
+    notes: "Independent Python certificate (verify.py): no solution with 24 < n ≤ 6.16×10^17 on the 41-class frontier. 6549 sub-classes ruled out by fixed congruences; remainder by search to u=10^7 with some shift k≤16 over budget. Date deliberately omitted: Hughes posted on 27 and 29 May and 8 and 15 June 2026, and this contribution was not pinned to one of them."
+  - id: erdos-647-ellis-mod12-partial
+    asserted_on: 2026-05-27
+    type: partial
+    scope: n ≢ 0 (mod 12)
+    evidence_tier: preprint
+    state: active
+    recorded_on: 2026-08-02
+    source:
+      title: Partial Resolution of Erdős Problem
+      url: https://doi.org/10.5281/zenodo.20405507
+      kind: preprint
+    authors:
+      - Matteas Ellis
+    notes: Proves G(n)=max_{m<n}(m+τ(m))-n ≥ 3 for all n>24 with n≢0 (mod 12). Remaining class n≡0 (mod 12) verified to 10^8 and reduced to nested Sophie Germain primality condition.
+  - id: erdos-647-kitamura-sieve-bound
+    asserted_on: 2026-05-29
+    type: partial
+    evidence_tier: preprint
+    state: active
+    recorded_on: 2026-08-02
+    source:
+      title: erdosproblems.com forum — Kenta Kitamura
+      url: https://www.erdosproblems.com/forum/thread/647
+      kind: forum
+    authors:
+      - Kenta Kitamura
+    ai_assistance:
+      used: yes
+      role: writing
+    notes: Combining forced shifts k∈{2,3,4,6,12} with prime-chain forms yields admissible 7-tuples; Brun sieve gives |C(x)| ≪ x/(log x)^7 unconditionally. Density-zero refinement only.
+  - id: erdos-647-claimed-complete-disputed
+    asserted_on: 2026-01-28
+    type: partial
+    scope: alleged proof that no n > 24 exists
+    evidence_tier: unverified_claim
+    state: disputed
+    recorded_on: 2026-08-02
+    source:
+      title: erdosproblems.com forum — disputed complete-proof claim
+      url: https://www.erdosproblems.com/forum/thread/647
+      kind: forum
+    authors:
+      - JamalAgbanwa
+    ai_assistance:
+      used: yes
+      systems:
+        - ChatGPT 5.2
+        - Gemini
+        - Deepseek Thinking
+      role: discovery
+    notes: Forum post claimed a complete proof via record-holder domination intervals covering all n>24, with Lean on Zenodo 18390414. Other forum contributors noted the asymptotic overlap step is unproven and axiomized in Lean — not accepted as a resolution. erdosproblems.com lists 0 claimed proofs for this problem.
+  - id: erdos-647-tao-problem-relation
+    asserted_on: 2025-10-02
+    type: reformulation
+    evidence_tier: community_accepted
+    state: active
+    recorded_on: 2026-08-02
+    source:
+      title: erdosproblems.com problem page — Tao comment (via Bloom)
+      url: https://www.erdosproblems.com/647
+      kind: forum
+    authors:
+      - Terence Tao
+    reviewer: erdosproblems.com forum attribution
+    notes: "τ(m) is similar to 2^ω(m); #647 is similar to but slightly weaker than part of Erdős #679, and much stronger than #413 or #248. Context for proof strategy, not a resolution."
+provenance:
+  - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/647.lean
+    source: google-deepmind/formal-conjectures
+    fields:
+      - title
+      - statement.informal
+      - statement.formal
+      - subject.msc
+      - ids.external
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    upstream_version: v4.32.0
+  - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
+    source: teorth/erdosproblems
+    fields:
+      - ids.erdos
+      - ids.oeis
+      - subject.tags
+      - openness_basis
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    upstream_version: d031865128a7ddccd85e8099f0f818211cfc9a41
+  - url: https://www.erdosproblems.com/forum/thread/647
+    source: erdosproblems.com forum (summaries with links; no full-text copy)
+    fields:
+      - claims
+      - openness_basis.note
+    license: CC0-1.0
+    retrieved: 2026-08-02

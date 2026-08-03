@@ -1,19 +1,62 @@
-claims: []
 id: ben-green-s-open-problem-72
+title: Ben Green's Open Problem 72
+statement:
+  informal: |-
+    The **no-k-in-line problem**:
+    For $N \geq k$ and $k > 2$, the AllowedSetSize is $(k - 1) N$, i. e. on an $N \times N$ subset,
+    there is a set of $(k - 1) N$ points for which no $k$ lie on a line (and not such a set of bigger size).
+  formal:
+    - language: lean4
+      theorem: NoKInLine
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/GreensOpenProblems/72.lean
+      toolchain: v4.32.0
+      category: research open
+      definition_hole: false
+    - language: lean4
+      theorem: green_72
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/GreensOpenProblems/72.lean
+      toolchain: v4.32.0
+      category: research open
+      definition_hole: false
+    - language: lean4
+      theorem: green_72.variants.eventually
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/GreensOpenProblems/72.lean
+      toolchain: v4.32.0
+      category: research open
+      definition_hole: false
+    - language: lean4
+      theorem: no_three_in_line_le
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/GreensOpenProblems/72.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
+    - language: lean4
+      theorem: no_k_in_line_big
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/GreensOpenProblems/72.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
+subject:
+  msc:
+    - "05"
+    - "52"
 ids:
+  formal_conjectures: FormalConjectures/GreensOpenProblems/72.lean
+  wikipedia: https://en.wikipedia.org/wiki/No-three-in-line_problem
   external:
     - label: Ben Green's Open Problem 72
       url: https://people.maths.ox.ac.uk/greenbj/papers/open-problems.pdf#problem.72
     - label: Wikipedia
       url: https://en.wikipedia.org/wiki/No-three-in-line_problem
-  formal_conjectures: FormalConjectures/GreensOpenProblems/72.lean
-  wikipedia: https://en.wikipedia.org/wiki/No-three-in-line_problem
 openness_basis:
-  asserted_by: google-deepmind/formal-conjectures
   meaning: no_published_solution_known_to_curator
+  asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
+claims: []
 provenance:
-  - fields:
+  - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/GreensOpenProblems/72.lean
+    source: google-deepmind/formal-conjectures
+    fields:
       - title
       - statement.informal
       - statement.formal
@@ -21,47 +64,4 @@ provenance:
       - ids.external
     license: Apache-2.0
     retrieved: 2026-07-31
-    source: google-deepmind/formal-conjectures
     upstream_version: v4.32.0
-    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/GreensOpenProblems/72.lean
-statement:
-  formal:
-    - category: research open
-      definition_hole: false
-      language: lean4
-      theorem: NoKInLine
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/GreensOpenProblems/72.lean
-    - category: research open
-      definition_hole: false
-      language: lean4
-      theorem: green_72
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/GreensOpenProblems/72.lean
-    - category: research open
-      definition_hole: false
-      language: lean4
-      theorem: green_72.variants.eventually
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/GreensOpenProblems/72.lean
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: no_three_in_line_le
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/GreensOpenProblems/72.lean
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: no_k_in_line_big
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/GreensOpenProblems/72.lean
-  informal: |-
-    The **no-k-in-line problem**:
-    For $N \geq k$ and $k > 2$, the AllowedSetSize is $(k - 1) N$, i. e. on an $N \times N$ subset,
-    there is a set of $(k - 1) N$ points for which no $k$ lie on a line (and not such a set of bigger size).
-subject:
-  msc:
-    - "05"
-    - "52"
-title: Ben Green's Open Problem 72

@@ -1,22 +1,41 @@
-claims: []
 id: schanuel-s-conjecture
+title: Schanuel's Conjecture
+statement:
+  informal: |-
+    Given any set of $n$ complex numbers $\{z_1, ..., z_n\}$ that are linearly independent over
+    $\mathbb{Q}$, the field extension $\mathbb{Q}(z_1, ..., z_n, e^{z_1}, ..., e^{z_n})$
+    has transcendence degree at least $n$ over $\mathbb{Q}$.
+  formal:
+    - language: lean4
+      theorem: schanuel_conjecture
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/Schanuel.lean
+      toolchain: v4.32.0
+      category: research open
+      definition_hole: false
+subject:
+  msc:
+    - "11"
+    - "33"
 ids:
+  wikidata: Q1579982
+  formal_conjectures: FormalConjectures/Wikipedia/Schanuel.lean
+  wikipedia: https://en.wikipedia.org/wiki/Schanuel%27s_conjecture
+  mathworld: https://mathworld.wolfram.com/SchanuelsConjecture.html
   external:
     - label: Wikipedia
       url: https://en.wikipedia.org/wiki/Schanuel%27s_conjecture
-  formal_conjectures: FormalConjectures/Wikipedia/Schanuel.lean
-  mathworld: https://mathworld.wolfram.com/SchanuelsConjecture.html
-  wikidata: Q1579982
-  wikipedia: https://en.wikipedia.org/wiki/Schanuel%27s_conjecture
 notability:
-  measured_on: 2026-08-03
   wikipedia_language_editions: 7
+  measured_on: 2026-08-03
 openness_basis:
-  asserted_by: google-deepmind/formal-conjectures
   meaning: no_published_solution_known_to_curator
+  asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
+claims: []
 provenance:
-  - fields:
+  - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/Schanuel.lean
+    source: google-deepmind/formal-conjectures
+    fields:
       - title
       - statement.informal
       - statement.formal
@@ -24,10 +43,10 @@ provenance:
       - ids.external
     license: Apache-2.0
     retrieved: 2026-07-31
-    source: google-deepmind/formal-conjectures
     upstream_version: v4.32.0
-    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/Schanuel.lean
-  - fields:
+  - url: https://www.wikidata.org/wiki/Q1579982
+    source: wikidata
+    fields:
       - aliases
       - ids.wikidata
       - ids.wikipedia
@@ -35,22 +54,3 @@ provenance:
       - notability.wikipedia_language_editions
     license: CC0-1.0
     retrieved: 2026-08-03
-    source: wikidata
-    url: https://www.wikidata.org/wiki/Q1579982
-statement:
-  formal:
-    - category: research open
-      definition_hole: false
-      language: lean4
-      theorem: schanuel_conjecture
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/Schanuel.lean
-  informal: |-
-    Given any set of $n$ complex numbers $\{z_1, ..., z_n\}$ that are linearly independent over
-    $\mathbb{Q}$, the field extension $\mathbb{Q}(z_1, ..., z_n, e^{z_1}, ..., e^{z_n})$
-    has transcendence degree at least $n$ over $\mathbb{Q}$.
-subject:
-  msc:
-    - "11"
-    - "33"
-title: Schanuel's Conjecture

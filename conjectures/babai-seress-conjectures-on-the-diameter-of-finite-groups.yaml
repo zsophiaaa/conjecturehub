@@ -1,6 +1,34 @@
-claims: []
 id: babai-seress-conjectures-on-the-diameter-of-finite-groups
+title: Babai–Seress Conjectures on the Diameter of Finite Groups
+statement:
+  informal: |-
+    **Babai–Seress Conjecture (Conjecture 1.5)**: There exists an absolute constant $C$ such
+    that the diameter of the alternating group $A_n$ satisfies
+    $$\operatorname{diam}(A_n) \leq n^C.$$
+
+    *Reference:* [L. Babai and Á. Seress, *On the diameter of permutation groups*,
+    European Journal of Combinatorics 13 (1992), Conjecture 1.5](https://doi.org/10.1016/S0195-6698(05)80029-0)
+  formal:
+    - language: lean4
+      theorem: babai_seress_conjecture_alternating
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/DiameterSimpleFiniteGroups.lean
+      toolchain: v4.32.0
+      category: research open
+      definition_hole: false
+    - language: lean4
+      theorem: babai_seress_conjecture
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/DiameterSimpleFiniteGroups.lean
+      toolchain: v4.32.0
+      category: research open
+      definition_hole: false
+subject:
+  msc:
+    - "05"
+    - "20"
+    - "68"
 ids:
+  formal_conjectures: FormalConjectures/Wikipedia/DiameterSimpleFiniteGroups.lean
+  wikipedia: https://en.wikipedia.org/wiki/Diameter_(group_theory)
   external:
     - label: Wikipedia, *Diameter (group theory)*
       url: https://en.wikipedia.org/wiki/Diameter_(group_theory)
@@ -10,14 +38,15 @@ ids:
         L. Babai and Á. Seress, *On the diameter of permutation groups*,
           European Journal of Combinatorics 13 (1992), 231–243
       url: https://doi.org/10.1016/S0195-6698(05)80029-0
-  formal_conjectures: FormalConjectures/Wikipedia/DiameterSimpleFiniteGroups.lean
-  wikipedia: https://en.wikipedia.org/wiki/Diameter_(group_theory)
 openness_basis:
-  asserted_by: google-deepmind/formal-conjectures
   meaning: no_published_solution_known_to_curator
+  asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
+claims: []
 provenance:
-  - fields:
+  - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/DiameterSimpleFiniteGroups.lean
+    source: google-deepmind/formal-conjectures
+    fields:
       - title
       - statement.informal
       - statement.formal
@@ -25,33 +54,4 @@ provenance:
       - ids.external
     license: Apache-2.0
     retrieved: 2026-07-31
-    source: google-deepmind/formal-conjectures
     upstream_version: v4.32.0
-    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/DiameterSimpleFiniteGroups.lean
-statement:
-  formal:
-    - category: research open
-      definition_hole: false
-      language: lean4
-      theorem: babai_seress_conjecture_alternating
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/DiameterSimpleFiniteGroups.lean
-    - category: research open
-      definition_hole: false
-      language: lean4
-      theorem: babai_seress_conjecture
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/DiameterSimpleFiniteGroups.lean
-  informal: |-
-    **Babai–Seress Conjecture (Conjecture 1.5)**: There exists an absolute constant $C$ such
-    that the diameter of the alternating group $A_n$ satisfies
-    $$\operatorname{diam}(A_n) \leq n^C.$$
-
-    *Reference:* [L. Babai and Á. Seress, *On the diameter of permutation groups*,
-    European Journal of Combinatorics 13 (1992), Conjecture 1.5](https://doi.org/10.1016/S0195-6698(05)80029-0)
-subject:
-  msc:
-    - "05"
-    - "20"
-    - "68"
-title: Babai–Seress Conjectures on the Diameter of Finite Groups

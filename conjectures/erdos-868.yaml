@@ -1,85 +1,37 @@
-claims:
-  - evidence_tier: published
-    id: erdos-868-fc-solved
-    notes: Imported from the upstream `research solved` category. The statement is formalized; the proof has not been machine-checked by ConjectureHub.
-    recorded_on: 2026-07-31
-    reviewer: google-deepmind/formal-conjectures maintainers
-    source:
-      kind: dataset
-      title: formal-conjectures marks erdos_868.parts.i as research solved
-      url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/868.lean
-    state: active
-    type: proved
 id: erdos-868
-ids:
-  erdos: "868"
-  external:
-    - label: erdosproblems.com/868
-      url: https://www.erdosproblems.com/868
-    - label: Erdős problem 868
-      url: https://github.com/Larsen-Daniel/Erdos-868/blob/main/868.pdf
-    - label: "erdosproblems.com forum #868"
-      url: https://www.erdosproblems.com/forum/thread/868
-  formal_conjectures: FormalConjectures/ErdosProblems/868.lean
-openness_basis:
-  asserted_by: erdosproblems.com
-  asserted_on: 2026-01-13
-  meaning: no_published_solution_known_to_curator
-provenance:
-  - fields:
-      - title
-      - statement.informal
-      - statement.formal
-      - subject.msc
-      - ids.external
-    license: Apache-2.0
-    retrieved: 2026-07-31
-    source: google-deepmind/formal-conjectures
-    upstream_version: v4.32.0
-    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/868.lean
-  - fields:
-      - ids.erdos
-      - ids.oeis
-      - subject.tags
-      - openness_basis
-      - claims
-    license: Apache-2.0
-    retrieved: 2026-07-31
-    source: teorth/erdosproblems
-    upstream_version: d031865128a7ddccd85e8099f0f818211cfc9a41
-    url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
+title: Erdős Problem 868
 statement:
-  formal:
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: erdos_868.parts.i
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/868.lean
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: erdos_868.parts.ii
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/868.lean
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: erdos_868.variants.fixed_ε
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/868.lean
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: erdos_868.variants.Hartter_Nathanson
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/868.lean
   informal: |-
     Let $A$ be an additive basis of order $2$, let $f(n)$ denote the number of ways in which
     $n$ can be written as the sum of two elements from $A$. If $f(n) \to \infty$ as $n \to \infty$, then
     must $A$ contain a minimal additive basis of order $2$?
 
     Larsen and Larsen [LaLa26] answered this in the negative.
+  formal:
+    - language: lean4
+      theorem: erdos_868.parts.i
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/868.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
+    - language: lean4
+      theorem: erdos_868.parts.ii
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/868.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
+    - language: lean4
+      theorem: erdos_868.variants.fixed_ε
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/868.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
+    - language: lean4
+      theorem: erdos_868.variants.Hartter_Nathanson
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/868.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
 subject:
   msc:
     - "05"
@@ -87,4 +39,52 @@ subject:
   tags:
     - number theory
     - additive basis
-title: Erdős Problem 868
+ids:
+  erdos: "868"
+  formal_conjectures: FormalConjectures/ErdosProblems/868.lean
+  external:
+    - label: erdosproblems.com/868
+      url: https://www.erdosproblems.com/868
+    - label: Erdős problem 868
+      url: https://github.com/Larsen-Daniel/Erdos-868/blob/main/868.pdf
+    - label: "erdosproblems.com forum #868"
+      url: https://www.erdosproblems.com/forum/thread/868
+openness_basis:
+  meaning: no_published_solution_known_to_curator
+  asserted_by: erdosproblems.com
+  asserted_on: 2026-01-13
+claims:
+  - id: erdos-868-fc-solved
+    type: proved
+    evidence_tier: published
+    state: active
+    recorded_on: 2026-07-31
+    source:
+      title: formal-conjectures marks erdos_868.parts.i as research solved
+      url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/868.lean
+      kind: dataset
+    reviewer: google-deepmind/formal-conjectures maintainers
+    notes: Imported from the upstream `research solved` category. The statement is formalized; the proof has not been machine-checked by ConjectureHub.
+provenance:
+  - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/868.lean
+    source: google-deepmind/formal-conjectures
+    fields:
+      - title
+      - statement.informal
+      - statement.formal
+      - subject.msc
+      - ids.external
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    upstream_version: v4.32.0
+  - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
+    source: teorth/erdosproblems
+    fields:
+      - ids.erdos
+      - ids.oeis
+      - subject.tags
+      - openness_basis
+      - claims
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    upstream_version: d031865128a7ddccd85e8099f0f818211cfc9a41

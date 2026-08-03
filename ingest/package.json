@@ -6,6 +6,7 @@
   "license": "Apache-2.0",
   "scripts": {
     "validate": "tsx src/cli/validate.ts",
+    "format": "tsx src/cli/format.ts",
     "seed": "tsx src/cli/seed.ts",
     "sweep": "tsx src/cli/sweep.ts",
     "build:index": "tsx src/cli/build-index.ts",

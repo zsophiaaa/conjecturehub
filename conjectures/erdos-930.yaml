@@ -1,61 +1,6 @@
-claims: []
 id: erdos-930
-ids:
-  erdos: "930"
-  external:
-    - label: erdosproblems.com/930
-      url: https://www.erdosproblems.com/930
-    - label: "erdosproblems.com forum #930"
-      url: https://www.erdosproblems.com/forum/thread/930
-  formal_conjectures: FormalConjectures/ErdosProblems/930.lean
-openness_basis:
-  asserted_by: erdosproblems.com
-  asserted_on: 2025-08-31
-  meaning: no_published_solution_known_to_curator
-  note: Categorized upstream as "research open" at v4.32.0.
-provenance:
-  - fields:
-      - title
-      - statement.informal
-      - statement.formal
-      - subject.msc
-      - ids.external
-    license: Apache-2.0
-    retrieved: 2026-07-31
-    source: google-deepmind/formal-conjectures
-    upstream_version: v4.32.0
-    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/930.lean
-  - fields:
-      - ids.erdos
-      - ids.oeis
-      - subject.tags
-      - openness_basis
-      - claims
-    license: Apache-2.0
-    retrieved: 2026-07-31
-    source: teorth/erdosproblems
-    upstream_version: d031865128a7ddccd85e8099f0f818211cfc9a41
-    url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
+title: Erdős Problem 930
 statement:
-  formal:
-    - category: research open
-      definition_hole: false
-      language: lean4
-      theorem: erdos_930
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/930.lean
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: erdos_930.variants.consecutive_strong
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/930.lean
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: erdos_930.variants.consecutive_integers
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/930.lean
   informal: |-
     Is it true that, for every $r$, there is a $k$ such that
     if $I_1,\ldots,I_r$ are disjoint intervals of consecutive integers,
@@ -64,9 +9,64 @@ statement:
      \prod_{1\leq i\leq r}\prod_{m\in I_i}m
     $$
     is not a perfect power?
+  formal:
+    - language: lean4
+      theorem: erdos_930
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/930.lean
+      toolchain: v4.32.0
+      category: research open
+      definition_hole: false
+    - language: lean4
+      theorem: erdos_930.variants.consecutive_strong
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/930.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
+    - language: lean4
+      theorem: erdos_930.variants.consecutive_integers
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/930.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
 subject:
   msc:
     - "11"
   tags:
     - number theory
-title: Erdős Problem 930
+ids:
+  erdos: "930"
+  formal_conjectures: FormalConjectures/ErdosProblems/930.lean
+  external:
+    - label: erdosproblems.com/930
+      url: https://www.erdosproblems.com/930
+    - label: "erdosproblems.com forum #930"
+      url: https://www.erdosproblems.com/forum/thread/930
+openness_basis:
+  meaning: no_published_solution_known_to_curator
+  asserted_by: erdosproblems.com
+  asserted_on: 2025-08-31
+  note: Categorized upstream as "research open" at v4.32.0.
+claims: []
+provenance:
+  - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/930.lean
+    source: google-deepmind/formal-conjectures
+    fields:
+      - title
+      - statement.informal
+      - statement.formal
+      - subject.msc
+      - ids.external
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    upstream_version: v4.32.0
+  - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
+    source: teorth/erdosproblems
+    fields:
+      - ids.erdos
+      - ids.oeis
+      - subject.tags
+      - openness_basis
+      - claims
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    upstream_version: d031865128a7ddccd85e8099f0f818211cfc9a41

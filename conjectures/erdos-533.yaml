@@ -1,96 +1,6 @@
-claims:
-  - evidence_tier: published
-    id: erdos-533-fc-solved
-    notes: Imported from the upstream `research solved` category, which records that the problem is resolved without stating the direction. Direction taken from erdosproblems.com, which records it as "disproved". The statement is formalized; the proof has not been machine-checked by ConjectureHub.
-    recorded_on: 2026-07-31
-    reviewer: google-deepmind/formal-conjectures maintainers
-    source:
-      kind: dataset
-      title: formal-conjectures marks erdos_533 as research solved
-      url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/533.lean
-    state: active
-    type: disproved
-  - asserted_on: 2026-01-26
-    evidence_tier: published
-    id: erdos-533-erdos-status
-    recorded_on: 2026-07-31
-    reviewer: teorth/erdosproblems maintainers
-    source:
-      kind: dataset
-      title: erdosproblems.com records this problem as "disproved"
-      url: https://www.erdosproblems.com/533
-    state: active
-    type: disproved
 id: erdos-533
-ids:
-  erdos: "533"
-  external:
-    - label: erdosproblems.com/533
-      url: https://www.erdosproblems.com/533
-    - label: arXiv:2103.10423
-      url: https://arxiv.org/abs/2103.10423
-    - label: "erdosproblems.com forum #533"
-      url: https://www.erdosproblems.com/forum/thread/533
-  formal_conjectures: FormalConjectures/ErdosProblems/533.lean
-openness_basis:
-  asserted_by: erdosproblems.com
-  asserted_on: 2026-01-26
-  meaning: no_published_solution_known_to_curator
-provenance:
-  - fields:
-      - title
-      - statement.informal
-      - statement.formal
-      - subject.msc
-      - ids.external
-    license: Apache-2.0
-    retrieved: 2026-07-31
-    source: google-deepmind/formal-conjectures
-    upstream_version: v4.32.0
-    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/533.lean
-  - fields:
-      - ids.erdos
-      - ids.oeis
-      - subject.tags
-      - openness_basis
-      - claims
-    license: Apache-2.0
-    retrieved: 2026-07-31
-    source: teorth/erdosproblems
-    upstream_version: d031865128a7ddccd85e8099f0f818211cfc9a41
-    url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
+title: Erdős Problem 533
 statement:
-  formal:
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: erdos_533
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/533.lean
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: erdos_533.variants.ehsss_upper
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/533.lean
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: erdos_533.variants.lrss_lower
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/533.lean
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: erdos_533.variants.delta_four_eq_zero
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/533.lean
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: erdos_533.variants.delta_seven_ge_quarter
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/533.lean
   informal: |-
     Let $\delta > 0$. If $n$ is sufficiently large and $G$ is a graph on $n$ vertices with no
     $K_5$ and at least $\delta n^2$ edges, must $G$ contain a set of $\gg_\delta n$ vertices
@@ -109,9 +19,99 @@ statement:
     The answer is **no**: Balogh and Lenz [BaLe13] disproved it by showing $\delta_3(5) > 0$, and
     the exact value $\delta_3(5) = 1/12$ was determined by the matching lower-bound construction of
     Liu, Reiher, Sharifzadeh, and Staden [LRSS21] (see `erdos_533.variants.lrss_lower`).
+  formal:
+    - language: lean4
+      theorem: erdos_533
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/533.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
+    - language: lean4
+      theorem: erdos_533.variants.ehsss_upper
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/533.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
+    - language: lean4
+      theorem: erdos_533.variants.lrss_lower
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/533.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
+    - language: lean4
+      theorem: erdos_533.variants.delta_four_eq_zero
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/533.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
+    - language: lean4
+      theorem: erdos_533.variants.delta_seven_ge_quarter
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/533.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
 subject:
   msc:
     - "05"
   tags:
     - graph theory
-title: Erdős Problem 533
+ids:
+  erdos: "533"
+  formal_conjectures: FormalConjectures/ErdosProblems/533.lean
+  external:
+    - label: erdosproblems.com/533
+      url: https://www.erdosproblems.com/533
+    - label: arXiv:2103.10423
+      url: https://arxiv.org/abs/2103.10423
+    - label: "erdosproblems.com forum #533"
+      url: https://www.erdosproblems.com/forum/thread/533
+openness_basis:
+  meaning: no_published_solution_known_to_curator
+  asserted_by: erdosproblems.com
+  asserted_on: 2026-01-26
+claims:
+  - id: erdos-533-fc-solved
+    type: disproved
+    evidence_tier: published
+    state: active
+    recorded_on: 2026-07-31
+    source:
+      title: formal-conjectures marks erdos_533 as research solved
+      url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/533.lean
+      kind: dataset
+    reviewer: google-deepmind/formal-conjectures maintainers
+    notes: Imported from the upstream `research solved` category, which records that the problem is resolved without stating the direction. Direction taken from erdosproblems.com, which records it as "disproved". The statement is formalized; the proof has not been machine-checked by ConjectureHub.
+  - id: erdos-533-erdos-status
+    asserted_on: 2026-01-26
+    type: disproved
+    evidence_tier: published
+    state: active
+    recorded_on: 2026-07-31
+    source:
+      title: erdosproblems.com records this problem as "disproved"
+      url: https://www.erdosproblems.com/533
+      kind: dataset
+    reviewer: teorth/erdosproblems maintainers
+provenance:
+  - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/533.lean
+    source: google-deepmind/formal-conjectures
+    fields:
+      - title
+      - statement.informal
+      - statement.formal
+      - subject.msc
+      - ids.external
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    upstream_version: v4.32.0
+  - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
+    source: teorth/erdosproblems
+    fields:
+      - ids.erdos
+      - ids.oeis
+      - subject.tags
+      - openness_basis
+      - claims
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    upstream_version: d031865128a7ddccd85e8099f0f818211cfc9a41

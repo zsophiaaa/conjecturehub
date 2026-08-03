@@ -1,27 +1,44 @@
-claims:
-  - evidence_tier: published
-    id: modularity-conjecture-fc-solved
-    notes: Imported from the upstream `research solved` category. The statement is formalized; the proof has not been machine-checked by ConjectureHub.
-    recorded_on: 2026-07-31
-    reviewer: google-deepmind/formal-conjectures maintainers
-    source:
-      kind: dataset
-      title: formal-conjectures marks modularity_conjecture as research solved
-      url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/ModularityConjecture.lean
-    state: active
-    type: proved
 id: modularity-conjecture
+title: Modularity conjecture
+statement:
+  informal: |-
+    The Modularity Theorem (formerly Shimura-Taniyama-Weil conjecture): every elliptic curve
+    over $\mathbb{Q}$ is modular.
+  formal:
+    - language: lean4
+      theorem: modularity_conjecture
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/ModularityConjecture.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
+subject:
+  msc:
+    - "11"
 ids:
+  formal_conjectures: FormalConjectures/Wikipedia/ModularityConjecture.lean
+  wikipedia: https://en.wikipedia.org/wiki/Modularity_theorem
   external:
     - label: Wikipedia
       url: https://en.wikipedia.org/wiki/Modularity_theorem
-  formal_conjectures: FormalConjectures/Wikipedia/ModularityConjecture.lean
-  wikipedia: https://en.wikipedia.org/wiki/Modularity_theorem
 openness_basis:
-  asserted_by: google-deepmind/formal-conjectures
   meaning: no_published_solution_known_to_curator
+  asserted_by: google-deepmind/formal-conjectures
+claims:
+  - id: modularity-conjecture-fc-solved
+    type: proved
+    evidence_tier: published
+    state: active
+    recorded_on: 2026-07-31
+    source:
+      title: formal-conjectures marks modularity_conjecture as research solved
+      url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/ModularityConjecture.lean
+      kind: dataset
+    reviewer: google-deepmind/formal-conjectures maintainers
+    notes: Imported from the upstream `research solved` category. The statement is formalized; the proof has not been machine-checked by ConjectureHub.
 provenance:
-  - fields:
+  - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/ModularityConjecture.lean
+    source: google-deepmind/formal-conjectures
+    fields:
       - title
       - statement.informal
       - statement.formal
@@ -29,21 +46,4 @@ provenance:
       - ids.external
     license: Apache-2.0
     retrieved: 2026-07-31
-    source: google-deepmind/formal-conjectures
     upstream_version: v4.32.0
-    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/ModularityConjecture.lean
-statement:
-  formal:
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: modularity_conjecture
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/ModularityConjecture.lean
-  informal: |-
-    The Modularity Theorem (formerly Shimura-Taniyama-Weil conjecture): every elliptic curve
-    over $\mathbb{Q}$ is modular.
-subject:
-  msc:
-    - "11"
-title: Modularity conjecture

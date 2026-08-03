@@ -1,44 +1,6 @@
-claims:
-  - evidence_tier: published
-    id: convergence-of-the-borwein-series-with-sinusoidal-coefficient-fc-solved
-    notes: Imported from the upstream `research solved` category. The statement is formalized; the proof has not been machine-checked by ConjectureHub.
-    recorded_on: 2026-07-31
-    reviewer: google-deepmind/formal-conjectures maintainers
-    source:
-      kind: dataset
-      title: formal-conjectures marks borwein_sine_series as research solved
-      url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Books/BorweinSineSeries.lean
-    state: active
-    type: proved
 id: convergence-of-the-borwein-series-with-sinusoidal-coefficient
-ids:
-  external:
-    - label: MathWorld, Harmonic Series
-      url: https://mathworld.wolfram.com/HarmonicSeries.html
-  formal_conjectures: FormalConjectures/Books/BorweinSineSeries.lean
-openness_basis:
-  asserted_by: google-deepmind/formal-conjectures
-  meaning: no_published_solution_known_to_curator
-provenance:
-  - fields:
-      - title
-      - statement.informal
-      - statement.formal
-      - subject.msc
-      - ids.external
-    license: Apache-2.0
-    retrieved: 2026-07-31
-    source: google-deepmind/formal-conjectures
-    upstream_version: v4.32.0
-    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Books/BorweinSineSeries.lean
+title: Convergence of the Borwein Series with Sinusoidal Coefficient
 statement:
-  formal:
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: borwein_sine_series
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Books/BorweinSineSeries.lean
   informal: |-
     Does the series
     $$
@@ -55,8 +17,46 @@ statement:
     https://github.com/AxiomMath/gdm-formal-conjectures/blob/main/docs/BorweinSineSeries.md
     for a partial formalization of the conjecture,
     conditional on such an irrationality measure of pi (cf https://arxiv.org/abs/1912.06345).
+  formal:
+    - language: lean4
+      theorem: borwein_sine_series
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Books/BorweinSineSeries.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
 subject:
   msc:
     - "26"
     - "40"
-title: Convergence of the Borwein Series with Sinusoidal Coefficient
+ids:
+  formal_conjectures: FormalConjectures/Books/BorweinSineSeries.lean
+  external:
+    - label: MathWorld, Harmonic Series
+      url: https://mathworld.wolfram.com/HarmonicSeries.html
+openness_basis:
+  meaning: no_published_solution_known_to_curator
+  asserted_by: google-deepmind/formal-conjectures
+claims:
+  - id: convergence-of-the-borwein-series-with-sinusoidal-coefficient-fc-solved
+    type: proved
+    evidence_tier: published
+    state: active
+    recorded_on: 2026-07-31
+    source:
+      title: formal-conjectures marks borwein_sine_series as research solved
+      url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Books/BorweinSineSeries.lean
+      kind: dataset
+    reviewer: google-deepmind/formal-conjectures maintainers
+    notes: Imported from the upstream `research solved` category. The statement is formalized; the proof has not been machine-checked by ConjectureHub.
+provenance:
+  - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Books/BorweinSineSeries.lean
+    source: google-deepmind/formal-conjectures
+    fields:
+      - title
+      - statement.informal
+      - statement.formal
+      - subject.msc
+      - ids.external
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    upstream_version: v4.32.0

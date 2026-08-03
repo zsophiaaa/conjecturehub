@@ -1,6 +1,41 @@
-claims: []
 id: casas-alvero-conjecture
+title: Casas-Alvero Conjecture
+statement:
+  informal: |-
+    The Casas-Alvero conjecture states that in characteristic zero, if a monic polynomial `P`
+    has the Casas-Alvero property, then `P = (X - α)ᵈ` for some `α`.
+  formal:
+    - language: lean4
+      theorem: casas_alvero_conjecture
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Paper/CasasAlvero.lean
+      toolchain: v4.32.0
+      category: research open
+      definition_hole: false
+    - language: lean4
+      theorem: casas_alvero.prime_power
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Paper/CasasAlvero.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
+    - language: lean4
+      theorem: casas_alvero.double_prime_power
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Paper/CasasAlvero.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
+    - language: lean4
+      theorem: casas_alvero.positive_char_counterexample
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Paper/CasasAlvero.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
+subject:
+  msc:
+    - "12"
 ids:
+  wikidata: Q5048045
+  formal_conjectures: FormalConjectures/Paper/CasasAlvero.lean
+  wikipedia: https://en.wikipedia.org/wiki/Casas-Alvero_conjecture
   external:
     - label: The Casas-Alvero conjecture for infinitely many degrees
       url: https://arxiv.org/pdf/math/0605090
@@ -8,18 +43,18 @@ ids:
       url: https://mathoverflow.net/questions/27851
     - label: "Proof of the Casas-Alvero conjecture: Soham Ghosh)"
       url: https://arxiv.org/pdf/2501.09272
-  formal_conjectures: FormalConjectures/Paper/CasasAlvero.lean
-  wikidata: Q5048045
-  wikipedia: https://en.wikipedia.org/wiki/Casas-Alvero_conjecture
 notability:
-  measured_on: 2026-08-03
   wikipedia_language_editions: 4
+  measured_on: 2026-08-03
 openness_basis:
-  asserted_by: google-deepmind/formal-conjectures
   meaning: no_published_solution_known_to_curator
+  asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
+claims: []
 provenance:
-  - fields:
+  - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Paper/CasasAlvero.lean
+    source: google-deepmind/formal-conjectures
+    fields:
       - title
       - statement.informal
       - statement.formal
@@ -27,10 +62,10 @@ provenance:
       - ids.external
     license: Apache-2.0
     retrieved: 2026-07-31
-    source: google-deepmind/formal-conjectures
     upstream_version: v4.32.0
-    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Paper/CasasAlvero.lean
-  - fields:
+  - url: https://www.wikidata.org/wiki/Q5048045
+    source: wikidata
+    fields:
       - aliases
       - ids.wikidata
       - ids.wikipedia
@@ -38,38 +73,3 @@ provenance:
       - notability.wikipedia_language_editions
     license: CC0-1.0
     retrieved: 2026-08-03
-    source: wikidata
-    url: https://www.wikidata.org/wiki/Q5048045
-statement:
-  formal:
-    - category: research open
-      definition_hole: false
-      language: lean4
-      theorem: casas_alvero_conjecture
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Paper/CasasAlvero.lean
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: casas_alvero.prime_power
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Paper/CasasAlvero.lean
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: casas_alvero.double_prime_power
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Paper/CasasAlvero.lean
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: casas_alvero.positive_char_counterexample
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Paper/CasasAlvero.lean
-  informal: |-
-    The Casas-Alvero conjecture states that in characteristic zero, if a monic polynomial `P`
-    has the Casas-Alvero property, then `P = (X - α)ᵈ` for some `α`.
-subject:
-  msc:
-    - "12"
-title: Casas-Alvero Conjecture

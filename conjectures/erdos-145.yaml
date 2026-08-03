@@ -1,69 +1,6 @@
-claims: []
 id: erdos-145
-ids:
-  erdos: "145"
-  external:
-    - label: erdosproblems.com/145
-      url: https://www.erdosproblems.com/145
-    - label: "erdosproblems.com forum #145"
-      url: https://www.erdosproblems.com/forum/thread/145
-  formal_conjectures: FormalConjectures/ErdosProblems/145.lean
-  oeis:
-    - A005117
-openness_basis:
-  asserted_by: erdosproblems.com
-  asserted_on: 2025-08-31
-  meaning: no_published_solution_known_to_curator
-  note: Categorized upstream as "research open" at v4.32.0.
-provenance:
-  - fields:
-      - title
-      - statement.informal
-      - statement.formal
-      - subject.msc
-      - ids.external
-    license: Apache-2.0
-    retrieved: 2026-07-31
-    source: google-deepmind/formal-conjectures
-    upstream_version: v4.32.0
-    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/145.lean
-  - fields:
-      - ids.erdos
-      - ids.oeis
-      - subject.tags
-      - openness_basis
-      - claims
-    license: Apache-2.0
-    retrieved: 2026-07-31
-    source: teorth/erdosproblems
-    upstream_version: d031865128a7ddccd85e8099f0f818211cfc9a41
-    url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
+title: Erdős Problem 145
 statement:
-  formal:
-    - category: research open
-      definition_hole: false
-      language: lean4
-      theorem: erdos_145
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/145.lean
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: erdos_145.variants.le_two
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/145.lean
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: erdos_145.variants.le_three
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/145.lean
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: erdos_145.variants.le_eleven_thirds
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/145.lean
   informal: |-
     Let $s_1 < s_2 < \cdots$ be the sequence of squarefree numbers. Is it true that, for any
     $\alpha\geq 0$,
@@ -71,9 +8,72 @@ statement:
     \lim_{x\to\infty} \frac{1}{x}\sum_{s_n\leq x}(s_{n+1}-s_n)^\alpha
     $$
     exists?
+  formal:
+    - language: lean4
+      theorem: erdos_145
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/145.lean
+      toolchain: v4.32.0
+      category: research open
+      definition_hole: false
+    - language: lean4
+      theorem: erdos_145.variants.le_two
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/145.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
+    - language: lean4
+      theorem: erdos_145.variants.le_three
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/145.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
+    - language: lean4
+      theorem: erdos_145.variants.le_eleven_thirds
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/145.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
 subject:
   msc:
     - "11"
   tags:
     - number theory
-title: Erdős Problem 145
+ids:
+  erdos: "145"
+  oeis:
+    - A005117
+  formal_conjectures: FormalConjectures/ErdosProblems/145.lean
+  external:
+    - label: erdosproblems.com/145
+      url: https://www.erdosproblems.com/145
+    - label: "erdosproblems.com forum #145"
+      url: https://www.erdosproblems.com/forum/thread/145
+openness_basis:
+  meaning: no_published_solution_known_to_curator
+  asserted_by: erdosproblems.com
+  asserted_on: 2025-08-31
+  note: Categorized upstream as "research open" at v4.32.0.
+claims: []
+provenance:
+  - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/145.lean
+    source: google-deepmind/formal-conjectures
+    fields:
+      - title
+      - statement.informal
+      - statement.formal
+      - subject.msc
+      - ids.external
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    upstream_version: v4.32.0
+  - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
+    source: teorth/erdosproblems
+    fields:
+      - ids.erdos
+      - ids.oeis
+      - subject.tags
+      - openness_basis
+      - claims
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    upstream_version: d031865128a7ddccd85e8099f0f818211cfc9a41

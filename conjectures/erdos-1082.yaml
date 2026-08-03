@@ -1,31 +1,57 @@
-claims:
-  - asserted_on: 2025-10-17
-    evidence_tier: published
-    id: erdos-1082-erdos-status
-    recorded_on: 2026-07-31
-    reviewer: teorth/erdosproblems maintainers
-    source:
-      kind: dataset
-      title: erdosproblems.com records this problem as "falsifiable"
-      url: https://www.erdosproblems.com/1082
-    state: active
-    type: partial
 id: erdos-1082
+title: Erdős Problem 1082
+statement:
+  informal: |-
+    Let $A\subset \mathbb{R}^2$ be a set of $n$ points with no three on a line.
+    Does $A$ determine at least $\lfloor n/2\rfloor$ distinct distances?
+  formal:
+    - language: lean4
+      theorem: erdos_1082.parts.i
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/1082.lean
+      toolchain: v4.32.0
+      category: research open
+      definition_hole: false
+    - language: lean4
+      theorem: erdos_1082.parts.ii
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/1082.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
+subject:
+  msc:
+    - "51"
+  tags:
+    - geometry
+    - distances
 ids:
   erdos: "1082"
+  formal_conjectures: FormalConjectures/ErdosProblems/1082.lean
   external:
     - label: erdosproblems.com/1082
       url: https://www.erdosproblems.com/1082
     - label: "erdosproblems.com forum #1082"
       url: https://www.erdosproblems.com/forum/thread/1082
-  formal_conjectures: FormalConjectures/ErdosProblems/1082.lean
 openness_basis:
+  meaning: no_published_solution_known_to_curator
   asserted_by: erdosproblems.com
   asserted_on: 2025-10-17
-  meaning: no_published_solution_known_to_curator
   note: Categorized upstream as "research open" at v4.32.0.
+claims:
+  - id: erdos-1082-erdos-status
+    asserted_on: 2025-10-17
+    type: partial
+    evidence_tier: published
+    state: active
+    recorded_on: 2026-07-31
+    source:
+      title: erdosproblems.com records this problem as "falsifiable"
+      url: https://www.erdosproblems.com/1082
+      kind: dataset
+    reviewer: teorth/erdosproblems maintainers
 provenance:
-  - fields:
+  - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/1082.lean
+    source: google-deepmind/formal-conjectures
+    fields:
       - title
       - statement.informal
       - statement.formal
@@ -33,10 +59,10 @@ provenance:
       - ids.external
     license: Apache-2.0
     retrieved: 2026-07-31
-    source: google-deepmind/formal-conjectures
     upstream_version: v4.32.0
-    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/1082.lean
-  - fields:
+  - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
+    source: teorth/erdosproblems
+    fields:
       - ids.erdos
       - ids.oeis
       - subject.tags
@@ -44,30 +70,4 @@ provenance:
       - claims
     license: Apache-2.0
     retrieved: 2026-07-31
-    source: teorth/erdosproblems
     upstream_version: d031865128a7ddccd85e8099f0f818211cfc9a41
-    url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
-statement:
-  formal:
-    - category: research open
-      definition_hole: false
-      language: lean4
-      theorem: erdos_1082.parts.i
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/1082.lean
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: erdos_1082.parts.ii
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/1082.lean
-  informal: |-
-    Let $A\subset \mathbb{R}^2$ be a set of $n$ points with no three on a line.
-    Does $A$ determine at least $\lfloor n/2\rfloor$ distinct distances?
-subject:
-  msc:
-    - "51"
-  tags:
-    - geometry
-    - distances
-title: Erdős Problem 1082

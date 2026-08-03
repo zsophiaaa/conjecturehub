@@ -1,58 +1,20 @@
-claims: []
 id: erdos-376
-ids:
-  erdos: "376"
-  external:
-    - label: erdosproblems.com/376
-      url: https://www.erdosproblems.com/376
-    - label: "erdosproblems.com forum #376"
-      url: https://www.erdosproblems.com/forum/thread/376
-  formal_conjectures: FormalConjectures/ErdosProblems/376.lean
-  oeis:
-    - A030979
-openness_basis:
-  asserted_by: erdosproblems.com
-  asserted_on: 2025-08-31
-  meaning: no_published_solution_known_to_curator
-  note: Categorized upstream as "research open" at v4.32.0.
-provenance:
-  - fields:
-      - title
-      - statement.informal
-      - statement.formal
-      - subject.msc
-      - ids.external
-    license: Apache-2.0
-    retrieved: 2026-07-31
-    source: google-deepmind/formal-conjectures
-    upstream_version: v4.32.0
-    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/376.lean
-  - fields:
-      - ids.erdos
-      - ids.oeis
-      - subject.tags
-      - openness_basis
-      - claims
-    license: Apache-2.0
-    retrieved: 2026-07-31
-    source: teorth/erdosproblems
-    upstream_version: d031865128a7ddccd85e8099f0f818211cfc9a41
-    url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
+title: Erdős Problem 376
 statement:
-  formal:
-    - category: research open
-      definition_hole: false
-      language: lean4
-      theorem: erdos_376
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/376.lean
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: erdos_376.variants.prime
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/376.lean
   informal: Are there infinitely many $n$ such that ${2n\choose n}$ is coprime to $105$?
+  formal:
+    - language: lean4
+      theorem: erdos_376
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/376.lean
+      toolchain: v4.32.0
+      category: research open
+      definition_hole: false
+    - language: lean4
+      theorem: erdos_376.variants.prime
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/376.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
 subject:
   msc:
     - "11"
@@ -60,4 +22,42 @@ subject:
     - number theory
     - binomial coefficients
     - base representations
-title: Erdős Problem 376
+ids:
+  erdos: "376"
+  oeis:
+    - A030979
+  formal_conjectures: FormalConjectures/ErdosProblems/376.lean
+  external:
+    - label: erdosproblems.com/376
+      url: https://www.erdosproblems.com/376
+    - label: "erdosproblems.com forum #376"
+      url: https://www.erdosproblems.com/forum/thread/376
+openness_basis:
+  meaning: no_published_solution_known_to_curator
+  asserted_by: erdosproblems.com
+  asserted_on: 2025-08-31
+  note: Categorized upstream as "research open" at v4.32.0.
+claims: []
+provenance:
+  - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/376.lean
+    source: google-deepmind/formal-conjectures
+    fields:
+      - title
+      - statement.informal
+      - statement.formal
+      - subject.msc
+      - ids.external
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    upstream_version: v4.32.0
+  - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
+    source: teorth/erdosproblems
+    fields:
+      - ids.erdos
+      - ids.oeis
+      - subject.tags
+      - openness_basis
+      - claims
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    upstream_version: d031865128a7ddccd85e8099f0f818211cfc9a41

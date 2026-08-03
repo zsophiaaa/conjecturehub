@@ -1,16 +1,9 @@
-claims:
-  - asserted_on: 2025-08-31
-    evidence_tier: published
-    id: erdos-895-erdos-status
-    recorded_on: 2026-07-31
-    reviewer: teorth/erdosproblems maintainers
-    source:
-      kind: dataset
-      title: erdosproblems.com records this problem as "proved"
-      url: https://www.erdosproblems.com/895
-    state: active
-    type: proved
 id: erdos-895
+title: Erdős Problem 895
+subject:
+  tags:
+    - additive combinatorics
+    - graph theory
 ids:
   erdos: "895"
   external:
@@ -19,12 +12,26 @@ ids:
     - label: "erdosproblems.com forum #895"
       url: https://www.erdosproblems.com/forum/thread/895
 openness_basis:
+  meaning: no_published_solution_known_to_curator
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
-  meaning: no_published_solution_known_to_curator
   note: No formalization is indexed for this problem yet; read the statement upstream.
+claims:
+  - id: erdos-895-erdos-status
+    asserted_on: 2025-08-31
+    type: proved
+    evidence_tier: published
+    state: active
+    recorded_on: 2026-07-31
+    source:
+      title: erdosproblems.com records this problem as "proved"
+      url: https://www.erdosproblems.com/895
+      kind: dataset
+    reviewer: teorth/erdosproblems maintainers
 provenance:
-  - fields:
+  - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
+    source: teorth/erdosproblems
+    fields:
       - ids.erdos
       - ids.oeis
       - subject.tags
@@ -32,12 +39,4 @@ provenance:
       - claims
     license: Apache-2.0
     retrieved: 2026-07-31
-    source: teorth/erdosproblems
     upstream_version: d031865128a7ddccd85e8099f0f818211cfc9a41
-    url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
-statement: {}
-subject:
-  tags:
-    - additive combinatorics
-    - graph theory
-title: Erdős Problem 895

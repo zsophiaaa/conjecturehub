@@ -1,20 +1,64 @@
-claims: []
 id: erdos-32
+title: Erdős Problem 32
+statement:
+  informal: |-
+    Does there exist a set $A \subseteq \mathbb{N}$ such that $|A \cap \{1, \ldots, N\}| = o((\log N)^2)$
+    and every sufficiently large integer can be written as $p + a$ for some prime $p$ and $a \in A$?
+  formal:
+    - language: lean4
+      theorem: erdos_32.variants.log_squared
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/32.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
+    - language: lean4
+      theorem: erdos_32.variants.liminf_gt_one
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/32.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
+    - language: lean4
+      theorem: erdos_32
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/32.lean
+      toolchain: v4.32.0
+      category: research open
+      definition_hole: false
+    - language: lean4
+      theorem: erdos_32.variants.log_bound
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/32.lean
+      toolchain: v4.32.0
+      category: research open
+      definition_hole: false
+    - language: lean4
+      theorem: erdos_32.variants.ruzsa
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/32.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
+subject:
+  msc:
+    - "11"
+  tags:
+    - number theory
+    - additive basis
 ids:
   erdos: "32"
+  formal_conjectures: FormalConjectures/ErdosProblems/32.lean
   external:
     - label: erdosproblems.com/32
       url: https://www.erdosproblems.com/32
     - label: "erdosproblems.com forum #32"
       url: https://www.erdosproblems.com/forum/thread/32
-  formal_conjectures: FormalConjectures/ErdosProblems/32.lean
 openness_basis:
+  meaning: no_published_solution_known_to_curator
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
-  meaning: no_published_solution_known_to_curator
   note: Categorized upstream as "research open" at v4.32.0.
+claims: []
 provenance:
-  - fields:
+  - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/32.lean
+    source: google-deepmind/formal-conjectures
+    fields:
       - title
       - statement.informal
       - statement.formal
@@ -22,10 +66,10 @@ provenance:
       - ids.external
     license: Apache-2.0
     retrieved: 2026-07-31
-    source: google-deepmind/formal-conjectures
     upstream_version: v4.32.0
-    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/32.lean
-  - fields:
+  - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
+    source: teorth/erdosproblems
+    fields:
       - ids.erdos
       - ids.oeis
       - subject.tags
@@ -33,48 +77,4 @@ provenance:
       - claims
     license: Apache-2.0
     retrieved: 2026-07-31
-    source: teorth/erdosproblems
     upstream_version: d031865128a7ddccd85e8099f0f818211cfc9a41
-    url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
-statement:
-  formal:
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: erdos_32.variants.log_squared
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/32.lean
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: erdos_32.variants.liminf_gt_one
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/32.lean
-    - category: research open
-      definition_hole: false
-      language: lean4
-      theorem: erdos_32
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/32.lean
-    - category: research open
-      definition_hole: false
-      language: lean4
-      theorem: erdos_32.variants.log_bound
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/32.lean
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: erdos_32.variants.ruzsa
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/32.lean
-  informal: |-
-    Does there exist a set $A \subseteq \mathbb{N}$ such that $|A \cap \{1, \ldots, N\}| = o((\log N)^2)$
-    and every sufficiently large integer can be written as $p + a$ for some prime $p$ and $a \in A$?
-subject:
-  msc:
-    - "11"
-  tags:
-    - number theory
-    - additive basis
-title: Erdős Problem 32

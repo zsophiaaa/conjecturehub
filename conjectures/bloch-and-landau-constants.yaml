@@ -1,6 +1,64 @@
-claims: []
 id: bloch-and-landau-constants
+title: Bloch and Landau constants
+statement:
+  informal: |-
+    Ahlfors and Grunsky also conjectured in [AG37] that this upper bound is the precise value of the
+    Bloch constant.
+  formal:
+    - language: lean4
+      theorem: blochConstant_lower_bound
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/Bloch.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
+    - language: lean4
+      theorem: blochConstant_upper_bound
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/Bloch.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
+    - language: lean4
+      theorem: blochConstant_exact_value
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/Bloch.lean
+      toolchain: v4.32.0
+      category: research open
+      definition_hole: false
+    - language: lean4
+      theorem: univalentBlochConstant_lower_bound
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/Bloch.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
+    - language: lean4
+      theorem: univalentBlochConstant_upper_bound
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/Bloch.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
+    - language: lean4
+      theorem: landauConstant_lower_bound
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/Bloch.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
+    - language: lean4
+      theorem: landauConstant_upper_bound
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/Bloch.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
+    - language: lean4
+      theorem: landauConstant_exact_value
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/Bloch.lean
+      toolchain: v4.32.0
+      category: research open
+      definition_hole: false
+subject:
+  msc:
+    - "30"
 ids:
+  formal_conjectures: FormalConjectures/Wikipedia/Bloch.lean
+  wikipedia: https://en.wikipedia.org/wiki/Bloch%27s_theorem_(complex_analysis)
   external:
     - label: Wikipedia
       url: https://en.wikipedia.org/wiki/Bloch%27s_theorem_(complex_analysis)
@@ -10,14 +68,15 @@ ids:
       url: https://mathworld.wolfram.com/BlochConstant.html
     - label: Bhowmik–Sen
       url: https://www.cambridge.org/core/journals/canadian-mathematical-bulletin/article/improved-bloch-and-landau-constants-for-meromorphic-functions/FD465D1F2CEF7E8C62AFF16C3E89B7B4
-  formal_conjectures: FormalConjectures/Wikipedia/Bloch.lean
-  wikipedia: https://en.wikipedia.org/wiki/Bloch%27s_theorem_(complex_analysis)
 openness_basis:
-  asserted_by: google-deepmind/formal-conjectures
   meaning: no_published_solution_known_to_curator
+  asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
+claims: []
 provenance:
-  - fields:
+  - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/Bloch.lean
+    source: google-deepmind/formal-conjectures
+    fields:
       - title
       - statement.informal
       - statement.formal
@@ -25,63 +84,4 @@ provenance:
       - ids.external
     license: Apache-2.0
     retrieved: 2026-07-31
-    source: google-deepmind/formal-conjectures
     upstream_version: v4.32.0
-    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/Bloch.lean
-statement:
-  formal:
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: blochConstant_lower_bound
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/Bloch.lean
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: blochConstant_upper_bound
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/Bloch.lean
-    - category: research open
-      definition_hole: false
-      language: lean4
-      theorem: blochConstant_exact_value
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/Bloch.lean
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: univalentBlochConstant_lower_bound
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/Bloch.lean
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: univalentBlochConstant_upper_bound
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/Bloch.lean
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: landauConstant_lower_bound
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/Bloch.lean
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: landauConstant_upper_bound
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/Bloch.lean
-    - category: research open
-      definition_hole: false
-      language: lean4
-      theorem: landauConstant_exact_value
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/Bloch.lean
-  informal: |-
-    Ahlfors and Grunsky also conjectured in [AG37] that this upper bound is the precise value of the
-    Bloch constant.
-subject:
-  msc:
-    - "30"
-title: Bloch and Landau constants

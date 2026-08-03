@@ -1,33 +1,53 @@
-claims:
-  - evidence_tier: published
-    id: erdos-822-fc-solved
-    notes: Imported from the upstream `research solved` category. The statement is formalized; the proof has not been machine-checked by ConjectureHub.
-    recorded_on: 2026-07-31
-    reviewer: google-deepmind/formal-conjectures maintainers
-    source:
-      kind: dataset
-      title: formal-conjectures marks erdos_822 as research solved
-      url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/822.lean
-    state: active
-    type: proved
 id: erdos-822
+title: Erdős Problem 822
+statement:
+  informal: |-
+    Does the set of integers of the form $n + \varphi(n)$ have positive (lower) density?
+
+    [GIL24] proved this was true.
+  formal:
+    - language: lean4
+      theorem: erdos_822
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/822.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
+subject:
+  msc:
+    - "11"
+  tags:
+    - number theory
 ids:
   erdos: "822"
+  oeis:
+    - A121048
+    - A155085
+  formal_conjectures: FormalConjectures/ErdosProblems/822.lean
   external:
     - label: erdosproblems.com/822
       url: https://www.erdosproblems.com/822
     - label: "erdosproblems.com forum #822"
       url: https://www.erdosproblems.com/forum/thread/822
-  formal_conjectures: FormalConjectures/ErdosProblems/822.lean
-  oeis:
-    - A121048
-    - A155085
 openness_basis:
+  meaning: no_published_solution_known_to_curator
   asserted_by: erdosproblems.com
   asserted_on: 2025-10-14
-  meaning: no_published_solution_known_to_curator
+claims:
+  - id: erdos-822-fc-solved
+    type: proved
+    evidence_tier: published
+    state: active
+    recorded_on: 2026-07-31
+    source:
+      title: formal-conjectures marks erdos_822 as research solved
+      url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/822.lean
+      kind: dataset
+    reviewer: google-deepmind/formal-conjectures maintainers
+    notes: Imported from the upstream `research solved` category. The statement is formalized; the proof has not been machine-checked by ConjectureHub.
 provenance:
-  - fields:
+  - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/822.lean
+    source: google-deepmind/formal-conjectures
+    fields:
       - title
       - statement.informal
       - statement.formal
@@ -35,10 +55,10 @@ provenance:
       - ids.external
     license: Apache-2.0
     retrieved: 2026-07-31
-    source: google-deepmind/formal-conjectures
     upstream_version: v4.32.0
-    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/822.lean
-  - fields:
+  - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
+    source: teorth/erdosproblems
+    fields:
       - ids.erdos
       - ids.oeis
       - subject.tags
@@ -46,24 +66,4 @@ provenance:
       - claims
     license: Apache-2.0
     retrieved: 2026-07-31
-    source: teorth/erdosproblems
     upstream_version: d031865128a7ddccd85e8099f0f818211cfc9a41
-    url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
-statement:
-  formal:
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: erdos_822
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/822.lean
-  informal: |-
-    Does the set of integers of the form $n + \varphi(n)$ have positive (lower) density?
-
-    [GIL24] proved this was true.
-subject:
-  msc:
-    - "11"
-  tags:
-    - number theory
-title: Erdős Problem 822

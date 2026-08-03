@@ -1,55 +1,19 @@
-claims: []
 id: erdos-520
-ids:
-  erdos: "520"
-  external:
-    - label: erdosproblems.com/520
-      url: https://www.erdosproblems.com/520
-    - label: "erdosproblems.com forum #520"
-      url: https://www.erdosproblems.com/forum/thread/520
-  formal_conjectures: FormalConjectures/ErdosProblems/520.lean
-openness_basis:
-  asserted_by: erdosproblems.com
-  asserted_on: 2025-08-31
-  meaning: no_published_solution_known_to_curator
-  note: Categorized upstream as "research open" at v4.32.0.
-provenance:
-  - fields:
-      - title
-      - statement.informal
-      - statement.formal
-      - subject.msc
-      - ids.external
-    license: Apache-2.0
-    retrieved: 2026-07-31
-    source: google-deepmind/formal-conjectures
-    upstream_version: v4.32.0
-    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/520.lean
-  - fields:
-      - ids.erdos
-      - ids.oeis
-      - subject.tags
-      - openness_basis
-      - claims
-    license: Apache-2.0
-    retrieved: 2026-07-31
-    source: teorth/erdosproblems
-    upstream_version: d031865128a7ddccd85e8099f0f818211cfc9a41
-    url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
+title: Erdős Problem 520
 statement:
-  formal:
-    - category: research open
-      definition_hole: false
-      language: lean4
-      theorem: erdos_520
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/520.lean
   informal: |-
     Let $f$ be a Rademacher multiplicative function.
     Does there exist some constant $c > 0$ such that, almost surely,
     $$
      \limsup_{N \to \infty} \frac{\sum_{m \leq N} f(m)}{\sqrt{N \log \log N}} = c?
     $$
+  formal:
+    - language: lean4
+      theorem: erdos_520
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/520.lean
+      toolchain: v4.32.0
+      category: research open
+      definition_hole: false
 subject:
   msc:
     - "11"
@@ -57,4 +21,40 @@ subject:
   tags:
     - number theory
     - probability
-title: Erdős Problem 520
+ids:
+  erdos: "520"
+  formal_conjectures: FormalConjectures/ErdosProblems/520.lean
+  external:
+    - label: erdosproblems.com/520
+      url: https://www.erdosproblems.com/520
+    - label: "erdosproblems.com forum #520"
+      url: https://www.erdosproblems.com/forum/thread/520
+openness_basis:
+  meaning: no_published_solution_known_to_curator
+  asserted_by: erdosproblems.com
+  asserted_on: 2025-08-31
+  note: Categorized upstream as "research open" at v4.32.0.
+claims: []
+provenance:
+  - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/520.lean
+    source: google-deepmind/formal-conjectures
+    fields:
+      - title
+      - statement.informal
+      - statement.formal
+      - subject.msc
+      - ids.external
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    upstream_version: v4.32.0
+  - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
+    source: teorth/erdosproblems
+    fields:
+      - ids.erdos
+      - ids.oeis
+      - subject.tags
+      - openness_basis
+      - claims
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    upstream_version: d031865128a7ddccd85e8099f0f818211cfc9a41

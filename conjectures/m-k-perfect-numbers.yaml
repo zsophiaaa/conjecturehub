@@ -1,19 +1,34 @@
-claims: []
 id: m-k-perfect-numbers
+title: (m,k)-perfect numbers
+statement:
+  informal: There does not exist a $(2,5)$-perfect number
+  formal:
+    - language: lean4
+      theorem: twoFivePerfect
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/Superperfectnumbers.lean
+      toolchain: v4.32.0
+      category: research open
+      definition_hole: false
+subject:
+  msc:
+    - "11"
 ids:
+  formal_conjectures: FormalConjectures/Wikipedia/Superperfectnumbers.lean
+  wikipedia: https://en.wikipedia.org/wiki/Superperfect_number#Generalizations
   external:
     - label: Wikipedia
       url: https://en.wikipedia.org/wiki/Superperfect_number#Generalizations
     - label: Wikipedia
       url: https://en.wikipedia.org/wiki/List_of_unsolved_problems_in_mathematics#General
-  formal_conjectures: FormalConjectures/Wikipedia/Superperfectnumbers.lean
-  wikipedia: https://en.wikipedia.org/wiki/Superperfect_number#Generalizations
 openness_basis:
-  asserted_by: google-deepmind/formal-conjectures
   meaning: no_published_solution_known_to_curator
+  asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
+claims: []
 provenance:
-  - fields:
+  - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/Superperfectnumbers.lean
+    source: google-deepmind/formal-conjectures
+    fields:
       - title
       - statement.informal
       - statement.formal
@@ -21,19 +36,4 @@ provenance:
       - ids.external
     license: Apache-2.0
     retrieved: 2026-07-31
-    source: google-deepmind/formal-conjectures
     upstream_version: v4.32.0
-    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/Superperfectnumbers.lean
-statement:
-  formal:
-    - category: research open
-      definition_hole: false
-      language: lean4
-      theorem: twoFivePerfect
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/Superperfectnumbers.lean
-  informal: There does not exist a $(2,5)$-perfect number
-subject:
-  msc:
-    - "11"
-title: (m,k)-perfect numbers

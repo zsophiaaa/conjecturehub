@@ -1,17 +1,65 @@
-claims: []
 id: inverse-galois-problem
+title: Inverse Galois problem
+statement:
+  informal: |-
+    The **Inverse Galois Problem**: every finite group is
+    isomorphic to the Galois group of a Galois extension of the
+    rationals.
+  formal:
+    - language: lean4
+      theorem: inverse_galois_problem
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/InverseGalois.lean
+      toolchain: v4.32.0
+      category: research open
+      definition_hole: false
+    - language: lean4
+      theorem: inverse_galois_problem.variants.cyclic
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/InverseGalois.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
+    - language: lean4
+      theorem: inverse_galois_problem.variants.abelian
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/InverseGalois.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
+    - language: lean4
+      theorem: inverse_galois_problem.variants.symmetric_group
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/InverseGalois.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
+    - language: lean4
+      theorem: inverse_galois_problem.variants.complex_rational_functions
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/InverseGalois.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
+    - language: lean4
+      theorem: inverse_galois_problem.variants.complex_function_field
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/InverseGalois.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
+subject:
+  msc:
+    - "12"
 ids:
+  formal_conjectures: FormalConjectures/Wikipedia/InverseGalois.lean
+  wikipedia: https://en.wikipedia.org/wiki/Inverse_Galois_problem
   external:
     - label: Wikipedia
       url: https://en.wikipedia.org/wiki/Inverse_Galois_problem
-  formal_conjectures: FormalConjectures/Wikipedia/InverseGalois.lean
-  wikipedia: https://en.wikipedia.org/wiki/Inverse_Galois_problem
 openness_basis:
-  asserted_by: google-deepmind/formal-conjectures
   meaning: no_published_solution_known_to_curator
+  asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
+claims: []
 provenance:
-  - fields:
+  - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/InverseGalois.lean
+    source: google-deepmind/formal-conjectures
+    fields:
       - title
       - statement.informal
       - statement.formal
@@ -19,52 +67,4 @@ provenance:
       - ids.external
     license: Apache-2.0
     retrieved: 2026-07-31
-    source: google-deepmind/formal-conjectures
     upstream_version: v4.32.0
-    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/InverseGalois.lean
-statement:
-  formal:
-    - category: research open
-      definition_hole: false
-      language: lean4
-      theorem: inverse_galois_problem
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/InverseGalois.lean
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: inverse_galois_problem.variants.cyclic
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/InverseGalois.lean
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: inverse_galois_problem.variants.abelian
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/InverseGalois.lean
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: inverse_galois_problem.variants.symmetric_group
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/InverseGalois.lean
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: inverse_galois_problem.variants.complex_rational_functions
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/InverseGalois.lean
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: inverse_galois_problem.variants.complex_function_field
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/InverseGalois.lean
-  informal: |-
-    The **Inverse Galois Problem**: every finite group is
-    isomorphic to the Galois group of a Galois extension of the
-    rationals.
-subject:
-  msc:
-    - "12"
-title: Inverse Galois problem

@@ -1,16 +1,42 @@
-claims: []
 id: green-s-open-problem-44
+title: Green's Open Problem 44
+statement:
+  informal: |-
+    Sieve $[N]$ by removing half the residue classes mod $p_i$, for primes
+    $2 \leqslant p_1 < p_2 < \dots < p_{1000} < N^{9/10}$. Does the remaining set have size at most
+    $\frac{1}{10} N$?
+
+    We interpret "half the residue classes" as $\lfloor p_i / 2 \rfloor$.
+  formal:
+    - language: lean4
+      theorem: green_44
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/GreensOpenProblems/44.lean
+      toolchain: v4.32.0
+      category: research open
+      definition_hole: false
+    - language: lean4
+      theorem: green_44.variants.less_than_sqrt
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/GreensOpenProblems/44.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
+subject:
+  msc:
+    - "11"
 ids:
+  formal_conjectures: FormalConjectures/GreensOpenProblems/44.lean
   external:
     - label: Ben Green's 100 Open Problems
       url: https://people.maths.ox.ac.uk/greenbj/papers/open-problems.pdf#problem.44
-  formal_conjectures: FormalConjectures/GreensOpenProblems/44.lean
 openness_basis:
-  asserted_by: google-deepmind/formal-conjectures
   meaning: no_published_solution_known_to_curator
+  asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
+claims: []
 provenance:
-  - fields:
+  - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/GreensOpenProblems/44.lean
+    source: google-deepmind/formal-conjectures
+    fields:
       - title
       - statement.informal
       - statement.formal
@@ -18,30 +44,4 @@ provenance:
       - ids.external
     license: Apache-2.0
     retrieved: 2026-07-31
-    source: google-deepmind/formal-conjectures
     upstream_version: v4.32.0
-    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/GreensOpenProblems/44.lean
-statement:
-  formal:
-    - category: research open
-      definition_hole: false
-      language: lean4
-      theorem: green_44
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/GreensOpenProblems/44.lean
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: green_44.variants.less_than_sqrt
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/GreensOpenProblems/44.lean
-  informal: |-
-    Sieve $[N]$ by removing half the residue classes mod $p_i$, for primes
-    $2 \leqslant p_1 < p_2 < \dots < p_{1000} < N^{9/10}$. Does the remaining set have size at most
-    $\frac{1}{10} N$?
-
-    We interpret "half the residue classes" as $\lfloor p_i / 2 \rfloor$.
-subject:
-  msc:
-    - "11"
-title: Green's Open Problem 44

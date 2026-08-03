@@ -1,29 +1,52 @@
-claims:
-  - evidence_tier: published
-    id: erdos-897-fc-solved
-    notes: Imported from the upstream `research solved` category, which records that the problem is resolved without stating the direction. Direction taken from erdosproblems.com, which records it as "disproved". The statement is formalized; the proof has not been machine-checked by ConjectureHub.
-    recorded_on: 2026-07-31
-    reviewer: google-deepmind/formal-conjectures maintainers
-    source:
-      kind: dataset
-      title: formal-conjectures marks erdos_897.parts.i as research solved
-      url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/897.lean
-    state: active
-    type: disproved
-  - asserted_on: 2025-12-27
-    evidence_tier: published
-    id: erdos-897-erdos-status
-    recorded_on: 2026-07-31
-    reviewer: teorth/erdosproblems maintainers
-    source:
-      kind: dataset
-      title: erdosproblems.com records this problem as "disproved"
-      url: https://www.erdosproblems.com/897
-    state: active
-    type: disproved
 id: erdos-897
+title: Erdős Problem 897
+statement:
+  informal: |-
+    Let $f(n)$ be an additive function (so that $f(ab)=f(a)+f(b)$
+    if $(a,b)=1$ such that $\limsup_{p,k} f(p^k) / \log(p^k) = ∞$.
+    Is it true that $\limsup_n (f(n+1)−f(n))/ \log n = ∞$?
+
+    The answer is no; this follows from a construction of Wirsing [Wi81], rediscovered by
+    Archivara [Ar25] and formalised in Lean by Aristotle [ArWu25].
+  formal:
+    - language: lean4
+      theorem: erdos_897.parts.i
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/897.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
+    - language: lean4
+      theorem: erdos_897.parts.ii
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/897.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
+    - language: lean4
+      theorem: erdos_897.variants.log_growth
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/897.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
+    - language: lean4
+      theorem: erdos_897.variants.parts.i
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/897.lean
+      toolchain: v4.32.0
+      category: research open
+      definition_hole: false
+    - language: lean4
+      theorem: erdos_897.variants.parts.ii
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/897.lean
+      toolchain: v4.32.0
+      category: research open
+      definition_hole: false
+subject:
+  msc:
+    - "11"
+  tags:
+    - number theory
 ids:
   erdos: "897"
+  formal_conjectures: FormalConjectures/ErdosProblems/897.lean
   external:
     - label: erdosproblems.com/897
       url: https://www.erdosproblems.com/897
@@ -33,13 +56,37 @@ ids:
       url: https://github.com/plby/lean-proofs/blob/main/src/v4.24.0/ErdosProblems/Erdos897.lean
     - label: "erdosproblems.com forum #897"
       url: https://www.erdosproblems.com/forum/thread/897
-  formal_conjectures: FormalConjectures/ErdosProblems/897.lean
 openness_basis:
+  meaning: no_published_solution_known_to_curator
   asserted_by: erdosproblems.com
   asserted_on: 2025-12-27
-  meaning: no_published_solution_known_to_curator
+claims:
+  - id: erdos-897-fc-solved
+    type: disproved
+    evidence_tier: published
+    state: active
+    recorded_on: 2026-07-31
+    source:
+      title: formal-conjectures marks erdos_897.parts.i as research solved
+      url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/897.lean
+      kind: dataset
+    reviewer: google-deepmind/formal-conjectures maintainers
+    notes: Imported from the upstream `research solved` category, which records that the problem is resolved without stating the direction. Direction taken from erdosproblems.com, which records it as "disproved". The statement is formalized; the proof has not been machine-checked by ConjectureHub.
+  - id: erdos-897-erdos-status
+    asserted_on: 2025-12-27
+    type: disproved
+    evidence_tier: published
+    state: active
+    recorded_on: 2026-07-31
+    source:
+      title: erdosproblems.com records this problem as "disproved"
+      url: https://www.erdosproblems.com/897
+      kind: dataset
+    reviewer: teorth/erdosproblems maintainers
 provenance:
-  - fields:
+  - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/897.lean
+    source: google-deepmind/formal-conjectures
+    fields:
       - title
       - statement.informal
       - statement.formal
@@ -47,10 +94,10 @@ provenance:
       - ids.external
     license: Apache-2.0
     retrieved: 2026-07-31
-    source: google-deepmind/formal-conjectures
     upstream_version: v4.32.0
-    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/897.lean
-  - fields:
+  - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
+    source: teorth/erdosproblems
+    fields:
       - ids.erdos
       - ids.oeis
       - subject.tags
@@ -58,51 +105,4 @@ provenance:
       - claims
     license: Apache-2.0
     retrieved: 2026-07-31
-    source: teorth/erdosproblems
     upstream_version: d031865128a7ddccd85e8099f0f818211cfc9a41
-    url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
-statement:
-  formal:
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: erdos_897.parts.i
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/897.lean
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: erdos_897.parts.ii
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/897.lean
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: erdos_897.variants.log_growth
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/897.lean
-    - category: research open
-      definition_hole: false
-      language: lean4
-      theorem: erdos_897.variants.parts.i
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/897.lean
-    - category: research open
-      definition_hole: false
-      language: lean4
-      theorem: erdos_897.variants.parts.ii
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/897.lean
-  informal: |-
-    Let $f(n)$ be an additive function (so that $f(ab)=f(a)+f(b)$
-    if $(a,b)=1$ such that $\limsup_{p,k} f(p^k) / \log(p^k) = ∞$.
-    Is it true that $\limsup_n (f(n+1)−f(n))/ \log n = ∞$?
-
-    The answer is no; this follows from a construction of Wirsing [Wi81], rediscovered by
-    Archivara [Ar25] and formalised in Lean by Aristotle [ArWu25].
-subject:
-  msc:
-    - "11"
-  tags:
-    - number theory
-title: Erdős Problem 897

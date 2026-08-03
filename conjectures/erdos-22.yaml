@@ -1,30 +1,70 @@
-claims:
-  - evidence_tier: published
-    id: erdos-22-fc-solved
-    notes: Imported from the upstream `research solved` category. The statement is formalized; the proof has not been machine-checked by ConjectureHub.
-    recorded_on: 2026-07-31
-    reviewer: google-deepmind/formal-conjectures maintainers
-    source:
-      kind: dataset
-      title: formal-conjectures marks erdos_22 as research solved
-      url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/22.lean
-    state: active
-    type: proved
 id: erdos-22
+title: Erdős Problem 22
+statement:
+  informal: |-
+    Let $\epsilon > 0$ and let $n$ be sufficiently large depending on $\epsilon$. Is there a graph
+    on $n$ vertices with at least $n^2/8$ many edges which contains no $K_4$, such that the largest
+    independent set has size at most $\epsilon n$?
+
+    This is true, as proved by Fox, Loh, and Zhao [FLZ15].
+  formal:
+    - language: lean4
+      theorem: erdos_22
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/22.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
+    - language: lean4
+      theorem: erdos_22.variants.szemeredi_upper
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/22.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
+    - language: lean4
+      theorem: erdos_22.variants.bollobas_erdos_lower
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/22.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
+    - language: lean4
+      theorem: erdos_22.variants.fox_loh_zhao
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/22.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
+subject:
+  msc:
+    - "05"
+  tags:
+    - graph theory
 ids:
   erdos: "22"
+  formal_conjectures: FormalConjectures/ErdosProblems/22.lean
   external:
     - label: erdosproblems.com/22
       url: https://www.erdosproblems.com/22
     - label: "erdosproblems.com forum #22"
       url: https://www.erdosproblems.com/forum/thread/22
-  formal_conjectures: FormalConjectures/ErdosProblems/22.lean
 openness_basis:
+  meaning: no_published_solution_known_to_curator
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
-  meaning: no_published_solution_known_to_curator
+claims:
+  - id: erdos-22-fc-solved
+    type: proved
+    evidence_tier: published
+    state: active
+    recorded_on: 2026-07-31
+    source:
+      title: formal-conjectures marks erdos_22 as research solved
+      url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/22.lean
+      kind: dataset
+    reviewer: google-deepmind/formal-conjectures maintainers
+    notes: Imported from the upstream `research solved` category. The statement is formalized; the proof has not been machine-checked by ConjectureHub.
 provenance:
-  - fields:
+  - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/22.lean
+    source: google-deepmind/formal-conjectures
+    fields:
       - title
       - statement.informal
       - statement.formal
@@ -32,10 +72,10 @@ provenance:
       - ids.external
     license: Apache-2.0
     retrieved: 2026-07-31
-    source: google-deepmind/formal-conjectures
     upstream_version: v4.32.0
-    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/22.lean
-  - fields:
+  - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
+    source: teorth/erdosproblems
+    fields:
       - ids.erdos
       - ids.oeis
       - subject.tags
@@ -43,44 +83,4 @@ provenance:
       - claims
     license: Apache-2.0
     retrieved: 2026-07-31
-    source: teorth/erdosproblems
     upstream_version: d031865128a7ddccd85e8099f0f818211cfc9a41
-    url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
-statement:
-  formal:
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: erdos_22
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/22.lean
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: erdos_22.variants.szemeredi_upper
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/22.lean
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: erdos_22.variants.bollobas_erdos_lower
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/22.lean
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: erdos_22.variants.fox_loh_zhao
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/22.lean
-  informal: |-
-    Let $\epsilon > 0$ and let $n$ be sufficiently large depending on $\epsilon$. Is there a graph
-    on $n$ vertices with at least $n^2/8$ many edges which contains no $K_4$, such that the largest
-    independent set has size at most $\epsilon n$?
-
-    This is true, as proved by Fox, Loh, and Zhao [FLZ15].
-subject:
-  msc:
-    - "05"
-  tags:
-    - graph theory
-title: Erdős Problem 22

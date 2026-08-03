@@ -1,17 +1,46 @@
-claims: []
 id: fuglede-s-conjecture-in-dimensions-1-and-2
+title: Fuglede's conjecture in dimensions 1 and 2
+statement:
+  informal: "**Fuglede's conjecture** in one dimension: A bounded subset of ℝ with positive Lebesgue measure is spectral iff it tiles ℝ by translation."
+  formal:
+    - language: lean4
+      theorem: FugledeConjecture.variants.dim_1
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/Fuglede.lean
+      toolchain: v4.32.0
+      category: research open
+      definition_hole: false
+    - language: lean4
+      theorem: FugledeConjecture.variants.dim_2
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/Fuglede.lean
+      toolchain: v4.32.0
+      category: research open
+      definition_hole: false
+    - language: lean4
+      theorem: FugledeConjecture.variants.dim_3_or_higher
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/Fuglede.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
+subject:
+  msc:
+    - "42"
+    - "46"
+    - "47"
 ids:
+  formal_conjectures: FormalConjectures/Wikipedia/Fuglede.lean
+  wikipedia: https://en.wikipedia.org/wiki/Fuglede%27s_conjecture
   external:
     - label: Fuglede's conjecture
       url: https://en.wikipedia.org/wiki/Fuglede%27s_conjecture
-  formal_conjectures: FormalConjectures/Wikipedia/Fuglede.lean
-  wikipedia: https://en.wikipedia.org/wiki/Fuglede%27s_conjecture
 openness_basis:
-  asserted_by: google-deepmind/formal-conjectures
   meaning: no_published_solution_known_to_curator
+  asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
+claims: []
 provenance:
-  - fields:
+  - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/Fuglede.lean
+    source: google-deepmind/formal-conjectures
+    fields:
       - title
       - statement.informal
       - statement.formal
@@ -19,33 +48,4 @@ provenance:
       - ids.external
     license: Apache-2.0
     retrieved: 2026-07-31
-    source: google-deepmind/formal-conjectures
     upstream_version: v4.32.0
-    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/Fuglede.lean
-statement:
-  formal:
-    - category: research open
-      definition_hole: false
-      language: lean4
-      theorem: FugledeConjecture.variants.dim_1
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/Fuglede.lean
-    - category: research open
-      definition_hole: false
-      language: lean4
-      theorem: FugledeConjecture.variants.dim_2
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/Fuglede.lean
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: FugledeConjecture.variants.dim_3_or_higher
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/Fuglede.lean
-  informal: "**Fuglede's conjecture** in one dimension: A bounded subset of ℝ with positive Lebesgue measure is spectral iff it tiles ℝ by translation."
-subject:
-  msc:
-    - "42"
-    - "46"
-    - "47"
-title: Fuglede's conjecture in dimensions 1 and 2

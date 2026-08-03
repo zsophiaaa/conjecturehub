@@ -1,32 +1,68 @@
-claims:
-  - evidence_tier: published
-    id: erdos-1095-fc-solved
-    notes: Imported from the upstream `research solved` category. The statement is formalized; the proof has not been machine-checked by ConjectureHub.
-    recorded_on: 2026-07-31
-    reviewer: google-deepmind/formal-conjectures maintainers
-    source:
-      kind: dataset
-      title: formal-conjectures marks erdos_1095.variants.lower_solved as research solved
-      url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/1095.lean
-    state: active
-    type: proved
 id: erdos-1095
+title: Erdős Problem 1095
+statement:
+  informal: The current record is $g(k) \gg \exp(c(\log k)^2)$ for some $c>0$, due to Konyagin [Ko99b]. -
+  formal:
+    - language: lean4
+      theorem: erdos_1095.variants.lower_solved
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/1095.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
+    - language: lean4
+      theorem: erdos_1095.variants.upper_conjecture
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/1095.lean
+      toolchain: v4.32.0
+      category: research open
+      definition_hole: false
+    - language: lean4
+      theorem: erdos_1095.variants.lower_conjecture
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/1095.lean
+      toolchain: v4.32.0
+      category: research open
+      definition_hole: false
+    - language: lean4
+      theorem: erdos_1095.variants.log_equivalent
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/1095.lean
+      toolchain: v4.32.0
+      category: research open
+      definition_hole: false
+subject:
+  msc:
+    - "11"
+  tags:
+    - number theory
+    - binomial coefficients
 ids:
   erdos: "1095"
+  oeis:
+    - A003458
+  formal_conjectures: FormalConjectures/ErdosProblems/1095.lean
   external:
     - label: erdosproblems.com/1095
       url: https://www.erdosproblems.com/1095
     - label: "erdosproblems.com forum #1095"
       url: https://www.erdosproblems.com/forum/thread/1095
-  formal_conjectures: FormalConjectures/ErdosProblems/1095.lean
-  oeis:
-    - A003458
 openness_basis:
+  meaning: no_published_solution_known_to_curator
   asserted_by: erdosproblems.com
   asserted_on: 2025-10-18
-  meaning: no_published_solution_known_to_curator
+claims:
+  - id: erdos-1095-fc-solved
+    type: proved
+    evidence_tier: published
+    state: active
+    recorded_on: 2026-07-31
+    source:
+      title: formal-conjectures marks erdos_1095.variants.lower_solved as research solved
+      url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/1095.lean
+      kind: dataset
+    reviewer: google-deepmind/formal-conjectures maintainers
+    notes: Imported from the upstream `research solved` category. The statement is formalized; the proof has not been machine-checked by ConjectureHub.
 provenance:
-  - fields:
+  - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/1095.lean
+    source: google-deepmind/formal-conjectures
+    fields:
       - title
       - statement.informal
       - statement.formal
@@ -34,10 +70,10 @@ provenance:
       - ids.external
     license: Apache-2.0
     retrieved: 2026-07-31
-    source: google-deepmind/formal-conjectures
     upstream_version: v4.32.0
-    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/1095.lean
-  - fields:
+  - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
+    source: teorth/erdosproblems
+    fields:
       - ids.erdos
       - ids.oeis
       - subject.tags
@@ -45,40 +81,4 @@ provenance:
       - claims
     license: Apache-2.0
     retrieved: 2026-07-31
-    source: teorth/erdosproblems
     upstream_version: d031865128a7ddccd85e8099f0f818211cfc9a41
-    url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
-statement:
-  formal:
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: erdos_1095.variants.lower_solved
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/1095.lean
-    - category: research open
-      definition_hole: false
-      language: lean4
-      theorem: erdos_1095.variants.upper_conjecture
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/1095.lean
-    - category: research open
-      definition_hole: false
-      language: lean4
-      theorem: erdos_1095.variants.lower_conjecture
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/1095.lean
-    - category: research open
-      definition_hole: false
-      language: lean4
-      theorem: erdos_1095.variants.log_equivalent
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/1095.lean
-  informal: The current record is $g(k) \gg \exp(c(\log k)^2)$ for some $c>0$, due to Konyagin [Ko99b]. -
-subject:
-  msc:
-    - "11"
-  tags:
-    - number theory
-    - binomial coefficients
-title: Erdős Problem 1095

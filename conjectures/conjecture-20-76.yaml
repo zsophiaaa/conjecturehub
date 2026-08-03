@@ -1,16 +1,34 @@
-claims: []
 id: conjecture-20-76
+title: Conjecture 20.76
+statement:
+  informal: |-
+    Let $G$ be a finite $p$-group and assume that all abelian normal subgroups of $G$
+    have order at most $p^k$. Is it true that every abelian subgroup of $G$ has order at most
+    $p^{2k}$?
+  formal:
+    - language: lean4
+      theorem: kourovka_20_76
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Kourovka/20_76.lean
+      toolchain: v4.32.0
+      category: research open
+      definition_hole: false
+subject:
+  msc:
+    - "20"
 ids:
+  formal_conjectures: FormalConjectures/Kourovka/20_76.lean
   external:
     - label: The Kourovka Notebook
       url: https://arxiv.org/abs/1401.0300v40
-  formal_conjectures: FormalConjectures/Kourovka/20_76.lean
 openness_basis:
-  asserted_by: google-deepmind/formal-conjectures
   meaning: no_published_solution_known_to_curator
+  asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
+claims: []
 provenance:
-  - fields:
+  - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Kourovka/20_76.lean
+    source: google-deepmind/formal-conjectures
+    fields:
       - title
       - statement.informal
       - statement.formal
@@ -18,22 +36,4 @@ provenance:
       - ids.external
     license: Apache-2.0
     retrieved: 2026-07-31
-    source: google-deepmind/formal-conjectures
     upstream_version: v4.32.0
-    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Kourovka/20_76.lean
-statement:
-  formal:
-    - category: research open
-      definition_hole: false
-      language: lean4
-      theorem: kourovka_20_76
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Kourovka/20_76.lean
-  informal: |-
-    Let $G$ be a finite $p$-group and assume that all abelian normal subgroups of $G$
-    have order at most $p^k$. Is it true that every abelian subgroup of $G$ has order at most
-    $p^{2k}$?
-subject:
-  msc:
-    - "20"
-title: Conjecture 20.76

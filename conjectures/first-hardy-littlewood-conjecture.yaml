@@ -1,65 +1,9 @@
+id: first-hardy-littlewood-conjecture
+title: First Hardy–Littlewood conjecture
 aliases:
   - Hardy-Littlewood conjecture
   - Hardy–Littlewood conjecture
-claims: []
-id: first-hardy-littlewood-conjecture
-ids:
-  external:
-    - label: Wikipedia
-      url: https://en.wikipedia.org/wiki/First_Hardy%E2%80%93Littlewood_conjecture
-  formal_conjectures: FormalConjectures/Wikipedia/HardyLittlewood.lean
-  mathworld: https://mathworld.wolfram.com/k-TupleConjecture.html
-  wikidata: Q18450813
-  wikipedia: https://en.wikipedia.org/wiki/First_Hardy%E2%80%93Littlewood_conjecture
-notability:
-  measured_on: 2026-08-03
-  wikipedia_language_editions: 6
-openness_basis:
-  asserted_by: google-deepmind/formal-conjectures
-  meaning: no_published_solution_known_to_curator
-  note: Categorized upstream as "research open" at v4.32.0.
-provenance:
-  - fields:
-      - title
-      - statement.informal
-      - statement.formal
-      - subject.msc
-      - ids.external
-    license: Apache-2.0
-    retrieved: 2026-07-31
-    source: google-deepmind/formal-conjectures
-    upstream_version: v4.32.0
-    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/HardyLittlewood.lean
-  - fields:
-      - aliases
-      - ids.wikidata
-      - ids.wikipedia
-      - ids.mathworld
-      - notability.wikipedia_language_editions
-    license: CC0-1.0
-    retrieved: 2026-08-03
-    source: wikidata
-    url: https://www.wikidata.org/wiki/Q18450813
 statement:
-  formal:
-    - category: research open
-      definition_hole: false
-      language: lean4
-      theorem: first_hardy_littlewood_conjecture
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/HardyLittlewood.lean
-    - category: research open
-      definition_hole: false
-      language: lean4
-      theorem: second_hardy_littlewood_conjecture
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/HardyLittlewood.lean
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: not_first_and_secondHardyLittlewoodConjecture
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/HardyLittlewood.lean
   informal: |-
     Let $P = (m_1, \dots, m_k)$ be a tuple of positive even integers. Let
     $\pi_P(n)$ denote the number of primes $p\leq n$ such that $(p, p + m_1, \dots, p + m_k)$
@@ -73,7 +17,63 @@ statement:
     $$
      \pi_P(n)\sim C_P\int_2^n\frac{dt}{\log^{k+1}t}.
     $$
+  formal:
+    - language: lean4
+      theorem: first_hardy_littlewood_conjecture
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/HardyLittlewood.lean
+      toolchain: v4.32.0
+      category: research open
+      definition_hole: false
+    - language: lean4
+      theorem: second_hardy_littlewood_conjecture
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/HardyLittlewood.lean
+      toolchain: v4.32.0
+      category: research open
+      definition_hole: false
+    - language: lean4
+      theorem: not_first_and_secondHardyLittlewoodConjecture
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/HardyLittlewood.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
 subject:
   msc:
     - "11"
-title: First Hardy–Littlewood conjecture
+ids:
+  wikidata: Q18450813
+  formal_conjectures: FormalConjectures/Wikipedia/HardyLittlewood.lean
+  wikipedia: https://en.wikipedia.org/wiki/First_Hardy%E2%80%93Littlewood_conjecture
+  mathworld: https://mathworld.wolfram.com/k-TupleConjecture.html
+  external:
+    - label: Wikipedia
+      url: https://en.wikipedia.org/wiki/First_Hardy%E2%80%93Littlewood_conjecture
+notability:
+  wikipedia_language_editions: 6
+  measured_on: 2026-08-03
+openness_basis:
+  meaning: no_published_solution_known_to_curator
+  asserted_by: google-deepmind/formal-conjectures
+  note: Categorized upstream as "research open" at v4.32.0.
+claims: []
+provenance:
+  - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/HardyLittlewood.lean
+    source: google-deepmind/formal-conjectures
+    fields:
+      - title
+      - statement.informal
+      - statement.formal
+      - subject.msc
+      - ids.external
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    upstream_version: v4.32.0
+  - url: https://www.wikidata.org/wiki/Q18450813
+    source: wikidata
+    fields:
+      - aliases
+      - ids.wikidata
+      - ids.wikipedia
+      - ids.mathworld
+      - notability.wikipedia_language_editions
+    license: CC0-1.0
+    retrieved: 2026-08-03

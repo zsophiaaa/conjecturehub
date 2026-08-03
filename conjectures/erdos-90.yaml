@@ -1,48 +1,126 @@
+id: erdos-90
+title: "Erdős Problem 90: The unit distance problem"
+statement:
+  informal: |-
+    Does every set of $n$ distinct points in $\mathbb{R}^2$ contain at most
+    $n^{1+O(\frac{1}{\log\log n})}$ many pairs which are distance $1$ apart?
+
+    This was
+    [disproved](https://cdn.openai.com/pdf/74c24085-19b0-4534-9c90-465b8e29ad73/unit-distance-proof.pdf)
+    by an internal model at OpenAI, which constructed (for infinitely many $n$) a set $P$ of $n$ points
+    in $\mathbb{R}^2$ such that the number of unit distance pairs in $P$ is at least $n^{1+c}$, where
+    $c > 0$ is an absolute constant.
+  formal:
+    - language: lean4
+      theorem: erdos_90
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/90.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
+    - language: lean4
+      theorem: erdos_90.variants.polynomial_lower_bound
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/90.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
+    - language: lean4
+      theorem: erdos_90.variants.sawin_explicit
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/90.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
+    - language: lean4
+      theorem: sawin_lattice_reduction
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/90.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
+    - language: lean4
+      theorem: sawin_totally_real_tower
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/90.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
+subject:
+  msc:
+    - "11"
+    - "52"
+  tags:
+    - geometry
+    - distances
+ids:
+  erdos: "90"
+  oeis:
+    - A186705
+  formal_conjectures: FormalConjectures/ErdosProblems/90.lean
+  external:
+    - label: erdosproblems.com/90
+      url: https://www.erdosproblems.com/90
+    - label: "*An explicit lower bound for the unit distance problem*"
+      url: https://arxiv.org/abs/2605.20579
+    - label: "*Remarks on the disproof of the unit distance conjecture*"
+      url: https://arxiv.org/abs/2605.20695
+    - label: "erdosproblems.com forum #90"
+      url: https://www.erdosproblems.com/forum/thread/90
+openness_basis:
+  meaning: no_published_solution_known_to_curator
+  asserted_by: erdosproblems.com
+  asserted_on: 2026-06-07
+  note: "Disproved (page edited Jun 2026; $500 bounty noted). ~44 forum comments: Sawin's explicit exponent (arXiv:2605.20579), human-digested Remarks (arXiv:2605.20695), community parameter optimization race, and Aleph Prover formalization. Side threads discuss restricted variants and whether the constructions could attack distinct-distances or plane chromatic number."
 claims:
-  - evidence_tier: published
-    id: erdos-90-fc-solved
-    notes: Imported from the upstream `research solved` category, which records that the problem is resolved without stating the direction. Direction taken from erdosproblems.com, which records it as "disproved". The statement is formalized; the proof has not been machine-checked by ConjectureHub.
+  - id: erdos-90-fc-solved
+    type: disproved
+    evidence_tier: published
+    state: active
     recorded_on: 2026-07-31
-    reviewer: google-deepmind/formal-conjectures maintainers
     source:
-      kind: dataset
       title: formal-conjectures marks erdos_90 as research solved
       url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/90.lean
-    state: active
-    type: disproved
-  - asserted_on: 2026-06-07
-    evidence_tier: published
-    id: erdos-90-erdos-status
-    recorded_on: 2026-07-31
-    reviewer: teorth/erdosproblems maintainers
-    source:
       kind: dataset
+    reviewer: google-deepmind/formal-conjectures maintainers
+    notes: Imported from the upstream `research solved` category, which records that the problem is resolved without stating the direction. Direction taken from erdosproblems.com, which records it as "disproved". The statement is formalized; the proof has not been machine-checked by ConjectureHub.
+  - id: erdos-90-erdos-status
+    asserted_on: 2026-06-07
+    type: disproved
+    evidence_tier: published
+    state: active
+    recorded_on: 2026-07-31
+    source:
       title: erdosproblems.com records this problem as "disproved"
       url: https://www.erdosproblems.com/90
-    state: active
-    type: disproved
-  - ai_assistance:
-      role: discovery
-      systems:
-        - OpenAI internal model
-      used: yes
+      kind: dataset
+    reviewer: teorth/erdosproblems maintainers
+  - id: erdos-90-openai-disproof-forum
     asserted_on: 2026-05-26
+    type: disproved
+    evidence_tier: preprint
+    state: active
+    recorded_on: 2026-08-02
+    source:
+      title: erdosproblems.com forum
+      url: https://www.erdosproblems.com/forum/thread/90
+      kind: forum
     authors:
       - OpenAI internal model
       - Lijie Chen
       - Mark Sellke
       - Mehtaab Sawhney
-    evidence_tier: preprint
-    id: erdos-90-openai-disproof-forum
+    ai_assistance:
+      used: yes
+      systems:
+        - OpenAI internal model
+      role: discovery
     notes: Internal OpenAI model produced a one-shot proof disproving the n^{1+o(1)} upper bound, constructing infinitely many n-point sets with at least n^{1+c} unit distances (c>0 absolute). Human verification by Sellke and Sawhney; method uses CM-field lattices and Golod–Shafarevich towers. Forum announcement May 2026.
+  - id: erdos-90-remarks-human-digested
+    asserted_on: 2026-05-26
+    type: disproved
+    evidence_tier: preprint
+    state: active
     recorded_on: 2026-08-02
     source:
-      kind: forum
       title: erdosproblems.com forum
       url: https://www.erdosproblems.com/forum/thread/90
-    state: active
-    type: disproved
-  - asserted_on: 2026-05-26
+      kind: forum
     authors:
       - Noga Alon
       - Thomas F. Bloom
@@ -53,70 +131,43 @@ claims:
       - Jacob Tsimerman
       - Victor Wang
       - Melanie Matchett Wood
-    evidence_tier: preprint
-    id: erdos-90-remarks-human-digested
     notes: 'Companion "Remarks" paper (arXiv:2605.20695) gives a short human-verified digest of the AI proof. Pipeline: number fields → norm-one vectors → lattice windows → projection to R². Victor Wang simplified from 3-class to 2-class field towers.'
+  - id: erdos-90-sawin-explicit-exponent
+    asserted_on: 2026-05-26
+    type: disproved
+    evidence_tier: preprint
+    state: active
     recorded_on: 2026-08-02
     source:
-      kind: forum
       title: erdosproblems.com forum
       url: https://www.erdosproblems.com/forum/thread/90
-    state: active
-    type: disproved
-  - asserted_on: 2026-05-26
-    authors:
-      - Will Sawin
-    evidence_tier: preprint
-    id: erdos-90-sawin-explicit-exponent
-    notes: Sharpened the construction to explicit exponent 1.014114…, making every step quantitative. Disproves both Erdős's n^{1+o(1)} conjecture and the weaker n^{1+O(1/log log n)} bound. Forum participants used ChatGPT to optimize finite parameters toward ~1.03–1.035.
-    recorded_on: 2026-08-02
-    source:
       kind: forum
       quote: Will Sawin seems to have shown eps = 0.014.
-      title: erdosproblems.com forum
-      url: https://www.erdosproblems.com/forum/thread/90
-    state: active
-    type: disproved
-  - ai_assistance:
-      role: formalization
-      systems:
-        - Aleph Prover
-      used: yes
-    asserted_on: 2026-05-28
     authors:
-      - Logical Intelligence
+      - Will Sawin
+    notes: Sharpened the construction to explicit exponent 1.014114…, making every step quantitative. Disproves both Erdős's n^{1+o(1)} conjecture and the weaker n^{1+O(1/log log n)} bound. Forum participants used ChatGPT to optimize finite parameters toward ~1.03–1.035.
+  - id: erdos-90-aleph-formalization
+    asserted_on: 2026-05-28
+    type: partial
     evidence_tier: preprint
-    id: erdos-90-aleph-formalization
-    notes: Announced formalization of the OpenAI solution using Aleph Prover. Community converted to standalone Lean; unconditional formalization subsequently reported on the thread.
+    state: active
     recorded_on: 2026-08-02
     source:
-      kind: forum
       title: erdosproblems.com forum
       url: https://www.erdosproblems.com/forum/thread/90
-    state: active
-    type: partial
-id: erdos-90
-ids:
-  erdos: "90"
-  external:
-    - label: erdosproblems.com/90
-      url: https://www.erdosproblems.com/90
-    - label: "*An explicit lower bound for the unit distance problem*"
-      url: https://arxiv.org/abs/2605.20579
-    - label: "*Remarks on the disproof of the unit distance conjecture*"
-      url: https://arxiv.org/abs/2605.20695
-    - label: "erdosproblems.com forum #90"
-      url: https://www.erdosproblems.com/forum/thread/90
-  formal_conjectures: FormalConjectures/ErdosProblems/90.lean
-  oeis:
-    - A186705
-openness_basis:
-  asserted_by: erdosproblems.com
-  asserted_on: 2026-06-07
-  meaning: no_published_solution_known_to_curator
-  note: "Disproved (page edited Jun 2026; $500 bounty noted). ~44 forum comments: Sawin's explicit exponent (arXiv:2605.20579), human-digested Remarks (arXiv:2605.20695), community parameter optimization race, and Aleph Prover formalization. Side threads discuss restricted variants and whether the constructions could attack distinct-distances or plane chromatic number."
+      kind: forum
+    authors:
+      - Logical Intelligence
+    ai_assistance:
+      used: yes
+      systems:
+        - Aleph Prover
+      role: formalization
+    notes: Announced formalization of the OpenAI solution using Aleph Prover. Community converted to standalone Lean; unconditional formalization subsequently reported on the thread.
 provenance:
-  - fields:
+  - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/90.lean
+    source: google-deepmind/formal-conjectures
+    fields:
       - title
       - statement.informal
       - statement.formal
@@ -124,10 +175,10 @@ provenance:
       - ids.external
     license: Apache-2.0
     retrieved: 2026-07-31
-    source: google-deepmind/formal-conjectures
     upstream_version: v4.32.0
-    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/90.lean
-  - fields:
+  - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
+    source: teorth/erdosproblems
+    fields:
       - ids.erdos
       - ids.oeis
       - subject.tags
@@ -135,62 +186,11 @@ provenance:
       - claims
     license: Apache-2.0
     retrieved: 2026-07-31
-    source: teorth/erdosproblems
     upstream_version: d031865128a7ddccd85e8099f0f818211cfc9a41
-    url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
-  - fields:
+  - url: https://www.erdosproblems.com/forum/thread/90
+    source: erdosproblems.com forum (summaries with links)
+    fields:
       - claims
       - openness_basis.note
     license: CC0-1.0
     retrieved: 2026-08-02
-    source: erdosproblems.com forum (summaries with links)
-    url: https://www.erdosproblems.com/forum/thread/90
-statement:
-  formal:
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: erdos_90
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/90.lean
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: erdos_90.variants.polynomial_lower_bound
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/90.lean
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: erdos_90.variants.sawin_explicit
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/90.lean
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: sawin_lattice_reduction
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/90.lean
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: sawin_totally_real_tower
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/90.lean
-  informal: |-
-    Does every set of $n$ distinct points in $\mathbb{R}^2$ contain at most
-    $n^{1+O(\frac{1}{\log\log n})}$ many pairs which are distance $1$ apart?
-
-    This was
-    [disproved](https://cdn.openai.com/pdf/74c24085-19b0-4534-9c90-465b8e29ad73/unit-distance-proof.pdf)
-    by an internal model at OpenAI, which constructed (for infinitely many $n$) a set $P$ of $n$ points
-    in $\mathbb{R}^2$ such that the number of unit distance pairs in $P$ is at least $n^{1+c}$, where
-    $c > 0$ is an absolute constant.
-subject:
-  msc:
-    - "11"
-    - "52"
-  tags:
-    - geometry
-    - distances
-title: "Erdős Problem 90: The unit distance problem"

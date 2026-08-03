@@ -1,44 +1,6 @@
-claims:
-  - evidence_tier: published
-    id: written-on-the-wall-ii-conjecture-36-fc-solved
-    notes: Imported from the upstream `research solved` category. The statement is formalized; the proof has not been machine-checked by ConjectureHub.
-    recorded_on: 2026-07-31
-    reviewer: google-deepmind/formal-conjectures maintainers
-    source:
-      kind: dataset
-      title: formal-conjectures marks conjecture36 as research solved
-      url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/WrittenOnTheWallII/GraphConjecture36.lean
-    state: active
-    type: proved
 id: written-on-the-wall-ii-conjecture-36
-ids:
-  external:
-    - label: E. DeLaVina, Written on the Wall II, Conjectures of Graffiti.pc
-      url: http://cms.dt.uh.edu/faculty/delavinae/research/wowII/
-  formal_conjectures: FormalConjectures/WrittenOnTheWallII/GraphConjecture36.lean
-openness_basis:
-  asserted_by: google-deepmind/formal-conjectures
-  meaning: no_published_solution_known_to_curator
-provenance:
-  - fields:
-      - title
-      - statement.informal
-      - statement.formal
-      - subject.msc
-      - ids.external
-    license: Apache-2.0
-    retrieved: 2026-07-31
-    source: google-deepmind/formal-conjectures
-    upstream_version: v4.32.0
-    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/WrittenOnTheWallII/GraphConjecture36.lean
+title: Written on the Wall II - Conjecture 36
 statement:
-  formal:
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: conjecture36
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/WrittenOnTheWallII/GraphConjecture36.lean
   informal: |-
     WOWII [Conjecture 36](http://cms.uhd.edu/faculty/delavinae/research/wowII/all.html#conj36):
 
@@ -50,7 +12,45 @@ statement:
     $\operatorname{diam}(G)$.
 
     Disproved by Waller in Oct 2003 (counterexample: path number 5, radius 3, dp 1).
+  formal:
+    - language: lean4
+      theorem: conjecture36
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/WrittenOnTheWallII/GraphConjecture36.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
 subject:
   msc:
     - "05"
-title: Written on the Wall II - Conjecture 36
+ids:
+  formal_conjectures: FormalConjectures/WrittenOnTheWallII/GraphConjecture36.lean
+  external:
+    - label: E. DeLaVina, Written on the Wall II, Conjectures of Graffiti.pc
+      url: http://cms.dt.uh.edu/faculty/delavinae/research/wowII/
+openness_basis:
+  meaning: no_published_solution_known_to_curator
+  asserted_by: google-deepmind/formal-conjectures
+claims:
+  - id: written-on-the-wall-ii-conjecture-36-fc-solved
+    type: proved
+    evidence_tier: published
+    state: active
+    recorded_on: 2026-07-31
+    source:
+      title: formal-conjectures marks conjecture36 as research solved
+      url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/WrittenOnTheWallII/GraphConjecture36.lean
+      kind: dataset
+    reviewer: google-deepmind/formal-conjectures maintainers
+    notes: Imported from the upstream `research solved` category. The statement is formalized; the proof has not been machine-checked by ConjectureHub.
+provenance:
+  - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/WrittenOnTheWallII/GraphConjecture36.lean
+    source: google-deepmind/formal-conjectures
+    fields:
+      - title
+      - statement.informal
+      - statement.formal
+      - subject.msc
+      - ids.external
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    upstream_version: v4.32.0

@@ -1,16 +1,55 @@
-claims: []
 id: oeis-34693
+title: exists_k
+statement:
+  informal: "Conjecture: for every $n > 1$ there exists a number $k < n$ such that $nk + 1$ is a prime."
+  formal:
+    - language: lean4
+      theorem: exists_k
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/OEIS/34693.lean
+      toolchain: v4.32.0
+      category: research open
+      definition_hole: false
+    - language: lean4
+      theorem: exists_k_stronger
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/OEIS/34693.lean
+      toolchain: v4.32.0
+      category: research open
+      definition_hole: false
+    - language: lean4
+      theorem: exists_k_best_possible
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/OEIS/34693.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
+    - language: lean4
+      theorem: a_isBigO
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/OEIS/34693.lean
+      toolchain: v4.32.0
+      category: research open
+      definition_hole: false
+    - language: lean4
+      theorem: a_unbounded
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/OEIS/34693.lean
+      toolchain: v4.32.0
+      category: research open
+      definition_hole: false
+subject:
+  msc:
+    - "11"
 ids:
+  formal_conjectures: FormalConjectures/OEIS/34693.lean
   external:
     - label: A34693
       url: https://oeis.org/A34693
-  formal_conjectures: FormalConjectures/OEIS/34693.lean
 openness_basis:
-  asserted_by: google-deepmind/formal-conjectures
   meaning: no_published_solution_known_to_curator
+  asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
+claims: []
 provenance:
-  - fields:
+  - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/OEIS/34693.lean
+    source: google-deepmind/formal-conjectures
+    fields:
       - title
       - statement.informal
       - statement.formal
@@ -18,43 +57,4 @@ provenance:
       - ids.external
     license: Apache-2.0
     retrieved: 2026-07-31
-    source: google-deepmind/formal-conjectures
     upstream_version: v4.32.0
-    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/OEIS/34693.lean
-statement:
-  formal:
-    - category: research open
-      definition_hole: false
-      language: lean4
-      theorem: exists_k
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/OEIS/34693.lean
-    - category: research open
-      definition_hole: false
-      language: lean4
-      theorem: exists_k_stronger
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/OEIS/34693.lean
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: exists_k_best_possible
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/OEIS/34693.lean
-    - category: research open
-      definition_hole: false
-      language: lean4
-      theorem: a_isBigO
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/OEIS/34693.lean
-    - category: research open
-      definition_hole: false
-      language: lean4
-      theorem: a_unbounded
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/OEIS/34693.lean
-  informal: "Conjecture: for every $n > 1$ there exists a number $k < n$ such that $nk + 1$ is a prime."
-subject:
-  msc:
-    - "11"
-title: exists_k

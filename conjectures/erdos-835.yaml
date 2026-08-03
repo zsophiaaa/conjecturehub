@@ -1,18 +1,86 @@
-claims:
-  - asserted_on: 2025-08-31
-    evidence_tier: published
-    id: erdos-835-erdos-status
-    recorded_on: 2026-07-31
-    reviewer: teorth/erdosproblems maintainers
-    source:
-      kind: dataset
-      title: erdosproblems.com records this problem as "verifiable"
-      url: https://www.erdosproblems.com/835
-    state: active
-    type: partial
 id: erdos-835
+title: Erdős Problem 835
+statement:
+  informal: |-
+    Does there exist a $k>2$ such that the $k$-sized subsets of {1,...,2k} can be coloured with
+    $k+1$ colours such that for every $A\subset \{1,\ldots,2k\}$ with $\lvert A\rvert=k+1$ all $k+1$
+    colours appear among the $k$-sized subsets of $A$?
+  formal:
+    - language: lean4
+      theorem: erdos_835
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/835.lean
+      toolchain: v4.32.0
+      category: research open
+      definition_hole: false
+    - language: lean4
+      theorem: erdos_835.variants.johnson
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/835.lean
+      toolchain: v4.32.0
+      category: research open
+      definition_hole: false
+    - language: lean4
+      theorem: johnsonGraph_2k_k_chromaticNumber_known_cases
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/835.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
+    - language: lean4
+      theorem: johnsonGraph_18_9_chromaticNumber
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/835.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
+    - language: lean4
+      theorem: indepNum_johnson_le_johnsonBound
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/835.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
+    - language: lean4
+      theorem: div_johnsonBound_le_chromaticNum_johnson
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/835.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
+    - language: lean4
+      theorem: chromaticNumber_johnson_2k_k_lower_bound
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/835.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
+    - language: lean4
+      theorem: chromaticNumber_johnson_2k_k_lower_bound_odd
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/835.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
+    - language: lean4
+      theorem: johnson_chromaticNumber_odd
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/835.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
+    - language: lean4
+      theorem: johnson_chromaticNumber_composite
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/835.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
+    - language: lean4
+      theorem: johnson_chromaticNumber
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/835.lean
+      toolchain: v4.32.0
+      category: research open
+      definition_hole: false
+subject:
+  msc:
+    - "05"
+  tags:
+    - graph theory
+    - hypergraphs
 ids:
   erdos: "835"
+  formal_conjectures: FormalConjectures/ErdosProblems/835.lean
   external:
     - label: erdosproblems.com/835
       url: https://www.erdosproblems.com/835
@@ -20,14 +88,27 @@ ids:
       url: https://github.com/QuanyuTang/erdos-problem-835/blob/main/On_Problem_835.pdf
     - label: "erdosproblems.com forum #835"
       url: https://www.erdosproblems.com/forum/thread/835
-  formal_conjectures: FormalConjectures/ErdosProblems/835.lean
 openness_basis:
+  meaning: no_published_solution_known_to_curator
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
-  meaning: no_published_solution_known_to_curator
   note: Categorized upstream as "research open" at v4.32.0.
+claims:
+  - id: erdos-835-erdos-status
+    asserted_on: 2025-08-31
+    type: partial
+    evidence_tier: published
+    state: active
+    recorded_on: 2026-07-31
+    source:
+      title: erdosproblems.com records this problem as "verifiable"
+      url: https://www.erdosproblems.com/835
+      kind: dataset
+    reviewer: teorth/erdosproblems maintainers
 provenance:
-  - fields:
+  - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/835.lean
+    source: google-deepmind/formal-conjectures
+    fields:
       - title
       - statement.informal
       - statement.formal
@@ -35,10 +116,10 @@ provenance:
       - ids.external
     license: Apache-2.0
     retrieved: 2026-07-31
-    source: google-deepmind/formal-conjectures
     upstream_version: v4.32.0
-    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/835.lean
-  - fields:
+  - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
+    source: teorth/erdosproblems
+    fields:
       - ids.erdos
       - ids.oeis
       - subject.tags
@@ -46,85 +127,4 @@ provenance:
       - claims
     license: Apache-2.0
     retrieved: 2026-07-31
-    source: teorth/erdosproblems
     upstream_version: d031865128a7ddccd85e8099f0f818211cfc9a41
-    url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
-statement:
-  formal:
-    - category: research open
-      definition_hole: false
-      language: lean4
-      theorem: erdos_835
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/835.lean
-    - category: research open
-      definition_hole: false
-      language: lean4
-      theorem: erdos_835.variants.johnson
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/835.lean
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: johnsonGraph_2k_k_chromaticNumber_known_cases
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/835.lean
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: johnsonGraph_18_9_chromaticNumber
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/835.lean
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: indepNum_johnson_le_johnsonBound
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/835.lean
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: div_johnsonBound_le_chromaticNum_johnson
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/835.lean
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: chromaticNumber_johnson_2k_k_lower_bound
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/835.lean
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: chromaticNumber_johnson_2k_k_lower_bound_odd
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/835.lean
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: johnson_chromaticNumber_odd
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/835.lean
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: johnson_chromaticNumber_composite
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/835.lean
-    - category: research open
-      definition_hole: false
-      language: lean4
-      theorem: johnson_chromaticNumber
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/835.lean
-  informal: |-
-    Does there exist a $k>2$ such that the $k$-sized subsets of {1,...,2k} can be coloured with
-    $k+1$ colours such that for every $A\subset \{1,\ldots,2k\}$ with $\lvert A\rvert=k+1$ all $k+1$
-    colours appear among the $k$-sized subsets of $A$?
-subject:
-  msc:
-    - "05"
-  tags:
-    - graph theory
-    - hypergraphs
-title: Erdős Problem 835

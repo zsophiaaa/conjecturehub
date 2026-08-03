@@ -1,44 +1,6 @@
-claims:
-  - evidence_tier: published
-    id: central-binomial-tail-bounds-conjecture-6-3-fc-solved
-    notes: Imported from the upstream `research solved` category. The statement is formalized; the proof has not been machine-checked by ConjectureHub.
-    recorded_on: 2026-07-31
-    reviewer: google-deepmind/formal-conjectures maintainers
-    source:
-      kind: dataset
-      title: formal-conjectures marks arxiv.id0911_2077.conjecture6_3 as research solved
-      url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Arxiv/0911.2077/Conjecture6_3.lean
-    state: active
-    type: proved
 id: central-binomial-tail-bounds-conjecture-6-3
-ids:
-  external:
-    - label: arxiv/0911.2077
-      url: https://arxiv.org/abs/0911.2077
-  formal_conjectures: FormalConjectures/Arxiv/0911.2077/Conjecture6_3.lean
-openness_basis:
-  asserted_by: google-deepmind/formal-conjectures
-  meaning: no_published_solution_known_to_curator
-provenance:
-  - fields:
-      - title
-      - statement.informal
-      - statement.formal
-      - subject.msc
-      - ids.external
-    license: Apache-2.0
-    retrieved: 2026-07-31
-    source: google-deepmind/formal-conjectures
-    upstream_version: v4.32.0
-    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Arxiv/0911.2077/Conjecture6_3.lean
+title: Central Binomial Tail Bounds, Conjecture 6.3
 statement:
-  formal:
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: arxiv.id0911_2077.conjecture6_3
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Arxiv/0911.2077/Conjecture6_3.lean
   informal: |-
     Empirical evidence seems to suggest that Slud's bound does not hold for all $p$, and in fact, as $n\to\infty$,
     the maximal permissible $p$ shrinks to $\frac{1}{2}$. Also, the following appears to be true:
@@ -53,7 +15,45 @@ statement:
     https://github.com/logical-intelligence/proofs, see
     [here](https://github.com/logical-intelligence/proofs/blob/main/LI/Conj63_informal_proof.md) for
     and informal sketch of the proof.
+  formal:
+    - language: lean4
+      theorem: arxiv.id0911_2077.conjecture6_3
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Arxiv/0911.2077/Conjecture6_3.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
 subject:
   msc:
     - "60"
-title: Central Binomial Tail Bounds, Conjecture 6.3
+ids:
+  formal_conjectures: FormalConjectures/Arxiv/0911.2077/Conjecture6_3.lean
+  external:
+    - label: arxiv/0911.2077
+      url: https://arxiv.org/abs/0911.2077
+openness_basis:
+  meaning: no_published_solution_known_to_curator
+  asserted_by: google-deepmind/formal-conjectures
+claims:
+  - id: central-binomial-tail-bounds-conjecture-6-3-fc-solved
+    type: proved
+    evidence_tier: published
+    state: active
+    recorded_on: 2026-07-31
+    source:
+      title: formal-conjectures marks arxiv.id0911_2077.conjecture6_3 as research solved
+      url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Arxiv/0911.2077/Conjecture6_3.lean
+      kind: dataset
+    reviewer: google-deepmind/formal-conjectures maintainers
+    notes: Imported from the upstream `research solved` category. The statement is formalized; the proof has not been machine-checked by ConjectureHub.
+provenance:
+  - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Arxiv/0911.2077/Conjecture6_3.lean
+    source: google-deepmind/formal-conjectures
+    fields:
+      - title
+      - statement.informal
+      - statement.formal
+      - subject.msc
+      - ids.external
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    upstream_version: v4.32.0

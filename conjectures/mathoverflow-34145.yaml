@@ -1,18 +1,51 @@
-claims: []
 id: mathoverflow-34145
+title: Mathoverflow 34145
+statement:
+  informal: Can a unit square be covered by rectangles of width `1 / (n + 1)` and height `1 / (n + 2)`?
+  formal:
+    - language: lean4
+      theorem: rectangles_cover_unit_square
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Mathoverflow/34145.lean
+      toolchain: v4.32.0
+      category: research open
+      definition_hole: false
+    - language: lean4
+      theorem: rectangles_pack_unit_square
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Mathoverflow/34145.lean
+      toolchain: v4.32.0
+      category: research open
+      definition_hole: false
+    - language: lean4
+      theorem: rectangles_pack_square_133_div_132
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Mathoverflow/34145.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
+    - language: lean4
+      theorem: rectangles_pack_square_501_div_500
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Mathoverflow/34145.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
+subject:
+  msc:
+    - "51"
 ids:
+  formal_conjectures: FormalConjectures/Mathoverflow/34145.lean
   external:
     - label: mathoverflow/34145
       url: https://mathoverflow.net/q/34145
     - label: "*Kaveh*"
       url: https://mathoverflow.net/users/7507/kaveh
-  formal_conjectures: FormalConjectures/Mathoverflow/34145.lean
 openness_basis:
-  asserted_by: google-deepmind/formal-conjectures
   meaning: no_published_solution_known_to_curator
+  asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
+claims: []
 provenance:
-  - fields:
+  - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Mathoverflow/34145.lean
+    source: google-deepmind/formal-conjectures
+    fields:
       - title
       - statement.informal
       - statement.formal
@@ -20,37 +53,4 @@ provenance:
       - ids.external
     license: Apache-2.0
     retrieved: 2026-07-31
-    source: google-deepmind/formal-conjectures
     upstream_version: v4.32.0
-    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Mathoverflow/34145.lean
-statement:
-  formal:
-    - category: research open
-      definition_hole: false
-      language: lean4
-      theorem: rectangles_cover_unit_square
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Mathoverflow/34145.lean
-    - category: research open
-      definition_hole: false
-      language: lean4
-      theorem: rectangles_pack_unit_square
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Mathoverflow/34145.lean
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: rectangles_pack_square_133_div_132
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Mathoverflow/34145.lean
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: rectangles_pack_square_501_div_500
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Mathoverflow/34145.lean
-  informal: Can a unit square be covered by rectangles of width `1 / (n + 1)` and height `1 / (n + 2)`?
-subject:
-  msc:
-    - "51"
-title: Mathoverflow 34145

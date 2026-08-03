@@ -1,19 +1,42 @@
-claims: []
 id: solitary-numbers
+title: Solitary Numbers
+statement:
+  informal: |-
+    **Is 10 a solitary number?**  The smallest positive integer whose solitary status is
+    currently unresolved is $10$, with abundancy index $\sigma(10) / 10 = 9/5$.
+  formal:
+    - language: lean4
+      theorem: is_ten_solitary
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/SolitaryNumber.lean
+      toolchain: v4.32.0
+      category: research open
+      definition_hole: false
+    - language: lean4
+      theorem: infinite_club_exists
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/SolitaryNumber.lean
+      toolchain: v4.32.0
+      category: research open
+      definition_hole: false
+subject:
+  msc:
+    - "11"
 ids:
+  formal_conjectures: FormalConjectures/Wikipedia/SolitaryNumber.lean
+  wikipedia: https://en.wikipedia.org/wiki/Solitary_number
   external:
     - label: Solitary number (Wikipedia)
       url: https://en.wikipedia.org/wiki/Solitary_number
     - label: Solitary number large clubs (Wikipedia)
       url: https://en.wikipedia.org/wiki/Solitary_number#Large_clubs
-  formal_conjectures: FormalConjectures/Wikipedia/SolitaryNumber.lean
-  wikipedia: https://en.wikipedia.org/wiki/Solitary_number
 openness_basis:
-  asserted_by: google-deepmind/formal-conjectures
   meaning: no_published_solution_known_to_curator
+  asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
+claims: []
 provenance:
-  - fields:
+  - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/SolitaryNumber.lean
+    source: google-deepmind/formal-conjectures
+    fields:
       - title
       - statement.informal
       - statement.formal
@@ -21,27 +44,4 @@ provenance:
       - ids.external
     license: Apache-2.0
     retrieved: 2026-07-31
-    source: google-deepmind/formal-conjectures
     upstream_version: v4.32.0
-    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/SolitaryNumber.lean
-statement:
-  formal:
-    - category: research open
-      definition_hole: false
-      language: lean4
-      theorem: is_ten_solitary
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/SolitaryNumber.lean
-    - category: research open
-      definition_hole: false
-      language: lean4
-      theorem: infinite_club_exists
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/SolitaryNumber.lean
-  informal: |-
-    **Is 10 a solitary number?**  The smallest positive integer whose solitary status is
-    currently unresolved is $10$, with abundancy index $\sigma(10) / 10 = 9/5$.
-subject:
-  msc:
-    - "11"
-title: Solitary Numbers

@@ -1,19 +1,62 @@
-claims: []
 id: invariant-subspace-problem
+title: Invariant Subspace Problem
+statement:
+  informal: |-
+    Show that every bounded linear operator `T : H → H` on a separable Hilbert space `H` of dimension
+    at least 2 has a non-trivial closed `T`-invariant subspace: a closed linear subspace `W` of `H`,
+    which is different from `H` and from `{0}`, such that `T ( W ) ⊂ W`. One needs the assumption that
+    the dimension of `H` is at least 2 because otherwise any subspace would be either `H` or `{0}`.
+  formal:
+    - language: lean4
+      theorem: Invariant_subspace_problem
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/InvariantSubspaceProblem.lean
+      toolchain: v4.32.0
+      category: research open
+      definition_hole: false
+    - language: lean4
+      theorem: Invariant_subspace_problem_finite_dimensional
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/InvariantSubspaceProblem.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
+    - language: lean4
+      theorem: Invariant_subspace_problem_non_separable
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/InvariantSubspaceProblem.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
+    - language: lean4
+      theorem: Invariant_subspace_problem_normal_operator
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/InvariantSubspaceProblem.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
+    - language: lean4
+      theorem: Invariant_subspace_problem_l1
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/InvariantSubspaceProblem.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
+subject:
+  msc:
+    - "47"
 ids:
+  formal_conjectures: FormalConjectures/Wikipedia/InvariantSubspaceProblem.lean
+  wikipedia: https://en.wikipedia.org/wiki/Invariant_subspace_problem
   external:
     - label: Wikipedia
       url: https://en.wikipedia.org/wiki/Invariant_subspace_problem
     - label: Chalendar-Partington
       url: https://arxiv.org/abs/2507.21834
-  formal_conjectures: FormalConjectures/Wikipedia/InvariantSubspaceProblem.lean
-  wikipedia: https://en.wikipedia.org/wiki/Invariant_subspace_problem
 openness_basis:
-  asserted_by: google-deepmind/formal-conjectures
   meaning: no_published_solution_known_to_curator
+  asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
+claims: []
 provenance:
-  - fields:
+  - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/InvariantSubspaceProblem.lean
+    source: google-deepmind/formal-conjectures
+    fields:
       - title
       - statement.informal
       - statement.formal
@@ -21,47 +64,4 @@ provenance:
       - ids.external
     license: Apache-2.0
     retrieved: 2026-07-31
-    source: google-deepmind/formal-conjectures
     upstream_version: v4.32.0
-    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/InvariantSubspaceProblem.lean
-statement:
-  formal:
-    - category: research open
-      definition_hole: false
-      language: lean4
-      theorem: Invariant_subspace_problem
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/InvariantSubspaceProblem.lean
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: Invariant_subspace_problem_finite_dimensional
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/InvariantSubspaceProblem.lean
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: Invariant_subspace_problem_non_separable
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/InvariantSubspaceProblem.lean
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: Invariant_subspace_problem_normal_operator
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/InvariantSubspaceProblem.lean
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: Invariant_subspace_problem_l1
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/InvariantSubspaceProblem.lean
-  informal: |-
-    Show that every bounded linear operator `T : H → H` on a separable Hilbert space `H` of dimension
-    at least 2 has a non-trivial closed `T`-invariant subspace: a closed linear subspace `W` of `H`,
-    which is different from `H` and from `{0}`, such that `T ( W ) ⊂ W`. One needs the assumption that
-    the dimension of `H` is at least 2 because otherwise any subspace would be either `H` or `{0}`.
-subject:
-  msc:
-    - "47"
-title: Invariant Subspace Problem

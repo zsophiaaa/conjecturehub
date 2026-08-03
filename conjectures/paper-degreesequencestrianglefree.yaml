@@ -1,23 +1,59 @@
-claims:
-  - evidence_tier: published
-    id: paper-degreesequencestrianglefree-fc-solved
-    notes: Imported from the upstream `research solved` category. The statement is formalized; the proof has not been machine-checked by ConjectureHub.
-    recorded_on: 2026-07-31
-    reviewer: google-deepmind/formal-conjectures maintainers
-    source:
-      kind: dataset
-      title: formal-conjectures marks theorem1 as research solved
-      url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Paper/DegreeSequencesTriangleFree.lean
-    state: active
-    type: proved
 id: paper-degreesequencestrianglefree
+title: theorem1
+statement:
+  informal: |-
+    **Theorem 1.** If a triangle-free graph has `f = 2`,
+    then it is bipartite, has minimum degree `1`, and
+    its degree sequence is compact.
+  formal:
+    - language: lean4
+      theorem: theorem1
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Paper/DegreeSequencesTriangleFree.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
+    - language: lean4
+      theorem: theorem2
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Paper/DegreeSequencesTriangleFree.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
+    - language: lean4
+      theorem: F_three
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Paper/DegreeSequencesTriangleFree.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
+    - language: lean4
+      theorem: F_four_le
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Paper/DegreeSequencesTriangleFree.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
+subject:
+  msc:
+    - "05"
 ids:
   formal_conjectures: FormalConjectures/Paper/DegreeSequencesTriangleFree.lean
 openness_basis:
-  asserted_by: google-deepmind/formal-conjectures
   meaning: no_published_solution_known_to_curator
+  asserted_by: google-deepmind/formal-conjectures
+claims:
+  - id: paper-degreesequencestrianglefree-fc-solved
+    type: proved
+    evidence_tier: published
+    state: active
+    recorded_on: 2026-07-31
+    source:
+      title: formal-conjectures marks theorem1 as research solved
+      url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Paper/DegreeSequencesTriangleFree.lean
+      kind: dataset
+    reviewer: google-deepmind/formal-conjectures maintainers
+    notes: Imported from the upstream `research solved` category. The statement is formalized; the proof has not been machine-checked by ConjectureHub.
 provenance:
-  - fields:
+  - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Paper/DegreeSequencesTriangleFree.lean
+    source: google-deepmind/formal-conjectures
+    fields:
       - title
       - statement.informal
       - statement.formal
@@ -25,40 +61,4 @@ provenance:
       - ids.external
     license: Apache-2.0
     retrieved: 2026-07-31
-    source: google-deepmind/formal-conjectures
     upstream_version: v4.32.0
-    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Paper/DegreeSequencesTriangleFree.lean
-statement:
-  formal:
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: theorem1
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Paper/DegreeSequencesTriangleFree.lean
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: theorem2
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Paper/DegreeSequencesTriangleFree.lean
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: F_three
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Paper/DegreeSequencesTriangleFree.lean
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: F_four_le
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Paper/DegreeSequencesTriangleFree.lean
-  informal: |-
-    **Theorem 1.** If a triangle-free graph has `f = 2`,
-    then it is bipartite, has minimum degree `1`, and
-    its degree sequence is compact.
-subject:
-  msc:
-    - "05"
-title: theorem1

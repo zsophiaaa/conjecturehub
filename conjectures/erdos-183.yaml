@@ -1,108 +1,5 @@
-claims:
-  - id: erdos-183-openai-astra-2026
-    type: proved
-    evidence_tier: machine_verified
-    state: active
-    asserted_on: 2026-08-01
-    recorded_on: 2026-08-01
-    ai_assistance:
-      used: yes
-      systems:
-        - OpenAI Astra
-      role: discovery
-    source:
-      kind: blog
-      url: https://openai.com/index/ten-advances-in-mathematics/
-      title: Ten advances in mathematics and theoretical computer science
-    verification:
-      tool: lean4
-      statement_path: external/openai/ten-proofs/MulticolorTriangleRamsey.lean
-      theorem: ErdosProblems.MulticolourTriangleRamsey.erdos_183
-      toolchain: lean4
-      permitted_axioms:
-        - propext
-        - Classical.choice
-        - Quot.sound
-      verified_on: 2026-08-01
-      run_url: https://github.com/openai/ten-proofs
-    notes: Superexponential lower bound for multicolor triangle Ramsey numbers (Erdős 183). Lean certificate published by OpenAI Astra; not peer-reviewed.
-  - asserted_on: 2026-08-01
-    evidence_tier: unverified_claim
-    id: erdos-183-forum-openai-note
-    notes: >-
-      Sole forum reaction to OpenAI announcement: "OpenAi claimed today they solved this problem."
-      No links, verification notes, or maintainer response. erdosproblems.com still lists open.
-    recorded_on: 2026-08-02
-    source:
-      kind: forum
-      title: erdosproblems.com forum #183 — OpenAI claim noted
-      url: https://www.erdosproblems.com/forum/thread/183
-    state: active
-    type: reformulation
-  - asserted_on: 2025-12-02
-    authors:
-      - Wouter Cames van Batenburg
-      - Anurag Bishnoi
-      - Ananth Ravi
-    evidence_tier: preprint
-    id: erdos-183-forum-related-lower-bound
-    notes: >-
-      Forum post by Wouter Cames van Batenburg reporting joint work with Bishnoi and Ravi:
-      lim_{k→∞} R(3;k)^{1/k} ≥ 2^{(n-1)/(χ(n)-1)} where χ(n) is the minimum sum-free partition
-      size of F_n^2 minus the origin. Context for #183 lower bounds; predates the OpenAI result.
-    recorded_on: 2026-08-02
-    source:
-      kind: forum
-      title: erdosproblems.com forum #183 — related χ(n) lower bound
-      url: https://www.erdosproblems.com/forum/thread/183
-    state: active
-    type: partial
 id: erdos-183
-ids:
-  erdos: "183"
-  external:
-    - label: erdosproblems.com/183
-      url: https://www.erdosproblems.com/183
-    - label: openai/ten-proofs (MulticolorTriangleRamsey.lean)
-      url: https://github.com/openai/ten-proofs/blob/a13547c6be4563746881d0b3b4c9fd03f72f0484/MulticolorTriangleRamsey.lean
-    - label: "erdosproblems.com forum #183"
-      url: https://www.erdosproblems.com/forum/thread/183
-  oeis:
-    - A003323
-openness_basis:
-  asserted_by: erdosproblems.com
-  asserted_on: 2025-08-31
-  meaning: no_published_solution_known_to_curator
-  note: >-
-    Listed open at erdosproblems.com as of 2025-08-31. Machine-verified proof recorded August 2026
-    (OpenAI Astra); not peer-reviewed. Forum (~6 comments): one-line OpenAI reaction; pre-existing
-    discussion covers lower-bound history and Girao et al. related χ(n) bounds. No maintainer status
-    change on forum yet.
-provenance:
-  - fields:
-      - ids.erdos
-      - ids.oeis
-      - subject.tags
-      - openness_basis
-    license: Apache-2.0
-    retrieved: 2026-07-31
-    source: teorth/erdosproblems
-    upstream_version: d031865128a7ddccd85e8099f0f818211cfc9a41
-    url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
-  - fields:
-      - claims
-      - statement.informal
-    license: CC0-1.0
-    retrieved: 2026-08-01
-    source: openai/ten-proofs
-    url: https://github.com/openai/ten-proofs
-  - fields:
-      - claims
-      - openness_basis.note
-    license: CC0-1.0
-    retrieved: 2026-08-02
-    source: erdosproblems.com forum (summaries with links)
-    url: https://www.erdosproblems.com/forum/thread/183
+title: Erdős Problem 183
 statement:
   informal: |-
     **Multicolor triangle Ramsey numbers (Erdős 183).** How fast do multicolor triangle Ramsey
@@ -113,4 +10,98 @@ subject:
   tags:
     - graph theory
     - ramsey theory
-title: Erdős Problem 183
+ids:
+  erdos: "183"
+  oeis:
+    - A003323
+  external:
+    - label: erdosproblems.com/183
+      url: https://www.erdosproblems.com/183
+    - label: openai/ten-proofs (MulticolorTriangleRamsey.lean)
+      url: https://github.com/openai/ten-proofs/blob/a13547c6be4563746881d0b3b4c9fd03f72f0484/MulticolorTriangleRamsey.lean
+    - label: "erdosproblems.com forum #183"
+      url: https://www.erdosproblems.com/forum/thread/183
+openness_basis:
+  meaning: no_published_solution_known_to_curator
+  asserted_by: erdosproblems.com
+  asserted_on: 2025-08-31
+  note: "Listed open at erdosproblems.com as of 2025-08-31. Machine-verified proof recorded August 2026 (OpenAI Astra); not peer-reviewed. Forum (~6 comments): one-line OpenAI reaction; pre-existing discussion covers lower-bound history and Girao et al. related χ(n) bounds. No maintainer status change on forum yet."
+claims:
+  - id: erdos-183-openai-astra-2026
+    asserted_on: 2026-08-01
+    type: proved
+    evidence_tier: machine_verified
+    state: active
+    recorded_on: 2026-08-01
+    source:
+      title: Ten advances in mathematics and theoretical computer science
+      url: https://openai.com/index/ten-advances-in-mathematics/
+      kind: blog
+    ai_assistance:
+      used: yes
+      systems:
+        - OpenAI Astra
+      role: discovery
+    verification:
+      theorem: ErdosProblems.MulticolourTriangleRamsey.erdos_183
+      toolchain: lean4
+      tool: lean4
+      statement_path: external/openai/ten-proofs/MulticolorTriangleRamsey.lean
+      permitted_axioms:
+        - propext
+        - Classical.choice
+        - Quot.sound
+      verified_on: 2026-08-01
+      run_url: https://github.com/openai/ten-proofs
+    notes: Superexponential lower bound for multicolor triangle Ramsey numbers (Erdős 183). Lean certificate published by OpenAI Astra; not peer-reviewed.
+  - id: erdos-183-forum-openai-note
+    asserted_on: 2026-08-01
+    type: reformulation
+    evidence_tier: unverified_claim
+    state: active
+    recorded_on: 2026-08-02
+    source:
+      title: erdosproblems.com forum
+      url: https://www.erdosproblems.com/forum/thread/183
+      kind: forum
+    notes: 'Sole forum reaction to OpenAI announcement: "OpenAi claimed today they solved this problem." No links, verification notes, or maintainer response. erdosproblems.com still lists open.'
+  - id: erdos-183-forum-related-lower-bound
+    asserted_on: 2025-12-02
+    type: partial
+    evidence_tier: preprint
+    state: active
+    recorded_on: 2026-08-02
+    source:
+      title: erdosproblems.com forum
+      url: https://www.erdosproblems.com/forum/thread/183
+      kind: forum
+    authors:
+      - Wouter Cames van Batenburg
+      - Anurag Bishnoi
+      - Ananth Ravi
+    notes: "Forum post by Wouter Cames van Batenburg reporting joint work with Bishnoi and Ravi: lim_{k→∞} R(3;k)^{1/k} ≥ 2^{(n-1)/(χ(n)-1)} where χ(n) is the minimum sum-free partition size of F_n^2 minus the origin. Context for #183 lower bounds; predates the OpenAI result."
+provenance:
+  - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
+    source: teorth/erdosproblems
+    fields:
+      - ids.erdos
+      - ids.oeis
+      - subject.tags
+      - openness_basis
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    upstream_version: d031865128a7ddccd85e8099f0f818211cfc9a41
+  - url: https://github.com/openai/ten-proofs
+    source: openai/ten-proofs
+    fields:
+      - claims
+      - statement.informal
+    license: CC0-1.0
+    retrieved: 2026-08-01
+  - url: https://www.erdosproblems.com/forum/thread/183
+    source: erdosproblems.com forum (summaries with links)
+    fields:
+      - claims
+      - openness_basis.note
+    license: CC0-1.0
+    retrieved: 2026-08-02

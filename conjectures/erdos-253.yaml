@@ -1,41 +1,62 @@
-claims:
-  - evidence_tier: published
-    id: erdos-253-fc-solved
-    notes: Imported from the upstream `research solved` category, which records that the problem is resolved without stating the direction. Direction taken from erdosproblems.com, which records it as "disproved". The statement is formalized; the proof has not been machine-checked by ConjectureHub.
-    recorded_on: 2026-07-31
-    reviewer: google-deepmind/formal-conjectures maintainers
-    source:
-      kind: dataset
-      title: formal-conjectures marks erdos_253 as research solved
-      url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/253.lean
-    state: active
-    type: disproved
-  - asserted_on: 2025-08-31
-    evidence_tier: published
-    id: erdos-253-erdos-status
-    recorded_on: 2026-07-31
-    reviewer: teorth/erdosproblems maintainers
-    source:
-      kind: dataset
-      title: erdosproblems.com records this problem as "disproved"
-      url: https://www.erdosproblems.com/253
-    state: active
-    type: disproved
 id: erdos-253
+title: Erdős Problem 253
+statement:
+  informal: |-
+    Let $a_1 < a_2 < \dotsc$ be an infinite sequence of positive integers such that
+    $\frac{a_{i+1}}{a_i} \to 1$. If every arithmetic progression contains infinitely many
+    integers which are the sum of distinct $a_i$ then every sufficiently large integer is
+    the sum of distinct $a_i$.
+  formal:
+    - language: lean4
+      theorem: erdos_253
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/253.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
+subject:
+  msc:
+    - "11"
+  tags:
+    - number theory
 ids:
   erdos: "253"
+  formal_conjectures: FormalConjectures/ErdosProblems/253.lean
   external:
     - label: erdosproblems.com/253
       url: https://www.erdosproblems.com/253
     - label: "erdosproblems.com forum #253"
       url: https://www.erdosproblems.com/forum/thread/253
-  formal_conjectures: FormalConjectures/ErdosProblems/253.lean
 openness_basis:
+  meaning: no_published_solution_known_to_curator
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
-  meaning: no_published_solution_known_to_curator
+claims:
+  - id: erdos-253-fc-solved
+    type: disproved
+    evidence_tier: published
+    state: active
+    recorded_on: 2026-07-31
+    source:
+      title: formal-conjectures marks erdos_253 as research solved
+      url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/253.lean
+      kind: dataset
+    reviewer: google-deepmind/formal-conjectures maintainers
+    notes: Imported from the upstream `research solved` category, which records that the problem is resolved without stating the direction. Direction taken from erdosproblems.com, which records it as "disproved". The statement is formalized; the proof has not been machine-checked by ConjectureHub.
+  - id: erdos-253-erdos-status
+    asserted_on: 2025-08-31
+    type: disproved
+    evidence_tier: published
+    state: active
+    recorded_on: 2026-07-31
+    source:
+      title: erdosproblems.com records this problem as "disproved"
+      url: https://www.erdosproblems.com/253
+      kind: dataset
+    reviewer: teorth/erdosproblems maintainers
 provenance:
-  - fields:
+  - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/253.lean
+    source: google-deepmind/formal-conjectures
+    fields:
       - title
       - statement.informal
       - statement.formal
@@ -43,10 +64,10 @@ provenance:
       - ids.external
     license: Apache-2.0
     retrieved: 2026-07-31
-    source: google-deepmind/formal-conjectures
     upstream_version: v4.32.0
-    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/253.lean
-  - fields:
+  - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
+    source: teorth/erdosproblems
+    fields:
       - ids.erdos
       - ids.oeis
       - subject.tags
@@ -54,25 +75,4 @@ provenance:
       - claims
     license: Apache-2.0
     retrieved: 2026-07-31
-    source: teorth/erdosproblems
     upstream_version: d031865128a7ddccd85e8099f0f818211cfc9a41
-    url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
-statement:
-  formal:
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: erdos_253
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/253.lean
-  informal: |-
-    Let $a_1 < a_2 < \dotsc$ be an infinite sequence of positive integers such that
-    $\frac{a_{i+1}}{a_i} \to 1$. If every arithmetic progression contains infinitely many
-    integers which are the sum of distinct $a_i$ then every sufficiently large integer is
-    the sum of distinct $a_i$.
-subject:
-  msc:
-    - "11"
-  tags:
-    - number theory
-title: Erdős Problem 253

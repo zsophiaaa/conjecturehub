@@ -1,19 +1,43 @@
-claims: []
 id: the-s-3-conjecture-conjugacy-classes-of-distinct-sizes
+title: The $S_3$-conjecture (conjugacy classes of distinct sizes)
+statement:
+  informal: |-
+    **Markel's $S_3$-conjecture** (1973): any nontrivial finite ah-group is isomorphic to $S_3$.
+
+    The conjecture is open in general; it is known to be true for solvable groups.
+  formal:
+    - language: lean4
+      theorem: conjClassSizes_iff_sym_three
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Paper/ConjugacyClassSizes.lean
+      toolchain: v4.32.0
+      category: research open
+      definition_hole: false
+    - language: lean4
+      theorem: conjClassSizes_iff_sym_three_solvable
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Paper/ConjugacyClassSizes.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
+subject:
+  msc:
+    - "20"
 ids:
+  formal_conjectures: FormalConjectures/Paper/ConjugacyClassSizes.lean
+  wikipedia: https://en.wikipedia.org/wiki/Conjugacy_class
   external:
     - label: arXiv:2606.22244
       url: https://arxiv.org/abs/2606.22244
     - label: Conjugacy class
       url: https://en.wikipedia.org/wiki/Conjugacy_class
-  formal_conjectures: FormalConjectures/Paper/ConjugacyClassSizes.lean
-  wikipedia: https://en.wikipedia.org/wiki/Conjugacy_class
 openness_basis:
-  asserted_by: google-deepmind/formal-conjectures
   meaning: no_published_solution_known_to_curator
+  asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
+claims: []
 provenance:
-  - fields:
+  - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Paper/ConjugacyClassSizes.lean
+    source: google-deepmind/formal-conjectures
+    fields:
       - title
       - statement.informal
       - statement.formal
@@ -21,28 +45,4 @@ provenance:
       - ids.external
     license: Apache-2.0
     retrieved: 2026-07-31
-    source: google-deepmind/formal-conjectures
     upstream_version: v4.32.0
-    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Paper/ConjugacyClassSizes.lean
-statement:
-  formal:
-    - category: research open
-      definition_hole: false
-      language: lean4
-      theorem: conjClassSizes_iff_sym_three
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Paper/ConjugacyClassSizes.lean
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: conjClassSizes_iff_sym_three_solvable
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Paper/ConjugacyClassSizes.lean
-  informal: |-
-    **Markel's $S_3$-conjecture** (1973): any nontrivial finite ah-group is isomorphic to $S_3$.
-
-    The conjecture is open in general; it is known to be true for solvable groups.
-subject:
-  msc:
-    - "20"
-title: The $S_3$-conjecture (conjugacy classes of distinct sizes)

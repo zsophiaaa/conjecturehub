@@ -1,16 +1,70 @@
-claims: []
 id: green-s-open-problem-32
+title: Green's Open Problem 32
+statement:
+  informal: |-
+    Let $p$ be a prime and let $A \subset \mathbb{Z}/p\mathbb{Z}$ be a set of size $\lfloor \sqrt{p} \rfloor$.
+    Is there a dilate of $A$ containing a gap of length $100\sqrt{p}$?
+  formal:
+    - language: lean4
+      theorem: green_32
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/GreensOpenProblems/32.lean
+      toolchain: v4.32.0
+      category: research open
+      definition_hole: false
+    - language: lean4
+      theorem: green_32.variants.sh20_general
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/GreensOpenProblems/32.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
+    - language: lean4
+      theorem: green_32.variants.sh20_sqrt
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/GreensOpenProblems/32.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
+    - language: lean4
+      theorem: green_32.variants.szemeredi_regime
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/GreensOpenProblems/32.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
+    - language: lean4
+      theorem: green_32.variants.dirichlet_regime
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/GreensOpenProblems/32.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
+    - language: lean4
+      theorem: green_32.variants.log_regime
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/GreensOpenProblems/32.lean
+      toolchain: v4.32.0
+      category: research open
+      definition_hole: false
+    - language: lean4
+      theorem: green_32.variants.finite_field
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/GreensOpenProblems/32.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
+subject:
+  msc:
+    - "05"
+    - "11"
 ids:
+  formal_conjectures: FormalConjectures/GreensOpenProblems/32.lean
   external:
     - label: Green, Ben. "100 open problems." (2024).
       url: https://people.maths.ox.ac.uk/greenbj/papers/open-problems.pdf#problem.32
-  formal_conjectures: FormalConjectures/GreensOpenProblems/32.lean
 openness_basis:
-  asserted_by: google-deepmind/formal-conjectures
   meaning: no_published_solution_known_to_curator
+  asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
+claims: []
 provenance:
-  - fields:
+  - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/GreensOpenProblems/32.lean
+    source: google-deepmind/formal-conjectures
+    fields:
       - title
       - statement.informal
       - statement.formal
@@ -18,58 +72,4 @@ provenance:
       - ids.external
     license: Apache-2.0
     retrieved: 2026-07-31
-    source: google-deepmind/formal-conjectures
     upstream_version: v4.32.0
-    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/GreensOpenProblems/32.lean
-statement:
-  formal:
-    - category: research open
-      definition_hole: false
-      language: lean4
-      theorem: green_32
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/GreensOpenProblems/32.lean
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: green_32.variants.sh20_general
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/GreensOpenProblems/32.lean
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: green_32.variants.sh20_sqrt
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/GreensOpenProblems/32.lean
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: green_32.variants.szemeredi_regime
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/GreensOpenProblems/32.lean
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: green_32.variants.dirichlet_regime
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/GreensOpenProblems/32.lean
-    - category: research open
-      definition_hole: false
-      language: lean4
-      theorem: green_32.variants.log_regime
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/GreensOpenProblems/32.lean
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: green_32.variants.finite_field
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/GreensOpenProblems/32.lean
-  informal: |-
-    Let $p$ be a prime and let $A \subset \mathbb{Z}/p\mathbb{Z}$ be a set of size $\lfloor \sqrt{p} \rfloor$.
-    Is there a dilate of $A$ containing a gap of length $100\sqrt{p}$?
-subject:
-  msc:
-    - "05"
-    - "11"
-title: Green's Open Problem 32

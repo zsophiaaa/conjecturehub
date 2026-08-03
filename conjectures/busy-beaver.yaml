@@ -1,16 +1,37 @@
-claims: []
 id: busy-beaver
+title: Busy Beaver
+statement:
+  informal: Determine the value of the Busy Beaver function at n = 6.
+  formal:
+    - language: lean4
+      theorem: BB_5
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/BusyBeaver.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
+    - language: lean4
+      theorem: BB_6
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/BusyBeaver.lean
+      toolchain: v4.32.0
+      category: research open
+      definition_hole: false
+subject:
+  msc:
+    - "03"
 ids:
+  formal_conjectures: FormalConjectures/Wikipedia/BusyBeaver.lean
   external:
     - label: The Busy Beaver Challenge
       url: https://wiki.bbchallenge.org/wiki/Main_Page
-  formal_conjectures: FormalConjectures/Wikipedia/BusyBeaver.lean
 openness_basis:
-  asserted_by: google-deepmind/formal-conjectures
   meaning: no_published_solution_known_to_curator
+  asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
+claims: []
 provenance:
-  - fields:
+  - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/BusyBeaver.lean
+    source: google-deepmind/formal-conjectures
+    fields:
       - title
       - statement.informal
       - statement.formal
@@ -18,25 +39,4 @@ provenance:
       - ids.external
     license: Apache-2.0
     retrieved: 2026-07-31
-    source: google-deepmind/formal-conjectures
     upstream_version: v4.32.0
-    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/BusyBeaver.lean
-statement:
-  formal:
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: BB_5
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/BusyBeaver.lean
-    - category: research open
-      definition_hole: false
-      language: lean4
-      theorem: BB_6
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/BusyBeaver.lean
-  informal: Determine the value of the Busy Beaver function at n = 6.
-subject:
-  msc:
-    - "03"
-title: Busy Beaver

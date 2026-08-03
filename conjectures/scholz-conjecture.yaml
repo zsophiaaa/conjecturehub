@@ -1,20 +1,23 @@
+id: scholz-conjecture
+title: Scholz conjecture
 aliases:
   - Scholz–Brauer conjecture
-claims: []
-id: scholz-conjecture
 ids:
-  mathworld: https://mathworld.wolfram.com/ScholzConjecture.html
   wikidata: Q643614
   wikipedia: https://en.wikipedia.org/wiki/Scholz_conjecture
+  mathworld: https://mathworld.wolfram.com/ScholzConjecture.html
 notability:
-  measured_on: 2026-08-03
   wikipedia_language_editions: 3
+  measured_on: 2026-08-03
 openness_basis:
-  asserted_by: wikidata
   meaning: unknown
+  asserted_by: wikidata
   note: Identity record only. No statement or status has been ingested for this conjecture yet.
+claims: []
 provenance:
-  - fields:
+  - url: https://www.wikidata.org/wiki/Q643614
+    source: wikidata
+    fields:
       - aliases
       - ids.wikidata
       - ids.wikipedia
@@ -22,6 +25,3 @@ provenance:
       - notability.wikipedia_language_editions
     license: CC0-1.0
     retrieved: 2026-08-03
-    source: wikidata
-    url: https://www.wikidata.org/wiki/Q643614
-title: Scholz conjecture

@@ -1,171 +1,6 @@
-claims:
-  - evidence_tier: published
-    id: erdos-728-fc-solved
-    notes: Imported from the upstream `research solved` category. The statement is formalized; the proof has not been machine-checked by ConjectureHub.
-    recorded_on: 2026-07-31
-    reviewer: google-deepmind/formal-conjectures maintainers
-    source:
-      kind: dataset
-      title: formal-conjectures marks erdos_728 as research solved
-      url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/728.lean
-    state: active
-    type: proved
-  - asserted_on: 2026-01-06
-    authors:
-      - Kevin Barreto
-      - Boris Alexeev
-    evidence_tier: preprint
-    id: erdos-728-gpt52-aristotle-resolution
-    notes: >-
-      Barreto posted a GPT-5.2 argument, formalized by Harmonic's Aristotle, resolving the problem
-      under the intended constraint. The key move exploits the factorial denominator already
-      present, dropping the expected p-valuation enough to survive. Tao noted the informal proof
-      has slight gaps but judged the formal proof addresses them. Alexeev re-ran Aristotle on the
-      output to produce a file about a third shorter that also proves the Formal Conjectures
-      statement.
-    ai_assistance:
-      used: yes
-      systems:
-        - GPT-5.2
-        - Aristotle (Harmonic)
-        - Claude 4.5 Opus
-      role: discovery
-    recorded_on: 2026-08-02
-    scope: the interpretation with the additional constraint that a and b are bounded away from n
-    source:
-      kind: forum
-      title: erdosproblems.com forum #728 — Aristotle formalisation of the GPT-5.2 argument
-      url: https://www.erdosproblems.com/forum/thread/728
-      quote: I believe we have reached a consensus that this should constitute a non-trivial, full resolution to the problem.
-    state: active
-    type: proved
-  - asserted_on: 2026-01-06
-    authors:
-      - Terence Tao
-    evidence_tier: unverified_claim
-    id: erdos-728-prior-literature-scoping
-    notes: >-
-      Forum user KoishiChan found that Erdős's 1975 paper already remarks on a related divisibility
-      holding outside a density-zero set, with a full proof in a 1968 Elemente der Mathematik
-      solution. Tao examined both and concluded they pertain to the stronger variant and hold only
-      for sufficiently small constants, whereas the version actually obtained appears to be new.
-      Recorded because it delimits exactly what the AI contribution added over the literature.
-    recorded_on: 2026-08-02
-    scope: applies only to the stronger variant and only for small constants
-    source:
-      kind: forum
-      title: erdosproblems.com forum #728 — prior literature search and Tao's scoping of it
-      url: https://www.erdosproblems.com/forum/thread/728
-    state: active
-    type: resolved_by_prior_literature
-  - asserted_on: 2026-01-18
-    authors:
-      - Nat Sothanaphan
-    evidence_tier: preprint
-    id: erdos-728-unified-density-one-generalization
-    notes: >-
-      Sothanaphan wrote up the Lean proof to journal standard as arXiv 2601.07421, then extracted a
-      unified theorem having this problem and two others as corollaries. He reports the constant is
-      plausibly optimal by a heuristic he cannot prove. Tao reviewed the draft and asked for the
-      degeneracy-excluding constraint to be imposed in the abstract, which was done.
-    ai_assistance:
-      used: yes
-      systems:
-        - ChatGPT
-      role: writing
-    recorded_on: 2026-08-02
-    scope: a generalization having problems 728, 729 and 401 as corollaries
-    source:
-      kind: forum
-      title: erdosproblems.com forum #728 — arXiv writeup and unified generalization
-      url: https://www.erdosproblems.com/forum/thread/728
-      quote: This unifies all related results so far.
-    state: active
-    type: partial
-  - asserted_on: 2026-07-13
-    evidence_tier: unverified_claim
-    id: erdos-728-two-deterministic-agent-proofs
-    notes: >-
-      Forum user JPickhardt reported that an AI research agent under development, using this
-      problem as a test case, generated two methodologically distinct solutions, both deterministic
-      in contrast to the January proof. As of retrieval this was the most recent post in the thread
-      and had drawn no replies, so it has received no community scrutiny. The linked papers were
-      not fetched and are deliberately not cited here.
-    ai_assistance:
-      used: yes
-      systems:
-        - unnamed AI research agent
-      role: discovery
-    recorded_on: 2026-08-02
-    scope: claimed alternative proofs of an already-resolved problem; no community response observed
-    source:
-      kind: forum
-      title: erdosproblems.com forum #728 — claimed AI-agent-derived deterministic proofs
-      url: https://www.erdosproblems.com/forum/thread/728
-      quote: Both of the proofs are deterministic, distinguishing them from the January proof.
-    state: active
-    type: proved
 id: erdos-728
-ids:
-  erdos: "728"
-  external:
-    - label: erdosproblems.com/728
-      url: https://www.erdosproblems.com/728
-    - label: "erdosproblems.com forum #728"
-      url: https://www.erdosproblems.com/forum/thread/728
-  formal_conjectures: FormalConjectures/ErdosProblems/728.lean
-openness_basis:
-  asserted_by: erdosproblems.com
-  asserted_on: 2026-01-05
-  meaning: no_published_solution_known_to_curator
-  note: >-
-    Marked PROVED (LEAN), but closure is unusually interpretation-dependent: as literally stated
-    the question admits trivial solutions and was, in the maintainers' words, more of an idle
-    remark than a formal conjecture, so what was resolved is a community reconstruction of intent.
-    Within that reading the result is well supported by a Lean formalization, an independently
-    simplified second formalization, and an arXiv writeup, and a literature search established
-    that prior work covers only the stronger variant. The 87-comment thread also records a
-    verification win in the other direction: a genuine gap was found in a cited lemma and the
-    author revised it. One live loose end is a July claim of two further deterministic proofs
-    which sat unanswered and should not be treated as accepted.
-provenance:
-  - fields:
-      - title
-      - statement.informal
-      - statement.formal
-      - subject.msc
-      - ids.external
-    license: Apache-2.0
-    retrieved: 2026-07-31
-    source: google-deepmind/formal-conjectures
-    upstream_version: v4.32.0
-    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/728.lean
-  - fields:
-      - ids.erdos
-      - ids.oeis
-      - subject.tags
-      - openness_basis
-      - claims
-    license: Apache-2.0
-    retrieved: 2026-07-31
-    source: teorth/erdosproblems
-    upstream_version: d031865128a7ddccd85e8099f0f818211cfc9a41
-    url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
-  - fields:
-      - claims
-      - openness_basis.note
-    license: CC0-1.0
-    retrieved: 2026-08-02
-    source: erdosproblems.com forum (summaries with links)
-    url: https://www.erdosproblems.com/forum/thread/728
+title: Erdős Problem 728
 statement:
-  formal:
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: erdos_728
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/728.lean
   informal: |-
     Let $\varepsilon$ be sufficiently small and $C, C' > 0$. Are there integers $a, b, n$ such that
     $$a, b > \varepsilon n\quad a!\, b! \mid n!\, (a + b - n)!, $$
@@ -182,10 +17,146 @@ statement:
     This appears to answer the question in the spirit it was intended.
 
     This was formalized in Lean by Alexeev using Aristotle.
+  formal:
+    - language: lean4
+      theorem: erdos_728
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/728.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
 subject:
   msc:
     - "11"
   tags:
     - number theory
     - factorials
-title: Erdős Problem 728
+ids:
+  erdos: "728"
+  formal_conjectures: FormalConjectures/ErdosProblems/728.lean
+  external:
+    - label: erdosproblems.com/728
+      url: https://www.erdosproblems.com/728
+    - label: "erdosproblems.com forum #728"
+      url: https://www.erdosproblems.com/forum/thread/728
+openness_basis:
+  meaning: no_published_solution_known_to_curator
+  asserted_by: erdosproblems.com
+  asserted_on: 2026-01-05
+  note: "Marked PROVED (LEAN), but closure is unusually interpretation-dependent: as literally stated the question admits trivial solutions and was, in the maintainers' words, more of an idle remark than a formal conjecture, so what was resolved is a community reconstruction of intent. Within that reading the result is well supported by a Lean formalization, an independently simplified second formalization, and an arXiv writeup, and a literature search established that prior work covers only the stronger variant. The 87-comment thread also records a verification win in the other direction: a genuine gap was found in a cited lemma and the author revised it. One live loose end is a July claim of two further deterministic proofs which sat unanswered and should not be treated as accepted."
+claims:
+  - id: erdos-728-fc-solved
+    type: proved
+    evidence_tier: published
+    state: active
+    recorded_on: 2026-07-31
+    source:
+      title: formal-conjectures marks erdos_728 as research solved
+      url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/728.lean
+      kind: dataset
+    reviewer: google-deepmind/formal-conjectures maintainers
+    notes: Imported from the upstream `research solved` category. The statement is formalized; the proof has not been machine-checked by ConjectureHub.
+  - id: erdos-728-gpt52-aristotle-resolution
+    asserted_on: 2026-01-06
+    type: proved
+    scope: the interpretation with the additional constraint that a and b are bounded away from n
+    evidence_tier: preprint
+    state: active
+    recorded_on: 2026-08-02
+    source:
+      title: erdosproblems.com forum
+      url: https://www.erdosproblems.com/forum/thread/728
+      kind: forum
+      quote: I believe we have reached a consensus that this should constitute a non-trivial, full resolution to the problem.
+    authors:
+      - Kevin Barreto
+      - Boris Alexeev
+    ai_assistance:
+      used: yes
+      systems:
+        - GPT-5.2
+        - Aristotle (Harmonic)
+        - Claude 4.5 Opus
+      role: discovery
+    notes: Barreto posted a GPT-5.2 argument, formalized by Harmonic's Aristotle, resolving the problem under the intended constraint. The key move exploits the factorial denominator already present, dropping the expected p-valuation enough to survive. Tao noted the informal proof has slight gaps but judged the formal proof addresses them. Alexeev re-ran Aristotle on the output to produce a file about a third shorter that also proves the Formal Conjectures statement.
+  - id: erdos-728-prior-literature-scoping
+    asserted_on: 2026-01-06
+    type: resolved_by_prior_literature
+    scope: applies only to the stronger variant and only for small constants
+    evidence_tier: unverified_claim
+    state: active
+    recorded_on: 2026-08-02
+    source:
+      title: erdosproblems.com forum
+      url: https://www.erdosproblems.com/forum/thread/728
+      kind: forum
+    authors:
+      - Terence Tao
+    notes: Forum user KoishiChan found that Erdős's 1975 paper already remarks on a related divisibility holding outside a density-zero set, with a full proof in a 1968 Elemente der Mathematik solution. Tao examined both and concluded they pertain to the stronger variant and hold only for sufficiently small constants, whereas the version actually obtained appears to be new. Recorded because it delimits exactly what the AI contribution added over the literature.
+  - id: erdos-728-unified-density-one-generalization
+    asserted_on: 2026-01-18
+    type: partial
+    scope: a generalization having problems 728, 729 and 401 as corollaries
+    evidence_tier: preprint
+    state: active
+    recorded_on: 2026-08-02
+    source:
+      title: erdosproblems.com forum
+      url: https://www.erdosproblems.com/forum/thread/728
+      kind: forum
+      quote: This unifies all related results so far.
+    authors:
+      - Nat Sothanaphan
+    ai_assistance:
+      used: yes
+      systems:
+        - ChatGPT
+      role: writing
+    notes: Sothanaphan wrote up the Lean proof to journal standard as arXiv 2601.07421, then extracted a unified theorem having this problem and two others as corollaries. He reports the constant is plausibly optimal by a heuristic he cannot prove. Tao reviewed the draft and asked for the degeneracy-excluding constraint to be imposed in the abstract, which was done.
+  - id: erdos-728-two-deterministic-agent-proofs
+    asserted_on: 2026-07-13
+    type: proved
+    scope: claimed alternative proofs of an already-resolved problem; no community response observed
+    evidence_tier: unverified_claim
+    state: active
+    recorded_on: 2026-08-02
+    source:
+      title: erdosproblems.com forum
+      url: https://www.erdosproblems.com/forum/thread/728
+      kind: forum
+      quote: Both of the proofs are deterministic, distinguishing them from the January proof.
+    ai_assistance:
+      used: yes
+      systems:
+        - unnamed AI research agent
+      role: discovery
+    notes: Forum user JPickhardt reported that an AI research agent under development, using this problem as a test case, generated two methodologically distinct solutions, both deterministic in contrast to the January proof. As of retrieval this was the most recent post in the thread and had drawn no replies, so it has received no community scrutiny. The linked papers were not fetched and are deliberately not cited here.
+provenance:
+  - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/728.lean
+    source: google-deepmind/formal-conjectures
+    fields:
+      - title
+      - statement.informal
+      - statement.formal
+      - subject.msc
+      - ids.external
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    upstream_version: v4.32.0
+  - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
+    source: teorth/erdosproblems
+    fields:
+      - ids.erdos
+      - ids.oeis
+      - subject.tags
+      - openness_basis
+      - claims
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    upstream_version: d031865128a7ddccd85e8099f0f818211cfc9a41
+  - url: https://www.erdosproblems.com/forum/thread/728
+    source: erdosproblems.com forum (summaries with links)
+    fields:
+      - claims
+      - openness_basis.note
+    license: CC0-1.0
+    retrieved: 2026-08-02

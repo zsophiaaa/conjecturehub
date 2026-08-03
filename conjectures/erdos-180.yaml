@@ -1,147 +1,5 @@
-claims:
-  - id: erdos-180-openai-astra-2026
-    type: disproved
-    evidence_tier: machine_verified
-    state: active
-    asserted_on: 2026-08-01
-    recorded_on: 2026-08-01
-    ai_assistance:
-      used: yes
-      systems:
-        - OpenAI Astra
-      role: discovery
-    source:
-      kind: blog
-      url: https://openai.com/index/ten-advances-in-mathematics/
-      title: Ten advances in mathematics and theoretical computer science
-    verification:
-      tool: lean4
-      statement_path: external/openai/ten-proofs/CompactnessAndDegeneracy.lean
-      theorem: CompactnessConjecture.not_erdos_180
-      toolchain: lean4
-      permitted_axioms:
-        - propext
-        - Classical.choice
-        - Quot.sound
-      verified_on: 2026-08-01
-      run_url: https://github.com/openai/ten-proofs
-    notes: Counterexample to the compactness conjecture in extremal graph theory (Erdős 180). Lean certificate published by OpenAI Astra; not peer-reviewed.
-  - asserted_on: 2025-08-19
-    authors:
-      - Zach Hunter
-    evidence_tier: community_accepted
-    id: erdos-180-forum-hunter-counterexample
-    notes: >-
-      Folklore counterexample: family {H1,H2} with H1 a star and H2 a matching gives ex(n;F)=O_F(1)
-      but each Hi with ≥2 edges has ex(n,Hi)=Θ(n). Disproves the original compactness conjecture;
-      conjecture may still hold for families outside this obstruction.
-    recorded_on: 2026-08-02
-    reviewer: teorth/erdosproblems maintainers
-    source:
-      kind: forum
-      title: erdosproblems.com forum #180 — Hunter counterexample
-      url: https://www.erdosproblems.com/forum/thread/180
-    state: active
-    type: disproved
-  - asserted_on: 2026-04-28
-    evidence_tier: preprint
-    id: erdos-180-forum-star-matching-dichotomy
-    notes: >-
-      Poster claims dichotomy: if every H∈F has ex(n;H)=Θ(n), then either F contains both K_{1,a}
-      and bK_2 (ex(n;F)=Θ(1)) or no such pair (ex(n;F)=Θ(n)). Maintainer standard check: correct
-      but modest, not found exactly in literature.
-    ai_assistance:
-      used: yes
-      systems:
-        - GPT-5.5
-        - Claude Opus 4.7
-      role: discovery
-    recorded_on: 2026-08-02
-    source:
-      kind: forum
-      title: erdosproblems.com forum #180 — star/matching dichotomy
-      url: https://www.erdosproblems.com/forum/thread/180
-    state: active
-    type: partial
-  - asserted_on: 2026-05-02
-    authors:
-      - arexychen
-    evidence_tier: preprint
-    id: erdos-180-forum-arexychen-lean
-    notes: >-
-      Lean 4 formalization of familiesTheorem (star/matching dichotomy). No sorry/admit reported;
-      independent of OpenAI ten-proofs. Caveats: single-forbidden-graph characterization only one
-      direction; Case (i) bound not tight. Repo github.com/arexychen/Erdos180.
-    ai_assistance:
-      used: yes
-      systems:
-        - GPT-5.5
-        - Claude Opus 4.7
-      role: formalization
-    recorded_on: 2026-08-02
-    source:
-      kind: forum
-      title: erdosproblems.com forum #180 — arexychen Lean
-      url: https://www.erdosproblems.com/forum/thread/180
-    state: active
-    type: partial
-  - asserted_on: 2026-08-01
-    evidence_tier: unverified_claim
-    id: erdos-180-forum-readability-critique
-    notes: >-
-      Forum comment criticizes readability of OpenAI paper (Prop 3.4 notation confusion). Requests
-      human-readable companion like unit-distance disproof (#90). Not a mathematical refutation.
-    recorded_on: 2026-08-02
-    source:
-      kind: forum
-      title: erdosproblems.com forum #180 — readability critique
-      url: https://www.erdosproblems.com/forum/thread/180
-    state: active
-    type: reformulation
 id: erdos-180
-ids:
-  erdos: "180"
-  external:
-    - label: erdosproblems.com/180
-      url: https://www.erdosproblems.com/180
-    - label: openai/ten-proofs (CompactnessAndDegeneracy.lean)
-      url: https://github.com/openai/ten-proofs/blob/a13547c6be4563746881d0b3b4c9fd03f72f0484/CompactnessAndDegeneracy.lean
-    - label: "erdosproblems.com forum #180"
-      url: https://www.erdosproblems.com/forum/thread/180
-openness_basis:
-  asserted_by: erdosproblems.com
-  asserted_on: 2025-08-31
-  meaning: no_published_solution_known_to_curator
-  note: >-
-    Listed open at erdosproblems.com as of 2025-08-31. Forum records Hunter's folklore counterexample,
-    2026 star/matching dichotomy (AI-assisted, maintainer check = correct but modest), and arexychen's
-    Lean formalization. OpenAI Astra announcement (Aug 2026) posted on forum; one comment criticizes
-    paper readability. Problem page still open with 0 claimed proofs.
-provenance:
-  - fields:
-      - ids.erdos
-      - ids.oeis
-      - subject.tags
-      - openness_basis
-    license: Apache-2.0
-    retrieved: 2026-07-31
-    source: teorth/erdosproblems
-    upstream_version: d031865128a7ddccd85e8099f0f818211cfc9a41
-    url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
-  - fields:
-      - claims
-      - statement.informal
-    license: CC0-1.0
-    retrieved: 2026-08-01
-    source: openai/ten-proofs
-    url: https://github.com/openai/ten-proofs
-  - fields:
-      - claims
-      - openness_basis.note
-    license: CC0-1.0
-    retrieved: 2026-08-02
-    source: erdosproblems.com forum (summaries with links)
-    url: https://www.erdosproblems.com/forum/thread/180
+title: Erdős Problem 180
 statement:
   informal: |-
     **Compactness conjecture (Erdős 180).** If a family of forbidden finite graphs is
@@ -153,4 +11,131 @@ subject:
   tags:
     - graph theory
     - turan number
-title: Erdős Problem 180
+ids:
+  erdos: "180"
+  external:
+    - label: erdosproblems.com/180
+      url: https://www.erdosproblems.com/180
+    - label: openai/ten-proofs (CompactnessAndDegeneracy.lean)
+      url: https://github.com/openai/ten-proofs/blob/a13547c6be4563746881d0b3b4c9fd03f72f0484/CompactnessAndDegeneracy.lean
+    - label: "erdosproblems.com forum #180"
+      url: https://www.erdosproblems.com/forum/thread/180
+openness_basis:
+  meaning: no_published_solution_known_to_curator
+  asserted_by: erdosproblems.com
+  asserted_on: 2025-08-31
+  note: Listed open at erdosproblems.com as of 2025-08-31. Forum records Hunter's folklore counterexample, 2026 star/matching dichotomy (AI-assisted, maintainer check = correct but modest), and arexychen's Lean formalization. OpenAI Astra announcement (Aug 2026) posted on forum; one comment criticizes paper readability. Problem page still open with 0 claimed proofs.
+claims:
+  - id: erdos-180-openai-astra-2026
+    asserted_on: 2026-08-01
+    type: disproved
+    evidence_tier: machine_verified
+    state: active
+    recorded_on: 2026-08-01
+    source:
+      title: Ten advances in mathematics and theoretical computer science
+      url: https://openai.com/index/ten-advances-in-mathematics/
+      kind: blog
+    ai_assistance:
+      used: yes
+      systems:
+        - OpenAI Astra
+      role: discovery
+    verification:
+      theorem: CompactnessConjecture.not_erdos_180
+      toolchain: lean4
+      tool: lean4
+      statement_path: external/openai/ten-proofs/CompactnessAndDegeneracy.lean
+      permitted_axioms:
+        - propext
+        - Classical.choice
+        - Quot.sound
+      verified_on: 2026-08-01
+      run_url: https://github.com/openai/ten-proofs
+    notes: Counterexample to the compactness conjecture in extremal graph theory (Erdős 180). Lean certificate published by OpenAI Astra; not peer-reviewed.
+  - id: erdos-180-forum-hunter-counterexample
+    asserted_on: 2025-08-19
+    type: disproved
+    evidence_tier: community_accepted
+    state: active
+    recorded_on: 2026-08-02
+    source:
+      title: erdosproblems.com forum
+      url: https://www.erdosproblems.com/forum/thread/180
+      kind: forum
+    authors:
+      - Zach Hunter
+    reviewer: teorth/erdosproblems maintainers
+    notes: "Folklore counterexample: family {H1,H2} with H1 a star and H2 a matching gives ex(n;F)=O_F(1) but each Hi with ≥2 edges has ex(n,Hi)=Θ(n). Disproves the original compactness conjecture; conjecture may still hold for families outside this obstruction."
+  - id: erdos-180-forum-star-matching-dichotomy
+    asserted_on: 2026-04-28
+    type: partial
+    evidence_tier: preprint
+    state: active
+    recorded_on: 2026-08-02
+    source:
+      title: erdosproblems.com forum
+      url: https://www.erdosproblems.com/forum/thread/180
+      kind: forum
+    ai_assistance:
+      used: yes
+      systems:
+        - GPT-5.5
+        - Claude Opus 4.7
+      role: discovery
+    notes: "Poster claims dichotomy: if every H∈F has ex(n;H)=Θ(n), then either F contains both K_{1,a} and bK_2 (ex(n;F)=Θ(1)) or no such pair (ex(n;F)=Θ(n)). Maintainer standard check: correct but modest, not found exactly in literature."
+  - id: erdos-180-forum-arexychen-lean
+    asserted_on: 2026-05-02
+    type: partial
+    evidence_tier: preprint
+    state: active
+    recorded_on: 2026-08-02
+    source:
+      title: erdosproblems.com forum
+      url: https://www.erdosproblems.com/forum/thread/180
+      kind: forum
+    authors:
+      - arexychen
+    ai_assistance:
+      used: yes
+      systems:
+        - GPT-5.5
+        - Claude Opus 4.7
+      role: formalization
+    notes: "Lean 4 formalization of familiesTheorem (star/matching dichotomy). No sorry/admit reported; independent of OpenAI ten-proofs. Caveats: single-forbidden-graph characterization only one direction; Case (i) bound not tight. Repo github.com/arexychen/Erdos180."
+  - id: erdos-180-forum-readability-critique
+    asserted_on: 2026-08-01
+    type: reformulation
+    evidence_tier: unverified_claim
+    state: active
+    recorded_on: 2026-08-02
+    source:
+      title: erdosproblems.com forum
+      url: https://www.erdosproblems.com/forum/thread/180
+      kind: forum
+    notes: Forum comment criticizes readability of OpenAI paper (Prop 3.4 notation confusion). Requests human-readable companion like unit-distance disproof (#90). Not a mathematical refutation.
+provenance:
+  - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
+    source: teorth/erdosproblems
+    fields:
+      - ids.erdos
+      - ids.oeis
+      - subject.tags
+      - openness_basis
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    upstream_version: d031865128a7ddccd85e8099f0f818211cfc9a41
+  - url: https://github.com/openai/ten-proofs
+    source: openai/ten-proofs
+    fields:
+      - claims
+      - statement.informal
+    license: CC0-1.0
+    retrieved: 2026-08-01
+  - url: https://www.erdosproblems.com/forum/thread/180
+    source: erdosproblems.com forum (summaries with links)
+    fields:
+      - claims
+      - openness_basis.note
+    license: CC0-1.0
+    retrieved: 2026-08-02

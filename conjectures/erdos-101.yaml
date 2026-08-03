@@ -1,22 +1,41 @@
-claims: []
 id: erdos-101
+title: Erdős Problem 101
+statement:
+  informal: |-
+    Given $n$ points in $\mathbb{R}^2$, no five of which are on a line, the number of
+    lines containing four points is $o(n^2)$.
+  formal:
+    - language: lean4
+      theorem: erdos_101
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/101.lean
+      toolchain: v4.32.0
+      category: research open
+      definition_hole: false
+subject:
+  msc:
+    - "52"
+  tags:
+    - geometry
 ids:
   erdos: "101"
+  oeis:
+    - A006065
+  formal_conjectures: FormalConjectures/ErdosProblems/101.lean
   external:
     - label: erdosproblems.com/101
       url: https://www.erdosproblems.com/101
     - label: "erdosproblems.com forum #101"
       url: https://www.erdosproblems.com/forum/thread/101
-  formal_conjectures: FormalConjectures/ErdosProblems/101.lean
-  oeis:
-    - A006065
 openness_basis:
+  meaning: no_published_solution_known_to_curator
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
-  meaning: no_published_solution_known_to_curator
   note: Categorized upstream as "research open" at v4.32.0.
+claims: []
 provenance:
-  - fields:
+  - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/101.lean
+    source: google-deepmind/formal-conjectures
+    fields:
       - title
       - statement.informal
       - statement.formal
@@ -24,10 +43,10 @@ provenance:
       - ids.external
     license: Apache-2.0
     retrieved: 2026-07-31
-    source: google-deepmind/formal-conjectures
     upstream_version: v4.32.0
-    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/101.lean
-  - fields:
+  - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
+    source: teorth/erdosproblems
+    fields:
       - ids.erdos
       - ids.oeis
       - subject.tags
@@ -35,23 +54,4 @@ provenance:
       - claims
     license: Apache-2.0
     retrieved: 2026-07-31
-    source: teorth/erdosproblems
     upstream_version: d031865128a7ddccd85e8099f0f818211cfc9a41
-    url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
-statement:
-  formal:
-    - category: research open
-      definition_hole: false
-      language: lean4
-      theorem: erdos_101
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/101.lean
-  informal: |-
-    Given $n$ points in $\mathbb{R}^2$, no five of which are on a line, the number of
-    lines containing four points is $o(n^2)$.
-subject:
-  msc:
-    - "52"
-  tags:
-    - geometry
-title: Erdős Problem 101

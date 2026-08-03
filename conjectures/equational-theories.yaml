@@ -1,58 +1,6 @@
-claims: []
 id: equational-theories
-ids:
-  external:
-    - label: Equational Theories project site
-      url: https://teorth.github.io/equational_theories/implications/?677&finite
-  formal_conjectures: FormalConjectures/Other/EquationalTheories_677_255.lean
-openness_basis:
-  asserted_by: google-deepmind/formal-conjectures
-  meaning: no_published_solution_known_to_curator
-  note: Categorized upstream as "research open" at v4.32.0.
-provenance:
-  - fields:
-      - title
-      - statement.informal
-      - statement.formal
-      - subject.msc
-      - ids.external
-    license: Apache-2.0
-    retrieved: 2026-07-31
-    source: google-deepmind/formal-conjectures
-    upstream_version: v4.32.0
-    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Other/EquationalTheories_677_255.lean
+title: Equational Theories
 statement:
-  formal:
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: Equation255_not_implies_Equation677
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Other/EquationalTheories_677_255.lean
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: Equation677_not_implies_Equation255
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Other/EquationalTheories_677_255.lean
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: Finite.Equation255_not_implies_Equation677
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Other/EquationalTheories_677_255.lean
-    - category: research open
-      definition_hole: false
-      language: lean4
-      theorem: Finite.Equation677_not_implies_Equation255
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Other/EquationalTheories_677_255.lean
-    - category: research open
-      definition_hole: false
-      language: lean4
-      theorem: Finite.Equation677_implies_Equation255
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Other/EquationalTheories_677_255.lean
   informal: |-
     The negation of `Finite.Equation677_implies_Equation255`.
 
@@ -61,7 +9,59 @@ statement:
 
     Discussion thread here:
     https://leanprover.zulipchat.com/#narrow/channel/458659-Equational/topic/FINITE.3A.20677.20-.3E.20255
+  formal:
+    - language: lean4
+      theorem: Equation255_not_implies_Equation677
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Other/EquationalTheories_677_255.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
+    - language: lean4
+      theorem: Equation677_not_implies_Equation255
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Other/EquationalTheories_677_255.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
+    - language: lean4
+      theorem: Finite.Equation255_not_implies_Equation677
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Other/EquationalTheories_677_255.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
+    - language: lean4
+      theorem: Finite.Equation677_not_implies_Equation255
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Other/EquationalTheories_677_255.lean
+      toolchain: v4.32.0
+      category: research open
+      definition_hole: false
+    - language: lean4
+      theorem: Finite.Equation677_implies_Equation255
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Other/EquationalTheories_677_255.lean
+      toolchain: v4.32.0
+      category: research open
+      definition_hole: false
 subject:
   msc:
     - "08"
-title: Equational Theories
+ids:
+  formal_conjectures: FormalConjectures/Other/EquationalTheories_677_255.lean
+  external:
+    - label: Equational Theories project site
+      url: https://teorth.github.io/equational_theories/implications/?677&finite
+openness_basis:
+  meaning: no_published_solution_known_to_curator
+  asserted_by: google-deepmind/formal-conjectures
+  note: Categorized upstream as "research open" at v4.32.0.
+claims: []
+provenance:
+  - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Other/EquationalTheories_677_255.lean
+    source: google-deepmind/formal-conjectures
+    fields:
+      - title
+      - statement.informal
+      - statement.formal
+      - subject.msc
+      - ids.external
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    upstream_version: v4.32.0

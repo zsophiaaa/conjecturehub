@@ -1,102 +1,5 @@
-claims:
-  - id: erdos-146-openai-astra-2026
-    type: disproved
-    evidence_tier: machine_verified
-    state: active
-    asserted_on: 2026-08-01
-    recorded_on: 2026-08-01
-    ai_assistance:
-      used: yes
-      systems:
-        - OpenAI Astra
-      role: discovery
-    source:
-      kind: blog
-      url: https://openai.com/index/ten-advances-in-mathematics/
-      title: Ten advances in mathematics and theoretical computer science
-    verification:
-      tool: lean4
-      statement_path: external/openai/ten-proofs/CompactnessAndDegeneracy.lean
-      theorem: TwoDegenerateGraphs.not_erdos_146
-      toolchain: lean4
-      permitted_axioms:
-        - propext
-        - Classical.choice
-        - Quot.sound
-      verified_on: 2026-08-01
-      run_url: https://github.com/openai/ten-proofs
-    notes: Counterexample to the degeneracy conjecture in extremal graph theory (Erdős 146). Lean certificate published by OpenAI Astra; not peer-reviewed.
-  - asserted_on: 2026-08-01
-    evidence_tier: unverified_claim
-    id: erdos-146-forum-openai-announcement
-    notes: >-
-      Forum post links to OpenAI ten-proofs CompactnessAndDegeneracy.lean (theorem
-      TwoDegenerateGraphs.not_erdos_146). No independent forum verification or maintainer
-      acceptance yet; erdosproblems.com still lists open with 0 claimed proofs.
-    recorded_on: 2026-08-02
-    source:
-      kind: forum
-      title: erdosproblems.com forum #146 — OpenAI announcement
-      url: https://www.erdosproblems.com/forum/thread/146
-    state: active
-    type: reformulation
-  - asserted_on: 2025-12-28
-    evidence_tier: community_accepted
-    id: erdos-146-forum-aks03-typo
-    notes: >-
-      Site maintainer updated problem page: AKS03 wording "in one component" should be "on one
-      side of the bipartition" (corollary 2.3).
-    recorded_on: 2026-08-02
-    reviewer: erdosproblems.com forum attribution
-    source:
-      kind: forum
-      title: erdosproblems.com forum #146 — AKS03 correction
-      url: https://www.erdosproblems.com/forum/thread/146
-    state: active
-    type: reformulation
 id: erdos-146
-ids:
-  erdos: "146"
-  external:
-    - label: erdosproblems.com/146
-      url: https://www.erdosproblems.com/146
-    - label: openai/ten-proofs (CompactnessAndDegeneracy.lean)
-      url: https://github.com/openai/ten-proofs/blob/a13547c6be4563746881d0b3b4c9fd03f72f0484/CompactnessAndDegeneracy.lean
-    - label: "erdosproblems.com forum #146"
-      url: https://www.erdosproblems.com/forum/thread/146
-openness_basis:
-  asserted_by: erdosproblems.com
-  asserted_on: 2025-08-31
-  meaning: no_published_solution_known_to_curator
-  note: >-
-    Listed open at erdosproblems.com as of 2025-08-31. A machine-verified disproof was recorded
-    August 2026 (OpenAI Astra); not peer-reviewed. Forum thread (~3 comments): OpenAI announcement
-    post plus pre-existing editorial fixes (AKS03 typo). No maintainer status change on forum yet.
-provenance:
-  - fields:
-      - ids.erdos
-      - ids.oeis
-      - subject.tags
-      - openness_basis
-    license: Apache-2.0
-    retrieved: 2026-07-31
-    source: teorth/erdosproblems
-    upstream_version: d031865128a7ddccd85e8099f0f818211cfc9a41
-    url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
-  - fields:
-      - claims
-      - statement.informal
-    license: CC0-1.0
-    retrieved: 2026-08-01
-    source: openai/ten-proofs
-    url: https://github.com/openai/ten-proofs
-  - fields:
-      - claims
-      - openness_basis.note
-    license: CC0-1.0
-    retrieved: 2026-08-02
-    source: erdosproblems.com forum (summaries with links)
-    url: https://www.erdosproblems.com/forum/thread/146
+title: Erdős Problem 146
 statement:
   informal: |-
     **Degeneracy conjecture (Erdős 146).** A conjecture in extremal graph theory on how
@@ -107,4 +10,93 @@ subject:
   tags:
     - graph theory
     - turan number
-title: Erdős Problem 146
+ids:
+  erdos: "146"
+  external:
+    - label: erdosproblems.com/146
+      url: https://www.erdosproblems.com/146
+    - label: openai/ten-proofs (CompactnessAndDegeneracy.lean)
+      url: https://github.com/openai/ten-proofs/blob/a13547c6be4563746881d0b3b4c9fd03f72f0484/CompactnessAndDegeneracy.lean
+    - label: "erdosproblems.com forum #146"
+      url: https://www.erdosproblems.com/forum/thread/146
+openness_basis:
+  meaning: no_published_solution_known_to_curator
+  asserted_by: erdosproblems.com
+  asserted_on: 2025-08-31
+  note: "Listed open at erdosproblems.com as of 2025-08-31. A machine-verified disproof was recorded August 2026 (OpenAI Astra); not peer-reviewed. Forum thread (~3 comments): OpenAI announcement post plus pre-existing editorial fixes (AKS03 typo). No maintainer status change on forum yet."
+claims:
+  - id: erdos-146-openai-astra-2026
+    asserted_on: 2026-08-01
+    type: disproved
+    evidence_tier: machine_verified
+    state: active
+    recorded_on: 2026-08-01
+    source:
+      title: Ten advances in mathematics and theoretical computer science
+      url: https://openai.com/index/ten-advances-in-mathematics/
+      kind: blog
+    ai_assistance:
+      used: yes
+      systems:
+        - OpenAI Astra
+      role: discovery
+    verification:
+      theorem: TwoDegenerateGraphs.not_erdos_146
+      toolchain: lean4
+      tool: lean4
+      statement_path: external/openai/ten-proofs/CompactnessAndDegeneracy.lean
+      permitted_axioms:
+        - propext
+        - Classical.choice
+        - Quot.sound
+      verified_on: 2026-08-01
+      run_url: https://github.com/openai/ten-proofs
+    notes: Counterexample to the degeneracy conjecture in extremal graph theory (Erdős 146). Lean certificate published by OpenAI Astra; not peer-reviewed.
+  - id: erdos-146-forum-openai-announcement
+    asserted_on: 2026-08-01
+    type: reformulation
+    evidence_tier: unverified_claim
+    state: active
+    recorded_on: 2026-08-02
+    source:
+      title: erdosproblems.com forum
+      url: https://www.erdosproblems.com/forum/thread/146
+      kind: forum
+    notes: Forum post links to OpenAI ten-proofs CompactnessAndDegeneracy.lean (theorem TwoDegenerateGraphs.not_erdos_146). No independent forum verification or maintainer acceptance yet; erdosproblems.com still lists open with 0 claimed proofs.
+  - id: erdos-146-forum-aks03-typo
+    asserted_on: 2025-12-28
+    type: reformulation
+    evidence_tier: community_accepted
+    state: active
+    recorded_on: 2026-08-02
+    source:
+      title: erdosproblems.com forum
+      url: https://www.erdosproblems.com/forum/thread/146
+      kind: forum
+    reviewer: erdosproblems.com forum attribution
+    notes: 'Site maintainer updated problem page: AKS03 wording "in one component" should be "on one side of the bipartition" (corollary 2.3).'
+provenance:
+  - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
+    source: teorth/erdosproblems
+    fields:
+      - ids.erdos
+      - ids.oeis
+      - subject.tags
+      - openness_basis
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    upstream_version: d031865128a7ddccd85e8099f0f818211cfc9a41
+  - url: https://github.com/openai/ten-proofs
+    source: openai/ten-proofs
+    fields:
+      - claims
+      - statement.informal
+    license: CC0-1.0
+    retrieved: 2026-08-01
+  - url: https://www.erdosproblems.com/forum/thread/146
+    source: erdosproblems.com forum (summaries with links)
+    fields:
+      - claims
+      - openness_basis.note
+    license: CC0-1.0
+    retrieved: 2026-08-02

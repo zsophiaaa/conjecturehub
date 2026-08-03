@@ -1,21 +1,29 @@
-claims: []
 id: erdos-500
+title: Erdős Problem 500
+subject:
+  tags:
+    - graph theory
+    - hypergraphs
+    - turan number
 ids:
   erdos: "500"
+  oeis:
+    - A140462
   external:
     - label: erdosproblems.com/500
       url: https://www.erdosproblems.com/500
     - label: "erdosproblems.com forum #500"
       url: https://www.erdosproblems.com/forum/thread/500
-  oeis:
-    - A140462
 openness_basis:
+  meaning: no_published_solution_known_to_curator
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
-  meaning: no_published_solution_known_to_curator
   note: No formalization is indexed for this problem yet; read the statement upstream.
+claims: []
 provenance:
-  - fields:
+  - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
+    source: teorth/erdosproblems
+    fields:
       - ids.erdos
       - ids.oeis
       - subject.tags
@@ -23,13 +31,4 @@ provenance:
       - claims
     license: Apache-2.0
     retrieved: 2026-07-31
-    source: teorth/erdosproblems
     upstream_version: d031865128a7ddccd85e8099f0f818211cfc9a41
-    url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
-statement: {}
-subject:
-  tags:
-    - graph theory
-    - hypergraphs
-    - turan number
-title: Erdős Problem 500

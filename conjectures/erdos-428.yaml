@@ -1,20 +1,40 @@
-claims: []
 id: erdos-428
+title: Erdős Problem 428
+statement:
+  informal: |-
+    Is there a set $A\subseteq \mathbb{N}$ such that, for infinitely many $n$, all of $n-a$
+    are prime for all $a\in A$ with $0 < a < n$ and $$\liminf\frac{\lvert A\cap [1,x]\rvert}{\pi(x)}>0?$$
+  formal:
+    - language: lean4
+      theorem: erdos_428
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/428.lean
+      toolchain: v4.32.0
+      category: research open
+      definition_hole: false
+subject:
+  msc:
+    - "11"
+  tags:
+    - number theory
+    - primes
 ids:
   erdos: "428"
+  formal_conjectures: FormalConjectures/ErdosProblems/428.lean
   external:
     - label: erdosproblems.com/428
       url: https://www.erdosproblems.com/428
     - label: "erdosproblems.com forum #428"
       url: https://www.erdosproblems.com/forum/thread/428
-  formal_conjectures: FormalConjectures/ErdosProblems/428.lean
 openness_basis:
+  meaning: no_published_solution_known_to_curator
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
-  meaning: no_published_solution_known_to_curator
   note: Categorized upstream as "research open" at v4.32.0.
+claims: []
 provenance:
-  - fields:
+  - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/428.lean
+    source: google-deepmind/formal-conjectures
+    fields:
       - title
       - statement.informal
       - statement.formal
@@ -22,10 +42,10 @@ provenance:
       - ids.external
     license: Apache-2.0
     retrieved: 2026-07-31
-    source: google-deepmind/formal-conjectures
     upstream_version: v4.32.0
-    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/428.lean
-  - fields:
+  - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
+    source: teorth/erdosproblems
+    fields:
       - ids.erdos
       - ids.oeis
       - subject.tags
@@ -33,24 +53,4 @@ provenance:
       - claims
     license: Apache-2.0
     retrieved: 2026-07-31
-    source: teorth/erdosproblems
     upstream_version: d031865128a7ddccd85e8099f0f818211cfc9a41
-    url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
-statement:
-  formal:
-    - category: research open
-      definition_hole: false
-      language: lean4
-      theorem: erdos_428
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/428.lean
-  informal: |-
-    Is there a set $A\subseteq \mathbb{N}$ such that, for infinitely many $n$, all of $n-a$
-    are prime for all $a\in A$ with $0 < a < n$ and $$\liminf\frac{\lvert A\cap [1,x]\rvert}{\pi(x)}>0?$$
-subject:
-  msc:
-    - "11"
-  tags:
-    - number theory
-    - primes
-title: Erdős Problem 428

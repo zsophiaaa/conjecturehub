@@ -1,53 +1,6 @@
-claims: []
 id: gauss-circle-problem
-ids:
-  external:
-    - label: Wikipedia
-      url: https://en.wikipedia.org/wiki/Gauss_circle_problem
-  formal_conjectures: FormalConjectures/Wikipedia/GaussCircleProblem.lean
-  wikipedia: https://en.wikipedia.org/wiki/Gauss_circle_problem
-openness_basis:
-  asserted_by: google-deepmind/formal-conjectures
-  meaning: no_published_solution_known_to_curator
-  note: Categorized upstream as "research open" at v4.32.0.
-provenance:
-  - fields:
-      - title
-      - statement.informal
-      - statement.formal
-      - subject.msc
-      - ids.external
-    license: Apache-2.0
-    retrieved: 2026-07-31
-    source: google-deepmind/formal-conjectures
-    upstream_version: v4.32.0
-    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/GaussCircleProblem.lean
+title: Gauss circle problem
 statement:
-  formal:
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: error_le
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/GaussCircleProblem.lean
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: error_not_isLittleO
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/GaussCircleProblem.lean
-    - category: research open
-      definition_hole: false
-      language: lean4
-      theorem: error_isBigO
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/GaussCircleProblem.lean
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: exact_form_floor
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/GaussCircleProblem.lean
   informal: |-
     It is conjectured that the correct bound is
     $$
@@ -57,7 +10,54 @@ statement:
     [Ha59]  Hardy, G. H. (1959). _Ramanujan: Twelve Lectures on Subjects Suggested by His Life and Work_(3rd ed.). New York: Chelsea Publishing Company. p. 67
 
     See also https://arxiv.org/abs/2305.03549
+  formal:
+    - language: lean4
+      theorem: error_le
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/GaussCircleProblem.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
+    - language: lean4
+      theorem: error_not_isLittleO
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/GaussCircleProblem.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
+    - language: lean4
+      theorem: error_isBigO
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/GaussCircleProblem.lean
+      toolchain: v4.32.0
+      category: research open
+      definition_hole: false
+    - language: lean4
+      theorem: exact_form_floor
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/GaussCircleProblem.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
 subject:
   msc:
     - "11"
-title: Gauss circle problem
+ids:
+  formal_conjectures: FormalConjectures/Wikipedia/GaussCircleProblem.lean
+  wikipedia: https://en.wikipedia.org/wiki/Gauss_circle_problem
+  external:
+    - label: Wikipedia
+      url: https://en.wikipedia.org/wiki/Gauss_circle_problem
+openness_basis:
+  meaning: no_published_solution_known_to_curator
+  asserted_by: google-deepmind/formal-conjectures
+  note: Categorized upstream as "research open" at v4.32.0.
+claims: []
+provenance:
+  - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/GaussCircleProblem.lean
+    source: google-deepmind/formal-conjectures
+    fields:
+      - title
+      - statement.informal
+      - statement.formal
+      - subject.msc
+      - ids.external
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    upstream_version: v4.32.0

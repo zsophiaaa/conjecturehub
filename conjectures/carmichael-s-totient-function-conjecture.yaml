@@ -1,22 +1,45 @@
-claims: []
 id: carmichael-s-totient-function-conjecture
+title: Carmichael's totient function conjecture
+statement:
+  informal: |-
+    *Carmichael's totient function conjecture*: For every positive natural number $n$,
+    there exists a natural number $m$ with $m ≠ n$, such that $φ(n) = φ(m)$.
+  formal:
+    - language: lean4
+      theorem: charmichaelTotient
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/CarmichaelTotient.lean
+      toolchain: v4.32.0
+      category: research open
+      definition_hole: false
+    - language: lean4
+      theorem: carchimaelTotient_bound
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/CarmichaelTotient.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
+subject:
+  msc:
+    - "11"
 ids:
+  wikidata: Q5043655
+  formal_conjectures: FormalConjectures/Wikipedia/CarmichaelTotient.lean
+  wikipedia: https://en.wikipedia.org/wiki/Carmichael%27s_totient_function_conjecture
+  mathworld: https://mathworld.wolfram.com/CarmichaelsTotientFunctionConjecture.html
   external:
     - label: Wikipedia
       url: https://en.wikipedia.org/wiki/Carmichael%27s_totient_function_conjecture
-  formal_conjectures: FormalConjectures/Wikipedia/CarmichaelTotient.lean
-  mathworld: https://mathworld.wolfram.com/CarmichaelsTotientFunctionConjecture.html
-  wikidata: Q5043655
-  wikipedia: https://en.wikipedia.org/wiki/Carmichael%27s_totient_function_conjecture
 notability:
-  measured_on: 2026-08-03
   wikipedia_language_editions: 6
+  measured_on: 2026-08-03
 openness_basis:
-  asserted_by: google-deepmind/formal-conjectures
   meaning: no_published_solution_known_to_curator
+  asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
+claims: []
 provenance:
-  - fields:
+  - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/CarmichaelTotient.lean
+    source: google-deepmind/formal-conjectures
+    fields:
       - title
       - statement.informal
       - statement.formal
@@ -24,10 +47,10 @@ provenance:
       - ids.external
     license: Apache-2.0
     retrieved: 2026-07-31
-    source: google-deepmind/formal-conjectures
     upstream_version: v4.32.0
-    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/CarmichaelTotient.lean
-  - fields:
+  - url: https://www.wikidata.org/wiki/Q5043655
+    source: wikidata
+    fields:
       - aliases
       - ids.wikidata
       - ids.wikipedia
@@ -35,26 +58,3 @@ provenance:
       - notability.wikipedia_language_editions
     license: CC0-1.0
     retrieved: 2026-08-03
-    source: wikidata
-    url: https://www.wikidata.org/wiki/Q5043655
-statement:
-  formal:
-    - category: research open
-      definition_hole: false
-      language: lean4
-      theorem: charmichaelTotient
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/CarmichaelTotient.lean
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: carchimaelTotient_bound
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/CarmichaelTotient.lean
-  informal: |-
-    *Carmichael's totient function conjecture*: For every positive natural number $n$,
-    there exists a natural number $m$ with $m ≠ n$, such that $φ(n) = φ(m)$.
-subject:
-  msc:
-    - "11"
-title: Carmichael's totient function conjecture

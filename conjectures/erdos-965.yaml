@@ -1,41 +1,70 @@
-claims:
-  - evidence_tier: published
-    id: erdos-965-fc-solved
-    notes: Imported from the upstream `research solved` category, which records that the problem is resolved without stating the direction. Direction taken from erdosproblems.com, which records it as "disproved". The statement is formalized; the proof has not been machine-checked by ConjectureHub.
-    recorded_on: 2026-07-31
-    reviewer: google-deepmind/formal-conjectures maintainers
-    source:
-      kind: dataset
-      title: formal-conjectures marks erdos_965 as research solved
-      url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/965.lean
-    state: active
-    type: disproved
-  - asserted_on: 2026-01-01
-    evidence_tier: published
-    id: erdos-965-erdos-status
-    recorded_on: 2026-07-31
-    reviewer: teorth/erdosproblems maintainers
-    source:
-      kind: dataset
-      title: erdosproblems.com records this problem as "disproved"
-      url: https://www.erdosproblems.com/965
-    state: active
-    type: disproved
 id: erdos-965
+title: Erdős Problem 965
+statement:
+  informal: |-
+    Erdős asks in [Er75b] if for every 2-coloring of ℝ, there is an uncountable set $A ⊆ ℝ$ such that
+    all sums $a + b$ for $a, b ∈ A, a ≠ b$ have the same colour.
+
+    In [Ko16] Péter Komjáth constructed a counterexample.
+    The same result was proven independently in [SWCol] by Sokoup and Weiss.
+  formal:
+    - language: lean4
+      theorem: erdos_965
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/965.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
+    - language: lean4
+      theorem: erdos_965.variants.generalization
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/965.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
+subject:
+  msc:
+    - "03"
+    - "05"
+  tags:
+    - ramsey theory
 ids:
   erdos: "965"
+  formal_conjectures: FormalConjectures/ErdosProblems/965.lean
   external:
     - label: erdosproblems.com/965
       url: https://www.erdosproblems.com/965
     - label: "erdosproblems.com forum #965"
       url: https://www.erdosproblems.com/forum/thread/965
-  formal_conjectures: FormalConjectures/ErdosProblems/965.lean
 openness_basis:
+  meaning: no_published_solution_known_to_curator
   asserted_by: erdosproblems.com
   asserted_on: 2026-01-01
-  meaning: no_published_solution_known_to_curator
+claims:
+  - id: erdos-965-fc-solved
+    type: disproved
+    evidence_tier: published
+    state: active
+    recorded_on: 2026-07-31
+    source:
+      title: formal-conjectures marks erdos_965 as research solved
+      url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/965.lean
+      kind: dataset
+    reviewer: google-deepmind/formal-conjectures maintainers
+    notes: Imported from the upstream `research solved` category, which records that the problem is resolved without stating the direction. Direction taken from erdosproblems.com, which records it as "disproved". The statement is formalized; the proof has not been machine-checked by ConjectureHub.
+  - id: erdos-965-erdos-status
+    asserted_on: 2026-01-01
+    type: disproved
+    evidence_tier: published
+    state: active
+    recorded_on: 2026-07-31
+    source:
+      title: erdosproblems.com records this problem as "disproved"
+      url: https://www.erdosproblems.com/965
+      kind: dataset
+    reviewer: teorth/erdosproblems maintainers
 provenance:
-  - fields:
+  - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/965.lean
+    source: google-deepmind/formal-conjectures
+    fields:
       - title
       - statement.informal
       - statement.formal
@@ -43,10 +72,10 @@ provenance:
       - ids.external
     license: Apache-2.0
     retrieved: 2026-07-31
-    source: google-deepmind/formal-conjectures
     upstream_version: v4.32.0
-    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/965.lean
-  - fields:
+  - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
+    source: teorth/erdosproblems
+    fields:
       - ids.erdos
       - ids.oeis
       - subject.tags
@@ -54,33 +83,4 @@ provenance:
       - claims
     license: Apache-2.0
     retrieved: 2026-07-31
-    source: teorth/erdosproblems
     upstream_version: d031865128a7ddccd85e8099f0f818211cfc9a41
-    url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
-statement:
-  formal:
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: erdos_965
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/965.lean
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: erdos_965.variants.generalization
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/965.lean
-  informal: |-
-    Erdős asks in [Er75b] if for every 2-coloring of ℝ, there is an uncountable set $A ⊆ ℝ$ such that
-    all sums $a + b$ for $a, b ∈ A, a ≠ b$ have the same colour.
-
-    In [Ko16] Péter Komjáth constructed a counterexample.
-    The same result was proven independently in [SWCol] by Sokoup and Weiss.
-subject:
-  msc:
-    - "03"
-    - "05"
-  tags:
-    - ramsey theory
-title: Erdős Problem 965

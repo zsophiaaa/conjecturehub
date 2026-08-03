@@ -1,25 +1,48 @@
+id: cerny-conjecture
+title: Černý Conjecture
 aliases:
   - Synchronizing word
-claims: []
-id: cerny-conjecture
+statement:
+  informal: |-
+    **Černý Conjecture**: Every synchronizing DFA with $n$ states admits a
+    synchronizing word of length at most $(n - 1)^2$.
+  formal:
+    - language: lean4
+      theorem: cerny_conjecture
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/CernyConjecture.lean
+      toolchain: v4.32.0
+      category: research open
+      definition_hole: false
+    - language: lean4
+      theorem: shitov_upper_bound
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/CernyConjecture.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
+subject:
+  msc:
+    - "68"
 ids:
+  wikidata: Q7662204
+  formal_conjectures: FormalConjectures/Wikipedia/CernyConjecture.lean
+  wikipedia: https://en.wikipedia.org/wiki/Synchronizing_word
   external:
     - label: "Wikipedia: Synchronizing word"
       url: https://en.wikipedia.org/wiki/Synchronizing_word
     - label: "*Poznámka k homogénnym experimentom s konečnými automatmi*"
       url: https://dml.cz/bitstream/handle/10338.dmlcz/126647/MathSlov_14-1964-3_2.pdf
-  formal_conjectures: FormalConjectures/Wikipedia/CernyConjecture.lean
-  wikidata: Q7662204
-  wikipedia: https://en.wikipedia.org/wiki/Synchronizing_word
 notability:
-  measured_on: 2026-08-03
   wikipedia_language_editions: 6
+  measured_on: 2026-08-03
 openness_basis:
-  asserted_by: google-deepmind/formal-conjectures
   meaning: no_published_solution_known_to_curator
+  asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
+claims: []
 provenance:
-  - fields:
+  - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/CernyConjecture.lean
+    source: google-deepmind/formal-conjectures
+    fields:
       - title
       - statement.informal
       - statement.formal
@@ -27,10 +50,10 @@ provenance:
       - ids.external
     license: Apache-2.0
     retrieved: 2026-07-31
-    source: google-deepmind/formal-conjectures
     upstream_version: v4.32.0
-    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/CernyConjecture.lean
-  - fields:
+  - url: https://www.wikidata.org/wiki/Q7662204
+    source: wikidata
+    fields:
       - aliases
       - ids.wikidata
       - ids.wikipedia
@@ -38,26 +61,3 @@ provenance:
       - notability.wikipedia_language_editions
     license: CC0-1.0
     retrieved: 2026-08-03
-    source: wikidata
-    url: https://www.wikidata.org/wiki/Q7662204
-statement:
-  formal:
-    - category: research open
-      definition_hole: false
-      language: lean4
-      theorem: cerny_conjecture
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/CernyConjecture.lean
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: shitov_upper_bound
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/CernyConjecture.lean
-  informal: |-
-    **Černý Conjecture**: Every synchronizing DFA with $n$ states admits a
-    synchronizing word of length at most $(n - 1)^2$.
-subject:
-  msc:
-    - "68"
-title: Černý Conjecture

@@ -1,16 +1,8 @@
-claims:
-  - asserted_on: 2026-01-24
-    evidence_tier: published
-    id: erdos-1140-erdos-status
-    recorded_on: 2026-07-31
-    reviewer: teorth/erdosproblems maintainers
-    source:
-      kind: dataset
-      title: erdosproblems.com records this problem as "disproved"
-      url: https://www.erdosproblems.com/1140
-    state: active
-    type: disproved
 id: erdos-1140
+title: Erdős Problem 1140
+subject:
+  tags:
+    - number theory
 ids:
   erdos: "1140"
   external:
@@ -19,12 +11,26 @@ ids:
     - label: "erdosproblems.com forum #1140"
       url: https://www.erdosproblems.com/forum/thread/1140
 openness_basis:
+  meaning: no_published_solution_known_to_curator
   asserted_by: erdosproblems.com
   asserted_on: 2026-01-24
-  meaning: no_published_solution_known_to_curator
   note: No formalization is indexed for this problem yet; read the statement upstream.
+claims:
+  - id: erdos-1140-erdos-status
+    asserted_on: 2026-01-24
+    type: disproved
+    evidence_tier: published
+    state: active
+    recorded_on: 2026-07-31
+    source:
+      title: erdosproblems.com records this problem as "disproved"
+      url: https://www.erdosproblems.com/1140
+      kind: dataset
+    reviewer: teorth/erdosproblems maintainers
 provenance:
-  - fields:
+  - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
+    source: teorth/erdosproblems
+    fields:
       - ids.erdos
       - ids.oeis
       - subject.tags
@@ -32,11 +38,4 @@ provenance:
       - claims
     license: Apache-2.0
     retrieved: 2026-07-31
-    source: teorth/erdosproblems
     upstream_version: d031865128a7ddccd85e8099f0f818211cfc9a41
-    url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
-statement: {}
-subject:
-  tags:
-    - number theory
-title: Erdős Problem 1140

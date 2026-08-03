@@ -1,38 +1,6 @@
-claims: []
 id: strong-sensitivity-conjecture-bs-f-s-f-2
-ids:
-  external:
-    - label: Induced Subgraphs of Hypercubes and a Proof of the Sensitivity Conjecture
-      url: https://arxiv.org/abs/1907.00847
-    - label: Variations on the Sensitivity Conjecture
-      url: https://arxiv.org/abs/1011.0354
-    - label: On the Degree of Boolean Functions as Real Polynomials
-      url: https://link.springer.com/article/10.1007/BF01263419
-  formal_conjectures: FormalConjectures/Paper/StrongSensitivityConjecture.lean
-openness_basis:
-  asserted_by: google-deepmind/formal-conjectures
-  meaning: no_published_solution_known_to_curator
-  note: Categorized upstream as "research open" at v4.32.0.
-provenance:
-  - fields:
-      - title
-      - statement.informal
-      - statement.formal
-      - subject.msc
-      - ids.external
-    license: Apache-2.0
-    retrieved: 2026-07-31
-    source: google-deepmind/formal-conjectures
-    upstream_version: v4.32.0
-    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Paper/StrongSensitivityConjecture.lean
+title: Strong Sensitivity Conjecture (`bs(f) ≤ s(f)^2`)
 statement:
-  formal:
-    - category: research open
-      definition_hole: false
-      language: lean4
-      theorem: strong_sensitivity_conjecture
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Paper/StrongSensitivityConjecture.lean
   informal: |-
     Strong Sensitivity Conjecture,
     for every Boolean function `f : {0,1}^n → {0,1}`,
@@ -42,7 +10,39 @@ statement:
     conjecture only asked for a polynomial bound in terms of `s(f)`. Huang's
     celebrated result (often called the sensitivity theorem) gives a quartic bound,
     `bs(f) ≤ s(f)^4`, thereby settling the original conjecture.
+  formal:
+    - language: lean4
+      theorem: strong_sensitivity_conjecture
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Paper/StrongSensitivityConjecture.lean
+      toolchain: v4.32.0
+      category: research open
+      definition_hole: false
 subject:
   msc:
     - "68"
-title: Strong Sensitivity Conjecture (`bs(f) ≤ s(f)^2`)
+ids:
+  formal_conjectures: FormalConjectures/Paper/StrongSensitivityConjecture.lean
+  external:
+    - label: Induced Subgraphs of Hypercubes and a Proof of the Sensitivity Conjecture
+      url: https://arxiv.org/abs/1907.00847
+    - label: Variations on the Sensitivity Conjecture
+      url: https://arxiv.org/abs/1011.0354
+    - label: On the Degree of Boolean Functions as Real Polynomials
+      url: https://link.springer.com/article/10.1007/BF01263419
+openness_basis:
+  meaning: no_published_solution_known_to_curator
+  asserted_by: google-deepmind/formal-conjectures
+  note: Categorized upstream as "research open" at v4.32.0.
+claims: []
+provenance:
+  - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Paper/StrongSensitivityConjecture.lean
+    source: google-deepmind/formal-conjectures
+    fields:
+      - title
+      - statement.informal
+      - statement.formal
+      - subject.msc
+      - ids.external
+    license: Apache-2.0
+    retrieved: 2026-07-31
+    upstream_version: v4.32.0

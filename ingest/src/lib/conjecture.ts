@@ -39,6 +39,9 @@ const KEY_ORDER = [
   "external",
   "label",
   "url",
+  "notability",
+  "wikipedia_language_editions",
+  "measured_on",
   "openness_basis",
   "meaning",
   "asserted_by",
@@ -80,11 +83,25 @@ const KEY_ORDER = [
 
 const keyRank = new Map(KEY_ORDER.map((k, i) => [k, i]));
 
+/**
+ * `sortMapEntries` is handed Pair nodes, not key strings, and a Pair's key is
+ * itself a Scalar node rather than a string. Reaching through both is the whole
+ * job: stringifying the Pair yields its rendered form, every rank lookup misses,
+ * and the file quietly comes out alphabetical.
+ */
+function pairKey(pair: unknown): string {
+  const key = (pair as { key?: unknown })?.key;
+  if (key && typeof key === "object" && "value" in key) return String((key as { value: unknown }).value);
+  return String(key ?? pair);
+}
+
 function sortKeys(a: unknown, b: unknown): number {
-  const ak = keyRank.get(String(a)) ?? 999;
-  const bk = keyRank.get(String(b)) ?? 999;
+  const an = pairKey(a);
+  const bn = pairKey(b);
+  const ak = keyRank.get(an) ?? 999;
+  const bk = keyRank.get(bn) ?? 999;
   if (ak !== bk) return ak - bk;
-  return String(a).localeCompare(String(b));
+  return an.localeCompare(bn);
 }
 
 /** Required by the schema, so they survive pruning even when empty. */

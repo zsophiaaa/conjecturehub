@@ -1,13 +1,75 @@
-claims: []
 id: open-quantum-problem-13-mutually-unbiased-bases
+title: "Open Quantum Problem 13: Mutually unbiased bases"
+statement:
+  informal: |-
+    Special case in dimension $6$: determine the maximal number of mutually unbiased
+    orthonormal bases in $\mathbb{C}^6$.
+  formal:
+    - language: lean4
+      theorem: mutuallyUnbiasedBases_dim2
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/OpenQuantumProblems/13.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
+    - language: lean4
+      theorem: mutuallyUnbiasedBases_dim6_bounds
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/OpenQuantumProblems/13.lean
+      toolchain: v4.32.0
+      category: research solved
+      definition_hole: false
+    - language: lean4
+      theorem: mutuallyUnbiasedBases_dim6
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/OpenQuantumProblems/13.lean
+      toolchain: v4.32.0
+      category: research open
+      definition_hole: false
+    - language: lean4
+      theorem: mutuallyUnbiasedBases_dim10
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/OpenQuantumProblems/13.lean
+      toolchain: v4.32.0
+      category: research open
+      definition_hole: false
+    - language: lean4
+      theorem: mutuallyUnbiasedBases_dim12
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/OpenQuantumProblems/13.lean
+      toolchain: v4.32.0
+      category: research open
+      definition_hole: false
+    - language: lean4
+      theorem: mutuallyUnbiasedBases_dim14
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/OpenQuantumProblems/13.lean
+      toolchain: v4.32.0
+      category: research open
+      definition_hole: false
+    - language: lean4
+      theorem: mutuallyUnbiasedBases_dim15
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/OpenQuantumProblems/13.lean
+      toolchain: v4.32.0
+      category: research open
+      definition_hole: false
+    - language: lean4
+      theorem: mutuallyUnbiasedBases
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/OpenQuantumProblems/13.lean
+      toolchain: v4.32.0
+      category: research open
+      definition_hole: false
+subject:
+  msc:
+    - "05"
+    - "15"
+    - "81"
+    - "94"
 ids:
   formal_conjectures: FormalConjectures/OpenQuantumProblems/13.lean
 openness_basis:
-  asserted_by: google-deepmind/formal-conjectures
   meaning: no_published_solution_known_to_curator
+  asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
+claims: []
 provenance:
-  - fields:
+  - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/OpenQuantumProblems/13.lean
+    source: google-deepmind/formal-conjectures
+    fields:
       - title
       - statement.informal
       - statement.formal
@@ -15,66 +77,4 @@ provenance:
       - ids.external
     license: Apache-2.0
     retrieved: 2026-07-31
-    source: google-deepmind/formal-conjectures
     upstream_version: v4.32.0
-    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/OpenQuantumProblems/13.lean
-statement:
-  formal:
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: mutuallyUnbiasedBases_dim2
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/OpenQuantumProblems/13.lean
-    - category: research solved
-      definition_hole: false
-      language: lean4
-      theorem: mutuallyUnbiasedBases_dim6_bounds
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/OpenQuantumProblems/13.lean
-    - category: research open
-      definition_hole: false
-      language: lean4
-      theorem: mutuallyUnbiasedBases_dim6
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/OpenQuantumProblems/13.lean
-    - category: research open
-      definition_hole: false
-      language: lean4
-      theorem: mutuallyUnbiasedBases_dim10
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/OpenQuantumProblems/13.lean
-    - category: research open
-      definition_hole: false
-      language: lean4
-      theorem: mutuallyUnbiasedBases_dim12
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/OpenQuantumProblems/13.lean
-    - category: research open
-      definition_hole: false
-      language: lean4
-      theorem: mutuallyUnbiasedBases_dim14
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/OpenQuantumProblems/13.lean
-    - category: research open
-      definition_hole: false
-      language: lean4
-      theorem: mutuallyUnbiasedBases_dim15
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/OpenQuantumProblems/13.lean
-    - category: research open
-      definition_hole: false
-      language: lean4
-      theorem: mutuallyUnbiasedBases
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/OpenQuantumProblems/13.lean
-  informal: |-
-    Special case in dimension $6$: determine the maximal number of mutually unbiased
-    orthonormal bases in $\mathbb{C}^6$.
-subject:
-  msc:
-    - "05"
-    - "15"
-    - "81"
-    - "94"
-title: "Open Quantum Problem 13: Mutually unbiased bases"

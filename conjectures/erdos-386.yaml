@@ -1,22 +1,54 @@
-claims: []
 id: erdos-386
+title: Erdős Problem 386
+statement:
+  informal: |-
+    There is a $k$, such that $2 \le k \le n - 2$ and
+    $\binom{n}{k}$ can be the product of consecutive primes infinitely often?
+  formal:
+    - language: lean4
+      theorem: erdos_386
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/386.lean
+      toolchain: v4.32.0
+      category: research open
+      definition_hole: false
+    - language: lean4
+      theorem: erdos_386.variants.forall
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/386.lean
+      toolchain: v4.32.0
+      category: research open
+      definition_hole: false
+    - language: lean4
+      theorem: erdos_386.variants.two
+      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/386.lean
+      toolchain: v4.32.0
+      category: research open
+      definition_hole: false
+subject:
+  msc:
+    - "11"
+  tags:
+    - number theory
+    - binomial coefficients
 ids:
   erdos: "386"
+  oeis:
+    - A280992
+  formal_conjectures: FormalConjectures/ErdosProblems/386.lean
   external:
     - label: erdosproblems.com/386
       url: https://www.erdosproblems.com/386
     - label: "erdosproblems.com forum #386"
       url: https://www.erdosproblems.com/forum/thread/386
-  formal_conjectures: FormalConjectures/ErdosProblems/386.lean
-  oeis:
-    - A280992
 openness_basis:
+  meaning: no_published_solution_known_to_curator
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
-  meaning: no_published_solution_known_to_curator
   note: Categorized upstream as "research open" at v4.32.0.
+claims: []
 provenance:
-  - fields:
+  - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/386.lean
+    source: google-deepmind/formal-conjectures
+    fields:
       - title
       - statement.informal
       - statement.formal
@@ -24,10 +56,10 @@ provenance:
       - ids.external
     license: Apache-2.0
     retrieved: 2026-07-31
-    source: google-deepmind/formal-conjectures
     upstream_version: v4.32.0
-    url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/386.lean
-  - fields:
+  - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
+    source: teorth/erdosproblems
+    fields:
       - ids.erdos
       - ids.oeis
       - subject.tags
@@ -35,36 +67,4 @@ provenance:
       - claims
     license: Apache-2.0
     retrieved: 2026-07-31
-    source: teorth/erdosproblems
     upstream_version: d031865128a7ddccd85e8099f0f818211cfc9a41
-    url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
-statement:
-  formal:
-    - category: research open
-      definition_hole: false
-      language: lean4
-      theorem: erdos_386
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/386.lean
-    - category: research open
-      definition_hole: false
-      language: lean4
-      theorem: erdos_386.variants.forall
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/386.lean
-    - category: research open
-      definition_hole: false
-      language: lean4
-      theorem: erdos_386.variants.two
-      toolchain: v4.32.0
-      upstream: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/386.lean
-  informal: |-
-    There is a $k$, such that $2 \le k \le n - 2$ and
-    $\binom{n}{k}$ can be the product of consecutive primes infinitely often?
-subject:
-  msc:
-    - "11"
-  tags:
-    - number theory
-    - binomial coefficients
-title: Erdős Problem 386
