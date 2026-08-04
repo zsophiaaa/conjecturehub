@@ -10,7 +10,23 @@ openness_basis:
   meaning: no_solution_known_to_community
   asserted_by: wikipedia
   note: Listed under "Unsolved problems in mathematics" on English Wikipedia.
-claims: []
+claims:
+  - id: herzog-schonheim-conjecture-sweep-cd391496
+    asserted_on: 2026-07-21
+    type: partial
+    scope: finite abelian case
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-04
+    source:
+      title: "formal-conjectures: ErdosProblems/274: add formal_proof link for the abelian variant (#4415) erdos_274.variants.abelian is tagged research solved but has no proof reference. This PR adds a formal_proof using lean4 attrib"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/d3f74a9a760516fac291859dc741a148ca454e8e
+      kind: github
+      quote: linking to a sorry-free Lean 4 proof of the finite abelian case of the Herzog–Schönheim conjecture
+    authors:
+      - Jostamon
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Herzog–Schönheim conjecture". Classifier rationale: The document reports a proof of the abelian variant, which resolves only that case of the conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q2993319
     source: wikidata
