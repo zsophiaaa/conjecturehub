@@ -1,7 +1,11 @@
 id: congruent-number
 title: Congruent Number
 statement:
-  informal: Tunnell's theorem (sufficient condition assuming BSD) for odd squarefree congruent numbers.
+  informal: |-
+    A positive integer $n$ is a *congruent number* if it is the area of a right triangle all of whose sides are rational: there are $a,b,c \in \mathbb{Q}$ with $a^2+b^2=c^2$ and $\tfrac12 ab = n$. For instance $6$ is congruent (the $3,4,5$ triangle) and so are $5$, $7$ and $157$, while $1$ is not (Fermat). Since congruence depends only on the squarefree part of $n$, one may assume $n$ squarefree, and for such $n$ define the finite counts
+    $$A_n = \#\{(x,y,z)\in\mathbb{Z}^3 : n = 2x^2+y^2+32z^2\},\qquad B_n = \#\{(x,y,z)\in\mathbb{Z}^3 : n = 2x^2+y^2+8z^2\},$$
+    $$C_n = \#\{(x,y,z)\in\mathbb{Z}^3 : n = 8x^2+2y^2+64z^2\},\qquad D_n = \#\{(x,y,z)\in\mathbb{Z}^3 : n = 8x^2+2y^2+16z^2\}.$$
+    Tunnell (1983) proved that if a squarefree $n$ is congruent then $2A_n = B_n$ when $n$ is odd and $2C_n = D_n$ when $n$ is even. Is the converse true — does $2A_n = B_n$ (for odd squarefree $n$), respectively $2C_n = D_n$ (for even squarefree $n$), imply that $n$ is a congruent number? This converse is known to follow from the Birch–Swinnerton-Dyer conjecture for the elliptic curves $y^2 = x^3 - n^2x$, but is unproved unconditionally; granting it, Tunnell's criterion would give a finitely checkable test for congruence.
   formal:
     - language: lean4
       theorem: Tunnell_odd
@@ -50,10 +54,15 @@ provenance:
     source: google-deepmind/formal-conjectures
     fields:
       - title
-      - statement.informal
       - statement.formal
       - subject.msc
       - ids.external
     license: Apache-2.0
     retrieved: 2026-07-31
     upstream_version: v4.32.0
+  - url: https://en.wikipedia.org/wiki/Tunnell%27s_theorem
+    source: conjecturehub-curator
+    fields:
+      - statement.informal
+    license: CC0-1.0
+    retrieved: 2026-08-04

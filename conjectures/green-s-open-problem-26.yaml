@@ -2,8 +2,9 @@ id: green-s-open-problem-26
 title: Green's Open Problem 26
 statement:
   informal: |-
-    Let $A_1, \dots, A_{100}$ be "cubes" in $\mathbb{F}^n_3$.
-    Is it true that $A_1 + \dots + A_{100} = \mathbb{F}^n_3$?
+    For a prime $p$, call a subset $A\subseteq\mathbb{F}_p^n$ a **cube** if $A=\varphi(\{0,1\}^n)$ for some linear automorphism $\varphi$ of $\mathbb{F}_p^n$; equivalently, $A$ is the set of all $0/1$ combinations of the vectors of some basis. The Additive Basis Conjecture of Jaeger, Linial, Payan and Tarsi (1992) asserts that for each prime $p$ there is a constant $c(p)$, not depending on $n$, such that any cubes $A_1,\dots,A_{c(p)}\subseteq\mathbb{F}_p^n$ satisfy $A_1+\cdots+A_{c(p)}=\mathbb{F}_p^n$.
+
+    The case $p=3$ — Green's Problem 26, which asked whether $100$ cubes always suffice in $\mathbb{F}_3^n$ — is now a theorem: Yang Yu (2025) proved that the union of any four bases of a vector space over $\mathbb{F}_3$ is an additive basis, so $c(3)\le 4$. For every prime $p$, Alon, Linial and Meshulam (1991) had shown that $O_p(\log n)$ cubes suffice. What remains open is the general Additive Basis Conjecture: for a prime $p>3$, does some constant $c(p)$ independent of $n$ suffice?
   formal:
     - language: lean4
       theorem: green_26
@@ -59,10 +60,15 @@ provenance:
     source: google-deepmind/formal-conjectures
     fields:
       - title
-      - statement.informal
       - statement.formal
       - subject.msc
       - ids.external
     license: Apache-2.0
     retrieved: 2026-07-31
     upstream_version: v4.32.0
+  - url: https://people.maths.ox.ac.uk/greenbj/papers/open-problems.pdf
+    source: conjecturehub-curator
+    fields:
+      - statement.informal
+    license: CC0-1.0
+    retrieved: 2026-08-04

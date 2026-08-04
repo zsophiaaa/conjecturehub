@@ -2,14 +2,11 @@ id: gauss-circle-problem
 title: Gauss circle problem
 statement:
   informal: |-
-    It is conjectured that the correct bound is
-    $$
-     |E(r)| = O\left(r^{1/2 + o(1)}\right)
-    $$
-
-    [Ha59]  Hardy, G. H. (1959). _Ramanujan: Twelve Lectures on Subjects Suggested by His Life and Work_(3rd ed.). New York: Chelsea Publishing Company. p. 67
-
-    See also https://arxiv.org/abs/2305.03549
+    For $r \geq 0$ let
+    $$N(r) = \#\{(m,n) \in \mathbb{Z}^2 : m^2+n^2 \leq r^2\}$$
+    be the number of integer lattice points in the closed disk of radius $r$ about the origin, and let $E(r) = N(r) - \pi r^2$ be the error in approximating that count by the area of the disk. Hardy conjectured that this error is essentially of square-root size: is $E(r) = O(r^{1/2+\varepsilon})$ for every $\varepsilon > 0$? Gauss's elementary argument gives $|E(r)-2| \leq 2\sqrt{2}\,\pi r$ for $r \geq \sqrt2$. Writing $E(r) \ll r^{t}$, the known constraints on the exponent are
+    $$\tfrac12 < t \leq \tfrac{131}{208} = 0.6298\ldots,$$
+    the lower restriction coming from Hardy and Landau (1915), who showed independently that $|E(r)| \neq o\bigl(r^{1/2}(\log r)^{1/4}\bigr)$, and the upper bound being due to M. N. Huxley.
   formal:
     - language: lean4
       theorem: error_le
@@ -54,10 +51,15 @@ provenance:
     source: google-deepmind/formal-conjectures
     fields:
       - title
-      - statement.informal
       - statement.formal
       - subject.msc
       - ids.external
     license: Apache-2.0
     retrieved: 2026-07-31
     upstream_version: v4.32.0
+  - url: https://en.wikipedia.org/wiki/Gauss_circle_problem
+    source: conjecturehub-curator
+    fields:
+      - statement.informal
+    license: CC0-1.0
+    retrieved: 2026-08-04

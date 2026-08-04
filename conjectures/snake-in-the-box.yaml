@@ -2,8 +2,9 @@ id: snake-in-the-box
 title: Snake in the box
 statement:
   informal: |-
-    For dimension $9$, the length of the longest snake in the box is not known.
-    This is currently the smallest dimension where this question is open.
+    Let $Q_n$ be the $n$-dimensional hypercube graph: its vertices are the $2^n$ binary strings of length $n$, and two strings are adjacent when they differ in exactly one coordinate. A **snake in the box** is an induced path in $Q_n$, that is, a sequence of distinct vertices $v_0,v_1,\dots,v_k$ in which consecutive vertices are adjacent and no other pair $v_i,v_j$ is adjacent; equivalently, each time the path moves to a new corner of the cube, every neighbour of every previously visited corner becomes unusable. Its length is $k$, the number of edges. Writing $s(n)$ for the maximum length of a snake in $Q_n$, the values
+    $$s(0),\dots,s(8)\;=\;0,\,1,\,2,\,4,\,7,\,13,\,26,\,50,\,98$$
+    are known, but $s(9)$ is not: the longest snake found so far in $Q_9$ has length $191$, and no matching upper bound is available. The snake-in-the-box problem, raised by Kautz in 1958 in connection with single-error-detecting Gray codes, asks for $s(n)$ in general; dimension $9$ is the smallest unresolved case.
   formal:
     - language: lean4
       theorem: snake_small_dimensions
@@ -52,10 +53,15 @@ provenance:
     source: google-deepmind/formal-conjectures
     fields:
       - title
-      - statement.informal
       - statement.formal
       - subject.msc
       - ids.external
     license: Apache-2.0
     retrieved: 2026-07-31
     upstream_version: v4.32.0
+  - url: https://en.wikipedia.org/wiki/Snake-in-the-box
+    source: conjecturehub-curator
+    fields:
+      - statement.informal
+    license: CC0-1.0
+    retrieved: 2026-08-04

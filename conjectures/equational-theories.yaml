@@ -2,13 +2,10 @@ id: equational-theories
 title: Equational Theories
 statement:
   informal: |-
-    The negation of `Finite.Equation677_implies_Equation255`.
-
-    Probably this is true. It would be a stronger form of
-    `Equation677_not_implies_Equation255`.
-
-    Discussion thread here:
-    https://leanprover.zulipchat.com/#narrow/channel/458659-Equational/topic/FINITE.3A.20677.20-.3E.20255
+    A *magma* is a set $M$ equipped with a single binary operation $\diamond$ satisfying no axioms. Consider two equational laws, required to hold for all elements of $M$:
+    $$x = y \diamond \bigl(x \diamond ((y \diamond x) \diamond y)\bigr) \qquad\text{(law 677)}$$
+    $$x = ((x \diamond x) \diamond x) \diamond x \qquad\text{(law 255)}$$
+    Does every *finite* magma satisfying law 677 also satisfy law 255? Equivalently, is there a finite magma satisfying law 677 together with an element $x$ for which $((x\diamond x)\diamond x)\diamond x \neq x$? Without the finiteness restriction the implication is known to fail, but the known counterexample comes from a greedy construction that is inherently infinite, and it is also known that law 255 does not imply law 677 (a $3$-element magma suffices). This is the one implication, up to duality, that the Equational Theories Project could not settle among the roughly $2.2\times 10^{7}$ implications between the $4694$ laws it considered; its authors tentatively conjecture that a finite counterexample does exist.
   formal:
     - language: lean4
       theorem: Equation255_not_implies_Equation677
@@ -58,10 +55,15 @@ provenance:
     source: google-deepmind/formal-conjectures
     fields:
       - title
-      - statement.informal
       - statement.formal
       - subject.msc
       - ids.external
     license: Apache-2.0
     retrieved: 2026-07-31
     upstream_version: v4.32.0
+  - url: https://arxiv.org/abs/2512.07087
+    source: conjecturehub-curator
+    fields:
+      - statement.informal
+    license: CC0-1.0
+    retrieved: 2026-08-04

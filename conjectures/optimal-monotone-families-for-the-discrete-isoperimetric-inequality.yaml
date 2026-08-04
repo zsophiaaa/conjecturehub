@@ -2,16 +2,11 @@ id: optimal-monotone-families-for-the-discrete-isoperimetric-inequality
 title: Optimal monotone families for the discrete isoperimetric inequality
 statement:
   informal: |-
-    Problem: For every monotone increasing family $F$, given an interval $[s,t]$ of real numbers so
-    that $t/s > 1000 \log n$ we have some $p$ in the interval $[s,t]$ so that $F$ is optimal with
-    respect to $\mu_p$.
+    Fix $X=\{1,\dots,n\}$ and, for $0<p<1$, let $\mu_p$ be the product measure on subsets of $X$ in which each element is included independently with probability $p$. For a family $\mathcal F$ of subsets of $X$, write $\mu_p(\mathcal F)$ for its measure, and let the edge boundary $I^p(\mathcal F)$ be the $\mu_p$-expected number of coordinates $i$ for which exactly one of $S$ and $S\,\triangle\,\{i\}$ belongs to $\mathcal F$. The discrete isoperimetric inequality says that
+    $$I^p(\mathcal F)\;\ge\;\frac{\mu_p(\mathcal F)\log\bigl(1/\mu_p(\mathcal F)\bigr)}{p\,\log(1/p)}$$
+    for every family and every $p$; call $\mathcal F$ *optimal at $p$* if this is sharp up to the factor $1000\log(1/p)$, that is, if $p\,I^p(\mathcal F)\le 1000\,\mu_p(\mathcal F)\log\bigl(1/\mu_p(\mathcal F)\bigr)$. Call $\mathcal F$ monotone increasing if $S\in\mathcal F$ and $S\subseteq T$ imply $T\in\mathcal F$.
 
-    This was a "missing lemma" in the work of Kahn and Kalai on threshold behavior of monotone
-    properties. The related [Kahn–Kalai conjecture](https://arxiv.org/abs/math/0603218) was
-    [settled by Park and Pham](https://arxiv.org/abs/2203.17207).
-
-    **This conjecture is false** without the additional assumption $\mu_t(F) = 1/2$.
-    A counterexample was found by Shlomo Perles (April 7, 2026).
+    Kahn and Kalai (2006, Conjecture 7) asked: for every monotone increasing $\mathcal F$ and every $0<s\le t<1$ with $\mu_t(\mathcal F)=1/2$ and $t/s>1000\log n$, must $\mathcal F$ be optimal at some $p\in[s,t]$? The answer is no. For every constant $C$ and every $\varepsilon>0$ there are arbitrarily large monotone increasing families, together with $0<s<t<1$ satisfying $\mu_t(\mathcal F)=1/2$ and $t/s\ge n^{1/(C+1+\varepsilon)}$, for which $p\,I^p(\mathcal F)>C\,\mu_p(\mathcal F)\log(1/\mu_p(\mathcal F))$ at every $p\in[s,t]$. So the required window is polynomial rather than logarithmic in $n$, and the weaker theorem Kahn and Kalai did prove — that for each $\varepsilon>0$ some constant $C(\varepsilon)$ works once $t/s>C(\varepsilon)\,n^{\varepsilon}$ — is essentially best possible.
   formal:
     - language: lean4
       theorem: mathoverflow_10799
@@ -55,7 +50,8 @@ openness_basis:
   asserted_by: google-deepmind/formal-conjectures
 claims:
   - id: optimal-monotone-families-for-the-discrete-isoperimetric-inequality-fc-solved
-    type: proved
+    type: disproved
+    scope: the conjecture as first posed, without the assumption $\mu_t(\mathcal{F}) = 1/2$
     evidence_tier: published
     attestation: secondary
     state: active
@@ -64,16 +60,36 @@ claims:
       title: formal-conjectures marks mathoverflow_10799 as research solved
       url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Mathoverflow/10799.lean
       kind: dataset
-    notes: Imported from the upstream `research solved` category. The statement is formalized; the proof has not been machine-checked by ConjectureHub.
+    notes: "Imported from the upstream `research solved` category, which records resolution without a direction. The direction is negative: Shlomo Perles gave a counterexample to the statement as first posed, which is why the hypothesis $\\mu_t(\\mathcal{F}) = 1/2$ was added to recover Conjecture 7 of Kahn-Kalai. The statement is formalized; the proof has not been machine-checked by ConjectureHub."
+  - id: optimal-monotone-families-for-the-discrete-isoperimetric-inequality-diskin-kreitner
+    asserted_on: 2026-06-26
+    type: disproved
+    evidence_tier: community_accepted
+    attestation: secondary
+    state: active
+    recorded_on: 2026-08-03
+    source:
+      title: Kalai's project page records the conjecture as refuted
+      url: https://gilkalai.wordpress.com/projects/optimal-monotone-families-for-the-discrete-isoperimetric-inequality/
+      kind: blog
+    authors:
+      - Sahar Diskin
+      - Uri Kreitner
+    notes: Conjecture 7 itself, the version carrying $\mu_t(\mathcal{F}) = 1/2$, is also false. The project page states on 26 June 2026 that "the problem has now been solved and the conjecture was refuted", by a scale-dense dual-tribes counterexample the authors report verifying in Lean. The same page still carries the April launch text calling the problem open; the June note at the top supersedes it. Upstream still tags the Conjecture 7 variant research open. Relayed from the project page; ConjectureHub has not checked the proof.
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Mathoverflow/10799.lean
     source: google-deepmind/formal-conjectures
     fields:
       - title
-      - statement.informal
       - statement.formal
       - subject.msc
       - ids.external
     license: Apache-2.0
     retrieved: 2026-07-31
     upstream_version: v4.32.0
+  - url: https://gilkalai.wordpress.com/projects/optimal-monotone-families-for-the-discrete-isoperimetric-inequality/
+    source: conjecturehub-curator
+    fields:
+      - statement.informal
+    license: CC0-1.0
+    retrieved: 2026-08-04

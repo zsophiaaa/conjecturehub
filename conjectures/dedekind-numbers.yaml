@@ -2,8 +2,9 @@ id: dedekind-numbers
 title: Dedekind Numbers
 statement:
   informal: |-
-    No closed-form expression that allows efficient computation of Dedekind numbers is
-     currently known.
+    A Boolean function $f\colon\{0,1\}^n\to\{0,1\}$ is *monotone* if changing an input coordinate from $0$ to $1$ never changes the value of $f$ from $1$ to $0$. The $n$-th **Dedekind number** $M(n)$ is the number of monotone Boolean functions of $n$ variables; equivalently, it is the number of antichains of subsets of an $n$-element set, i.e. families of subsets no member of which is contained in another. Dedekind's problem asks for the values of $M(n)$, and exact values are known only for $n\le 9$:
+    $$2,\;3,\;6,\;20,\;168,\;7581,\;7828354,\;2414682040998,\;56130437228687557907788,\;286386577668298411128469151667598498812366,$$
+    the last of these, $M(9)$, having been obtained independently in 2023 by Jäkel and by Van Hirtum, De Causmaecker, Goemaere and coauthors. The value of $M(10)$ is unknown, and no closed-form expression for $M(n)$ is known that permits efficient computation: the arithmetic formula of Kisielewicz (1988) is a sum of $2^{2^n}$ terms, already $2^{1024}$ terms at $n=10$.
   formal:
     - language: lean4
       theorem: M_eq_kisielewiczFormula
@@ -45,10 +46,15 @@ provenance:
     source: google-deepmind/formal-conjectures
     fields:
       - title
-      - statement.informal
       - statement.formal
       - subject.msc
       - ids.external
     license: Apache-2.0
     retrieved: 2026-07-31
     upstream_version: v4.32.0
+  - url: https://en.wikipedia.org/wiki/Dedekind_number
+    source: conjecturehub-curator
+    fields:
+      - statement.informal
+    license: CC0-1.0
+    retrieved: 2026-08-04

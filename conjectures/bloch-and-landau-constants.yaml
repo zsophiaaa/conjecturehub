@@ -2,8 +2,11 @@ id: bloch-and-landau-constants
 title: Bloch and Landau constants
 statement:
   informal: |-
-    Ahlfors and Grunsky also conjectured in [AG37] that this upper bound is the precise value of the
-    Bloch constant.
+    Let $f$ be holomorphic on the open unit disk $D\subset\mathbb{C}$ with $f'(0)=1$. *Bloch's constant* $B$ is the largest radius $b$ such that every such $f$ is injective on some subregion $S\subseteq D$ whose image $f(S)$ contains a disk of radius $b$ (a *schlicht* disk), and *Landau's constant* $L$ is the largest radius $\ell$ such that the image $f(D)$ always contains some disk of radius $\ell$, with no injectivity required. Neither exact value is known. Ahlfors and Grunsky (1937) proved
+    $$B \leq \sqrt{\frac{\sqrt{3}-1}{2}}\cdot\frac{\Gamma(1/3)\,\Gamma(11/12)}{\Gamma(1/4)} = 0.47186\ldots$$
+    and conjectured that this upper bound is the exact value of $B$; the best known lower bound is $B \geq \frac{\sqrt3}{4}+2\times 10^{-4} = 0.43321\ldots$ (Chen–Gauthier, 1996). Similarly it is known that
+    $$0.5 < L \leq \frac{\Gamma(1/3)\,\Gamma(5/6)}{\Gamma(1/6)} = 0.543258965\ldots,$$
+    where the upper bound goes back to Robinson (1938) and Rademacher (1943), who likewise conjectured it to be exact. Are these two conjectured values correct: is $B$ equal to the Ahlfors–Grunsky bound, and is $L$ equal to the Rademacher bound?
   formal:
     - language: lean4
       theorem: blochConstant_lower_bound
@@ -78,10 +81,15 @@ provenance:
     source: google-deepmind/formal-conjectures
     fields:
       - title
-      - statement.informal
       - statement.formal
       - subject.msc
       - ids.external
     license: Apache-2.0
     retrieved: 2026-07-31
     upstream_version: v4.32.0
+  - url: https://mathworld.wolfram.com/BlochConstant.html
+    source: conjecturehub-curator
+    fields:
+      - statement.informal
+    license: CC0-1.0
+    retrieved: 2026-08-04

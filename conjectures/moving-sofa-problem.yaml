@@ -1,7 +1,10 @@
 id: moving-sofa-problem
 title: Moving Sofa Problem
 statement:
-  informal: Gerver's sofa is the unique sofa that attains the sofa constant.
+  informal: |-
+    The hallway is the union of a horizontal corridor $(-\infty,1]\times[0,1]$ and a vertical corridor $[0,1]\times(-\infty,1]$, two strips of unit width meeting at a right angle. A **moving sofa** is a closed connected planar set that lies in the horizontal corridor and can be carried by a continuous rigid motion, remaining inside the hallway at all times, until it lies in the vertical corridor; the **sofa constant** is the largest area such a set can have. Gerver (1992) constructed a sofa $G$ whose boundary consists of $18$ analytic curve sections and whose area is $2.2195\ldots$, and Baek (2024) proved that no moving sofa has larger area, so the sofa constant equals $|G|$.
+
+    What remains open is uniqueness: must every moving sofa of maximal area be a rigid copy of Gerver's sofa? Baek's proof bounds the area of an arbitrary moving sofa by a concave functional that is maximised at $G$ and agrees with the area there, but it does not assert that a competing maximiser has to coincide with $G$.
   formal:
     - language: lean4
       theorem: sofaConstant_eq
@@ -34,16 +37,36 @@ openness_basis:
   meaning: no_published_solution_known_to_curator
   asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: moving-sofa-problem-baek-2024
+    asserted_on: 2024-11-29
+    type: proved
+    scope: the value of the sofa constant
+    evidence_tier: preprint
+    attestation: secondary
+    state: active
+    recorded_on: 2026-08-03
+    source:
+      title: Optimality of Gerver's Sofa
+      url: https://arxiv.org/abs/2411.19826
+      kind: preprint
+    authors:
+      - Jineon Baek
+    notes: Theorem 1.1.1 shows Gerver's sofa attains the maximum area, about 2.2195, settling the sofa constant. Still arXiv v1 with no journal reference, so the tier is preprint rather than published. Scoped because the uniqueness question this record displays is untouched by it.
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/MovingSofa.lean
     source: google-deepmind/formal-conjectures
     fields:
       - title
-      - statement.informal
       - statement.formal
       - subject.msc
       - ids.external
     license: Apache-2.0
     retrieved: 2026-07-31
     upstream_version: v4.32.0
+  - url: https://arxiv.org/abs/2411.19826
+    source: conjecturehub-curator
+    fields:
+      - statement.informal
+    license: CC0-1.0
+    retrieved: 2026-08-04

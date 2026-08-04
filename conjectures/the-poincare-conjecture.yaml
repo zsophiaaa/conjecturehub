@@ -5,7 +5,10 @@ aliases:
   - Теорема Перельмана
   - Теорема Пуанкаре
 statement:
-  informal: "The Millenium Problem, solved by Grigori Perelman in 2003: the Poincaré Conjecture holds."
+  informal: |-
+    The Poincaré conjecture asserts that every closed simply connected $3$-manifold is homeomorphic to the $3$-sphere $S^3$; in dimension $n$, the generalised (topological) form asserts that every closed $n$-manifold homotopy equivalent to $S^n$ is homeomorphic to $S^n$. This is a theorem in every dimension: Smale and others settled $n\ge 5$, Freedman settled $n=4$, and Grigori Perelman settled the Millennium Prize case $n=3$ in 2002–2003 using Hamilton's Ricci flow with surgery.
+
+    What is still open is the **smooth Poincaré conjecture** in dimension $4$: is every smooth $4$-manifold homeomorphic to $S^4$ also diffeomorphic to $S^4$? In dimension $n$ the smooth conjecture fails in general — Milnor's exotic $7$-spheres are the first examples — and among the dimensions that have been decided it holds exactly for $n=1,2,3,5,6,12,56,61$, the last case being Wang and Xu's 2017 computation of the $61$-stem. Wang and Xu conjecture that these are the only dimensions $n>4$ in which it holds. Dimension $4$ is the sole remaining unknown: no exotic $4$-sphere has been constructed and none has been excluded.
   formal:
     - language: lean4
       theorem: poincare_conjecture
@@ -72,7 +75,6 @@ provenance:
     source: google-deepmind/formal-conjectures
     fields:
       - title
-      - statement.informal
       - statement.formal
       - subject.msc
       - ids.external
@@ -89,3 +91,9 @@ provenance:
       - notability.wikipedia_language_editions
     license: CC0-1.0
     retrieved: 2026-08-03
+  - url: https://www.claymath.org/wp-content/uploads/2022/06/poincare.pdf
+    source: conjecturehub-curator
+    fields:
+      - statement.informal
+    license: CC0-1.0
+    retrieved: 2026-08-04

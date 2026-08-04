@@ -1,7 +1,10 @@
 id: green-s-open-problem-9
 title: Green's Open Problem 9
 statement:
-  informal: "Problem 9 (ii): is $r_5(N) \\ll N(\\log N)^{-c}$?"
+  informal: |-
+    For $k \geq 3$ and $N \geq 1$ let $r_k(N)$ denote the largest possible size of a subset of $\{1,\dots,N\}$ containing no non-trivial $k$-term arithmetic progression (one with non-zero common difference), and define $r_k(G)$ analogously for a finite abelian group $G$. Two parts of Green's Problem 9 are open. First: is there a constant $c>0$ such that
+    $$r_5(N) \ll N(\log N)^{-c},$$
+    that is, does a logarithmic saving hold for five-term progressions? Second: is there a constant $c>0$ such that $r_4(\mathbb{F}_5^n) \ll N^{1-c}$, where $N = 5^n = |\mathbb{F}_5^n|$? For comparison, the corresponding logarithmic saving is known for $k=3$ — part (i) of Green's problem, settled by Kelley–Meka and sharpened by Bloom–Sisask — and for $k=4$ by an argument of Green and Tao; for every $k \geq 5$ the best known bound is $r_k(N) \ll N\exp\bigl(-(\log\log N)^{c_k}\bigr)$ (Leng–Sah–Sawhney, 2024), which improves Gowers' longstanding $r_k(N) \ll N(\log\log N)^{-c_k}$ but falls well short of a power of $\log N$. Green notes that the Green–Tao trick for $k=4$ is unavailable for five-term progressions, and that the polynomial method of Croot–Lev–Pach and Ellenberg–Gijswijt, which yields the second question for three-term progressions over $\mathbb{F}_5$, has not been extended to four-term progressions.
   formal:
     - language: lean4
       theorem: green_9_i
@@ -39,10 +42,15 @@ provenance:
     source: google-deepmind/formal-conjectures
     fields:
       - title
-      - statement.informal
       - statement.formal
       - subject.msc
       - ids.external
     license: Apache-2.0
     retrieved: 2026-07-31
     upstream_version: v4.32.0
+  - url: https://people.maths.ox.ac.uk/greenbj/papers/open-problems.pdf
+    source: conjecturehub-curator
+    fields:
+      - statement.informal
+    license: CC0-1.0
+    retrieved: 2026-08-04

@@ -158,7 +158,9 @@ export function deriveStatus(conjecture: Conjecture): DerivedStatus {
     let caveat = `${STANDING_CAVEATS[top.evidence_tier]} ${attestationCaveat(top)}`.trim();
 
     if (scoped) {
-      caveat = `This resolution covers ${top.scope} only; the rest remains open. ${caveat}`;
+      // No trailing "only": a scope often ends in its own qualifying clause, and the
+      // adverb then attaches to that clause rather than to the scope as a whole.
+      caveat = `This resolution covers ${top.scope}, and no more. The rest of the problem remains open. ${caveat}`;
     }
     if (disputed.length > 0) {
       caveat = `${caveat} A competing or withdrawn claim also exists — see the timeline.`;

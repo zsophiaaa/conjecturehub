@@ -1,7 +1,7 @@
 id: mathoverflow-75792
 title: Mathoverflow 75792
 statement:
-  informal: Is `2n` the complexity of `2^n` for `0 < n`?
+  informal: "The *integer complexity* (or Mahler–Popken complexity) $\\|n\\|$ of a positive integer $n$ is the least number of $1$'s needed to write $n$ using only addition, multiplication and parentheses; for example $\\|11\\| = 8$, since $11 = (1+1)(1+1+1+1+1)+1$ and no shorter expression exists. Because $2^n$ is a product of $n$ copies of $1+1$, we have $\\|2^n\\| \\leq 2n$. Is $\\|2^n\\| = 2n$ for every $n \\geq 1$? Selfridge's lower bound $\\|m\\| \\geq 3\\log_3 m$ only gives $\\|2^n\\| \\geq (3\\log_3 2)\\,n = 1.8927\\ldots n$, though the same bound settles the analogous question in base $3$: $\\|3^n\\| = 3n$ for all $n \\geq 1$. The analogue for $5$ is false, since $5^6 = 1 + 2^3\\cdot 3^2\\cdot(1 + 2^3\\cdot 3^3)$ exhibits $\\|5^6\\| \\leq 29 < 30$. The equality $\\|2^n\\| = 2n$ has been confirmed for $n \\leq 39$ by computing $\\|m\\|$ for all $m \\leq 10^{12}$ (Iraids et al.), and Altman and Zelinsky proved the stronger statement $\\|2^n 3^k\\| = 2n+3k$ for all $n \\leq 21$ and all $k$ (not both zero)."
   formal:
     - language: lean4
       theorem: complexity_five_pow
@@ -41,10 +41,15 @@ provenance:
     source: google-deepmind/formal-conjectures
     fields:
       - title
-      - statement.informal
       - statement.formal
       - subject.msc
       - ids.external
     license: Apache-2.0
     retrieved: 2026-07-31
     upstream_version: v4.32.0
+  - url: https://mathoverflow.net/a/75792
+    source: conjecturehub-curator
+    fields:
+      - statement.informal
+    license: CC0-1.0
+    retrieved: 2026-08-04
