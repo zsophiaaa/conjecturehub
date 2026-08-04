@@ -32,7 +32,22 @@ openness_basis:
   meaning: no_published_solution_known_to_curator
   asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: written-on-the-wall-ii-conjecture-146-sweep-15576523
+    asserted_on: 2026-08-04
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-04
+    source:
+      title: "formal-conjectures PR #4540: Mark WOWII conjecture 146 solved"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/4540
+      kind: github
+      quote: Mark WOWII conjecture 146 solved.
+    authors:
+      - Mapika
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Written on the Wall II - Conjecture 146". Classifier rationale: The document announces a completed formal Lean proof that settles the conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/WrittenOnTheWallII/GraphConjecture146.lean
     source: google-deepmind/formal-conjectures
