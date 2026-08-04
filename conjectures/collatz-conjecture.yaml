@@ -43,7 +43,20 @@ openness_basis:
   meaning: no_published_solution_known_to_curator
   asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: collatz-conjecture-sweep-aac63674
+    asserted_on: 2026-07-30
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: secondary
+    state: active
+    recorded_on: 2026-08-04
+    source:
+      title: AI-generated, Lean-verified proof of Collatz conjecture exploits Lean kernel bug
+      url: https://infosec.exchange/@0xabad1dea/117002106099986943
+      kind: hackernews
+      quote: AI-generated, Lean-verified proof of Collatz conjecture exploits Lean kernel bug
+    notes: 'Filed automatically by the Hacker News sweep. Matched on "Collatz conjecture". Classifier rationale: The document asserts that it provides a proof of the Collatz conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/CollatzConjecture.lean
     source: google-deepmind/formal-conjectures

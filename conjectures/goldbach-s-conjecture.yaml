@@ -37,7 +37,23 @@ openness_basis:
   meaning: no_published_solution_known_to_curator
   asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: goldbach-s-conjecture-sweep-dcbeeea8
+    asserted_on: 2026-08-04
+    type: partial
+    scope: even n ≤ 10^{12}
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-04
+    source:
+      title: "An intermediate conjecture between Goldbach and Dubner: every even number is the sum of a prime and a twin prime"
+      url: https://arxiv.org/abs/2608.02381
+      kind: arxiv
+      quote: We verify (S) exhaustively for all even n ≤ 10^{12}.
+    authors:
+      - Tushar Pandey
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Goldbach conjecture". Classifier rationale: The document only verifies an intermediate conjecture up to a finite bound, which gives limited evidence for Goldbach but does not claim a full proof. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/GoldbachConjecture.lean
     source: google-deepmind/formal-conjectures

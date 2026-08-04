@@ -25,7 +25,23 @@ openness_basis:
   meaning: no_published_solution_known_to_curator
   asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: dubner-s-conjecture-sweep-dcbeeea8
+    asserted_on: 2026-08-04
+    type: partial
+    scope: n ≤ 10^{11}
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-04
+    source:
+      title: "An intermediate conjecture between Goldbach and Dubner: every even number is the sum of a prime and a twin prime"
+      url: https://arxiv.org/abs/2608.02381
+      kind: arxiv
+      quote: we also re-derive the 33 terms ≥ 6 of the Dubner exception list A007534 and re-verify Dubner's conjecture; those two by-products are established for n ≤ 10^{11} only
+    authors:
+      - Tushar Pandey
+    notes: "Filed automatically by the arXiv new submissions sweep. Matched on \"Dubner's conjecture\". Classifier rationale: The paper reports verification of Dubner's conjecture up to 10^{11}, which is a partial result. Unreviewed: this records that a claim was made, not that it is correct."
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Paper/Dubner.lean
     source: google-deepmind/formal-conjectures
