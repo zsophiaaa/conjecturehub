@@ -51,6 +51,22 @@ claims:
       url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/298.lean
       kind: dataset
     notes: Imported from the upstream `research solved` category. The statement is formalized; the proof has not been machine-checked by ConjectureHub.
+  - id: erdos-298-sweep-5dc51e22
+    asserted_on: 2026-08-04
+    type: proved
+    scope: positive upper density
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-04
+    source:
+      title: "formal-conjectures PR #4737: fix(ErdosProblems): use upper density in 298"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/4737
+      kind: github
+      quote: The source and cited result for Erdős Problem 298 concern positive upper density
+    authors:
+      - SamuelSchlesinger
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 298". Classifier rationale: The PR notes that the existing cited result (Bloom) proves the conjecture for positive upper density. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/298.lean
     source: google-deepmind/formal-conjectures

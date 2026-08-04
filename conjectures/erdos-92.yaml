@@ -46,6 +46,22 @@ claims:
       title: erdosproblems.com records this problem as "disproved"
       url: https://www.erdosproblems.com/92
       kind: dataset
+  - id: erdos-92-sweep-8dfafb6b
+    asserted_on: 2026-07-22
+    type: partial
+    scope: establishes f(n) ≤ n (a trivial upper bound)
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-04
+    source:
+      title: "formal-conjectures: feat(ErdosProblems/92): prove possible_f_values_BddAbove (#4411) # Description > Let $f(n)$ be maximal such that there exists a set $A$ of $n$ points in $\\mathbb{R}^2$ > in which every $x \\in A$ has a"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/5ff92c98aa4ff53885034273caa41c78295b4f69
+      kind: github
+      quote: "The proof bounds by `n` rather than the sharper `n - 1` mentioned in the original docstring: `BddAbove` only needs *some* bound, and `n` avoids the ℕ-subtraction edge case at `n = 0`."
+    authors:
+      - kukushking
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 92". Classifier rationale: The document proves a simple upper bound on f(n) but does not resolve the conjectured subpolynomial growth. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/92.lean
     source: google-deepmind/formal-conjectures

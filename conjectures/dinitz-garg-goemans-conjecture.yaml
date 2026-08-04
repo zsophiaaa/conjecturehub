@@ -27,6 +27,32 @@ claims:
       url: https://en.wikipedia.org/wiki/Dinitz%E2%80%93Garg%E2%80%93Goemans_conjecture
       kind: wikipedia
     notes: Standing taken from English Wikipedia's categorisation (Wikipedia categorises this as disproved). Nobody here has read the paper that settled it, which is what the secondary attestation says; replace this claim with one citing that paper when someone has it to hand.
+  - id: dinitz-garg-goemans-conjecture-sweep-b0bb4362
+    asserted_on: 2026-07-23
+    type: disproved
+    evidence_tier: unverified_claim
+    attestation: secondary
+    state: active
+    recorded_on: 2026-08-04
+    source:
+      title: Dinitz-Garg-Goemans conjecture is false
+      url: https://xcancel.com/DmitryRybin1/status/2079904005652893709
+      kind: hackernews
+      quote: Dinitz-Garg-Goemans conjecture is false
+    notes: 'Filed automatically by the Hacker News sweep. Matched on "Dinitz–Garg–Goemans conjecture". Classifier rationale: The document states the conjecture is false, indicating a claimed disproof. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: dinitz-garg-goemans-conjecture-sweep-584bae78
+    asserted_on: 2026-07-23
+    type: disproved
+    evidence_tier: unverified_claim
+    attestation: secondary
+    state: active
+    recorded_on: 2026-08-04
+    source:
+      title: Dinitz-Garg-Goemans conjecture proven false by GPT 5.6
+      url: https://twitter.com/DmitryRybin1/status/2079904005652893709
+      kind: hackernews
+      quote: Dinitz-Garg-Goemans conjecture proven false by GPT 5.6
+    notes: 'Filed automatically by the Hacker News sweep. Matched on "Dinitz–Garg–Goemans conjecture". Classifier rationale: The document title asserts that the conjecture has been disproved. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q140738503
     source: wikidata

@@ -29,7 +29,22 @@ openness_basis:
   meaning: no_published_solution_known_to_curator
   asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: written-on-the-wall-ii-conjecture-103-sweep-b161b0bb
+    asserted_on: 2026-07-25
+    type: counterexample
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-04
+    source:
+      title: "formal-conjectures: Disprove WOWII Conjecture 103 (#4482) ## Summary - disprove Written on the Wall II Conjecture 103 with an explicit 11-vertex graph - verify in Lean that the graph is connected, has independence number"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/7587c6260d0bff44b000560f62a119ebe36dc581
+      kind: github
+      quote: Disprove WOWII Conjecture 103 (#4482) ... with an explicit 11-vertex graph ... The counterexample is a triangle with four leaves attached to each of two triangle vertices.
+    authors:
+      - CinnamonRolls1
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Written on the Wall II - Conjecture 103". Classifier rationale: The document presents an explicit graph that violates the conjectured inequality, thereby claiming a counterexample. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/WrittenOnTheWallII/GraphConjecture103.lean
     source: google-deepmind/formal-conjectures

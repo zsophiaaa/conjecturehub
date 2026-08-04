@@ -29,7 +29,22 @@ openness_basis:
   meaning: no_published_solution_known_to_curator
   asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: twin-prime-conjecture-sweep-81e15254
+    asserted_on: 2026-08-04
+    type: reformulation
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-04
+    source:
+      title: 'In the decomposition into weight × level + jump, the Twin Prime Conjecture becomes: "The number of prime numbers with a weight of 3 is infinite" # decompwlj # math # mathematics # '
+      url: https://mathstodon.xyz/@decompwlj/117035066478405132
+      kind: mastodon
+      quote: 'In the decomposition into weight × level + jump, the Twin Prime Conjecture becomes: "The number of prime numbers with a weight of 3 is infinite"'
+    authors:
+      - Rémi Eismann
+    notes: 'Filed automatically by the Mathstodon sweep. Matched on "Twin prime conjecture". Classifier rationale: The post merely restates the conjecture in different terms, without claiming a proof or disproof. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/TwinPrimes.lean
     source: google-deepmind/formal-conjectures

@@ -83,6 +83,71 @@ claims:
       - David Barros Hulak
       - Ruy Jose Guerra Barretto de Queiroz
     notes: Isabelle/HOL formalisation accepted into the Archive of Formal Proofs. This is the one completed machine check of the counterexample; the Lean route remains an open Mathlib pull request. Not tagged machine_verified here because that tier is reserved for proofs checked by ConjectureHub CI against our own canonical statement.
+  - id: jacobian-conjecture-sweep-113fbddd
+    asserted_on: 2026-07-25
+    type: counterexample
+    evidence_tier: unverified_claim
+    attestation: secondary
+    state: active
+    recorded_on: 2026-08-04
+    source:
+      title: Claude used my pipeline to find a counterexample to the Jacobian conjecture
+      url: https://news.ycombinator.com/item?id=49043095
+      kind: hackernews
+      quote: Claude used my pipeline to find the counterexample to the Jacobian conjecture.
+    notes: 'Filed automatically by the Hacker News sweep. Matched on "Jacobian conjecture". Classifier rationale: The document explicitly claims a counterexample has been found, implying a disproof. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: jacobian-conjecture-sweep-1ede1834
+    asserted_on: 2026-07-23
+    type: counterexample
+    evidence_tier: unverified_claim
+    attestation: secondary
+    state: active
+    recorded_on: 2026-08-04
+    source:
+      title: Maybe Jacobian Conjecture Counterexamples Are Not Rare
+      url: https://win-vector.com/2026/07/23/maybe-jacobian-conjecture-counterexamples-are-not-rare/
+      kind: hackernews
+      quote: Maybe Jacobian Conjecture Counterexamples Are Not Rare
+    notes: 'Filed automatically by the Hacker News sweep. Matched on "Jacobian conjecture". Classifier rationale: The title asserts that counterexamples to the Jacobian Conjecture may exist, implying a claimed disproof. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: jacobian-conjecture-sweep-3c187b67
+    asserted_on: 2026-07-22
+    type: counterexample
+    evidence_tier: unverified_claim
+    attestation: secondary
+    state: active
+    recorded_on: 2026-08-04
+    source:
+      title: Terence Tao's ChatGPT conversation about the Jacobian Conjecture counterexample
+      url: https://chatgpt.com/share/6a5fdc7a-d6f8-83e8-bbea-8deb42cfed56
+      kind: hackernews
+      quote: Claude Fable produced a counterexample to the Jacobian Conjecture
+    notes: 'Filed automatically by the Hacker News sweep. Matched on "Jacobian conjecture". Classifier rationale: The document claims a counterexample has been found, implying disproof. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: jacobian-conjecture-sweep-a22bacb4
+    asserted_on: 2026-07-21
+    type: disproved
+    evidence_tier: unverified_claim
+    attestation: secondary
+    state: active
+    recorded_on: 2026-08-04
+    source:
+      title: "Show HN: How to Get a Fable CoT for the Jacobian Conjecture Refutation"
+      url: https://news.ycombinator.com/item?id=48986943
+      kind: hackernews
+      quote: '"Since the publication of the Jacobian Conjecture refutation..."'
+    notes: 'Filed automatically by the Hacker News sweep. Matched on "Jacobian conjecture". Classifier rationale: The document states that a refutation of the Jacobian Conjecture has been published. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: jacobian-conjecture-sweep-10222644
+    asserted_on: 2026-07-21
+    type: disproved
+    evidence_tier: unverified_claim
+    attestation: secondary
+    state: active
+    recorded_on: 2026-08-04
+    source:
+      title: "With the Help of Codex: A Reproducible Proof Against the Jacobian Conjecture"
+      url: https://blog.clidey.com/a-reproducible-proof-against-the-jacobian-conjecture/
+      kind: hackernews
+      quote: "With the Help of Codex: A Reproducible Proof Against the Jacobian Conjecture"
+    notes: 'Filed automatically by the Hacker News sweep. Matched on "Jacobian conjecture". Classifier rationale: The title asserts a proof that the Jacobian Conjecture is false. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/JacobianConjecture.lean
     source: google-deepmind/formal-conjectures

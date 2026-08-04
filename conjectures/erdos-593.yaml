@@ -66,7 +66,22 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: erdos-593-sweep-ca4ea3dc
+    asserted_on: 2026-07-29
+    type: resolved_by_prior_literature
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-04
+    source:
+      title: "erdosproblems PR #366: Record Lean solution for Erdős Problem 593"
+      url: https://github.com/teorth/erdosproblems/pull/366
+      kind: github
+      quote: Eric Li's arXiv:2606.24882 is credited in the formalization repository as the first publicly posted complete proof
+    authors:
+      - SamPetkov
+    notes: 'Filed automatically by the erdosproblems pull requests sweep. Matched on "Erdős Problem 593". Classifier rationale: The PR formalizes an existing proof rather than announcing a new resolution Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/593.lean
     source: google-deepmind/formal-conjectures

@@ -28,6 +28,21 @@ claims:
       url: https://www.erdosproblems.com/1044
       kind: dataset
     notes: Upstream records this as solved without specifying the direction.
+  - id: erdos-1044-sweep-6b1b620f
+    asserted_on: 2026-08-04
+    type: resolved_by_prior_literature
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-04
+    source:
+      title: "formal-conjectures PR #4740: fix(ErdosProblems): record the answer to 1044"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/4740
+      kind: github
+      quote: Erdős Problem 1044 has known infimum 2
+    authors:
+      - SamuelSchlesinger
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 1044". Classifier rationale: The PR records the answer as 2, indicating the problem is already solved in existing literature. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

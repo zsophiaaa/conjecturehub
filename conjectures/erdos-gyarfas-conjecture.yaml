@@ -10,7 +10,23 @@ openness_basis:
   meaning: no_solution_known_to_community
   asserted_by: wikipedia
   note: Listed under "Unsolved problems in graph theory" on English Wikipedia.
-claims: []
+claims:
+  - id: erdos-gyarfas-conjecture-sweep-72c34fa6
+    asserted_on: 2026-07-30
+    type: partial
+    scope: bipartite and cubic bipartite cases
+    evidence_tier: unverified_claim
+    attestation: secondary
+    state: active
+    recorded_on: 2026-08-04
+    source:
+      title: Erdős–Gyárfás conjecture
+      url: https://en.wikipedia.org/wiki/Erd%C5%91s%E2%80%93Gy%C3%A1rf%C3%A1s_conjecture
+      kind: wikipedia
+      quote: Add discussion of computational progress on the bipartite and cubic bipartite cases, including the 30-vertex lower bound, and clarify how these cases relate to the cubic planar result.
+    authors:
+      - Slowhash
+    notes: 'Filed automatically by the Wikipedia edits sweep. Matched on "Erdős–Gyárfás conjecture". Classifier rationale: The edit reports new computational progress on specific cases, which is partial but not a full proof or disproof. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q3686826
     source: wikidata

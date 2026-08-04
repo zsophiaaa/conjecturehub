@@ -22,6 +22,22 @@ claims:
       url: https://en.wikipedia.org/wiki/Smale_conjecture
       kind: wikipedia
     notes: Standing taken from English Wikipedia's categorisation (Wikipedia categorises this as proved). Nobody here has read the paper that settled it, which is what the secondary attestation says; replace this claim with one citing that paper when someone has it to hand.
+  - id: smale-conjecture-sweep-85b33fb7
+    asserted_on: 2026-08-03
+    type: proved
+    scope: dimension 3
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-04
+    source:
+      title: "formal-conjectures PR #4655: Add Generalized Smale Conjecture"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/4655
+      kind: github
+      quote: "- **smale_conjecture_dim_3**: Diff(S³) ≃ O(4) as topological groups (Hatcher 1983)"
+    authors:
+      - anagnorisis2peripeteia
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Smale conjecture". Classifier rationale: The PR records the Smale conjecture in dimension 3 as proved by Hatcher. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q16947992
     source: wikidata
