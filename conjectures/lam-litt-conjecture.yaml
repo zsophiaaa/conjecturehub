@@ -2,8 +2,21 @@ id: lam-litt-conjecture
 title: Lam--Litt conjecture
 statement:
   informal: |-
-    Eisenstein's theorem (1852): an algebraic power series over $\mathbb{Q}[z]$ has bounded
-    denominators, i.e., there exists $N$ such that all coefficients lie in $\mathbb{Z}[1/N]$.
+    A conjecture of Lam and Litt on algebraic solutions of algebraic ODEs.
+
+    Let $g \in \mathbb{Q}(z, y_0, \dots, y_{n-1})$ be a rational function in $n + 1$ variables.
+    Let $f$ be a power series over $\mathbb{Q}$ such that
+    $f^{(n)}(z) = g(z, f(z), f'(z), \dots, f^{(n-1)}(z))$. Also, assume that
+    $g(0, f(0), f'(0), \dots, f^{(n-1)}(0))$ is defined. Then the following are equivalent:
+
+    1) $f$ is algebraic over $\mathbb{Q}[z]$.
+    2) There exists $N$ such that for all $i$, the $i$-th coefficient of $f$ is in $\mathbb{Z}[1/N]$.
+    3) There exists an integer-valued function $\omega$ on the set of primes with
+    $\lim_{p \to \infty} \omega(p) / p = \infty$ such that, for each prime $p$, the rational
+    numbers $a_0, a_1, \dots, a_{\omega(p)}$ are in $\mathbb{Z}_{(p)}$.
+
+    The implication 1) => 2) is due to Eisenstein (1852), and 2) => 3) is trivial. The open
+    content is the converse direction.
   formal:
     - language: lean4
       theorem: lam_litt.variants.eisenstein

@@ -6,7 +6,11 @@ statement:
     $$
      \max_{m < n}(m + \tau(m)) \leq n + 2?
     $$
-    Known solutions: 5, 8, 10, 12, 24 (OEIS A087280). Erdős offered £25 for any larger example.
+    Below $10^{12}$ the inequality holds exactly for $n \in \{1, 2, 3, 4, 5, 6, 8, 10, 12, 24\}$.
+    The subset attaining equality is $5, 8, 10, 12, 24$, which is OEIS A087280; that sequence is
+    the equality set, so a search implementing the $\leq$ above will also return $1, 2, 3, 4, 6$
+    and must not report them as finds. No further $n$ up to $10^{12}$ (Idén, June 2026).
+    Erdős offered £25 for any larger example.
     Discussion and partial results: [erdosproblems.com forum #647](https://www.erdosproblems.com/forum/thread/647).
   formal:
     - language: lean4
