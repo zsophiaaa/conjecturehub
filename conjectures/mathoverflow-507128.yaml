@@ -27,7 +27,37 @@ openness_basis:
   meaning: no_published_solution_known_to_curator
   asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: mathoverflow-507128-sweep-b444d862
+    asserted_on: 2026-08-04
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-04
+    source:
+      title: "formal-conjectures PR #4644: feat(Mathoverflow/507128): mark as formally solved"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/4644
+      kind: github
+      quote: 'feat(Mathoverflow/507128): mark as formally solved. I present a Lean proof for MathOverflow 507128 ... and propose changing the status of this Formal Conjectures entry from "open" to "solved."'
+    authors:
+      - KitaKen1
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Mathoverflow 507128". Classifier rationale: The document explicitly states that a Lean proof has been provided and the conjecture should be marked as solved. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: mathoverflow-507128-sweep-3c042962
+    asserted_on: 2026-08-04
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-04
+    source:
+      title: "formal-conjectures: feat(Mathoverflow/507128): mark as formally solved (#4644) I present a Lean proof for MathOverflow 507128 (located at `FormalConjectures/Mathoverflow/507128.lean`) and propose changing the status of t"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/be7f43f1ff453f49ce4635e9aa481ccda3b6f835
+      kind: github
+      quote: I present a Lean proof for MathOverflow 507128 ... and propose changing the status of this Formal Conjectures entry from "open" to "solved."
+    authors:
+      - KitaKen1
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Mathoverflow 507128". Classifier rationale: The document announces a Lean proof and requests marking the conjecture as solved. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Mathoverflow/507128.lean
     source: google-deepmind/formal-conjectures

@@ -10,7 +10,56 @@ openness_basis:
   meaning: no_solution_known_to_community
   asserted_by: wikipedia
   note: Listed under "Unsolved problems in geometry" on English Wikipedia.
-claims: []
+claims:
+  - id: pompeiu-problem-sweep-f375f777
+    asserted_on: 2026-08-03
+    type: partial
+    scope: the direction that a Euclidean ball fails the Pompeiu property
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-04
+    source:
+      title: "formal-conjectures PR #4436: feat(Wikipedia): the Pompeiu problem"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/4436
+      kind: github
+      quote: ball_not_hasPompeiuProperty (`research solved`) — the classical direction (a ball fails; witnesses are radial Bessel functions).
+    authors:
+      - him1411
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Pompeiu problem". Classifier rationale: The PR records that one implication of the conjecture is solved while the converse remains open. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: pompeiu-problem-sweep-59f6d03b
+    asserted_on: 2026-08-03
+    type: partial
+    scope: the direction that a Euclidean ball fails the Pompeiu property
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-04
+    source:
+      title: "formal-conjectures: feat(Wikipedia): the Pompeiu problem (#4436) Closes #3479. Formalizes the statement of the [Pompeiu problem](https://en.wikipedia.org/wiki/Pompeiu_problem). A bounded domain $\\Omega \\subset \\mathbb{R}"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/fadb320d8249b775de76dfe8320c9dd143822cbf
+      kind: github
+      quote: "`ball_not_hasPompeiuProperty` (`research solved`) — the classical direction (a ball fails; witnesses are radial Bessel functions)."
+    authors:
+      - him1411
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Pompeiu problem". Classifier rationale: The commit notes that one direction of the iff is solved while the converse remains open. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: pompeiu-problem-sweep-e5da564a
+    asserted_on: 2026-08-04
+    type: counterexample
+    scope: bounded simply connected Lipschitz domains in the plane
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-04
+    source:
+      title: A computer-assisted counterexample to the planar Pompeiu and Schiffer conjectures
+      url: https://arxiv.org/abs/2608.01579
+      kind: arxiv
+      quote: Ω fails the Pompeiu property and is also a counterexample to the planar Pompeiu conjecture for bounded simply connected Lipschitz domains.
+    authors:
+      - Matthew J. Colbrook
+      - George Stepaniants
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Pompeiu problem". Classifier rationale: The paper explicitly states it provides a counterexample to the planar Pompeiu conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q3406234
     source: wikidata
