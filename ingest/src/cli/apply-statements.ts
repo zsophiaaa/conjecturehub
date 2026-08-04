@@ -14,6 +14,7 @@
  */
 import fs from "node:fs";
 import { read, write } from "../lib/conjecture.js";
+import { sharedRun } from "../lib/overlap.js";
 
 interface Entry {
   id: string;
@@ -37,28 +38,6 @@ if (!file) {
 }
 
 const entries: Entry[] = JSON.parse(fs.readFileSync(file, "utf8"));
-
-/** Longest run of shared words, used to catch prose we may not redistribute. */
-const RUN = 12;
-const words = (s: string) =>
-  s
-    .toLowerCase()
-    .replace(/\$[^$]*\$/g, " ")
-    .replace(/[^a-z0-9\s]/g, " ")
-    .split(/\s+/)
-    .filter(Boolean);
-
-function sharedRun(a: string, b: string): string | null {
-  const wa = words(a);
-  const wb = words(b);
-  const grams = new Set<string>();
-  for (let i = 0; i + RUN <= wb.length; i++) grams.add(wb.slice(i, i + RUN).join(" "));
-  for (let i = 0; i + RUN <= wa.length; i++) {
-    const g = wa.slice(i, i + RUN).join(" ");
-    if (grams.has(g)) return g;
-  }
-  return null;
-}
 
 async function erdosPageText(n: string): Promise<string | null> {
   try {

@@ -1,7 +1,11 @@
 id: erdos-859
 title: Erdős Problem 859
 statement:
-  informal: The density of the divisor sum set is asymptotically equivalent to $c_1 / \log(t)^{c_2}$.
+  informal: |-
+    For an integer $t \geq 1$ let $d_t$ be the density of the set of integers $n \in \mathbb{N}$ for which $t$ can be represented as a sum of distinct divisors of $n$. Do there exist constants $c_1, c_2 > 0$ such that
+    $$d_t \sim \frac{c_1}{(\log t)^{c_2}}$$
+    as $t \to \infty$? Erdős proved that the density $d_t$ exists for every $t$, and that there are constants $c_3, c_4 > 0$ with
+    $$\frac{1}{(\log t)^{c_3}} < d_t < \frac{1}{(\log t)^{c_4}}.$$
   formal:
     - language: lean4
       theorem: erdos_859.variants.erdos_upper_lower_bounds
@@ -40,7 +44,6 @@ provenance:
     source: google-deepmind/formal-conjectures
     fields:
       - title
-      - statement.informal
       - statement.formal
       - subject.msc
       - ids.external
@@ -58,3 +61,9 @@ provenance:
     license: Apache-2.0
     retrieved: 2026-07-31
     upstream_version: d031865128a7ddccd85e8099f0f818211cfc9a41
+  - url: https://www.erdosproblems.com/859
+    source: conjecturehub-curator
+    fields:
+      - statement.informal
+    license: CC0-1.0
+    retrieved: 2026-08-04

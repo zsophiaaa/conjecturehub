@@ -2,9 +2,9 @@ id: erdos-912
 title: Erdős Problem 912
 statement:
   informal: |-
-    Prove that there exists some $c>0$ such that
-    $$h(n) \sim c \left(\frac{n}{\log n}\right)^{1/2}$$
-    as $n\to \infty$.
+    Write $n! = \prod_i p_i^{k_i}$ for the factorisation of $n!$ into distinct primes, and let $h(n)$ be the number of distinct exponents $k_i$ that occur. Prove that there exists some $c>0$ such that
+    $$h(n) \sim c\left(\frac{n}{\log n}\right)^{1/2}$$
+    as $n\to\infty$. Erdős and Selfridge proved the order-of-magnitude statement $h(n) \asymp \left(\frac{n}{\log n}\right)^{1/2}$, and a heuristic of Tao based on the Cramér model for the primes suggests that the constant should be $c = \sqrt{2\pi} = 2.506\ldots$.
   formal:
     - language: lean4
       theorem: erdos_912.variants.selfridge
@@ -51,7 +51,6 @@ provenance:
     source: google-deepmind/formal-conjectures
     fields:
       - title
-      - statement.informal
       - statement.formal
       - subject.msc
       - ids.external
@@ -69,3 +68,9 @@ provenance:
     license: Apache-2.0
     retrieved: 2026-07-31
     upstream_version: d031865128a7ddccd85e8099f0f818211cfc9a41
+  - url: https://www.erdosproblems.com/912
+    source: conjecturehub-curator
+    fields:
+      - statement.informal
+    license: CC0-1.0
+    retrieved: 2026-08-04

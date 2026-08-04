@@ -1,7 +1,10 @@
 id: erdos-390
 title: Erdős Problem 390
 statement:
-  informal: Does there exists a constant `c` such that `f n - 2 * n ~ c * (n / log n)`?
+  informal: |-
+    For $n \geq 1$ let $f(n)$ be the least integer $m$ for which $n!$ can be written as a product of distinct integers all greater than $n$ with largest factor $m$; that is, the minimal $m$ such that $n! = a_1\cdots a_k$ with $n < a_1 < \cdots < a_k = m$. Is there a constant $c$ such that
+    $$f(n) - 2n \sim c\,\frac{n}{\log n}$$
+    as $n\to\infty$, and if so, what is its value? Erdős, Guy and Selfridge proved the corresponding order-of-magnitude statement $f(n) - 2n \asymp \frac{n}{\log n}$.
   formal:
     - language: lean4
       theorem: erdos_390.variants.theta
@@ -42,7 +45,6 @@ provenance:
     source: google-deepmind/formal-conjectures
     fields:
       - title
-      - statement.informal
       - statement.formal
       - subject.msc
       - ids.external
@@ -60,3 +62,9 @@ provenance:
     license: Apache-2.0
     retrieved: 2026-07-31
     upstream_version: d031865128a7ddccd85e8099f0f818211cfc9a41
+  - url: https://www.erdosproblems.com/390
+    source: conjecturehub-curator
+    fields:
+      - statement.informal
+    license: CC0-1.0
+    retrieved: 2026-08-04

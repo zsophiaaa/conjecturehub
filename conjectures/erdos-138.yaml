@@ -2,8 +2,9 @@ id: erdos-138
 title: Erdős Problem 138
 statement:
   informal: |-
-    In [Er80] Erdős asks whether
-    $$ \lim_{k \to \infty} (W(k))^{1/k} = \infty $$
+    For $k\geq 1$ let the van der Waerden number $W(k)$ be the least $N$ such that every $2$-colouring of $\{1,\ldots,N\}$ contains a monochromatic $k$-term arithmetic progression. Improve the bounds on $W(k)$; in particular, Erdős asked whether
+    $$\lim_{k\to\infty} W(k)^{1/k} = \infty,$$
+    and offered \$500 for a proof or disproof. The best known general lower bound is $W(k) \gg 2^k$, due to Kozik and Shabanov, together with Berlekamp's bound $W(p+1) \geq p2^p$ for primes $p$; the best known upper bound is Gowers' tower-type bound $W(k) \leq 2^{2^{2^{2^{2^{k+9}}}}}$, from his proof of Szemerédi's theorem.
   formal:
     - language: lean4
       theorem: monoAP_guarantee_set_nonempty
@@ -75,7 +76,6 @@ provenance:
     source: google-deepmind/formal-conjectures
     fields:
       - title
-      - statement.informal
       - statement.formal
       - subject.msc
       - ids.external
@@ -100,3 +100,9 @@ provenance:
     license: CC-BY-4.0
     retrieved: 2026-08-03
     upstream_version: 2026-08-03T16:16:11.083Z
+  - url: https://www.erdosproblems.com/138
+    source: conjecturehub-curator
+    fields:
+      - statement.informal
+    license: CC0-1.0
+    retrieved: 2026-08-04

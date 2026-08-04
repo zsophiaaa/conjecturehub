@@ -1,7 +1,9 @@
 id: erdos-961
 title: Erdős Problem 961
 statement:
-  informal: It is conjectured that $f(k) \ll (\log k)^O(1)$.
+  informal: |-
+    For $k \geq 1$ let $f(k)$ be the minimal $n$ such that every set of $n$ consecutive integers greater than $k$ contains an integer divisible by some prime $> k$; equivalently, $f(k)-1$ is the greatest possible length of a run of consecutive integers greater than $k$ all of whose prime factors are at most $k$. Estimate $f(k)$: it is believed that $f(k) \ll (\log k)^{O(1)}$, but this is far from what is known. Sylvester and Schur proved $f(k) \leq k$, Erdős proved $f(k) < 3\frac{k}{\log k}$, and Jutila and Ramachandra–Shorey proved
+    $$f(k) \ll \frac{\log\log\log k}{\log\log k}\cdot\frac{k}{\log k}.$$
   formal:
     - language: lean4
       theorem: erdos_961.sylvester_schur
@@ -61,7 +63,6 @@ provenance:
     source: google-deepmind/formal-conjectures
     fields:
       - title
-      - statement.informal
       - statement.formal
       - subject.msc
       - ids.external
@@ -79,3 +80,9 @@ provenance:
     license: Apache-2.0
     retrieved: 2026-07-31
     upstream_version: d031865128a7ddccd85e8099f0f818211cfc9a41
+  - url: https://www.erdosproblems.com/961
+    source: conjecturehub-curator
+    fields:
+      - statement.informal
+    license: CC0-1.0
+    retrieved: 2026-08-04

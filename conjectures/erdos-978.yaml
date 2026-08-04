@@ -1,9 +1,7 @@
 id: erdos-978
 title: Erdős Problem 978
 statement:
-  informal: |-
-    If $k>3$ (and $k \neq 2^l$), and for all primes $p$ there exists $n$ such that $p^{k-2}\nmid f(n)$,
-    then are there infinitely many $n$ for which $f(n)$ is $(k-2)$-power-free?
+  informal: Let $f \in \mathbb{Z}[x]$ be an irreducible polynomial with positive leading coefficient whose degree $k>2$ is not a power of $2$, and call an integer *$j$-power-free* if it is not divisible by the $j$-th power of any prime. Suppose $k>3$ and that for every prime $p$ there is some $n$ with $p^{k-2} \nmid f(n)$. Are there then infinitely many $n$ for which $f(n)$ is $(k-2)$-power-free? Erdős proved that infinitely many $n$ give $(k-1)$-power-free values, and Hooley showed that such $n$ in fact have positive density; for the harder $(k-2)$-power-free question Heath-Brown gave a positive answer for $k \geq 10$ and Browning extended this to $k \geq 9$, so the remaining open degrees are $k = 5, 6, 7$. Erdős also asked the concrete question, still open, of whether $n^4+2$ represents infinitely many squarefree numbers.
   formal:
     - language: lean4
       theorem: erdos_978.variants.sub_one
@@ -65,7 +63,6 @@ provenance:
     source: google-deepmind/formal-conjectures
     fields:
       - title
-      - statement.informal
       - statement.formal
       - subject.msc
       - ids.external
@@ -83,3 +80,9 @@ provenance:
     license: Apache-2.0
     retrieved: 2026-07-31
     upstream_version: d031865128a7ddccd85e8099f0f818211cfc9a41
+  - url: https://www.erdosproblems.com/978
+    source: conjecturehub-curator
+    fields:
+      - statement.informal
+    license: CC0-1.0
+    retrieved: 2026-08-04

@@ -1,10 +1,7 @@
 id: erdos-125
 title: Erdős Problem 125
 statement:
-  informal: |-
-    Case 3:
-    Does $A + B$ have positive upper and lower density that are equal?
-    This is the literal interpretation of "positive density" which was falsified.
+  informal: "Let $A = \\{\\sum_k \\epsilon_k 3^k : \\epsilon_k \\in \\{0,1\\}\\}$ be the set of non-negative integers whose base-$3$ representation uses only the digits $0$ and $1$, and let $B = \\{\\sum_k \\epsilon_k 4^k : \\epsilon_k \\in \\{0,1\\}\\}$ be the corresponding set for base $4$. Burr, Erdős, Graham and Li asked whether the sumset $A+B$ has positive density; in the form Erdős later recorded, does there exist a constant $c>0$ such that $\\lvert (A+B)\\cap[1,x]\\rvert \\geq cx$ for all sufficiently large $x$, i.e. does $A+B$ have positive lower density? The answer is no: an argument found by DeepMind, and verified in Lean, shows that the lower density of $A+B$ is $0$, so for every $\\epsilon>0$ there are infinitely many $x$ with $\\lvert (A+B)\\cap[1,x]\\rvert < \\epsilon x$. It remains open whether $A+B$ has positive upper density; Melfi showed $\\lvert (A+B)\\cap[1,x]\\rvert \\gg x^{0.965}$ and Hasler and Melfi improved this to $\\lvert (A+B)\\cap[1,x]\\rvert \\gg x^{0.9777}$."
   formal:
     - language: lean4
       theorem: erdos_125
@@ -92,7 +89,6 @@ provenance:
     source: google-deepmind/formal-conjectures
     fields:
       - title
-      - statement.informal
       - statement.formal
       - subject.msc
       - ids.external
@@ -117,3 +113,9 @@ provenance:
     license: CC-BY-4.0
     retrieved: 2026-08-03
     upstream_version: 2026-08-03T16:16:11.083Z
+  - url: https://www.erdosproblems.com/125
+    source: conjecturehub-curator
+    fields:
+      - statement.informal
+    license: CC0-1.0
+    retrieved: 2026-08-04
