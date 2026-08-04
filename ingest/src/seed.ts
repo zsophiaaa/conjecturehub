@@ -143,6 +143,11 @@ function buildFromFormalConjectures(registry: Registry, tag: string, files: fc.F
           title: `formal-conjectures marks ${primary.name} as research solved`,
         },
         reviewer: null,
+        // A solved variant settles a special case, not the problem. Filing
+        // that unscoped told readers the Lam-Litt conjecture was proved, on
+        // the strength of Eisenstein's 1852 theorem sitting in the same file
+        // as a solved variant. The schema has scope for exactly this.
+        scope: primary.isVariant ? `the variant formalised upstream as \`${primary.name}\`` : null,
         notes:
           "Imported from the upstream `research solved` category. The statement is formalized; the proof has not been machine-checked by ConjectureHub.",
       });

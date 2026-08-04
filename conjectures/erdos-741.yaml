@@ -2,13 +2,9 @@ id: erdos-741
 title: Erdős Problem 741
 statement:
   informal: |-
-    Let $A\subseteq \mathbb{N}$ be such that $A+A$ has positive density.
-    Can one always decompose $A=A_1\sqcup A_2$ such that $A_1+A_1$ and $A_2+A_2$
-    both have positive density?
+    Two questions of Burr and Erdős. First: if $A\subseteq\mathbb{N}$ is such that $A+A$ has positive upper density, can one always partition $A=A_1\sqcup A_2$ so that $A_1+A_1$ and $A_2+A_2$ both have positive upper density? Second: is there a basis $A$ of order $2$ (that is, a set with every natural number a sum of two elements of $A\cup\{0\}$) such that for every partition $A=A_1\sqcup A_2$ the sets $A_1+A_1$ and $A_2+A_2$ cannot both have bounded gaps?
 
-    Note that this is using a literal interpretation of "positive density".
-
-    This was disproved by the DeepMind prover agent.
+    Both have been answered affirmatively. DeepMind's prover agent proved the upper-density form of the first question and, independently with an internal OpenAI model, constructed a basis answering the second; DeepMind also gave a counterexample to the first question read with the strict density (i.e. requiring the density to exist and be positive). The lower-density form of the first question — if $A+A$ has positive lower density, can $A$ be split so that $A_1+A_1$ and $A_2+A_2$ both have positive lower density? — remains open.
   formal:
     - language: lean4
       theorem: erdos_741.parts.i
@@ -70,7 +66,6 @@ provenance:
     source: google-deepmind/formal-conjectures
     fields:
       - title
-      - statement.informal
       - statement.formal
       - subject.msc
       - ids.external
@@ -95,3 +90,9 @@ provenance:
     license: CC-BY-4.0
     retrieved: 2026-08-03
     upstream_version: 2026-08-03T16:16:11.083Z
+  - url: https://www.erdosproblems.com/741
+    source: conjecturehub-curator
+    fields:
+      - statement.informal
+    license: CC0-1.0
+    retrieved: 2026-08-04

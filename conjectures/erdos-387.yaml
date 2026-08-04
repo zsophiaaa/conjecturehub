@@ -2,10 +2,11 @@ id: erdos-387
 title: Erdős Problem 387
 statement:
   informal: |-
-    Is there an absolute constant $c > 0$ such that, for all $1 \leq k < n$, the binomial coefficient
-    $\binom{n}{k}$ has a divisor in $(cn, n]$?
+    Must $\binom{n}{k}$ always have a divisor in the interval $(cn,n]$ for some absolute constant $c>0$, uniformly over $1\leq k<n$?
 
-    Bui, Naprienko, Pratt, and Zaharescu [BNPZ26] answered this negatively.
+    Asked by Erdős and Graham; Guy's collection records that Erdős conjectured this should hold for every $c<1$ once $n$ is large. The answer is no, by work of Bui, Naprienko, Pratt, and Zaharescu [BNPZ26]: they construct infinitely many $\binom{n}{k}$, with $k\asymp\sqrt{\log\log n}$, having no divisor in
+    $$\Big(\tfrac{\log\log\log\log n}{\log\log\log n}\,n,\;n\Big].$$
+    On the other hand they prove that for large $k$ (say $\exp((\log n)^{2/3+\epsilon})\leq k\leq n/2$) the answer is yes for every $c<1$. It is easy to see that $\binom{n}{k}$ always has a divisor in $[n/k,n]$. Schinzel's related conjecture is still open: for all sufficiently large $k$ that are not prime powers, is there an $n$ for which $\binom{n}{k}$ has no divisor in $(n-k,n]$?
   formal:
     - language: lean4
       theorem: erdos_387
@@ -68,7 +69,6 @@ provenance:
     source: google-deepmind/formal-conjectures
     fields:
       - title
-      - statement.informal
       - statement.formal
       - subject.msc
       - ids.external
@@ -93,3 +93,9 @@ provenance:
     license: CC-BY-4.0
     retrieved: 2026-08-03
     upstream_version: 2026-08-03T16:16:11.083Z
+  - url: https://www.erdosproblems.com/387
+    source: conjecturehub-curator
+    fields:
+      - statement.informal
+    license: CC0-1.0
+    retrieved: 2026-08-04

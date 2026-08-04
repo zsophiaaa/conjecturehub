@@ -1,7 +1,12 @@
 id: open-quantum-problem-35-existence-of-absolutely-maximally-entangled-pure-states
 title: "Open Quantum Problem 35: existence of absolutely maximally entangled pure states"
 statement:
-  informal: "Open benchmark statement: does an $\\mathrm{AME}(7,6)$ state exist?"
+  informal: |-
+    A pure state of $n$ parties, each an individual $d$-level system, is a unit vector $|\psi\rangle \in (\mathbb{C}^d)^{\otimes n}$. It is called *absolutely maximally entangled*, written $\mathrm{AME}(n, d)$, if every reduced density matrix obtained by tracing out at least half of the parties is the maximally mixed state; equivalently, $|\psi\rangle$ is maximally entangled across every bipartition of the parties, and for a pure state it suffices to check the subsets of exactly $\lfloor n/2 \rfloor$ parties. Such states are also called perfect tensors.
+
+    Does an $\mathrm{AME}(7, 6)$ state exist, i.e. a pure state of seven six-level systems all of whose three-party marginals are maximally mixed?
+
+    Known: for qubits ($d = 2$) absolutely maximally entangled states exist exactly for $n = 2, 3, 5, 6$ — there is none for $n = 4$ (Higuchi and Sudbery, 2000) and none for $n \ge 7$ (Huber, Gühne and Siewert, 2017) — and an $\mathrm{AME}(4, 6)$ state was constructed by Rather, Burchardt, Bruzda, Rajchel-Mieldzioć, Lakshminarayan and Życzkowski (2022) using quantum Latin squares. Existence of an $\mathrm{AME}(n, d)$ state is equivalent to existence of a pure $((n, 1, \lfloor n/2 \rfloor + 1))_d$ quantum error-correcting code. The Open Quantum Problems page for this problem names $\mathrm{AME}(7, 6)$ and $\mathrm{AME}(8, 4)$ as among the smallest unresolved cases; the general problem is to determine all pairs $(n, d)$ for which an $\mathrm{AME}(n, d)$ state exists.
   formal:
     - language: lean4
       theorem: ame_2_exists
@@ -189,10 +194,15 @@ provenance:
     source: google-deepmind/formal-conjectures
     fields:
       - title
-      - statement.informal
       - statement.formal
       - subject.msc
       - ids.external
     license: Apache-2.0
     retrieved: 2026-07-31
     upstream_version: v4.32.0
+  - url: https://oqp.iqoqi.oeaw.ac.at/existence-of-absolutely-maximally-entangled-pure-states
+    source: conjecturehub-curator
+    fields:
+      - statement.informal
+    license: CC0-1.0
+    retrieved: 2026-08-04

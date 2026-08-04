@@ -1,7 +1,12 @@
 id: erdos-1084
 title: Erdős Problem 1084
 statement:
-  informal: It is easy to check that $f_1(n) = n - 1$.
+  informal: |-
+    For $d\geq 1$ let $f_d(n)$ be the largest number of pairs at distance exactly $1$ that can occur among $n$ points of $\mathbb{R}^d$ whose pairwise distances are all at least $1$ (the contact number problem). Estimate $f_d(n)$.
+
+    Known cases: $f_1(n)=n-1$, and Harborth [Ha74b] proved $f_2(n)=\lfloor 3n-\sqrt{12n-3}\rfloor$ for all $n\geq 2$, confirming Erdős's guess that the triangular lattice is optimal in the plane (in particular $f_2(3n^2+3n+1)=9n^2+3n$). In three dimensions Erdős claimed that $6n-c_1n^{2/3}<f_3(n)<6n-c_2n^{2/3}$ for some $c_1,c_2>0$, and Bezdek and Reid [BeRe13] proved $f_3(n)<6n-0.926\,n^{2/3}$ for all $n\geq 2$. In general only
+    $$(d-o(1))n\leq f_d(n)\leq 2^{O(d)}n$$
+    is known, the lower bound from an integer grid and the upper bound from the kissing number.
   formal:
     - language: lean4
       theorem: erdos_1084.variants.upper_d1
@@ -56,6 +61,7 @@ openness_basis:
 claims:
   - id: erdos-1084-fc-solved
     type: proved
+    scope: the one-dimensional case $f_1(n) = n - 1$
     evidence_tier: published
     attestation: secondary
     state: active
@@ -64,13 +70,12 @@ claims:
       title: formal-conjectures marks erdos_1084.variants.upper_d1 as research solved
       url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/1084.lean
       kind: dataset
-    notes: Imported from the upstream `research solved` category. The statement is formalized; the proof has not been machine-checked by ConjectureHub.
+    notes: "Imported from the upstream `research solved` category, which marks a variant rather than the problem. Scoped accordingly: this settles a special case and leaves the problem open. The statement is formalized; the proof has not been machine-checked by ConjectureHub."
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/1084.lean
     source: google-deepmind/formal-conjectures
     fields:
       - title
-      - statement.informal
       - statement.formal
       - subject.msc
       - ids.external
@@ -88,3 +93,9 @@ provenance:
     license: Apache-2.0
     retrieved: 2026-07-31
     upstream_version: d031865128a7ddccd85e8099f0f818211cfc9a41
+  - url: https://www.erdosproblems.com/1084
+    source: conjecturehub-curator
+    fields:
+      - statement.informal
+    license: CC0-1.0
+    retrieved: 2026-08-04

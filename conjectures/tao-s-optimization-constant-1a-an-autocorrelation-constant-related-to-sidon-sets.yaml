@@ -1,7 +1,14 @@
 id: tao-s-optimization-constant-1a-an-autocorrelation-constant-related-to-sidon-sets
 title: Tao's Optimization constant 1a / An autocorrelation constant related to Sidon sets
 statement:
-  informal: How can the upper bound be improved?
+  informal: |-
+    For a non-negative function $f : \mathbb{R} \to \mathbb{R}$ write $(f * f)(t) = \int_{\mathbb{R}} f(t - x) f(x)\,dx$ for its autoconvolution. Let $C_{1a}$ be the largest constant $C$ for which
+    $$\max_{-1/2 \le t \le 1/2} (f * f)(t) \;\ge\; C \left( \int_{-1/4}^{1/4} f(x)\,dx \right)^{2}$$
+    holds for every non-negative $f$. This constant arises in the study of suprema of autoconvolutions and is connected to estimates for Sidon sets in additive combinatorics.
+
+    What is the exact value of $C_{1a}$, and how far can the known upper and lower bounds on it be narrowed?
+
+    Known: $C_{1a} \le \pi/2$ (Schinzel and Schmidt, 2002), and $1.2748 \le C_{1a} \le 1.50992$ (Matolcsi and Vinuesa, *Improved bounds on the supremum of autoconvolutions*, J. Math. Anal. Appl. 372 (2010), 439–447). Both bounds have since been improved by a series of computer-assisted constructions and searches, tracked on Tao's page of optimization problems.
   formal:
     - language: lean4
       theorem: c1a_lower_bound
@@ -57,10 +64,15 @@ provenance:
     source: google-deepmind/formal-conjectures
     fields:
       - title
-      - statement.informal
       - statement.formal
       - subject.msc
       - ids.external
     license: Apache-2.0
     retrieved: 2026-07-31
     upstream_version: v4.32.0
+  - url: https://teorth.github.io/optimizationproblems/constants/1a.html
+    source: conjecturehub-curator
+    fields:
+      - statement.informal
+    license: CC0-1.0
+    retrieved: 2026-08-04

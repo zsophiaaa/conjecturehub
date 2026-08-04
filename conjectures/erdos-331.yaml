@@ -2,17 +2,9 @@ id: erdos-331
 title: Erdős Problem 331
 statement:
   informal: |-
-    Let $A,B\subseteq \mathbb{N}$ such that for all large $N$$$\lvert A\cap \{1,\ldots,N\}\rvert \gg
-    N^{1/2}$$and$$\lvert B\cap \{1,\ldots,N\}\rvert \gg N^{1/2}.$$
-    Is it true that there are infinitely many solutions to $a_1-a_2=b_1-b_2\neq 0$ with $a_1,a_2\in A$
-    and $b_1,b_2\in B$?
+    Let $A,B\subseteq\mathbb{N}$ be such that $|A\cap\{1,\ldots,N\}|\gg N^{1/2}$ and $|B\cap\{1,\ldots,N\}|\gg N^{1/2}$ for all large $N$. Must there be infinitely many solutions to $a_1-a_2=b_1-b_2\neq 0$ with $a_1,a_2\in A$ and $b_1,b_2\in B$?
 
-    Ruzsa has observed that there is a simple counterexample: take $A$ to be the set of numbers whose
-    binary representation has only non-zero digits in even places, and $B$ similarly but with non-zero
-    digits only in odd places. It is easy to see $A$ and $B$ both grow like $\gg N^{1/2}$ and yet for
-    any $n\geq 1$ there is exactly one solution to $n=a+b$ with $a\in A$ and $b\in B$.
-
-    This was formalized in Lean by van Doorn using Aristotle.
+    Asked by Erdős and Graham. The answer is no. Ruzsa observed the following counterexample: let $A$ be the integers whose binary expansion is supported on the even-indexed digits and $B$ those supported on the odd-indexed digits. Both counting functions grow like $\gg N^{1/2}$, yet every $n\geq 1$ has exactly one representation $n=a+b$ with $a\in A$, $b\in B$, so $a_1+b_2=a_2+b_1$ forces $a_1=a_2$. This has been verified in Lean. Ruzsa's suggested strengthening is open: does the conclusion hold if one assumes instead that $|A\cap\{1,\ldots,N\}|\sim c_AN^{1/2}$ and $|B\cap\{1,\ldots,N\}|\sim c_BN^{1/2}$ for constants $c_A,c_B>0$?
   formal:
     - language: lean4
       theorem: erdos_331
@@ -72,7 +64,6 @@ provenance:
     source: google-deepmind/formal-conjectures
     fields:
       - title
-      - statement.informal
       - statement.formal
       - subject.msc
       - ids.external
@@ -90,3 +81,9 @@ provenance:
     license: Apache-2.0
     retrieved: 2026-07-31
     upstream_version: d031865128a7ddccd85e8099f0f818211cfc9a41
+  - url: https://www.erdosproblems.com/331
+    source: conjecturehub-curator
+    fields:
+      - statement.informal
+    license: CC0-1.0
+    retrieved: 2026-08-04

@@ -2,11 +2,9 @@ id: erdos-42
 title: "Erdős Problem 42: Maximal Sidon Sets and Disjoint Difference Sets"
 statement:
   informal: |-
-    **Erdős Problem 42**: Let M ≥ 1 and N be sufficiently large in terms of M. Is it true that for every
-    maximal Sidon set `A ⊆ {1,…,N}` there is another Sidon set `B ⊆ {1,…,N}` of size M such that
-    `(A - A) ∩ (B - B) = {0}`?
+    A set of integers is a Sidon set if all of its pairwise sums $a+a'$ with $a\leq a'$ are distinct, equivalently if all of its non-zero differences are distinct. Fix $M\geq 1$ and take $N$ large compared with $M$. Given any Sidon set $A\subseteq\{1,\ldots,N\}$, must there be a further Sidon set $B\subseteq\{1,\ldots,N\}$ with $|B|=M$ and $(A-A)\cap(B-B)=\{0\}$?
 
-    This was proved for all $M$ by GPT 5.5 Pro (prompted by Sandhu), see discussion thread for more details.
+    (Only maximal $A$ need be considered, since a $B$ that works for a Sidon set also works for all of its subsets.) The answer is yes for every $M$, proved by GPT-5.5 Pro prompted by Sandhu, with the argument reported to produce such a $B$ of size $\gg\big(\frac{\log\log N}{\log\log\log N}\big)^{1/2}$; the cases $M\leq 3$ had been handled earlier by Sedov. Giving an explicit admissible threshold, i.e. a function $f$ such that $N\geq f(M)$ always suffices, appears to remain open.
   formal:
     - language: lean4
       theorem: erdos_42
@@ -137,7 +135,6 @@ provenance:
     source: google-deepmind/formal-conjectures
     fields:
       - title
-      - statement.informal
       - statement.formal
       - subject.msc
       - ids.external
@@ -169,3 +166,9 @@ provenance:
     license: CC-BY-4.0
     retrieved: 2026-08-03
     upstream_version: 2026-08-03T16:16:11.083Z
+  - url: https://www.erdosproblems.com/42
+    source: conjecturehub-curator
+    fields:
+      - statement.informal
+    license: CC0-1.0
+    retrieved: 2026-08-04

@@ -2,16 +2,9 @@ id: erdos-418
 title: Erdős Problem 418
 statement:
   informal: |-
-    Are there infinitely many integers not of the form $n - \phi(n)$?
+    Call a positive integer a non-cototient if it is not of the form $n-\phi(n)$ for any $n\geq 1$, where $\phi$ is Euler's totient function. Are there infinitely many non-cototients?
 
-    Asked by Erdős and Sierpiński. Numbers not of the form we call non-cototients.
-
-    Browkin and Schinzel [BrSc95] provided an affirmative answer to this question, proving that any
-    integer of the shape $2^{k}\cdot 509203$ for $k\geq 1$ is a non-cototient.
-
-    This is discussed in problem B36 of Guy's collection [Gu04].
-
-    This was formalized in Lean by Alexeev using Aristotle.
+    Asked by Erdős and Sierpiński. A slight strengthening of the Goldbach conjecture implies that every odd number is of the form $n-\phi(n)$, so the question is really about even numbers. The answer is yes: Browkin and Schinzel [BrSc95] proved that every integer $2^k\cdot 509203$ with $k\geq 1$ is a non-cototient, and this has been verified in Lean. It remains open whether the set of non-cototients has positive density. For comparison, Erdős [Er73b] showed that the integers not of the form $\sigma(n)-n$ (the untouchable numbers) have positive density; Banks and Luca [BaLu05] gave lower density $\geq 1/48$, improved to $0.06$ by Chen and Zhao [ChZh11], and Pollack and Pomerance [PoPo16] heuristically predict a density of about $0.17$.
   formal:
     - language: lean4
       theorem: erdos_418
@@ -80,7 +73,6 @@ provenance:
     source: google-deepmind/formal-conjectures
     fields:
       - title
-      - statement.informal
       - statement.formal
       - subject.msc
       - ids.external
@@ -98,3 +90,9 @@ provenance:
     license: Apache-2.0
     retrieved: 2026-07-31
     upstream_version: d031865128a7ddccd85e8099f0f818211cfc9a41
+  - url: https://www.erdosproblems.com/418
+    source: conjecturehub-curator
+    fields:
+      - statement.informal
+    license: CC0-1.0
+    retrieved: 2026-08-04

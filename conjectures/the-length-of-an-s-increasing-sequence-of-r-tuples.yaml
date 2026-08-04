@@ -1,7 +1,12 @@
 id: the-length-of-an-s-increasing-sequence-of-r-tuples
 title: The length of an $s$-increasing sequence of $r$-tuples
 statement:
-  informal: $F(n) \leq n^{3/2}$.
+  informal: |-
+    Given two triples of integers $a = (a_1, a_2, a_3)$ and $b = (b_1, b_2, b_3)$, say that $a$ is *$2$-less than* $b$, written $a <_2 b$, if $a_i < b_i$ for at least two of the three coordinates $i$; this relation is not transitive. A sequence $a^1, \dots, a^m$ of triples is *$2$-increasing* if $a^r <_2 a^s$ whenever $r < s$, and $F(n)$ denotes the greatest length of a $2$-increasing sequence all of whose coordinates lie in $\{1, 2, \dots, n\}$. Determining the growth rate of $F(n)$ is a problem of Po-Shen Loh.
+
+    Is it true that $F(n) \le n^{3/2}$ for every $n$? This is Conjecture 1.8 of Gowers and Long.
+
+    Known: $F(n) \le n^2$ by the pigeonhole principle, improved by Loh to $F(n) \le n^2 / \exp(\Omega(\log^{*} n))$ using the triangle removal lemma. In the other direction $F(n) \ge n^{3/2}$ whenever $n$ is a perfect square, so the conjectured bound would be sharp; moreover, if $F(n) = n^{\alpha}$ for even a single $n > 1$, then $F(m) \ge m^{\alpha}$ for arbitrarily large $m$, so any improvement on the $n^{3/2}$ construction at one value of $n$ would refute the conjecture asymptotically.
   formal:
     - language: lean4
       theorem: maximalLength_le
@@ -53,10 +58,15 @@ provenance:
     source: google-deepmind/formal-conjectures
     fields:
       - title
-      - statement.informal
       - statement.formal
       - subject.msc
       - ids.external
     license: Apache-2.0
     retrieved: 2026-07-31
     upstream_version: v4.32.0
+  - url: https://arxiv.org/abs/1609.08688
+    source: conjecturehub-curator
+    fields:
+      - statement.informal
+    license: CC0-1.0
+    retrieved: 2026-08-04

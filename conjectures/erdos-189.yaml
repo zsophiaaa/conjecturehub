@@ -2,19 +2,9 @@ id: erdos-189
 title: Erdős Problem 189
 statement:
   informal: |-
-    If $\mathbb{R}^2$ is finitely coloured then must there exist some colour class which contains the
-    vertices of a rectangle of every area?
+    If $\mathbb{R}^2$ is coloured with finitely many colours, must some colour class contain the four vertices of a rectangle of every positive area?
 
-    Graham, "On Partitions of 𝔼ⁿ", Journal of Combinatorial Theory, Series A 28, 89-91 (1980).
-    (See "Concluding Remarks" on page 96.)
-
-    Solved (with answer `False`, as formalised below) in:
-    Vjekoslav Kovač, "Coloring and density theorems for configurations of a given volume", 2023
-    https://arxiv.org/abs/2309.09973
-    In fact, Kovač's colouring is even Jordan measurable (the topological boundary of each
-    monochromatic region is Lebesgue measurable and has measure zero).
-
-    This was formalized in Lean by Alexeev and Kovac using Aristotle.
+    Asked by Erdős and Graham. The answer is no: Kovač [Ko23] exhibited an explicit $25$-colouring of the plane in which no class contains all four corners of a rectangle of area $1$ (his colouring is even Jordan measurable), and this disproof has been verified in Lean. By contrast, Graham [Gr80] showed that the corresponding statement for right-angled triangles is true, and it is false for rhombuses. The analogous question for parallelograms of every area remains open.
   formal:
     - language: lean4
       theorem: erdos_189
@@ -81,7 +71,6 @@ provenance:
     source: google-deepmind/formal-conjectures
     fields:
       - title
-      - statement.informal
       - statement.formal
       - subject.msc
       - ids.external
@@ -99,3 +88,9 @@ provenance:
     license: Apache-2.0
     retrieved: 2026-07-31
     upstream_version: d031865128a7ddccd85e8099f0f818211cfc9a41
+  - url: https://www.erdosproblems.com/189
+    source: conjecturehub-curator
+    fields:
+      - statement.informal
+    license: CC0-1.0
+    retrieved: 2026-08-04

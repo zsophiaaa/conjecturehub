@@ -1,7 +1,12 @@
 id: erdos-1085
 title: Erdős Problem 1085
 statement:
-  informal: Erdős showed $f_2(n) > n^{1+c/\log\log n}$ for some $c > 0$.
+  informal: |-
+    For $d\geq 1$ let $f_d(n)$ be the largest number of pairs at distance exactly $1$ that can occur among $n$ points of $\mathbb{R}^d$ (with no separation assumption on the points). Estimate $f_d(n)$.
+
+    The difficult cases are $d=2$ and $d=3$. For $d=2$ this is the Erdős unit distance problem, where the best known upper bound is $f_2(n)\ll n^{4/3}$, due to Spencer, Szemerédi, and Trotter [SST84], while Erdős's classical lower bound is $f_2(n)>n^{1+c/\log\log n}$ for some $c>0$. For $d=3$ it is known that
+    $$n^{4/3}\log\log n\ll f_3(n)\ll n^{3/2}\beta(n)$$
+    for a very slowly growing function $\beta$, the lower bound due to Erdős [Er60b] and the upper bound to Clarkson, Edelsbrunner, Guibas, Sharir, and Welzl [CEGSW90]. For $d\geq 4$ the answer is quadratic: with $p=\lfloor d/2\rfloor$, a construction of Lenz gives $f_d(n)\geq\frac{p-1}{2p}n^2-O(1)$ and Erdős deduced the matching upper bound $f_d(n)\leq(\frac{p-1}{2p}+o(1))n^2$ from the Erdős–Stone theorem; the exact value is known for $d=4$ (Brass [Br97]) and for all even $d\geq 6$ (Swanepoel [Sw09]).
   formal:
     - language: lean4
       theorem: erdos_1085.variants.lower_d2
@@ -68,6 +73,7 @@ openness_basis:
 claims:
   - id: erdos-1085-fc-solved
     type: proved
+    scope: Erdős's planar lower bound $f_2(n) > n^{1+c/\log\log n}$
     evidence_tier: published
     attestation: secondary
     state: active
@@ -76,13 +82,12 @@ claims:
       title: formal-conjectures marks erdos_1085.variants.lower_d2 as research solved
       url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/1085.lean
       kind: dataset
-    notes: Imported from the upstream `research solved` category. The statement is formalized; the proof has not been machine-checked by ConjectureHub.
+    notes: "Imported from the upstream `research solved` category, which marks a variant rather than the problem. Scoped accordingly: this settles a special case and leaves the problem open. The statement is formalized; the proof has not been machine-checked by ConjectureHub."
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/1085.lean
     source: google-deepmind/formal-conjectures
     fields:
       - title
-      - statement.informal
       - statement.formal
       - subject.msc
       - ids.external
@@ -100,3 +105,9 @@ provenance:
     license: Apache-2.0
     retrieved: 2026-07-31
     upstream_version: d031865128a7ddccd85e8099f0f818211cfc9a41
+  - url: https://www.erdosproblems.com/1085
+    source: conjecturehub-curator
+    fields:
+      - statement.informal
+    license: CC0-1.0
+    retrieved: 2026-08-04

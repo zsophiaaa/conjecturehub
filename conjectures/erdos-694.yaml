@@ -2,21 +2,13 @@ id: erdos-694
 title: Erdős Problem 694
 statement:
   informal: |-
-    Let $f_\max(n)$ be the largest $m$ such that $\phi(m) = n$, and
-    $f_\min(n)$ be the smallest such $m$, where $\phi$ is Euler's
-    totient function. Investigate
-    $$
-     \max_{n\leq x}\frac{f_\max(n)}{f_\min(n)}.
-    $$
+    For an integer $n$ in the image of Euler's totient function $\phi$, let $f_{\max}(n)$ be the largest and $f_{\min}(n)$ the smallest $m$ with $\phi(m)=n$. Estimate
+    $$\max_{n\leq x}\frac{f_{\max}(n)}{f_{\min}(n)},$$
+    where the maximum is over those $n\leq x$ that are of the form $\phi(m)$.
 
-    GPT-5.5 Pro (prompted by Price) has proved (see also the comments for a summary) that
-    $$
-    \max_{n\leq x}\frac{f_{\max}(n)}{f_{\min}(n)}=(e^\gamma+o(1))\log\log x.
-    $$
-
-    A Lean formalisation of the reduction exists, conditional on Mertens' product theorem and
-    Linnik's theorem; see the
-    [formal proof](https://github.com/Shashi456/erdos-formalizations/blob/main/Erdos/P694/Proof.lean).
+    The answer, proved by GPT-5.5 Pro prompted by Price, is
+    $$\max_{n\leq x}\frac{f_{\max}(n)}{f_{\min}(n)}=(e^\gamma+o(1))\log\log x,$$
+    where $\gamma$ is the Euler–Mascheroni constant. The ratio equals $1$ exactly when $n$ has a unique totient preimage; whether any such $n$ exists is Carmichael's question and is still open, though Erdős showed that if one such $n$ exists then there are infinitely many.
   formal:
     - language: lean4
       theorem: erdos_694
@@ -140,7 +132,6 @@ provenance:
     source: google-deepmind/formal-conjectures
     fields:
       - title
-      - statement.informal
       - statement.formal
       - subject.msc
       - ids.external
@@ -172,3 +163,9 @@ provenance:
     license: CC-BY-4.0
     retrieved: 2026-08-03
     upstream_version: 2026-08-03T16:16:11.083Z
+  - url: https://www.erdosproblems.com/694
+    source: conjecturehub-curator
+    fields:
+      - statement.informal
+    license: CC0-1.0
+    retrieved: 2026-08-04

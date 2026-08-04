@@ -1,7 +1,12 @@
 id: erdos-1095
 title: Erdős Problem 1095
 statement:
-  informal: The current record is $g(k) \gg \exp(c(\log k)^2)$ for some $c>0$, due to Konyagin [Ko99b]. -
+  informal: |-
+    For $k\geq 1$ let $g(k)$ be the least integer $n>k+1$ such that every prime factor of $\binom{n}{k}$ is greater than $k$ (the Erdős–Selfridge function). Estimate $g(k)$.
+
+    Ecklund, Erdős, and Selfridge [EES74] proved $k^{1+c}<g(k)\leq\exp((1+o(1))k)$ for some $c>0$, and conjectured that $g(k)<[1,\ldots,k]$, the least common multiple of the integers up to $k$, for all large $k$, as well as $\limsup_k g(k+1)/g(k)=\infty$ and $\liminf_k g(k+1)/g(k)=0$. Konyagin [Ko99b] holds the strongest lower bound to date,
+    $g(k)\gg\exp\!\big(c(\log k)^2\big).$
+    A far larger growth rate, $g(k)\geq\exp(ck/\log k)$, was anticipated in [ELS93], and Sorenson, Sorenson, and Webster [SSW20] give heuristic evidence that $\log g(k)\asymp k/\log k$.
   formal:
     - language: lean4
       theorem: erdos_1095.variants.lower_solved
@@ -50,6 +55,7 @@ openness_basis:
 claims:
   - id: erdos-1095-fc-solved
     type: proved
+    scope: Konyagin's lower bound $g(k) \gg \exp(c(\log k)^2)$
     evidence_tier: published
     attestation: secondary
     state: active
@@ -58,13 +64,12 @@ claims:
       title: formal-conjectures marks erdos_1095.variants.lower_solved as research solved
       url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/1095.lean
       kind: dataset
-    notes: Imported from the upstream `research solved` category. The statement is formalized; the proof has not been machine-checked by ConjectureHub.
+    notes: "Imported from the upstream `research solved` category, which marks a variant rather than the problem. Scoped accordingly: this settles a special case and leaves the problem open. The statement is formalized; the proof has not been machine-checked by ConjectureHub."
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/1095.lean
     source: google-deepmind/formal-conjectures
     fields:
       - title
-      - statement.informal
       - statement.formal
       - subject.msc
       - ids.external
@@ -82,3 +87,9 @@ provenance:
     license: Apache-2.0
     retrieved: 2026-07-31
     upstream_version: d031865128a7ddccd85e8099f0f818211cfc9a41
+  - url: https://www.erdosproblems.com/1095
+    source: conjecturehub-curator
+    fields:
+      - statement.informal
+    license: CC0-1.0
+    retrieved: 2026-08-04

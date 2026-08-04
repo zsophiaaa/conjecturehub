@@ -2,8 +2,13 @@ id: oeis-357513
 title: general_supercongruence
 statement:
   informal: |-
-    We conjecture that $u(p-1) == 0 (mod p^4)$ for all primes $p$,
-    with a finite number of exceptions that depend on $m$.
+    For an integer $m \ge 0$ and $n \ge 1$, let $u_m(n)$ be the numerator, in lowest terms, of
+    $$\sum_{k=1}^{n} \frac{1}{k^{2m+1}} \binom{n}{k}^{2} \binom{n+k}{k}^{2}.$$
+    Peter Bala conjectured that for each fixed $m$ the supercongruence
+    $$u_m(p-1) \equiv 0 \pmod{p^4}$$
+    holds for all primes $p$ with only finitely many exceptions, the exceptional set depending on $m$. The case $m = 1$ is the OEIS sequence A357513, where the conjecture read: $u_1(p-1) \equiv 0 \pmod{p^4}$ for every prime $p \ge 3$ except $p = 7$ (checked up to $p = 499$).
+
+    Known: both statements have since been proved. The case $m = 1$ was settled by AlphaProof (reported by Moritz Firsching, January 2026), and the general-$m$ conjecture by Ondrej Kutal (July 2026), who showed that the exceptional primes are exactly those $p$ for which $p - 1$ divides $2m + 4$ and $p$ does not divide $2m + 7$; in particular $p = 2$ is always exceptional, every exceptional prime satisfies $p \le 2m + 5$, and for $m = 1$ the exceptions are $p = 2$ and $p = 7$. For comparison, the Apéry numbers $A(n) = \sum_{k=0}^{n} \binom{n}{k}^2 \binom{n+k}{k}^2$ satisfy $A(p-1) \equiv 1 \pmod{p^3}$ for all primes $p \ge 5$.
   formal:
     - language: lean4
       theorem: a357513_supercongruence
@@ -29,16 +34,35 @@ openness_basis:
   meaning: no_published_solution_known_to_curator
   asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: oeis-357513-kutal-2026
+    asserted_on: 2026-07-18
+    type: proved
+    evidence_tier: community_accepted
+    attestation: secondary
+    state: active
+    recorded_on: 2026-08-03
+    source:
+      title: OEIS A357513 records the conjecture as proved
+      url: https://oeis.org/A357513
+      kind: dataset
+    authors:
+      - Ondrej Kutal
+    notes: The entry now reads "This conjecture is now proved; see Links." The $m = 1$ case was settled by AlphaProof, reported by Moritz Firsching in January 2026, and the general $m$ statement by Ondrej Kutal in July 2026 with a Lean formalisation. The exceptional primes are exactly those $p$ with $p - 1 \mid 2m + 4$ and $p \nmid 2m + 7$, all at most $2m + 5$. Relayed from the OEIS entry; ConjectureHub has not checked either proof.
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/OEIS/357513.lean
     source: google-deepmind/formal-conjectures
     fields:
       - title
-      - statement.informal
       - statement.formal
       - subject.msc
       - ids.external
     license: Apache-2.0
     retrieved: 2026-07-31
     upstream_version: v4.32.0
+  - url: https://oeis.org/A357513
+    source: conjecturehub-curator
+    fields:
+      - statement.informal
+    license: CC0-1.0
+    retrieved: 2026-08-04

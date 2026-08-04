@@ -76,7 +76,7 @@ for (const entry of entries) {
     if (page) {
       const run = sharedRun(entry.informal, page);
       if (run) {
-        skipped.push(`${entry.id}: shares a ${RUN}-word run with erdosproblems.com — "${run}"`);
+        skipped.push(`${entry.id}: shares a run with erdosproblems.com — "${run}"`);
         continue;
       }
     } else {

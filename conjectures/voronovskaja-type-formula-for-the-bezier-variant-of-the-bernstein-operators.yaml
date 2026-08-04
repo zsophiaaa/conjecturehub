@@ -2,14 +2,18 @@ id: voronovskaja-type-formula-for-the-bezier-variant-of-the-bernstein-operators
 title: Voronovskaja-type Formula for the Bezier Variant of the Bernstein Operators
 statement:
   informal: |-
-    Conjecture: Voronovskaja-type formula for Bézier-Bernstein operators
-    with shape parameter $\alpha > 0$, $\alpha \neq 1$.
+    For $n \in \mathbb{N}$ and a shape parameter $\alpha > 0$, the Bézier variant of the Bernstein operators, introduced by Chang in 1983, acts on functions $f : [0, 1] \to \mathbb{R}$ by
+    $$(B_{n,\alpha} f)(x) = \sum_{k=0}^{n} f\!\left(\frac{k}{n}\right) \left( J_{n,k}(x)^{\alpha} - J_{n,k+1}(x)^{\alpha} \right),
+    \qquad J_{n,k}(x) = \sum_{j=k}^{n} \binom{n}{j} x^{j} (1 - x)^{n-j},$$
+    with the convention $J_{n,n+1} \equiv 0$. These are positive linear operators preserving constants, and for $\alpha = 1$ they reduce to the classical Bernstein polynomials $B_n$. Voronovskaja's classical asymptotic formula states that
+    $$\lim_{n \to \infty} n \left( (B_n f)(x) - f(x) \right) = \tfrac{1}{2} x (1 - x) f''(x)$$
+    for every bounded $f$ that is twice differentiable at $x \in [0, 1]$.
 
-    The source asks for sufficiently smooth functions. This concrete version uses
-    `ContDiffOn ℝ 2 f I` as a readable baseline regularity assumption; since the
-    domain is the compact interval $[0,1]$, this also explains why no separate
-    boundedness assumption is included here. The variants below record the unknown
-    smoothness threshold more explicitly.
+    Abel's problem asks for the analogue when $\alpha \neq 1$: numerical experiments suggest that for $\alpha > 0$ with $\alpha \neq 1$ the limit
+    $$\lim_{n \to \infty} \sqrt{n} \left( (B_{n,\alpha} f)(x) - f(x) \right)$$
+    exists, at least for sufficiently smooth $f$. Prove that this limit exists for a suitable class of functions $f$, and find an explicit expression for it in terms of $f$, $x$ and $\alpha$.
+
+    Known: for $\alpha = 1$ the limit exists and equals $0$ whenever $f$ satisfies the hypotheses of Voronovskaja's theorem, since the difference is then of order $1/n$. The rate of uniform convergence of $B_{n,\alpha} f$ to $f$ was estimated by Li and Gong (1985), an inverse theorem for $\alpha \ge 1$ was obtained by Liu (1986), and Zeng and Piriou studied functions of bounded variation; but according to Abel nothing is known about the asymptotic behaviour itself for $\alpha \neq 1$.
   formal:
     - language: lean4
       theorem: voronovskaja_theorem.bernstein_operators
@@ -61,10 +65,15 @@ provenance:
     source: google-deepmind/formal-conjectures
     fields:
       - title
-      - statement.informal
       - statement.formal
       - subject.msc
       - ids.external
     license: Apache-2.0
     retrieved: 2026-07-31
     upstream_version: v4.32.0
+  - url: https://www.math.bas.bg/mathmod/Proceedings_CTF/CTF-2010/files_CTF-2010/Open_problems.pdf
+    source: conjecturehub-curator
+    fields:
+      - statement.informal
+    license: CC0-1.0
+    retrieved: 2026-08-04

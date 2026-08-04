@@ -2,8 +2,13 @@ id: monochromatic-quantum-graphs-inherited-vertex-colorings
 title: Monochromatic quantum graphs (inherited vertex colorings)
 statement:
   informal: |-
-    For $N = 6$ and $D = 3$, does there exist no solution to the monochromatic quantum graph
-    equation system over $\mathbb{C}$?
+    A *bi-coloured weighted graph* on $n$ vertices with $d$ colours is an undirected multigraph with a fixed vertex ordering $v_1, \dots, v_n$ in which every edge $e$ carries a complex weight $w_e$ and an ordered pair of colours $(c_1(e), c_2(e))$ drawn from a palette of $d$ colours: if $e$ joins $v_i$ to $v_j$ with $i < j$, then $e$ is coloured $c_1(e)$ at $v_i$ and $c_2(e)$ at $v_j$. Every perfect matching $M$ induces a colouring of the vertices, its *inherited vertex colouring*, in which each vertex $v$ receives the colour of its unique matching edge at $v$; the weight of a vertex colouring $c$ is
+    $$w(c) = \sum_{M} \prod_{e \in M} w_e,$$
+    the sum being over all perfect matchings whose inherited vertex colouring is $c$. Call the graph *monochromatic* if each of the $d$ constant vertex colourings has weight $1$ while every non-constant vertex colouring has weight $0$.
+
+    The question is whether no monochromatic bi-coloured weighted graph exists on $n = 6$ vertices with $d = 3$ colours and complex edge weights.
+
+    Known: monochromatic examples exist for $n = 4$ with up to $3$ colours (from $K_4$) and for every even $n$ with $2$ colours (from the cycle $C_n$), and no others are known; Ilya Bogdanov showed these are the only ones when all weights are positive reals. Krenn and Gu conjecture that no monochromatic graph exists on more than $4$ vertices with $3$ or more colours; Chandran, Gajjala and Illickan (MFCS 2024) proved this whenever the graph has vertex connectivity at most $2$ or maximum degree at most $3$, and showed that a minimal counterexample must be $4$-connected. The problem originates in the correspondence, due to Krenn, Gu and Zeilinger, between such graphs and linear-optics experiments producing high-dimensional multipartite GHZ states.
   formal:
     - language: lean4
       theorem: eqSystem4_no_solution_nnreal_ge4
@@ -301,10 +306,15 @@ provenance:
     source: google-deepmind/formal-conjectures
     fields:
       - title
-      - statement.informal
       - statement.formal
       - subject.msc
       - ids.external
     license: Apache-2.0
     retrieved: 2026-07-31
     upstream_version: v4.32.0
+  - url: https://mathoverflow.net/questions/311325
+    source: conjecturehub-curator
+    fields:
+      - statement.informal
+    license: CC0-1.0
+    retrieved: 2026-08-04

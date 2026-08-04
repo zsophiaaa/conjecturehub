@@ -55,6 +55,7 @@ openness_basis:
 claims:
   - id: lam-litt-conjecture-fc-solved
     type: proved
+    scope: Eisenstein's 1852 theorem, which is the converse of the conjecture
     evidence_tier: published
     attestation: secondary
     state: active
@@ -63,7 +64,7 @@ claims:
       title: formal-conjectures marks lam_litt.variants.eisenstein as research solved
       url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/LittProblems/1.lean
       kind: dataset
-    notes: Imported from the upstream `research solved` category. The statement is formalized; the proof has not been machine-checked by ConjectureHub.
+    notes: "Imported from the upstream `research solved` category, which marks a variant rather than the problem. Scoped accordingly: this settles a special case and leaves the problem open. The statement is formalized; the proof has not been machine-checked by ConjectureHub."
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/LittProblems/1.lean
     source: google-deepmind/formal-conjectures

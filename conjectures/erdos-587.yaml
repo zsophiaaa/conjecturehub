@@ -31,6 +31,7 @@ openness_basis:
 claims:
   - id: erdos-587-fc-solved
     type: proved
+    scope: the upper bound $\ll N^{1/3}(\log N)^{O(1)}$ of Nguyen and Vu
     evidence_tier: published
     attestation: secondary
     state: active
@@ -39,7 +40,7 @@ claims:
       title: formal-conjectures marks erdos_587.variants.nguyen_vu as research solved
       url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/587.lean
       kind: dataset
-    notes: Imported from the upstream `research solved` category. The statement is formalized; the proof has not been machine-checked by ConjectureHub.
+    notes: "Imported from the upstream `research solved` category, which marks a variant rather than the problem. Scoped accordingly: this settles a special case and leaves the problem open. The statement is formalized; the proof has not been machine-checked by ConjectureHub."
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/587.lean
     source: google-deepmind/formal-conjectures

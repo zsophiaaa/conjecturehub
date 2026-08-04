@@ -2,8 +2,10 @@ id: erdos-516
 title: Erdős Problem 516
 statement:
   informal: |-
-    Let `f = ∑ aₖzⁿₖ` be an entire function of finite order such that `nₖ / k → ∞`.
-    Then `limsup (fun r => ratio r f) atTop = 1`. This is proved in [Fu63].
+    Let $f(z)=\sum_{k\geq 1}a_kz^{n_k}$ be an entire function of finite order whose exponents satisfy $n_k/k\to\infty$ (Fabry gaps), and put $M(r)=\max_{|z|=r}|f(z)|$ and $m(r)=\min_{|z|=r}|f(z)|$. Is it true that
+    $$\limsup_{r\to\infty}\frac{\log m(r)}{\log M(r)}=1?$$
+
+    This is a problem of Pólya [Po29], recorded by Erdős. The answer is yes: Fuchs [Fu63] proved it, and in fact showed that for every $\epsilon>0$ the inequality $\log m(r)>(1-\epsilon)\log M(r)$ holds outside a set of $r$ of logarithmic density $0$. Earlier partial results are due to Wiman [Wi14] (assuming $(n_{k+1}-n_k)^2>n_k$) and Erdős and Macintyre [ErMa54] (assuming $\sum_{k\geq 2}1/(n_{k+1}-n_k)<\infty$). The following remains open: Kövari [Ko65] proved the same conclusion for an arbitrary entire function, with no finite-order hypothesis, under the stronger gap condition $n_k>k(\log k)^{2+c}$ for some $c>0$, and it is conjectured that this can be weakened to $\sum_k 1/n_k<\infty$ — which would be best possible, since Macintyre [Ma52] showed that whenever $\sum_k 1/n_k=\infty$ there is a corresponding entire function tending to zero along the positive real axis.
   formal:
     - language: lean4
       theorem: erdos_516
@@ -57,7 +59,6 @@ provenance:
     source: google-deepmind/formal-conjectures
     fields:
       - title
-      - statement.informal
       - statement.formal
       - subject.msc
       - ids.external
@@ -75,3 +76,9 @@ provenance:
     license: Apache-2.0
     retrieved: 2026-07-31
     upstream_version: d031865128a7ddccd85e8099f0f818211cfc9a41
+  - url: https://www.erdosproblems.com/516
+    source: conjecturehub-curator
+    fields:
+      - statement.informal
+    license: CC0-1.0
+    retrieved: 2026-08-04

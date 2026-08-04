@@ -2,12 +2,11 @@ id: erdos-897
 title: Erdős Problem 897
 statement:
   informal: |-
-    Let $f(n)$ be an additive function (so that $f(ab)=f(a)+f(b)$
-    if $(a,b)=1$ such that $\limsup_{p,k} f(p^k) / \log(p^k) = ∞$.
-    Is it true that $\limsup_n (f(n+1)−f(n))/ \log n = ∞$?
+    Let $f:\mathbb{N}\to\mathbb{R}$ be additive, so that $f(ab)=f(a)+f(b)$ whenever $(a,b)=1$, and suppose that
+    $$\limsup_{p^k}\frac{f(p^k)}{\log(p^k)}=\infty,$$
+    the limsup being over prime powers. Is it true that $\limsup_n\frac{f(n+1)-f(n)}{\log n}=\infty$, or perhaps even that $\limsup_n\frac{f(n+1)}{f(n)}=\infty$?
 
-    The answer is no; this follows from a construction of Wirsing [Wi81], rediscovered by
-    Archivara [Ar25] and formalised in Lean by Aristotle [ArWu25].
+    A conjecture of Erdős and Wirsing. The answer to both questions is no, and in fact the first limsup can be $0$: it suffices to take $f(q)=g(q)\log q$ at every prime power $q$ for a sufficiently slowly growing function $g$. This construction appeared in a paper of Wirsing [Wi81], who credits the observation to Erdős, and it has been verified in Lean. Two variants Erdős suggested for simplicity are still open, since the counterexample satisfies neither: the same questions under the additional assumption that $f(p^k)=f(p)$ for all prime powers, or that $f(p^k)=kf(p)$ for all prime powers. As background, Wirsing [Wi70] proved that if $|f(n+1)-f(n)|\leq C$ for all $n$ then $f(n)=c\log n+O(1)$ for some constant $c$.
   formal:
     - language: lean4
       theorem: erdos_897.parts.i
@@ -90,7 +89,6 @@ provenance:
     source: google-deepmind/formal-conjectures
     fields:
       - title
-      - statement.informal
       - statement.formal
       - subject.msc
       - ids.external
@@ -115,3 +113,9 @@ provenance:
     license: CC-BY-4.0
     retrieved: 2026-08-03
     upstream_version: 2026-08-03T16:16:11.083Z
+  - url: https://www.erdosproblems.com/897
+    source: conjecturehub-curator
+    fields:
+      - statement.informal
+    license: CC0-1.0
+    retrieved: 2026-08-04

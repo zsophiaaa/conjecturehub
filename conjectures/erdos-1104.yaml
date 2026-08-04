@@ -45,6 +45,7 @@ openness_basis:
 claims:
   - id: erdos-1104-fc-solved
     type: proved
+    scope: the lower bound $c_1\sqrt{n/\log n} \le f(n)$ of Hefty, Horn, King and Pfender
     evidence_tier: published
     attestation: secondary
     state: active
@@ -53,7 +54,7 @@ claims:
       title: formal-conjectures marks erdos_1104.variants.lower as research solved
       url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/1104.lean
       kind: dataset
-    notes: Imported from the upstream `research solved` category. The statement is formalized; the proof has not been machine-checked by ConjectureHub.
+    notes: "Imported from the upstream `research solved` category, which marks a variant rather than the problem. Scoped accordingly: this settles a special case and leaves the problem open. The statement is formalized; the proof has not been machine-checked by ConjectureHub."
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/1104.lean
     source: google-deepmind/formal-conjectures

@@ -2,19 +2,11 @@ id: erdos-655
 title: Erdős Problem 655
 statement:
   informal: |-
-    Let $x_1,\ldots,x_n\in \mathbb{R}^2$ be such that no circle whose centre is one
-    of the $x_i$ contains three other points. Are there at least
+    Let $x_1,\ldots,x_n\in\mathbb{R}^2$ be points such that no circle centred at one of the $x_i$ passes through three of the others. Must the $x_i$ determine at least
     $$(1+c)\frac{n}{2}$$
-    distinct distances determined between the $x_i$, for some constant $c>0$ and
-    all $n$ sufficiently large?
+    distinct pairwise distances, for some absolute constant $c>0$ and all sufficiently large $n$?
 
-    The answer is **no**: as Zach Hunter observed, the regular `n`-gon (`n` points equally spaced on a
-    circle) is valid and determines only `⌊n/2⌋ < (1+c)n/2` distinct distances, for every `c > 0`.
-    (In the spirit of related conjectures of Erdős and others, presumably some kind of assumption that
-    the points are in general position was intended; see `erdos_655.variants.general_position`.)
-
-    The disproof — the regular `n`-gon construction together with its supporting lemmas — is formalised
-    at the linked commit.
+    A problem of Erdős and Pach. The hypothesis immediately gives at least $\frac{n-1}{2}$ distinct distances from each individual point. As literally stated the answer is no: Hunter observed that $n$ points equally spaced on a circle satisfy the hypothesis yet determine only $\lfloor n/2\rfloor$ distinct distances. Presumably some general position hypothesis was intended (for instance no three of the points collinear and no four concyclic), and the question with such a hypothesis added is open.
   formal:
     - language: lean4
       theorem: erdos_655
@@ -49,7 +41,8 @@ openness_basis:
   asserted_on: 2025-08-31
 claims:
   - id: erdos-655-fc-solved
-    type: proved
+    type: disproved
+    scope: the statement read literally, without a general-position hypothesis
     evidence_tier: published
     attestation: secondary
     state: active
@@ -58,13 +51,12 @@ claims:
       title: formal-conjectures marks erdos_655 as research solved
       url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/655.lean
       kind: dataset
-    notes: Imported from the upstream `research solved` category. The statement is formalized; the proof has not been machine-checked by ConjectureHub.
+    notes: "Upstream formalises this as `answer(False)`, refuted by the regular $n$-gon, so the direction is disproved rather than proved. Scoped, because upstream reads the counterexample as showing the literal statement was not what was intended: erdosproblems.com still lists #655 as open, and the general-position variant is tagged research open. The statement is formalized; the proof has not been machine-checked by ConjectureHub."
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/655.lean
     source: google-deepmind/formal-conjectures
     fields:
       - title
-      - statement.informal
       - statement.formal
       - subject.msc
       - ids.external
@@ -82,3 +74,9 @@ provenance:
     license: Apache-2.0
     retrieved: 2026-07-31
     upstream_version: d031865128a7ddccd85e8099f0f818211cfc9a41
+  - url: https://www.erdosproblems.com/655
+    source: conjecturehub-curator
+    fields:
+      - statement.informal
+    license: CC0-1.0
+    retrieved: 2026-08-04
