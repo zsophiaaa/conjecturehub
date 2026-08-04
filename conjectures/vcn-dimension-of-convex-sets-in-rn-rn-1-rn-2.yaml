@@ -1,7 +1,16 @@
 id: vcn-dimension-of-convex-sets-in-rn-rn-1-rn-2
 title: VCₙ dimension of convex sets in ℝⁿ, ℝⁿ⁺¹, ℝⁿ⁺²
 statement:
-  informal: Every convex set in $\mathbb R^3$ has $\mathrm{VC}_2$ dimension at most 1.
+  informal: |-
+    Take a convex set $C$ and the family of its translates. In the plane that family has VC
+    dimension at most 3, but in $\mathbb R^3$ a convex set can shatter an infinite set. Replacing
+    shattering by its $n$-fold analogue, $\mathrm{VC}_n$ dimension, moves the boundary up: for
+    every $n$ there is a convex set in $\mathbb R^{n+2}$ whose $\mathrm{VC}_n$ dimension is
+    infinite. One dimension lower is open, and this record collects three questions about it. Does
+    every convex set in $\mathbb R^{n+1}$ have finite $\mathrm{VC}_n$ dimension at all, that is, is
+    there a $d$ depending only on $n$ that bounds it? For $n \geq 2$, is that bound as small as 1?
+    And in the first case $n = 2$, does every convex set in $\mathbb R^3$ have $\mathrm{VC}_2$
+    dimension at most 1?
   formal:
     - language: lean4
       theorem: hasAddVCDimAtMost_three_of_convex_r2
@@ -48,17 +57,22 @@ ids:
 openness_basis:
   meaning: no_published_solution_known_to_curator
   asserted_by: google-deepmind/formal-conjectures
-  note: Categorized upstream as "research open" at v4.32.0.
+  note: "Categorized upstream as \"research open\" at v4.32.0. There is no paper to cite: upstream files these questions under the heading \"What's not in the literature\", so the Lean source is the primary artifact rather than a formalisation of a published problem."
 claims: []
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Other/VCDimConvex.lean
     source: google-deepmind/formal-conjectures
     fields:
       - title
-      - statement.informal
       - statement.formal
       - subject.msc
       - ids.external
     license: Apache-2.0
     retrieved: 2026-07-31
     upstream_version: v4.32.0
+  - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Other/VCDimConvex.lean
+    source: conjecturehub-curator
+    fields:
+      - statement.informal
+    license: CC0-1.0
+    retrieved: 2026-08-03
