@@ -1,7 +1,13 @@
 id: ben-green-s-open-problem-19
 title: Ben Green's Open Problem 19
 statement:
-  informal: "[Ma21] showed that $3.13 \\leq C$."
+  informal: |-
+    What is $C$, the infimum of all exponents $c$ for which the following is true, uniformly for
+    $0 < \alpha < 1$? Suppose that $A \subset \mathbb{F}_2^n \times \mathbb{F}_2^n$ is a set of
+    density $\alpha$. Write $N := 2^n$. Then there is some $d \neq 0$ such that $A$ contains
+    $\gg \alpha^c N^2$ corners $(x,y), (x,y+d), (x+d,y)$.
+
+    This question has been resolved by [FSS20], showing that $C = 4$.
   formal:
     - language: lean4
       theorem: green_19
@@ -34,7 +40,25 @@ openness_basis:
   meaning: no_published_solution_known_to_curator
   asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: ben-green-s-open-problem-19-fss20
+    asserted_on: 2020-01-01
+    type: proved
+    evidence_tier: published
+    attestation: secondary
+    state: active
+    recorded_on: 2026-08-03
+    source:
+      title: Triforce and corners
+      url: https://arxiv.org/abs/1903.04863
+      kind: journal
+    authors:
+      - Jacob Fox
+      - Ashwin Sah
+      - Mehtaab Sawhney
+      - David Stoner
+      - Yufei Zhao
+    notes: 'Math. Proc. Cambridge Philos. Soc. 169 (2020). The paper determines the optimal exponent Mandache asked for: "Mandache showed that $\delta^4 \leq m(\delta) \lesssim \delta^{3.13}$ and asked what is the optimal exponent on $\delta$. Here we show that the answer is 4." Upstream formal-conjectures agrees, tagging green_19 ($C = 4$) as research solved. The two variants green_19.lower and green_19.upper are tagged research open upstream, but both follow from $C = 4$ and are not open questions.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/GreensOpenProblems/19.lean
     source: google-deepmind/formal-conjectures
