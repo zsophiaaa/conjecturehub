@@ -1,7 +1,14 @@
 id: erdos-812
 title: Erdős Problem 812
 statement:
-  informal: Is it true that $\frac{R(n+1)}{R(n)}\geq 1+c$ for some constant $c>0$, for all large $n$?
+  informal: |-
+    Here $R(n)$ denotes the diagonal Ramsey number $R(n, n)$.
+
+    Is it true that $\frac{R(n+1)}{R(n)}\geq 1+c$ for some constant $c>0$, for all large $n$?
+    Is it true that $R(n+1)-R(n) \gg n^2$?
+
+    Burr, Erdős, Faudree, and Schelp [BEFS89] proved that $R(n+1)-R(n) \geq 4n-8$ for all
+    $n \geq 2$. The lower bound of Erdős problem 165 implies that $R(n+2)-R(n) \gg n^{2-o(1)}$.
   formal:
     - language: lean4
       theorem: erdos_812.parts.i

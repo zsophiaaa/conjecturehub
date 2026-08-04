@@ -7,8 +7,11 @@ statement:
     set of size $\gg_\delta n$?
 
     This is a problem of Erdős, Hajnal, Sós, and Szemerédi [EHSS83]. It is **open**; they proved
-    the statement for $\delta > 1/8$ (see `erdos_579.variants.ehss_large_delta`), and the
-    difficulty is to push the edge-density threshold down to an arbitrary $\delta > 0$.
+    the statement for $\delta > 1/8$ (see `erdos_579.variants.ehss_large_delta`).
+
+    Both directions are live. No lower bound is known at all — it is open whether some
+    $\delta > 0$ admits graphs with no large independent set, which would answer the question
+    negatively — so this should not be read as merely asking to push the threshold down.
 
     Here $K_{2,2,2}$ is the complete tripartite graph with all parts of size $2$, encoded as
     `completeMultipartiteGraph (fun _ : Fin 3 => Fin 2)`; "contains no $K_{2,2,2}$" is expressed
