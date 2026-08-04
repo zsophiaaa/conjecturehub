@@ -1,7 +1,11 @@
 id: oppermann-s-conjecture
 title: Oppermann's Conjecture
 statement:
-  informal: For every integer $x \ge 2$ there exists a prime between $x(x-1)$ and $x^2$.
+  informal: |-
+    **Oppermann's Conjecture**:
+    For every integer $x \ge 2$, the following hold:
+    - There exists a prime between $x(x-1)$ and $x^2$.
+    - There exists a prime between $x^2$ and $x(x+1)$.
   formal:
     - language: lean4
       theorem: oppermann_conjecture.parts.i

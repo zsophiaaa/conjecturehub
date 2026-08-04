@@ -184,7 +184,10 @@ function buildFromFormalConjectures(registry: Registry, tag: string, files: fc.F
         provenance: [
           fcProvenance(tag, file.path, [
             "title",
-            "statement.informal",
+            // Many upstream declarations carry no docstring, the statement
+            // living on erdosproblems.com instead, which we do not copy.
+            // Attribution should cover what we actually took.
+            ...(primary.doc ? ["statement.informal"] : []),
             "statement.formal",
             "subject.msc",
             "ids.external",

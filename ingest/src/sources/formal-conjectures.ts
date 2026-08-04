@@ -35,6 +35,8 @@ export interface FcFile {
   title: string;
   references: { label: string; url: string }[];
   declarations: FcDeclaration[];
+  /** The file-level `/-! ... -/` block, which sometimes carries the only full problem description. */
+  moduleDoc: string | null;
 }
 
 export async function resolveLatestTag(): Promise<string> {
@@ -74,11 +76,20 @@ export async function ensureCheckout(tag: string): Promise<string> {
   return dest;
 }
 
+/**
+ * Upstream's tooling lives alongside the mathematics and uses the same
+ * `@[category research open]` attribute on placeholder theorems, so a plain
+ * walk ingests the attribute documentation and the linter's test fixtures as
+ * if they were open problems.
+ */
+const NOT_MATHEMATICS = new Set(["Util"]);
+
 function walk(dir: string, base: string, out: string[] = []): string[] {
   for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
     const full = path.join(dir, entry.name);
-    if (entry.isDirectory()) walk(full, base, out);
-    else if (entry.name.endsWith(".lean")) out.push(path.relative(base, full));
+    if (entry.isDirectory()) {
+      if (!NOT_MATHEMATICS.has(entry.name)) walk(full, base, out);
+    } else if (entry.name.endsWith(".lean")) out.push(path.relative(base, full));
   }
   return out;
 }
@@ -172,7 +183,7 @@ export function parseLeanFile(relPath: string, source: string): FcFile | null {
   }
 
   if (!title && declarations.length === 0) return null;
-  return { path: relPath, title, references, declarations };
+  return { path: relPath, title, references, declarations, moduleDoc: cleanDoc(moduleDoc) };
 }
 
 /** Declarations that describe actual mathematics, as opposed to helper API or tests. */
@@ -183,12 +194,24 @@ export function researchDeclarations(file: FcFile): FcDeclaration[] {
 /**
  * The declaration a page should lead with: a non-variant research statement if
  * one exists, else the first research statement, else nothing.
+ *
+ * A dotted name is subordinate to its base whenever that base is itself a
+ * declaration in the file, whatever the suffix. Keying only on `.variants.`
+ * let siblings like `green_19.lower` and `oppermann_conjecture.parts.i`
+ * outrank their own headline and become the displayed statement, which reads
+ * as a stray bound or a truncated part of a multi-part problem. Undotted
+ * siblings are a different matter: upstream pairs a solved warm-up with the
+ * open question under unrelated names, and there the open one is what we want.
  */
 export function primaryDeclaration(file: FcFile): FcDeclaration | null {
   const research = researchDeclarations(file);
+  const names = new Set(research.map((d) => d.name));
+  const subordinate = (d: FcDeclaration) =>
+    d.isVariant || (d.name.includes(".") && names.has(d.name.slice(0, d.name.indexOf("."))));
+
   return (
-    research.find((d) => !d.isVariant && d.category === "research open") ??
-    research.find((d) => !d.isVariant) ??
+    research.find((d) => !subordinate(d) && d.category === "research open") ??
+    research.find((d) => !subordinate(d)) ??
     research[0] ??
     null
   );

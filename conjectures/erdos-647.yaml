@@ -198,7 +198,6 @@ provenance:
     source: google-deepmind/formal-conjectures
     fields:
       - title
-      - statement.informal
       - statement.formal
       - subject.msc
       - ids.external
@@ -222,3 +221,9 @@ provenance:
       - openness_basis.note
     license: CC0-1.0
     retrieved: 2026-08-02
+  - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/647.lean
+    source: conjecturehub-curator
+    fields:
+      - statement.informal
+    license: Apache-2.0
+    retrieved: 2026-08-03
