@@ -26,7 +26,22 @@ openness_basis:
   meaning: no_published_solution_known_to_curator
   asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: written-on-the-wall-ii-conjecture-316-sweep-dac0a4cf
+    asserted_on: 2026-08-04
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-04
+    source:
+      title: "formal-conjectures PR #4431: Prove Written on the Wall II Conjecture 316"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/4431
+      kind: github
+      quote: replaces the placeholder with a complete counting and classification proof
+    authors:
+      - SamuelSchlesinger
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Written on the Wall II - Conjecture 316". Classifier rationale: The pull request claims to provide a full proof of the conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/WrittenOnTheWallII/GraphConjecture316.lean
     source: google-deepmind/formal-conjectures
