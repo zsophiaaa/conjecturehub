@@ -1,6 +1,6 @@
 {
   "conjecture_id": "jacobian-conjecture",
-  "note": "Open in general; n ≥ 3 refuted July 2026. Statement from formal-conjectures v4.32.0.",
+  "note": "The comparator theorem quantifies over every finite index type, so it includes n ≥ 3 and is therefore FALSE as of July 2026 (Alpöge's counterexample). No correct proof of it can exist. It is kept as a soundness check on the proof pipeline — anything CI accepts here indicates a bug, not a result. Only n = 2 is open, and this comparator does not express that case. Statement from formal-conjectures v4.32.0.",
   "comparator": {
     "challenge_module": "Challenge.JacobianConjecture",
     "solution_module": "Solution.JacobianConjecture",
