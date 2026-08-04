@@ -10,7 +10,23 @@ openness_basis:
   meaning: unknown
   asserted_by: wikidata
   note: Identity record only. No statement or status has been ingested for this conjecture yet.
-claims: []
+claims:
+  - id: mirror-symmetry-conjecture-sweep-7cae03f2
+    asserted_on: 2026-08-04
+    type: partial
+    scope: topological mirror symmetry conjectures for G-character varieties
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-04
+    source:
+      title: $e$-polynomials of character varieties
+      url: https://arxiv.org/abs/2606.26767
+      kind: arxiv
+      quote: reduce certain topological mirror symmetry conjectures for these moduli spaces.
+    authors:
+      - Alfonso Zamora
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "mirror symmetry conjecture". Classifier rationale: The paper reports progress by reducing aspects of the conjecture, not a full resolution. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q97366912
     source: wikidata

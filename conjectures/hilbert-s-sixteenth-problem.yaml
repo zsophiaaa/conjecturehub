@@ -10,7 +10,24 @@ openness_basis:
   meaning: no_solution_known_to_community
   asserted_by: wikipedia
   note: Listed under "Unsolved problems in geometry" on English Wikipedia.
-claims: []
+claims:
+  - id: hilbert-s-sixteenth-problem-sweep-e0833063
+    asserted_on: 2026-08-04
+    type: partial
+    scope: higher-dimensional invariant tori
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-04
+    source:
+      title: "Weakly Normally Hyperbolic Invariant Tori: Persistence and an Averaging Principle"
+      url: https://arxiv.org/abs/2608.00812
+      kind: arxiv
+      quote: we prove that this number grows at least polynomially with the degree and becomes unbounded for invariant tori of higher codimension.
+    authors:
+      - Douglas D. Novaes
+      - Pedro C. C. R. Pereira
+    notes: "Filed automatically by the arXiv new submissions sweep. Matched on \"Hilbert's sixteenth problem\". Classifier rationale: The paper provides a lower‑bound result on the counting aspect of Hilbert's sixteenth problem, which is partial progress, not a full resolution. Unreviewed: this records that a claim was made, not that it is correct."
 provenance:
   - url: https://www.wikidata.org/wiki/Q2509489
     source: wikidata
