@@ -2,8 +2,10 @@ id: claude-s-cycles
 title: Claude's Cycles
 statement:
   informal: |-
-    For even `m > 2`, it is open whether the cube digraph on `(ZMod m)³` has a Hamiltonian
-    arc decomposition.
+    Give each vertex of $(\mathbb{Z}/m\mathbb{Z})^3$ an arc to the three vertices reached by
+    adding one to a single coordinate. Can the arcs of the resulting digraph be partitioned into
+    three arc-disjoint Hamiltonian cycles? No such partition exists for $m = 2$, and the odd case
+    is settled; even $m > 2$ is the case at issue, with a resolution reported but not refereed.
   formal:
     - language: lean4
       theorem: cube_hamiltonian_arc_decomposition
@@ -53,10 +55,15 @@ provenance:
     source: google-deepmind/formal-conjectures
     fields:
       - title
-      - statement.informal
       - statement.formal
       - subject.msc
       - ids.external
     license: Apache-2.0
     retrieved: 2026-07-31
     upstream_version: v4.32.0
+  - url: https://www-cs-faculty.stanford.edu/~knuth/papers/claude-cycles.pdf
+    source: conjecturehub-curator
+    fields:
+      - statement.informal
+    license: CC0-1.0
+    retrieved: 2026-08-03

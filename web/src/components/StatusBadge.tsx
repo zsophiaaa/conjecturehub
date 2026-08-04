@@ -54,8 +54,17 @@ export function StatusChip({
   scoped?: boolean;
   size?: "sm" | "md";
 }) {
-  const style = STATUS_STYLES[statusKey] ?? FALLBACK;
+  const base = STATUS_STYLES[statusKey] ?? FALLBACK;
   const machineVerified = tier === "machine_verified";
+
+  // At the lowest tier nobody has checked the argument, so the chip reports that a
+  // resolution was claimed rather than asserting it. The tick mark in particular
+  // reads as our endorsement, which is the opposite of what this tier means.
+  const style =
+    tier === "unverified_claim" && RESOLUTIONS.has(statusKey)
+      ? { label: `Claimed ${base.label.toLowerCase()}`, glyph: "!" }
+      : base;
+
   const padding = size === "sm" ? "px-1.5 py-0.5 text-xs" : "px-2 py-0.5 text-sm";
 
   return (
