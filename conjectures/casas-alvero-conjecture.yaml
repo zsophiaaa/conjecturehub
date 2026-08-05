@@ -50,7 +50,22 @@ openness_basis:
   meaning: no_published_solution_known_to_curator
   asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: casas-alvero-conjecture-sweep-f7557067
+    asserted_on: 2026-08-05
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: secondary
+    state: active
+    recorded_on: 2026-08-05
+    source:
+      title: Casas-Alvero conjecture
+      url: https://en.wikipedia.org/wiki/Casas-Alvero_conjecture
+      kind: wikipedia
+      quote: The conjecture has been proved.
+    authors:
+      - Шікіргооғѕ
+    notes: 'Filed automatically by the Wikipedia edits sweep. Matched on "Casas-Alvero Conjecture". Classifier rationale: The edit summary explicitly states the conjecture is proved. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Paper/CasasAlvero.lean
     source: google-deepmind/formal-conjectures

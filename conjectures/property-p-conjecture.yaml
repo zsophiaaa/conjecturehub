@@ -24,6 +24,21 @@ claims:
       url: https://en.wikipedia.org/wiki/Property_P_conjecture
       kind: wikipedia
     notes: Standing taken from English Wikipedia's categorisation (Wikipedia categorises this as proved). Nobody here has read the paper that settled it, which is what the secondary attestation says; replace this claim with one citing that paper when someone has it to hand.
+  - id: property-p-conjecture-sweep-cb91464e
+    asserted_on: 2026-08-05
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-05
+    source:
+      title: "formal-conjectures PR #4759: ErdosProblems/470: record why `HasPosDensity` is the right reading"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/4759
+      kind: github
+      quote: Erdős proved "the density of integers having property P exists and is positive"
+    authors:
+      - williamjblair
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Property P". Classifier rationale: The PR cites a paper that proves the density exists and is positive, confirming the conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q7250222
     source: wikidata

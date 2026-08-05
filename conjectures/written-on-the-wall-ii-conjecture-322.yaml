@@ -29,7 +29,22 @@ openness_basis:
   meaning: no_published_solution_known_to_curator
   asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: written-on-the-wall-ii-conjecture-322-sweep-2c6b068f
+    asserted_on: 2026-08-05
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-05
+    source:
+      title: "formal-conjectures PR #4430: Prove Written on the Wall II Conjecture 322"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/4430
+      kind: github
+      quote: proves that every minimal total dominating set has cardinality two under the stated complement-local-independence hypothesis
+    authors:
+      - SamuelSchlesinger
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Written on the Wall II - Conjecture 322". Classifier rationale: The PR states it provides a proof and marks the conjecture as solved. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/WrittenOnTheWallII/GraphConjecture322.lean
     source: google-deepmind/formal-conjectures
