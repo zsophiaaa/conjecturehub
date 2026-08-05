@@ -10,7 +10,23 @@ openness_basis:
   meaning: unknown
   asserted_by: wikidata
   note: Identity record only. No statement or status has been ingested for this conjecture yet.
-claims: []
+claims:
+  - id: hilbert-s-tenth-problem-sweep-0c258f47
+    asserted_on: 2026-08-05
+    type: resolved_by_prior_literature
+    scope: any quadratic number field
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-05
+    source:
+      title: On Diophantine equations over the integer rings of quadratic fields
+      url: https://arxiv.org/abs/2608.03992
+      kind: arxiv
+      quote: In 1975 J. Denef proved that Hilbert's Tenth Problem over $O_K$ has a negative solution.
+    authors:
+      - Zhi-Wei Sun
+    notes: "Filed automatically by the arXiv new submissions sweep. Matched on \"Hilbert's tenth problem\". Classifier rationale: The paper cites Denef's prior result that the problem is undecidable for all quadratic integer rings. Unreviewed: this records that a claim was made, not that it is correct."
 provenance:
   - url: https://www.wikidata.org/wiki/Q986147
     source: wikidata

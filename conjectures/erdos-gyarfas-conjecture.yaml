@@ -10,7 +10,23 @@ openness_basis:
   meaning: no_solution_known_to_community
   asserted_by: wikipedia
   note: Listed under "Unsolved problems in graph theory" on English Wikipedia.
-claims: []
+claims:
+  - id: erdos-gyarfas-conjecture-sweep-3b3b2e47
+    asserted_on: 2026-08-05
+    type: partial
+    scope: cubic bipartite graphs
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-05
+    source:
+      title: A 60-Vertex Lower Bound for Cubic Bipartite Counterexamples to the Erd\H{o}s-Gy\'arf\'as Conjecture
+      url: https://arxiv.org/abs/2608.02675
+      kind: arxiv
+      quote: any cubic bipartite counterexample to the Erdos-Gyarfas conjecture has at least 60 vertices
+    authors:
+      - Julius Tranquilli
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Erdős–Gyárfás conjecture". Classifier rationale: The document reports a new lower bound for counterexamples, which is partial progress, not a proof or disproof. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q3686826
     source: wikidata
