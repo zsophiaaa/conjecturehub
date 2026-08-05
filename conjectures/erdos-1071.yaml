@@ -48,6 +48,22 @@ claims:
       url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/1071.lean
       kind: dataset
     notes: Imported from the upstream `research solved` category. The statement is formalized; the proof has not been machine-checked by ConjectureHub.
+  - id: erdos-1071-sweep-ad8930f8
+    asserted_on: 2026-08-05
+    type: proved
+    scope: part (ii)
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-05
+    source:
+      title: "formal-conjectures: fix(ErdosProblems): record the answer to 1071(ii) (#4745) Part (ii) of Erdős Problem 1071 is marked solved and links a formal proof, but its theorem still used `answer(sorry)`. This changes the answer"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/b85184cb7bcc468a243519f51cbda83d46fc3613
+      kind: github
+      quote: Part (ii) of Erdős Problem 1071 is marked solved and links a formal proof... This changes the answer to `True`, matching the cited affirmative solution.
+    authors:
+      - SamuelSchlesinger
+    notes: "Filed automatically by the formal-conjectures commits sweep. Matched on \"Erdős Problem 1071\". Classifier rationale: The commit states the conjecture's part (ii) is now recorded as solved with a formal proof. Unreviewed: this records that a claim was made, not that it is correct."
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/1071.lean
     source: google-deepmind/formal-conjectures

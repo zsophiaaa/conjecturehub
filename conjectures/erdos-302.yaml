@@ -18,7 +18,23 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-302-sweep-5905fa5e
+    asserted_on: 2026-08-05
+    type: disproved
+    scope: the claim f(N) = (1/2+o(1))N
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-05
+    source:
+      title: "formal-conjectures PR #4653: feat(ErdosProblems): formalise Erdős Problem 302"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/4653
+      kind: github
+      quote: I have stated that question as `research solved` in the negative (`variants.not_half`) rather than as `research open`.
+    authors:
+      - Douris
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 302". Classifier rationale: The PR asserts that the headline question f(N) = (1/2+o(1))N is resolved negatively, i.e., disproved. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

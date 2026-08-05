@@ -79,6 +79,21 @@ claims:
       url: https://www.erdosproblems.com/forum/thread/146
       kind: forum
     notes: 'Site maintainer updated problem page: AKS03 wording "in one component" should be "on one side of the bipartition" (corollary 2.3).'
+  - id: erdos-146-sweep-96400b46
+    asserted_on: 2026-08-05
+    type: counterexample
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-05
+    source:
+      title: "formal-conjectures PR #4707: feat(ErdosProblems): add 146 (Erdős–Simonovits degeneracy conjecture)"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/4707
+      kind: github
+      quote: "`Erdős 146 was solved by OpenAI ... their layered Hamming-ball construction settles `r = 2`, and since the conjecture is universally quantified over `r`, that refutes it.`"
+    authors:
+      - ctjlewis
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős problem 146". Classifier rationale: The document asserts that a constructed counterexample refutes the conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
