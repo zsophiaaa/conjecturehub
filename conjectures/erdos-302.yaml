@@ -18,7 +18,22 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-302-sweep-3507dad2
+    asserted_on: 2026-08-05
+    type: disproved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-05
+    source:
+      title: "formal-conjectures: feat(ErdosProblems): formalise Erdős Problem 302 (#4653) Closes #4652. Formalises [Erdős Problem 302](https://www.erdosproblems.com/302): $f(N)$ is the size of the largest $A \\subseteq \\{1,\\ldots,N\\}$"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/1aadc0d9e61e05bcf66906a42eb573efe4e25e83
+      kind: github
+      quote: I have stated that question as `research solved` in the negative (`variants.not_half`).
+    authors:
+      - Douris
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 302". Classifier rationale: The document claims the original question f(N) = (1/2+o(1))N is settled negatively. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
