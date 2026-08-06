@@ -29,6 +29,21 @@ claims:
       title: erdosproblems.com records this problem as "disproved"
       url: https://www.erdosproblems.com/794
       kind: dataset
+  - id: erdos-794-sweep-a6f63a84
+    asserted_on: 2026-08-06
+    type: disproved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-06
+    source:
+      title: "formal-conjectures PR #1739: feat(ErdosProblems): 794"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/1739
+      kind: github
+      quote: Adds a formalization of Erdős Problem 794 (disproved; see erdosproblems.com/794).
+    authors:
+      - afletcher22
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 794". Classifier rationale: The pull request explicitly says the problem is disproved. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
