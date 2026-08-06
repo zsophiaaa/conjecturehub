@@ -11,7 +11,23 @@ openness_basis:
   meaning: unknown
   asserted_by: wikidata
   note: Identity record only. No statement or status has been ingested for this conjecture yet.
-claims: []
+claims:
+  - id: hodge-conjecture-sweep-ad574331
+    asserted_on: 2026-08-06
+    type: partial
+    scope: unipotent part for Deligne 1-motives
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-06
+    source:
+      title: Tannakian fundamental groups of blended extensions
+      url: https://arxiv.org/abs/2407.01379
+      kind: arxiv
+      quote: We also give an application to the unipotent part of the motivic version of the Hodge conjecture ... for Deligne 1-motives.
+    authors:
+      - Payman Eskandari
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Hodge conjecture". Classifier rationale: The paper reports a partial result concerning a specific case of the motivic Hodge conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q1143138
     source: wikidata

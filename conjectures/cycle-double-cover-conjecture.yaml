@@ -14,7 +14,22 @@ openness_basis:
   meaning: no_solution_known_to_community
   asserted_by: wikipedia
   note: Listed under "Unsolved problems in graph theory" on English Wikipedia.
-claims: []
+claims:
+  - id: cycle-double-cover-conjecture-sweep-a2d275b0
+    asserted_on: 2026-08-06
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-06
+    source:
+      title: I must be misunderstanding a general fact about graph embedddings (every finite graph has an embedding into an orientable topological surface of finite genus). From this one gets a
+      url: https://mathstodon.xyz/@dimpase/117046414315393894
+      kind: mastodon
+      quote: resolved recently by OpenAI and its mechanical turks
+    authors:
+      - Dima Pasechnik 🇺🇦 🇳🇱
+    notes: 'Filed automatically by the Mathstodon sweep. Matched on "cycle double cover conjecture". Classifier rationale: The post asserts that the cycle double cover conjecture has been resolved. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q18217946
     source: wikidata
