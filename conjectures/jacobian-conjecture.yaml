@@ -83,6 +83,23 @@ claims:
       - David Barros Hulak
       - Ruy Jose Guerra Barretto de Queiroz
     notes: Isabelle/HOL formalisation accepted into the Archive of Formal Proofs. This is the one completed machine check of the counterexample; the Lean route remains an open Mathlib pull request. Not tagged machine_verified here because that tier is reserved for proofs checked by ConjectureHub CI against our own canonical statement.
+  - id: jacobian-conjecture-sweep-f29bb1bb
+    asserted_on: 2026-08-07
+    type: disproved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-07
+    source:
+      title: The weak Markus--Yamabe conjecture fails in dimension 14
+      url: https://arxiv.org/abs/2608.05392
+      kind: arxiv
+      quote: Applied to the recent counterexample to the Jacobian conjecture, this gives a Hurwitz vector field of degree seven on \(\mathbb{R}^{14}\) with three rational singularities.
+    authors:
+      - Álvaro Castañeda
+      - Gerardo Honorato
+      - Francisco Valenzuela-Henríquez
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Jacobian conjecture". Classifier rationale: The paper references a recent counterexample, implying the Jacobian conjecture is false. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/JacobianConjecture.lean
     source: google-deepmind/formal-conjectures

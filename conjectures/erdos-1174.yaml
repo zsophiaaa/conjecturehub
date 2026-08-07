@@ -28,6 +28,21 @@ claims:
       title: erdosproblems.com records this problem as "not disprovable"
       url: https://www.erdosproblems.com/1174
       kind: dataset
+  - id: erdos-1174-sweep-7ad52f7e
+    asserted_on: 2026-08-07
+    type: independence
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-07
+    source:
+      title: "formal-conjectures PR #4223: Add Erdős Problem 1174 (Ramsey properties of K₄-free and K_{ℵ₁}-free graphs)"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/4223
+      kind: github
+      quote: Shelah proved that a graph with either property can *consistently* exist, so the problem is not disprovable in ZFC
+    authors:
+      - henrykmichalewski
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 1174". Classifier rationale: The document states a consistency (independence) result, not a proof or disproof. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

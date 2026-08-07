@@ -28,6 +28,21 @@ claims:
       title: erdosproblems.com records this problem as "disproved"
       url: https://www.erdosproblems.com/118
       kind: dataset
+  - id: erdos-118-sweep-f326efce
+    asserted_on: 2026-08-07
+    type: disproved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-07
+    source:
+      title: "formal-conjectures PR #4219: Add Erdős Problem 118 (partition ordinals: α → (α,3)² vs α → (α,n)²)"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/4219
+      kind: github
+      quote: "Status: DISPROVED. The answer is no, shown independently by Schipperus ... and Larson gave the concrete counterexample \\(\\alpha = \\omega^{\\omega^2}\\)..."
+    authors:
+      - henrykmichalewski
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 118". Classifier rationale: The document explicitly states the conjecture has been disproved and provides a counterexample. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

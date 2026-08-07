@@ -29,6 +29,21 @@ claims:
       title: erdosproblems.com records this problem as "independent"
       url: https://www.erdosproblems.com/1127
       kind: dataset
+  - id: erdos-1127-sweep-7ea24ce2
+    asserted_on: 2026-08-07
+    type: independence
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-07
+    source:
+      title: "formal-conjectures PR #4221: Add Erdős Problem 1127 (ℝⁿ as countably many distinct-distance sets)"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/4221
+      kind: github
+      quote: "The answer is **independent of ZFC**: - Under CH it is true ... - Under ¬CH it fails ..."
+    authors:
+      - henrykmichalewski
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 1127". Classifier rationale: Document asserts the conjecture is independent of ZFC. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

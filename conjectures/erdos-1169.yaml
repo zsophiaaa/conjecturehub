@@ -28,6 +28,22 @@ claims:
       title: erdosproblems.com records this problem as "not disprovable"
       url: https://www.erdosproblems.com/1169
       kind: dataset
+  - id: erdos-1169-sweep-238318bc
+    asserted_on: 2026-08-07
+    type: partial
+    scope: assuming CH
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-07
+    source:
+      title: "formal-conjectures PR #4214: Add Erdős Problem 1169 (ω₁² ↛ (ω₁², k)² ordinal Ramsey)"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/4214
+      kind: github
+      quote: "Status: **NOT DISPROVABLE** (open in general; Hajnal [Ha71] proved it under CH)."
+    authors:
+      - henrykmichalewski
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 1169". Classifier rationale: The document states the conjecture is open but notes a partial proof under the Continuum Hypothesis. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
