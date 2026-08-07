@@ -10,7 +10,23 @@ openness_basis:
   meaning: no_solution_known_to_community
   asserted_by: wikipedia
   note: Listed under "Unsolved problems in number theory" on English Wikipedia.
-claims: []
+claims:
+  - id: goormaghtigh-conjecture-sweep-8ab61267
+    asserted_on: 2026-08-07
+    type: partial
+    scope: the known numbers 31 and 8191
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-07
+    source:
+      title: "formal-conjectures PR #4791: feat(Arxiv): add the Goormaghtigh conjecture"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/4791
+      kind: github
+      quote: proves that both known numbers satisfy that predicate.
+    authors:
+      - derekste
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Goormaghtigh conjecture". Classifier rationale: The PR formalizes the conjecture and proves the known cases while noting the classification remains open. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q593203
     source: wikidata
