@@ -27,6 +27,22 @@ claims:
       title: erdosproblems.com records this problem as "decidable"
       url: https://www.erdosproblems.com/506
       kind: dataset
+  - id: erdos-506-sweep-6b42046d
+    asserted_on: 2026-08-08
+    type: partial
+    scope: n > 393
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-08
+    source:
+      title: "formal-conjectures PR #4396: feat(ErdosProblems/506): add circles-determined-by-n-points statement"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/4396
+      kind: github
+      quote: States Elliott's resolution for $n > 393$, with the Purdy–Smith correction \(\binom{n-1}{2} + 1 - \lfloor (n-1)/2 \rfloor\)
+    authors:
+      - theebayuser
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 506". Classifier rationale: The PR reports a known resolution for the conjecture when n exceeds 393, which is a partial result. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
