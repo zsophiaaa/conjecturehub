@@ -83,6 +83,21 @@ claims:
       - David Barros Hulak
       - Ruy Jose Guerra Barretto de Queiroz
     notes: Isabelle/HOL formalisation accepted into the Archive of Formal Proofs. This is the one completed machine check of the counterexample; the Lean route remains an open Mathlib pull request. Not tagged machine_verified here because that tier is reserved for proofs checked by ConjectureHub CI against our own canonical statement.
+  - id: jacobian-conjecture-sweep-060dd2a1
+    asserted_on: 2026-08-09
+    type: counterexample
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-09
+    source:
+      title: "I have produced an independent formal verification of the Alpöge/Fable counterexample to the Jacobian Conjecture in Lean 4. The formalization is entirely standalone: it requires no"
+      url: https://mathstodon.xyz/@mult/117065191210272605
+      kind: mastodon
+      quote: I have produced an independent formal verification of the Alpöge/Fable counterexample to the Jacobian Conjecture in Lean 4.
+    authors:
+      - mult
+    notes: 'Filed automatically by the Mathstodon sweep. Matched on "Jacobian conjecture". Classifier rationale: The document asserts that a counterexample to the Jacobian Conjecture has been formally verified. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/JacobianConjecture.lean
     source: google-deepmind/formal-conjectures

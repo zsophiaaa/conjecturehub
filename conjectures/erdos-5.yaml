@@ -18,7 +18,23 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-5-sweep-bf5d2dd9
+    asserted_on: 2026-08-09
+    type: partial
+    scope: S is closed
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-09
+    source:
+      title: "formal-conjectures: feat(ErdosProblems/5): limit points of normalized prime gaps (#4798) Resolves #188 ## Summary - Formalises [Erdős Problem 5](https://www.erdosproblems.com/5): is every $C \\geq 0$ a limit point of $(p_"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/2270d31e8dd611521f979de6d86da364930b7669
+      kind: github
+      quote: Five proved `@[category test]` lemmas, including that $S$ is closed
+    authors:
+      - theebayuser
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 5". Classifier rationale: The commit formalises the conjecture and records a partial result (closedness of the limit‑point set) but does not claim a full proof or disproof. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
