@@ -1,4 +1,20 @@
 {
-  "generatedAt": "2026-08-03",
-  "queue": []
+  "generatedAt": "2026-08-09",
+  "queue": [
+    {
+      "id": "catalan-s-conjecture-and-related-diophantine-equations",
+      "title": "Catalan's conjecture and related Diophantine equations",
+      "article": "https://en.wikipedia.org/wiki/Catalan's_conjecture",
+      "signal": "proved",
+      "reason": "we publish this as open on google-deepmind/formal-conjectures's word, but Wikipedia categorises it as proved",
+      "categories": [
+        "Category:Abc conjecture",
+        "Category:Conjectures",
+        "Category:Conjectures that have been proved",
+        "Category:Diophantine equations",
+        "Category:Theorems in number theory"
+      ],
+      "needs": "a human to decide which source is stale, then either a claim or a note on the openness basis"
+    }
+  ]
 }
