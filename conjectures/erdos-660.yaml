@@ -17,7 +17,23 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-660-sweep-1faae3fa
+    asserted_on: 2026-08-09
+    type: partial
+    scope: planar case (convex polygon)
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-09
+    source:
+      title: "formal-conjectures PR #4397: feat(ErdosProblems/660): add convex-polyhedron distinct-distances statement"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/4397
+      kind: github
+      quote: "Adds `altman_planar`, the planar analogue proved by Altman: $n$ vertices of a convex polygon determine at least \\lfloor n/2 \\rfloor distinct distances."
+    authors:
+      - theebayuser
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 660". Classifier rationale: The document reports a proved planar analogue, which is partial progress on the 3‑D conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
