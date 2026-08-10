@@ -10,7 +10,25 @@ openness_basis:
   meaning: unknown
   asserted_by: wikidata
   note: Identity record only. No statement or status has been ingested for this conjecture yet.
-claims: []
+claims:
+  - id: rota-s-conjecture-sweep-a2703698
+    asserted_on: 2026-08-10
+    type: disproved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-10
+    source:
+      title: Matroid flat counts can have many peaks
+      url: https://arxiv.org/abs/2608.07342
+      kind: arxiv
+      quote: We disprove Rota's conjecture that the counts of flats in a matroid according to rank form a unimodal sequence.
+    authors:
+      - Alexander Divoux
+      - Matt Larson
+      - Chayim Lowen
+      - Shouda Wang
+    notes: "Filed automatically by the arXiv new submissions sweep. Matched on \"Rota's conjecture\". Classifier rationale: The abstract explicitly states a disproof of Rota's conjecture. Unreviewed: this records that a claim was made, not that it is correct."
 provenance:
   - url: https://www.wikidata.org/wiki/Q7370201
     source: wikidata
