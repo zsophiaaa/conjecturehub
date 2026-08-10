@@ -66,6 +66,36 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/865
       kind: dataset
+  - id: erdos-865-sweep-3968de25
+    asserted_on: 2026-08-10
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-10
+    source:
+      title: "formal-conjectures PR #4395: fix(ErdosProblems): mark 865 as formally solved"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/4395
+      kind: github
+      quote: mark Erdős Problem 865 as formally solved
+    authors:
+      - akshitj11
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 865". Classifier rationale: The pull request declares the problem has been formally solved. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: erdos-865-sweep-09e3599d
+    asserted_on: 2026-08-10
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-10
+    source:
+      title: "formal-conjectures: fix(ErdosProblems): mark 865 as formally solved (#4395) Fixes #4373. ## Summary - Mark Erdős Problem 865 as formally solved per erdosproblems.com status sync - Add [Ci26] reference and solution note m"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/a54ccdca83844942438cb5a1d15c2820b22cada0
+      kind: github
+      quote: Mark Erdős Problem 865 as formally solved per erdosproblems.com status sync
+    authors:
+      - akshitj11
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 865". Classifier rationale: The commit explicitly states the problem is now marked as formally solved. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/865.lean
     source: google-deepmind/formal-conjectures
