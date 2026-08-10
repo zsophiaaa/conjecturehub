@@ -12,7 +12,24 @@ openness_basis:
   meaning: unknown
   asserted_by: wikidata
   note: Identity record only. No statement or status has been ingested for this conjecture yet.
-claims: []
+claims:
+  - id: van-der-waerden-permanent-conjecture-sweep-3fc5de7c
+    asserted_on: 2026-08-10
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-10
+    source:
+      title: Asymptotic Uniformity of Permanents of Random Matrices over Finite Fields of Odd Characteristic
+      url: https://arxiv.org/abs/2608.06391
+      kind: arxiv
+      quote: In this paper, we prove this conjecture.
+    authors:
+      - Shuang Sun
+      - Yuyao Yang
+      - Jiasheng Zeng
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "permanent". Classifier rationale: The paper explicitly states it proves the conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q16636852
     source: wikidata
