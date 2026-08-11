@@ -14,7 +14,23 @@ openness_basis:
   meaning: no_solution_known_to_community
   asserted_by: wikipedia
   note: Listed under "Unsolved problems in number theory" on English Wikipedia.
-claims: []
+claims:
+  - id: riemann-hypothesis-sweep-4a2dc7c7
+    asserted_on: 2026-08-11
+    type: partial
+    scope: proportion of zeros on the critical line
+    evidence_tier: unverified_claim
+    attestation: secondary
+    state: active
+    recorded_on: 2026-08-11
+    source:
+      title: Riemann hypothesis
+      url: https://en.wikipedia.org/wiki/Riemann_hypothesis
+      kind: wikipedia
+      quote: /* Zeros on the critical line */ Claude's improved lower bound..
+    authors:
+      - Habil zare
+    notes: 'Filed automatically by the Wikipedia edits sweep. Matched on "Riemann hypothesis". Classifier rationale: The edit reports an improved lower bound on zeros on the critical line, which is partial progress toward RH. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q205966
     source: wikidata
