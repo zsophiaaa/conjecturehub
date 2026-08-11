@@ -54,7 +54,22 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: erdos-304-sweep-7611e4e1
+    asserted_on: 2026-08-11
+    type: partial
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-11
+    source:
+      title: "formal-conjectures PR #4870: Formalize the van Doorn–Tang reduction for Erdős Problem 304"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/4870
+      kind: github
+      quote: This is a related reduction, not a proof of the open conjecture N(b)=O(log\log b).
+    authors:
+      - Riemann15
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 304". Classifier rationale: The PR reports a reduction but explicitly says it does not resolve the conjecture, indicating partial progress. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/304.lean
     source: google-deepmind/formal-conjectures
