@@ -10,7 +10,23 @@ openness_basis:
   meaning: unknown
   asserted_by: wikidata
   note: Identity record only. No statement or status has been ingested for this conjecture yet.
-claims: []
+claims:
+  - id: dittert-conjecture-sweep-eee23d9b
+    asserted_on: 2026-08-11
+    type: partial
+    scope: dimension 4
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-11
+    source:
+      title: A proof of the Dittert conjecture in dimension 4 via an exact constrained sum-of-squares certificate. ~ Jinhui Li, Beibei Xiong, Zhengfeng Yang. https:// arxiv.org/abs/2607.29191v2
+      url: https://mathstodon.xyz/@Jose_A_Alonso/117076857580249002
+      kind: mastodon
+      quote: A proof of the Dittert conjecture in dimension 4 via an exact constrained sum-of-squares certificate.
+    authors:
+      - José A. Alonso
+    notes: 'Filed automatically by the Mathstodon sweep. Matched on "Dittert conjecture". Classifier rationale: The document claims to prove the conjecture specifically for dimension 4. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q55609730
     source: wikidata

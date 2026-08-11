@@ -29,7 +29,24 @@ openness_basis:
   meaning: no_published_solution_known_to_curator
   asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: twin-prime-conjecture-sweep-aae14e9d
+    asserted_on: 2026-08-11
+    type: partial
+    scope: unconditionally, exponent 1.75
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-11
+    source:
+      title: Theorem $(1+1.9)$ on the Goldbach Conjecture
+      url: https://arxiv.org/abs/2606.05224
+      kind: arxiv
+      quote: Unconditionally, we prove Proposition $(1-1.75)$, and under the Elliott--Halberstam Conjecture, Proposition $(1-1.4)$.
+    authors:
+      - Jiamin Li
+      - Jianya Liu
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Twin prime conjecture". Classifier rationale: The paper reports new partial bounds toward the Twin Prime Conjecture, not a full resolution. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/TwinPrimes.lean
     source: google-deepmind/formal-conjectures

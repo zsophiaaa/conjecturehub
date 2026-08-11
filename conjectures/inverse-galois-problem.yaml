@@ -55,7 +55,22 @@ openness_basis:
   meaning: no_published_solution_known_to_curator
   asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: inverse-galois-problem-sweep-b5f5134d
+    asserted_on: 2026-08-11
+    type: partial
+    evidence_tier: unverified_claim
+    attestation: secondary
+    state: active
+    recorded_on: 2026-08-11
+    source:
+      title: Inverse Galois problem
+      url: https://en.wikipedia.org/wiki/Inverse_Galois_problem
+      kind: wikipedia
+      quote: /* Partial results */
+    authors:
+      - ~2026-44059-59
+    notes: 'Filed automatically by the Wikipedia edits sweep. Matched on "Inverse Galois problem". Classifier rationale: The edit summary states that the article now includes partial results, indicating partial progress on the conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/InverseGalois.lean
     source: google-deepmind/formal-conjectures

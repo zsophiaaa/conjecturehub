@@ -10,7 +10,22 @@ openness_basis:
   meaning: no_solution_known_to_community
   asserted_by: wikipedia
   note: Listed under "Unsolved problems in graph theory" on English Wikipedia.
-claims: []
+claims:
+  - id: imbalance-conjecture-sweep-0e7039a0
+    asserted_on: 2026-08-11
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-11
+    source:
+      title: A Proof of the Imbalance Conjecture
+      url: https://arxiv.org/abs/2608.09191
+      kind: arxiv
+      quote: We prove this conjecture.
+    authors:
+      - Yousof Yavari
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "imbalance conjecture". Classifier rationale: The paper explicitly states it provides a proof of the Imbalance Conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q136485238
     source: wikidata

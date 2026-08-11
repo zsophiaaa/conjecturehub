@@ -27,6 +27,19 @@ claims:
       Standing taken from English Wikipedia's categorisation (Wikipedia categorises this as disproved). Nobody here has read the paper that settled it, which is what the secondary attestation says; replace this claim with one citing that paper when someone has it to hand.
 
       Reviewed 2026-08-03: True for n <= 3 and open for every dimension from 4 to 63, so the answer is dimension-dependent and partly unknown. Kahn–Kalai 1993 gave the first counterexample at n = 1325; Jenrich–Brouwer 2014 brought the threshold to 64. See https://en.wikipedia.org/wiki/Borsuk's_conjecture.
+  - id: borsuk-s-conjecture-sweep-ff5b8517
+    asserted_on: 2026-08-11
+    type: counterexample
+    evidence_tier: unverified_claim
+    attestation: secondary
+    state: active
+    recorded_on: 2026-08-11
+    source:
+      title: Claude finds a new lowest-ever counterexample to Borsuk's Conjecture
+      url: https://nickk124.github.io/borsuk/
+      kind: hackernews
+      quote: Claude finds a new lowest-ever counterexample to Borsuk's Conjecture
+    notes: "Filed automatically by the Hacker News sweep. Matched on \"Borsuk's conjecture\". Classifier rationale: The title asserts that a new counterexample to Borsuk's conjecture has been found. Unreviewed: this records that a claim was made, not that it is correct."
 provenance:
   - url: https://www.wikidata.org/wiki/Q894242
     source: wikidata
