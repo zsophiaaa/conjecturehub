@@ -11,7 +11,23 @@ openness_basis:
   meaning: unknown
   asserted_by: wikidata
   note: Identity record only. No statement or status has been ingested for this conjecture yet.
-claims: []
+claims:
+  - id: hodge-conjecture-sweep-d653d73a
+    asserted_on: 2026-08-12
+    type: partial
+    scope: sextic fourfolds with minimal Waring rank
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-12
+    source:
+      title: Hodge Structures in Sextic Fourfolds Equipped with an Involution
+      url: https://arxiv.org/abs/2603.29157
+      kind: arxiv
+      quote: We verify this prediction in case the Waring rank of f(X_0, X_1, X_2) takes on its minimum possible value
+    authors:
+      - Benjamin E. Diamond
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Hodge conjecture". Classifier rationale: The paper proves the Hodge‑type prediction only for a restricted class of sextic fourfolds. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q1143138
     source: wikidata

@@ -39,7 +39,23 @@ openness_basis:
   meaning: no_published_solution_known_to_curator
   asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: bateman-horn-conjecture-sweep-65e76b75
+    asserted_on: 2026-08-12
+    type: partial
+    scope: averaged version for random binary forms
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-12
+    source:
+      title: Liouville function, von Mangoldt function and norm forms at random binary forms
+      url: https://arxiv.org/abs/2506.18065
+      kind: arxiv
+      quote: This approach yields averaged versions of the Chowla conjecture and the Bateman-Horn conjecture for random binary forms.
+    authors:
+      - Yijie Diao
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Bateman-Horn Conjecture". Classifier rationale: The paper reports proving an averaged form, which is a partial result rather than a full resolution. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/BatemanHornConjecture.lean
     source: google-deepmind/formal-conjectures

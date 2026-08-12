@@ -15,7 +15,22 @@ openness_basis:
   meaning: unknown
   asserted_by: wikidata
   note: Identity record only. No statement or status has been ingested for this conjecture yet.
-claims: []
+claims:
+  - id: kahn-kalai-conjecture-sweep-cba7cc25
+    asserted_on: 2026-08-12
+    type: counterexample
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-12
+    source:
+      title: "formal-conjectures PR #4872: Mark MathOverflow 10799 Kahn-Kalai variant as solved"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/4872
+      kind: github
+      quote: The Lean formalization ... establishes the literal negation of the proposition registered in Formal Conjectures.
+    authors:
+      - KitaKen1
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Kahn–Kalai conjecture". Classifier rationale: The document claims a formal proof that the conjecture is false. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q111724047
     source: wikidata

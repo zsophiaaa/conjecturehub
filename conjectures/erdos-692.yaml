@@ -28,6 +28,22 @@ claims:
       title: erdosproblems.com records this problem as "disproved"
       url: https://www.erdosproblems.com/692
       kind: dataset
+  - id: erdos-692-sweep-e658f1c4
+    asserted_on: 2026-08-12
+    type: proved
+    scope: Part II (existence of a maximizing endpoint)
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-12
+    source:
+      title: "formal-conjectures PR #4888: Mark Erdős Problem 692 Part II target as solved"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/4888
+      kind: github
+      quote: Mark Erdős Problem 692 Part II target as solved.
+    authors:
+      - KitaKen1
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 692". Classifier rationale: The pull request states that a kernel‑checked Lean proof resolves the formal statement of Part II. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
