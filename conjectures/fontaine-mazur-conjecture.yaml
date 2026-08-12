@@ -10,7 +10,23 @@ openness_basis:
   meaning: unknown
   asserted_by: wikidata
   note: Identity record only. No statement or status has been ingested for this conjecture yet.
-claims: []
+claims:
+  - id: fontaine-mazur-conjecture-sweep-ac6ea384
+    asserted_on: 2026-08-12
+    type: partial
+    scope: cases with |S| = 3
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-12
+    source:
+      title: Bockstein Spectral Sequences and Applications to the Tame Fontaine Mazur Conjecture
+      url: https://arxiv.org/abs/2608.10811
+      kind: arxiv
+      quote: Under mild conditions on K we show that for infinitely many triples S, the groups G_{K,S} have no nontrivial uniform quotients.
+    authors:
+      - Julian Feuerpfeil
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Fontaine–Mazur conjecture". Classifier rationale: The paper proves the conjecture only for many specific |S|=3 cases, not in full generality. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q5465120
     source: wikidata
