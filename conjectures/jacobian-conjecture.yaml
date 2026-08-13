@@ -83,6 +83,22 @@ claims:
       - David Barros Hulak
       - Ruy Jose Guerra Barretto de Queiroz
     notes: Isabelle/HOL formalisation accepted into the Archive of Formal Proofs. This is the one completed machine check of the counterexample; the Lean route remains an open Mathlib pull request. Not tagged machine_verified here because that tier is reserved for proofs checked by ConjectureHub CI against our own canonical statement.
+  - id: jacobian-conjecture-sweep-011594a0
+    asserted_on: 2026-08-13
+    type: partial
+    scope: real Jacobian conjecture, degree(p)=7 with leading homogeneous part α x^7+β x^6 y (α^2+β^2≠0)
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-13
+    source:
+      title: A note on the real Jacobian conjecture in degree 7
+      url: https://arxiv.org/abs/2608.12294
+      kind: arxiv
+      quote: We show that the real Jacobian conjecture holds if the degree of $p$ is 7 and the highest degree homogenous part is of the form $\alpha x^7 + \beta x^6y$ for $\alpha^2+\beta^2 \neq 0$.
+    authors:
+      - Tomasz Kowalczyk
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Jacobian conjecture". Classifier rationale: The paper proves the conjecture only under a specific degree‑7 real case, which is a partial result. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/JacobianConjecture.lean
     source: google-deepmind/formal-conjectures
