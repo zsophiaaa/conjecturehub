@@ -13,7 +13,23 @@ openness_basis:
   meaning: no_solution_known_to_community
   asserted_by: wikipedia
   note: Listed under "Unsolved problems in graph theory" on English Wikipedia.
-claims: []
+claims:
+  - id: second-neighborhood-problem-sweep-7390052c
+    asserted_on: 2026-08-13
+    type: partial
+    scope: oriented graphs with order n ≤ 2δ+2
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-13
+    source:
+      title: A dense-case theorem for Seymour's second neighborhood conjecture
+      url: https://arxiv.org/abs/2608.11530
+      kind: arxiv
+      quote: We give a short counting proof of the conjecture for every oriented graph of order $n=2\delta+2$, ... this implies the conjecture for every oriented graph satisfying $n\le2\delta+2$.
+    authors:
+      - Jake Brukhman
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "second neighborhood conjecture". Classifier rationale: The paper proves the conjecture only for a restricted dense case, not for all oriented graphs. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q60792926
     source: wikidata
