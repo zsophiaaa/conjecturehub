@@ -83,6 +83,21 @@ claims:
       - David Barros Hulak
       - Ruy Jose Guerra Barretto de Queiroz
     notes: Isabelle/HOL formalisation accepted into the Archive of Formal Proofs. This is the one completed machine check of the counterexample; the Lean route remains an open Mathlib pull request. Not tagged machine_verified here because that tier is reserved for proofs checked by ConjectureHub CI against our own canonical statement.
+  - id: jacobian-conjecture-sweep-1a3a373f
+    asserted_on: 2026-08-13
+    type: disproved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-13
+    source:
+      title: "formal-conjectures PR #4491: feat(Arxiv): add the Weyl algebra and the Dixmier conjecture (math/0608009)"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/4491
+      kind: github
+      quote: by the contrapositive of `DC_n ⟹ JC_n` [BCW82] and the disproof of the Jacobian conjecture (#4474)
+    authors:
+      - korbonits
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Jacobian conjecture". Classifier rationale: The pull request states that the Jacobian conjecture has been disproved. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/JacobianConjecture.lean
     source: google-deepmind/formal-conjectures

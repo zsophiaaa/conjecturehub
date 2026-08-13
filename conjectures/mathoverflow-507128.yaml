@@ -27,7 +27,22 @@ openness_basis:
   meaning: no_published_solution_known_to_curator
   asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: mathoverflow-507128-sweep-4c0deb91
+    asserted_on: 2026-08-13
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-13
+    source:
+      title: "formal-conjectures PR #4895: Point `formal_proof` links at files rather than commit and landing pages"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/4895
+      kind: github
+      quote: The commit touches 8 files. This one holds the theorem, and its README quotes our statement exactly.
+    authors:
+      - williamjblair
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Mathoverflow 507128". Classifier rationale: The PR claims the referenced Lean file contains a formal proof of the conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Mathoverflow/507128.lean
     source: google-deepmind/formal-conjectures
