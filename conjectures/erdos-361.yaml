@@ -42,7 +42,23 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: erdos-361-sweep-0cb8b534
+    asserted_on: 2026-08-14
+    type: proved
+    scope: asymptotic variant
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-14
+    source:
+      title: "formal-conjectures PR #4944: Mark Erdős Problem 361 asymptotic variant as solved"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/4944
+      kind: github
+      quote: Mark Erdős Problem 361 asymptotic variant as solved.
+    authors:
+      - KitaKen1
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 361". Classifier rationale: The document reports a Lean-checked proof establishing the asymptotic behavior of the problem. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/361.lean
     source: google-deepmind/formal-conjectures

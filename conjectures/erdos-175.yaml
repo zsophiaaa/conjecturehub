@@ -28,6 +28,21 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/175
       kind: dataset
+  - id: erdos-175-sweep-84f014a0
+    asserted_on: 2026-08-14
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-14
+    source:
+      title: "formal-conjectures PR #4315: feat(Erdos/175): add central binomial squarefree statement"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/4315
+      kind: github
+      quote: Encodes the proved statement that for every `n ≥ 5`, `Nat.choose (2 * n) n` is not squarefree.
+    authors:
+      - bengoechea
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 175". Classifier rationale: The pull request states the conjecture is proved, despite not providing a proof. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

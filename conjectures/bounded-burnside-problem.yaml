@@ -24,7 +24,22 @@ openness_basis:
   meaning: no_published_solution_known_to_curator
   asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: bounded-burnside-problem-sweep-9c9ca2b7
+    asserted_on: 2026-08-14
+    type: disproved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-14
+    source:
+      title: "formal-conjectures PR #4519: fix(Wikipedia/BoundedBurnsideProblem): record negative answer"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/4519
+      kind: github
+      quote: the cited source records infinite finitely generated groups of bounded exponent, so this exact universal proposition has a known negative answer.
+    authors:
+      - anagnorisis2peripeteia
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Bounded Burnside problem". Classifier rationale: The document states that the bounded Burnside problem is known to have a negative answer. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/BoundedBurnsideProblem.lean
     source: google-deepmind/formal-conjectures
