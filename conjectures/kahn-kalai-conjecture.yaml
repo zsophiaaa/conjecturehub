@@ -15,7 +15,23 @@ openness_basis:
   meaning: unknown
   asserted_by: wikidata
   note: Identity record only. No statement or status has been ingested for this conjecture yet.
-claims: []
+claims:
+  - id: kahn-kalai-conjecture-sweep-45173306
+    asserted_on: 2026-08-14
+    type: counterexample
+    scope: the variant formalized as Mathoverflow10799.mathoverflow_10799.variants.kahn_kalai_conjecture_7
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-14
+    source:
+      title: "formal-conjectures: Mark MathOverflow 10799 Kahn-Kalai variant as solved (#4872) This PR changes `Mathoverflow10799.mathoverflow_10799.variants.kahn_kalai_conjecture_7` from `answer(sorry)` to `answer(False)` and links a"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/97653e7d46486be1c1a6d734fad900d83485ed1f
+      kind: github
+      quote: "The external proof establishes the literal negation of the proposition registered in Formal Conjectures: ... ¬ (∀ (n : ℕ) ... ∃ p, ... Mathoverflow10799.IsOptimal p F)"
+    authors:
+      - KitaKen1
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Kahn–Kalai conjecture". Classifier rationale: The document reports a Lean-checked proof that this specific Kahn‑Kalai variant is false. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q111724047
     source: wikidata
