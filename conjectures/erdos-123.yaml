@@ -69,6 +69,21 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/123
       kind: dataset
+  - id: erdos-123-sweep-a654e5af
+    asserted_on: 2026-08-15
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-15
+    source:
+      title: "formal-conjectures PR #1636: Mark Erdős Problem #123 as SOLVED"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/1636
+      kind: github
+      quote: "Serunjogi (2026) proved that for **any** pairwise coprime integers a, b, c ≥ 2, the set S = {a^k b^ℓ c^m : k, ℓ, m ≥ 0} is **d-complete**."
+    authors:
+      - richtheworld
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem #123". Classifier rationale: The PR explicitly states that a proof has been provided, resolving the conjecture in full. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/123.lean
     source: google-deepmind/formal-conjectures
