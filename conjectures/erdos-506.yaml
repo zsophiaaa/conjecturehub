@@ -27,6 +27,22 @@ claims:
       title: erdosproblems.com records this problem as "decidable"
       url: https://www.erdosproblems.com/506
       kind: dataset
+  - id: erdos-506-sweep-d259ab12
+    asserted_on: 2026-08-14
+    type: resolved_by_prior_literature
+    scope: n > 393
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-15
+    source:
+      title: "formal-conjectures: feat(ErdosProblems/506): add circles-determined-by-n-points statement (#4396) Resolves #2128 ## Summary - Formalises [Erdős Problem 506](https://www.erdosproblems.com/506): the minimum number of circl"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/a2a45c07539a519aa264f7780a8cd2a1a5f46e3e
+      kind: github
+      quote: States Elliott's resolution for $n > 393$, with the Purdy–Smith correction \(\binom{n-1}{2} + 1 - \lfloor (n-1)/2 \rfloor\), as an `IsLeast` statement.
+    authors:
+      - theebayuser
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 506". Classifier rationale: The commit reports an existing resolution of the problem for n > 393. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
