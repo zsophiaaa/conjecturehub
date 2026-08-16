@@ -1,4 +1,45 @@
 {
-  "generatedAt": "2026-08-03",
-  "queue": []
+  "generatedAt": "2026-08-16",
+  "queue": [
+    {
+      "id": "hilbert-s-fourteenth-problem",
+      "title": "Hilbert's fourteenth problem",
+      "article": "https://en.wikipedia.org/wiki/Hilbert's_fourteenth_problem",
+      "signal": "disproved",
+      "reason": "Wikipedia categorises this as disproved",
+      "categories": [
+        "Category:Disproved conjectures",
+        "Category:Hilbert's problems",
+        "Category:Invariant theory"
+      ],
+      "needs": "a disproved claim with a named reviewer and a citation to the paper that settled it"
+    },
+    {
+      "id": "catalan-s-conjecture-and-related-diophantine-equations",
+      "title": "Catalan's conjecture and related Diophantine equations",
+      "article": "https://en.wikipedia.org/wiki/Catalan's_conjecture",
+      "signal": "proved",
+      "reason": "we publish this as open on google-deepmind/formal-conjectures's word, but Wikipedia categorises it as proved",
+      "categories": [
+        "Category:Abc conjecture",
+        "Category:Conjectures",
+        "Category:Conjectures that have been proved",
+        "Category:Diophantine equations",
+        "Category:Theorems in number theory"
+      ],
+      "needs": "a human to decide which source is stale, then either a claim or a note on the openness basis"
+    },
+    {
+      "id": "sendov-s-conjecture",
+      "title": "Sendov's conjecture",
+      "article": "https://en.wikipedia.org/wiki/Sendov's_conjecture",
+      "signal": "proved",
+      "reason": "we publish this as open on google-deepmind/formal-conjectures's word, but Wikipedia categorises it as proved",
+      "categories": [
+        "Category:Complex analysis",
+        "Category:Conjectures that have been proved"
+      ],
+      "needs": "a human to decide which source is stale, then either a claim or a note on the openness basis"
+    }
+  ]
 }
