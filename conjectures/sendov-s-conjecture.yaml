@@ -45,7 +45,22 @@ openness_basis:
   meaning: no_published_solution_known_to_curator
   asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: sendov-s-conjecture-sweep-37401355
+    asserted_on: 2026-08-16
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-16
+    source:
+      title: "A computer-assisted proof of Sendov’s conjecture. ~ Lech Mazur. https://www. proofatlas.ai/papers/sendov-co njecture/SENDOV_CONJECTURE_PROOF_AUGUST_5_2026.pdf # LeanProver # ITP # "
+      url: https://mathstodon.xyz/@Jose_A_Alonso/117104693861235277
+      kind: mastodon
+      quote: A computer-assisted proof of Sendov’s conjecture.
+    authors:
+      - José A. Alonso
+    notes: "Filed automatically by the Mathstodon sweep. Matched on \"Sendov's conjecture\". Classifier rationale: The document title asserts that a proof of the conjecture has been obtained. Unreviewed: this records that a claim was made, not that it is correct."
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/Sendov.lean
     source: google-deepmind/formal-conjectures

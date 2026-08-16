@@ -23,6 +23,21 @@ claims:
       url: https://en.wikipedia.org/wiki/Kepler_conjecture
       kind: wikipedia
     notes: Standing taken from English Wikipedia's categorisation (Wikipedia categorises this as proved). Nobody here has read the paper that settled it, which is what the secondary attestation says; replace this claim with one citing that paper when someone has it to hand.
+  - id: kepler-conjecture-sweep-47195309
+    asserted_on: 2026-08-16
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-16
+    source:
+      title: "Thomas Hales proved the Kepler Conjecture in 1998, using HOL Light # proof assistant. For the past ten years, he has been an avid user of # Lean . He justifies the choice in this s"
+      url: https://mathstodon.xyz/@AmenZwa/117107188360194021
+      kind: mastodon
+      quote: Thomas Hales proved the Kepler Conjecture in 1998, using HOL Light proof assistant.
+    authors:
+      - amen zwa, esq.
+    notes: 'Filed automatically by the Mathstodon sweep. Matched on "Kepler conjecture". Classifier rationale: The document explicitly states that Hales proved the conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q966873
     source: wikidata

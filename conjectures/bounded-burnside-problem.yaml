@@ -24,7 +24,22 @@ openness_basis:
   meaning: no_published_solution_known_to_curator
   asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: bounded-burnside-problem-sweep-9c9ca2b7
+    asserted_on: 2026-08-16
+    type: disproved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-16
+    source:
+      title: "formal-conjectures PR #4519: fix(Wikipedia/BoundedBurnsideProblem): record negative answer"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/4519
+      kind: github
+      quote: Novikov and Adian proved that for every odd n > 4381 there exist infinite, finitely generated groups of exponent n ... Any one of those groups, for example the free Burnside group B(2, 667), is finitely generated, has bounded exponent, and is infinite.
+    authors:
+      - anagnorisis2peripeteia
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Bounded Burnside problem". Classifier rationale: The document cites classical results providing infinite finitely generated groups of bounded exponent, thereby asserting the conjecture is false. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/BoundedBurnsideProblem.lean
     source: google-deepmind/formal-conjectures
