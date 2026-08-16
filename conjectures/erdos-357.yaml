@@ -128,7 +128,23 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: erdos-357-sweep-613a0e92
+    asserted_on: 2026-08-16
+    type: partial
+    scope: growth target variants (log n, √n)
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-16
+    source:
+      title: "formal-conjectures PR #4967: Mark three Erdős 357 growth targets as solved"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/4967
+      kind: github
+      quote: It leaves the central open problems `f(n) = o(n)` and `h(n) = o(n)` ... unchanged.
+    authors:
+      - KitaKen1
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 357". Classifier rationale: The document reports solving specific growth‑target versions while stating the main conjecture remains open. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/357.lean
     source: google-deepmind/formal-conjectures
