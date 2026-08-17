@@ -43,7 +43,23 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: erdos-979-sweep-b957d47c
+    asserted_on: 2026-08-17
+    type: proved
+    scope: k = 3
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-17
+    source:
+      title: "formal-conjectures: Add formal proof for Erdős Problem 979 k = 3 (#5017) This PR adds a `formal_proof` link to the solved `k = 3` variant of Erdős Problem 979. The Lean formalization was prepared by [KitaKen1 (Kenta Kita"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/398958d3964d738886bd24433918c365df4a2aab
+      kind: github
+      quote: Add formal proof for Erdős Problem 979 k = 3 ... the solved `k = 3` variant of Erdős Problem 979.
+    authors:
+      - KitaKen1
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 979". Classifier rationale: The document announces a formal proof establishing the k=3 case of the conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/979.lean
     source: google-deepmind/formal-conjectures

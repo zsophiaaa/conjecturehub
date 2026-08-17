@@ -29,6 +29,22 @@ claims:
       title: erdosproblems.com records this problem as "falsifiable"
       url: https://www.erdosproblems.com/106
       kind: dataset
+  - id: erdos-106-sweep-dde36d0e
+    asserted_on: 2026-08-17
+    type: partial
+    scope: no axis-parallel guillotine cuts can witness f(5) > 2
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-17
+    source:
+      title: Three squares in a $1 \times H$ rectangle have total side length at most $H$
+      url: https://arxiv.org/abs/2608.13595
+      kind: arxiv
+      quote: "no axis-parallel guillotine cut can witness f(5) > 2 in Erdos problem #106."
+    authors:
+      - Haobo Yang
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Erdos problem #106". Classifier rationale: The paper reports a partial result restricting a class of constructions for Erdős Problem 106. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

@@ -38,7 +38,23 @@ openness_basis:
   meaning: no_published_solution_known_to_curator
   asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: lonely-runner-conjecture-sweep-8bbd515a
+    asserted_on: 2026-08-17
+    type: partial
+    scope: cases r = 2 and r = 3
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-17
+    source:
+      title: "Single-speed modifications of the tight Lonely Runner instance: an effective bound and the complete classification for r = 2"
+      url: https://arxiv.org/abs/2608.13599
+      kind: arxiv
+      quote: We make their finiteness effective and settle the case they singled out.
+    authors:
+      - Yuhan Zhang
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Lonely runner conjecture". Classifier rationale: The paper claims to resolve specific instances of the Lonely Runner conjecture, not the full conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/LonelyRunnerConjecture.lean
     source: google-deepmind/formal-conjectures

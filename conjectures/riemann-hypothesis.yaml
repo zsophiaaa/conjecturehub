@@ -14,7 +14,24 @@ openness_basis:
   meaning: no_solution_known_to_community
   asserted_by: wikipedia
   note: Listed under "Unsolved problems in number theory" on English Wikipedia.
-claims: []
+claims:
+  - id: riemann-hypothesis-sweep-b4d4ea74
+    asserted_on: 2026-08-17
+    type: partial
+    scope: at least two thirds of nontrivial zeros are simple and lie on the critical line
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-17
+    source:
+      title: More than two thirds of the zeta zeros are simple and on the critical line
+      url: https://arxiv.org/abs/2608.13637
+      kind: arxiv
+      quote: We prove unconditionally that at least two thirds of the nontrivial zeros of the Riemann zeta function, counted with multiplicity, are simple and lie on the critical line
+    authors:
+      - Levent Alpöge
+      - Ralph Furman
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Riemann hypothesis". Classifier rationale: The paper reports a partial result toward RH, not a full proof or disproof. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q205966
     source: wikidata
