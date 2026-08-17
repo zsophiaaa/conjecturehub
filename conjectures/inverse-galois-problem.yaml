@@ -55,7 +55,23 @@ openness_basis:
   meaning: no_published_solution_known_to_curator
   asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: inverse-galois-problem-sweep-2ce476c1
+    asserted_on: 2026-08-17
+    type: partial
+    scope: iterated Galois groups of rational functions
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-17
+    source:
+      title: The inverse Galois problem of iterated Galois groups and their fixed-point proportion
+      url: https://arxiv.org/abs/2608.14524
+      kind: arxiv
+      quote: First, we investigate the inverse Galois problem, showing that iterated Galois groups of rational functions are always virtually mixing...
+    authors:
+      - Santiago Radi
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Inverse Galois problem". Classifier rationale: The paper reports a partial result concerning a specific class of Galois groups, not a full resolution of the conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/InverseGalois.lean
     source: google-deepmind/formal-conjectures

@@ -11,7 +11,23 @@ openness_basis:
   meaning: no_solution_known_to_community
   asserted_by: wikipedia
   note: Listed under "Unsolved problems in number theory" on English Wikipedia.
-claims: []
+claims:
+  - id: birch-and-swinnerton-dyer-conjecture-sweep-20f699cf
+    asserted_on: 2026-08-17
+    type: partial
+    scope: finiteness of Sha(E/K) reduced to one hypothesis
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-17
+    source:
+      title: Intensional semantics for comparison problems in arithmetic geometry
+      url: https://arxiv.org/abs/2608.13609
+      kind: arxiv
+      quote: We reduce the finiteness of \mathrm{Sha}(E/K) to one hypothesis.
+    authors:
+      - R. Laniewski
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Birch and Swinnerton-Dyer conjecture". Classifier rationale: The paper presents a reduction result rather than a full proof or disproof. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q527863
     source: wikidata
