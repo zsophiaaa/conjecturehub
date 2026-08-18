@@ -38,7 +38,23 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-09-28
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: erdos-1049-sweep-32bee261
+    asserted_on: 2026-08-18
+    type: partial
+    scope: integer bases t ≥ 2
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-18
+    source:
+      title: "formal-conjectures PR #5032: Add formal proof for Erdős Problem 1049 integer-base variant"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/5032
+      kind: github
+      quote: Add formal proof for Erdős Problem 1049 integer-base variant.
+    authors:
+      - wcook04
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 1049". Classifier rationale: The document reports a formal proof for the integer-base case, a partial resolution of the conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/1049.lean
     source: google-deepmind/formal-conjectures

@@ -50,7 +50,23 @@ openness_basis:
   meaning: no_published_solution_known_to_curator
   asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: casas-alvero-conjecture-sweep-96bb339a
+    asserted_on: 2026-08-18
+    type: partial
+    scope: any counterexample must have at least four terms in centred normal form
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-18
+    source:
+      title: A descent-set obstruction for the Casas-Alvero conjecture
+      url: https://arxiv.org/abs/2608.14726
+      kind: arxiv
+      quote: a counterexample has at least four terms in centred normal form
+    authors:
+      - Mohammad F. Marashdeh
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Casas-Alvero Conjecture". Classifier rationale: The paper provides new obstruction criteria but does not claim a full proof or disproof. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Paper/CasasAlvero.lean
     source: google-deepmind/formal-conjectures

@@ -24,6 +24,22 @@ claims:
       url: https://en.wikipedia.org/wiki/Property_P_conjecture
       kind: wikipedia
     notes: Standing taken from English Wikipedia's categorisation (Wikipedia categorises this as proved). Nobody here has read the paper that settled it, which is what the secondary attestation says; replace this claim with one citing that paper when someone has it to hand.
+  - id: property-p-conjecture-sweep-28cca0b1
+    asserted_on: 2026-08-18
+    type: partial
+    scope: virtually free groups (including the virtually cyclic case)
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-18
+    source:
+      title: "Cayley-tree pseudo-orbit tracing: period subgroups and relative geometry"
+      url: https://arxiv.org/abs/2608.16483
+      kind: arxiv
+      quote: Consequently every finitely generated virtually free group has this property, answering the virtually cyclic case posed by Doucha.
+    authors:
+      - Hui Xu
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Property P". Classifier rationale: The paper claims to prove the conjecture for a specific class of groups, which constitutes a partial resolution. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q7250222
     source: wikidata
