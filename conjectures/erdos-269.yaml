@@ -44,7 +44,23 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: erdos-269-sweep-f920f6fa
+    asserted_on: 2026-08-18
+    type: partial
+    scope: three-prime case
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-18
+    source:
+      title: "formal-conjectures PR #5041: Erdős 269: add the three-prime smooth-prefix LCM identity"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/5041
+      kind: github
+      quote: The finite-prime case of Erdős 269, including the three-prime case, remains open.
+    authors:
+      - wcook04
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 269". Classifier rationale: The document adds a related LCM identity but explicitly says the conjecture is still open, indicating partial progress. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/269.lean
     source: google-deepmind/formal-conjectures
