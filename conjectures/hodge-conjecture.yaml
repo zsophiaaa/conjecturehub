@@ -11,7 +11,24 @@ openness_basis:
   meaning: unknown
   asserted_by: wikidata
   note: Identity record only. No statement or status has been ingested for this conjecture yet.
-claims: []
+claims:
+  - id: hodge-conjecture-sweep-6209ecba
+    asserted_on: 2026-08-18
+    type: partial
+    scope: for the varieties X_1^σ and X_3^σ
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-18
+    source:
+      title: Some divisors in the moduli space of Debarre-Voisin varieties
+      url: https://arxiv.org/abs/2106.06859
+      kind: arxiv
+      quote: X_1^σ and X_3^σ both satisfy the integral Hodge conjecture in all degrees.
+    authors:
+      - Vladimiro Benedetti
+      - Jieao Song
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Hodge conjecture". Classifier rationale: The paper proves the integral Hodge conjecture for specific Debarre‑Voisin related varieties, a partial result on the Hodge conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q1143138
     source: wikidata
