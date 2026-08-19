@@ -10,7 +10,24 @@ openness_basis:
   meaning: no_solution_known_to_community
   asserted_by: wikipedia
   note: Listed under "Unsolved problems in geometry" on English Wikipedia.
-claims: []
+claims:
+  - id: chern-s-conjecture-sweep-86694d5c
+    asserted_on: 2026-08-19
+    type: disproved
+    scope: n ≥ 3, m ≥ 4; even n ≥ 4, m ≥ 3
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-19
+    source:
+      title: On Chern's conjecture for minimal submanifolds of the sphere
+      url: https://arxiv.org/abs/2608.18074
+      kind: arxiv
+      quote: We disprove this conjecture for all $n \geq 3$ with $m \geq 4$, and for even $n \geq 4$ with $m \geq 3$.
+    authors:
+      - Benjy Firester
+      - Raphael Tsiamis
+    notes: "Filed automatically by the arXiv new submissions sweep. Matched on \"Chern's conjecture\". Classifier rationale: The abstract explicitly states a disproof of Chern's conjecture for those dimension ranges. Unreviewed: this records that a claim was made, not that it is correct."
 provenance:
   - url: https://www.wikidata.org/wiki/Q65078627
     source: wikidata

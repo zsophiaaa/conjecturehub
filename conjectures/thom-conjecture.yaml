@@ -22,6 +22,21 @@ claims:
       url: https://en.wikipedia.org/wiki/Thom_conjecture
       kind: wikipedia
     notes: Standing taken from English Wikipedia's categorisation (Wikipedia categorises this as proved). Nobody here has read the paper that settled it, which is what the secondary attestation says; replace this claim with one citing that paper when someone has it to hand.
+  - id: thom-conjecture-sweep-ebc4675d
+    asserted_on: 2026-08-19
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-19
+    source:
+      title: Symplectic trisections and the adjunction inequality
+      url: https://arxiv.org/abs/2009.11263
+      kind: arxiv
+      quote: we can give gauge-theory-free proofs of ... the symplectic Thom conjecture
+    authors:
+      - Peter Lambert-Cole
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Thom conjecture". Classifier rationale: The abstract explicitly says the paper provides a proof of the symplectic Thom conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q2421730
     source: wikidata
