@@ -10,7 +10,25 @@ openness_basis:
   meaning: no_solution_known_to_community
   asserted_by: wikipedia
   note: Listed under "Unsolved problems in geometry" on English Wikipedia.
-claims: []
+claims:
+  - id: nakai-conjecture-sweep-439de0fd
+    asserted_on: 2026-08-19
+    type: partial
+    scope: isolated weighted homogeneous hypersurface singularities
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-19
+    source:
+      title: Nakai conjectures for isolated weighted homogeneous hypersurface singularities
+      url: https://arxiv.org/abs/2604.24508
+      kind: arxiv
+      quote: we verify the Nakai Conjecture for isolated weighted homogeneous hypersurface singularities.
+    authors:
+      - Stephen S. -T. Yau
+      - Qiwei Zhu
+      - Huaiqing Zuo
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Nakai conjecture". Classifier rationale: The paper claims to prove the conjecture for this specific class of singularities. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q6960163
     source: wikidata

@@ -10,7 +10,24 @@ openness_basis:
   meaning: no_solution_known_to_community
   asserted_by: wikipedia
   note: Listed under "Unsolved problems in geometry" on English Wikipedia.
-claims: []
+claims:
+  - id: pompeiu-problem-sweep-511b118f
+    asserted_on: 2026-08-19
+    type: proved
+    scope: discrete version for all finite subsets of ℝ^k, k≥2
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-19
+    source:
+      title: Solutions to the discrete Pompeiu problem and to the finite Steinhaus tiling problem
+      url: https://arxiv.org/abs/2403.01279
+      kind: arxiv
+      quote: We prove that if a function f:ℝ^k→ℂ is such that the sum of f on every congruent copy of K is zero, then f vanishes everywhere.
+    authors:
+      - Gergely Kiss
+      - Miklós Laczkovich
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Pompeiu problem". Classifier rationale: The abstract states a proof of the discrete Pompeiu problem for all finite sets. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q3406234
     source: wikidata
