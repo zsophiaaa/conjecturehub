@@ -30,7 +30,22 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: erdos-251-sweep-8cc6f372
+    asserted_on: 2026-08-19
+    type: reformulation
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-19
+    source:
+      title: "formal-conjectures PR #5042: Erdős 251: add the prime-gap summation-by-parts identity and irrationality transfer"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/5042
+      kind: github
+      quote: These are exact reformulations. They do not prove either series irrational, and `erdos_251` remains open and untouched.
+    authors:
+      - wcook04
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 251". Classifier rationale: The document presents a formal equivalence but states the conjecture remains open. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/251.lean
     source: google-deepmind/formal-conjectures
