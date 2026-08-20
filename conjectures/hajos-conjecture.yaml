@@ -13,7 +13,23 @@ openness_basis:
   meaning: unknown
   asserted_by: wikidata
   note: Identity record only. No statement or status has been ingested for this conjecture yet.
-claims: []
+claims:
+  - id: hajos-conjecture-sweep-fb25a483
+    asserted_on: 2026-08-20
+    type: partial
+    scope: large girth graphs
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-20
+    source:
+      title: I was surprised to learn today that Daniela Kühn and Deryk Osthus have retired. Their PhD graduations were in the same year as me (2000), and I was in the audience in 2003 when the
+      url: https://mathstodon.xyz/@DavidWood/117129874640420019
+      kind: mastodon
+      quote: establishing Hadwiger's and Hajos' conjecture for large girth graphs.
+    authors:
+      - David Wood
+    notes: "Filed automatically by the Mathstodon sweep. Matched on \"Hajós' conjecture\". Classifier rationale: The document states they have proved Hajós' conjecture for graphs of large girth, which is a partial result. Unreviewed: this records that a claim was made, not that it is correct."
 provenance:
   - url: https://www.wikidata.org/wiki/Q27889470
     source: wikidata

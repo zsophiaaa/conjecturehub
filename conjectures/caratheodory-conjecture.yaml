@@ -12,7 +12,39 @@ openness_basis:
   meaning: unknown
   asserted_by: wikidata
   note: Identity record only. No statement or status has been ingested for this conjecture yet.
-claims: []
+claims:
+  - id: caratheodory-conjecture-sweep-131e5038
+    asserted_on: 2026-08-20
+    type: disproved
+    scope: smooth
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-20
+    source:
+      title: "formal-conjectures PR #5066: Formalize Carathéodory's and Loewner's conjectures"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/5066
+      kind: github
+      quote: That PR proves both smooth statements false
+    authors:
+      - Paul-Lez
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Carathéodory conjecture". Classifier rationale: The PR description states the smooth Carathéodory conjecture is proved false. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: caratheodory-conjecture-sweep-36b20573
+    asserted_on: 2026-08-20
+    type: counterexample
+    scope: smooth case
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-20
+    source:
+      title: "formal-conjectures PR #5070: Prove the smooth Carathéodory and Loewner counterexamples"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/5070
+      kind: github
+      quote: mark the smooth Loewner and Carathéodory conjectures `answer(False)`
+    authors:
+      - Paul-Lez
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Carathéodory conjecture". Classifier rationale: The PR claims to provide a smooth counterexample, thereby refuting the conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q5037753
     source: wikidata

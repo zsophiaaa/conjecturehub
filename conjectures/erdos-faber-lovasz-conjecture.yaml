@@ -10,7 +10,22 @@ openness_basis:
   meaning: no_solution_known_to_community
   asserted_by: wikipedia
   note: Listed under "Unsolved problems in graph theory" on English Wikipedia.
-claims: []
+claims:
+  - id: erdos-faber-lovasz-conjecture-sweep-fb25a483
+    asserted_on: 2026-08-20
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-20
+    source:
+      title: I was surprised to learn today that Daniela Kühn and Deryk Osthus have retired. Their PhD graduations were in the same year as me (2000), and I was in the audience in 2003 when the
+      url: https://mathstodon.xyz/@DavidWood/117129874640420019
+      kind: mastodon
+      quote: Proved the Erdős-Faber-Lovasz conjecture on colouring linear hypergraphs, with Kang, Kelly and Methuku
+    authors:
+      - David Wood
+    notes: 'Filed automatically by the Mathstodon sweep. Matched on "Erdős–Faber–Lovász conjecture". Classifier rationale: The document states that the authors have proved the conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q5385322
     source: wikidata

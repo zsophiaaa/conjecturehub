@@ -27,6 +27,22 @@ claims:
       title: erdosproblems.com records this problem as "not disprovable"
       url: https://www.erdosproblems.com/1154
       kind: dataset
+  - id: erdos-1154-sweep-214d9250
+    asserted_on: 2026-08-20
+    type: partial
+    scope: real‑closed fields whose reals have Turing degrees in a Turing ideal
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-20
+    source:
+      title: From Erdos Problem 1154 to a Zero One Law for Turing Ideals
+      url: https://arxiv.org/abs/2608.18955
+      kind: arxiv
+      quote: Erd\H{o}s Problem 1154 asks whether every number in $[0,1]$ occurs as the Hausdorff dimension of a subring or subfield of $\mathbb{R$.
+    authors:
+      - Yi Wang
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Erdos Problem 1154". Classifier rationale: The paper proves a zero‑one law for Turing ideals, giving partial progress but not a full resolution of the conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
