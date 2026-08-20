@@ -22,6 +22,21 @@ claims:
       url: https://en.wikipedia.org/wiki/Smale_conjecture
       kind: wikipedia
     notes: Standing taken from English Wikipedia's categorisation (Wikipedia categorises this as proved). Nobody here has read the paper that settled it, which is what the secondary attestation says; replace this claim with one citing that paper when someone has it to hand.
+  - id: smale-conjecture-sweep-6328696a
+    asserted_on: 2026-08-20
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-20
+    source:
+      title: anyways, hatcher's proof of the smale conjecture is equal parts fun and not-fun to read.
+      url: https://mathstodon.xyz/@MBCarr/117129303462574006
+      kind: mastodon
+      quote: hatcher's proof of the smale conjecture
+    authors:
+      - Matt Carr
+    notes: 'Filed automatically by the Mathstodon sweep. Matched on "Smale conjecture". Classifier rationale: The document states that Hatcher has provided a proof of the Smale conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q16947992
     source: wikidata
