@@ -12,7 +12,23 @@ openness_basis:
   meaning: unknown
   asserted_by: wikidata
   note: Identity record only. No statement or status has been ingested for this conjecture yet.
-claims: []
+claims:
+  - id: kakeya-needle-problem-sweep-41613c8b
+    asserted_on: 2026-08-20
+    type: partial
+    scope: dimensions ≥ 3, sticky case
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-20
+    source:
+      title: Bourgain's condition, sticky Kakeya, and new examples
+      url: https://arxiv.org/abs/2511.10918
+      kind: arxiv
+      quote: We prove that in all dimensions at least 3 ... the sticky case of the corresponding curved Kakeya conjecture reduces to the sticky case of the classical Kakeya conjecture.
+    authors:
+      - Arian Nadjimzadah
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Kakeya conjecture". Classifier rationale: The paper claims a reduction for the sticky case in dimensions ≥3, which is a partial result on the Kakeya conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q3406254
     source: wikidata

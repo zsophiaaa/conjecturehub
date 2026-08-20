@@ -10,7 +10,25 @@ openness_basis:
   meaning: unknown
   asserted_by: wikidata
   note: Identity record only. No statement or status has been ingested for this conjecture yet.
-claims: []
+claims:
+  - id: kneser-tits-conjecture-sweep-58f61715
+    asserted_on: 2026-08-20
+    type: proved
+    scope: over p-adically closed fields
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-20
+    source:
+      title: On groups definable in $p$-adically closed fields
+      url: https://arxiv.org/abs/2601.20565
+      kind: arxiv
+      quote: we will prove the Kneser-Tits conjecture over $p$-adically closed fields.
+    authors:
+      - Anand Pillay
+      - Ningyuan Yao
+      - Zhentao Zhang
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Kneser–Tits conjecture". Classifier rationale: The abstract explicitly states a proof of the conjecture in that setting. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q6421982
     source: wikidata

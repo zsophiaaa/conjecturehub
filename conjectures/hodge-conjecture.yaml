@@ -11,7 +11,23 @@ openness_basis:
   meaning: unknown
   asserted_by: wikidata
   note: Identity record only. No statement or status has been ingested for this conjecture yet.
-claims: []
+claims:
+  - id: hodge-conjecture-sweep-f9ba1eaf
+    asserted_on: 2026-08-20
+    type: partial
+    scope: Fermat fourfolds of odd degree ≤199
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-20
+    source:
+      title: The Hodge conjecture for Fermat fourfolds of odd degree at most 199
+      url: https://arxiv.org/abs/2608.18134
+      kind: arxiv
+      quote: We give a computer-assisted proof of the Hodge conjecture for $X^4_m$ for every odd $m\le 199$
+    authors:
+      - Rifat Jumagulov
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Hodge conjecture". Classifier rationale: The paper claims a proof of the conjecture for a specific family of varieties, not the full conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q1143138
     source: wikidata

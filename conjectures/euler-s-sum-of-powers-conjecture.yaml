@@ -59,6 +59,22 @@ claims:
       url: https://en.wikipedia.org/wiki/Euler's_sum_of_powers_conjecture
       kind: wikipedia
     notes: Standing taken from English Wikipedia's categorisation (we publish this as open on google-deepmind/formal-conjectures's word, but Wikipedia categorises it as disproved). Nobody here has read the paper that settled it, which is what the secondary attestation says; replace this claim with one citing that paper when someone has it to hand.
+  - id: euler-s-sum-of-powers-conjecture-sweep-30b40dc4
+    asserted_on: 2026-08-20
+    type: counterexample
+    scope: k = 5
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-20
+    source:
+      title: The fourth known primitive solution to $a^5 + b^5 + c^5 + d^5 = e^5$
+      url: https://arxiv.org/abs/2603.05549
+      kind: arxiv
+      quote: We report the fourth known primitive solution to the Diophantine equation $a^5 + b^5 + c^5 + d^5 = e^5$
+    authors:
+      - Jeffrey Braun
+    notes: "Filed automatically by the arXiv new submissions sweep. Matched on \"Euler's sum of powers conjecture\". Classifier rationale: The paper presents a new primitive solution for k=5, providing another counterexample to Euler's sum of powers conjecture. Unreviewed: this records that a claim was made, not that it is correct."
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/EulerSumOfPowers.lean
     source: google-deepmind/formal-conjectures

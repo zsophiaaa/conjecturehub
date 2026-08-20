@@ -12,7 +12,24 @@ openness_basis:
   meaning: unknown
   asserted_by: wikidata
   note: Identity record only. No statement or status has been ingested for this conjecture yet.
-claims: []
+claims:
+  - id: restriction-conjecture-sweep-9c4aa189
+    asserted_on: 2026-08-20
+    type: partial
+    scope: four dimensions, exponent r>23/7
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-20
+    source:
+      title: "On the prime field spherical restriction conjecture in four dimensions: breaking the Stein-Tomas exponent and applications"
+      url: https://arxiv.org/abs/2606.03627
+      kind: arxiv
+      quote: we prove that \[ R_{S_j}^*(2\to r)\lesssim_r 1 \] for every non-zero radius sphere $S_j\subseteq\mathbb F_p^4$ and every $r>23/7$, thereby breaking the Stein--Tomas exponent of $10/3$.
+    authors:
+      - Thang Pham
+      - Boqing Xue
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "restriction conjecture". Classifier rationale: The paper establishes a new exponent bound, which is a partial advance toward the Fourier restriction conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q135423966
     source: wikidata

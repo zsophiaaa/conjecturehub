@@ -14,7 +14,30 @@ openness_basis:
   meaning: no_solution_known_to_community
   asserted_by: wikipedia
   note: Listed under "Unsolved problems in number theory" on English Wikipedia.
-claims: []
+claims:
+  - id: riemann-hypothesis-sweep-e894c8c7
+    asserted_on: 2026-08-20
+    type: partial
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-20
+    source:
+      title: "Eureka: Task-Conditioned Meta-Agent Orchestration for Scientific Discovery"
+      url: https://arxiv.org/abs/2608.19047
+      kind: arxiv
+      quote: advances a positivity certificate for Suzuki's localized Weil quadratic form to 0 < a <= 69/200 = 0.345, reaching ~99.55% of (log 2)/2
+    authors:
+      - Alizer Wong
+      - Heng Cui
+      - Yi Tan
+      - Xiongchao Zhan
+      - Liang Lin
+      - Yuxiang Guo
+      - Zhaorong Dai
+      - Zixin Zeng
+      - Wenyuan Li
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Riemann hypothesis". Classifier rationale: The document reports partial progress toward the Riemann hypothesis, not a proof or disproof. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q205966
     source: wikidata
