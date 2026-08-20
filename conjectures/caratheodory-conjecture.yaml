@@ -12,7 +12,22 @@ openness_basis:
   meaning: unknown
   asserted_by: wikidata
   note: Identity record only. No statement or status has been ingested for this conjecture yet.
-claims: []
+claims:
+  - id: caratheodory-conjecture-sweep-15c49bbf
+    asserted_on: 2026-08-20
+    type: counterexample
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-20
+    source:
+      title: "formal-conjectures PR #5073: State Carathéodory umbilics via fundamental forms"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/5073
+      kind: github
+      quote: final Carathéodory refutation
+    authors:
+      - Paul-Lez
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Carathéodory conjecture". Classifier rationale: The PR states that a counterexample has been proved, refuting the conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q5037753
     source: wikidata
