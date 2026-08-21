@@ -14,7 +14,24 @@ openness_basis:
   meaning: no_solution_known_to_community
   asserted_by: wikipedia
   note: Listed under "Unsolved problems in graph theory" on English Wikipedia.
-claims: []
+claims:
+  - id: cycle-double-cover-conjecture-sweep-1c5dcca3
+    asserted_on: 2026-08-21
+    type: partial
+    scope: strong embeddings on the projective plane, torus, and Klein bottle
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-21
+    source:
+      title: Strong Embeddings of 3-Connected Cubic Planar Graphs on Surfaces of non-negative Euler Characteristic
+      url: https://arxiv.org/abs/2407.17972
+      kind: arxiv
+      quote: motivated by the cycle double cover conjecture ... we provide a complete characterization ... establishes a robust foundation for computing cycle double covers.
+    authors:
+      - Meike Weiß
+      - Alice C. Niemeyer
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "cycle double cover conjecture". Classifier rationale: The paper offers new tools and characterizations related to the conjecture but does not claim a full proof or disproof. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q18217946
     source: wikidata

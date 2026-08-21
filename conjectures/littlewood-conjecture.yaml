@@ -10,7 +10,23 @@ openness_basis:
   meaning: no_solution_known_to_community
   asserted_by: wikipedia
   note: Listed under "Unsolved problems in number theory" on English Wikipedia.
-claims: []
+claims:
+  - id: littlewood-conjecture-sweep-2c2da270
+    asserted_on: 2026-08-21
+    type: partial
+    scope: for a class of numbers including particular equivalent numbers α,β
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-21
+    source:
+      title: Simultaneous approximation to pairs of real numbers
+      url: https://arxiv.org/abs/2608.20028
+      kind: arxiv
+      quote: As the result improves Dirichlet's theorem on simultaneous approximation it also confirms the classical Littlewood conjecture for such a pair α,β.
+    authors:
+      - Tapani Matala-aho
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Littlewood conjecture". Classifier rationale: The paper claims to prove the conjecture for a specific class of pairs, which is a partial resolution. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q6653177
     source: wikidata

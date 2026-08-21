@@ -10,7 +10,23 @@ openness_basis:
   meaning: unknown
   asserted_by: wikidata
   note: Identity record only. No statement or status has been ingested for this conjecture yet.
-claims: []
+claims:
+  - id: big-line-big-clique-conjecture-sweep-a4e7522e
+    asserted_on: 2026-08-21
+    type: partial
+    scope: finite point sets of size ≥ 10^{11055931}
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-21
+    source:
+      title: Large Finite Point Sets Have 4 Collinear Points or a 6-Clique
+      url: https://arxiv.org/abs/2608.19468
+      kind: arxiv
+      quote: We prove that every finite point set of size at least $10^{11055931}$ has four collinear points or six points that pairwise see each other. This resolves the first open case of the big-line-big-clique conjecture
+    authors:
+      - Édouard Bonnet
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Big-line-big-clique conjecture". Classifier rationale: The paper claims to resolve the first open case of the conjecture for sufficiently large point sets. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q116882024
     source: wikidata
