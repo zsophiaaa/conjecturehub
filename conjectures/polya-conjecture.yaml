@@ -26,6 +26,22 @@ claims:
       url: https://en.wikipedia.org/wiki/P%C3%B3lya_conjecture
       kind: wikipedia
     notes: Standing taken from English Wikipedia's categorisation (Wikipedia categorises this as disproved). Nobody here has read the paper that settled it, which is what the secondary attestation says; replace this claim with one citing that paper when someone has it to hand.
+  - id: polya-conjecture-sweep-9523695e
+    asserted_on: 2026-08-22
+    type: partial
+    scope: for balls
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-22
+    source:
+      title: Polya's conjecture is true for balls https:// functor.network/user/3333/entr y/1916
+      url: https://mathstodon.xyz/@dingc/117139802811696662
+      kind: mastodon
+      quote: Polya's conjecture is true for balls
+    authors:
+      - Functor Network
+    notes: "Filed automatically by the Mathstodon sweep. Matched on \"Pólya's conjecture\". Classifier rationale: The document asserts the conjecture holds in the specific case of balls, which is a partial resolution. Unreviewed: this records that a claim was made, not that it is correct."
 provenance:
   - url: https://www.wikidata.org/wiki/Q1441904
     source: wikidata
