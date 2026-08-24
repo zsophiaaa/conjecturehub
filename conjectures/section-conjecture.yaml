@@ -10,7 +10,24 @@ openness_basis:
   meaning: no_solution_known_to_community
   asserted_by: wikipedia
   note: Listed under "Unsolved problems in geometry" on English Wikipedia.
-claims: []
+claims:
+  - id: section-conjecture-sweep-cf8d03b0
+    asserted_on: 2026-08-24
+    type: proved
+    scope: imaginary quadratic fields with S empty or S a single prime not fixed by complex conjugation
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-24
+    source:
+      title: Polylogarithmic Chabauty--Kim loci over number fields
+      url: https://arxiv.org/abs/2608.20615
+      kind: arxiv
+      quote: we give a Chabauty--Kim theoretic proof of the $S$-Selmer Section Conjecture for imaginary quadratic fields when $S$ is empty or $S$ consists of a single prime not fixed by complex conjugation.
+    authors:
+      - Xiang Li
+      - Martin Lüdtke
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "section conjecture". Classifier rationale: The paper claims to prove the conjecture in a specific number‑field setting. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q7444680
     source: wikidata

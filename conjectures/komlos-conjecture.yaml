@@ -43,7 +43,22 @@ openness_basis:
   meaning: no_published_solution_known_to_curator
   asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: komlos-conjecture-sweep-81150b61
+    asserted_on: 2026-08-24
+    type: partial
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-24
+    source:
+      title: An amazing result giving the first improvement in the “Komlós combinatorial discrepancy problem” in almost 30 years (and it wasn’t done with AI). Given N unit-length vectors in R^d
+      url: https://mathstodon.xyz/@gregeganSF/117149995208617612
+      kind: mastodon
+      quote: The new result ... describes an algorithm that bounds the difference by O((log N)^{1/4}), improving on a previous result of O((log N)^{1/2}).
+    authors:
+      - Greg Egan
+    notes: 'Filed automatically by the Mathstodon sweep. Matched on "Komlós conjecture". Classifier rationale: The document reports an improved bound but does not claim a full proof or disproof of the conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/KomlosConjecture.lean
     source: google-deepmind/formal-conjectures

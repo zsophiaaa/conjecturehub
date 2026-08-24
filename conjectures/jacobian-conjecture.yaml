@@ -83,6 +83,21 @@ claims:
       - David Barros Hulak
       - Ruy Jose Guerra Barretto de Queiroz
     notes: Isabelle/HOL formalisation accepted into the Archive of Formal Proofs. This is the one completed machine check of the counterexample; the Lean route remains an open Mathlib pull request. Not tagged machine_verified here because that tier is reserved for proofs checked by ConjectureHub CI against our own canonical statement.
+  - id: jacobian-conjecture-sweep-35a8cc51
+    asserted_on: 2026-08-24
+    type: disproved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-24
+    source:
+      title: "RE: https:// mathstodon.xyz/@robinhouston/1 17147032178854981 Levent Alpöge, the guy who worked with Anthropic's Fable to disprove the Jacobian Conjecture, now claims to have crack"
+      url: https://mathstodon.xyz/@johncarlosbaez/117150693670978171
+      kind: mastodon
+      quote: Levent Alpöge, the guy who worked with Anthropic's Fable to disprove the Jacobian Conjecture
+    authors:
+      - John Carlos Baez
+    notes: 'Filed automatically by the Mathstodon sweep. Matched on "Jacobian conjecture". Classifier rationale: The post claims a disproof of the Jacobian Conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/JacobianConjecture.lean
     source: google-deepmind/formal-conjectures
