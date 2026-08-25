@@ -28,6 +28,21 @@ claims:
       url: https://www.erdosproblems.com/504
       kind: dataset
     notes: Upstream records this as solved without specifying the direction.
+  - id: erdos-504-sweep-c349cf8f
+    asserted_on: 2026-08-25
+    type: resolved_by_prior_literature
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-25
+    source:
+      title: "formal-conjectures PR #5156: feat: add Erdos problem 504 (Blumenthal minimax angle)"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/5156
+      kind: github
+      quote: Sendov's (1995) complete determination.
+    authors:
+      - ToshiDad
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdos problem 504". Classifier rationale: The PR states that Sendov fully resolved the problem, indicating it is already solved in prior literature. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
