@@ -43,7 +43,23 @@ openness_basis:
   meaning: no_published_solution_known_to_curator
   asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: legendre-s-conjecture-sweep-8b80f131
+    asserted_on: 2026-08-25
+    type: partial
+    scope: k ≤ 1.37×10^17
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-25
+    source:
+      title: A Matrix-Theoretic Exact Formula for Counting Primes in Intervals Between Consecutive Odd Squares
+      url: https://arxiv.org/abs/2605.21529
+      kind: arxiv
+      quote: We verify $P_k \geq 1$ for all $k \leq 10^8$ by direct computation and establish $P_k \geq 1$ for all $k \leq 1.37 \times 10^{17}$ using the Baker-Harman-Pintz theorem.
+    authors:
+      - Wujie Shi
+    notes: "Filed automatically by the arXiv new submissions sweep. Matched on \"Legendre's conjecture\". Classifier rationale: The paper reports verification of a weaker form of Legendre's conjecture up to a large bound, which is partial progress. Unreviewed: this records that a claim was made, not that it is correct."
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/LegendreConjecture.lean
     source: google-deepmind/formal-conjectures

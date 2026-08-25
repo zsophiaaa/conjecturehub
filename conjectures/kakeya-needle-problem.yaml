@@ -12,7 +12,23 @@ openness_basis:
   meaning: unknown
   asserted_by: wikidata
   note: Identity record only. No statement or status has been ingested for this conjecture yet.
-claims: []
+claims:
+  - id: kakeya-needle-problem-sweep-3c075c1c
+    asserted_on: 2026-08-25
+    type: partial
+    scope: dimension 3
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-25
+    source:
+      title: "Rotating needles in space: the road to the Kakeya conjecture, and why it matters"
+      url: https://arxiv.org/abs/2608.22209
+      kind: arxiv
+      quote: the road to the solution of this conjecture in three dimensions by Hong Wang and Joshua Zahl.
+    authors:
+      - Terence Tao
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Kakeya conjecture". Classifier rationale: The abstract states a solution is claimed for the three‑dimensional case, indicating partial resolution. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q3406254
     source: wikidata

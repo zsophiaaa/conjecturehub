@@ -11,7 +11,23 @@ openness_basis:
   meaning: no_solution_known_to_community
   asserted_by: wikipedia
   note: Listed under "Unsolved problems in number theory" on English Wikipedia.
-claims: []
+claims:
+  - id: szpiro-s-conjecture-sweep-f9df01d4
+    asserted_on: 2026-08-25
+    type: partial
+    scope: elliptic curves over Q with integral j-invariant
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-25
+    source:
+      title: Power-saving bounds for Thue--Mahler and Mordell equations
+      url: https://arxiv.org/abs/2608.23559
+      kind: arxiv
+      quote: we obtain a power-saving improvement in the conductor aspect of the strongest currently available bounds for Frey's height conjecture (a strengthening of Szpiro's conjecture) in the case of elliptic curves over \mathbb{Q} with integral j-invariant.
+    authors:
+      - Hector Pasten
+    notes: "Filed automatically by the arXiv new submissions sweep. Matched on \"Szpiro's conjecture\". Classifier rationale: The paper reports improved bounds related to a strengthening of Szpiro's conjecture, which is partial progress, not a resolution. Unreviewed: this records that a claim was made, not that it is correct."
 provenance:
   - url: https://www.wikidata.org/wiki/Q829242
     source: wikidata

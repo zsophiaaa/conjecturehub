@@ -26,6 +26,24 @@ claims:
       Standing taken from English Wikipedia's categorisation (Wikipedia categorises this as disproved). Nobody here has read the paper that settled it, which is what the secondary attestation says; replace this claim with one citing that paper when someone has it to hand.
 
       Retracted 2026-08-03 after review: Wikipedia's 'Milnor conjecture' is a disambiguation page. The K-theory version (Voevodsky) and the knot-theory version on the slice genus of torus knots (Kronheimer–Mrowka 1993) are proved; the Ricci-curvature version is disproved only in dimension >= 6 (Bruè–Naber–Semola) and open in dimensions 4 and 5. A bare 'disproved' under the bare name is wrong for two of the three. Needs splitting into separate records before any status can be filed. See https://en.wikipedia.org/wiki/Milnor_conjecture.
+  - id: milnor-conjecture-sweep-e488fe33
+    asserted_on: 2026-08-25
+    type: partial
+    scope: simple parabolic maps
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-25
+    source:
+      title: "On the parabolic Fatou domains II: rigidity"
+      url: https://arxiv.org/abs/2608.22328
+      kind: arxiv
+      quote: confirming the Goldberg--Milnor conjecture for simple parabolic maps.
+    authors:
+      - Ning Gao
+      - Yan Gao
+      - Wenjuan Peng
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Milnor conjecture". Classifier rationale: The abstract states the conjecture is confirmed only for the subclass of simple parabolic maps. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q126193031
     source: wikidata
