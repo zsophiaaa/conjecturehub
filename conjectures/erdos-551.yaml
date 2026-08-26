@@ -28,6 +28,21 @@ claims:
       title: erdosproblems.com records this problem as "decidable"
       url: https://www.erdosproblems.com/551
       kind: dataset
+  - id: erdos-551-sweep-d9d33fad
+    asserted_on: 2026-08-26
+    type: reformulation
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-26
+    source:
+      title: "formal-conjectures PR #4451: feat(Erdos): Erdős Problem 551 (Ramsey number of a cycle vs a clique)"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/4451
+      kind: github
+      quote: Formalizes [Erdős Problem 551]... the Bondy–Erdős conjecture on the cycle–complete Ramsey number.
+    authors:
+      - him1411
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 551". Classifier rationale: The document states it formalizes the conjecture, which is a reformulation. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

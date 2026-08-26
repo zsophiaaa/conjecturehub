@@ -29,6 +29,21 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/372
       kind: dataset
+  - id: erdos-372-sweep-6a9fbba7
+    asserted_on: 2026-08-26
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-26
+    source:
+      title: "formal-conjectures PR #4316: feat(Erdos/372): add largest prime factor chain statement"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/4316
+      kind: github
+      quote: The page is marked `PROVED` and `Formalised statement? No`.
+    authors:
+      - bengoechea
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 372". Classifier rationale: The pull request states the source page marks Erdős Problem 372 as proved. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
