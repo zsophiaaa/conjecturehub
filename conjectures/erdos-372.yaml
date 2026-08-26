@@ -29,6 +29,21 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/372
       kind: dataset
+  - id: erdos-372-sweep-42acf347
+    asserted_on: 2026-08-26
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-26
+    source:
+      title: "formal-conjectures: feat(Erdos/372): add largest prime factor chain statement (#4316) ## Summary - Adds an Erdős Problem 372 statement file for the largest-prime-factor chain problem. - Encodes Balog’s proved statement t"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/bfea74a5521e83c60360b10c7af6c5d890df4553
+      kind: github
+      quote: Encodes Balog’s proved statement that there are infinitely many `n` such that `P(n) > P(n+1) > P(n+2)`.
+    authors:
+      - bengoechea
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 372". Classifier rationale: The document reports that Balog has proved the statement associated with Erdős Problem 372. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
