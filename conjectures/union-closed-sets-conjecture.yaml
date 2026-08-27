@@ -73,7 +73,23 @@ openness_basis:
   meaning: no_published_solution_known_to_curator
   asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: union-closed-sets-conjecture-sweep-0c2a7a03
+    asserted_on: 2026-08-27
+    type: partial
+    scope: union-closed families of height at most four
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-27
+    source:
+      title: Frankl's Conjecture at Height Four and the Structure of Height-Five Counterexamples
+      url: https://arxiv.org/abs/2608.25147
+      kind: arxiv
+      quote: we prove the conjecture for every finite union-closed family of height at most four.
+    authors:
+      - Chenxiao Tian
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Union-closed sets conjecture". Classifier rationale: The paper claims a proof for a restricted class, which is a partial resolution. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/UnionClosed.lean
     source: google-deepmind/formal-conjectures

@@ -28,6 +28,21 @@ claims:
       title: erdosproblems.com records this problem as "not provable"
       url: https://www.erdosproblems.com/474
       kind: dataset
+  - id: erdos-474-sweep-bc189e83
+    asserted_on: 2026-08-27
+    type: independence
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-27
+    source:
+      title: "formal-conjectures PR #4213: Add Erdős Problem 474 (bracket partition relation 2^ℵ₀ ↛ [ℵ₁]²₃)"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/4213
+      kind: github
+      quote: "Status: **NOT PROVABLE** (consistency open — the question is genuinely metamathematical)."
+    authors:
+      - henrykmichalewski
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 474". Classifier rationale: The document asserts the conjecture is not provable, indicating independence. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
