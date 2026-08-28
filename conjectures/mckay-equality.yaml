@@ -41,6 +41,22 @@ claims:
       - Adele Maltempo
       - Carolina Vallejo
     notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "McKay conjecture". Classifier rationale: The paper proves a special case of the McKay conjecture, constituting partial progress. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: mckay-equality-sweep-1fb404f0
+    asserted_on: 2026-08-28
+    type: partial
+    scope: π‑separable groups
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-28
+    source:
+      title: A $\sigma$-McKay theorem for $\pi$-separable groups
+      url: https://arxiv.org/abs/2608.26373
+      kind: arxiv
+      quote: We prove a Hall σ‑subgroup analogue of the McKay conjecture for π‑separable groups proposed by G. Navarro.
+    authors:
+      - David Cabrera-Berenguer
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "McKay conjecture". Classifier rationale: The paper asserts a proof of the McKay conjecture in the restricted setting of π‑separable groups. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q28401746
     source: wikidata

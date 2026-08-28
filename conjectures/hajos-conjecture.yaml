@@ -13,7 +13,22 @@ openness_basis:
   meaning: unknown
   asserted_by: wikidata
   note: Identity record only. No statement or status has been ingested for this conjecture yet.
-claims: []
+claims:
+  - id: hajos-conjecture-sweep-3f54a5e4
+    asserted_on: 2026-08-28
+    type: disproved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-28
+    source:
+      title: "formal-conjectures PR #5198: Add Hajós' conjecture (disproved, Catlin 1979)"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/5198
+      kind: github
+      quote: recorded as **disproved** (`answer(False)`) after Catlin (1979) and Erdős–Fajtlowicz (1981).
+    authors:
+      - henrykmichalewski
+    notes: "Filed automatically by the formal-conjectures pull requests sweep. Matched on \"Hajós' conjecture\". Classifier rationale: The document explicitly states the conjecture has been disproved. Unreviewed: this records that a claim was made, not that it is correct."
 provenance:
   - url: https://www.wikidata.org/wiki/Q27889470
     source: wikidata
