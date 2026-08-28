@@ -22,6 +22,21 @@ claims:
       url: https://en.wikipedia.org/wiki/Hedetniemi's_conjecture
       kind: wikipedia
     notes: Standing taken from English Wikipedia's categorisation (Wikipedia categorises this as disproved). Nobody here has read the paper that settled it, which is what the secondary attestation says; replace this claim with one citing that paper when someone has it to hand.
+  - id: hedetniemi-s-conjecture-sweep-535320f8
+    asserted_on: 2026-08-27
+    type: disproved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-28
+    source:
+      title: "formal-conjectures PR #5187: Add Hedetniemi's conjecture (disproved, Shitov 2019)"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/5187
+      kind: github
+      quote: Add Hedetniemi's conjecture (disproved, Shitov 2019). ... recorded as **disproved** (`answer(False)`) following Shitov, *Counterexamples to Hedetniemi's conjecture*, Ann. of Math. 190 (2019).
+    authors:
+      - henrykmichalewski
+    notes: "Filed automatically by the formal-conjectures pull requests sweep. Matched on \"Hedetniemi's conjecture\". Classifier rationale: The pull request explicitly states the conjecture is disproved by Shitov (2019). Unreviewed: this records that a claim was made, not that it is correct."
 provenance:
   - url: https://www.wikidata.org/wiki/Q17022106
     source: wikidata
