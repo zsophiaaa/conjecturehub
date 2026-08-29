@@ -83,6 +83,36 @@ claims:
       - David Barros Hulak
       - Ruy Jose Guerra Barretto de Queiroz
     notes: Isabelle/HOL formalisation accepted into the Archive of Formal Proofs. This is the one completed machine check of the counterexample; the Lean route remains an open Mathlib pull request. Not tagged machine_verified here because that tier is reserved for proofs checked by ConjectureHub CI against our own canonical statement.
+  - id: jacobian-conjecture-sweep-bad59601
+    asserted_on: 2026-08-29
+    type: disproved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-29
+    source:
+      title: "formal-conjectures PR #4490: feat(Arxiv): add the Poisson conjecture (math/0608009)"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/4490
+      kind: github
+      quote: as a follow-up to the disproof of the Jacobian conjecture (#4474).
+    authors:
+      - korbonits
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Jacobian conjecture". Classifier rationale: The document explicitly references a disproof of the Jacobian conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: jacobian-conjecture-sweep-9df27bed
+    asserted_on: 2026-08-29
+    type: disproved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-29
+    source:
+      title: "formal-conjectures: feat(Arxiv): add the Poisson conjecture (math/0608009) (#4490) Part of google-deepmind/formal-conjectures#4489. Adds the **Poisson conjecture** of [Adjamagbo–van den Essen, arXiv:math/0608009](https:/"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/7e662f771cec2c6d893ee048d163c3cb3aa2a377
+      kind: github
+      quote: as a follow-up to the disproof of the Jacobian conjecture (#4474).
+    authors:
+      - korbonits
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Jacobian conjecture". Classifier rationale: The document explicitly references a disproof of the Jacobian conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/JacobianConjecture.lean
     source: google-deepmind/formal-conjectures
