@@ -24,6 +24,21 @@ claims:
       url: https://en.wikipedia.org/wiki/Bunkbed_conjecture
       kind: wikipedia
     notes: Standing taken from English Wikipedia's categorisation (Wikipedia categorises this as disproved). Nobody here has read the paper that settled it, which is what the secondary attestation says; replace this claim with one citing that paper when someone has it to hand.
+  - id: bunkbed-conjecture-sweep-56751427
+    asserted_on: 2026-08-30
+    type: disproved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-08-30
+    source:
+      title: "formal-conjectures PR #5181: Add the bunkbed conjecture (disproved, Gladkov–Pak–Zimin 2024)"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/5181
+      kind: github
+      quote: recorded as **disproved** (`answer(False)`) following Gladkov, Pak and Zimin, *The bunkbed conjecture is false*
+    authors:
+      - henrykmichalewski
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Bunkbed conjecture". Classifier rationale: The document reports that the bunkbed conjecture has been disproved by a counterexample. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q124116607
     source: wikidata
