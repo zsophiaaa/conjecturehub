@@ -38,6 +38,8 @@ ids:
   external:
     - label: Wikipedia
       url: https://en.wikipedia.org/wiki/Sendov%27s_conjecture
+    - label: VibeMathed
+      url: https://vibemathed.com/problem/sendov-s-conjecture
 notability:
   wikipedia_language_editions: 4
   measured_on: 2026-08-03
@@ -68,3 +70,10 @@ provenance:
       - notability.wikipedia_language_editions
     license: CC0-1.0
     retrieved: 2026-08-03
+  - url: https://vibemathed.com/api/dataset
+    source: vibemathed
+    fields:
+      - ids.external
+    license: CC-BY-4.0
+    retrieved: 2026-08-30
+    upstream_version: 2026-08-30T11:59:33.757Z
