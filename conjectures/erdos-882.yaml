@@ -29,6 +29,21 @@ claims:
       url: https://www.erdosproblems.com/882
       kind: dataset
     notes: Upstream records this as solved without specifying the direction.
+  - id: erdos-882-sweep-a6a417a5
+    asserted_on: 2026-09-01
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-01
+    source:
+      title: "formal-conjectures PR #5093: feat(ErdosProblems): add statement for Erdős Problem 882"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/5093
+      kind: github
+      quote: "The problem is listed as solved, with answer `(1+o(1)) log₂ n` ... **This one is proved**: a `sorry`-free Lean 4 proof is hosted at https://github.com/ToshiDad/erdos-882"
+    authors:
+      - ToshiDad
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 882". Classifier rationale: The document states that a complete formal proof exists, asserting the problem is solved. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
