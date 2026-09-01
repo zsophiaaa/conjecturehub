@@ -10,7 +10,25 @@ openness_basis:
   meaning: no_solution_known_to_community
   asserted_by: wikipedia
   note: Listed under "Unsolved problems in geometry" on English Wikipedia.
-claims: []
+claims:
+  - id: virasoro-conjecture-sweep-ca5c1c2e
+    asserted_on: 2026-09-01
+    type: proved
+    scope: genus-one case for smooth Fano complete intersections in projective space
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-01
+    source:
+      title: Wall-crossing formula and genus-one Virasoro conjecture for Fano complete intersections
+      url: https://arxiv.org/abs/2608.29870
+      kind: arxiv
+      quote: We prove the genus-one Virasoro conjecture on the ambient state space of smooth Fano complete intersections in projective space.
+    authors:
+      - Shuai Guo
+      - Qingsheng Zhang
+      - Yang Zhou
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Virasoro conjecture". Classifier rationale: The paper claims a proof of the genus‑one Virasoro conjecture for that specific class of varieties. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q7933656
     source: wikidata

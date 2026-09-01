@@ -10,7 +10,41 @@ openness_basis:
   meaning: no_solution_known_to_community
   asserted_by: wikipedia
   note: Listed under "Unsolved problems in number theory" on English Wikipedia.
-claims: []
+claims:
+  - id: tate-conjecture-sweep-afaf571d
+    asserted_on: 2026-09-01
+    type: partial
+    scope: abelian fourfolds over finite fields
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-01
+    source:
+      title: The Tate conjecture for abelian fourfolds over finite fields
+      url: https://arxiv.org/abs/2608.28651
+      kind: arxiv
+      quote: We prove the Tate conjecture for abelian fourfolds over finite fields.
+    authors:
+      - Matt Broe
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Tate conjecture". Classifier rationale: The paper claims a proof for a specific class of varieties, which is a partial resolution of the Tate conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: tate-conjecture-sweep-08dd3eb6
+    asserted_on: 2026-09-01
+    type: partial
+    scope: codimension one ℓ-adic Tate conjecture for the specified elliptic surfaces, for all but finitely many ℓ
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-01
+    source:
+      title: Five-dimensional compatible systems and the Tate conjecture for elliptic surfaces
+      url: https://arxiv.org/abs/2406.03617
+      kind: arxiv
+      quote: we prove the codimension one ℓ-adic Tate conjecture for all but finitely many ℓ, for all but finitely many general, degree 3, genus 2 branched multiplicative covers of X_0.
+    authors:
+      - Lian Duan
+      - Xiyuan Wang
+      - Ariel Weiss
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Tate conjecture". Classifier rationale: The paper claims a partial result proving the Tate conjecture in a restricted setting. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q7687975
     source: wikidata
