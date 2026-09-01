@@ -29,6 +29,36 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/1050
       kind: dataset
+  - id: erdos-1050-sweep-f131b9ed
+    asserted_on: 2026-09-01
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-01
+    source:
+      title: "formal-conjectures PR #4390: feat(ErdosProblems/1050): the series ∑ 1/(2ⁿ−3) is irrational"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/4390
+      kind: github
+      quote: Resolved by P. B. Borwein, J. Number Theory 37 (1991) 253–259, and Math. Proc. Camb. Phil. Soc. 112 (1992) 141–146.
+    authors:
+      - gotrevor
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 1050". Classifier rationale: The document reports that the conjecture has been settled in the cited papers. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: erdos-1050-sweep-b70430a4
+    asserted_on: 2026-09-01
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-01
+    source:
+      title: "formal-conjectures: feat(ErdosProblems/1050): the series ∑ 1/(2ⁿ−3) is irrational (#4390) **Statement.** Formalises [Erdős Problem 1050](https://www.erdosproblems.com/1050): the series `∑ 1/(2ⁿ − 3)` is irrational (`erdo"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/7d1a8c9912747679d0093f6d1216420c33ee5ffa
+      kind: github
+      quote: Resolved by P. B. Borwein, J. Number Theory 37 (1991) 253–259, and Math. Proc. Camb. Phil. Soc. 112 (1992) 141–146.
+    authors:
+      - gotrevor
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 1050". Classifier rationale: The document states that the conjecture has been resolved by published papers. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

@@ -31,7 +31,23 @@ openness_basis:
   meaning: no_published_solution_known_to_curator
   asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: beal-conjecture-sweep-72f40908
+    asserted_on: 2026-09-01
+    type: partial
+    scope: some cases
+    evidence_tier: unverified_claim
+    attestation: secondary
+    state: active
+    recorded_on: 2026-09-01
+    source:
+      title: Beal conjecture
+      url: https://en.wikipedia.org/wiki/Beal_conjecture
+      kind: wikipedia
+      quote: Partial results
+    authors:
+      - ~2026-47004-45
+    notes: 'Filed automatically by the Wikipedia edits sweep. Matched on "Beal conjecture". Classifier rationale: The edit summary indicates the article reports partial progress on the conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/BealConjecture.lean
     source: google-deepmind/formal-conjectures
