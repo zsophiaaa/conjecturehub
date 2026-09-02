@@ -10,7 +10,28 @@ openness_basis:
   meaning: no_solution_known_to_community
   asserted_by: wikipedia
   note: Listed under "Unsolved problems in geometry" on English Wikipedia.
-claims: []
+claims:
+  - id: virasoro-conjecture-sweep-fe9f6362
+    asserted_on: 2026-09-02
+    type: proved
+    scope: smooth projective effective orbifold curves
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-02
+    source:
+      title: Virasoro Constraints for Orbifold Curves
+      url: https://arxiv.org/abs/2609.01300
+      kind: arxiv
+      quote: The absolute Jiang--Tseng Virasoro conjecture for smooth projective effective orbifold curves follows as a corollary.
+    authors:
+      - Jianxun Hu
+      - Pengrong Jin
+      - Hua-Zhong Ke
+      - Jingwei Lu
+      - Hsian-Hua Tseng
+      - Longting Wu
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Virasoro conjecture". Classifier rationale: The abstract explicitly claims a proof of the conjecture for that class of curves. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q7933656
     source: wikidata

@@ -45,7 +45,22 @@ openness_basis:
   meaning: no_published_solution_known_to_curator
   asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: sendov-s-conjecture-sweep-94a81f88
+    asserted_on: 2026-09-02
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-02
+    source:
+      title: A proof of Sendov's conjecture https:// functor.network/user/3333/entr y/1932
+      url: https://mathstodon.xyz/@dingc/117202543311992232
+      kind: mastodon
+      quote: A proof of Sendov's conjecture
+    authors:
+      - Functor Network
+    notes: "Filed automatically by the Mathstodon sweep. Matched on \"Sendov's conjecture\". Classifier rationale: The document explicitly claims to provide a proof of Sendov's conjecture. Unreviewed: this records that a claim was made, not that it is correct."
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/Sendov.lean
     source: google-deepmind/formal-conjectures
