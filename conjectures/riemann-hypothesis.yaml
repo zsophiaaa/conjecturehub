@@ -14,7 +14,23 @@ openness_basis:
   meaning: no_solution_known_to_community
   asserted_by: wikipedia
   note: Listed under "Unsolved problems in number theory" on English Wikipedia.
-claims: []
+claims:
+  - id: riemann-hypothesis-sweep-75f251c5
+    asserted_on: 2026-09-02
+    type: partial
+    scope: branch r=1
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-02
+    source:
+      title: The Riemann Hypothesis through the looking of partitions
+      url: https://arxiv.org/abs/2601.22413
+      kind: arxiv
+      quote: "we rigorously establish the first step: the branch $r=1$ is fully realized."
+    authors:
+      - Carlos Segovia
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Riemann hypothesis". Classifier rationale: The paper reports a partial result toward RH, not a full proof or disproof. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q205966
     source: wikidata

@@ -10,7 +10,23 @@ openness_basis:
   meaning: no_solution_known_to_community
   asserted_by: wikipedia
   note: Listed under "Unsolved problems in number theory" on English Wikipedia.
-claims: []
+claims:
+  - id: grothendieck-katz-p-curvature-conjecture-sweep-de48d0c8
+    asserted_on: 2026-09-02
+    type: partial
+    scope: foliations defined by separating-variable rational vector fields
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-02
+    source:
+      title: On Algebraic Integrability of Vector Fields with Rational Function Coefficients that Separate Variables
+      url: https://arxiv.org/abs/2609.00974
+      kind: arxiv
+      quote: we verify the generalized Grothendieck--Katz p-curvature conjecture for foliations defined by these vector fields.
+    authors:
+      - Przemysław Grabowski
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Grothendieck–Katz p-curvature conjecture". Classifier rationale: The paper claims to prove the conjecture for a specific class of foliations, which is a partial resolution. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q17019427
     source: wikidata

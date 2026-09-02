@@ -38,7 +38,24 @@ openness_basis:
   meaning: no_published_solution_known_to_curator
   asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: lonely-runner-conjecture-sweep-cda273b8
+    asserted_on: 2026-09-02
+    type: partial
+    scope: k = 10, 11, 12 (i.e., n = 11, 12, 13 runners)
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-02
+    source:
+      title: Eleven, twelve, and thirteen lonely runners
+      url: https://arxiv.org/abs/2604.23906
+      kind: arxiv
+      quote: we provide a computer-assisted proof of the Lonely Runner Conjecture for $k\in\{10,11,12\}$.
+    authors:
+      - Touch Sungkawichai
+      - Tanupat Trakulthongchai
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Lonely runner conjecture". Classifier rationale: The paper asserts a proof for those specific numbers of runners, which is partial progress on the conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/LonelyRunnerConjecture.lean
     source: google-deepmind/formal-conjectures

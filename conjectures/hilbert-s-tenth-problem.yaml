@@ -10,7 +10,23 @@ openness_basis:
   meaning: unknown
   asserted_by: wikidata
   note: Identity record only. No statement or status has been ingested for this conjecture yet.
-claims: []
+claims:
+  - id: hilbert-s-tenth-problem-sweep-fc77c7e4
+    asserted_on: 2026-09-02
+    type: partial
+    scope: 10 unknowns
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-02
+    source:
+      title: Ten unknowns for Hilbert's tenth problem over the integers
+      url: https://arxiv.org/abs/2609.01594
+      kind: arxiv
+      quote: we prove that there is no algorithm to determine for any polynomial equation $P(z_1,\ldots,z_{10})=0$ (with integer coefficients and ten unknowns) whether it has integer solutions.
+    authors:
+      - Zhi-Wei Sun
+    notes: "Filed automatically by the arXiv new submissions sweep. Matched on \"Hilbert's tenth problem\". Classifier rationale: The paper claims a new undecidability result for 10-variable equations, improving the known 11-variable case, which is a partial advance on Hilbert's tenth problem. Unreviewed: this records that a claim was made, not that it is correct."
 provenance:
   - url: https://www.wikidata.org/wiki/Q986147
     source: wikidata
