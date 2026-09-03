@@ -43,7 +43,23 @@ openness_basis:
   meaning: no_published_solution_known_to_curator
   asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: collatz-conjecture-sweep-b5658f9e
+    asserted_on: 2026-09-03
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-03
+    source:
+      title: Collatz conjecture becomes theorem
+      url: https://arxiv.org/abs/2310.13035
+      kind: arxiv
+      quote: The Collatz hypothesis is a theorem of the algorithmic theory of natural numbers.
+    authors:
+      - Grażyna Mirkowska
+      - Andrzej Salwicki
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Collatz conjecture". Classifier rationale: The abstract states that the conjecture has been proved as a theorem. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/CollatzConjecture.lean
     source: google-deepmind/formal-conjectures

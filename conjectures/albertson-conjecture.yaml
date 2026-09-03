@@ -10,7 +10,23 @@ openness_basis:
   meaning: no_solution_known_to_community
   asserted_by: wikipedia
   note: Listed under "Unsolved problems in graph theory" on English Wikipedia.
-claims: []
+claims:
+  - id: albertson-conjecture-sweep-72cc2607
+    asserted_on: 2026-09-03
+    type: partial
+    scope: r <= 26
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-03
+    source:
+      title: Albertson's Conjecture Holds for r at Most 26
+      url: https://arxiv.org/abs/2609.01682
+      kind: arxiv
+      quote: we settle those three orders, so that Albertson's Conjecture holds for all r <= 26.
+    authors:
+      - Ankan Sadhu
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Albertson conjecture". Classifier rationale: The paper claims to prove the conjecture for chromatic numbers up to 26, which is a partial resolution. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q4712279
     source: wikidata
