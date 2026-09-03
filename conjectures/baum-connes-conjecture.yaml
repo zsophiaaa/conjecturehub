@@ -10,7 +10,26 @@ openness_basis:
   meaning: no_solution_known_to_community
   asserted_by: wikipedia
   note: Listed under "Unsolved problems in mathematics" on English Wikipedia.
-claims: []
+claims:
+  - id: baum-connes-conjecture-sweep-5274d3f3
+    asserted_on: 2026-09-03
+    type: partial
+    scope: groupoids with dynamic asymptotic dimension growth at most x^{α} (0<α<1)
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-03
+    source:
+      title: Dynamic asymptotic dimension growth for group actions and groupoids
+      url: https://arxiv.org/abs/2411.19712
+      kind: arxiv
+      quote: we show that the Baum-Connes conjecture with coefficients holds for such groupoids.
+    authors:
+      - Hang Wang
+      - Yanru Wang
+      - Jianguo Zhang
+      - Dapeng Zhou
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Baum–Connes conjecture". Classifier rationale: The paper proves the conjecture for a restricted class of groupoids, not the full conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q2993305
     source: wikidata

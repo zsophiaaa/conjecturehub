@@ -38,7 +38,23 @@ openness_basis:
   meaning: no_published_solution_known_to_curator
   asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: lonely-runner-conjecture-sweep-1f4256ab
+    asserted_on: 2026-09-03
+    type: proved
+    scope: n = 14
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-03
+    source:
+      title: Fourteen lonely runners
+      url: https://arxiv.org/abs/2609.02604
+      kind: arxiv
+      quote: We prove the Lonely Runner Conjecture for fourteen runners
+    authors:
+      - Jaan Allikvere
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Lonely runner conjecture". Classifier rationale: The abstract explicitly claims a proof for the case of 14 runners. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/LonelyRunnerConjecture.lean
     source: google-deepmind/formal-conjectures

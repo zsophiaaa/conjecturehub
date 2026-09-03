@@ -11,7 +11,24 @@ openness_basis:
   meaning: no_solution_known_to_community
   asserted_by: wikipedia
   note: Listed under "Unsolved problems in mathematics" on English Wikipedia.
-claims: []
+claims:
+  - id: generalized-riemann-hypothesis-sweep-032a11a7
+    asserted_on: 2026-09-03
+    type: reformulation
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-03
+    source:
+      title: Distribution of Farey fractions with $k$-free denominators
+      url: https://arxiv.org/abs/2507.00228
+      kind: arxiv
+      quote: deriving an equivalent form of the generalized Riemann hypothesis (GRH) for Dirichlet $L$-functions in terms of the distribution of \(\mathscr{F}_{Q,k}^{(m)}\)\.
+    authors:
+      - Bittu Chahal
+      - Tapas Chatterjee
+      - Sneha Chaubey
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Generalized Riemann hypothesis". Classifier rationale: The document states it derives an equivalent formulation of GRH, not a proof or disproof. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q685140
     source: wikidata
