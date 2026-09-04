@@ -11,7 +11,24 @@ openness_basis:
   meaning: unknown
   asserted_by: wikidata
   note: Identity record only. No statement or status has been ingested for this conjecture yet.
-claims: []
+claims:
+  - id: hodge-conjecture-sweep-2e97ba67
+    asserted_on: 2026-09-04
+    type: partial
+    scope: the associated smooth projective hypersurface of the described form
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-04
+    source:
+      title: A note on the noncommutative Hodge conjecture for graded matrix factorizations
+      url: https://arxiv.org/abs/2609.03784
+      kind: arxiv
+      quote: Finally, applying the additivity of the noncommutative Hodge conjecture ... proves the rational Hodge conjecture for the associated smooth projective hypersurface.
+    authors:
+      - Xun Lin
+      - Shizhuo Zhang
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Hodge conjecture". Classifier rationale: The abstract claims a proof of the rational Hodge conjecture for a specific class of hypersurfaces, which is a partial resolution. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q1143138
     source: wikidata
