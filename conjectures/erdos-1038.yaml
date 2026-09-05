@@ -125,6 +125,22 @@ claims:
     authors:
       - mendozalab
     notes: Extends the certificate to 1.814605, re-solving per-block weights by linear programming and checking both computational legs in directed interval arithmetic with a second backend. The more interesting claim is that the method appears to stop there, which the author is careful to call evidence of a family ceiling rather than exhaustion. Sothanaphan pushed back on the writeup's undefined terms and the author agreed to revise contradictory verification language.
+  - id: erdos-1038-sweep-0b88ecfa
+    asserted_on: 2026-09-05
+    type: partial
+    scope: quadratic case (degree 2)
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-05
+    source:
+      title: "formal-conjectures PR #5293: feat(Erdos/1038): prove the quadratic sublevel case"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/5293
+      kind: github
+      quote: "feat(Erdos/1038): prove the quadratic sublevel case."
+    authors:
+      - bengoechea
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős problem 1038". Classifier rationale: The PR claims to prove the conjecture for degree‑two polynomials, which is a partial resolution. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/1038.lean
     source: google-deepmind/formal-conjectures

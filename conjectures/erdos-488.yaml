@@ -44,6 +44,21 @@ claims:
       title: erdosproblems.com records this problem as "falsifiable"
       url: https://www.erdosproblems.com/488
       kind: dataset
+  - id: erdos-488-sweep-b826f675
+    asserted_on: 2026-09-05
+    type: counterexample
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-05
+    source:
+      title: "formal-conjectures PR #5297: solve(ErdosProblems): link formal refutation of 488"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/5297
+      kind: github
+      quote: "Erdős #488 has a Lean-checked finite counterexample to the corrected multiples formulation."
+    authors:
+      - declangessel
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős #488". Classifier rationale: The document reports a formal finite counterexample, refuting the conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/488.lean
     source: google-deepmind/formal-conjectures
