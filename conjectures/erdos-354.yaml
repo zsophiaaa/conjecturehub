@@ -36,7 +36,23 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: erdos-354-sweep-30770730
+    asserted_on: 2026-09-05
+    type: proved
+    scope: part ii
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-05
+    source:
+      title: "formal-conjectures PR #5286: Mark Erdos Problem 354(ii) as solved"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/5286
+      kind: github
+      quote: Mark Erdos Problem 354(ii) as solved.
+    authors:
+      - KitaKen1
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdos Problem 354". Classifier rationale: The PR states that part (ii) of Erdős 354 has been proved via a Lean formalization. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/354.lean
     source: google-deepmind/formal-conjectures
