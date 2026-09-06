@@ -48,7 +48,22 @@ openness_basis:
   meaning: no_published_solution_known_to_curator
   asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: mean-value-problem-sweep-63bc1c63
+    asserted_on: 2026-09-06
+    type: disproved
+    evidence_tier: unverified_claim
+    attestation: secondary
+    state: active
+    recorded_on: 2026-09-06
+    source:
+      title: Mean value problem
+      url: https://en.wikipedia.org/wiki/Mean_value_problem
+      kind: wikipedia
+      quote: Added lean disproof.
+    authors:
+      - Twelve13
+    notes: 'Filed automatically by the Wikipedia edits sweep. Matched on "Mean value problem". Classifier rationale: The edit summary states that a Lean formal disproof was added, indicating the conjecture is claimed to be disproved. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/MeanValueProblem.lean
     source: google-deepmind/formal-conjectures

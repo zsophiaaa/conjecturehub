@@ -17,7 +17,23 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-879-sweep-013423f2
+    asserted_on: 2026-09-06
+    type: proved
+    scope: Part II
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-06
+    source:
+      title: "formal-conjectures PR #5302: Formalize Erdős Problem 879 and mark Part II as solved"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/5302
+      kind: github
+      quote: Part II is marked as solved with `answer(False)` and links a kernel-checked Lean 4 proof.
+    authors:
+      - KitaKen1
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem #879". Classifier rationale: The document claims a formal proof resolves Part II of the conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
