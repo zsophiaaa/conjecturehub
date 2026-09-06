@@ -5,6 +5,9 @@ aliases:
 ids:
   wikidata: Q57510
   wikipedia: https://en.wikipedia.org/wiki/Fundamental_lemma_(Langlands_program)
+notability:
+  wikipedia_language_editions: 3
+  measured_on: 2026-09-06
 openness_basis:
   meaning: unknown
   asserted_by: wikidata
@@ -36,5 +39,6 @@ provenance:
       - ids.wikidata
       - ids.wikipedia
       - ids.mathworld
+      - notability.wikipedia_language_editions
     license: CC0-1.0
-    retrieved: 2026-07-31
+    retrieved: 2026-09-06

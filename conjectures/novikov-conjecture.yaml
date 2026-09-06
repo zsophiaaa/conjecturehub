@@ -3,6 +3,9 @@ title: Novikov conjecture
 ids:
   wikidata: Q7064908
   wikipedia: https://en.wikipedia.org/wiki/Novikov_conjecture
+notability:
+  wikipedia_language_editions: 2
+  measured_on: 2026-09-06
 openness_basis:
   meaning: unknown
   asserted_by: wikidata
@@ -32,5 +35,6 @@ provenance:
       - ids.wikidata
       - ids.wikipedia
       - ids.mathworld
+      - notability.wikipedia_language_editions
     license: CC0-1.0
-    retrieved: 2026-07-31
+    retrieved: 2026-09-06
