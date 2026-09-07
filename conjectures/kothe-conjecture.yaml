@@ -56,7 +56,22 @@ openness_basis:
   meaning: no_published_solution_known_to_curator
   asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: kothe-conjecture-sweep-08d9065c
+    asserted_on: 2026-09-07
+    type: disproved
+    evidence_tier: unverified_claim
+    attestation: secondary
+    state: active
+    recorded_on: 2026-09-07
+    source:
+      title: Köthe conjecture
+      url: https://en.wikipedia.org/wiki/K%C3%B6the_conjecture
+      kind: wikipedia
+      quote: disproved.
+    authors:
+      - Nosferattus
+    notes: 'Filed automatically by the Wikipedia edits sweep. Matched on "Köthe conjecture". Classifier rationale: The edit summary explicitly states the conjecture is disproved. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/Koethe.lean
     source: google-deepmind/formal-conjectures

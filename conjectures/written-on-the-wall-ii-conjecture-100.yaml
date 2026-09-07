@@ -36,7 +36,22 @@ openness_basis:
   meaning: no_published_solution_known_to_curator
   asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: written-on-the-wall-ii-conjecture-100-sweep-393db8d7
+    asserted_on: 2026-09-07
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-07
+    source:
+      title: "formal-conjectures PR #5221: WrittenOnTheWallII/100: formal proof of conjecture100 (closes #4920)"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/5221
+      kind: github
+      quote: Proves `WrittenOnTheWallII.GraphConjecture100.conjecture100` — ... flips its category from `research open` to `research solved`.
+    authors:
+      - vatsj
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Written on the Wall II - Conjecture 100". Classifier rationale: The pull request states it provides a machine‑checked proof that settles the conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/WrittenOnTheWallII/GraphConjecture100.lean
     source: google-deepmind/formal-conjectures
