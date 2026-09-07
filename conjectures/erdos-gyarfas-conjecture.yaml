@@ -10,7 +10,23 @@ openness_basis:
   meaning: no_solution_known_to_community
   asserted_by: wikipedia
   note: Listed under "Unsolved problems in graph theory" on English Wikipedia.
-claims: []
+claims:
+  - id: erdos-gyarfas-conjecture-sweep-bf324a67
+    asserted_on: 2026-09-07
+    type: partial
+    scope: graphs with at most 23 vertices (counterexamples must have ≥24 vertices)
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-07
+    source:
+      title: "Small graphs without power-of-two cycles: a lower bound of 24, a correction to a construction of Exoo, and explicit bounds for f(k)"
+      url: https://arxiv.org/abs/2609.04686
+      kind: arxiv
+      quote: We prove ... that every graph with minimum degree at least 3 on at most 23 vertices contains a cycle of length 4 or a cycle of length 8; consequently any counterexample has at least 24 vertices, improving the previously published bound of 16.
+    authors:
+      - Daniel Garcia
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Erdős–Gyárfás conjecture". Classifier rationale: The paper provides a new lower bound on the size of a potential counterexample, which is a partial result toward the conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q3686826
     source: wikidata
