@@ -38,7 +38,22 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: erdos-193-sweep-c1e0c3ac
+    asserted_on: 2026-09-07
+    type: disproved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-07
+    source:
+      title: "erdosproblems PR #395: Record solution to Erdős Problem 193"
+      url: https://github.com/teorth/erdosproblems/pull/395
+      kind: github
+      quote: This disproves the assertion that every such walk must contain three collinear vertices.
+    authors:
+      - ekalvi
+    notes: 'Filed automatically by the erdosproblems pull requests sweep. Matched on "Erdős Problem 193". Classifier rationale: The document announces a negative solution with an explicit counterexample. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/193.lean
     source: google-deepmind/formal-conjectures
