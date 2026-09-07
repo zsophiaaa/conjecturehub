@@ -42,7 +42,22 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: erdos-126-sweep-e19787ba
+    asserted_on: 2026-09-07
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: secondary
+    state: active
+    recorded_on: 2026-09-07
+    source:
+      title: List of conjectures by Paul Erdős
+      url: https://en.wikipedia.org/wiki/List_of_conjectures_by_Paul_Erd%C5%91s
+      kind: wikipedia
+      quote: /* Solved */ Add August 2026 Lean 4 formalized proof of Erdős problem 126 by GPT-6 Astra.
+    authors:
+      - Twelve13
+    notes: 'Filed automatically by the Wikipedia edits sweep. Matched on "Erdős problem 126". Classifier rationale: The edit states that a formal proof has been added, indicating the conjecture is claimed to be solved. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/126.lean
     source: google-deepmind/formal-conjectures
