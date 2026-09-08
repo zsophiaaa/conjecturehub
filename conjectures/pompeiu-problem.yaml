@@ -10,7 +10,22 @@ openness_basis:
   meaning: no_solution_known_to_community
   asserted_by: wikipedia
   note: Listed under "Unsolved problems in geometry" on English Wikipedia.
-claims: []
+claims:
+  - id: pompeiu-problem-sweep-91cd659b
+    asserted_on: 2026-09-08
+    type: counterexample
+    evidence_tier: unverified_claim
+    attestation: secondary
+    state: active
+    recorded_on: 2026-09-08
+    source:
+      title: Pompeiu problem
+      url: https://en.wikipedia.org/wiki/Pompeiu_problem
+      kind: wikipedia
+      quote: /* Counterexample */
+    authors:
+      - Maths Wiki Writer
+    notes: 'Filed automatically by the Wikipedia edits sweep. Matched on "Pompeiu problem". Classifier rationale: The edit summary explicitly states a counterexample to the Pompeiu problem. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q3406234
     source: wikidata
