@@ -10,7 +10,23 @@ openness_basis:
   meaning: no_solution_known_to_community
   asserted_by: wikipedia
   note: Listed under "Unsolved problems in number theory" on English Wikipedia.
-claims: []
+claims:
+  - id: tate-conjecture-sweep-73287389
+    asserted_on: 2026-09-09
+    type: partial
+    scope: dimension five
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-09
+    source:
+      title: From dimension four to dimension five in the Tate conjecture for abelian varieties over finite fields
+      url: https://arxiv.org/abs/2609.06265
+      kind: arxiv
+      quote: We prove it in dimension five, in every codimension and for every prime \ell\ne p.
+    authors:
+      - Ningyi Li
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Tate conjecture". Classifier rationale: The abstract states a new proof of the Tate conjecture for abelian varieties of dimension five. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q7687975
     source: wikidata

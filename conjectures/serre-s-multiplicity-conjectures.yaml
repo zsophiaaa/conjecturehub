@@ -10,7 +10,23 @@ openness_basis:
   meaning: no_solution_known_to_community
   asserted_by: wikipedia
   note: Listed under "Unsolved problems in mathematics" on English Wikipedia.
-claims: []
+claims:
+  - id: serre-s-multiplicity-conjectures-sweep-2bd77c48
+    asserted_on: 2026-09-09
+    type: partial
+    scope: positivity in equal characteristic and unramified mixed characteristic solved; general positivity open
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-09
+    source:
+      title: "formal-conjectures PR #5382: feat: add Serre's multiplicity conjectures"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/5382
+      kind: github
+      quote: "`intersectionMultiplicity_nonneg` (Gabber) and `intersectionMultiplicity_eq_zero_of_lt` (Roberts, Gillet–Soulé) as `research solved`; positivity as `research open`"
+    authors:
+      - j2d9w5xtjn-png
+    notes: "Filed automatically by the formal-conjectures pull requests sweep. Matched on \"Serre's multiplicity conjectures\". Classifier rationale: The PR records which parts of Serre's multiplicity conjectures are solved and which remain open. Unreviewed: this records that a claim was made, not that it is correct."
 provenance:
   - url: https://www.wikidata.org/wiki/Q7455403
     source: wikidata

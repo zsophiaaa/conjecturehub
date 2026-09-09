@@ -16,7 +16,22 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-571-sweep-9ebad04b
+    asserted_on: 2026-09-08
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-09
+    source:
+      title: "formal-conjectures PR #5357: ErdosProblems/571: sync solved status and link formal proof"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/5357
+      kind: github
+      quote: mark Erdős Problem 571 as `research solved` - link the complete Lean proof
+    authors:
+      - sylvesterkaczmarek
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 571". Classifier rationale: The pull request declares the problem is research solved and provides a formal Lean proof. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

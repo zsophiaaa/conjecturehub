@@ -10,7 +10,23 @@ openness_basis:
   meaning: unknown
   asserted_by: wikidata
   note: Identity record only. No statement or status has been ingested for this conjecture yet.
-claims: []
+claims:
+  - id: parshin-s-conjecture-sweep-73287389
+    asserted_on: 2026-09-09
+    type: partial
+    scope: dimension five
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-09
+    source:
+      title: From dimension four to dimension five in the Tate conjecture for abelian varieties over finite fields
+      url: https://arxiv.org/abs/2609.06265
+      kind: arxiv
+      quote: Parshin's conjecture over finite fields in dimension five.
+    authors:
+      - Ningyi Li
+    notes: "Filed automatically by the arXiv new submissions sweep. Matched on \"Parshin's conjecture\". Classifier rationale: The abstract states the authors prove Parshin's conjecture for dimension five, indicating a partial resolution. Unreviewed: this records that a claim was made, not that it is correct."
 provenance:
   - url: https://www.wikidata.org/wiki/Q17099539
     source: wikidata

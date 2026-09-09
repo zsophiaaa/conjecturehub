@@ -10,7 +10,23 @@ openness_basis:
   meaning: no_solution_known_to_community
   asserted_by: wikipedia
   note: Listed under "Unsolved problems in geometry" on English Wikipedia.
-claims: []
+claims:
+  - id: hilbert-smith-conjecture-sweep-93d985da
+    asserted_on: 2026-09-09
+    type: counterexample
+    scope: uncountable discrete groups
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-09
+    source:
+      title: "formal-conjectures PR #5366: fix(HilbertProblems/5): Hilbert–Smith statements were false for uncountable discrete groups"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/5366
+      kind: github
+      quote: With a second countable carrier, ℝ with the discrete topology acting on ℝ by translations refutes hilbert_smith_conjecture
+    authors:
+      - j2d9w5xtjn-png
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Hilbert–Smith conjecture". Classifier rationale: The PR explicitly states a counterexample that disproves the Hilbert–Smith conjecture for uncountable discrete groups. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q5761258
     source: wikidata
