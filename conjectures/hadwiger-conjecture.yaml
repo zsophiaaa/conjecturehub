@@ -11,7 +11,38 @@ openness_basis:
   meaning: no_solution_known_to_community
   asserted_by: wikipedia
   note: Listed under "Unsolved problems in graph theory" on English Wikipedia.
-claims: []
+claims:
+  - id: hadwiger-conjecture-sweep-e2243c55
+    asserted_on: 2026-09-09
+    type: partial
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-09
+    source:
+      title: Halfway to Hadwiger's conjecture, again
+      url: https://arxiv.org/abs/2609.06867
+      kind: arxiv
+      quote: We build on their result to improve this bound to O(t\sqrt{\log\log t}).
+    authors:
+      - Chun-Hung Liu
+      - Jason Luo
+    notes: "Filed automatically by the arXiv new submissions sweep. Matched on \"Hadwiger conjecture\". Classifier rationale: The paper reports a partial improvement toward Hadwiger's conjecture, not a full proof or disproof. Unreviewed: this records that a claim was made, not that it is correct."
+  - id: hadwiger-conjecture-sweep-52a7f69b
+    asserted_on: 2026-09-09
+    type: partial
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-09
+    source:
+      title: Coloring Small $K_t$-Minor-Free Graphs
+      url: https://arxiv.org/abs/2609.08713
+      kind: arxiv
+      quote: Thus we improve their $O(t\log\log t)$ bound to $O(t\sqrt{\log\log t})$.
+    authors:
+      - Xinheng Lin
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Hadwiger conjecture". Classifier rationale: The paper reports improved coloring bounds for $K_t$-minor-free graphs, which is partial progress on the Hadwiger conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q1128435
     source: wikidata

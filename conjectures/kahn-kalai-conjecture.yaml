@@ -15,7 +15,22 @@ openness_basis:
   meaning: unknown
   asserted_by: wikidata
   note: Identity record only. No statement or status has been ingested for this conjecture yet.
-claims: []
+claims:
+  - id: kahn-kalai-conjecture-sweep-f4f0ba83
+    asserted_on: 2026-09-09
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-09
+    source:
+      title: A sharp version of Talagrand's selector process conjecture, with applications to rounding fractional covers and Bernoulli Sudakov minoration
+      url: https://arxiv.org/abs/2412.03540
+      kind: arxiv
+      quote: This gives a common strengthening of Talagrand's selector process conjecture and the Kahn--Kalai conjecture.
+    authors:
+      - Huy Tuan Pham
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Kahn–Kalai conjecture". Classifier rationale: The abstract states they prove a result that strengthens the Kahn–Kalai conjecture, implying a proof of it. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q111724047
     source: wikidata
