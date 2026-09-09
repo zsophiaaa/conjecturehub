@@ -43,7 +43,22 @@ openness_basis:
   meaning: no_published_solution_known_to_curator
   asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: collatz-conjecture-sweep-bc1b227e
+    asserted_on: 2026-09-09
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-09
+    source:
+      title: Things are going to get real awkward when OpenAI publishes my secret proof of the Collatz conjecture because then everyone will find out I have an AI girlfriend
+      url: https://mathstodon.xyz/@slava/117241916744775399
+      kind: mastodon
+      quote: my secret proof of the Collatz conjecture
+    authors:
+      - Slava Pestov
+    notes: 'Filed automatically by the Mathstodon sweep. Matched on "Collatz conjecture". Classifier rationale: The post claims the author possesses a proof of the conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/CollatzConjecture.lean
     source: google-deepmind/formal-conjectures
