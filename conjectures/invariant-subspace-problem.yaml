@@ -52,7 +52,23 @@ openness_basis:
   meaning: no_published_solution_known_to_curator
   asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: invariant-subspace-problem-sweep-ef6930ca
+    asserted_on: 2026-09-10
+    type: counterexample
+    scope: finite-dimensional case without normed space assumption
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-10
+    source:
+      title: "formal-conjectures PR #5518: fix(Wikipedia/InvariantSubspaceProblem): the finite-dimensional case needs a normed space"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/5518
+      kind: github
+      quote: The Lean file below refutes the statement as written.
+    authors:
+      - Deicyde
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Invariant Subspace Problem". Classifier rationale: The document provides a Lean counterexample showing the finite‑dimensional formulation is false. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/InvariantSubspaceProblem.lean
     source: google-deepmind/formal-conjectures
