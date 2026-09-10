@@ -30,6 +30,21 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/1153
       kind: dataset
+  - id: erdos-1153-sweep-a4e15d80
+    asserted_on: 2026-09-10
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-10
+    source:
+      title: "formal-conjectures PR #5478: feat(ErdosProblems): add solved problem 1153"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/5478
+      kind: github
+      quote: Record Tao's affirmative resolution and mark the problem as `research solved`.
+    authors:
+      - ethn-y
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 1153". Classifier rationale: The document states that Tao has resolved the problem positively and marks it as solved. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

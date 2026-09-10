@@ -10,7 +10,38 @@ openness_basis:
   meaning: no_solution_known_to_community
   asserted_by: wikipedia
   note: Listed under "Unsolved problems in geometry" on English Wikipedia.
-claims: []
+claims:
+  - id: hilbert-smith-conjecture-sweep-50e33aa7
+    asserted_on: 2026-09-10
+    type: counterexample
+    scope: connected Hausdorff spaces (no manifold hypothesis)
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-10
+    source:
+      title: "formal-conjectures PR #5463: fix(HilbertProblems/5): state the manifold hypothesis in the Hilbert–Smith theorems"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/5463
+      kind: github
+      quote: "Both were false: `ℤ_[2]` acts continuously and faithfully on `X = C(ℤ_[2], ℝ)` by translation of the argument, `X` is connected and Hausdorff, and `Multiplicative ℤ_[2]` is compact, infinite and totally disconnected, so it has no Lie group structure."
+    authors:
+      - Deicyde
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Hilbert–Smith conjecture". Classifier rationale: The document presents a Lean-checked construction that refutes the conjecture in its formalized form. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: hilbert-smith-conjecture-sweep-858ba7f3
+    asserted_on: 2026-09-10
+    type: counterexample
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-10
+    source:
+      title: "formal-conjectures: fix(HilbertProblems/5): state the manifold hypothesis in the Hilbert–Smith theorems (#5463) Follow-up to #5366 and #5365; independent of #5402. **What changed** - `hilbert_smith_conjecture` and `hilbe"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/1ba00da64295cf132da13c2968bcb6540aa73143
+      kind: github
+      quote: "Both were false: `ℤ_[2]` acts continuously and faithfully on `X = C(ℤ_[2], ℝ)` by translation of the argument, `X` is connected and Hausdorff, and `Multiplicative ℤ_[2]` is compact, infinite and totally disconnected, so it has no Lie group structure."
+    authors:
+      - Deicyde
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Hilbert–Smith conjecture". Classifier rationale: The commit provides a concrete counterexample that disproves the Hilbert–Smith conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q5761258
     source: wikidata
