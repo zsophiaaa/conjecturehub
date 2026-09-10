@@ -15,7 +15,23 @@ openness_basis:
   meaning: unknown
   asserted_by: wikidata
   note: Identity record only. No statement or status has been ingested for this conjecture yet.
-claims: []
+claims:
+  - id: faltings-theorem-sweep-9a37fe76
+    asserted_on: 2026-09-10
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-10
+    source:
+      title: Faltings' Isogeny Theorem via Equidistribution
+      url: https://arxiv.org/abs/2609.10302
+      kind: arxiv
+      quote: We give a new proof of Faltings' isogeny theorem.
+    authors:
+      - Junyi Xie
+      - Ziquan Yang
+    notes: "Filed automatically by the arXiv new submissions sweep. Matched on \"Faltings' theorem\". Classifier rationale: The paper asserts a (new) proof of the conjecture. Unreviewed: this records that a claim was made, not that it is correct."
 provenance:
   - url: https://www.wikidata.org/wiki/Q240950
     source: wikidata

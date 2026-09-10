@@ -41,7 +41,24 @@ openness_basis:
   meaning: no_published_solution_known_to_curator
   asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: pierce-birkhoff-conjecture-sweep-6b2916a6
+    asserted_on: 2026-09-10
+    type: counterexample
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-10
+    source:
+      title: Pierce-Birkhoff conjecture is false
+      url: https://arxiv.org/abs/2609.10420
+      kind: arxiv
+      quote: "We provide a counterexample to the Pierce-Birkhoff conjecture: a continuous function that is piecewise quadratic on a finite collection of semialgebraic sets that partition $\\mathbb{R}^n$ but that cannot be expressed as a finite lattice combination of polynomials."
+    authors:
+      - Zehua Lai
+      - Lek-Heng Lim
+      - Junyu Ren
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Pierce–Birkhoff conjecture". Classifier rationale: The paper asserts it has found a counterexample, thereby claiming the conjecture is false. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/PierceBirkhoff.lean
     source: google-deepmind/formal-conjectures

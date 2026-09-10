@@ -35,6 +35,21 @@ claims:
       url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/ModularityConjecture.lean
       kind: dataset
     notes: Imported from the upstream `research solved` category. The statement is formalized; the proof has not been machine-checked by ConjectureHub.
+  - id: modularity-conjecture-sweep-a707ae1a
+    asserted_on: 2026-09-10
+    type: resolved_by_prior_literature
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-10
+    source:
+      title: Inertial multiplicity bounds for two dimensional projective representations and bounds for the number of $\operatorname{PSL}_2(\mathbb{F}_q)$ and $\operatorname{PGL}_2(\mathbb{F}_q)$ number fields
+      url: https://arxiv.org/abs/2609.10245
+      kind: arxiv
+      quote: Serre's modularity conjecture (now a theorem of Khare--Wintenberger)
+    authors:
+      - Brandon Alberts
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Modularity conjecture". Classifier rationale: The document reports the conjecture has already been proved by Khare–Wintenberger. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/ModularityConjecture.lean
     source: google-deepmind/formal-conjectures
