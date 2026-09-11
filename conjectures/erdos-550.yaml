@@ -18,7 +18,22 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-550-sweep-03643570
+    asserted_on: 2026-09-11
+    type: resolved_by_prior_literature
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-11
+    source:
+      title: "erdosproblems PR #413: Record the Lean formalisation of the solution to problem 550"
+      url: https://github.com/teorth/erdosproblems/pull/413
+      kind: github
+      quote: Record the Lean formalisation of the solution to problem 550. ... it accompanies E. Li, *A Resolution of Erdős Problem 550 on Tree versus Complete Multipartite Ramsey Numbers*
+    authors:
+      - OutBlade
+    notes: 'Filed automatically by the erdosproblems pull requests sweep. Matched on "Erdős Problem 550". Classifier rationale: The PR reports that a published paper resolves the problem and that the solution has been formalised in Lean. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
