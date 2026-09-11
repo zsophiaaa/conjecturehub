@@ -58,6 +58,21 @@ claims:
       url: https://www.erdosproblems.com/119
       kind: dataset
     notes: Upstream records this as solved without specifying the direction.
+  - id: erdos-119-sweep-7fbab192
+    asserted_on: 2026-09-11
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-11
+    source:
+      title: "formal-conjectures: feat(ErdosProblems): Add lean sources from plby's github repo for Erdos Problems. (#5569) Add 12 commit-pinned formal_proof links to verified proofs in plby/lean-proofs, including all three parts of p"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/cc650ed48bd5daeee4125a4ca3479838104f9f61
+      kind: github
+      quote: including all three parts of problem 119
+    authors:
+      - danielchin
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 119". Classifier rationale: The commit states that formal proofs for all parts of Erdős Problem 119 have been added, implying the conjecture is claimed to be proved. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/119.lean
     source: google-deepmind/formal-conjectures

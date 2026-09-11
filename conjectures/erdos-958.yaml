@@ -28,6 +28,22 @@ claims:
       title: erdosproblems.com records this problem as "disproved"
       url: https://www.erdosproblems.com/958
       kind: dataset
+  - id: erdos-958-sweep-1c31bb07
+    asserted_on: 2026-09-11
+    type: counterexample
+    scope: original universal statement (∀ n)
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-11
+    source:
+      title: "formal-conjectures PR #5513: fix(ErdosProblems/958): ask the classification for all sufficiently large n"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/5513
+      kind: github
+      quote: The four-point set { (0,0), (1,0), (0,1), (0,-1) } has distances 1, √2, 2 with multiplicities 3, 2, 1 and lies on neither a line nor a circle, so the universal statement was refuted by a single small configuration.
+    authors:
+      - Deicyde
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 958". Classifier rationale: The document presents a concrete counterexample that disproves the original formulation of Erdős Problem 958. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
