@@ -14,7 +14,22 @@ openness_basis:
   meaning: no_solution_known_to_community
   asserted_by: wikipedia
   note: Listed under "Unsolved problems in number theory" on English Wikipedia.
-claims: []
+claims:
+  - id: riemann-hypothesis-sweep-f767cae0
+    asserted_on: 2026-09-11
+    type: reformulation
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-11
+    source:
+      title: "New preprint: Weil positivity, the quadratic factorisation of ξ, and a prime‑only certificate for the simplicity of the low zeros of the Riemann zeta function Zenodo: https:// doi."
+      url: https://mathstodon.xyz/@luowy/117250028695545657
+      kind: mastodon
+      quote: It develops two new equivalent reformulations of RH
+    authors:
+      - luowy
+    notes: 'Filed automatically by the Mathstodon sweep. Matched on "Riemann hypothesis". Classifier rationale: The paper states it provides new equivalent reformulations without claiming a proof or disproof. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q205966
     source: wikidata
