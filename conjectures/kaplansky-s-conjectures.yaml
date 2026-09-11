@@ -56,7 +56,22 @@ openness_basis:
   meaning: no_published_solution_known_to_curator
   asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: kaplansky-s-conjectures-sweep-b7816a4b
+    asserted_on: 2026-09-11
+    type: reformulation
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-11
+    source:
+      title: "formal-conjectures PR #5353: Kaplansky: use ordinary torsion-freeness, not IsMulTorsionFree"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/5353
+      kind: github
+      quote: the two open conjectures were stated only for a subclass of the intended groups.
+    authors:
+      - mo271
+    notes: "Filed automatically by the formal-conjectures pull requests sweep. Matched on \"Kaplansky's Conjectures\". Classifier rationale: The document reports that the formal statement was using a stronger predicate, requiring a reformulation of the conjecture. Unreviewed: this records that a claim was made, not that it is correct."
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/Kaplansky.lean
     source: google-deepmind/formal-conjectures
