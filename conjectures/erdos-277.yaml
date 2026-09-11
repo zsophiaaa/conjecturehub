@@ -43,6 +43,21 @@ claims:
       url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/277.lean
       kind: dataset
     notes: Imported from the upstream `research solved` category. The statement is formalized; the proof has not been machine-checked by ConjectureHub.
+  - id: erdos-277-sweep-7fbab192
+    asserted_on: 2026-09-11
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-11
+    source:
+      title: "formal-conjectures: feat(ErdosProblems): Add lean sources from plby's github repo for Erdos Problems. (#5569) Add 12 commit-pinned formal_proof links to verified proofs in plby/lean-proofs, including all three parts of p"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/cc650ed48bd5daeee4125a4ca3479838104f9f61
+      kind: github
+      quote: "Add 12 commit-pinned formal_proof links to verified proofs ... Fixes #5130 — Erdős Problem 277"
+    authors:
+      - danielchin
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 277". Classifier rationale: The commit states that formal proof links have been added for Problem 277, indicating a proof exists. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/277.lean
     source: google-deepmind/formal-conjectures

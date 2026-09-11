@@ -10,7 +10,23 @@ openness_basis:
   meaning: no_solution_known_to_community
   asserted_by: wikipedia
   note: Listed under "Unsolved problems in geometry" on English Wikipedia.
-claims: []
+claims:
+  - id: filling-area-conjecture-sweep-d6969ef7
+    asserted_on: 2026-09-10
+    type: counterexample
+    scope: rational fillings with Finsler metrics
+    evidence_tier: unverified_claim
+    attestation: secondary
+    state: active
+    recorded_on: 2026-09-11
+    source:
+      title: Filling area conjecture
+      url: https://en.wikipedia.org/wiki/Filling_area_conjecture
+      kind: wikipedia
+      quote: '"Non-minimality of the hemisphere among rational fillings with Finsler metrics"'
+    authors:
+      - Trappist the monk
+    notes: 'Filed automatically by the Wikipedia edits sweep. Matched on "Filling area conjecture". Classifier rationale: The edit summary asserts a counterexample to the conjecture in that specific class. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q5448828
     source: wikidata

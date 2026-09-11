@@ -21,7 +21,22 @@ openness_basis:
   meaning: no_published_solution_known_to_curator
   asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: mathoverflow-31809-sweep-4ae1f8bf
+    asserted_on: 2026-09-11
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-11
+    source:
+      title: "formal-conjectures PR #5523: fix(Mathoverflow/31809): ask for a pretriangulated category that is not triangulated"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/5523
+      kind: github
+      quote: it now says that not every pretriangulated category is triangulated.
+    authors:
+      - Deicyde
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Mathoverflow 31809". Classifier rationale: The PR changes the statement to assert existence, indicating a claimed resolution. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Mathoverflow/31809.lean
     source: google-deepmind/formal-conjectures

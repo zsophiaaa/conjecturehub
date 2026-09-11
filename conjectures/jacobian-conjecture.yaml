@@ -83,6 +83,22 @@ claims:
       - David Barros Hulak
       - Ruy Jose Guerra Barretto de Queiroz
     notes: Isabelle/HOL formalisation accepted into the Archive of Formal Proofs. This is the one completed machine check of the counterexample; the Lean route remains an open Mathlib pull request. Not tagged machine_verified here because that tier is reserved for proofs checked by ConjectureHub CI against our own canonical statement.
+  - id: jacobian-conjecture-sweep-88232a19
+    asserted_on: 2026-09-10
+    type: partial
+    scope: for étale endomorphisms that are composites g ∘ f with f quasi‑finite and a locally closed embedding in codimension 1 outside a finite set, and g a coordinate projection
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-11
+    source:
+      title: Fantastic. Ofer Gabber is a human machine when it comes to mathematics. I'd trust this paper over an AI-generated paper of the same length that's for sure. They have a solid *posit
+      url: https://mathstodon.xyz/@highergeometer/117249134301558685
+      kind: mastodon
+      quote: We prove that the classical Jacobian Conjecture over C ... hold for étale endomorphisms of affine spaces that are composites g ◦ f, where f is quasi-finite and a locally closed embedding in codimension 1 outside a specific finite subset and g is a projection that omits one affine coordinate.
+    authors:
+      - theHigherGeometer
+    notes: 'Filed automatically by the Mathstodon sweep. Matched on "Jacobian conjecture". Classifier rationale: The paper claims a proof for a restricted class of maps, not the full conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/JacobianConjecture.lean
     source: google-deepmind/formal-conjectures

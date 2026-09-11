@@ -14,7 +14,22 @@ openness_basis:
   meaning: no_solution_known_to_community
   asserted_by: wikipedia
   note: Listed under "Unsolved problems in graph theory" on English Wikipedia.
-claims: []
+claims:
+  - id: cycle-double-cover-conjecture-sweep-9413b612
+    asserted_on: 2026-09-11
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-11
+    source:
+      title: Some Early Results by Tutte Regarding the Cycle Double Cover Conjecture in 1948
+      url: https://arxiv.org/abs/2609.10618
+      kind: arxiv
+      quote: OpenAI recently announced a proof of the Cycle Double Cover (CDC) Conjecture.
+    authors:
+      - Cun-Quan Zhang
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "cycle double cover conjecture". Classifier rationale: The abstract states that a proof has been announced, indicating a claimed resolution. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q18217946
     source: wikidata
