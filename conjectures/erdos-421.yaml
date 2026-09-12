@@ -32,7 +32,22 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: erdos-421-sweep-8cfe5e0e
+    asserted_on: 2026-09-12
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-12
+    source:
+      title: "formal-conjectures: Sync Erdős Problem 421 solved status (#5850) Closes #5379. Updates Erdős Problem 421 to the current solved status, records the affirmative answer, and adds the proof exposition reference linked from e"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/5b7e9229667287202f57731b0a23df5c5042c02e
+      kind: github
+      quote: Updates Erdős Problem 421 to the current solved status, records the affirmative answer, and adds the proof exposition reference
+    authors:
+      - sylvesterkaczmarek
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 421". Classifier rationale: The commit message states the conjecture has been updated to a solved status with an affirmative answer. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/421.lean
     source: google-deepmind/formal-conjectures

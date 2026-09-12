@@ -16,7 +16,23 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-84-sweep-dfd9cd11
+    asserted_on: 2026-09-12
+    type: partial
+    scope: n ≤ 5
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-12
+    source:
+      title: "erdosproblems PR #422: Enumerate cycle-sets for graphs on n≤5 vertices"
+      url: https://github.com/teorth/erdosproblems/pull/422
+      kind: github
+      quote: Computes f(3)=2, f(4)=4, f(5)=6
+    authors:
+      - Chessing234
+    notes: 'Filed automatically by the erdosproblems pull requests sweep. Matched on "Erdős problem 84". Classifier rationale: The document reports exhaustive enumeration for small cases, which is partial progress, not a full resolution. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

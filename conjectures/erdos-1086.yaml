@@ -16,7 +16,23 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-10-17
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-1086-sweep-97e7ffd3
+    asserted_on: 2026-09-12
+    type: partial
+    scope: small n
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-12
+    source:
+      title: "erdosproblems PR #420: Equal-area triangle lower bounds for small n"
+      url: https://github.com/teorth/erdosproblems/pull/420
+      kind: github
+      quote: Constructive lower bounds for g(n) on Erdős problem 1086
+    authors:
+      - Chessing234
+    notes: 'Filed automatically by the erdosproblems pull requests sweep. Matched on "Erdős problem 1086". Classifier rationale: The PR reports new lower bounds for the problem, which is partial progress rather than a full proof or disproof. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
