@@ -45,7 +45,37 @@ openness_basis:
   meaning: no_published_solution_known_to_curator
   asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: sendov-s-conjecture-sweep-9e156573
+    asserted_on: 2026-09-12
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-12
+    source:
+      title: "formal-conjectures: fix(Wikipedia/Sendov): the low-degree result covers degrees at most 8 (#5731) `sendov_conjecture.variants.le_nine` assumed `hn : n ∈ Set.Icc 2 9`, asserting Sendov's conjecture for polynomials of degr"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/914dd7eef5e4c0f1a3742809cb6af2b600d80505
+      kind: github
+      quote: "Sendov's conjecture is reportedly proved in full (Aug 2026; see PR #5560)."
+    authors:
+      - smmercuri
+    notes: "Filed automatically by the formal-conjectures commits sweep. Matched on \"Sendov's conjecture\". Classifier rationale: The commit states that a full proof of Sendov's conjecture has been reported. Unreviewed: this records that a claim was made, not that it is correct."
+  - id: sendov-s-conjecture-sweep-32f18cc7
+    asserted_on: 2026-09-12
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-12
+    source:
+      title: "formal-conjectures: fix(Wikipedia/Sendov): mark Sendov's conjecture solved with a formal proof (#5560) **What changed** - `sendov_conjecture` is `research solved`, with a `formal_proof using lean4` attribute pointing at "
+      url: https://github.com/google-deepmind/formal-conjectures/commit/e0e1929ee61d4e722433ad6f9716aad4ef4ee08f
+      kind: github
+      quote: "`sendov_conjecture` is `research solved`, with a `formal_proof using lean4` attribute"
+    authors:
+      - j2d9w5xtjn-png
+    notes: "Filed automatically by the formal-conjectures commits sweep. Matched on \"Sendov's conjecture\". Classifier rationale: The commit states that Sendov's conjecture is marked solved via a formal Lean4 proof. Unreviewed: this records that a claim was made, not that it is correct."
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/Sendov.lean
     source: google-deepmind/formal-conjectures
