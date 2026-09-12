@@ -17,7 +17,23 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2026-01-23
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-1160-sweep-b2f4af97
+    asserted_on: 2026-09-12
+    type: partial
+    scope: odd n, m ≥ 3619
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-12
+    source:
+      title: "formal-conjectures PR #5906: feat(ErdosProblems): formalise Erdős Problem 1160"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/5906
+      kind: github
+      quote: Pantelidakis [Pa03] proved the original conjecture when $n$ is odd and $m\ge 3619$.
+    authors:
+      - stantheman0128
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 1160". Classifier rationale: The document reports a known partial proof for the conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
