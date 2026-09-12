@@ -31,6 +31,21 @@ claims:
       url: https://www.erdosproblems.com/1089
       kind: dataset
     notes: Upstream records this as solved without specifying the direction.
+  - id: erdos-1089-sweep-45737bd1
+    asserted_on: 2026-09-12
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-12
+    source:
+      title: "formal-conjectures PR #5893: feat(ErdosProblems): formalise Erdős Problem 1089"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/5893
+      kind: github
+      quote: "`erdos_1089` (solved): the limit \\lim_{d\\to\\infty} g_d(n)/d^{n-1} exists for every $n\\geq 2`"
+    authors:
+      - stantheman0128
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 1089". Classifier rationale: The pull request explicitly labels the conjecture as solved. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

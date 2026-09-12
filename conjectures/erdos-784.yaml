@@ -28,6 +28,22 @@ claims:
       url: https://www.erdosproblems.com/784
       kind: dataset
     notes: Upstream records this as solved without specifying the direction.
+  - id: erdos-784-sweep-5b042a8b
+    asserted_on: 2026-09-12
+    type: partial
+    scope: C ≤ 1
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-12
+    source:
+      title: "formal-conjectures PR #5856: feat(ErdosProblems): formalise Erdős Problem 784"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/5856
+      kind: github
+      quote: "`BoundHolds C ↔ C ≤ 1`"
+    authors:
+      - stantheman0128
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 784". Classifier rationale: The PR claims the conjecture is true for C ≤ 1 and false otherwise, constituting a partial resolution. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

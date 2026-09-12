@@ -29,6 +29,21 @@ claims:
       url: https://www.erdosproblems.com/1018
       kind: dataset
     notes: Upstream records this as solved without specifying the direction.
+  - id: erdos-1018-sweep-38c68f00
+    asserted_on: 2026-09-12
+    type: resolved_by_prior_literature
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-12
+    source:
+      title: "formal-conjectures PR #5864: feat(ErdosProblems): formalise Erdős Problem 1018"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/5864
+      kind: github
+      quote: The problem is solved in the affirmative by Kostochka and Pyber [KoPy88].
+    authors:
+      - stantheman0128
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 1018". Classifier rationale: The PR reports that the conjecture was already proved by Kostochka and Pyber. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

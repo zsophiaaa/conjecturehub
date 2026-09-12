@@ -27,6 +27,21 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/981
       kind: dataset
+  - id: erdos-981-sweep-f6eb07fe
+    asserted_on: 2026-09-12
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-12
+    source:
+      title: "formal-conjectures PR #5883: feat(ErdosProblems): formalise Erdős Problem 981"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/5883
+      kind: github
+      quote: "This is recorded as solved: Elliott [El69] proved it."
+    authors:
+      - stantheman0128
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 981". Classifier rationale: The document states the conjecture has been proved by Elliott. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

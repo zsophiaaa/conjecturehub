@@ -30,6 +30,21 @@ claims:
       url: https://www.erdosproblems.com/896
       kind: dataset
     notes: Upstream records this as solved without specifying the direction.
+  - id: erdos-896-sweep-cc3885db
+    asserted_on: 2026-09-12
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-12
+    source:
+      title: "formal-conjectures PR #5853: feat(ErdosProblems): formalise Erdős Problem 896"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/5853
+      kind: github
+      quote: "`erdos_896` is the now-known order of magnitude, `maxF N ≍ N² / ((log N)^δ (log log N)^{3/2})`, ... Tagged `research solved`."
+    authors:
+      - stantheman0128
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 896". Classifier rationale: The PR asserts the conjecture is now solved by stating the order of magnitude as known. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

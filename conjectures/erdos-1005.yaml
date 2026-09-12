@@ -17,7 +17,22 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-09-09
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-1005-sweep-9358d6f7
+    asserted_on: 2026-09-12
+    type: reformulation
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-12
+    source:
+      title: "formal-conjectures PR #5881: feat(ErdosProblems): formalise Erdős Problem 1005"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/5881
+      kind: github
+      quote: Statement-only Lean 4 formalisation of Erdős Problem 1005.
+    authors:
+      - stantheman0128
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 1005". Classifier rationale: The document reports a formal Lean 4 formalisation, not a mathematical proof or disproof. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
