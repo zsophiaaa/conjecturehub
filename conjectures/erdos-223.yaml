@@ -29,6 +29,22 @@ claims:
       url: https://www.erdosproblems.com/223
       kind: dataset
     notes: Upstream records this as solved without specifying the direction.
+  - id: erdos-223-sweep-b098e327
+    asserted_on: 2026-09-12
+    type: proved
+    scope: dimension 4, n ≥ 52
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-12
+    source:
+      title: "erdosproblems PR #431: Link #223 to A008811 for d = 4 and n >= 52"
+      url: https://github.com/teorth/erdosproblems/pull/431
+      kind: github
+      quote: Kupavskii's ... establishes $$ f_4(n)=\left\lfloor\frac{n^2}{4}\right\rfloor+ \left\lceil\frac n2\right\rceil+ \mathbf1_{n\not\equiv3\pmod4} \qquad(n\ge52). $$
+    authors:
+      - hannah-cheng
+    notes: 'Filed automatically by the erdosproblems pull requests sweep. Matched on "Erdős problem #223". Classifier rationale: The document reports a published proof for the conjecture in the case d=4 and n≥52. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

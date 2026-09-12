@@ -27,6 +27,22 @@ claims:
       title: erdosproblems.com records this problem as "decidable"
       url: https://www.erdosproblems.com/506
       kind: dataset
+  - id: erdos-506-sweep-039a2cad
+    asserted_on: 2026-09-12
+    type: partial
+    scope: n = 4,5
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-12
+    source:
+      title: "erdosproblems PR #419: Record small certified values of min-circles f(n)"
+      url: https://github.com/teorth/erdosproblems/pull/419
+      kind: github
+      quote: Pins f(4)=4 and f(5)=5 for Erdős problem 506 with short combinatorial certificates
+    authors:
+      - Chessing234
+    notes: 'Filed automatically by the erdosproblems pull requests sweep. Matched on "Erdős problem 506". Classifier rationale: The document reports certified values for the conjecture in the specific cases n=4 and n=5, which is partial progress. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
