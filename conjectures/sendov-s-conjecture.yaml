@@ -45,7 +45,22 @@ openness_basis:
   meaning: no_published_solution_known_to_curator
   asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: sendov-s-conjecture-sweep-9cef5d3f
+    asserted_on: 2026-09-12
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-12
+    source:
+      title: AI has already produced relatively simple and unexpected proofs of a number of conjectures, such as the proof of Sendov's conjecture (see Tao's blogpost). It seems AI is good at fi
+      url: https://mathstodon.xyz/@RiemCare/117260362722120477
+      kind: mastodon
+      quote: the proof of Sendov's conjecture (see Tao's blogpost)
+    authors:
+      - RiemCare
+    notes: "Filed automatically by the Mathstodon sweep. Matched on \"Sendov's conjecture\". Classifier rationale: The document states that a proof of Sendov's conjecture has been produced. Unreviewed: this records that a claim was made, not that it is correct."
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/Sendov.lean
     source: google-deepmind/formal-conjectures

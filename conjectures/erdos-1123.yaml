@@ -27,6 +27,21 @@ claims:
       title: erdosproblems.com records this problem as "independent"
       url: https://www.erdosproblems.com/1123
       kind: dataset
+  - id: erdos-1123-sweep-950d2e40
+    asserted_on: 2026-09-12
+    type: independence
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-12
+    source:
+      title: "formal-conjectures PR #5927: feat(ErdosProblems): formalise Erdős Problem 1123"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/5927
+      kind: github
+      quote: The claim is independent of ZFC
+    authors:
+      - stantheman0128
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 1123". Classifier rationale: The pull request explicitly states the conjecture is independent of ZFC. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

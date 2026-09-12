@@ -30,6 +30,21 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/977
       kind: dataset
+  - id: erdos-977-sweep-1f142935
+    asserted_on: 2026-09-12
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-12
+    source:
+      title: "formal-conjectures PR #5914: feat(ErdosProblems): formalise Erdős Problem 977"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/5914
+      kind: github
+      quote: Stewart [St13] proved $P(2^n-1)\gg n^{1+1/(104\log\log n)}$ for all large $n$.
+    authors:
+      - stantheman0128
+    notes: "Filed automatically by the formal-conjectures pull requests sweep. Matched on \"Erdős Problem 977\". Classifier rationale: The pull request records the conjecture as solved based on Stewart's theorem. Unreviewed: this records that a claim was made, not that it is correct."
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
