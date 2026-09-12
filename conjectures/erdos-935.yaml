@@ -18,7 +18,23 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-09-04
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-935-sweep-edfc67fc
+    asserted_on: 2026-09-12
+    type: proved
+    scope: Part (ii)
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-12
+    source:
+      title: "formal-conjectures PR #5861: feat(ErdosProblems): formalise Erdős Problem 935"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/5861
+      kind: github
+      quote: Part (ii) is solved affirmatively by van Doorn / Aletheia [Fe26] (Pell equation $x^2-8y^2=1$; cf. 367).
+    authors:
+      - stantheman0128
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 935". Classifier rationale: The document states that part (ii) of Erdős Problem 935 has been solved. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

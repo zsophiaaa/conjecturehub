@@ -31,6 +31,22 @@ claims:
       url: https://www.erdosproblems.com/1091
       kind: dataset
     notes: Upstream records this as solved without specifying the direction.
+  - id: erdos-1091-sweep-a47dae9e
+    asserted_on: 2026-09-12
+    type: partial
+    scope: part i proved, part ii disproved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-12
+    source:
+      title: "formal-conjectures PR #5870: feat(ErdosProblems): add 1091"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/5870
+      kind: github
+      quote: Answer `True` (Voss [Vo82]). ... Answer `False` (internal OpenAI model, [APSSV26b]).
+    authors:
+      - stantheman0128
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 1091". Classifier rationale: The PR states definitive truth values for both parts of Erdős Problem 1091. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

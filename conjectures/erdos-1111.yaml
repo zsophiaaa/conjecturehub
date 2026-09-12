@@ -15,7 +15,22 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-12-07
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-1111-sweep-178e7e12
+    asserted_on: 2026-09-12
+    type: reformulation
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-12
+    source:
+      title: "formal-conjectures PR #5892: feat(ErdosProblems): formalise Erdős Problem 1111"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/5892
+      kind: github
+      quote: the El Zahar–Erdős existence of $d(t,c)$ (open)
+    authors:
+      - stantheman0128
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 1111". Classifier rationale: The pull request formalises the conjecture and notes that the existence part remains open. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

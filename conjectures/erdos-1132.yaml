@@ -16,7 +16,23 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2026-01-01
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-1132-sweep-5c3b66d7
+    asserted_on: 2026-09-12
+    type: partial
+    scope: variants (max_bound, bernstein, tao)
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-12
+    source:
+      title: "formal-conjectures PR #5896: feat(ErdosProblems): formalise Erdős Problem 1132"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/5896
+      kind: github
+      quote: "`erdos_1132.variants.max_bound` (solved): Erdős, $$\\max L_n>(2/\\pi)\\log n-O(1)$$"
+    authors:
+      - stantheman0128
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 1132". Classifier rationale: The PR marks some parts as open and several variants as solved, indicating partial progress on the conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
