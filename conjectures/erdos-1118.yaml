@@ -28,6 +28,22 @@ claims:
       url: https://www.erdosproblems.com/1118
       kind: dataset
     notes: Upstream records this as solved without specifying the direction.
+  - id: erdos-1118-sweep-f730bb41
+    asserted_on: 2026-09-13
+    type: partial
+    scope: parts i and ii, best_possible variant, and T_Ici/T_Ioi variants
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-13
+    source:
+      title: "formal-conjectures PR #5947: feat(ErdosProblems): formalise Erdős Problem 1118"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/5947
+      kind: github
+      quote: "`erdos_1118.parts.i` (solved): the Hayman integral converges at infinity - `erdos_1118.variants.best_possible` (solved): ... - `erdos_1118.parts.ii` (solved): the downward-closedness question, `answer(False)` - `erdos_1118.variants.T_Ici` / `T_Ioi` (solved): Gol'dberg's descriptions of $T$"
+    authors:
+      - stantheman0128
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 1118". Classifier rationale: The PR claims several subcomponents of Erdős Problem 1118 have been solved. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
