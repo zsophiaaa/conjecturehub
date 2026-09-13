@@ -27,6 +27,21 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/900
       kind: dataset
+  - id: erdos-900-sweep-ad95ee40
+    asserted_on: 2026-09-13
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-13
+    source:
+      title: "formal-conjectures PR #5972: feat(ErdosProblems): formalise Erdős Problem 900"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/5972
+      kind: github
+      quote: The problem is proved (Ajtai–Komlós–Szemerédi [AKS81]).
+    authors:
+      - stantheman0128
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 900". Classifier rationale: The PR explicitly says the conjecture has been proved by AKS81. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

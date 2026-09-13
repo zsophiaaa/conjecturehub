@@ -28,6 +28,21 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/984
       kind: dataset
+  - id: erdos-984-sweep-89656ff4
+    asserted_on: 2026-09-13
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-13
+    source:
+      title: "formal-conjectures PR #5960: feat(ErdosProblems): formalise Erdős Problem 984"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/5960
+      kind: github
+      quote: Zach Hunter proved that the answer is yes.
+    authors:
+      - stantheman0128
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 984". Classifier rationale: The document states the problem has been solved by Zach Hunter. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

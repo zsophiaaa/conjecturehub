@@ -28,6 +28,21 @@ claims:
       title: erdosproblems.com records this problem as "disproved"
       url: https://www.erdosproblems.com/925
       kind: dataset
+  - id: erdos-925-sweep-9978b111
+    asserted_on: 2026-09-13
+    type: disproved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-13
+    source:
+      title: "formal-conjectures PR #5966: feat(ErdosProblems): formalise Erdős Problem 925"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/5966
+      kind: github
+      quote: Alon and Rödl [AlRo05] disproved the claim.
+    authors:
+      - stantheman0128
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 925". Classifier rationale: The document records the conjecture as solved by a known disproof. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
