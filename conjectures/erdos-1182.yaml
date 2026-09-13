@@ -16,7 +16,23 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2026-03-07
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-1182-sweep-26ec14ea
+    asserted_on: 2026-09-13
+    type: disproved
+    scope: whether F(n)/n → ∞
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-13
+    source:
+      title: "formal-conjectures PR #5957: feat(ErdosProblems): formalise Erdős Problem 1182"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/5957
+      kind: github
+      quote: The particular question $F(n)/n\to\infty$ is recorded as solved in the negative, following Brandt's bound $F(n)\le 84n$.
+    authors:
+      - stantheman0128
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 1182". Classifier rationale: The document states the question has been solved negatively, implying a disproof. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

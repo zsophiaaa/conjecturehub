@@ -49,6 +49,21 @@ claims:
       url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/219.lean
       kind: dataset
     notes: Imported from the upstream `research solved` category. The statement is formalized; the proof has not been machine-checked by ConjectureHub.
+  - id: erdos-219-sweep-296a85a0
+    asserted_on: 2026-09-13
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-13
+    source:
+      title: "formal-conjectures PR #5926: ErdosProblems/219: link formal proof"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/5926
+      kind: github
+      quote: The linked proof establishes the same claim that there are arbitrarily long arithmetic progressions of primes.
+    authors:
+      - sylvesterkaczmarek
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 219". Classifier rationale: The PR states that a formal Lean proof of the conjecture has been linked, indicating a claimed proof. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/219.lean
     source: google-deepmind/formal-conjectures

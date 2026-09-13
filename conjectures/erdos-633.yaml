@@ -59,6 +59,36 @@ claims:
       url: https://www.erdosproblems.com/633
       kind: dataset
     notes: Upstream records this as solved without specifying the direction.
+  - id: erdos-633-sweep-37c00961
+    asserted_on: 2026-09-13
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-13
+    source:
+      title: "formal-conjectures PR #5574: fix(ErdosProblems/633): the classification of triangles is known"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/5574
+      kind: github
+      quote: We classify triangles that can be tiled only into a square number of congruent triangles, settling Erdős Problem 633.
+    authors:
+      - j2d9w5xtjn-png
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 633". Classifier rationale: The document reports a published solution that settles the problem. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: erdos-633-sweep-7e9b47c3
+    asserted_on: 2026-09-13
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-13
+    source:
+      title: "formal-conjectures: fix(ErdosProblems/633): the classification of triangles is known (#5574) **What changed** - `erdos_633` is `research solved`, with the answer slot left as `sorry` and a localised `linter.style.categor"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/a21334b71503e08af963697cedfaff49e5c20fe2
+      kind: github
+      quote: We classify triangles that can be tiled only into a square number of congruent triangles, settling Erdős Problem 633.
+    authors:
+      - j2d9w5xtjn-png
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 633". Classifier rationale: The document reports a published solution that settles the problem. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/633.lean
     source: google-deepmind/formal-conjectures

@@ -15,7 +15,22 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-09-12
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-1017-sweep-9a9f868b
+    asserted_on: 2026-09-13
+    type: reformulation
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-13
+    source:
+      title: "formal-conjectures PR #5868: feat(ErdosProblems): formalise Erdős Problem 1017"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/5868
+      kind: github
+      quote: "`erdos_1017` ... `research open`, `answer(sorry)`"
+    authors:
+      - stantheman0128
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 1017". Classifier rationale: The pull request formalises Erdős Problem 1017 and records its status as an open research problem. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
