@@ -29,7 +29,23 @@ openness_basis:
   meaning: no_published_solution_known_to_curator
   asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: gilbreath-s-conjecture-sweep-ff96f50a
+    asserted_on: 2026-09-14
+    type: partial
+    scope: first 64 million primes
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-14
+    source:
+      title: I recently completed a computational study of a local question in Gilbreath difference triangles and would be interested in feedback or attempts to break the conjectural extension.
+      url: https://mathstodon.xyz/@Kevin_Schimmel/117271018413272885
+      kind: mastodon
+      quote: The audit covers the first 64 million primes and contains 9,533 authenticated (1,2) frontier events.
+    authors:
+      - Kevin_Schimmel
+    notes: "Filed automatically by the Mathstodon sweep. Matched on \"Gilbreath's conjecture\". Classifier rationale: The paper reports finite computational verification but does not claim a full proof or disproof. Unreviewed: this records that a claim was made, not that it is correct."
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/Gilbreath.lean
     source: google-deepmind/formal-conjectures

@@ -96,6 +96,21 @@ claims:
       url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/283.lean
       kind: dataset
     notes: Imported from the upstream `research solved` category. The statement is formalized; the proof has not been machine-checked by ConjectureHub.
+  - id: erdos-283-sweep-a4d5cb2a
+    asserted_on: 2026-09-14
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-14
+    source:
+      title: "formal-conjectures: Fix Erdős 283 formal proof reference (#5994) Fixes #5990. ## Summary Point the `formal_proof` attribute for Erdős Problem 283 at the external proof's `PolynomialEgyptianSums.theorem_1` rather than the"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/c8c13d43fe8830aeb24ecd1d0dfcba08d43cd5c9
+      kind: github
+      quote: "`theorem_1` is stated for integer-valued `p : ℚ[X]`, matching the current Formal Conjectures statement, and proves the stronger version with arbitrary positive rational α and denominator lower bound L."
+    authors:
+      - sylvesterkaczmarek
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 283". Classifier rationale: The commit declares that theorem_1 provides a proof of the conjecture (and a stronger version). Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/283.lean
     source: google-deepmind/formal-conjectures

@@ -28,6 +28,36 @@ claims:
       title: erdosproblems.com records this problem as "disproved"
       url: https://www.erdosproblems.com/958
       kind: dataset
+  - id: erdos-958-sweep-1c31bb07
+    asserted_on: 2026-09-14
+    type: counterexample
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-14
+    source:
+      title: "formal-conjectures PR #5513: fix(ErdosProblems/958): ask the classification for all sufficiently large n"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/5513
+      kind: github
+      quote: the negative answer of Clemen, Dumitrescu and Liu asserts counterexamples of arbitrarily large size.
+    authors:
+      - Deicyde
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 958". Classifier rationale: The document cites known counterexamples that refute the conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: erdos-958-sweep-b1bbf89c
+    asserted_on: 2026-09-14
+    type: reformulation
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-14
+    source:
+      title: "formal-conjectures: fix(ErdosProblems/958): ask the classification for all sufficiently large n (#5513) **What changed** - The right-hand side of `erdos_958` reads `∃ N, ∀ n ≥ N, …` instead of `∀ n, …`. The docstring exp"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/0c92ca701538aba00014d1d6444df7954eea3f6d
+      kind: github
+      quote: The right-hand side of `erdos_958` reads `∃ N, ∀ n ≥ N, …` instead of `∀ n, …`.
+    authors:
+      - Deicyde
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 958". Classifier rationale: The commit updates the formal statement to allow finitely many exceptions, reformulating the conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
