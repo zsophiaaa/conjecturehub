@@ -28,6 +28,21 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/1099
       kind: dataset
+  - id: erdos-1099-sweep-1365da32
+    asserted_on: 2026-09-14
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-14
+    source:
+      title: "formal-conjectures PR #5938: feat(ErdosProblems): formalise Erdős Problem 1099"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/5938
+      kind: github
+      quote: "The boxed question is solved: Vose [Vo84] constructed a sequence with $h_\\alpha$ bounded, so this is `research solved` with `answer(True)`."
+    authors:
+      - stantheman0128
+    notes: "Filed automatically by the formal-conjectures pull requests sweep. Matched on \"Erdős Problem 1099\". Classifier rationale: The document states that the problem has been solved by Vose's construction. Unreviewed: this records that a claim was made, not that it is correct."
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
