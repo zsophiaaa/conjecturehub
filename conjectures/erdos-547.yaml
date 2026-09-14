@@ -28,6 +28,21 @@ claims:
       title: erdosproblems.com records this problem as "decidable"
       url: https://www.erdosproblems.com/547
       kind: dataset
+  - id: erdos-547-sweep-0042d9c5
+    asserted_on: 2026-09-14
+    type: resolved_by_prior_literature
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-14
+    source:
+      title: "formal-conjectures PR #5945: ErdosProblems/547: sync solved status"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/5945
+      kind: github
+      quote: update Erdős Problem 547 from `research open` to `research solved`
+    authors:
+      - sylvesterkaczmarek
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 547". Classifier rationale: The pull request claims the problem is now marked as solved, aligning with an existing solution on erdosproblems.com. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
