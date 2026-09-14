@@ -11,7 +11,24 @@ openness_basis:
   meaning: unknown
   asserted_by: wikidata
   note: Identity record only. No statement or status has been ingested for this conjecture yet.
-claims: []
+claims:
+  - id: hodge-conjecture-sweep-f9cddc8e
+    asserted_on: 2026-09-14
+    type: proved
+    scope: the degree 33 Fermat fourfold
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-14
+    source:
+      title: The Chern character of a coherent sheaf on a smooth projective hypersurface
+      url: https://arxiv.org/abs/2609.12759
+      kind: arxiv
+      quote: We finish by proving the Hodge conjecture for the degree 33 Fermat fourfold.
+    authors:
+      - David Favero
+      - Tyler L. Kelly
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Hodge conjecture". Classifier rationale: The abstract explicitly states a proof of the Hodge conjecture for that specific hypersurface. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q1143138
     source: wikidata

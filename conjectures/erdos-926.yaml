@@ -27,6 +27,21 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/926
       kind: dataset
+  - id: erdos-926-sweep-e5b9660e
+    asserted_on: 2026-09-14
+    type: resolved_by_prior_literature
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-14
+    source:
+      title: "formal-conjectures PR #5981: feat(ErdosProblems): formalise Erdős Problem 926"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/5981
+      kind: github
+      quote: "`answer(True)` (Füredi [Fu91], improved by Alon–Krivelevich–Sudakov [AKS03])"
+    authors:
+      - stantheman0128
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 926". Classifier rationale: The PR states the conjecture is true and cites existing published proofs. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

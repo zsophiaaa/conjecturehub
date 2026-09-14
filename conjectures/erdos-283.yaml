@@ -96,6 +96,21 @@ claims:
       url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/283.lean
       kind: dataset
     notes: Imported from the upstream `research solved` category. The statement is formalized; the proof has not been machine-checked by ConjectureHub.
+  - id: erdos-283-sweep-901bee23
+    asserted_on: 2026-09-14
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-14
+    source:
+      title: "formal-conjectures PR #5994: Fix Erdős 283 formal proof reference"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/5994
+      kind: github
+      quote: "`theorem_1` ... proves the stronger version with arbitrary positive rational α"
+    authors:
+      - sylvesterkaczmarek
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 283". Classifier rationale: The pull request states that a formal Lean proof establishes the conjecture (and a stronger version). Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/283.lean
     source: google-deepmind/formal-conjectures
