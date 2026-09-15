@@ -27,6 +27,36 @@ claims:
       title: erdosproblems.com records this problem as "falsifiable"
       url: https://www.erdosproblems.com/548
       kind: dataset
+  - id: erdos-548-sweep-2ed0cc56
+    asserted_on: 2026-09-15
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-15
+    source:
+      title: "formal-conjectures PR #5359: ErdosProblems/548: sync solved status and link formal proof"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/5359
+      kind: github
+      quote: mark Erdős Problem 548 as `research solved` - link the complete Lean proof
+    authors:
+      - sylvesterkaczmarek
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 548". Classifier rationale: The pull request declares the problem solved and provides a formal Lean proof. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: erdos-548-sweep-71aca64b
+    asserted_on: 2026-09-15
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-15
+    source:
+      title: "formal-conjectures: ErdosProblems/548: sync solved status and link formal proof (#5359) Fixes #5328. ## Summary - mark Erdős Problem 548 as `research solved` - link the complete Lean proof in `Jayyhk/erdos-lean` at a pin"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/02da1ad1288b4881ea1f8e575fbe84af7db04364
+      kind: github
+      quote: mark Erdős Problem 548 as `research solved`
+    authors:
+      - sylvesterkaczmarek
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 548". Classifier rationale: The commit states the problem is marked as research solved and links a complete Lean proof. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
