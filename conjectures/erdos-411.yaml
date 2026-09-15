@@ -18,7 +18,23 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-411-sweep-e7f117d9
+    asserted_on: 2026-09-15
+    type: partial
+    scope: the known solutions n = 10 and n = 94 with r = 2
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-15
+    source:
+      title: "formal-conjectures PR #6017: feat(ErdosProblems): add statement of Erdős Problem 411"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6017
+      kind: github
+      quote: proves the known solutions n = 10 and n = 94 (r = 2)
+    authors:
+      - clok0114-droid
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 411". Classifier rationale: The PR reports proving specific cases but does not claim a full resolution. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

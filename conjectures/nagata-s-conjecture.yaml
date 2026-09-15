@@ -25,6 +25,22 @@ claims:
       Standing taken from English Wikipedia's categorisation (Wikipedia categorises this as proved). Nobody here has read the paper that settled it, which is what the secondary attestation says; replace this claim with one citing that paper when someone has it to hand.
 
       Retracted 2026-08-03 after review: Two distinct conjectures with opposite statuses. Nagata's automorphism conjecture is proved (Shestakov–Umirbaev, JAMS 17 (2004) 197–227). The far more widely cited Nagata conjecture on curves is open for every non-square r >= 10. Needs splitting before any status can be filed. See https://en.wikipedia.org/wiki/Nagata%27s_conjecture_on_curves.
+  - id: nagata-s-conjecture-sweep-abade4fd
+    asserted_on: 2026-09-15
+    type: proved
+    scope: characteristic ≥ 7
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-15
+    source:
+      title: Nagata's conjecture on a polynomial automorphism in positive characteristic
+      url: https://arxiv.org/abs/2609.14611
+      kind: arxiv
+      quote: The purpose of this paper is to prove the conjecture for \mathop{\mathrm{char}}\nolimits k\ge 7.
+    authors:
+      - Shigeru Kuroda
+    notes: "Filed automatically by the arXiv new submissions sweep. Matched on \"Nagata's conjecture\". Classifier rationale: The abstract explicitly claims a proof of Nagata's conjecture for fields of characteristic at least 7. Unreviewed: this records that a claim was made, not that it is correct."
 provenance:
   - url: https://www.wikidata.org/wiki/Q6958656
     source: wikidata

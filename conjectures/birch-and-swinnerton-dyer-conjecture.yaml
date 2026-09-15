@@ -11,7 +11,24 @@ openness_basis:
   meaning: no_solution_known_to_community
   asserted_by: wikipedia
   note: Listed under "Unsolved problems in number theory" on English Wikipedia.
-claims: []
+claims:
+  - id: birch-and-swinnerton-dyer-conjecture-sweep-044398ff
+    asserted_on: 2026-09-15
+    type: partial
+    scope: primes p ≡ 8 (mod 9) (elliptic curves E_p)
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-15
+    source:
+      title: A proof of Sylvester's conjecture
+      url: https://arxiv.org/abs/2609.14893
+      kind: arxiv
+      quote: we prove that the elliptic curve $E_p:y^2=x^3+p^2/4$ has analytic rank one, as predicted by the Birch and Swinnerton-Dyer conjecture
+    authors:
+      - Ashay Burungale
+      - Ye Tian
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Birch and Swinnerton-Dyer conjecture". Classifier rationale: The paper verifies the BSD prediction for a specific family of curves, which is partial progress on the conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q527863
     source: wikidata
