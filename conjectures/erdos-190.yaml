@@ -29,6 +29,21 @@ claims:
       url: https://www.erdosproblems.com/190
       kind: dataset
     notes: Upstream records this as solved without specifying the direction.
+  - id: erdos-190-sweep-0bcf25ca
+    asserted_on: 2026-09-15
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-15
+    source:
+      title: "formal-conjectures PR #6021: feat(ErdosProblems): add problem 190 (solved, formal proof linked)"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6021
+      kind: github
+      quote: add problem 190 (solved, formal proof linked).
+    authors:
+      - jbaelaw
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 190". Classifier rationale: The PR states the problem is solved and links a formal proof. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
