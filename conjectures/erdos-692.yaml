@@ -28,6 +28,22 @@ claims:
       title: erdosproblems.com records this problem as "disproved"
       url: https://www.erdosproblems.com/692
       kind: dataset
+  - id: erdos-692-sweep-e658f1c4
+    asserted_on: 2026-09-14
+    type: proved
+    scope: Part II
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-15
+    source:
+      title: "formal-conjectures PR #4888: Mark Erdős Problem 692 Part II target as solved"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/4888
+      kind: github
+      quote: Mark Erdős Problem 692 Part II target as solved.
+    authors:
+      - KitaKen1
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 692". Classifier rationale: The PR states that a Lean proof has been provided and the formal target for Part II is marked as solved. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

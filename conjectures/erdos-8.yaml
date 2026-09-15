@@ -28,6 +28,36 @@ claims:
       title: erdosproblems.com records this problem as "disproved"
       url: https://www.erdosproblems.com/8
       kind: dataset
+  - id: erdos-8-sweep-ba85bf2a
+    asserted_on: 2026-09-14
+    type: disproved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-15
+    source:
+      title: "formal-conjectures PR #6009: feat(ErdosProblems): formalise Erdős Problem 8"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6009
+      kind: github
+      quote: Status `research solved`, answer `False`.
+    authors:
+      - ajitashwath
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 8". Classifier rationale: The PR states the conjecture is research solved with answer False, i.e., disproved. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: erdos-8-sweep-bb4c1c81
+    asserted_on: 2026-09-14
+    type: disproved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-15
+    source:
+      title: "formal-conjectures PR #6006: feat(ErdosProblems): formalise Erdős Problem 8 (monochromatic moduli in covering systems)"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6006
+      kind: github
+      quote: The answer is **no** (disproved).
+    authors:
+      - raopratik
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 8". Classifier rationale: The document explicitly states the conjecture is disproved. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
