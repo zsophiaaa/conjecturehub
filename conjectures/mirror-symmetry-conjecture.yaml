@@ -10,7 +10,22 @@ openness_basis:
   meaning: unknown
   asserted_by: wikidata
   note: Identity record only. No statement or status has been ingested for this conjecture yet.
-claims: []
+claims:
+  - id: mirror-symmetry-conjecture-sweep-8f143673
+    asserted_on: 2026-09-15
+    type: partial
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-15
+    source:
+      title: On Arithmetic Mirror Symmetry for smooth Fano fourfolds
+      url: https://arxiv.org/abs/2604.26592
+      kind: arxiv
+      quote: Using the partial case of Arithmetic Mirror Symmetry conjecture proved by Kerr, we provide three examples of a Mirror Symmetry correspondence between specific algebraic classes.
+    authors:
+      - Mikhail Ovcharenko
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "mirror symmetry conjecture". Classifier rationale: The paper cites a previously proved partial case of the conjecture but does not claim a full proof or disproof. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q97366912
     source: wikidata
