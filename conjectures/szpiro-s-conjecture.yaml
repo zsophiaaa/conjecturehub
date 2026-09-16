@@ -11,7 +11,23 @@ openness_basis:
   meaning: no_solution_known_to_community
   asserted_by: wikipedia
   note: Listed under "Unsolved problems in number theory" on English Wikipedia.
-claims: []
+claims:
+  - id: szpiro-s-conjecture-sweep-e44c8dbd
+    asserted_on: 2026-09-16
+    type: partial
+    scope: all elliptic curves over Q (log Δ ≪ N log log N); semistable curves (log Δ ≪ N)
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-16
+    source:
+      title: Improved bounds for Szpiro's conjecture
+      url: https://arxiv.org/abs/2609.17390
+      kind: arxiv
+      quote: We obtain the stronger bound \(\log \Delta \ll N\log \log N\) which was previously known only under GRH.
+    authors:
+      - Hector Pasten
+    notes: "Filed automatically by the arXiv new submissions sweep. Matched on \"Szpiro's conjecture\". Classifier rationale: The paper improves bounds toward Szpiro's conjecture but does not claim a full proof. Unreviewed: this records that a claim was made, not that it is correct."
 provenance:
   - url: https://www.wikidata.org/wiki/Q829242
     source: wikidata
