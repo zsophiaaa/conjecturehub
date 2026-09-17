@@ -29,7 +29,22 @@ openness_basis:
   meaning: no_published_solution_known_to_curator
   asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: twin-prime-conjecture-sweep-3c7d54fb
+    asserted_on: 2026-09-17
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-17
+    source:
+      title: Math for understanding. Twin primes is no longer a mystery! In recent weeks, there has been a rush to prove the Twin prime conjecture. This is how Science News describes the events
+      url: https://mathstodon.xyz/@bokiy/117287716908069718
+      kind: mastodon
+      quote: '"Through infinite coverings to a proof of the Twin prime conjecture and similar"'
+    authors:
+      - Mikhail Bokiy
+    notes: 'Filed automatically by the Mathstodon sweep. Matched on "Twin prime conjecture". Classifier rationale: The document cites a preprint that claims to prove the Twin prime conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/TwinPrimes.lean
     source: google-deepmind/formal-conjectures
