@@ -27,6 +27,21 @@ claims:
       title: erdosproblems.com records this problem as "falsifiable"
       url: https://www.erdosproblems.com/548
       kind: dataset
+  - id: erdos-548-sweep-22a2fc3c
+    asserted_on: 2026-09-17
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-17
+    source:
+      title: "formal-conjectures PR #6028: feat(ErdosProblems): add Erdős 557 (solved) and mark Erdős 547 solved"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6028
+      kind: github
+      quote: The ... machine-checked proof (found by GPT-6 Astra, packaged by Tom Adamczewski ...) of the Erdős–Sós theorem (Erdős problem 548) is imported as a pinned Lake dependency ...
+    authors:
+      - zhangjun725
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős problem 548". Classifier rationale: The document states that a formal, machine‑checked proof of Erdős problem 548 has been provided. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
