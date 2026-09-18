@@ -29,6 +29,21 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/220
       kind: dataset
+  - id: erdos-220-sweep-eab81f73
+    asserted_on: 2026-09-18
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-18
+    source:
+      title: "formal-conjectures PR #6115: Add Erdős Problem 220 (gaps between reduced residues), linked to the formal proof"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6115
+      kind: github
+      quote: "`research solved`, `answer(True)`: the sum of the squared gaps between consecutive reduced residues mod `n` is `≪ n²/φ(n)` (Montgomery–Vaughan, [MoVa86]; a $500 problem)."
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 220". Classifier rationale: The PR explicitly marks the conjecture as solved and cites a known result as the proof. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

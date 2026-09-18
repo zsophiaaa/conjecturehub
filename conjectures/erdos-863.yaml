@@ -31,6 +31,22 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/863
       kind: dataset
+  - id: erdos-863-sweep-eccf6de0
+    asserted_on: 2026-09-18
+    type: proved
+    scope: for r ≥ 2
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-18
+    source:
+      title: "formal-conjectures PR #6108: Add Erdős Problem 863 (B₂[r] sets: sums versus differences), linked to the formal proof"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6108
+      kind: github
+      quote: "`erdos_863.parts.i` / `erdos_863.parts.ii` (`research solved`, `answer(True)`) ..."
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 863". Classifier rationale: The PR states the conjecture’s parts are marked as research solved with a true answer. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

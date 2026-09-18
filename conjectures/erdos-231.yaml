@@ -27,6 +27,21 @@ claims:
       title: erdosproblems.com records this problem as "disproved"
       url: https://www.erdosproblems.com/231
       kind: dataset
+  - id: erdos-231-sweep-e5932475
+    asserted_on: 2026-09-18
+    type: disproved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-18
+    source:
+      title: "formal-conjectures PR #6143: Add Erdős Problem 231 (abelian squares in strings of length 2^k − 1), link the formal disproof"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6143
+      kind: github
+      quote: Add Erdős Problem 231 (abelian squares in strings of length 2^k − 1), link the formal disproof.
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 231". Classifier rationale: The pull request explicitly mentions linking a formal disproof, indicating the conjecture is claimed to be disproved. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

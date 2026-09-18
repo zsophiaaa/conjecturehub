@@ -28,6 +28,21 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/485
       kind: dataset
+  - id: erdos-485-sweep-24df7bf7
+    asserted_on: 2026-09-18
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-18
+    source:
+      title: "formal-conjectures PR #6118: Add Erdős Problem 485 (terms of the square of a polynomial), linked to the formal proof"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6118
+      kind: github
+      quote: "`erdos_485` (`research solved`, `answer(True)`): `f(k) → ∞` (Erdős–Rényi conjecture, proved by Schinzel [Sc87])."
+    authors:
+      - Konamiu
+    notes: "Filed automatically by the formal-conjectures pull requests sweep. Matched on \"Erdős Problem 485\". Classifier rationale: The pull request declares the conjecture is solved, citing Schinzel's proof. Unreviewed: this records that a claim was made, not that it is correct."
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
