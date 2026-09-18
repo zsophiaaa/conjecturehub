@@ -28,6 +28,21 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/605
       kind: dataset
+  - id: erdos-605-sweep-ab7a332f
+    asserted_on: 2026-09-18
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-18
+    source:
+      title: "formal-conjectures PR #6235: Add Erdős Problem 605 (repeated distances on the sphere), link the formal proof"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6235
+      kind: github
+      quote: "`erdos_605` (`research solved`, `answer(True)`)"
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 605". Classifier rationale: The pull request labels the conjecture as research solved and links a formal proof. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

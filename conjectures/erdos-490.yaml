@@ -29,6 +29,21 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/490
       kind: dataset
+  - id: erdos-490-sweep-b1239307
+    asserted_on: 2026-09-18
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-18
+    source:
+      title: "formal-conjectures PR #6194: Add Erdős Problem 490 (sets with distinct pairwise products), link Szemerédi's formal proof"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6194
+      kind: github
+      quote: "`erdos_490` (`research solved`, `answer(True)`) "
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 490". Classifier rationale: The pull request states that a formal proof of Erdős Problem 490 has been added, marking it as solved. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

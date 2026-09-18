@@ -31,6 +31,21 @@ claims:
       url: https://www.erdosproblems.com/1089
       kind: dataset
     notes: Upstream records this as solved without specifying the direction.
+  - id: erdos-1089-sweep-b292d542
+    asserted_on: 2026-09-18
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-18
+    source:
+      title: "formal-conjectures: Add Erdős Problem 1089 (points forcing many distances), linked to the formal proof (#6109) Fixes #1289. ### What changed Adds `FormalConjectures/ErdosProblems/1089.lean`: - `distanceCount`, `ForcesDis"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/9092de2351d17c5dd4f13a740157fac934775ade
+      kind: github
+      quote: "`erdos_1089` (`research solved`, `answer(True)`): for `n ≥ 2`, `lim_{d→∞} g_d(n)/d^{n-1}` exists;"
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 1089". Classifier rationale: The commit records a formal proof that resolves the conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

@@ -27,6 +27,21 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/1180
       kind: dataset
+  - id: erdos-1180-sweep-b9306d74
+    asserted_on: 2026-09-18
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-18
+    source:
+      title: "formal-conjectures PR #6229: Add Erdős Problem 1180 (sums of inverses of small integers modulo p), link the formal proof"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6229
+      kind: github
+      quote: "`erdos_1180` (`research solved`, `answer(True)`) for every ε > 0 there is C ... (Shparlinski [Sh02], Glibichuk [Gl06])"
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 1180". Classifier rationale: The PR states the conjecture is research solved with answer(True), indicating a proof. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
