@@ -27,7 +27,24 @@ openness_basis:
   meaning: no_published_solution_known_to_curator
   asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: gap-conjecture-sweep-e6189af0
+    asserted_on: 2026-09-18
+    type: partial
+    scope: exponents β < 1/4 for residually soluble groups
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-18
+    source:
+      title: The growth of residually soluble groups
+      url: https://arxiv.org/abs/2511.07018
+      kind: arxiv
+      quote: This shows that Grigorchuk's Gap Conjecture holds for all exponents \beta < 1/4 within the class of residually soluble groups (improving Wilson's exponent 1/6).
+    authors:
+      - Sean Eberhard
+      - Elena Maini
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Gap conjecture". Classifier rationale: The paper claims a partial verification of the Gap Conjecture for a specific range of exponents in a restricted class of groups. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/GapConjecture.lean
     source: google-deepmind/formal-conjectures
