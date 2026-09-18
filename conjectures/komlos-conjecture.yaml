@@ -43,7 +43,22 @@ openness_basis:
   meaning: no_published_solution_known_to_curator
   asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: komlos-conjecture-sweep-52a92629
+    asserted_on: 2026-09-17
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-18
+    source:
+      title: TR26-188 | An elementary proof of the Komlos conjecture | Shachar Lovett, Sankeerth Rao Karingula https:// eccc.weizmann.ac.il/report/202 6/188 We give an elementary proof of the K
+      url: https://mathstodon.xyz/@cstheory/117288808854154459
+      kind: mastodon
+      quote: We give an elementary proof of the Komlos conjecture
+    authors:
+      - TCS blog aggregator
+    notes: 'Filed automatically by the Mathstodon sweep. Matched on "Komlós conjecture". Classifier rationale: The document explicitly claims to provide a proof of the conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/KomlosConjecture.lean
     source: google-deepmind/formal-conjectures
