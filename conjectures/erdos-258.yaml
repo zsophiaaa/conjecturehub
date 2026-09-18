@@ -61,6 +61,38 @@ claims:
       url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/258.lean
       kind: dataset
     notes: Imported from the upstream `research solved` category. The statement is formalized; the proof has not been machine-checked by ConjectureHub.
+  - id: erdos-258-sweep-657b1406
+    asserted_on: 2026-09-18
+    type: proved
+    scope: constant-base case (a_i = t)
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-18
+    source:
+      title: "formal-conjectures PR #5034: Add formal proof for Erdős Problem 258 constant-base variant"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/5034
+      kind: github
+      quote: This PR adds a `formal_proof` link to the solved constant-base variant of Erdős Problem 258.
+    authors:
+      - wcook04
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 258". Classifier rationale: The document states that a formal proof of the constant-base variant has been added, indicating a proof of that special case. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: erdos-258-sweep-b7ae3848
+    asserted_on: 2026-09-18
+    type: partial
+    scope: constant-base case (a_i = t)
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-18
+    source:
+      title: "formal-conjectures: Add formal proof for Erdős Problem 258 constant-base variant (#5034) This PR adds a `formal_proof` link to the solved constant-base variant of Erdős Problem 258. The external proof establishes the exa"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/24984cbe91e37e602f609bc3ef9f3e5f3fcdf051
+      kind: github
+      quote: This covers the constant-base case $a_i = t$ only.
+    authors:
+      - wcook04
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 258". Classifier rationale: The document reports a formal proof of the constant-base variant of Erdős Problem 258. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/258.lean
     source: google-deepmind/formal-conjectures

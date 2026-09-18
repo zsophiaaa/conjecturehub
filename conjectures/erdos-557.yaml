@@ -16,7 +16,22 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-557-sweep-22a2fc3c
+    asserted_on: 2026-09-18
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-18
+    source:
+      title: "formal-conjectures PR #6028: feat(ErdosProblems): add Erdős 557 (solved) and mark Erdős 547 solved"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6028
+      kind: github
+      quote: "`add Erdős 557 (solved)`"
+    authors:
+      - zhangjun725
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős problem 557". Classifier rationale: The pull request states that Erdős problem 557 is now marked as solved with a formal proof. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
