@@ -128,7 +128,23 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: erdos-357-sweep-3a24e2c8
+    asserted_on: 2026-09-18
+    type: partial
+    scope: lower Big-O variant (establishes f(n) = Ω(√n))
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-18
+    source:
+      title: "formal-conjectures PR #4918: Mark Erdős Problem 357 lower Big-O variant as solved"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/4918
+      kind: github
+      quote: Mark Erdős Problem 357 lower Big-O variant as solved. ... the proof establishes the concrete combinatorial lower bound ⌊√n⌋ ≤ f(n).
+    authors:
+      - KitaKen1
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 357". Classifier rationale: The document reports a formal proof of a lower bound, which is partial progress on the original conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/357.lean
     source: google-deepmind/formal-conjectures

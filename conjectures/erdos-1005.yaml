@@ -17,7 +17,22 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-09-09
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-1005-sweep-e62bbc61
+    asserted_on: 2026-09-18
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-18
+    source:
+      title: "formal-conjectures PR #6106: Add Erdős Problem 1005 (similarly ordered Farey fractions), linked to the formal proof"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6106
+      kind: github
+      quote: "`erdos_1005.variants.constant` (`research solved`): `f(n)/n → 1/4`, linked to plby/lean-proofs `Erdos1005.erdos_1005` (Cipollini, van Doorn and Aristotle)"
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 1005". Classifier rationale: The pull request states that a formal proof of the conjecture exists and is marked as research solved. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

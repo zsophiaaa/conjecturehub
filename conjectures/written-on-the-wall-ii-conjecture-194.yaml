@@ -28,7 +28,22 @@ openness_basis:
   meaning: no_published_solution_known_to_curator
   asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: written-on-the-wall-ii-conjecture-194-sweep-8c37eba4
+    asserted_on: 2026-09-18
+    type: counterexample
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-18
+    source:
+      title: Lean-Certified Infinite Counterexamples to Written on the Wall II Conjecture 194
+      url: https://arxiv.org/abs/2609.19195
+      kind: arxiv
+      quote: but has no Hamiltonian path.
+    authors:
+      - Cameron Beeley
+    notes: "Filed automatically by the arXiv new submissions sweep. Matched on \"Written on the Wall II - Conjecture 194\". Classifier rationale: The paper presents an infinite family of graphs meeting the conjecture's hypothesis but lacking a Hamiltonian path, thereby providing counterexamples. Unreviewed: this records that a claim was made, not that it is correct."
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/WrittenOnTheWallII/GraphConjecture194.lean
     source: google-deepmind/formal-conjectures

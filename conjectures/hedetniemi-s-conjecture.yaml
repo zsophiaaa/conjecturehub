@@ -22,6 +22,21 @@ claims:
       url: https://en.wikipedia.org/wiki/Hedetniemi's_conjecture
       kind: wikipedia
     notes: Standing taken from English Wikipedia's categorisation (Wikipedia categorises this as disproved). Nobody here has read the paper that settled it, which is what the secondary attestation says; replace this claim with one citing that paper when someone has it to hand.
+  - id: hedetniemi-s-conjecture-sweep-619e4a7a
+    asserted_on: 2026-09-18
+    type: resolved_by_prior_literature
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-18
+    source:
+      title: A counterexample to the quantum Hedetniemi conjecture
+      url: https://arxiv.org/abs/2609.20690
+      kind: arxiv
+      quote: Zhu's counterexample to Hedetniemi's conjecture
+    authors:
+      - Julius A. Zeiss
+    notes: "Filed automatically by the arXiv new submissions sweep. Matched on \"Hedetniemi's conjecture\". Classifier rationale: The paper cites Zhu's counterexample, indicating the conjecture has already been disproved. Unreviewed: this records that a claim was made, not that it is correct."
 provenance:
   - url: https://www.wikidata.org/wiki/Q17022106
     source: wikidata

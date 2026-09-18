@@ -27,6 +27,21 @@ claims:
       title: erdosproblems.com records this problem as "disproved"
       url: https://www.erdosproblems.com/927
       kind: dataset
+  - id: erdos-927-sweep-1bd2a74f
+    asserted_on: 2026-09-18
+    type: disproved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-18
+    source:
+      title: "formal-conjectures PR #6123: Add Erdős Problem 927 (numbers of clique sizes), linked to the formal disproof"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6123
+      kind: github
+      quote: disproved by Spencer. Linked to ... which refutes the upper-bound half.
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 927". Classifier rationale: The pull request states the conjecture has been formally disproved. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

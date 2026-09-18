@@ -52,7 +52,23 @@ openness_basis:
   meaning: no_published_solution_known_to_curator
   asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: invariant-subspace-problem-sweep-ea64d591
+    asserted_on: 2026-09-18
+    type: partial
+    scope: finite-dimensional Hilbert spaces
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-18
+    source:
+      title: "formal-conjectures PR #6049: Prove Invariant_subspace_problem_finite_dimensional"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6049
+      kind: github
+      quote: replace the `sorry` in `Invariant_subspace_problem_finite_dimensional` with a 25-line proof
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Invariant Subspace Problem". Classifier rationale: The PR claims a proof of the invariant subspace problem for the finite-dimensional case, which is a partial result on the full conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/InvariantSubspaceProblem.lean
     source: google-deepmind/formal-conjectures

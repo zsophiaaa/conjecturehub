@@ -28,6 +28,22 @@ claims:
       url: https://www.erdosproblems.com/360
       kind: dataset
     notes: Upstream records this as solved without specifying the direction.
+  - id: erdos-360-sweep-ea9debdf
+    asserted_on: 2026-09-18
+    type: partial
+    scope: small n
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-18
+    source:
+      title: "erdosproblems PR #432: Compute f(n) for subset-sum-free partitions (problem 360)"
+      url: https://github.com/teorth/erdosproblems/pull/432
+      kind: github
+      quote: "Adds a small enumerator for f(n): the least number of classes in a partition of {1,...,n-1} so that n is not a subset-sum of any class"
+    authors:
+      - Chessing234
+    notes: 'Filed automatically by the erdosproblems pull requests sweep. Matched on "Erdos problem 360". Classifier rationale: The PR reports new computational data for f(n) but does not claim a full proof or disproof. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
