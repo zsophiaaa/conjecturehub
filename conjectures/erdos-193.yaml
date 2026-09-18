@@ -38,7 +38,37 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: erdos-193-sweep-b5ee15ba
+    asserted_on: 2026-09-18
+    type: counterexample
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-18
+    source:
+      title: "formal-conjectures PR #5277: solve(ErdosProblems): mark 193 solved"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/5277
+      kind: github
+      quote: The linked theorem constructs a finite step set and an infinite walk with no ordered collinear triple.
+    authors:
+      - ekalvi
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 193". Classifier rationale: The document reports a constructed infinite walk lacking three collinear points, thereby providing a counterexample to the conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: erdos-193-sweep-e4367f7b
+    asserted_on: 2026-09-18
+    type: counterexample
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-18
+    source:
+      title: "formal-conjectures: solve(ErdosProblems): mark 193 solved (#5277) ## Summary - mark Erdős Problem 193 as solved in the negative - cite the Cambie–Kalviainen arXiv paper - link the pinned external Lean 4 proof with `forma"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/445de20a84c3343c4fb4d81f9a2ec90f85d01fde
+      kind: github
+      quote: mark Erdős Problem 193 as solved in the negative
+    authors:
+      - ekalvi
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 193". Classifier rationale: The commit reports a construction providing a counterexample, thus disproving the conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/193.lean
     source: google-deepmind/formal-conjectures
