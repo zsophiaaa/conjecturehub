@@ -28,6 +28,21 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/310
       kind: dataset
+  - id: erdos-310-sweep-e1cda874
+    asserted_on: 2026-09-18
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-18
+    source:
+      title: "formal-conjectures PR #6190: Add Erdős Problem 310 (unit fraction sums with bounded denominator in dense sets), link the formal proof"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6190
+      kind: github
+      quote: "`erdos_310` (`research solved`, `answer(True)`) "
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 310". Classifier rationale: The pull request states the conjecture is marked as research solved with a formal proof. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

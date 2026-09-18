@@ -29,6 +29,21 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/473
       kind: dataset
+  - id: erdos-473-sweep-e3acbd74
+    asserted_on: 2026-09-18
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-18
+    source:
+      title: "formal-conjectures: Add Erdős Problem 473 (prime-sum permutations), linked to the formal proof (#6099) Fixes #748. ### What changed Adds `FormalConjectures/ErdosProblems/473.lean`: - `erdos_473` (`research solved`, `answ"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/d7b57b5247c056f3f528fc4228e4ae7f376e73d5
+      kind: github
+      quote: "`erdos_473` (`research solved`, `answer(True)`): a permutation `a : ℕ ≃ ℕ+` with `a n + a (n + 1)` prime for all `n`"
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 473". Classifier rationale: The commit states the conjecture is research solved with a formal proof. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

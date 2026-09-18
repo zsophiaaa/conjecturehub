@@ -29,6 +29,21 @@ claims:
       title: erdosproblems.com records this problem as "disproved"
       url: https://www.erdosproblems.com/1197
       kind: dataset
+  - id: erdos-1197-sweep-d4be7180
+    asserted_on: 2026-09-18
+    type: disproved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-18
+    source:
+      title: "formal-conjectures PR #6214: Add Erdős Problem 1197 (Haight's covering problem for dilates), link the formal disproof"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6214
+      kind: github
+      quote: Disproved by ebarschkis; linked to plby/lean-proofs `Erdos1197.not_erdos_1197` (Enrique Barschkis, GPT Pro and Aristotle; 29 Mathlib-only files).
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 1197". Classifier rationale: The pull request states that a formal disproof of Erdős Problem 1197 has been added. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

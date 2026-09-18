@@ -27,6 +27,36 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/215
       kind: dataset
+  - id: erdos-215-sweep-c11a2738
+    asserted_on: 2026-09-18
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-18
+    source:
+      title: "formal-conjectures PR #6200: Add Erdős Problem 215 (the Steinhaus lattice point problem), link the formal proof"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6200
+      kind: github
+      quote: "`erdos_215` (`research solved`, `answer(True)`) : there is `S ⊆ ℂ` such that every congruent copy `uS + t` (`|u| = 1`) contains exactly one Gaussian integer"
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 215". Classifier rationale: The PR states that a formal proof of Erdős Problem 215 has been added and marks it as solved. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: erdos-215-sweep-825bb4f1
+    asserted_on: 2026-09-18
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-18
+    source:
+      title: "formal-conjectures: Add Erdős Problem 215 (the Steinhaus lattice point problem), link the formal proof (#6200) Fixes #6199. ### What changed Adds `FormalConjectures/ErdosProblems/215.lean` with `erdos_215` (`research sol"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/11a72f9b4ffeb8a92af67ea9fd22d7a880850db1
+      kind: github
+      quote: "research solved', `answer(True)`: there is `S ⊆ ℂ` such that every congruent copy `uS + t` (`|u| = 1`) contains exactly one Gaussian integer (Jackson–Mauldin [JaMa02])"
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 215". Classifier rationale: The commit announces a formal proof of Erdős Problem 215, indicating the conjecture is resolved. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

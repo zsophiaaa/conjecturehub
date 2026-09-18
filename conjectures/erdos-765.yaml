@@ -31,6 +31,21 @@ claims:
       url: https://www.erdosproblems.com/765
       kind: dataset
     notes: Upstream records this as solved without specifying the direction.
+  - id: erdos-765-sweep-09875c8c
+    asserted_on: 2026-09-18
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-18
+    source:
+      title: "formal-conjectures: Add Erdős Problem 765 (asymptotics of ex(n, C₄)), linked to the formal proof (#6113) Fixes #6112. ### What changed Adds `FormalConjectures/ErdosProblems/765.lean`: - `erdos_765` (`research solved`): `"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/14d9c216313b6abd5f80a4af45f491be26e54848
+      kind: github
+      quote: "`erdos_765` (`research solved`): `ex(n, C₄) ∼ n^{3/2}/2` (Reiman; Erdős–Rényi / Brown)"
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 765". Classifier rationale: The commit states the conjecture is research solved with the asymptotic formula proved. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

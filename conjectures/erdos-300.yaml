@@ -31,6 +31,21 @@ claims:
       url: https://www.erdosproblems.com/300
       kind: dataset
     notes: Upstream records this as solved without specifying the direction.
+  - id: erdos-300-sweep-744dc5c4
+    asserted_on: 2026-09-18
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-18
+    source:
+      title: "formal-conjectures PR #6210: Add Erdős Problem 300 (largest set with no subset of reciprocal sum 1), link the formal proof"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6210
+      kind: github
+      quote: "`erdos_300` (`research solved`): `A(N)/N → 1 − 1/e` (Liu–Sawhney [LiSa24])."
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 300". Classifier rationale: The pull request declares the conjecture is research solved with a cited proof. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

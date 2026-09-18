@@ -27,6 +27,21 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/491
       kind: dataset
+  - id: erdos-491-sweep-fd63c6cc
+    asserted_on: 2026-09-18
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-18
+    source:
+      title: "formal-conjectures: Add Erdős Problem 491 (additive functions with bounded gaps), linked to the formal proof (#6111) Fixes #6110. ### What changed Adds `FormalConjectures/ErdosProblems/491.lean` with `erdos_491` (`resear"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/0d67e6bd7f5e8428629c2e2673e71f207ec32132
+      kind: github
+      quote: "`research solved`, `answer(True)`"
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 491". Classifier rationale: The commit announces a formal proof of Erdős Problem 491, indicating the conjecture is resolved. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
