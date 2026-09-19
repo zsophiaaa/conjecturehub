@@ -29,6 +29,21 @@ claims:
       title: erdosproblems.com records this problem as "disproved"
       url: https://www.erdosproblems.com/270
       kind: dataset
+  - id: erdos-270-sweep-7a94f657
+    asserted_on: 2026-09-19
+    type: disproved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-19
+    source:
+      title: "formal-conjectures PR #6151: Add Erdős Problem 270 (irrationality of Σ 1/((n+1)⋯(n+f(n)))), link the formal disproof"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6151
+      kind: github
+      quote: Disproved by Crmarić–Kovač [CrKo25]; linked to plby/lean-proofs `Erdos270.not_erdos_270`
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 270". Classifier rationale: The pull request explicitly records that the conjecture has been disproved. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

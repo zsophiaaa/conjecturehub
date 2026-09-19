@@ -28,6 +28,21 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/673
       kind: dataset
+  - id: erdos-673-sweep-76395469
+    asserted_on: 2026-09-19
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-19
+    source:
+      title: "formal-conjectures PR #6383: Add Erdős Problem 673 (sums of ratios of consecutive divisors), link the formal proof"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6383
+      kind: github
+      quote: "theorem parts_i : type_of% Erdos673.erdos_673.parts.i := by ... exact Erdos673Plby.erdos_673.1"
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 673". Classifier rationale: The PR states that a formal proof of Erdős Problem 673 (including its parts) has been added. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

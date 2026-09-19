@@ -29,6 +29,22 @@ claims:
       title: erdosproblems.com records this problem as "disproved"
       url: https://www.erdosproblems.com/960
       kind: dataset
+  - id: erdos-960-sweep-6d18725b
+    asserted_on: 2026-09-19
+    type: disproved
+    scope: parts i and ii
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-19
+    source:
+      title: "formal-conjectures PR #6363: Add Erdős Problem 960 (ordinary-line thresholds), link the formal proof"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6363
+      kind: github
+      quote: "`erdos_960.parts.i (answer(False)): f_{r,k}(n) = o(n²) fails (already for r = 3, k = 4).`"
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 960". Classifier rationale: The pull request states that the conjectured bounds fail, indicating a disproof of those parts. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

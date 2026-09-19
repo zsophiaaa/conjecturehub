@@ -28,6 +28,21 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/842
       kind: dataset
+  - id: erdos-842-sweep-602682fd
+    asserted_on: 2026-09-19
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-19
+    source:
+      title: "formal-conjectures PR #6377: Add Erdős Problem 842 (Fleischner–Stiebitz 3-colouring), link the formal proof"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6377
+      kind: github
+      quote: "erdos_842 (`research solved`, `answer(True)`): such graphs are 3-colourable (Fleischner–Stiebitz [FlSt92])."
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 842". Classifier rationale: The pull request states the conjecture has been formally proved. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

@@ -46,6 +46,21 @@ claims:
       url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/275.lean
       kind: dataset
     notes: Imported from the upstream `research solved` category. The statement is formalized; the proof has not been machine-checked by ConjectureHub.
+  - id: erdos-275-sweep-425077b6
+    asserted_on: 2026-09-19
+    type: resolved_by_prior_literature
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-19
+    source:
+      title: "erdosproblems PR #439: Link Erdos problem #275 to OEIS A000079"
+      url: https://github.com/teorth/erdosproblems/pull/439
+      kind: github
+      quote: This was proved independently by Selfridge and Crittenden and Vanden Eynden [CrVE70].
+    authors:
+      - hannah-cheng
+    notes: 'Filed automatically by the erdosproblems pull requests sweep. Matched on "Erdős problem #275". Classifier rationale: The document states the conjecture has already been proved in earlier work. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/275.lean
     source: google-deepmind/formal-conjectures

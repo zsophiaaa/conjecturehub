@@ -27,6 +27,21 @@ claims:
       title: erdosproblems.com records this problem as "disproved"
       url: https://www.erdosproblems.com/511
       kind: dataset
+  - id: erdos-511-sweep-1bdba1c5
+    asserted_on: 2026-09-19
+    type: disproved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-19
+    source:
+      title: "formal-conjectures PR #6321: Add Erdős Problem 511 (large components of polynomial lemniscates), link the formal proof"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6321
+      kind: github
+      quote: it is false that for every `c > 1` the number of components of `{|f| c` is bounded uniformly over monic `f`
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 511". Classifier rationale: The pull request declares the conjecture solved with answer(False) and links a formal disproof. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
