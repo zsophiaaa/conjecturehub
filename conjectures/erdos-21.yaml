@@ -30,6 +30,36 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/21
       kind: dataset
+  - id: erdos-21-sweep-5bed1843
+    asserted_on: 2026-09-19
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-19
+    source:
+      title: "formal-conjectures PR #6192: Add Erdős Problem 21 (the Erdős–Lovász intersecting family problem), link Kahn's formal proof"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6192
+      kind: github
+      quote: "`erdos_21` (`research solved`, `answer(True)`): `f(n) ≪ n` (Kahn [Ka94], the $500 problem)."
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 21". Classifier rationale: The document states that Kahn proved the conjecture, marking it as research solved. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: erdos-21-sweep-6ceede36
+    asserted_on: 2026-09-19
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-19
+    source:
+      title: "formal-conjectures: Add Erdős Problem 21 (the Erdős–Lovász intersecting family problem), link Kahn's formal proof (#6192) Fixes #6191. ### What changed Adds `FormalConjectures/ErdosProblems/21.lean` with `IsErdosLovaszFa"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/e97a9a8fd09d7b5aca39fa43de072a0a48df704e
+      kind: github
+      quote: "`erdos_21` (`research solved`, `answer(True)`): `f(n) ≪ n` (Kahn [Ka94], the $500 problem)."
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 21". Classifier rationale: The commit states the conjecture is solved with a proof by Kahn. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

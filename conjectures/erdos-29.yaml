@@ -28,6 +28,21 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/29
       kind: dataset
+  - id: erdos-29-sweep-e5f239f5
+    asserted_on: 2026-09-19
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-19
+    source:
+      title: "formal-conjectures: Add Erdős Problem 29 (thin additive bases with subpolynomial representation function), link the formal proof (#6162) Fixes #6161. ### What changed Adds `FormalConjectures/ErdosProblems/29.lean` with `"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/87f11b8ce586ce939ec3a9398be445272a27040d
+      kind: github
+      quote: "`erdos_29` (`research solved`, `answer(True)`) ... there is `A ⊆ ℕ` with `A + A = ℕ` and `sumRep A n = o(n^ε)` for every `ε > 0`"
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 29". Classifier rationale: The commit states the conjecture has been formally proved with an explicit construction. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

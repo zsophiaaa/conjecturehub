@@ -27,6 +27,22 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/395
       kind: dataset
+  - id: erdos-395-sweep-316e1300
+    asserted_on: 2026-09-19
+    type: proved
+    scope: for unit vectors with bound √2 (P(‖∑ εᵢ zᵢ‖ ≤ √2) ≥ c/n)
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-19
+    source:
+      title: "formal-conjectures: Add Erdős Problem 395 (the reverse Littlewood–Offord problem), link the formal proof (#6168) Fixes #6167. ### What changed Adds `FormalConjectures/ErdosProblems/395.lean` with `signedSumCount z r` (nu"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/568ea401e53e67cdadb1e60064c6dfd520103177
+      kind: github
+      quote: "`erdos_395` (`research solved`, `answer(True)`: for unit `zᵢ`, `P(‖∑ εᵢ zᵢ‖ ≤ √2) ≥ c/n` (He–Juškevičius–Narayanan–Spiro [HJNS24]))"
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 395". Classifier rationale: The commit states that the conjecture has been research‑solved for the √2 bound. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

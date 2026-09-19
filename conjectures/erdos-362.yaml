@@ -27,6 +27,21 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/362
       kind: dataset
+  - id: erdos-362-sweep-94223f6c
+    asserted_on: 2026-09-19
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-19
+    source:
+      title: "formal-conjectures: Add Erdős Problem 362 (Erdős–Moser subset sum bounds), link the formal proofs (#6176) Fixes #6175. ### What changed Adds `FormalConjectures/ErdosProblems/362.lean`: - `erdos_362` (`research solved`, `"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/3495ef3347a76dd45ad4c527898195a4d00cd9b3
+      kind: github
+      quote: "`erdos_362` (`research solved`, `answer(True)`) "
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 362". Classifier rationale: The commit states the conjecture is marked as research solved with a true answer. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

@@ -28,6 +28,21 @@ claims:
       url: https://www.erdosproblems.com/1025
       kind: dataset
     notes: Upstream records this as solved without specifying the direction.
+  - id: erdos-1025-sweep-c0f472b6
+    asserted_on: 2026-09-19
+    type: resolved_by_prior_literature
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-19
+    source:
+      title: "formal-conjectures: Add Erdős Problem 1025 (independent sets for set mappings on pairs), link the formal proof (#6180) Fixes #6179. ### What changed Adds `FormalConjectures/ErdosProblems/1025.lean` with `IsIndependent f "
+      url: https://github.com/google-deepmind/formal-conjectures/commit/07612b937789d22542944f87bacda9dfe6c72395
+      kind: github
+      quote: "`erdos_1025` (`research solved`): `g n = Θ(√n)` (Spencer [Sp72], Conlon–Fox–Sudakov [CFS16])."
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 1025". Classifier rationale: The commit declares the conjecture solved, citing existing published results. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

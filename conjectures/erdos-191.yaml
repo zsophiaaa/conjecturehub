@@ -28,6 +28,36 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/191
       kind: dataset
+  - id: erdos-191-sweep-45087757
+    asserted_on: 2026-09-19
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-19
+    source:
+      title: "formal-conjectures PR #6178: Add Erdős Problem 191 (Rödl's theorem on monochromatic sets of large logarithmic weight), link the formal proof"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6178
+      kind: github
+      quote: "`erdos_191` (`research solved`, `answer(True)`) "
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 191". Classifier rationale: The pull request adds a formal proof and labels the problem as solved. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: erdos-191-sweep-82e265f2
+    asserted_on: 2026-09-19
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-19
+    source:
+      title: "formal-conjectures: Add Erdős Problem 191 (Rödl's theorem on monochromatic sets of large logarithmic weight), link the formal proof (#6178) Fixes #6177. ### What changed Adds `FormalConjectures/ErdosProblems/191.lean`: -"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/ded870fdb5614dae05b5c2f20831d4cabaf6fb8c
+      kind: github
+      quote: "`erdos_191` (`research solved`, `answer(True)`) ..."
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 191". Classifier rationale: The commit states the conjecture is marked as research solved with a true answer. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

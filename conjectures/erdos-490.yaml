@@ -29,6 +29,36 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/490
       kind: dataset
+  - id: erdos-490-sweep-b1239307
+    asserted_on: 2026-09-19
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-19
+    source:
+      title: "formal-conjectures PR #6194: Add Erdős Problem 490 (sets with distinct pairwise products), link Szemerédi's formal proof"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6194
+      kind: github
+      quote: "`erdos_490` (`research solved`, `answer(True)`) "
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 490". Classifier rationale: The PR states that a formal proof of Erdős Problem 490 by Szemerédi has been added, marking the conjecture as solved. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: erdos-490-sweep-ad7e4715
+    asserted_on: 2026-09-19
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-19
+    source:
+      title: "formal-conjectures: Add Erdős Problem 490 (sets with distinct pairwise products), link Szemerédi's formal proof (#6194) Fixes #6193. ### What changed Adds `FormalConjectures/ErdosProblems/490.lean`: - `erdos_490` (`resea"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/a94a25d4dbe608be77cdb62246844daf22807f8c
+      kind: github
+      quote: "`erdos_490` (`research solved`, `answer(True)`) ... if `A, B ⊆ {1, …, N}` have all products `ab` distinct then `|A||B| ≤ C N²/log N` for large `N` (Szemerédi [Sz76])."
+    authors:
+      - Konamiu
+    notes: "Filed automatically by the formal-conjectures commits sweep. Matched on \"Erdős Problem 490\". Classifier rationale: The commit marks the conjecture as research solved and links to Szemerédi's formal proof. Unreviewed: this records that a claim was made, not that it is correct."
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

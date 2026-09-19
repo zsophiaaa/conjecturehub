@@ -31,6 +31,36 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/391
       kind: dataset
+  - id: erdos-391-sweep-584fed3a
+    asserted_on: 2026-09-19
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-19
+    source:
+      title: "formal-conjectures PR #6182: Add Erdős Problem 391 (decomposing n! into n large factors), link the formal proofs"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6182
+      kind: github
+      quote: "`erdos_391` (`research solved`, `answer(True)`): `t(n)/n → 1/e`."
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 391". Classifier rationale: The PR states the conjecture has been formally proved. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: erdos-391-sweep-58053d7e
+    asserted_on: 2026-09-19
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-19
+    source:
+      title: "formal-conjectures: Add Erdős Problem 391 (decomposing n! into n large factors), link the formal proofs (#6182) Fixes #6181. ### What changed Adds `FormalConjectures/ErdosProblems/391.lean` with `t n` (the largest `t` su"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/ce00517d36abed7a4a7759c3611bf55e7e5be263
+      kind: github
+      quote: "`erdos_391` (`research solved`, `answer(True)`): `t(n)/n → 1/e`."
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 391". Classifier rationale: The commit explicitly marks the conjecture as research solved with a true answer. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
