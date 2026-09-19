@@ -27,6 +27,21 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/1009
       kind: dataset
+  - id: erdos-1009-sweep-1247388a
+    asserted_on: 2026-09-19
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-19
+    source:
+      title: "formal-conjectures PR #6141: Add Erdős Problem 1009 (edge-disjoint triangles above the Turán threshold), link the formal proof"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6141
+      kind: github
+      quote: "`erdos_1009` (`research solved`, `answer(True)`) "
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 1009". Classifier rationale: The pull request states the conjecture is marked as research solved with a true answer. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

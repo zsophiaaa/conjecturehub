@@ -29,6 +29,21 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/703
       kind: dataset
+  - id: erdos-703-sweep-8667fb8f
+    asserted_on: 2026-09-19
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-19
+    source:
+      title: "formal-conjectures PR #6358: Add Erdős Problem 703 (forbidden intersections), link the formal proof"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6358
+      kind: github
+      quote: "`erdos_703` (`research solved`, `answer(True)`, $250): the Frankl–Rödl forbidden-intersection theorem"
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 703". Classifier rationale: The pull request marks the conjecture as research solved and links a formal proof. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

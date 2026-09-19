@@ -29,6 +29,21 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/95
       kind: dataset
+  - id: erdos-95-sweep-b92394ce
+    asserted_on: 2026-09-19
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-19
+    source:
+      title: "formal-conjectures PR #6288: Add Erdős Problem 95 (second moment of distance multiplicities), link the formal proof"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6288
+      kind: github
+      quote: "`erdos_95` (`research solved`, `answer(True)`, $500): for every `ε > 0` there is `C` ..."
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 95". Classifier rationale: The PR adds a formal proof and labels the conjecture as research solved. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

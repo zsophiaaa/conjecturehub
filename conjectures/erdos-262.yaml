@@ -28,6 +28,21 @@ claims:
       url: https://www.erdosproblems.com/262
       kind: dataset
     notes: Upstream records this as solved without specifying the direction.
+  - id: erdos-262-sweep-6f18a216
+    asserted_on: 2026-09-19
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-19
+    source:
+      title: "formal-conjectures PR #6153: Add Erdős Problem 262 (growth of irrationality sequences), link Hančl's formal proof"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6153
+      kind: github
+      quote: "`erdos_262` (`research solved`): Hančl's theorem `limsup log₂ log₂ aₙ / n ≥ 1` (in `EReal`) for every irrationality sequence."
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 262". Classifier rationale: The pull request announces a formal proof that resolves Erdős Problem 262. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

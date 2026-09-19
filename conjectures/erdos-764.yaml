@@ -28,6 +28,21 @@ claims:
       title: erdosproblems.com records this problem as "disproved"
       url: https://www.erdosproblems.com/764
       kind: dataset
+  - id: erdos-764-sweep-3daa9023
+    asserted_on: 2026-09-18
+    type: disproved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-19
+    source:
+      title: "formal-conjectures PR #6245: Add Erdős Problem 764 (Erdős–Fuchs theorem for three summands), link the formal disproof"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6245
+      kind: github
+      quote: "`erdos_764` (`research solved`, `answer(False)`): no `A ⊆ ℕ` and `c > 0` have `∑_{n ≤ N} (1_A ∗ 1_A ∗ 1_A)(n) = cN + O(1)` (Vaughan [Va72])."
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 764". Classifier rationale: The PR states the conjecture is formally disproved. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

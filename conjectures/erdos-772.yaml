@@ -29,6 +29,22 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/772
       kind: dataset
+  - id: erdos-772-sweep-7635b69b
+    asserted_on: 2026-09-19
+    type: proved
+    scope: parts i and ii
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-19
+    source:
+      title: "formal-conjectures PR #6332: Add Erdős Problem 772 (Sidon subsets of sets with bounded representation function), link the formal proof"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6332
+      kind: github
+      quote: "`erdos_772.parts.i` (`answer(True)`): `H_k(n)/√n → ∞`."
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 772". Classifier rationale: The pull request states that both parts of Erdős Problem 772 are answered True via a formal Lean proof. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

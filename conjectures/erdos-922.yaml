@@ -28,6 +28,21 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/922
       kind: dataset
+  - id: erdos-922-sweep-9d48c784
+    asserted_on: 2026-09-18
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-19
+    source:
+      title: "formal-conjectures PR #6257: Add Erdős Problem 922 (Folkman's bound on the chromatic number), link the formal proof"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6257
+      kind: github
+      quote: "`erdos_922` (`research solved`, `answer(True)`) : if every induced subgraph on `n` vertices has an independent set of size ≥ (n‑k)/2 then `χ(G) ≤ k + 2` (Folkman [Fo70b])."
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 922". Classifier rationale: The PR states the conjecture is marked as research solved with a formal proof. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

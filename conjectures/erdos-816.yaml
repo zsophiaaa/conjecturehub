@@ -27,6 +27,21 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/816
       kind: dataset
+  - id: erdos-816-sweep-925c25e2
+    asserted_on: 2026-09-18
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-19
+    source:
+      title: "formal-conjectures PR #6241: Add Erdős Problem 816 (equal-degree vertices joined by a path of length 3), link the formal proof"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6241
+      kind: github
+      quote: "`erdos_816` (`research solved`, `answer(True)`) : every graph on `2n+1` vertices with `n²+n+1` edges ... has this property (Chen–Ma [ChMa25])"
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 816". Classifier rationale: The PR states the conjecture is research‑solved with a formal proof reference. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

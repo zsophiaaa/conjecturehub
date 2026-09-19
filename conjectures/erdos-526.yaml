@@ -29,6 +29,21 @@ claims:
       url: https://www.erdosproblems.com/526
       kind: dataset
     notes: Upstream records this as solved without specifying the direction.
+  - id: erdos-526-sweep-253e37a0
+    asserted_on: 2026-09-19
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-19
+    source:
+      title: "formal-conjectures PR #6323: Add Erdős Problem 526 (Dvoretzky–Shepp random covering of the circle), link the formal proof"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6323
+      kind: github
+      quote: "`erdos_526` (`research solved`): for non-increasing `a` with `a → 0`, `∑ a = ∞`, the circle is covered a.s. ... iff Shepp's condition holds"
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 526". Classifier rationale: The pull request announces a formal Lean proof that settles Erdős Problem 526. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
