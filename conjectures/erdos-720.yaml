@@ -28,6 +28,21 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/720
       kind: dataset
+  - id: erdos-720-sweep-f41d99ae
+    asserted_on: 2026-09-19
+    type: partial
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-19
+    source:
+      title: "formal-conjectures PR #6393: Add Erdős Problem 720 (size Ramsey numbers of paths and cycles), link the formal proof"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6393
+      kind: github
+      quote: "`parts_i` (`answer(False)`): `R̂(Pₙ)/n → ∞` fails."
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 720". Classifier rationale: The PR claims answers (true/false) for the three parts of Erdős Problem 720, indicating a resolution of the conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

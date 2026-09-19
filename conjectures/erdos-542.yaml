@@ -28,6 +28,22 @@ claims:
       url: https://www.erdosproblems.com/542
       kind: dataset
     notes: Upstream records this as solved without specifying the direction.
+  - id: erdos-542-sweep-69837566
+    asserted_on: 2026-09-19
+    type: partial
+    scope: parts i (proved) and ii (disproved)
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-19
+    source:
+      title: "formal-conjectures PR #6316: Add Erdős Problem 542 (sets with pairwise lcm exceeding n), link the formal proof"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6316
+      kind: github
+      quote: "`parts.i` (`answer(True)`): `∑ 1/a ≤ 31/30`; `parts.ii` (`answer(False)`): there need not be `≫ n` uncovered integers."
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 542". Classifier rationale: The PR claims formal proofs establishing part i true and part ii false, partially resolving Erdős Problem 542. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

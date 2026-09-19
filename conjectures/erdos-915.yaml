@@ -28,6 +28,22 @@ claims:
       url: https://www.erdosproblems.com/915
       kind: dataset
     notes: Upstream records this as solved without specifying the direction.
+  - id: erdos-915-sweep-75719549
+    asserted_on: 2026-09-19
+    type: disproved
+    scope: m ≥ 5
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-19
+    source:
+      title: "formal-conjectures PR #6137: Add Erdős Problem 915 (Bollobás–Erdős conjecture on m disjoint paths), link the formal disproof"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6137
+      kind: github
+      quote: Disproved by Leonard (m = 5) and Mader (m ≥ 6).
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 915". Classifier rationale: The PR states the conjecture is disproved for the specified values of m. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

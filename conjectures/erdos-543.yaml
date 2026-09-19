@@ -30,6 +30,21 @@ claims:
       title: erdosproblems.com records this problem as "disproved"
       url: https://www.erdosproblems.com/543
       kind: dataset
+  - id: erdos-543-sweep-a286a121
+    asserted_on: 2026-09-19
+    type: disproved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-19
+    source:
+      title: "formal-conjectures PR #6326: Add Erdős Problem 543 (random subset sums in abelian groups), link the formal proof"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6326
+      kind: github
+      quote: "`erdos_543` (`research solved`, `answer(False)`): `f(N) ≤ log₂ N + o(log log N)` is false (Ma–Tang / ChatGPT, confirming Erdős' belief)."
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 543". Classifier rationale: The pull request states the conjectured inequality is false and provides a formal proof. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

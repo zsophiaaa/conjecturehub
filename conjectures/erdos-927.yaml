@@ -27,6 +27,21 @@ claims:
       title: erdosproblems.com records this problem as "disproved"
       url: https://www.erdosproblems.com/927
       kind: dataset
+  - id: erdos-927-sweep-8e083a22
+    asserted_on: 2026-09-18
+    type: disproved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-19
+    source:
+      title: "formal-conjectures: Add Erdős Problem 927 (numbers of clique sizes), linked to the formal disproof (#6123) Fixes #6122. ### What changed Adds `FormalConjectures/ErdosProblems/927.lean` with `g n` (the maximum number of s"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/5657b3b9ae1c174fdbab9d9d600b018238ba573c
+      kind: github
+      quote: Erdős's conjecture `g(n) = n - log₂ n - log*(n) + O(1)` ... disproved by Spencer.
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 927". Classifier rationale: The commit notes that Spencer refuted the conjecture, indicating a disproof. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

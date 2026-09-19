@@ -28,6 +28,21 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/518
       kind: dataset
+  - id: erdos-518-sweep-a3f97dce
+    asserted_on: 2026-09-19
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-19
+    source:
+      title: "formal-conjectures PR #6328: Add Erdős Problem 518 (monochromatic path covers), link the formal proof"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6328
+      kind: github
+      quote: "`erdos_518` (`research solved`, `answer(True)`): every two-colouring of `K_n` admits a cover by `⌊√n⌋` monochromatic paths of one colour (Pokrovskiy–Versteegen–Williams [PVW24])."
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 518". Classifier rationale: The pull request states the conjecture is research solved with a formal proof. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
