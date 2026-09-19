@@ -27,6 +27,36 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/1021
       kind: dataset
+  - id: erdos-1021-sweep-1d690336
+    asserted_on: 2026-09-19
+    type: resolved_by_prior_literature
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-19
+    source:
+      title: "formal-conjectures PR #6124: Add Erdős Problem 1021 (extremal number of the 1-subdivision of K_k), linked to the formal proof"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6124
+      kind: github
+      quote: "`erdos_1021` (`research solved`, `answer(True)`): ... (Erdős–Simonovits conjecture, proved by Conlon–Lee);"
+    authors:
+      - Konamiu
+    notes: "Filed automatically by the formal-conjectures pull requests sweep. Matched on \"Erdős Problem 1021\". Classifier rationale: The document states the conjecture is solved, citing Conlon–Lee's published proof. Unreviewed: this records that a claim was made, not that it is correct."
+  - id: erdos-1021-sweep-2c092032
+    asserted_on: 2026-09-19
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-19
+    source:
+      title: "formal-conjectures: Add Erdős Problem 1021 (extremal number of the 1-subdivision of K_k), linked to the formal proof (#6124) Fixes #1077. ### What changed Adds `FormalConjectures/ErdosProblems/1021.lean`: - `cliqueSubdiv"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/afb667a0bb43410abb5db56c99adf4f5614537bc
+      kind: github
+      quote: "`erdos_1021` (`research solved`, `answer(True)`) ... (Erdős–Simonovits conjecture, proved by Conlon–Lee)"
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 1021". Classifier rationale: The commit marks the conjecture as solved and cites a proof by Conlon–Lee. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

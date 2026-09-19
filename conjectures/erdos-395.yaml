@@ -27,6 +27,21 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/395
       kind: dataset
+  - id: erdos-395-sweep-c4c7514c
+    asserted_on: 2026-09-19
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-19
+    source:
+      title: "formal-conjectures PR #6168: Add Erdős Problem 395 (the reverse Littlewood–Offord problem), link the formal proof"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6168
+      kind: github
+      quote: "`erdos_395` (`research solved`, `answer(True)`) for unit `zᵢ`, `P(‖∑ εᵢ zᵢ‖ ≤ √2) ≥ c/n` (He–Juškevičius–Narayanan–Spiro [HJNS24])"
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 395". Classifier rationale: The PR states the conjecture is research solved with a formal proof. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

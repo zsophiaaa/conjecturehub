@@ -28,6 +28,21 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/874
       kind: dataset
+  - id: erdos-874-sweep-3b93e9be
+    asserted_on: 2026-09-19
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-19
+    source:
+      title: "formal-conjectures PR #6407: Add Erdős Problem 874 (sets with disjoint r-fold subset sums), link the formal proof"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6407
+      kind: github
+      quote: "`erdos_874` (`research solved`, `answer(True)`): `k(N) ∼ 2√N` (Deshouillers–Freiman [DeFr99])."
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 874". Classifier rationale: The PR states the conjecture is research solved with a cited result. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

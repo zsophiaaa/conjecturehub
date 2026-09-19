@@ -28,6 +28,36 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/947
       kind: dataset
+  - id: erdos-947-sweep-a1ed4d56
+    asserted_on: 2026-09-19
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-19
+    source:
+      title: "formal-conjectures PR #6129: Add Erdős Problem 947 (no exact covering system with distinct moduli), link the formal proof"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6129
+      kind: github
+      quote: no `StrictCoveringSystem ℤ` has pairwise disjoint cosets, i.e. there is no exact covering system with distinct moduli
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 947". Classifier rationale: The pull request announces a formal Lean proof that resolves Erdős Problem 947. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: erdos-947-sweep-14a9fb60
+    asserted_on: 2026-09-19
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-19
+    source:
+      title: "formal-conjectures: Add Erdős Problem 947 (no exact covering system with distinct moduli), link the formal proof (#6129) Fixes #6128. ### What changed Adds `FormalConjectures/ErdosProblems/947.lean` with `erdos_947` (`re"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/c08a3f54d729f64e069d42191a5a01082b8e14fd
+      kind: github
+      quote: "research solved: no `StrictCoveringSystem ℤ` has pairwise disjoint cosets, i.e. there is no exact covering system with distinct moduli"
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 947". Classifier rationale: The commit announces a formal Lean proof that the conjecture is true. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

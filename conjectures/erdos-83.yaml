@@ -30,6 +30,21 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/83
       kind: dataset
+  - id: erdos-83-sweep-cf181324
+    asserted_on: 2026-09-19
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-19
+    source:
+      title: "formal-conjectures: Add Erdős Problem 83 (the Erdős–Ko–Rado 2-intersecting conjecture), link the formal proof (#6158) Fixes #6157. ### What changed Adds `FormalConjectures/ErdosProblems/83.lean`: - `erdos_83` (`research "
+      url: https://github.com/google-deepmind/formal-conjectures/commit/4b14c4b1af97351301e74c8010a674af069637ac
+      kind: github
+      quote: '"research solved": the Erdős–Ko–Rado $500 conjecture — a family of `2n`-subsets of `[4n]` with pairwise intersections of size `≥ 2` has at most ...'
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 83". Classifier rationale: The commit states the conjecture is "research solved" and links to a formal Lean proof. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

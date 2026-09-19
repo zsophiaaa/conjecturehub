@@ -28,6 +28,22 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/179
       kind: dataset
+  - id: erdos-179-sweep-f9fca32e
+    asserted_on: 2026-09-19
+    type: proved
+    scope: parts i and ii
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-19
+    source:
+      title: "formal-conjectures PR #6300: Add Erdős Problem 179 (short progressions forcing long progressions), link the formal proof"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6300
+      kind: github
+      quote: "`erdos_179.parts.i` (`research solved`, `answer(True)`): `F 3 N 4 = o(N²)`."
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 179". Classifier rationale: The PR claims formal proofs that parts i and ii of Erdős Problem 179 are solved. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

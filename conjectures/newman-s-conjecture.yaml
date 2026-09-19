@@ -11,7 +11,22 @@ openness_basis:
   meaning: no_solution_known_to_community
   asserted_by: wikipedia
   note: Listed under "Unsolved problems in number theory" on English Wikipedia.
-claims: []
+claims:
+  - id: newman-s-conjecture-sweep-ffe7d67a
+    asserted_on: 2026-09-19
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-19
+    source:
+      title: "formal-conjectures PR #6308: Add Erdős Problem 407 (Newman's conjecture on 2^a + 3^b + 2^c 3^d), link the formal proof"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6308
+      kind: github
+      quote: "`erdos_407` (`research solved`, `answer(True)`): `w` is bounded (Newman's conjecture; Evertse–Győry–Stewart–Tijdeman [EGST88])."
+    authors:
+      - Konamiu
+    notes: "Filed automatically by the formal-conjectures pull requests sweep. Matched on \"Newman's conjecture\". Classifier rationale: The pull request declares the conjecture is solved with a formal proof. Unreviewed: this records that a claim was made, not that it is correct."
 provenance:
   - url: https://www.wikidata.org/wiki/Q96395496
     source: wikidata

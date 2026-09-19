@@ -29,6 +29,21 @@ claims:
       title: erdosproblems.com records this problem as "disproved"
       url: https://www.erdosproblems.com/1134
       kind: dataset
+  - id: erdos-1134-sweep-4f3cb3be
+    asserted_on: 2026-09-19
+    type: disproved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-19
+    source:
+      title: "formal-conjectures: Add Erdős Problem 1134 (density of the Klarner–Erdős set), link the formal disproof (#6147) Fixes #6146. ### What changed Adds `FormalConjectures/ErdosProblems/1134.lean`: - `A : Set ℕ`, the smallest "
+      url: https://github.com/google-deepmind/formal-conjectures/commit/269cdff733096b3765e6af68c9f634ff6396b31f
+      kind: github
+      quote: "`erdos_1134` (`research solved`, `answer(False)`) "
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 1134". Classifier rationale: The commit records a formal disproof and marks the conjecture as solved with answer False. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

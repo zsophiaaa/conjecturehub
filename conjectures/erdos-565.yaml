@@ -28,6 +28,21 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/565
       kind: dataset
+  - id: erdos-565-sweep-78b5fa05
+    asserted_on: 2026-09-19
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-19
+    source:
+      title: "formal-conjectures PR #6418: Add Erdős Problem 565 (induced Ramsey numbers), link the formal proof"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6418
+      kind: github
+      quote: "`erdos_565` (`research solved`, `answer(True)`) and theorem `erdos_565 : True ↔ ∃ C : ℕ, ∀ (n : ℕ) (G : SimpleGraph (Fin n)), Erdos565.inducedRamseyNumber G ≤ 2 ^ (C * n)`"
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 565". Classifier rationale: The PR adds a formal Lean proof claiming the conjecture holds with an explicit bound. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

@@ -28,6 +28,21 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/339
       kind: dataset
+  - id: erdos-339-sweep-a6b3a152
+    asserted_on: 2026-09-19
+    type: resolved_by_prior_literature
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-19
+    source:
+      title: "formal-conjectures PR #6107: Add Erdős Problem 339 (restricted sums of a basis), linked to the formal proof"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6107
+      kind: github
+      quote: "`erdos_339` (`research solved`, `answer(True)`): if `A` is an asymptotic basis of order `r`, the set of sums of `r` distinct elements of `A` has positive lower density (Erdős–Graham; proved by Hegyvári–Hennecart–Plagne 2003)."
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 339". Classifier rationale: The PR declares the conjecture solved and cites the existing 2003 proof. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
