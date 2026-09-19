@@ -30,6 +30,36 @@ claims:
       title: erdosproblems.com records this problem as "disproved"
       url: https://www.erdosproblems.com/309
       kind: dataset
+  - id: erdos-309-sweep-5ea1bcb1
+    asserted_on: 2026-09-19
+    type: disproved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-19
+    source:
+      title: "formal-conjectures PR #6196: Add Erdős Problem 309 (integers as sums of distinct unit fractions), link the formal disproof"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6196
+      kind: github
+      quote: "`erdos_309` (`research solved`, `answer(False)`) : whether `F(N) = o(log N)`."
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 309". Classifier rationale: The PR links a formal disproof, stating the answer to the conjecture is False. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: erdos-309-sweep-6a8dfdfc
+    asserted_on: 2026-09-19
+    type: disproved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-19
+    source:
+      title: "formal-conjectures: Add Erdős Problem 309 (integers as sums of distinct unit fractions), link the formal disproof (#6196) Fixes #6195. ### What changed Adds `FormalConjectures/ErdosProblems/309.lean` with `F N` (number o"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/b86fdb9a8f2f83d2bb2b4281586705896c0c8208
+      kind: github
+      quote: "`erdos_309` (`research solved`, `answer(False)`) whether `F(N) = o(log N)`."
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 309". Classifier rationale: The commit records a formal disproof of Erdős Problem 309. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

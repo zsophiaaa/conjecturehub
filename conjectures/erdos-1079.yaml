@@ -29,6 +29,21 @@ claims:
       url: https://www.erdosproblems.com/1079
       kind: dataset
     notes: Upstream records this as solved without specifying the direction.
+  - id: erdos-1079-sweep-5dae84f1
+    asserted_on: 2026-09-19
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-19
+    source:
+      title: "formal-conjectures: Add Erdős Problem 1079 (dense neighbourhoods and Turán's theorem), link Bondy's formal proof (#6139) Fixes #1118. ### What changed Adds `FormalConjectures/ErdosProblems/1079.lean`: - `erdos_1079` (`re"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/fd89b180425f0f3b0146022491aaa7ff6dc28cbd
+      kind: github
+      quote: "`erdos_1079` (`research solved`, `answer(True)`)"
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 1079". Classifier rationale: The commit explicitly marks the conjecture as research solved with a formal proof. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

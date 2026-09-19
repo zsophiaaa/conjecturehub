@@ -28,6 +28,21 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/35
       kind: dataset
+  - id: erdos-35-sweep-8070429b
+    asserted_on: 2026-09-19
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-19
+    source:
+      title: "formal-conjectures: Add Erdős Problem 35 (Schnirelmann density of A + B for a basis B), link the formal proof (#6170) Fixes #6169. ### What changed Adds `FormalConjectures/ErdosProblems/35.lean`: - `erdos_35` (`research "
+      url: https://github.com/google-deepmind/formal-conjectures/commit/0a88348642fdb5a3c7ee218888199feb61170f9b
+      kind: github
+      quote: "`erdos_35` (`research solved`, `answer(True)`) ..."
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 35". Classifier rationale: The commit states that a formal proof of Erdős Problem 35 has been added, marking it as solved. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

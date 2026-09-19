@@ -28,6 +28,36 @@ claims:
       title: erdosproblems.com records this problem as "disproved"
       url: https://www.erdosproblems.com/147
       kind: dataset
+  - id: erdos-147-sweep-cb6acc59
+    asserted_on: 2026-09-19
+    type: disproved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-19
+    source:
+      title: "formal-conjectures PR #6184: Add Erdős Problem 147 (the Erdős–Simonovits conjecture on bipartite Turán numbers), link the formal disproof"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6184
+      kind: github
+      quote: Disproved by Janzer [Ja23], [Ja23b]; linked to ... counterexample `C₁₂[2]` with `ex(n; H) ≪ n^{139/84}`.
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 147". Classifier rationale: The document states the conjecture has been disproved by Janzer with a concrete counterexample. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: erdos-147-sweep-05ddbbb2
+    asserted_on: 2026-09-19
+    type: disproved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-19
+    source:
+      title: "formal-conjectures: Add Erdős Problem 147 (the Erdős–Simonovits conjecture on bipartite Turán numbers), link the formal disproof (#6184) Fixes #6183. ### What changed Adds `FormalConjectures/ErdosProblems/147.lean`: - `e"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/3b1b0a67759fb202b17f0e3198aebd2cca07a7cc
+      kind: github
+      quote: Disproved by Janzer [Ja23], [Ja23b]; linked to ... counterexample `C₁₂[2]` with `ex(n; H) ≪ n^{139/84}`.
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 147". Classifier rationale: The commit states the conjecture has been disproved via a concrete counterexample. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
