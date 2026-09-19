@@ -27,6 +27,22 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/926
       kind: dataset
+  - id: erdos-926-sweep-d30f774e
+    asserted_on: 2026-09-19
+    type: proved
+    scope: k ≥ 4
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-19
+    source:
+      title: "formal-conjectures PR #6218: Add Erdős Problem 926 (Füredi's theorem on the extremal number of H_k), link the formal proof"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6218
+      kind: github
+      quote: "`erdos_926` (`research solved`, `answer(True)`) : `ex(n; H_k) ≪_k n^{3/2}` for `k ≥ 4` (Füredi [Fu91])."
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 926". Classifier rationale: The pull request declares the conjecture as research solved with a linked formal proof. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

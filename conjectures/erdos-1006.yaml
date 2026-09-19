@@ -28,6 +28,21 @@ claims:
       title: erdosproblems.com records this problem as "disproved"
       url: https://www.erdosproblems.com/1006
       kind: dataset
+  - id: erdos-1006-sweep-be47b42b
+    asserted_on: 2026-09-19
+    type: disproved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-19
+    source:
+      title: "formal-conjectures PR #6280: Add Erdős Problem 1006 (acyclic orientations stable under edge reversal), link the formal disproof"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6280
+      kind: github
+      quote: "`erdos_1006` (`research solved`, `answer(False)`) : it is false that every graph of girth `> 4`"
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 1006". Classifier rationale: The PR adds a formal disproof of Erdős Problem 1006, stating the conjecture is false. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

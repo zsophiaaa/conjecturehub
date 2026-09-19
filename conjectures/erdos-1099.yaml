@@ -28,6 +28,36 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/1099
       kind: dataset
+  - id: erdos-1099-sweep-1365da32
+    asserted_on: 2026-09-19
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-19
+    source:
+      title: "formal-conjectures PR #5938: feat(ErdosProblems): formalise Erdős Problem 1099"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/5938
+      kind: github
+      quote: "The boxed question is solved: Vose [Vo84] constructed a sequence with $h_\\alpha$ bounded, so this is `research solved` with `answer(True)`."
+    authors:
+      - stantheman0128
+    notes: "Filed automatically by the formal-conjectures pull requests sweep. Matched on \"Erdős Problem 1099\". Classifier rationale: The document explicitly claims the problem has been solved by Vose's construction. Unreviewed: this records that a claim was made, not that it is correct."
+  - id: erdos-1099-sweep-df5ab761
+    asserted_on: 2026-09-19
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-19
+    source:
+      title: "formal-conjectures PR #6264: Add Erdős Problem 1099 (Vose's theorem on consecutive divisor ratios), link the formal proof"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6264
+      kind: github
+      quote: "`erdos_1099` (`research solved`, `answer(True)`): for every `α > 1` there is `C` with `h α n ≤ C` for infinitely many `n` (Vose [Vo84])"
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 1099". Classifier rationale: The pull request states the conjecture is research solved with a formal proof. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

@@ -28,6 +28,21 @@ claims:
       title: erdosproblems.com records this problem as "disproved"
       url: https://www.erdosproblems.com/744
       kind: dataset
+  - id: erdos-744-sweep-530423a4
+    asserted_on: 2026-09-18
+    type: disproved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-19
+    source:
+      title: "formal-conjectures PR #6237: Add Erdős Problem 744 (bipartization of colour-critical graphs), link the formal disproof"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6237
+      kind: github
+      quote: "theorem erdos_744_bridge : type_of% Erdos744.erdos_744 := by show False ↔ _"
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 744". Classifier rationale: The PR states it adds a formal disproof and includes a theorem proving a contradiction for the conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

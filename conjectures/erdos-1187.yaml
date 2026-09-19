@@ -31,6 +31,22 @@ claims:
       url: https://www.erdosproblems.com/1187
       kind: dataset
     notes: Upstream records this as solved without specifying the direction.
+  - id: erdos-1187-sweep-333eaa79
+    asserted_on: 2026-09-19
+    type: partial
+    scope: part i proved (monochromatic k‑term AP of primes), part ii disproved (no monochromatic k‑term AP with prime common difference)
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-19
+    source:
+      title: "formal-conjectures PR #6290: Add Erdős Problem 1187 (monochromatic progressions of primes), link the formal proof"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6290
+      kind: github
+      quote: "`erdos_1187.parts.i` (`research solved`, `answer(True)`) and `erdos_1187.parts.ii` (`answer(False)`)."
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 1187". Classifier rationale: The PR records a formal proof of part i and a counterexample showing part ii is false. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
