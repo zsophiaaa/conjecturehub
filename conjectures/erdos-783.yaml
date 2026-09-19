@@ -28,6 +28,21 @@ claims:
       url: https://www.erdosproblems.com/783
       kind: dataset
     notes: Upstream records this as solved without specifying the direction.
+  - id: erdos-783-sweep-62f57708
+    asserted_on: 2026-09-19
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-19
+    source:
+      title: "formal-conjectures PR #6411: Add Erdős Problem 783 (small sieve by pairwise coprime moduli), link the formal proof"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6411
+      kind: github
+      quote: "`erdos_783` (`research solved`): Tao's asymptotic resolution `minUnsieved C N / N → ρ(e^C)`."
+    authors:
+      - Konamiu
+    notes: "Filed automatically by the formal-conjectures pull requests sweep. Matched on \"Erdős Problem 783\". Classifier rationale: The PR explicitly marks the conjecture as research solved by Tao's asymptotic result. Unreviewed: this records that a claim was made, not that it is correct."
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

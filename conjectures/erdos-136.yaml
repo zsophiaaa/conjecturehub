@@ -28,6 +28,36 @@ claims:
       url: https://www.erdosproblems.com/136
       kind: dataset
     notes: Upstream records this as solved without specifying the direction.
+  - id: erdos-136-sweep-bf906313
+    asserted_on: 2026-09-19
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-19
+    source:
+      title: "formal-conjectures PR #6121: Add Erdős Problem 136 (the Erdős–Gyárfás function f(n, 4, 5)), linked to the formal proof"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6121
+      kind: github
+      quote: "`erdos_136` (`research solved`): `f n / n → 5/6` (Bennett–Cushman–Dudek–Pralat; Joos–Mubayi)."
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 136". Classifier rationale: The PR declares the conjecture is research solved with the asymptotic result f(n)/n → 5/6. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: erdos-136-sweep-e6249cde
+    asserted_on: 2026-09-19
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-19
+    source:
+      title: "formal-conjectures: Add Erdős Problem 136 (the Erdős–Gyárfás function f(n, 4, 5)), linked to the formal proof (#6121) Fixes #6120. ### What changed Adds `FormalConjectures/ErdosProblems/136.lean` with `Is45Coloring`, `Co"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/5abc04c821512d535c9b5a7fe2e4e744b0bb7241
+      kind: github
+      quote: "`erdos_136` (`research solved`): `f n / n → 5/6` (Bennett–Cushman–Dudek–Pralat; Joos–Mubayi)."
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 136". Classifier rationale: The commit declares the conjecture is research solved with a proven asymptotic result. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

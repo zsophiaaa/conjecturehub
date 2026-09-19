@@ -29,6 +29,21 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/877
       kind: dataset
+  - id: erdos-877-sweep-b4044df0
+    asserted_on: 2026-09-19
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-19
+    source:
+      title: "formal-conjectures PR #6409: Add Erdős Problem 877 (maximal sum-free sets), link the formal proof"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6409
+      kind: github
+      quote: "`erdos_877` (`research solved`, `answer(True)`): `f_m(n) = o(2^{n/2})`."
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 877". Classifier rationale: The PR states the conjecture is research solved with a formal proof. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

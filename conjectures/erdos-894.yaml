@@ -28,6 +28,36 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/894
       kind: dataset
+  - id: erdos-894-sweep-8a15be59
+    asserted_on: 2026-09-19
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-19
+    source:
+      title: "formal-conjectures PR #6131: Add Erdős Problem 894 (finite colourings avoiding lacunary differences), link the formal proof"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6131
+      kind: github
+      quote: "`erdos_894` (`research solved`, `answer(True)`) for every strictly increasing lacunary sequence ..."
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 894". Classifier rationale: The pull request states that a formal proof of Erdős Problem 894 has been added, marking it as solved. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: erdos-894-sweep-5feb14af
+    asserted_on: 2026-09-19
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-19
+    source:
+      title: "formal-conjectures: Add Erdős Problem 894 (finite colourings avoiding lacunary differences), link the formal proof (#6131) Fixes #6130. ### What changed Adds `FormalConjectures/ErdosProblems/894.lean` with `erdos_894` (`"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/b04225c00cb67e1d59da35fbda64932610386480
+      kind: github
+      quote: "`erdos_894` (`research solved`, `answer(True)`) for every strictly increasing lacunary sequence ... there are r and c ... with c(b + n k) ≠ c b for all b, k"
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 894". Classifier rationale: The commit states that a formal proof of Erdős Problem 894 has been added, marking the problem as solved. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

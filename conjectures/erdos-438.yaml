@@ -30,6 +30,36 @@ claims:
       url: https://www.erdosproblems.com/438
       kind: dataset
     notes: Upstream records this as solved without specifying the direction.
+  - id: erdos-438-sweep-28b47281
+    asserted_on: 2026-09-19
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-19
+    source:
+      title: "formal-conjectures PR #6119: Add Erdős Problem 438 (square-sum-free sets), linked to the formal proof"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6119
+      kind: github
+      quote: "`erdos_438` (`research solved`): `extremalSize N / N → 11/32`"
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 438". Classifier rationale: The pull request states the conjecture is research solved via a formal proof. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: erdos-438-sweep-7fa75574
+    asserted_on: 2026-09-19
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-19
+    source:
+      title: "formal-conjectures: Add Erdős Problem 438 (square-sum-free sets), linked to the formal proof (#6119) Fixes #6117. ### What changed Adds `FormalConjectures/ErdosProblems/438.lean` with `SquareSumFree`, `extremalSize N` (t"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/f1348612b76c542b4d54a74d5ba6b2da6e9b223a
+      kind: github
+      quote: "`erdos_438` (`research solved`): `extremalSize N / N → 11/32`"
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 438". Classifier rationale: The commit announces a formal proof that resolves Erdős Problem 438. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

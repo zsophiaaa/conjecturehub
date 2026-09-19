@@ -28,6 +28,21 @@ claims:
       title: erdosproblems.com records this problem as "disproved"
       url: https://www.erdosproblems.com/230
       kind: dataset
+  - id: erdos-230-sweep-18a1af28
+    asserted_on: 2026-09-19
+    type: disproved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-19
+    source:
+      title: "formal-conjectures: Add Erdős Problem 230 (unimodular polynomials and Kahane's ultraflat polynomials), link the formal disproof (#6160) Fixes #6159. ### What changed Adds `FormalConjectures/ErdosProblems/230.lean` with `"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/515a97fad9df3ee94170258c0b6df0116d8fbc22
+      kind: github
+      quote: Disproved by Kahane's ultraflat polynomials [Ka80];
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 230". Classifier rationale: The commit explicitly records that the Erdős–Newman question is disproved. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

@@ -28,6 +28,21 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/116
       kind: dataset
+  - id: erdos-116-sweep-5564d7aa
+    asserted_on: 2026-09-19
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-19
+    source:
+      title: "formal-conjectures: Add Erdős Problem 116 (area of polynomial lemniscates), link the formal proof (#6155) Fixes #6154. ### What changed Adds `FormalConjectures/ErdosProblems/116.lean`: - `erdos_116` (`research solved`, `"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/edc333dc5bd85ebcecab669fdd958135bf826bf1
+      kind: github
+      quote: "`erdos_116` (`research solved`, `answer(True)`) "
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 116". Classifier rationale: The commit announces a formal proof and marks the conjecture as research solved. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

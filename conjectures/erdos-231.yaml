@@ -27,6 +27,21 @@ claims:
       title: erdosproblems.com records this problem as "disproved"
       url: https://www.erdosproblems.com/231
       kind: dataset
+  - id: erdos-231-sweep-9c6adc4a
+    asserted_on: 2026-09-19
+    type: disproved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-19
+    source:
+      title: "formal-conjectures: Add Erdős Problem 231 (abelian squares in strings of length 2^k − 1), link the formal disproof (#6143) Fixes #6142. ### What changed Adds `FormalConjectures/ErdosProblems/231.lean`: - `ContainsAbelian"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/4b89cd900536a0555a852d43d750a17b243adea5
+      kind: github
+      quote: link the formal disproof (#6143)
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 231". Classifier rationale: The commit states that a formal disproof of Erdős Problem 231 has been linked. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

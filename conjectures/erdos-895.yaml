@@ -28,6 +28,38 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/895
       kind: dataset
+  - id: erdos-895-sweep-31ad7d31
+    asserted_on: 2026-09-19
+    type: proved
+    scope: n ≥ 18
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-19
+    source:
+      title: "formal-conjectures PR #6127: Add Erdős Problem 895 (independent Schur triples in triangle-free graphs), link the formal proof"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6127
+      kind: github
+      quote: "`erdos_895` (`research solved`, `answer(True)`): for all sufficiently large `n`, every triangle‑free graph on `{1, …, n}` ... has three independent points `a ≠ b`, `a + b`."
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 895". Classifier rationale: The PR adds a formal proof claiming the conjecture is solved for sufficiently large n (sharp at n ≥ 18). Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: erdos-895-sweep-b5673cec
+    asserted_on: 2026-09-19
+    type: proved
+    scope: for all sufficiently large n (n ≥ 18)
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-19
+    source:
+      title: "formal-conjectures: Add Erdős Problem 895 (independent Schur triples in triangle-free graphs), link the formal proof (#6127) Fixes #6126. ### What changed Adds `FormalConjectures/ErdosProblems/895.lean`: - `erdos_895` (`"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/0f34955e1a6841d31c59d76c99252423894752d1
+      kind: github
+      quote: "`erdos_895` (`research solved`, `answer(True)`): for all sufficiently large `n`, every triangle‑free graph on `{1, …, n}` ... has three independent points `a ≠ b`, `a + b`."
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 895". Classifier rationale: The commit reports a formal proof establishing the conjecture for all large n, with an explicit bound n≥18. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
