@@ -29,6 +29,22 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/525
       kind: dataset
+  - id: erdos-525-sweep-40eb4436
+    asserted_on: 2026-09-20
+    type: proved
+    scope: "part i ( #exceptional n = o(2^n) )"
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-20
+    source:
+      title: "formal-conjectures PR #6330: Add Erdős Problem 525 (minimum modulus of random ±1 polynomials), link the formal proof"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6330
+      kind: github
+      quote: "`erdos_525.parts.i` (`answer(True)`): `#exceptional n = o(2^n)`."
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 525". Classifier rationale: The pull request states that part i of Erdős Problem 525 has been formally proved. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

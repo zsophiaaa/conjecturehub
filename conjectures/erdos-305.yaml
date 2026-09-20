@@ -28,6 +28,36 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/305
       kind: dataset
+  - id: erdos-305-sweep-e90925bb
+    asserted_on: 2026-09-20
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-20
+    source:
+      title: "formal-conjectures PR #6310: Add Erdős Problem 305 (least denominators of Egyptian fractions), link the formal proof"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6310
+      kind: github
+      quote: "`erdos_305` (`research solved`, `answer(True)`): `D(b) ≪ b (log b)^{1+o(1)}` (Yokota [Yo88])."
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 305". Classifier rationale: The pull request states the conjecture is research solved and links a formal proof. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: erdos-305-sweep-5bcbdede
+    asserted_on: 2026-09-20
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-20
+    source:
+      title: "formal-conjectures: Add Erdős Problem 305 (least denominators of Egyptian fractions), link the formal proof (#6310) Fixes #6309. ### What changed Adds `FormalConjectures/ErdosProblems/305.lean` with `D a b` (least possib"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/0173452628501de56c8a09240dfd573e3708e21c
+      kind: github
+      quote: "`erdos_305` (`research solved`, `answer(True)`): `D(b) ≪ b (log b)^{1+o(1)}` (Yokota [Yo88])."
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 305". Classifier rationale: The commit states the conjecture is research solved with a formal proof. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

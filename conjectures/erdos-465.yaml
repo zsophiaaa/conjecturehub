@@ -27,6 +27,21 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/465
       kind: dataset
+  - id: erdos-465-sweep-b60ef727
+    asserted_on: 2026-09-20
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-20
+    source:
+      title: "formal-conjectures PR #6306: Add Erdős Problem 465 (Konyagin's bound on points with distances near integers), link the formal proof"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6306
+      kind: github
+      quote: "`erdos_465.parts.i` (`research solved`, `answer(True)`): `N(X, δ) = o(X)`"
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 465". Classifier rationale: The PR states the conjecture is solved with a formal proof. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
