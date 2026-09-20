@@ -27,6 +27,36 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/658
       kind: dataset
+  - id: erdos-658-sweep-8b9c8f9a
+    asserted_on: 2026-09-20
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-20
+    source:
+      title: "formal-conjectures PR #6204: Add Erdős Problem 658 (squares in dense subsets of the grid), link the formal proof"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6204
+      kind: github
+      quote: "`erdos_658` (`research solved`, `answer(True)`)"
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 658". Classifier rationale: The pull request states that a formal Lean proof of Erdős Problem 658 has been added, marking it as solved. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: erdos-658-sweep-45257c07
+    asserted_on: 2026-09-20
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-20
+    source:
+      title: "formal-conjectures: Add Erdős Problem 658 (squares in dense subsets of the grid), link the formal proof (#6204) Fixes #6203. ### What changed Adds `FormalConjectures/ErdosProblems/658.lean` with `erdos_658` (`research so"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/3b1d0d6dc382b0c8a6b4c2508706f1ad48dd56be
+      kind: github
+      quote: "`research solved`, `answer(True)`: for `δ > 0` and large `N`, every `A ⊆ {1, …, N}²` with `|A| ≥ δ N²` contains the four vertices of an axis‑aligned square"
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 658". Classifier rationale: The commit announces a formal Lean proof that settles the conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

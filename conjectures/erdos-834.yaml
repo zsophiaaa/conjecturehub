@@ -29,6 +29,21 @@ claims:
       url: https://www.erdosproblems.com/834
       kind: dataset
     notes: Upstream records this as solved without specifying the direction.
+  - id: erdos-834-sweep-5193ec9b
+    asserted_on: 2026-09-20
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-20
+    source:
+      title: "formal-conjectures PR #6227: Add Erdős Problem 834 (3-critical 3-uniform hypergraphs of minimum degree 7), link the formal proof"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6227
+      kind: github
+      quote: "`erdos_834` (`research solved`, `answer(True)`): a chromatically `3`-critical `3`-uniform hypergraph with all degrees `≥ 7` exists (Li [Li25])."
+    authors:
+      - Konamiu
+    notes: "Filed automatically by the formal-conjectures pull requests sweep. Matched on \"Erdős Problem 834\". Classifier rationale: The pull request declares the conjecture is solved by citing Li's existence result. Unreviewed: this records that a claim was made, not that it is correct."
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

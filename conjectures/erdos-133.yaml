@@ -27,6 +27,36 @@ claims:
       title: erdosproblems.com records this problem as "disproved"
       url: https://www.erdosproblems.com/133
       kind: dataset
+  - id: erdos-133-sweep-8f48ccbc
+    asserted_on: 2026-09-20
+    type: disproved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-20
+    source:
+      title: "formal-conjectures PR #6226: Add Erdős Problem 133 (minimum maximum degree of triangle-free diameter-2 graphs), link the formal proof"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6226
+      kind: github
+      quote: "`erdos_133` (`research solved`, `answer(False)`): `f n / √n` does not tend to infinity."
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 133". Classifier rationale: The PR states the conjecture is resolved with a formal proof showing the claimed asymptotic does not hold. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: erdos-133-sweep-cf683643
+    asserted_on: 2026-09-20
+    type: disproved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-20
+    source:
+      title: "formal-conjectures: Add Erdős Problem 133 (minimum maximum degree of triangle-free diameter-2 graphs), link the formal proof (#6226) Fixes #6225. ### What changed Adds `FormalConjectures/ErdosProblems/133.lean` with `f n"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/77c90187db81f732f137114fcf8f15d2ef94f866
+      kind: github
+      quote: "`erdos_133` (`research solved`, `answer(False)`): `f n / √n` does not tend to infinity."
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 133". Classifier rationale: The commit states a formal proof that the conjectured growth does not hold, thus disproving the conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

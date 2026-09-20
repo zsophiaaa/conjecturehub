@@ -28,6 +28,36 @@ claims:
       title: erdosproblems.com records this problem as "disproved"
       url: https://www.erdosproblems.com/113
       kind: dataset
+  - id: erdos-113-sweep-8c2f39fc
+    asserted_on: 2026-09-20
+    type: disproved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-20
+    source:
+      title: "formal-conjectures PR #6198: Add Erdős Problem 113 (the Erdős–Simonovits 2-degenerate conjecture), link the formal disproof"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6198
+      kind: github
+      quote: Disproved by Janzer [Ja23b];
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 113". Classifier rationale: The PR states the conjecture has been formally disproved. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: erdos-113-sweep-18ad1580
+    asserted_on: 2026-09-20
+    type: disproved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-20
+    source:
+      title: "formal-conjectures: Add Erdős Problem 113 (the Erdős–Simonovits 2-degenerate conjecture), link the formal disproof (#6198) Fixes #6197. ### What changed Adds `FormalConjectures/ErdosProblems/113.lean` with `erdos_113` (`"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/ae4daca7d377187b361478e053fe60171b55e673
+      kind: github
+      quote: Disproved by Janzer [Ja23b]; linked to plby/lean-proofs `Erdos113.not_erdos_113`
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 113". Classifier rationale: The commit states the conjecture has been disproved. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

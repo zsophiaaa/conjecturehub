@@ -28,6 +28,36 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/310
       kind: dataset
+  - id: erdos-310-sweep-e1cda874
+    asserted_on: 2026-09-20
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-20
+    source:
+      title: "formal-conjectures PR #6190: Add Erdős Problem 310 (unit fraction sums with bounded denominator in dense sets), link the formal proof"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6190
+      kind: github
+      quote: "`erdos_310` (`research solved`, `answer(True)`) "
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 310". Classifier rationale: The pull request adds a formal proof and labels the problem as solved. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: erdos-310-sweep-a7c936f5
+    asserted_on: 2026-09-20
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-20
+    source:
+      title: "formal-conjectures: Add Erdős Problem 310 (unit fraction sums with bounded denominator in dense sets), link the formal proof (#6190) Fixes #6189. ### What changed Adds `FormalConjectures/ErdosProblems/310.lean`: - `erdos"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/9c333fac16ecba3bfe65a7495a11849b3ba55747
+      kind: github
+      quote: "`erdos_310` (`research solved`, `answer(True)`) "
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 310". Classifier rationale: The commit records a formal proof marking the conjecture as solved. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

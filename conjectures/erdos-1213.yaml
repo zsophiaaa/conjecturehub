@@ -27,6 +27,36 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/1213
       kind: dataset
+  - id: erdos-1213-sweep-ddaaa0a5
+    asserted_on: 2026-09-20
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-20
+    source:
+      title: "formal-conjectures PR #6222: Add Erdős Problem 1213 (Hegyvári's theorem on equal interval sums), link the formal proof"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6222
+      kind: github
+      quote: "`erdos_1213` (`research solved`, `answer(True)`) for all a, K ≥ 1 ..."
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 1213". Classifier rationale: The PR states the conjecture is marked as research solved with a formal proof. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: erdos-1213-sweep-c3e79a50
+    asserted_on: 2026-09-20
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-20
+    source:
+      title: "formal-conjectures: Add Erdős Problem 1213 (Hegyvári's theorem on equal interval sums), link the formal proof (#6222) Fixes #6221. ### What changed Adds `FormalConjectures/ErdosProblems/1213.lean` with `HasEqualIntervalS"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/b7dc15e28b010669de2951289072b2eab03a1637
+      kind: github
+      quote: "`erdos_1213` (`research solved`, `answer(True)`) for all a, K ≥ 1 ..."
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 1213". Classifier rationale: The commit states the conjecture is marked as research solved with a formal proof. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

@@ -28,6 +28,36 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/1099
       kind: dataset
+  - id: erdos-1099-sweep-df5ab761
+    asserted_on: 2026-09-20
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-20
+    source:
+      title: "formal-conjectures PR #6264: Add Erdős Problem 1099 (Vose's theorem on consecutive divisor ratios), link the formal proof"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6264
+      kind: github
+      quote: "`erdos_1099` (`research solved`, `answer(True)`): for every `α > 1` there is `C` with `h α n ≤ C` for infinitely many `n` (Vose [Vo84])"
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 1099". Classifier rationale: The pull request states the conjecture is research solved and links to a formal proof. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: erdos-1099-sweep-bcb06a97
+    asserted_on: 2026-09-20
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-20
+    source:
+      title: "formal-conjectures: Add Erdős Problem 1099 (Vose's theorem on consecutive divisor ratios), link the formal proof (#6264) Fixes #6263. ### What changed Adds `FormalConjectures/ErdosProblems/1099.lean` with `h α n = ∑ (d_{"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/82ec22e94dab16fc141a121b24bc7fac28a7473d
+      kind: github
+      quote: "`erdos_1099` (`research solved`, `answer(True)`): for every `α > 1` there is `C` with `h α n ≤ C` for infinitely many `n` (Vose [Vo84])"
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 1099". Classifier rationale: The commit explicitly marks the conjecture as research solved and provides a formal proof. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
