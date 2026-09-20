@@ -28,6 +28,21 @@ claims:
       title: erdosproblems.com records this problem as "disproved"
       url: https://www.erdosproblems.com/559
       kind: dataset
+  - id: erdos-559-sweep-50fbb4fb
+    asserted_on: 2026-09-20
+    type: disproved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-20
+    source:
+      title: "formal-conjectures PR #6348: Add Erdős Problem 559 (linear size Ramsey numbers of bounded-degree graphs), link the formal proof"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6348
+      kind: github
+      quote: "`erdos_559` (`research solved`, `answer(False)`): `R̂(G) ≪_d n` for graphs of maximum degree `d` is false (Rödl–Szemerédi [RoSz00])."
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 559". Classifier rationale: The pull request declares a formal proof that the conjecture is false. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

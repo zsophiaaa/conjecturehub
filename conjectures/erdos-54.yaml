@@ -29,6 +29,21 @@ claims:
       url: https://www.erdosproblems.com/54
       kind: dataset
     notes: Upstream records this as solved without specifying the direction.
+  - id: erdos-54-sweep-7231083b
+    asserted_on: 2026-09-20
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-20
+    source:
+      title: "formal-conjectures PR #6294: Add Erdős Problem 54 (sparse Ramsey 2-complete sets), link the formal proof"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6294
+      kind: github
+      quote: "`erdos_54` (`research solved`, $100): there is a Ramsey `2`-complete `A` with `|A ∩ [1,N]| = O((log N)²)` (Conlon–Fox–Pham [CFP21]), which is the optimal order by Burr–Erdős."
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 54". Classifier rationale: The PR states the conjecture is solved and links to a formal proof of the known result. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
