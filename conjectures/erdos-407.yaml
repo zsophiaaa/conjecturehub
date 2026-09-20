@@ -29,6 +29,21 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/407
       kind: dataset
+  - id: erdos-407-sweep-76c57772
+    asserted_on: 2026-09-20
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-20
+    source:
+      title: "formal-conjectures: Add Erdős Problem 407 (Newman's conjecture on 2^a + 3^b + 2^c 3^d), link the formal proof (#6308) Fixes #6307. ### What changed Adds `FormalConjectures/ErdosProblems/407.lean` with `w n` (the number o"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/b1770b33a9435587bf4f1f41393ad5129a195db8
+      kind: github
+      quote: "`erdos_407` (`research solved`, `answer(True)`): `w` is bounded (Newman's conjecture; Evertse–Győry–Stewart–Tijdeman [EGST88])"
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 407". Classifier rationale: The commit states the conjecture is research solved with answer True. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

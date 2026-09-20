@@ -27,6 +27,21 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/1027
       kind: dataset
+  - id: erdos-1027-sweep-00b0d05a
+    asserted_on: 2026-09-20
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-20
+    source:
+      title: "formal-conjectures: Add Erdős Problem 1027 (many proper 2-colourings of sparse uniform families), link the formal proof (#6276) Fixes #6275. ### What changed Adds `FormalConjectures/ErdosProblems/1027.lean` with `groundS"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/e14b0e2a1d70454a2b42c25da8e57ddfe5116452
+      kind: github
+      quote: "`erdos_1027` (`research solved`, `answer(True)`) "
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 1027". Classifier rationale: The commit adds a formal proof and marks the problem as solved. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

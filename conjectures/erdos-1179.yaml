@@ -28,6 +28,21 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/1179
       kind: dataset
+  - id: erdos-1179-sweep-b1f9ec63
+    asserted_on: 2026-09-20
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-20
+    source:
+      title: "formal-conjectures: Add Erdős Problem 1179 (random subsets with uniform subset sums), link the formal proof (#6278) Fixes #6277. ### What changed Adds `FormalConjectures/ErdosProblems/1179.lean` with `repCount A g` (`F_A"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/286abc85ea63c3dfa295f477a2637c35a54fb1a1
+      kind: github
+      quote: "`erdos_1179` (`research solved`, `answer(True)`) for every ..."
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 1179". Classifier rationale: The commit states that the Erdős Problem 1179 has been formally proved. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
