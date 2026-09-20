@@ -30,6 +30,36 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/977
       kind: dataset
+  - id: erdos-977-sweep-221ad603
+    asserted_on: 2026-09-20
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-20
+    source:
+      title: "formal-conjectures PR #6255: Add Erdős Problem 977 (greatest prime factor of 2^n - 1), link the formal proof"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6255
+      kind: github
+      quote: "`erdos_977` (`research solved`, `answer(True)`): `P(2^n - 1) / n → ∞` (Stewart [St13])"
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 977". Classifier rationale: The pull request adds a formal proof and labels the conjecture as research solved. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: erdos-977-sweep-0627188d
+    asserted_on: 2026-09-20
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-20
+    source:
+      title: "formal-conjectures: Add Erdős Problem 977 (greatest prime factor of 2^n - 1), link the formal proof (#6255) Fixes #6254. ### What changed Adds `FormalConjectures/ErdosProblems/977.lean` with: - `erdos_977` (`research sol"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/0d9fd3a891f75c2a3d090c4e35248b36715ec848
+      kind: github
+      quote: "`erdos_977` (`research solved`, `answer(True)`): `P(2^n - 1) / n → ∞` (Stewart [St13])"
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 977". Classifier rationale: The commit announces a formal proof that resolves the conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

@@ -28,6 +28,36 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/801
       kind: dataset
+  - id: erdos-801-sweep-e9fd015c
+    asserted_on: 2026-09-20
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-20
+    source:
+      title: "formal-conjectures PR #6251: Add Erdős Problem 801 (dense small sets in graphs with small independence number), link the formal proof"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6251
+      kind: github
+      quote: "`erdos_801` (`research solved`, `answer(True)`) : there is `c > 0` such that ... (Alon [Al96b])"
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 801". Classifier rationale: The pull request adds a formal Lean proof and labels the conjecture as research solved. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: erdos-801-sweep-389b6802
+    asserted_on: 2026-09-20
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-20
+    source:
+      title: "formal-conjectures: Add Erdős Problem 801 (dense small sets in graphs with small independence number), link the formal proof (#6251) Fixes #6250. ### What changed Adds `FormalConjectures/ErdosProblems/801.lean` with: - `"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/bb8367edb17f1482e1aa94a4ba4724de28fe0fc6
+      kind: github
+      quote: "`erdos_801` (`research solved`, `answer(True)`) ... there is `c > 0` such that, for large `n`, every graph on `n` vertices with independence number `≤ √n` has a set `S` ... (Alon [Al96b])"
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 801". Classifier rationale: The commit explicitly marks the conjecture as research solved and provides a formal proof. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

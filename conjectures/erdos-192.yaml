@@ -29,6 +29,36 @@ claims:
       url: https://www.erdosproblems.com/192
       kind: dataset
     notes: Upstream records this as solved without specifying the direction.
+  - id: erdos-192-sweep-0a168cce
+    asserted_on: 2026-09-20
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-20
+    source:
+      title: "formal-conjectures PR #6212: Add Erdős Problem 192 (unit-step walks and three-term progressions), link the formal proof"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6212
+      kind: github
+      quote: the set of dimensions `d` for which every positive-unit-step sequence in `ℝ^d` contains a three-term arithmetic progression is `answer(Set.Iic 3)` (true for `d ≤ 3`, false for `d ≥ 4` by Keränen [Ke92])
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 192". Classifier rationale: The document states a formal proof that fully resolves the conjecture for all dimensions. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: erdos-192-sweep-ac6f9749
+    asserted_on: 2026-09-20
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-20
+    source:
+      title: "formal-conjectures: Add Erdős Problem 192 (unit-step walks and three-term progressions), link the formal proof (#6212) Fixes #6211. ### What changed Adds `FormalConjectures/ErdosProblems/192.lean` with `IsPositiveUnitWal"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/0307e7cc0e44a5a2836a9a177fbb253a5ce5b7e6
+      kind: github
+      quote: the set of dimensions `d` for which every positive-unit-step sequence in `ℝ^d` contains a three-term arithmetic progression is `answer(Set.Iic 3)` (true for `d ≤ 3`, false for `d ≥ 4` by Keränen [Ke92])
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 192". Classifier rationale: The commit announces a formal proof that fully resolves the conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

@@ -30,6 +30,36 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/171
       kind: dataset
+  - id: erdos-171-sweep-a2193333
+    asserted_on: 2026-09-20
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-20
+    source:
+      title: "formal-conjectures PR #6202: Add Erdős Problem 171 (the density Hales–Jewett theorem), link the formal proof"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6202
+      kind: github
+      quote: "`erdos_171` (`research solved`, `answer(True)`) "
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 171". Classifier rationale: The pull request states that a formal proof of the density Hales–Jewett theorem (Erdős Problem 171) has been added, indicating the conjecture is proved. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: erdos-171-sweep-5a0cc8c3
+    asserted_on: 2026-09-20
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-20
+    source:
+      title: "formal-conjectures: Add Erdős Problem 171 (the density Hales–Jewett theorem), link the formal proof (#6202) Fixes #6201. ### What changed Adds `FormalConjectures/ErdosProblems/171.lean` with `erdos_171` (`research solved"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/283840dca688ed44406d734a45edc243e2f60bf2
+      kind: github
+      quote: "`erdos_171` (`research solved`, `answer(True)`) ... linked to the formal proof of the density Hales–Jewett theorem."
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 171". Classifier rationale: The commit states that a formal proof of the conjecture has been added, indicating it is solved. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

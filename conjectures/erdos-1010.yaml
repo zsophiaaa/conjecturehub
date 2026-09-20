@@ -27,6 +27,21 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/1010
       kind: dataset
+  - id: erdos-1010-sweep-511e8cfe
+    asserted_on: 2026-09-20
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-20
+    source:
+      title: "formal-conjectures PR #6274: Add Erdős Problem 1010 (Erdős–Rademacher triangle counting), link the formal proof"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6274
+      kind: github
+      quote: "`erdos_1010` (`research solved`, `answer(True)`) "
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 1010". Classifier rationale: The PR states the conjecture is marked as research solved with answer(True), indicating a proof. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

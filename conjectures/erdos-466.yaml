@@ -27,6 +27,36 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/466
       kind: dataset
+  - id: erdos-466-sweep-30f1dcaf
+    asserted_on: 2026-09-20
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-20
+    source:
+      title: "formal-conjectures PR #6224: Add Erdős Problem 466 (Graham's theorem on distances near integers), link the formal proof"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6224
+      kind: github
+      quote: "`erdos_466` (`research solved`, `answer(True)`): there is `δ > 0` with `N X δ → ∞` as `X → ∞` (Graham)."
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 466". Classifier rationale: The pull request declares the conjecture is solved and links a formal proof. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: erdos-466-sweep-30bbb66f
+    asserted_on: 2026-09-20
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-20
+    source:
+      title: "formal-conjectures: Add Erdős Problem 466 (Graham's theorem on distances near integers), link the formal proof (#6224) Fixes #6223. ### What changed Adds `FormalConjectures/ErdosProblems/466.lean` with `N X δ` (the maxim"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/b1679779cb2a9f852751c26557dcbe5fb9afeac7
+      kind: github
+      quote: "`erdos_466` (`research solved`, `answer(True)`): there is `δ > 0` with `N X δ → ∞` as `X → ∞` (Graham)."
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 466". Classifier rationale: The commit declares the conjecture is solved and links to a formal proof. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

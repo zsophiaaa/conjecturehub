@@ -27,6 +27,21 @@ claims:
       title: erdosproblems.com records this problem as "disproved"
       url: https://www.erdosproblems.com/1215
       kind: dataset
+  - id: erdos-1215-sweep-d164d41c
+    asserted_on: 2026-09-20
+    type: disproved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-20
+    source:
+      title: "formal-conjectures PR #6270: Add Erdős Problem 1215 (Mac Lane's theorem on escape paths of polynomials), link the formal disproof"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6270
+      kind: github
+      quote: link the formal disproof
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 1215". Classifier rationale: The pull request states that a formal disproof of Erdős Problem 1215 is provided. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

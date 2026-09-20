@@ -28,6 +28,36 @@ claims:
       title: erdosproblems.com records this problem as "disproved"
       url: https://www.erdosproblems.com/763
       kind: dataset
+  - id: erdos-763-sweep-445810a3
+    asserted_on: 2026-09-20
+    type: disproved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-20
+    source:
+      title: "formal-conjectures PR #6243: Add Erdős Problem 763 (Erdős–Fuchs theorem), link the formal disproof"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6243
+      kind: github
+      quote: "`erdos_763` (`research solved`, `answer(False)`) : no `A ⊆ ℕ` and `c > 0` have `∑_{n ≤ N} (1_A ∗ 1_A)(n) = cN + O(1)`"
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 763". Classifier rationale: The PR adds a formal entry marking the conjecture as solved with answer(False), i.e., a disproof. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: erdos-763-sweep-311e2bfd
+    asserted_on: 2026-09-20
+    type: disproved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-20
+    source:
+      title: "formal-conjectures: Add Erdős Problem 763 (Erdős–Fuchs theorem), link the formal disproof (#6243) Fixes #6242. ### What changed Adds `FormalConjectures/ErdosProblems/763.lean` with: - `erdos_763` (`research solved`, `ans"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/4160dce43b999e4d3d361dd5a235619bf6169321
+      kind: github
+      quote: "`erdos_763` (`research solved`, `answer(False)`): no `A ⊆ ℕ` and `c > 0` have `∑_{n ≤ N} (1_A ∗ 1_A)(n) = cN + O(1)`"
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 763". Classifier rationale: The commit states a formal disproof of Erdős Problem 763. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
