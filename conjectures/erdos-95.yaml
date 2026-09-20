@@ -29,6 +29,21 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/95
       kind: dataset
+  - id: erdos-95-sweep-66492400
+    asserted_on: 2026-09-20
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-20
+    source:
+      title: "formal-conjectures: Add Erdős Problem 95 (second moment of distance multiplicities), link the formal proof (#6288) Fixes #6287. ### What changed Adds `FormalConjectures/ErdosProblems/95.lean` with: - `erdos_95` (`researc"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/1b4dd85cf23c7eb2d55d57092be352d7fe3c17fb
+      kind: github
+      quote: "`erdos_95` (`research solved`, `answer(True)`, $500): for every `ε > 0` there is `C` ..."
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 95". Classifier rationale: The commit announces a formal Lean proof marking the conjecture as solved. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

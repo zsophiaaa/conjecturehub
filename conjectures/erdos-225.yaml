@@ -27,6 +27,21 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/225
       kind: dataset
+  - id: erdos-225-sweep-3f10fc3f
+    asserted_on: 2026-09-20
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-20
+    source:
+      title: "formal-conjectures: Add Erdős Problem 225 (L¹ norm of trigonometric polynomials with real zeros), link the formal proof (#6298) Fixes #6297. ### What changed Adds `FormalConjectures/ErdosProblems/225.lean` with `trigPoly"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/91d22a0fadb0c115039bbe0c63300f0610e680d2
+      kind: github
+      quote: "`erdos_225` (`research solved`, `answer(True)`) ..."
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 225". Classifier rationale: The commit states the conjecture is research‑solved with a positive answer. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
