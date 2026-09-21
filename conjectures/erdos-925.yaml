@@ -28,6 +28,21 @@ claims:
       title: erdosproblems.com records this problem as "disproved"
       url: https://www.erdosproblems.com/925
       kind: dataset
+  - id: erdos-925-sweep-8a87f4b2
+    asserted_on: 2026-09-21
+    type: disproved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-21
+    source:
+      title: "formal-conjectures PR #6401: Add Erdős Problem 925 (independence number of non-Ramsey graphs for K_3), link the formal proof"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6401
+      kind: github
+      quote: "`erdos_925` (`research solved`, `answer(False)`): no `δ > 0` guarantees independent sets of size `≫ n^{1/3+δ}` in graphs which are not Ramsey for `K_3`"
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 925". Classifier rationale: The pull request declares the conjecture is resolved negatively, i.e., disproved. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

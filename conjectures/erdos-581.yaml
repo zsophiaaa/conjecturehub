@@ -28,6 +28,21 @@ claims:
       url: https://www.erdosproblems.com/581
       kind: dataset
     notes: Upstream records this as solved without specifying the direction.
+  - id: erdos-581-sweep-30681bcd
+    asserted_on: 2026-09-20
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-21
+    source:
+      title: "formal-conjectures: Add Erdős Problem 581 (bipartite subgraphs of triangle-free graphs), link the formal proof (#6381) Fixes #6380. ### What changed Adds `FormalConjectures/ErdosProblems/581.lean` with `f m` (the largest"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/7ab1e69b6150ee9b133e43fac60533a2de8625f3
+      kind: github
+      quote: "erdos_581 (`research solved`): Alon's `m/2 + c₁ m^{4/5} ≤ f(m) ≤ m/2 + c₂ m^{4/5}` [Al96]."
+    authors:
+      - Konamiu
+    notes: "Filed automatically by the formal-conjectures commits sweep. Matched on \"Erdős Problem 581\". Classifier rationale: The commit states the conjecture is research solved and links a formal proof of Alon's result. Unreviewed: this records that a claim was made, not that it is correct."
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

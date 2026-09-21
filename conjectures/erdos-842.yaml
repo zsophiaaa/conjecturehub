@@ -28,6 +28,21 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/842
       kind: dataset
+  - id: erdos-842-sweep-1cd999bd
+    asserted_on: 2026-09-20
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-21
+    source:
+      title: "formal-conjectures: Add Erdős Problem 842 (Fleischner–Stiebitz 3-colouring), link the formal proof (#6377) Fixes #6376. ### What changed Adds `FormalConjectures/ErdosProblems/842.lean` with `IsTrianglesPlusHamiltonianCyc"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/a12f14a1391d1084ac6cbb62e1af8fb9efc7e93b
+      kind: github
+      quote: "erdos_842 (`research solved`, `answer(True)`): such graphs are 3-colourable (Fleischner–Stiebitz [FlSt92])."
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 842". Classifier rationale: The commit states the conjecture has been formally proved. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

@@ -28,6 +28,36 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/767
       kind: dataset
+  - id: erdos-767-sweep-15573a8b
+    asserted_on: 2026-09-21
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-21
+    source:
+      title: "formal-conjectures PR #6397: Add Erdős Problem 767 (cycles with many chords at a vertex), link the formal proof"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6397
+      kind: github
+      quote: "`erdos_767` (`research solved`, `answer(True)`): `g_k(n) = (k+1)n - (k+1)²` for `n ≥ 3k + 3` (Jiang [Ji04])."
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 767". Classifier rationale: The PR states the conjecture is research‑solved with a formal proof. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: erdos-767-sweep-df0a2c7c
+    asserted_on: 2026-09-21
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-21
+    source:
+      title: "formal-conjectures: Add Erdős Problem 767 (cycles with many chords at a vertex), link the formal proof (#6397) Fixes #6396. ### What changed Adds `FormalConjectures/ErdosProblems/767.lean` with `HasCycleWithIncidentChord"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/394407d781a74f0ed0e20dd4aa2f7f53c74bd38f
+      kind: github
+      quote: "`erdos_767` (`research solved`, `answer(True)`): `g_k(n) = (k+1)n - (k+1)²` for `n ≥ 3k + 3` (Jiang [Ji04])."
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 767". Classifier rationale: The commit states the conjecture is research‑solved with an explicit formula, indicating a proof. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

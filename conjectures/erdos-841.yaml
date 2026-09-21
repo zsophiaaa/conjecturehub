@@ -30,6 +30,36 @@ claims:
       url: https://www.erdosproblems.com/841
       kind: dataset
     notes: Upstream records this as solved without specifying the direction.
+  - id: erdos-841-sweep-db8fd15d
+    asserted_on: 2026-09-21
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-21
+    source:
+      title: "formal-conjectures PR #6414: Add Erdős Problem 841 (square products from short intervals), link the formal proof"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6414
+      kind: github
+      quote: "`erdos_841` (`research solved`): the Bui–Pratt–Zaharescu distribution theorem, `|{n ≤ x : t_n ≤ n^c}| - |{n ≤ x : P(n) ≤ n^c}| = o(x)` for `c ∈ (0, 1]`."
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 841". Classifier rationale: The PR states the conjecture is solved via a formal proof. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: erdos-841-sweep-3442fc77
+    asserted_on: 2026-09-21
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-21
+    source:
+      title: "formal-conjectures: Add Erdős Problem 841 (square products from short intervals), link the formal proof (#6414) Fixes #6413. ### What changed Adds `FormalConjectures/ErdosProblems/841.lean` with `t n` (least `T` such tha"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/2e541aaf6af2b4df97c5d8ab4492ba83bb130c84
+      kind: github
+      quote: "`erdos_841` (`research solved`): the Bui–Pratt–Zaharescu distribution theorem, `|{n ≤ x : t_n ≤ n^c}| - |{n ≤ x : P(n) ≤ n^c}| = o(x)` for `c ∈ (0, 1]`."
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 841". Classifier rationale: The commit states that the Erdős Problem 841 is "research solved" via a known distribution theorem. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

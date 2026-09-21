@@ -31,6 +31,21 @@ claims:
       url: https://www.erdosproblems.com/858
       kind: dataset
     notes: Upstream records this as solved without specifying the direction.
+  - id: erdos-858-sweep-1c6f0051
+    asserted_on: 2026-09-20
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-21
+    source:
+      title: "formal-conjectures: Add Erdős Problem 858 (harmonic mass of weakly primitive sets), link the formal proof (#6361) Fixes #983. ### What changed Adds `FormalConjectures/ErdosProblems/858.lean` with `IsAdmissible A` (no `at"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/0de5983698dfb520a1e8f137323bbf61fa07db40
+      kind: github
+      quote: "`erdos_858` (`research solved`): `M(N) / log N` converges, i.e. `max_A ∑ 1/n = (c + o(1)) log N`"
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 858". Classifier rationale: The commit states a formal proof that the conjectured limit exists, indicating a full resolution. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

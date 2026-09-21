@@ -28,6 +28,38 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/720
       kind: dataset
+  - id: erdos-720-sweep-f41d99ae
+    asserted_on: 2026-09-21
+    type: partial
+    scope: parts i, ii, iii
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-21
+    source:
+      title: "formal-conjectures PR #6393: Add Erdős Problem 720 (size Ramsey numbers of paths and cycles), link the formal proof"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6393
+      kind: github
+      quote: "`parts.i` (`answer(False)`): ... `parts.ii` (`answer(True)`): ... `parts.iii` (`answer(True)`) ..."
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 720". Classifier rationale: The PR claims formal proofs settling all three parts of Erdős Problem 720. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: erdos-720-sweep-a2bd6cb1
+    asserted_on: 2026-09-21
+    type: partial
+    scope: parts i, ii, iii
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-21
+    source:
+      title: "formal-conjectures: Add Erdős Problem 720 (size Ramsey numbers of paths and cycles), link the formal proof (#6393) Fixes #6392. ### What changed Adds `FormalConjectures/ErdosProblems/720.lean`, using the existing `Simple"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/c3b4acf611b971ec1fcbf8f7762663a16c844595
+      kind: github
+      quote: "`parts.i` (`answer(False)`): `R̂(Pₙ)/n → ∞` fails."
+    authors:
+      - Konamiu
+    notes: "Filed automatically by the formal-conjectures commits sweep. Matched on \"Erdős Problem 720\". Classifier rationale: The commit states formal answers (True/False) for the conjecture's parts, indicating they are resolved. Unreviewed: this records that a claim was made, not that it is correct."
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

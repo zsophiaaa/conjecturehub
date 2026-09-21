@@ -28,6 +28,37 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/673
       kind: dataset
+  - id: erdos-673-sweep-76395469
+    asserted_on: 2026-09-20
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-21
+    source:
+      title: "formal-conjectures PR #6383: Add Erdős Problem 673 (sums of ratios of consecutive divisors), link the formal proof"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6383
+      kind: github
+      quote: Add Erdős Problem 673 (sums of ratios of consecutive divisors), link the formal proof.
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 673". Classifier rationale: The pull request adds a Lean file that claims to contain a formal proof of the conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: erdos-673-sweep-33aed03d
+    asserted_on: 2026-09-20
+    type: proved
+    scope: for almost all n
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-21
+    source:
+      title: "formal-conjectures: Add Erdős Problem 673 (sums of ratios of consecutive divisors), link the formal proof (#6383) Fixes #6382. ### What changed Adds `FormalConjectures/ErdosProblems/673.lean` with `G n = ∑ dᵢ/dᵢ₊₁` over "
+      url: https://github.com/google-deepmind/formal-conjectures/commit/61696dbe1a5c4ee31550b61a9f1ecac320c02f9d
+      kind: github
+      quote: "`parts.i` (`answer(True)`): `G(n) → ∞` for almost all `n`"
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 673". Classifier rationale: The commit links a formal proof and states the conjecture’s claim is proved for almost all n. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

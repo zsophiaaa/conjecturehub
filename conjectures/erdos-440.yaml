@@ -28,6 +28,21 @@ claims:
       url: https://www.erdosproblems.com/440
       kind: dataset
     notes: Upstream records this as solved without specifying the direction.
+  - id: erdos-440-sweep-33cbf895
+    asserted_on: 2026-09-20
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-21
+    source:
+      title: "formal-conjectures: Add Erdős Problem 440 (counting small consecutive lcms), link the formal proof (#6317) Fixes #732. ### What changed Adds `FormalConjectures/ErdosProblems/440.lean` with `count a x = #{i | lcm(aᵢ, aᵢ₊₁"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/fdb21ddb61a6584f86bb91d1d3efd967627b21c0
+      kind: github
+      quote: "`erdos_440.parts.i` (`answer(True)`): `count a x = O(√x)`."
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 440". Classifier rationale: The commit states that formal proofs of all parts of Erdős Problem 440 are provided. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

@@ -27,6 +27,22 @@ claims:
       title: erdosproblems.com records this problem as "disproved"
       url: https://www.erdosproblems.com/807
       kind: dataset
+  - id: erdos-807-sweep-4ad7e93d
+    asserted_on: 2026-09-21
+    type: disproved
+    scope: almost surely for G(n,1/2) random graphs
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-21
+    source:
+      title: "formal-conjectures PR #6403: Add Erdős Problem 807 (bipartition number of random graphs), link the formal proof"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6403
+      kind: github
+      quote: "`erdos_807` (`research solved`, `answer(False)`): `τ(G) = n - α(G)` does not hold almost surely (Alon [Al15])."
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 807". Classifier rationale: The PR marks the conjecture as resolved with a false answer, citing Alon’s result that the equality fails almost surely. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
