@@ -28,7 +28,23 @@ openness_basis:
   meaning: no_published_solution_known_to_curator
   asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: conway-s-99-graph-problem-sweep-7d2338d6
+    asserted_on: 2026-09-21
+    type: partial
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-21
+    source:
+      title: A Forced-Structure Reduction and Verifiable Bounds for Conway's 99-Graph
+      url: https://arxiv.org/abs/2608.11211
+      kind: arxiv
+      quote: These results do not resolve the existence problem, but they reduce the exact search space and improve the best verified partial construction found in our experiments.
+    authors:
+      - Aalok Thakkar
+      - Simone Severini
+    notes: "Filed automatically by the arXiv new submissions sweep. Matched on \"Conway's 99-graph problem\". Classifier rationale: The paper reports partial progress without claiming a full resolution. Unreviewed: this records that a claim was made, not that it is correct."
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/Conway99Graph.lean
     source: google-deepmind/formal-conjectures

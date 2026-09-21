@@ -34,6 +34,22 @@ claims:
       url: https://www.erdosproblems.com/861
       kind: dataset
     notes: Upstream records this as solved without specifying the direction.
+  - id: erdos-861-sweep-c9830847
+    asserted_on: 2026-09-21
+    type: resolved_by_prior_literature
+    scope: parts i and ii
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-21
+    source:
+      title: "formal-conjectures PR #5977: feat(ErdosProblems): formalise Erdős Problem 861"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/5977
+      kind: github
+      quote: parts.i. $A(N)/2^{f(N)}\to\infty$? `answer(True)` (Saxton–Thomason). ... parts.ii. $A(N)=2^{(1+o(1))f(N)}$? `answer(False)` (the $2^{1.16 f(N)}$ lower bound already blocks it).
+    authors:
+      - stantheman0128
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 861". Classifier rationale: The PR records that both sub‑questions have been settled by existing literature. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
