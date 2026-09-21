@@ -55,7 +55,23 @@ openness_basis:
   meaning: no_published_solution_known_to_curator
   asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: moser-s-worm-sweep-4f67ca12
+    asserted_on: 2026-09-21
+    type: partial
+    scope: convex universal covers
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-21
+    source:
+      title: Improved bounds for universal convex covers of unit arcs
+      url: https://arxiv.org/abs/2609.21968
+      kind: arxiv
+      quote: We show that the infimum area α among convex universal covers satisfies 0.239\le\alpha\le0.24633\ldots
+    authors:
+      - Ethan Keller
+    notes: "Filed automatically by the arXiv new submissions sweep. Matched on \"Moser's Worm\". Classifier rationale: The document reports improved lower and upper bounds, which is partial progress rather than a full resolution. Unreviewed: this records that a claim was made, not that it is correct."
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/MoserWorm.lean
     source: google-deepmind/formal-conjectures

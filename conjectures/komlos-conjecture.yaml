@@ -43,7 +43,52 @@ openness_basis:
   meaning: no_published_solution_known_to_curator
   asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: komlos-conjecture-sweep-2d7e85c1
+    asserted_on: 2026-09-21
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-21
+    source:
+      title: "An elementary proof of the Komlós conjecture https:// arxiv.org/abs/2609.20979v1 Authors: Sankeerth Rao Karingula, Shachar LovettWe give an elementary proof of the Komlós conjectur"
+      url: https://mathstodon.xyz/@cstheory/117306832214612754
+      kind: mastodon
+      quote: We give an elementary proof of the Komlós conjecture
+    authors:
+      - TCS blog aggregator
+    notes: 'Filed automatically by the Mathstodon sweep. Matched on "Komlós conjecture". Classifier rationale: The document explicitly states it provides a proof of the conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: komlos-conjecture-sweep-6ee41aaf
+    asserted_on: 2026-09-21
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-21
+    source:
+      title: "formal-conjectures PR #6450: feat(Wikipedia/KomlosConjecture): formalise the Karingula–Lovett proof"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6450
+      kind: github
+      quote: komlos_conjecture is now research solved with a proof
+    authors:
+      - mo271
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Komlós conjecture". Classifier rationale: The pull request explicitly claims a proof of the Komlós conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: komlos-conjecture-sweep-7860170d
+    asserted_on: 2026-09-21
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-21
+    source:
+      title: "formal-conjectures: feat(Wikipedia/KomlosConjecture): formalise the Karingula–Lovett proof (#6450) Prove the Komlós conjecture with constant 36, following the elementary proof of Karingula and Lovett (arXiv:2609.20979). "
+      url: https://github.com/google-deepmind/formal-conjectures/commit/2f82a24192f64ac678557247e496b2381d3889a1
+      kind: github
+      quote: komlos_conjecture is now research solved with a proof
+    authors:
+      - mo271
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Komlós conjecture". Classifier rationale: The commit states the conjecture has been proved with constant 36. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/KomlosConjecture.lean
     source: google-deepmind/formal-conjectures

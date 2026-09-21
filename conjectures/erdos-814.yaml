@@ -27,6 +27,21 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/814
       kind: dataset
+  - id: erdos-814-sweep-071ccd85
+    asserted_on: 2026-09-21
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-21
+    source:
+      title: "formal-conjectures: Add Erdős Problem 814 (small induced subgraphs of minimum degree k), link the formal proof (#6385) Fixes #6384. ### What changed Adds `FormalConjectures/ErdosProblems/814.lean`: - `erdos_814` (`resear"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/2e126f3a508b63b44d4a9313cd4058b4f6a7c4ce
+      kind: github
+      quote: "`erdos_814` (`research solved`, `answer(True)`): the Erdős–Faudree–Rousseau–Schelp conjecture, proved by Sauermann [Sa19]."
+    authors:
+      - Konamiu
+    notes: "Filed automatically by the formal-conjectures commits sweep. Matched on \"Erdős Problem 814\". Classifier rationale: The commit states the conjecture is solved and cites Sauermann's proof. Unreviewed: this records that a claim was made, not that it is correct."
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

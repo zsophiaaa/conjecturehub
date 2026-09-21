@@ -12,7 +12,38 @@ openness_basis:
   meaning: unknown
   asserted_by: wikidata
   note: Identity record only. No statement or status has been ingested for this conjecture yet.
-claims: []
+claims:
+  - id: van-der-waerden-permanent-conjecture-sweep-bbd7aa3b
+    asserted_on: 2026-09-21
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-21
+    source:
+      title: Unique Minimizers for Permanents, Mixed Discriminants, and Log-concave Polynomials
+      url: https://arxiv.org/abs/2609.21083
+      kind: arxiv
+      quote: van der Waerden lower bounds of $\frac{n!}{n^n}$ are proven for doubly stochastic inputs
+    authors:
+      - Leonid Gurvits
+      - Jonathan Leake
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "permanent". Classifier rationale: The paper claims to prove the van der Waerden lower bound for permanents of doubly stochastic matrices. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: van-der-waerden-permanent-conjecture-sweep-ce18c528
+    asserted_on: 2026-09-21
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-21
+    source:
+      title: "formal-conjectures: feat(ErdosProblems): mark 260 as solved (#4446) ## Summary - mark Erdős Problem 260 as `research solved`; - replace `answer(sorry)` with the affirmative answer `answer(True)`; - attach a permanent `fo"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/fdd4ea2ba50f2282c67638611ed68034aa54980c
+      kind: github
+      quote: mark Erdős Problem 260 as `research solved`
+    authors:
+      - Hanziwww
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "permanent". Classifier rationale: The document reports a formal proof and marks the problem as solved, implying a proof of the conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q16636852
     source: wikidata
