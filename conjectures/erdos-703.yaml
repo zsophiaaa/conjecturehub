@@ -29,6 +29,21 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/703
       kind: dataset
+  - id: erdos-703-sweep-6a08faef
+    asserted_on: 2026-09-20
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-21
+    source:
+      title: "formal-conjectures: Add Erdős Problem 703 (forbidden intersections), link the formal proof (#6358) Fixes #6357. ### What changed Adds `FormalConjectures/ErdosProblems/703.lean` with `T n r` (the largest family of subsets"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/50f0043a57d2c34a8efa62d5b7b7e81151d0117e
+      kind: github
+      quote: "`erdos_703` (`research solved`, `answer(True)`, $250): the Frankl–Rödl forbidden-intersection theorem"
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 703". Classifier rationale: The commit records a formal Lean proof marking the conjecture as research solved. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

@@ -27,6 +27,21 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/437
       kind: dataset
+  - id: erdos-437-sweep-b32fc746
+    asserted_on: 2026-09-20
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-21
+    source:
+      title: "formal-conjectures: Add Erdős Problem 437 (square partial products), link the formal proof (#6319) Fixes #6318. ### What changed Adds `FormalConjectures/ErdosProblems/437.lean` with `squarePartialProducts a` (number of s"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/c3143f65d43c93f0cc55acf3e2ff3ade8a54248d
+      kind: github
+      quote: Add Erdős Problem 437 (square partial products), link the formal proof (#6319)
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 437". Classifier rationale: The commit announces that a formal proof of Erdős Problem 437 has been added. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

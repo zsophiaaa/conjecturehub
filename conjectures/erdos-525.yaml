@@ -29,6 +29,21 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/525
       kind: dataset
+  - id: erdos-525-sweep-1f47a651
+    asserted_on: 2026-09-20
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-21
+    source:
+      title: "formal-conjectures: Add Erdős Problem 525 (minimum modulus of random ±1 polynomials), link the formal proof (#6330) Fixes #6329. ### What changed Adds `FormalConjectures/ErdosProblems/525.lean`. Degree-`n` polynomials wi"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/9bc3a28879a0148ee596896160721f0c53025bcd
+      kind: github
+      quote: "`erdos_525.parts.i` (`answer(True)`): `#exceptional n = o(2^n)`."
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 525". Classifier rationale: The commit states that a formal proof of the conjecture’s parts has been added. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

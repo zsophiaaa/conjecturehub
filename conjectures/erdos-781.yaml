@@ -27,6 +27,21 @@ claims:
       title: erdosproblems.com records this problem as "disproved"
       url: https://www.erdosproblems.com/781
       kind: dataset
+  - id: erdos-781-sweep-7270b97a
+    asserted_on: 2026-09-20
+    type: counterexample
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-21
+    source:
+      title: "formal-conjectures: Add Erdős Problem 781 (monochromatic descending waves), link the formal proof (#6334) Fixes #6333. ### What changed Adds `FormalConjectures/ErdosProblems/781.lean` with `IsDescendingWave` and `f k` (t"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/6dfe3302c551c3a606ad87d85d880b41a7c44d9c
+      kind: github
+      quote: "`answer(False)`: `f(k) = k² - k + 1` fails for some `k ≥ 1`."
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 781". Classifier rationale: The commit states that the proposed exact formula for f(k) is false, providing a counterexample. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

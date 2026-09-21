@@ -28,6 +28,22 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/797
       kind: dataset
+  - id: erdos-797-sweep-11443ab8
+    asserted_on: 2026-09-20
+    type: proved
+    scope: part ii (f(d) = o(d²))
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-21
+    source:
+      title: "formal-conjectures PR #6340: Add Erdős Problem 797 (acyclic chromatic number and maximum degree), link the formal proof"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6340
+      kind: github
+      quote: "parts.ii (`answer(True)`): `f(d) = o(d²)`."
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 797". Classifier rationale: The pull request states that part ii of Erdős Problem 797 has been answered True via a formal proof. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

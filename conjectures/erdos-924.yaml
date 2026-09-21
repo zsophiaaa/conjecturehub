@@ -28,6 +28,21 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/924
       kind: dataset
+  - id: erdos-924-sweep-c68751bd
+    asserted_on: 2026-09-20
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-21
+    source:
+      title: "formal-conjectures PR #6352: Add Erdős Problem 924 (Folkman graphs for cliques), link the formal proof"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6352
+      kind: github
+      quote: "`erdos_924` (`research solved`, `answer(True)`): for all `k ≥ 2`, `l ≥ 3` there is a finite `K_{l+1}`-free graph which is edge‑Ramsey for `K_l` with `k` colours (Folkman; Nešetřil–Rödl)."
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 924". Classifier rationale: The pull request states the conjecture is research solved and provides a formal proof. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

@@ -29,6 +29,21 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/748
       kind: dataset
+  - id: erdos-748-sweep-917ee3cf
+    asserted_on: 2026-09-20
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-21
+    source:
+      title: "formal-conjectures: Add Erdős Problem 748 (the Cameron–Erdős conjecture), link the formal proof (#6350) Fixes #6349. ### What changed Adds `FormalConjectures/ErdosProblems/748.lean` with `f n` (the number of sum-free sub"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/02a5786eb771ba2d0500dd391c2da181332ecc32
+      kind: github
+      quote: "`erdos_748` (`research solved`, `answer(True)`) : the Cameron–Erdős conjecture ..."
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 748". Classifier rationale: The commit states that a formal proof of the conjecture has been added, marking it as solved. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

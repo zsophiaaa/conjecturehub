@@ -27,6 +27,21 @@ claims:
       title: erdosproblems.com records this problem as "disproved"
       url: https://www.erdosproblems.com/803
       kind: dataset
+  - id: erdos-803-sweep-eb169b61
+    asserted_on: 2026-09-20
+    type: disproved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-21
+    source:
+      title: "formal-conjectures: Add Erdős Problem 803 (balanced subgraphs with n log n edges), link the formal proof (#6365) Fixes #6364. ### What changed Adds `FormalConjectures/ErdosProblems/803.lean`, using the existing `SimpleGr"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/9ec36f328273f8c5153bf2e6dc09c51ba68987a8
+      kind: github
+      quote: no absolute constants `D, c` make every `n`-vertex graph with `≥ n log n` edges contain a `D`-balanced `m`-vertex subgraph with `≥ c m log m` edges (Alon [Al08])
+    authors:
+      - Konamiu
+    notes: "Filed automatically by the formal-conjectures commits sweep. Matched on \"Erdős Problem 803\". Classifier rationale: The commit records the conjecture as resolved false by citing Alon's counterexample. Unreviewed: this records that a claim was made, not that it is correct."
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

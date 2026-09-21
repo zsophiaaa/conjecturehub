@@ -27,6 +27,22 @@ claims:
       title: erdosproblems.com records this problem as "disproved"
       url: https://www.erdosproblems.com/804
       kind: dataset
+  - id: erdos-804-sweep-5e1a639b
+    asserted_on: 2026-09-20
+    type: disproved
+    scope: parts i and ii
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-21
+    source:
+      title: "formal-conjectures: Add Erdős Problem 804 (independence numbers forced by local independence), link the formal proof (#6344) Fixes #6343. ### What changed Adds `FormalConjectures/ErdosProblems/804.lean` with `HasLocalInd"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/3a399b0c007be6005fdf4651e2e9da8fa8502500
+      kind: github
+      quote: "`erdos_804.parts.i` (`answer(False)`): `f((log n)², n) ≥ n^{1/2 - o(1)}` fails."
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 804". Classifier rationale: The commit explicitly reports that both parts i and ii of Erdős Problem 804 are false. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
