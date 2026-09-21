@@ -26,6 +26,21 @@ claims:
       url: https://en.wikipedia.org/wiki/Catalan's_conjecture
       kind: wikipedia
     notes: Standing taken from English Wikipedia's categorisation (Wikipedia categorises this as proved). Nobody here has read the paper that settled it, which is what the secondary attestation says; replace this claim with one citing that paper when someone has it to hand.
+  - id: catalan-s-conjecture-sweep-22636db4
+    asserted_on: 2026-09-21
+    type: resolved_by_prior_literature
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-21
+    source:
+      title: "formal-conjectures PR #6452: feat(Wikipedia/Catalan): link formal proof of Catalan's conjecture"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6452
+      kind: github
+      quote: link formal proof of Catalan's conjecture
+    authors:
+      - cadamcat
+    notes: "Filed automatically by the formal-conjectures pull requests sweep. Matched on \"Catalan's conjecture\". Classifier rationale: The PR links a formal Lean proof of the already known theorem, not a new proof. Unreviewed: this records that a claim was made, not that it is correct."
 provenance:
   - url: https://www.wikidata.org/wiki/Q174955
     source: wikidata

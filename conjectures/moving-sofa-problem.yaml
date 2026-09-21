@@ -53,6 +53,36 @@ claims:
     authors:
       - Jineon Baek
     notes: Theorem 1.1.1 shows Gerver's sofa attains the maximum area, about 2.2195, settling the sofa constant. Still arXiv v1 with no journal reference, so the tier is preprint rather than published. Scoped because the uniqueness question this record displays is untouched by it.
+  - id: moving-sofa-problem-sweep-c5e785ea
+    asserted_on: 2026-09-21
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-21
+    source:
+      title: "formal-conjectures PR #6440: feat(Wikipedia/MovingSofa): link formal proof that Gerver's sofa is optimal"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6440
+      kind: github
+      quote: "feat(Wikipedia/MovingSofa): link formal proof that Gerver's sofa is optimal."
+    authors:
+      - deancureton
+    notes: "Filed automatically by the formal-conjectures pull requests sweep. Matched on \"Moving Sofa Problem\". Classifier rationale: The PR explicitly says it links a formal proof that Gerver's sofa is optimal, indicating the conjecture has been proved. Unreviewed: this records that a claim was made, not that it is correct."
+  - id: moving-sofa-problem-sweep-d2073480
+    asserted_on: 2026-09-21
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-21
+    source:
+      title: "formal-conjectures: feat(Wikipedia/MovingSofa): link formal proof that Gerver's sofa is optimal (#6440) This PR links a complete formalization of the moving sofa problem (Baek 2024)."
+      url: https://github.com/google-deepmind/formal-conjectures/commit/93ad2095cc7b7857ef53c73b17264b5a741faf4b
+      kind: github
+      quote: link formal proof that Gerver's sofa is optimal
+    authors:
+      - deancureton
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Moving Sofa Problem". Classifier rationale: The commit announces a formal proof of optimality, indicating the conjecture has been resolved. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/MovingSofa.lean
     source: google-deepmind/formal-conjectures

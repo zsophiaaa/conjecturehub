@@ -30,6 +30,21 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/682
       kind: dataset
+  - id: erdos-682-sweep-a4cdb835
+    asserted_on: 2026-09-21
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-21
+    source:
+      title: "formal-conjectures: Add Erdős Problem 682 (rough numbers between consecutive primes), link the formal proof (#6416) Fixes #6415. ### What changed Adds `FormalConjectures/ErdosProblems/682.lean` (with `p n = Nat.nth Nat.P"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/6699e9282a3c9c9bded5199970bbbef96a425be3
+      kind: github
+      quote: "`erdos_682` (`research solved`, `answer(True)`) : the set of `n` such that ... has natural density `1` (Gafni–Tao)."
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 682". Classifier rationale: The commit states the conjecture is research solved with a formal proof. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
