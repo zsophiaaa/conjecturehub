@@ -10,7 +10,24 @@ openness_basis:
   meaning: no_solution_known_to_community
   asserted_by: wikipedia
   note: Listed under "Unsolved problems in geometry" on English Wikipedia.
-claims: []
+claims:
+  - id: section-conjecture-sweep-d542a74a
+    asserted_on: 2026-09-22
+    type: partial
+    scope: base Spec(Z)
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-22
+    source:
+      title: The \'etale topos reconstructs varieties over sub-p-adic fields
+      url: https://arxiv.org/abs/2410.22474
+      kind: arxiv
+      quote: Specializing to \operatorname{Spec}(\mathbb{Z}) as the base, this partially verifies a conjecture of Grothendieck.
+    authors:
+      - Magnus Carlson
+      - Jakob Stix
+    notes: "Filed automatically by the arXiv new submissions sweep. Matched on \"section conjecture\". Classifier rationale: The abstract states a partial verification of Grothendieck's section conjecture for the base Spec(Z). Unreviewed: this records that a claim was made, not that it is correct."
 provenance:
   - url: https://www.wikidata.org/wiki/Q7444680
     source: wikidata
