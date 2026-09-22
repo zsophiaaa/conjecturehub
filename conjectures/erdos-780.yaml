@@ -29,6 +29,21 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/780
       kind: dataset
+  - id: erdos-780-sweep-bc2eea83
+    asserted_on: 2026-09-22
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-22
+    source:
+      title: "formal-conjectures: Add Erdős Problem 780 (chromatic number of Kneser hypergraphs), link the formal proof (#6391) Fixes #6390. ### What changed Adds `FormalConjectures/ErdosProblems/780.lean`: - `erdos_780` (`research so"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/50c9a96a5013208847aa1fa8ff1661c3f1383bfd
+      kind: github
+      quote: "`erdos_780` (`research solved`): every `t`-colouring of the `r`-subsets of `[n]`, `n ≥ kr + (t-1)(k-1)`, has `k` pairwise disjoint edges of one colour (Alon–Frankl–Lovász [AFL86]; the chromatic number of Kneser hypergraphs)."
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 780". Classifier rationale: The commit explicitly labels the conjecture as "research solved" and links to a formal proof. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

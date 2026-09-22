@@ -30,6 +30,21 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/292
       kind: dataset
+  - id: erdos-292-sweep-41537e7c
+    asserted_on: 2026-09-22
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-22
+    source:
+      title: "formal-conjectures: Add Erdős Problem 292 (largest denominators of Egyptian fractions summing to 1), link the formal proof (#6302) Fixes #6301. ### What changed Adds `FormalConjectures/ErdosProblems/292.lean` with the se"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/573d06b08947dbff577e453ab102fa2b39d8f759
+      kind: github
+      quote: "`erdos_292` (`research solved`, `answer(True)`): `A` has natural density `1` (`Set.HasDensity`; Martin [Ma00])."
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 292". Classifier rationale: The commit announces a formal proof that the conjecture is resolved. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

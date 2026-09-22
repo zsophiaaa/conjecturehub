@@ -10,7 +10,23 @@ openness_basis:
   meaning: no_solution_known_to_community
   asserted_by: wikipedia
   note: Listed under "Unsolved problems in mathematics" on English Wikipedia.
-claims: []
+claims:
+  - id: serre-s-multiplicity-conjectures-sweep-2bd77c48
+    asserted_on: 2026-09-22
+    type: partial
+    scope: non-negativity and vanishing proved; positivity proved in equal characteristic and unramified mixed characteristic, other cases open
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-22
+    source:
+      title: "formal-conjectures PR #5382: feat: add Serre's multiplicity conjectures"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/5382
+      kind: github
+      quote: the dimension inequality `supportDim_add_supportDim_le_ringKrullDim`, `intersectionMultiplicity_nonneg` (Gabber) and `intersectionMultiplicity_eq_zero_of_lt` (Roberts, Gillet–Soulé) as `research solved`; positivity as `research open`... and Serre's two proved cases of positivity, equal characteristic ... and unramified mixed characteristic ... as `research solved`.
+    authors:
+      - j2d9w5xtjn-png
+    notes: "Filed automatically by the formal-conjectures pull requests sweep. Matched on \"Serre's multiplicity conjectures\". Classifier rationale: The PR records which parts of Serre's multiplicity conjectures are solved and which remain open. Unreviewed: this records that a claim was made, not that it is correct."
 provenance:
   - url: https://www.wikidata.org/wiki/Q7455403
     source: wikidata
