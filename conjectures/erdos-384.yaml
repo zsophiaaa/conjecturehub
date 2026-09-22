@@ -28,6 +28,21 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/384
       kind: dataset
+  - id: erdos-384-sweep-05eb3f20
+    asserted_on: 2026-09-22
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-22
+    source:
+      title: "formal-conjectures PR #6133: Add Erdős Problem 384 (Ecklund's theorem on prime divisors of binomial coefficients)"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6133
+      kind: github
+      quote: "`erdos_384` (`research solved`): Ecklund's theorem"
+    authors:
+      - Konamiu
+    notes: "Filed automatically by the formal-conjectures pull requests sweep. Matched on \"Erdős Problem 384\". Classifier rationale: The pull request marks the conjecture as research solved by citing Ecklund's theorem. Unreviewed: this records that a claim was made, not that it is correct."
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

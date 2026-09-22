@@ -26,6 +26,36 @@ claims:
       url: https://en.wikipedia.org/wiki/Catalan's_conjecture
       kind: wikipedia
     notes: Standing taken from English Wikipedia's categorisation (Wikipedia categorises this as proved). Nobody here has read the paper that settled it, which is what the secondary attestation says; replace this claim with one citing that paper when someone has it to hand.
+  - id: catalan-s-conjecture-sweep-22636db4
+    asserted_on: 2026-09-22
+    type: resolved_by_prior_literature
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-22
+    source:
+      title: "formal-conjectures PR #6452: feat(Wikipedia/Catalan): link formal proof of Catalan's conjecture"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6452
+      kind: github
+      quote: link formal proof of Catalan's conjecture
+    authors:
+      - cadamcat
+    notes: "Filed automatically by the formal-conjectures pull requests sweep. Matched on \"Catalan's conjecture\". Classifier rationale: The PR links to a formal Lean proof of a conjecture already proved in the literature. Unreviewed: this records that a claim was made, not that it is correct."
+  - id: catalan-s-conjecture-sweep-13d1be04
+    asserted_on: 2026-09-22
+    type: resolved_by_prior_literature
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-22
+    source:
+      title: "formal-conjectures: feat(Wikipedia/Catalan): link formal proof of Catalan's conjecture (#6452) Fixes #6451. ## Summary - Add a `formal_proof using lean4` link to `Catalan.catalans_conjecture`, pinned to a commit of [cada"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/62683d8562898ae70b021e1f8c78dfa8e6d86e96
+      kind: github
+      quote: Keep the `research solved` category and the statement unchanged.
+    authors:
+      - cadamcat
+    notes: "Filed automatically by the formal-conjectures commits sweep. Matched on \"Catalan's conjecture\". Classifier rationale: The commit links to a formal Lean proof of Catalan's conjecture and states the conjecture is solved, which reflects the known prior result. Unreviewed: this records that a claim was made, not that it is correct."
 provenance:
   - url: https://www.wikidata.org/wiki/Q174955
     source: wikidata

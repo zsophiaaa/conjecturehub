@@ -31,6 +31,21 @@ claims:
       url: https://www.erdosproblems.com/446
       kind: dataset
     notes: Upstream records this as solved without specifying the direction.
+  - id: erdos-446-sweep-3c480dde
+    asserted_on: 2026-09-22
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-22
+    source:
+      title: "formal-conjectures PR #6429: feat(ErdosProblems): formalise Erdős problem 446"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6429
+      kind: github
+      quote: "erdos_446 records the full resolution: Ford's growth rate `delta =Θ[atTop] growth446`, the lower bound `delta =O[atTop] deltaR r` for every fixed r ≥ 1, and ¬ (deltaR 1 =o[atTop] delta)."
+    authors:
+      - hbakkaoui-hash
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 446". Classifier rationale: The PR explicitly states that the conjecture has been fully resolved with a formal proof. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

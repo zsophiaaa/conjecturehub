@@ -37,6 +37,22 @@ claims:
       title: erdosproblems.com records this problem as "disproved"
       url: https://www.erdosproblems.com/121
       kind: dataset
+  - id: erdos-121-sweep-47314aaa
+    asserted_on: 2026-09-22
+    type: disproved
+    scope: k ≥ 4
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-22
+    source:
+      title: "formal-conjectures PR #6208: Add Erdős Problem 121 (sets with no k-fold square products), link Tao's formal disproof"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6208
+      kind: github
+      quote: Tao's theorem `F_k(N) ≤ (1 − c_k) N` for large `N`, `k ≥ 4`
+    authors:
+      - Konamiu
+    notes: "Filed automatically by the formal-conjectures pull requests sweep. Matched on \"Erdős Problem 121\". Classifier rationale: The PR states the conjecture is answered False via Tao's bound, indicating a disproof. Unreviewed: this records that a claim was made, not that it is correct."
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
