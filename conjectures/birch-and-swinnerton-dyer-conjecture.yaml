@@ -11,7 +11,22 @@ openness_basis:
   meaning: no_solution_known_to_community
   asserted_by: wikipedia
   note: Listed under "Unsolved problems in number theory" on English Wikipedia.
-claims: []
+claims:
+  - id: birch-and-swinnerton-dyer-conjecture-sweep-20f699cf
+    asserted_on: 2026-09-22
+    type: partial
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-22
+    source:
+      title: Intensional semantics for comparison problems in arithmetic geometry
+      url: https://arxiv.org/abs/2608.13609
+      kind: arxiv
+      quote: We then treat the Birch and Swinnerton-Dyer conjecture in its pre-modularity form, using strong point-count asymptotics with an explicit convergence requirement.
+    authors:
+      - R. Laniewski
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Birch and Swinnerton-Dyer conjecture". Classifier rationale: The document discusses BSD and proposes new methods but does not claim a full proof or disproof, indicating partial progress. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q527863
     source: wikidata
