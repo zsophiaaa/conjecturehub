@@ -28,6 +28,21 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/53
       kind: dataset
+  - id: erdos-53-sweep-c036a680
+    asserted_on: 2026-09-22
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-22
+    source:
+      title: "formal-conjectures: Add Erdős Problem 53 (Chang's theorem on subset sums and products), link the formal proof (#6166) Fixes #6165. ### What changed Adds `FormalConjectures/ErdosProblems/53.lean` with `sumsAndProducts A` "
+      url: https://github.com/google-deepmind/formal-conjectures/commit/be15f4e4f337c0425bb95511c98e7131f359c4fc
+      kind: github
+      quote: "`erdos_53` (`research solved`, `answer(True)`): for every `k` and all sufficiently large finite `A ⊆ ℤ`, `|sumsAndProducts A| ≥ |A|^k` (Chang [Ch03])."
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 53". Classifier rationale: The commit records a formal proof establishing the conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

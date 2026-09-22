@@ -37,6 +37,22 @@ claims:
       title: erdosproblems.com records this problem as "disproved"
       url: https://www.erdosproblems.com/121
       kind: dataset
+  - id: erdos-121-sweep-2b4f3236
+    asserted_on: 2026-09-22
+    type: disproved
+    scope: k ≥ 4
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-22
+    source:
+      title: "formal-conjectures: Add Erdős Problem 121 (sets with no k-fold square products), link Tao's formal disproof (#6208) Fixes #6207. ### What changed Adds `FormalConjectures/ErdosProblems/121.lean` with `F k N` (largest `A ⊆"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/cb4147d137b27ec107e15e6b4f235d33aaf2e526
+      kind: github
+      quote: Tao's theorem `F_k(N) ≤ (1 − c_k) N` for large `N`, `k ≥ 4`
+    authors:
+      - Konamiu
+    notes: "Filed automatically by the formal-conjectures commits sweep. Matched on \"Erdős Problem 121\". Classifier rationale: The commit records Tao's theorem giving a linear upper bound, contradicting the conjectured asymptotic `F_k(N) ~ N`. Unreviewed: this records that a claim was made, not that it is correct."
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
