@@ -21,7 +21,22 @@ openness_basis:
   meaning: no_published_solution_known_to_curator
   asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: mathoverflow-31809-sweep-433ad444
+    asserted_on: 2026-09-23
+    type: counterexample
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-23
+    source:
+      title: "formal-conjectures: Mathoverflow 31809: mark as solved (#6515) Chen, Liu, Lu and Zhang construct a pretriangulated category that is not triangulated (arXiv:2608.09777)."
+      url: https://github.com/google-deepmind/formal-conjectures/commit/0771383387505c96d1b2f6a3d35088ad00892c5c
+      kind: github
+      quote: Chen, Liu, Lu and Zhang construct a pretriangulated category that is not triangulated (arXiv:2608.09777).
+    authors:
+      - mo271
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Mathoverflow 31809". Classifier rationale: The document reports a construction giving a counterexample, marking the conjecture as solved. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Mathoverflow/31809.lean
     source: google-deepmind/formal-conjectures
