@@ -24,6 +24,24 @@ claims:
     authors:
       - Liang Guo
     notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Novikov conjecture". Classifier rationale: The paper proves the equivariant coarse Novikov conjecture under a specific geometric hypothesis, which is a partial result for the Novikov conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: novikov-conjecture-sweep-7f7b6bef
+    asserted_on: 2026-09-23
+    type: partial
+    scope: finite products of bounded-geometry proper metric spaces whose factors admit fibred coarse embeddings
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-23
+    source:
+      title: The Coarse Novikov Conjecture for Finite Products of Fibred Coarsely Embeddable Spaces
+      url: https://arxiv.org/abs/2609.26643
+      kind: arxiv
+      quote: we prove that the coarse Novikov conjecture holds for finite products of bounded-geometry proper metric spaces whose factors admit fibred coarse embeddings into possibly different target spaces.
+    authors:
+      - Liang Guo
+      - Zheng Luo
+      - Qin Wang
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Novikov conjecture". Classifier rationale: The paper asserts a proof of the coarse Novikov conjecture for a specific class of spaces, which is a partial resolution. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q7064908
     source: wikidata

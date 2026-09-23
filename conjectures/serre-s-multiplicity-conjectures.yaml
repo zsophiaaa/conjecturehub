@@ -10,7 +10,39 @@ openness_basis:
   meaning: no_solution_known_to_community
   asserted_by: wikipedia
   note: Listed under "Unsolved problems in mathematics" on English Wikipedia.
-claims: []
+claims:
+  - id: serre-s-multiplicity-conjectures-sweep-2bd77c48
+    asserted_on: 2026-09-23
+    type: partial
+    scope: dimension inequality, non-negativity, vanishing, and positivity in equal characteristic and unramified mixed characteristic
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-23
+    source:
+      title: "formal-conjectures PR #5382: feat: add Serre's multiplicity conjectures"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/5382
+      kind: github
+      quote: "`intersectionMultiplicity_nonneg` (Gabber) and `intersectionMultiplicity_eq_zero_of_lt` (Roberts, Gillet–Soulé) as `research solved`; positivity as `research open`... and Serre's two proved cases of positivity, equal characteristic ... and unramified mixed characteristic ... as `research solved`."
+    authors:
+      - j2d9w5xtjn-png
+    notes: "Filed automatically by the formal-conjectures pull requests sweep. Matched on \"Serre's multiplicity conjectures\". Classifier rationale: The PR records which parts of Serre's multiplicity conjectures are solved and which remain open. Unreviewed: this records that a claim was made, not that it is correct."
+  - id: serre-s-multiplicity-conjectures-sweep-ad71b4aa
+    asserted_on: 2026-09-23
+    type: partial
+    scope: non-negativity, vanishing, and positivity in equal characteristic and unramified mixed characteristic
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-23
+    source:
+      title: "formal-conjectures: feat: add Serre's multiplicity conjectures (#5382) Fixes #1819 **What changed** Serre's intersection multiplicity $\\chi(M, N) = \\sum_i (-1)^i \\ell(\\operatorname{Tor}_i^R(M, N))$ and his conjectures ab"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/1217aed032561dc557e73ee3804b3e198a9279bf
+      kind: github
+      quote: the dimension inequality ... `intersectionMultiplicity_nonneg` (Gabber) ... as `research solved`; positivity as `research open` ... and Serre's two proved cases of positivity ... as `research solved`.
+    authors:
+      - j2d9w5xtjn-png
+    notes: "Filed automatically by the formal-conjectures commits sweep. Matched on \"Serre's multiplicity conjectures\". Classifier rationale: The commit records that some parts of Serre's multiplicity conjectures are proved while others remain open. Unreviewed: this records that a claim was made, not that it is correct."
 provenance:
   - url: https://www.wikidata.org/wiki/Q7455403
     source: wikidata
