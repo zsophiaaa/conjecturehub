@@ -21,7 +21,52 @@ openness_basis:
   meaning: no_published_solution_known_to_curator
   asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: mathoverflow-31809-sweep-669538a2
+    asserted_on: 2026-09-23
+    type: counterexample
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-23
+    source:
+      title: "formal-conjectures PR #6515: Mathoverflow 31809: mark as solved"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6515
+      kind: github
+      quote: Chen, Liu, Lu and Zhang construct a pretriangulated category that is not triangulated (arXiv:2608.09777).
+    authors:
+      - mo271
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Mathoverflow 31809". Classifier rationale: The document states a construction that resolves the existence question, marking the conjecture solved. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: mathoverflow-31809-sweep-4ae1f8bf
+    asserted_on: 2026-09-23
+    type: counterexample
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-23
+    source:
+      title: "formal-conjectures PR #5523: fix(Mathoverflow/31809): ask for a pretriangulated category that is not triangulated"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/5523
+      kind: github
+      quote: "The right-hand side of `mathoverflow_31809` is negated: it now says that not every pretriangulated category is triangulated."
+    authors:
+      - Deicyde
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Mathoverflow 31809". Classifier rationale: The PR explicitly changes the statement to assert that a pretriangulated but not triangulated category exists. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: mathoverflow-31809-sweep-884e64ae
+    asserted_on: 2026-09-23
+    type: reformulation
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-23
+    source:
+      title: "formal-conjectures: fix(Mathoverflow/31809): ask for a pretriangulated category that is not triangulated (#5523) **What changed** - The right-hand side of `mathoverflow_31809` is negated: it now says that not every pretr"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/665618d4eb7b49ecaa2d0d962d9483363d133086
+      kind: github
+      quote: "The right-hand side of `mathoverflow_31809` is negated: it now says that not every pretriangulated category is triangulated."
+    authors:
+      - Deicyde
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Mathoverflow 31809". Classifier rationale: The document updates the conjecture statement rather than providing a proof or disproof. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Mathoverflow/31809.lean
     source: google-deepmind/formal-conjectures

@@ -14,7 +14,24 @@ openness_basis:
   meaning: no_solution_known_to_community
   asserted_by: wikipedia
   note: Listed under "Unsolved problems in number theory" on English Wikipedia.
-claims: []
+claims:
+  - id: riemann-hypothesis-sweep-f8ae59fa
+    asserted_on: 2026-09-23
+    type: partial
+    scope: integers with ω(n) ≤ 6, primorials, odd integers and square‑free integers
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-23
+    source:
+      title: A finite arithmetic form of Robin's inequality and its equivalence to the Riemann hypothesis
+      url: https://arxiv.org/abs/2609.26787
+      kind: arxiv
+      quote: we prove it unconditionally for integers with ω(n)≤6, primorials, odd integers and square‑free integers.
+    authors:
+      - Challenger Mishra
+      - Rahul Sarkar
+    notes: "Filed automatically by the arXiv new submissions sweep. Matched on \"Riemann hypothesis\". Classifier rationale: The paper proves a finite‑truncation of Robin's inequality for specific classes of integers, which is equivalent to RH, but does not claim a full proof or disproof. Unreviewed: this records that a claim was made, not that it is correct."
 provenance:
   - url: https://www.wikidata.org/wiki/Q205966
     source: wikidata

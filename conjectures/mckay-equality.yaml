@@ -41,6 +41,21 @@ claims:
       - Adele Maltempo
       - Carolina Vallejo
     notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "McKay conjecture". Classifier rationale: The paper proves a special case of the McKay conjecture, constituting partial progress. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: mckay-equality-sweep-23f4985f
+    asserted_on: 2026-09-23
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-23
+    source:
+      title: Refining invariants of finite groups with class functions
+      url: https://arxiv.org/abs/2609.26464
+      kind: arxiv
+      quote: together with the recently proved McKay Conjecture
+    authors:
+      - Christopher A. Schroeder
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "McKay conjecture". Classifier rationale: The abstract explicitly says the McKay Conjecture has been recently proved. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q28401746
     source: wikidata
