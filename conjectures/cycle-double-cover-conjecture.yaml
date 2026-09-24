@@ -14,7 +14,22 @@ openness_basis:
   meaning: no_solution_known_to_community
   asserted_by: wikipedia
   note: Listed under "Unsolved problems in graph theory" on English Wikipedia.
-claims: []
+claims:
+  - id: cycle-double-cover-conjecture-sweep-25a28d48
+    asserted_on: 2026-09-24
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-24
+    source:
+      title: A tris of perfect matchings in bridgeless claw-free cubic graphs
+      url: https://arxiv.org/abs/2609.28118
+      kind: arxiv
+      quote: A proof of the cycle double cover conjecture was recently announced, yielding an $8$-cycle double cover for every bridgeless graph.
+    authors:
+      - Jean Paul Zerafa
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "cycle double cover conjecture". Classifier rationale: The abstract explicitly claims a proof of the conjecture has been announced, indicating it is asserted as proved. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q18217946
     source: wikidata

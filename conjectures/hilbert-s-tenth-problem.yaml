@@ -10,7 +10,24 @@ openness_basis:
   meaning: unknown
   asserted_by: wikidata
   note: Identity record only. No statement or status has been ingested for this conjecture yet.
-claims: []
+claims:
+  - id: hilbert-s-tenth-problem-sweep-7f748fc8
+    asserted_on: 2026-09-24
+    type: partial
+    scope: finite layers of K_{a,b} for (a,b) not congruent to (a0,b0) mod p in certain Z_p-extensions of imaginary quadratic fields
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-24
+    source:
+      title: Hilbert's tenth problem for families of $ \mathbb{Z}_p $-extensions of imaginary quadratic fields
+      url: https://arxiv.org/abs/2406.01443
+      kind: arxiv
+      quote: Hilbert's tenth problem has a negative answer in all finite layers of $ K_{a,b} $.
+    authors:
+      - Katharina Müller
+      - Anwesh Ray
+    notes: "Filed automatically by the arXiv new submissions sweep. Matched on \"Hilbert's tenth problem\". Classifier rationale: The paper proves unsolvability for many specific number fields, which is a partial resolution of the conjecture. Unreviewed: this records that a claim was made, not that it is correct."
 provenance:
   - url: https://www.wikidata.org/wiki/Q986147
     source: wikidata

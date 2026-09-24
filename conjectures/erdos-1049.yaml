@@ -38,7 +38,23 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-09-28
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: erdos-1049-sweep-7894eefd
+    asserted_on: 2026-09-24
+    type: partial
+    scope: for rational bases a/b with log b / log a < 81/200
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-24
+    source:
+      title: "formal-conjectures PR #6527: Add rational-base irrationality variant for Erdős 1049"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6527
+      kind: github
+      quote: It states that ... \frac{\log b}{\log a}<\frac{81}{200}\quad\Longrightarrow\quad\sum_{n\geq1}\frac{1}{(a/b)^n-1}\notin\mathbb{Q}.
+    authors:
+      - wcook04
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős problem 1049". Classifier rationale: The document reports a new proved irrationality result for a restricted region, while noting the full conjecture remains open. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/1049.lean
     source: google-deepmind/formal-conjectures
