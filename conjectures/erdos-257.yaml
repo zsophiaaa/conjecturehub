@@ -38,7 +38,39 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: erdos-257-sweep-f434f559
+    asserted_on: 2026-09-24
+    type: partial
+    scope: for infinite sets A satisfying the finite‑prime weighted condition described
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-24
+    source:
+      title: "formal-conjectures PR #6528: Erdős 257: add finite-prime weighted support variant"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6528
+      kind: github
+      quote: Add a solved variant of Erdős problem 257... If a host set satisfies this weight condition at base two, every infinite subset has an irrational series at every integer base at least two. The question for arbitrary infinite supports remains open.
+    authors:
+      - wcook04
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős problem 257". Classifier rationale: The document proves a restricted version of the conjecture while stating the general case is still open. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: erdos-257-sweep-bb2b52eb
+    asserted_on: 2026-09-24
+    type: reformulation
+    scope: for sets whose reciprocals have a finite sum
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-24
+    source:
+      title: "formal-conjectures PR #6529: Erdős 257: add the reciprocal-summable support variant"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6529
+      kind: github
+      quote: This adds a solved variant of Erdős problem 257.
+    authors:
+      - wcook04
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős problem 257". Classifier rationale: The document introduces a solved variant with extra conditions, not resolving the original conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/257.lean
     source: google-deepmind/formal-conjectures

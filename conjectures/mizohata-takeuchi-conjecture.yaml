@@ -22,6 +22,21 @@ claims:
       url: https://en.wikipedia.org/wiki/Mizohata%E2%80%93Takeuchi_conjecture
       kind: wikipedia
     notes: Standing taken from English Wikipedia's categorisation (Wikipedia categorises this as disproved). Nobody here has read the paper that settled it, which is what the secondary attestation says; replace this claim with one citing that paper when someone has it to hand.
+  - id: mizohata-takeuchi-conjecture-sweep-53cd549e
+    asserted_on: 2026-09-24
+    type: disproved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-24
+    source:
+      title: On $C^k$ convex variants of Stein's Weighted $L^2$ Conjecture for Bochner-Riesz means
+      url: https://arxiv.org/abs/2609.27045
+      kind: arxiv
+      quote: The counterexamples are related to recently-constructed counterexamples to the Mizohata-Takeuchi Conjecture.
+    authors:
+      - Ruixiang Zhang
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Mizohata–Takeuchi conjecture". Classifier rationale: The abstract states that counterexamples to the conjecture have been constructed, implying it is false. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q135915966
     source: wikidata

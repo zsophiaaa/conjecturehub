@@ -41,6 +41,22 @@ claims:
       - Adele Maltempo
       - Carolina Vallejo
     notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "McKay conjecture". Classifier rationale: The paper proves a special case of the McKay conjecture, constituting partial progress. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: mckay-equality-sweep-2d962405
+    asserted_on: 2026-09-24
+    type: partial
+    scope: sporadic simple groups and their universal covers
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-24
+    source:
+      title: On the inductive Giannelli-McKay condition for sporadic groups
+      url: https://arxiv.org/abs/2609.27042
+      kind: arxiv
+      quote: We present a computational framework to verify a refinement of the McKay conjecture ... for sporadic simple groups and their universal covers.
+    authors:
+      - Izan Gómez-Taberner
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "McKay conjecture". Classifier rationale: The paper reports verification of a refined McKay conjecture for a specific family of groups, which is partial progress. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q28401746
     source: wikidata

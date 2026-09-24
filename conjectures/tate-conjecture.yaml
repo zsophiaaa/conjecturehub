@@ -10,7 +10,23 @@ openness_basis:
   meaning: no_solution_known_to_community
   asserted_by: wikipedia
   note: Listed under "Unsolved problems in number theory" on English Wikipedia.
-claims: []
+claims:
+  - id: tate-conjecture-sweep-b1815488
+    asserted_on: 2026-09-24
+    type: partial
+    scope: abelian varieties of dimension at most four over finite fields (all powers)
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-24
+    source:
+      title: The Tate conjecture for powers of abelian fourfolds and the Hodge conjecture for powers of CM fourfolds
+      url: https://arxiv.org/abs/2609.27916
+      kind: arxiv
+      quote: We prove the Tate conjecture in every codimension on every power of an abelian variety of dimension at most four over a finite field.
+    authors:
+      - Ningyi Li
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Tate conjecture". Classifier rationale: The paper claims a proof for a restricted class of cases, not the full conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q7687975
     source: wikidata
