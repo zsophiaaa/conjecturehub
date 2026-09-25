@@ -81,7 +81,27 @@ openness_basis:
   meaning: no_published_solution_known_to_curator
   asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: de-giorgi-s-conjecture-sweep-91329cbe
+    asserted_on: 2026-09-25
+    type: partial
+    scope: dimension 4, monotone solutions
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-25
+    source:
+      title: Stable solutions of the Allen--Cahn equation in dimension three are one-dimensional
+      url: https://arxiv.org/abs/2609.30194
+      kind: arxiv
+      quote: this shows the validity of De Giorgi's conjecture for monotone solutions in dimension four.
+    authors:
+      - Hardy Chan
+      - Xavier Fernández-Real
+      - Alessio Figalli
+      - Enric Florit-Simon
+      - Joaquim Serra
+    notes: "Filed automatically by the arXiv new submissions sweep. Matched on \"De Giorgi's conjecture\". Classifier rationale: The paper claims a proof for monotone solutions in dimension four, which is a partial result toward the full conjecture. Unreviewed: this records that a claim was made, not that it is correct."
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Paper/DeGiorgi.lean
     source: google-deepmind/formal-conjectures
