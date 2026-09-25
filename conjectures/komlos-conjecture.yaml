@@ -43,7 +43,22 @@ openness_basis:
   meaning: no_published_solution_known_to_curator
   asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: komlos-conjecture-sweep-da651bff
+    asserted_on: 2026-09-25
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-25
+    source:
+      title: "Fast Spectral Signing for Vector Balancing https:// arxiv.org/abs/2609.30044v1 Authors: Xiaoyu LiThe Komlós conjecture, now a theorem, asserts that whenever the columns of a matrix"
+      url: https://mathstodon.xyz/@cstheory/117331334328591766
+      kind: mastodon
+      quote: The Komlós conjecture, now a theorem, asserts that ...
+    authors:
+      - TCS blog aggregator
+    notes: 'Filed automatically by the Mathstodon sweep. Matched on "Komlós conjecture". Classifier rationale: The document states the conjecture has been resolved as a theorem. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/KomlosConjecture.lean
     source: google-deepmind/formal-conjectures
