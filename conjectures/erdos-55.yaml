@@ -29,6 +29,52 @@ claims:
       url: https://www.erdosproblems.com/55
       kind: dataset
     notes: Upstream records this as solved without specifying the direction.
+  - id: erdos-55-sweep-37458e5a
+    asserted_on: 2026-09-25
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-25
+    source:
+      title: "formal-conjectures PR #6600: feat(ErdosProblems): add Erdős Problem 55"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6600
+      kind: github
+      quote: "`erdos_55` (`research solved`): the Conlon–Fox–Pham bounds. Both the upper and the lower bound are Θ(r (log N)²), with absolute constants, for all r ≥ 2."
+    authors:
+      - AItoBit
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 55". Classifier rationale: The pull request explicitly marks the problem as research solved with the Conlon–Fox–Pham bounds. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: erdos-55-sweep-28a8f917
+    asserted_on: 2026-09-25
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-25
+    source:
+      title: "formal-conjectures PR #6602: feat(ErdosProblems): add Erdős Problem 55"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6602
+      kind: github
+      quote: "`erdos_55` (`research solved`): the Conlon–Fox–Pham bounds. Both the upper and the lower bound are Θ(r (log N)²), with absolute constants, for all `r ≥ 2`."
+    authors:
+      - AItoBit
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 55". Classifier rationale: The PR declares the conjecture is solved by the Conlon–Fox–Pham bounds. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: erdos-55-sweep-ad9d296b
+    asserted_on: 2026-09-25
+    type: proved
+    scope: for all r ≥ 2
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-25
+    source:
+      title: "formal-conjectures PR #6599: feat(ErdosProblems): add Erdős Problem 55"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6599
+      kind: github
+      quote: "`erdos_55` (solved, [CFP21]): the upper bound \\ll r(\\log N)^2 and the matching lower bound c\\,r(\\log N)^2, for all $r \\ge 2$."
+    authors:
+      - AItoBit
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 55". Classifier rationale: The PR explicitly labels Erdős Problem 55 as solved with cited bounds. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

@@ -28,6 +28,21 @@ claims:
       title: erdosproblems.com records this problem as "disproved"
       url: https://www.erdosproblems.com/27
       kind: dataset
+  - id: erdos-27-sweep-6102e15d
+    asserted_on: 2026-09-25
+    type: resolved_by_prior_literature
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-25
+    source:
+      title: "formal-conjectures PR #6593: feat(ErdosProblems/27): add Erdős Problem 27"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6593
+      kind: github
+      quote: The answer is no by Filaseta–Ford–Konyagin–Pomerance–Yu.
+    authors:
+      - AItoBit
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 27". Classifier rationale: The document states that prior research has disproved the conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

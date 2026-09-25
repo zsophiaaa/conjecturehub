@@ -11,7 +11,23 @@ openness_basis:
   meaning: no_solution_known_to_community
   asserted_by: wikipedia
   note: Listed under "Unsolved problems in number theory" on English Wikipedia.
-claims: []
+claims:
+  - id: birch-and-swinnerton-dyer-conjecture-sweep-e4d4d860
+    asserted_on: 2026-09-25
+    type: partial
+    scope: analytic continuation over ℚ
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-25
+    source:
+      title: "formal-conjectures PR #6587: feat(Millennium/BSD): add explicit Euler-product variant of weak BSD over ℚ"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6587
+      kind: github
+      quote: The statement asks for an **entire** continuation that agrees with the Euler product on `Re s > 3/2`. Over ℚ this continuation is known from modularity.
+    authors:
+      - AItoBit
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Birch and Swinnerton-Dyer conjecture". Classifier rationale: The PR notes that the analytic continuation required by the weak BSD is already known via modularity. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q527863
     source: wikidata

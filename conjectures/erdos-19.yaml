@@ -28,6 +28,22 @@ claims:
       title: erdosproblems.com records this problem as "decidable"
       url: https://www.erdosproblems.com/19
       kind: dataset
+  - id: erdos-19-sweep-3880f3a8
+    asserted_on: 2026-09-25
+    type: partial
+    scope: n ≤ 3 case
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-25
+    source:
+      title: "formal-conjectures PR #6594: feat: formalize Erdős problem 19 with proved small cases"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6594
+      kind: github
+      quote: Adds ... the n ≤ 3 case.
+    authors:
+      - AItoBit
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős problem 19". Classifier rationale: The PR proves the conjecture for small n while stating the full conjecture remains open. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
