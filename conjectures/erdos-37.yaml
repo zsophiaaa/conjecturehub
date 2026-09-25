@@ -28,6 +28,21 @@ claims:
       title: erdosproblems.com records this problem as "disproved"
       url: https://www.erdosproblems.com/37
       kind: dataset
+  - id: erdos-37-sweep-33763de8
+    asserted_on: 2026-09-25
+    type: disproved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-25
+    source:
+      title: "formal-conjectures PR #6172: Add Erdős Problem 37 (lacunary sets are not essential components), link the formal disproof"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6172
+      kind: github
+      quote: "`erdos_37` (`research solved`, `answer(False)`): no lacunary set is an essential component (Ruzsa [Ru87])"
+    authors:
+      - Konamiu
+    notes: "Filed automatically by the formal-conjectures pull requests sweep. Matched on \"Erdős Problem 37\". Classifier rationale: The PR states the conjecture is resolved as false, citing Ruzsa's disproof. Unreviewed: this records that a claim was made, not that it is correct."
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

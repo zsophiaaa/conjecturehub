@@ -31,6 +31,66 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/49
       kind: dataset
+  - id: erdos-49-sweep-a04d518c
+    asserted_on: 2026-09-25
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-25
+    source:
+      title: "formal-conjectures PR #6598: feat(ErdosProblems/49): formalise Erdős Problem 49"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6598
+      kind: github
+      quote: All research statements are `research solved` by Tao, [arXiv:2309.02325].
+    authors:
+      - AItoBit
+    notes: "Filed automatically by the formal-conjectures pull requests sweep. Matched on \"Erdős Problem 49\". Classifier rationale: The document states that Tao's paper resolves the conjecture. Unreviewed: this records that a claim was made, not that it is correct."
+  - id: erdos-49-sweep-2dae0506
+    asserted_on: 2026-09-25
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-25
+    source:
+      title: "formal-conjectures PR #6603: feat(ErdosProblems/49): formalise Erdős Problem 49"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6603
+      kind: github
+      quote: All research statements are `research solved` by Tao, [arXiv:2309.02325].
+    authors:
+      - AItoBit
+    notes: "Filed automatically by the formal-conjectures pull requests sweep. Matched on \"Erdős Problem 49\". Classifier rationale: The document states that Tao's recent paper resolves Erdős Problem 49. Unreviewed: this records that a claim was made, not that it is correct."
+  - id: erdos-49-sweep-98bdf979
+    asserted_on: 2026-09-25
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-25
+    source:
+      title: "formal-conjectures PR #6596: feat(ErdosProblems/49): formalise Erdős Problem 49"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6596
+      kind: github
+      quote: All research statements are `research solved` by Tao, [arXiv:2309.02325](https://arxiv.org/abs/2309.02325).
+    authors:
+      - AItoBit
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 49". Classifier rationale: The pull request notes that Tao has solved the conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: erdos-49-sweep-c66d95d8
+    asserted_on: 2026-09-25
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-25
+    source:
+      title: "formal-conjectures PR #6292: Add Erdős Problem 49 (sets on which the totient is increasing), link the formal proof"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6292
+      kind: github
+      quote: "`erdos_49` (`research solved`, `answer(True)`)"
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 49". Classifier rationale: The PR explicitly marks the conjecture as research solved with a true answer. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
