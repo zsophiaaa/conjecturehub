@@ -62,7 +62,22 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-12-08
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: erdos-522-sweep-210b43f7
+    asserted_on: 2026-09-25
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-26
+    source:
+      title: "formal-conjectures PR #6608: Mark Erdős Problem 522 and its 0/1 variant as solved"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6608
+      kind: github
+      quote: Mark Erdős Problem 522 and its 0/1 variant as solved.
+    authors:
+      - KitaKen1
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 522". Classifier rationale: The pull request states the conjecture is marked as solved with a formal Lean proof. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/522.lean
     source: google-deepmind/formal-conjectures

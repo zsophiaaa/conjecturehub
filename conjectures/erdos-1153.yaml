@@ -30,6 +30,22 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/1153
       kind: dataset
+  - id: erdos-1153-sweep-945784cc
+    asserted_on: 2026-09-25
+    type: partial
+    scope: full interval (a = -1, b = 1)
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-26
+    source:
+      title: "formal-conjectures PR #6010: feat(ErdosProblems): formalise Erdős Problem 1153 (Lebesgue function on subintervals)"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6010
+      kind: github
+      quote: "`erdos_1153.variants.full_interval` (`category research solved`): the case $a=-1$, $b=1$, due to Bernstein [Be31] and sharpened by Erdős [Er61] to $\\frac{2}{\\pi}\\log n - O(1)$."
+    authors:
+      - raopratik
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 1153". Classifier rationale: The PR notes the main subinterval question is open but records solved results for the full‑interval case. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
