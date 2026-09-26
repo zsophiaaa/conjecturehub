@@ -43,7 +43,23 @@ openness_basis:
   meaning: no_published_solution_known_to_curator
   asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: collatz-conjecture-sweep-688e4349
+    asserted_on: 2026-09-26
+    type: partial
+    scope: predictability of highest bits in binary representation
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-26
+    source:
+      title: "Building on my last post of the # Collatz visualization one can see that the **highest bits in binary representation of the Collatz sequence are highly predictable**. Here is how: "
+      url: https://mathstodon.xyz/@gerenuk/117335628280726875
+      kind: mastodon
+      quote: In fact I can probably prove such sequences for any number of highest bits!
+    authors:
+      - Gerenuk
+    notes: 'Filed automatically by the Mathstodon sweep. Matched on "Collatz conjecture". Classifier rationale: The post claims a partial result about binary highest‑bit patterns but does not resolve the conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/CollatzConjecture.lean
     source: google-deepmind/formal-conjectures

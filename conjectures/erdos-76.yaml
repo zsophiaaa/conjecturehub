@@ -30,6 +30,36 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/76
       kind: dataset
+  - id: erdos-76-sweep-f1f1521e
+    asserted_on: 2026-09-26
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-26
+    source:
+      title: "formal-conjectures PR #6609: feat(ErdosProblems/76): edge-disjoint monochromatic triangles"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6609
+      kind: github
+      quote: Proved by Gruslys and Letzter (arXiv:2008.05311, CPC 2022).
+    authors:
+      - AItoBit
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 76". Classifier rationale: The document reports a proof of the conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: erdos-76-sweep-7eb5ed30
+    asserted_on: 2026-09-26
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-26
+    source:
+      title: "formal-conjectures PR #6610: feat(ErdosProblems/76): edge-disjoint monochromatic triangles"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6610
+      kind: github
+      quote: Proved by Gruslys and Letzter (arXiv:2008.05311, CPC 2022).
+    authors:
+      - AItoBit
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 76". Classifier rationale: The pull request explicitly claims the conjecture has been proved. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
