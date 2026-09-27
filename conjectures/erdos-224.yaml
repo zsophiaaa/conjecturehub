@@ -41,6 +41,21 @@ claims:
       url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/224.lean
       kind: dataset
     notes: Imported from the upstream `research solved` category. The statement is formalized; the proof has not been machine-checked by ConjectureHub.
+  - id: erdos-224-sweep-59e695d4
+    asserted_on: 2026-09-27
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-27
+    source:
+      title: "erdosproblems PR #437: Link Erdős problem #224 to OEIS A000051"
+      url: https://github.com/teorth/erdosproblems/pull/437
+      kind: github
+      quote: The general case was proved by Danzer and Gr"{u}nbaum [DaGr62].
+    authors:
+      - hannah-cheng
+    notes: 'Filed automatically by the erdosproblems pull requests sweep. Matched on "Erdős problem #224". Classifier rationale: The document explicitly says the conjecture has been proved by Danzer and Grunbaum. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/224.lean
     source: google-deepmind/formal-conjectures

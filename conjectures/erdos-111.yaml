@@ -17,7 +17,23 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-111-sweep-d565a169
+    asserted_on: 2026-09-27
+    type: partial
+    scope: linear_lower_bound and three_halves variants
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-27
+    source:
+      title: "formal-conjectures PR #6635: feat(ErdosProblems): add Erdős Problem 111"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6635
+      kind: github
+      quote: "`erdos_111.variants.linear_lower_bound` (solved): $h_G(n) \\gg n$ for every such $G`."
+    authors:
+      - AItoBit
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 111". Classifier rationale: The document reports that specific variants of Erdős Problem 111 have been solved. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
