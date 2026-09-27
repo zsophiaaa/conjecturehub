@@ -28,6 +28,38 @@ claims:
       title: erdosproblems.com records this problem as "falsifiable"
       url: https://www.erdosproblems.com/114
       kind: dataset
+  - id: erdos-114-sweep-b7fd7c08
+    asserted_on: 2026-09-27
+    type: partial
+    scope: sufficiently large n
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-27
+    source:
+      title: "formal-conjectures PR #6649: feat(ErdosProblems): add Erdős Problem 114"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6649
+      kind: github
+      quote: Tao's result for all sufficiently large $n$ (solved, `sorry`).
+    authors:
+      - AItoBit
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 114". Classifier rationale: The pull request records that Tao proved the conjecture for all sufficiently large n, which is a partial resolution. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: erdos-114-sweep-c549c78c
+    asserted_on: 2026-09-27
+    type: partial
+    scope: all sufficiently large n; also n = 2 and n = 1
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-27
+    source:
+      title: "formal-conjectures PR #6647: feat(ErdosProblems): add Erdős Problem 114"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6647
+      kind: github
+      quote: Tao [Ta25], the conjecture holds for all sufficiently large `n`.
+    authors:
+      - AItoBit
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 114". Classifier rationale: The document reports partial results proving the conjecture for large n and specific small cases. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

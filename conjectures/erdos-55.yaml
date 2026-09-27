@@ -29,6 +29,22 @@ claims:
       url: https://www.erdosproblems.com/55
       kind: dataset
     notes: Upstream records this as solved without specifying the direction.
+  - id: erdos-55-sweep-ad9d296b
+    asserted_on: 2026-09-27
+    type: proved
+    scope: for all r ≥ 2
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-27
+    source:
+      title: "formal-conjectures PR #6599: feat(ErdosProblems): add Erdős Problem 55"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6599
+      kind: github
+      quote: "`erdos_55` (solved, [CFP21]): the upper bound \\ll r(\\log N)^2 and the matching lower bound c\\,r(\\log N)^2, for all $r \\ge 2$."
+    authors:
+      - AItoBit
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 55". Classifier rationale: The PR states that Erdős Problem 55 is solved with matching bounds for all r ≥ 2. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
