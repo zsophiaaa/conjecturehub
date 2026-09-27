@@ -11,7 +11,22 @@ openness_basis:
   meaning: unknown
   asserted_by: wikidata
   note: Identity record only. No statement or status has been ingested for this conjecture yet.
-claims: []
+claims:
+  - id: monstrous-moonshine-sweep-e2258844
+    asserted_on: 2026-09-27
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-27
+    source:
+      title: "Richard Borcherds and I recently discussed: - The power of the Leech lattice to control all lower dimensions - Peter Scholze, Grothendieck and Ramanujan's styles - Category theory "
+      url: https://mathstodon.xyz/@themansionsofscience/117340589285202587
+      kind: mastodon
+      quote: He is well known for his proof of the monstrous moonshine conjecture using ideas from string theory
+    authors:
+      - Felex
+    notes: 'Filed automatically by the Mathstodon sweep. Matched on "monstrous moonshine". Classifier rationale: The document claims Borcherds proved the conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q392440
     source: wikidata
