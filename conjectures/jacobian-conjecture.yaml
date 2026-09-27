@@ -26,8 +26,8 @@ ids:
     - label: VibeMathed
       url: https://vibemathed.com/problem/jacobian-conjecture
 notability:
-  wikipedia_language_editions: 16
-  measured_on: 2026-08-03
+  wikipedia_language_editions: 17
+  measured_on: 2026-09-27
 openness_basis:
   meaning: no_published_solution_known_to_curator
   asserted_by: google-deepmind/formal-conjectures
@@ -115,7 +115,7 @@ provenance:
       - ids.mathworld
       - notability.wikipedia_language_editions
     license: CC0-1.0
-    retrieved: 2026-08-03
+    retrieved: 2026-09-27
   - url: https://vibemathed.com/api/dataset
     source: vibemathed
     fields:
