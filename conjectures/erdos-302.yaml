@@ -18,7 +18,39 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-302-sweep-4fa226fa
+    asserted_on: 2026-09-27
+    type: partial
+    scope: upper bound 0.8461739827964010
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-27
+    source:
+      title: "formal-conjectures PR #6580: Erdős Problem 302: add upper bound 0.8461739827964010 with a Lean proof"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6580
+      kind: github
+      quote: add upper bound 0.8461739827964010 with a Lean proof
+    authors:
+      - KitaKen1
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 302". Classifier rationale: The PR reports a new proven upper bound, which is a partial result toward the conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: erdos-302-sweep-94085572
+    asserted_on: 2026-09-27
+    type: partial
+    scope: upper bound 0.8461739827964010 for f(N) (asymptotically)
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-27
+    source:
+      title: "formal-conjectures: Erdős Problem 302: add upper bound 0.8461739827964010 with a Lean proof (#6580) This PR adds the variant `erdos_302.variants.upper_0_8461739827964010` (`f(N) ≤ (0.8461739827964010 + o(1)) N`) and link"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/3324bc500b87ea07802c8bbfe97ae716dfe93406
+      kind: github
+      quote: add upper bound 0.8461739827964010 with a Lean proof
+    authors:
+      - KitaKen1
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 302". Classifier rationale: The document reports a new asymptotic upper bound, which is partial progress on the conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
