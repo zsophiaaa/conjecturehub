@@ -28,7 +28,25 @@ openness_basis:
   meaning: no_published_solution_known_to_curator
   asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: the-frac-1-3-frac-2-3-conjecture-sweep-1a874fcd
+    asserted_on: 2026-09-28
+    type: partial
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-28
+    source:
+      title: Breaking the Infinite Barrier in the $\frac{1}{3}$--$\frac{2}{3}$ Conjecture
+      url: https://arxiv.org/abs/2609.30888
+      kind: arxiv
+      quote: "This is the first general result towards the $\frac{1}{3}$--$\frac{2}{3}$ conjecture in over 30 years."
+    authors:
+      - Max Aires
+      - Swee Hong Chan
+      - Igor Pak
+      - Greta Panova
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "The $\frac 1 3$–$\frac 2 3$ conjecture". Classifier rationale: The paper reports an epsilon‑improvement, which is progress but not a proof or disproof. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/conjecture_1_3_to_2_3.lean
     source: google-deepmind/formal-conjectures

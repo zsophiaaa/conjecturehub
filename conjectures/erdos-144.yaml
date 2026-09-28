@@ -30,6 +30,21 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/144
       kind: dataset
+  - id: erdos-144-sweep-4f00531c
+    asserted_on: 2026-09-28
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-28
+    source:
+      title: "formal-conjectures PR #6658: feat(ErdosProblems): add Erdős Problem 144"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6658
+      kind: github
+      quote: the original follows from the strong version
+    authors:
+      - AItoBit
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 144". Classifier rationale: The PR claims the conjecture follows from a proved strong version, indicating a proof. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
