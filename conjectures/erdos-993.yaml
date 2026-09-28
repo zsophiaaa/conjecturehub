@@ -27,6 +27,22 @@ claims:
       title: erdosproblems.com records this problem as "falsifiable"
       url: https://www.erdosproblems.com/993
       kind: dataset
+  - id: erdos-993-sweep-0e1a1990
+    asserted_on: 2026-09-28
+    type: partial
+    scope: equal-arm spider S(2^k) (thin tree case)
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-28
+    source:
+      title: "formal-conjectures PR #4192: feat(Erdos993): state the conjecture and prove spider local tie-balance"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/4192
+      kind: github
+      quote: This is **partial progress** toward the `d_leaf ≤ 1` ("thin tree") case
+    authors:
+      - AlperTheKing
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős #993". Classifier rationale: The PR proves a supporting lemma for a special class of trees but states the conjecture remains open. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

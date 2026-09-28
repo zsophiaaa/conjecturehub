@@ -28,6 +28,22 @@ claims:
       title: erdosproblems.com records this problem as "falsifiable"
       url: https://www.erdosproblems.com/114
       kind: dataset
+  - id: erdos-114-sweep-c549c78c
+    asserted_on: 2026-09-28
+    type: partial
+    scope: n = 1, 2, and sufficiently large n
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-28
+    source:
+      title: "formal-conjectures PR #6647: feat(ErdosProblems): add Erdős Problem 114"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6647
+      kind: github
+      quote: Tao [Ta25], the conjecture holds for all sufficiently large `n`.
+    authors:
+      - AItoBit
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 114". Classifier rationale: The document lists solved cases for n=1, n=2, and large n, indicating partial progress. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
