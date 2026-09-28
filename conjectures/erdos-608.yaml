@@ -27,6 +27,21 @@ claims:
       title: erdosproblems.com records this problem as "disproved"
       url: https://www.erdosproblems.com/608
       kind: dataset
+  - id: erdos-608-sweep-5a9353a4
+    asserted_on: 2026-09-28
+    type: disproved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-28
+    source:
+      title: "formal-conjectures PR #6164: Add Erdős Problem 608 (edges in pentagons above the Turán threshold), link the formal disproof"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6164
+      kind: github
+      quote: Disproved by the Füredi–Maleki construction [GHV19]; linked to plby/lean-proofs `Erdos608.not_erdos_608`
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 608". Classifier rationale: The document explicitly says the conjecture has been disproved. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

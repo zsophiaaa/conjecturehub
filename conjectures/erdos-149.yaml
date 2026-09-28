@@ -15,7 +15,22 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-149-sweep-f5c42c9a
+    asserted_on: 2026-09-28
+    type: partial
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-28
+    source:
+      title: "formal-conjectures PR #6664: feat(ErdosProblems): add Erdős Problem 149 (strong chromatic index)"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6664
+      kind: github
+      quote: "`erdos_149` (open): is $sq(G) \\le \\frac{5}{4}\\Delta^2$ for every finite graph?"
+    authors:
+      - AItoBit
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 149". Classifier rationale: The PR records the conjecture as open while listing partial bounds and solved special cases. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
