@@ -15,7 +15,22 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-102-sweep-76c23f2b
+    asserted_on: 2026-09-27
+    type: reformulation
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-28
+    source:
+      title: "formal-conjectures: feat(ErdosProblems): add Erdős Problem 102 (#6618) Adds `FormalConjectures/ErdosProblems/102.lean` (Erdős–Purdy, [erdosproblems.com/102](https://www.erdosproblems.com/102)). - `erdos_102` (`research o"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/47cc0ccc6d804d9a525e28e57fb33ee558e2959e
+      kind: github
+      quote: "`erdos_102` (`research open`): for fixed $c > 0$, $h_c(n) \\to \\infty`."
+    authors:
+      - AItoBit
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 102". Classifier rationale: The commit adds a formal Lean definition of the conjecture and states it is still open. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
