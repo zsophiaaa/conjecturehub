@@ -40,7 +40,24 @@ openness_basis:
   meaning: no_published_solution_known_to_curator
   asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: hall-s-conjecture-sweep-74b87739
+    asserted_on: 2026-09-29
+    type: reformulation
+    scope: weak form
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-29
+    source:
+      title: Weak Hall's conjecture, approximation gains, and continued fractions
+      url: https://arxiv.org/abs/2609.35252
+      kind: arxiv
+      quote: we show that the weak form of Hall's conjecture, which asks that $|k|>x^{1/2-\delta}$ for every $\delta>0$ outside finitely many solutions, is equivalent to the asymptotic bound $G_a\le 1$.
+    authors:
+      - R. Laniewski
+      - K. Müller
+    notes: "Filed automatically by the arXiv new submissions sweep. Matched on \"Hall's conjecture\". Classifier rationale: The paper states an equivalence reformulating the weak Hall conjecture. Unreviewed: this records that a claim was made, not that it is correct."
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/Hall.lean
     source: google-deepmind/formal-conjectures

@@ -27,6 +27,23 @@ claims:
       Standing taken from English Wikipedia's categorisation (Wikipedia categorises this as disproved). Nobody here has read the paper that settled it, which is what the secondary attestation says; replace this claim with one citing that paper when someone has it to hand.
 
       Reviewed 2026-08-03: True in dimensions 1 through 7. Perron settled n <= 6 in 1940 and Brakensiek–Heule–Mackey–Narváez closed the last open case, n = 7, as TRUE in 2020; Mackey 2002 put the failure threshold at 8. Fully resolved in every dimension. See https://www.quantamagazine.org/computer-search-settles-90-year-old-math-problem-20200819/.
+  - id: keller-s-conjecture-sweep-786c7141
+    asserted_on: 2026-09-29
+    type: partial
+    scope: split finite-dimensional algebras
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-29
+    source:
+      title: Keller's conjecture for split finite-dimensional algebras
+      url: https://arxiv.org/abs/2609.35363
+      kind: arxiv
+      quote: We prove Keller's conjecture for every split finite-dimensional algebra over an arbitrary field.
+    authors:
+      - Changchang Xi
+      - Jinbi Zhang
+    notes: "Filed automatically by the arXiv new submissions sweep. Matched on \"Keller's conjecture\". Classifier rationale: The abstract claims a proof for a specific class, indicating partial resolution. Unreviewed: this records that a claim was made, not that it is correct."
 provenance:
   - url: https://www.wikidata.org/wiki/Q4802474
     source: wikidata

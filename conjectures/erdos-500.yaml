@@ -19,7 +19,23 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-500-sweep-3bf24186
+    asserted_on: 2026-09-28
+    type: partial
+    scope: upper bound on Turán density
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-29
+    source:
+      title: "formal-conjectures PR #6641: feat(ErdosProblems/500): state Turán's problem for ex_3(n, K_4^3)"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6641
+      kind: github
+      quote: A preprint of 23 September 2026 (arXiv:2609.27495) gives `0.557808` with a Lean proof.
+    authors:
+      - theebayuser
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 500". Classifier rationale: The document reports a new upper bound but does not claim a full proof or disproof of the conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
