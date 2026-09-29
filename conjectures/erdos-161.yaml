@@ -17,7 +17,23 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-161-sweep-b46e9cde
+    asserted_on: 2026-09-29
+    type: partial
+    scope: case t = 3
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-29
+    source:
+      title: "formal-conjectures PR #6674: feat(ErdosProblems/161): add Erdős Problem 161"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6674
+      kind: github
+      quote: "erdos_161.variants.three (solved): the case $t = 3$, by Conlon–Fox–Sudakov [CFS11] with the Erdős–Spencer lower bound."
+    authors:
+      - AItoBit
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 161". Classifier rationale: The PR reports a solved special case (t=3) of Erdős Problem 161, which is partial progress. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

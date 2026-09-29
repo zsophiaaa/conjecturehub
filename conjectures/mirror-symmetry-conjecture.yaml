@@ -10,7 +10,23 @@ openness_basis:
   meaning: unknown
   asserted_by: wikidata
   note: Identity record only. No statement or status has been ingested for this conjecture yet.
-claims: []
+claims:
+  - id: mirror-symmetry-conjecture-sweep-feea3f0f
+    asserted_on: 2026-09-29
+    type: proved
+    scope: ADE singularities with nontrivial symmetry groups
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-29
+    source:
+      title: Landau--Ginzburg mirror symmetry for ADE singularities
+      url: https://arxiv.org/abs/2609.33442
+      kind: arxiv
+      quote: We prove Landau-Ginzburg mirror symmetry conjecture for ADE singularities with the nontrivial symmetry groups.
+    authors:
+      - Alexey Basalaev
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "mirror symmetry conjecture". Classifier rationale: The abstract explicitly states a proof of the mirror symmetry conjecture for this class of singularities. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q97366912
     source: wikidata

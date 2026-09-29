@@ -22,6 +22,22 @@ claims:
       url: https://en.wikipedia.org/wiki/Bogomolov_conjecture
       kind: wikipedia
     notes: Standing taken from English Wikipedia's categorisation (Wikipedia categorises this as proved). Nobody here has read the paper that settled it, which is what the secondary attestation says; replace this claim with one citing that paper when someone has it to hand.
+  - id: bogomolov-conjecture-sweep-00e83da2
+    asserted_on: 2026-09-29
+    type: partial
+    scope: uniform height bounds
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-29
+    source:
+      title: A uniform lower bound for the Zhang-Kawazumi invariant and applications to the Bogomolov conjecture
+      url: https://arxiv.org/abs/2609.35736
+      kind: arxiv
+      quote: hence new uniform height bounds in the Bogomolov conjecture.
+    authors:
+      - Robert Wilms
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Bogomolov conjecture". Classifier rationale: The paper claims to obtain new uniform height bounds, which is partial progress toward the conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q4937703
     source: wikidata
