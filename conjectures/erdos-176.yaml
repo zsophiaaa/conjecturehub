@@ -19,7 +19,39 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-176-sweep-7b066eac
+    asserted_on: 2026-09-30
+    type: partial
+    scope: cases N(k,2) and N(k,c\sqrt{k}) for fixed 0 \le c < 1
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-30
+    source:
+      title: "formal-conjectures PR #6757: Erdős Problem 176: statements, and proofs of the N(k, 2) and N(k, c√k) (c < 1) questions"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6757
+      kind: github
+      quote: Proves $N(k, 2) \le 50 k^3$ for $k \ge 2$, hence $N(k, 2) \le 200^k$.
+    authors:
+      - AItoBit
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 176". Classifier rationale: The document provides partial results for specific parameter choices, not a full resolution of Erdős Problem 176. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: erdos-176-sweep-65d147d4
+    asserted_on: 2026-09-30
+    type: partial
+    scope: bounds for N(k,2) and N(k,c\sqrt{k}) with fixed 0\le c<1
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-30
+    source:
+      title: "formal-conjectures PR #6758: Erdős Problem 176: statements, and proofs of the N(k, 2) and N(k, c√k) (c < 1) questions"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6758
+      kind: github
+      quote: Proves $N(k, 2) \le 50 k^3$ for $k \ge 2$, hence $N(k, 2) \le 200^k$ ... Proves $N(k, c\sqrt{k}) \le 4 \lceil 2/(1-c^2) \rceil^2 k^3$ for fixed $0 \le c < 1$.
+    authors:
+      - AItoBit
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 176". Classifier rationale: The document claims proofs of specific cases, which constitute partial progress on the open problem. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
