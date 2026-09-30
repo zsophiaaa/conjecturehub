@@ -22,6 +22,22 @@ claims:
       url: https://en.wikipedia.org/wiki/Bogomolov_conjecture
       kind: wikipedia
     notes: Standing taken from English Wikipedia's categorisation (Wikipedia categorises this as proved). Nobody here has read the paper that settled it, which is what the secondary attestation says; replace this claim with one citing that paper when someone has it to hand.
+  - id: bogomolov-conjecture-sweep-5014b8dc
+    asserted_on: 2026-09-30
+    type: proved
+    scope: characteristic zero, semi-abelian varieties
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-30
+    source:
+      title: Mordell--Lang plus Geometric Bogomolov
+      url: https://arxiv.org/abs/2609.38001
+      kind: arxiv
+      quote: We prove a geometric version of Poonen's "Mordell--Lang plus Bogomolov" theorem for semi-abelian varieties in characteristic zero. This is a generalization of the Mordell--Lang conjecture and the geometric Bogomolov conjecture.
+    authors:
+      - Long Liu
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Bogomolov conjecture". Classifier rationale: The abstract claims a proof of a geometric version that generalizes the geometric Bogomolov conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q4937703
     source: wikidata
