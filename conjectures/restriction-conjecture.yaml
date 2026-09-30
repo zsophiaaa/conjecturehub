@@ -12,7 +12,23 @@ openness_basis:
   meaning: unknown
   asserted_by: wikidata
   note: Identity record only. No statement or status has been ingested for this conjecture yet.
-claims: []
+claims:
+  - id: restriction-conjecture-sweep-e0f611c7
+    asserted_on: 2026-09-30
+    type: partial
+    scope: finite field paraboloid P3 (3D) and P6 (6D)
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-30
+    source:
+      title: A bilinear approach to the finite field restriction problem, II
+      url: https://arxiv.org/abs/2606.22882
+      kind: arxiv
+      quote: We prove that the Fourier extension operator associated with $P_3$ maps $L^2$ to $L^r$ for $r>\frac{176}{51}=3.45098\ldots$.
+    authors:
+      - Mark Lewko
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "restriction conjecture". Classifier rationale: The paper provides new non‑endpoint bounds for the finite‑field restriction problem but does not claim a full resolution. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q135423966
     source: wikidata

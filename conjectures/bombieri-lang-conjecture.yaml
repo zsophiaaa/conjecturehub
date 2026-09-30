@@ -10,7 +10,23 @@ openness_basis:
   meaning: no_solution_known_to_community
   asserted_by: wikipedia
   note: Listed under "Unsolved problems in geometry" on English Wikipedia.
-claims: []
+claims:
+  - id: bombieri-lang-conjecture-sweep-0a8c981b
+    asserted_on: 2026-09-30
+    type: partial
+    scope: certain general type nonsingular Deligne-Mumford stacks with projective coarse moduli space
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-30
+    source:
+      title: On Vojta's harder implication, height inequalities for admissible pairs, points of bounded degree and Deligne-Mumford stacks
+      url: https://arxiv.org/abs/2609.36300
+      kind: arxiv
+      quote: we deduce ... a form of the Bombieri-Lang Conjecture for (D_0,S)-integral points of bounded degree.
+    authors:
+      - Nathan Grieve
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Bombieri–Lang conjecture". Classifier rationale: The paper proves a restricted version of the conjecture for a specific class of stacks. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q65088644
     source: wikidata

@@ -47,7 +47,37 @@ openness_basis:
   meaning: no_published_solution_known_to_curator
   asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: snake-in-the-box-sweep-7f799240
+    asserted_on: 2026-09-30
+    type: partial
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-30
+    source:
+      title: "formal-conjectures PR #6763: Fix the upper bound for snake-in-the-box"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6763
+      kind: github
+      quote: I changed it to $2^{n-1}$, since this is the best upper bound I could find in the literature.
+    authors:
+      - codrut3
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Snake in the box". Classifier rationale: The pull request asserts a new best known upper bound for the snake-in-the-box problem, which is a partial result on the conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: snake-in-the-box-sweep-4a53b72b
+    asserted_on: 2026-09-30
+    type: partial
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-30
+    source:
+      title: "formal-conjectures: Fix the upper bound for snake-in-the-box (#6763) I changed it to $2^{n-1}$, since this is the best upper bound I could find in the literature. I also added coil-in-the-box definition and upper bound. "
+      url: https://github.com/google-deepmind/formal-conjectures/commit/7d450ef6da7178b2716620e8492e26d0f8a9d81d
+      kind: github
+      quote: I changed it to $2^{n-1}$, since this is the best upper bound I could find in the literature.
+    authors:
+      - codrut3
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Snake in the box". Classifier rationale: The document reports an updated known upper bound, which is partial progress rather than a full resolution. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/SnakeInTheBox.lean
     source: google-deepmind/formal-conjectures

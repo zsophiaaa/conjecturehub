@@ -10,7 +10,23 @@ openness_basis:
   meaning: unknown
   asserted_by: wikidata
   note: Identity record only. No statement or status has been ingested for this conjecture yet.
-claims: []
+claims:
+  - id: fontaine-mazur-conjecture-sweep-2ab31dca
+    asserted_on: 2026-09-30
+    type: partial
+    scope: two-dimensional odd case over Q
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-09-30
+    source:
+      title: On Boston's Unramified Conjecture for $\GL_2$ and McLeman's $(3,3)$-Conjecture
+      url: https://arxiv.org/abs/2609.37252
+      kind: arxiv
+      quote: This proves the two-dimensional odd case of Boston's strengthening of the unramified Fontaine--Mazur conjecture over $\Q$.
+    authors:
+      - Yufan Luo
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Fontaine–Mazur conjecture". Classifier rationale: The paper claims a partial result proving a specific case of the conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q5465120
     source: wikidata
