@@ -21,7 +21,23 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-201-sweep-78d74f47
+    asserted_on: 2026-10-01
+    type: partial
+    scope: specific small cases (N=5,14)
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-01
+    source:
+      title: "formal-conjectures PR #6767: feat(ErdosProblems): add Erdős Problem 201"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6767
+      kind: github
+      quote: G_3(5) = 3 and R_3(5) = 4, so G_3(5) < R_3(5); R_3(14) = 8; G_3(14) ≤ 7
+    authors:
+      - AItoBit
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 201". Classifier rationale: The PR provides partial results but does not claim a full proof or disproof. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
