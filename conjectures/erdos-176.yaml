@@ -19,7 +19,23 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-176-sweep-65d147d4
+    asserted_on: 2026-10-01
+    type: partial
+    scope: cases N(k,2) and N(k,c\sqrt{k}) for fixed 0 \le c < 1
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-01
+    source:
+      title: "formal-conjectures PR #6758: Erdős Problem 176: statements, and proofs of the N(k, 2) and N(k, c√k) (c < 1) questions"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6758
+      kind: github
+      quote: Proves $N(k, 2) \le 50 k^3$ for $k \ge 2$, hence $N(k, 2) \le 200^k$
+    authors:
+      - AItoBit
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 176". Classifier rationale: The PR provides proofs for specific instances but states the general questions remain open. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

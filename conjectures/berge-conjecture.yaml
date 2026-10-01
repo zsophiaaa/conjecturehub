@@ -10,7 +10,24 @@ openness_basis:
   meaning: unknown
   asserted_by: wikidata
   note: Identity record only. No statement or status has been ingested for this conjecture yet.
-claims: []
+claims:
+  - id: berge-conjecture-sweep-bd85ff05
+    asserted_on: 2026-10-01
+    type: partial
+    scope: genus ≤ 5
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-01
+    source:
+      title: Lens space surgeries on knots of small genus
+      url: https://arxiv.org/abs/2609.39260
+      kind: arxiv
+      quote: this verifies the Berge conjecture for knots of genus at most $5$.
+    authors:
+      - Misha Schmalian
+      - Steven Sivek
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Berge conjecture". Classifier rationale: The paper claims to settle the conjecture only for knots of genus up to 5. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q4891455
     source: wikidata

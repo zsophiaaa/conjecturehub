@@ -16,7 +16,22 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-177-sweep-34637e1c
+    asserted_on: 2026-10-01
+    type: partial
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-01
+    source:
+      title: "formal-conjectures PR #6756: feat(ErdosProblems): 177"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6756
+      kind: github
+      quote: "Solved variants: - $h(d) \\ll d!$ (Cantor–Erdős–Schreiber–Straus); - $h(d) \\ll d^{8+\\varepsilon}$ (Beck); - $h(d) \\gg d^{1/2}$ (Roth); - no admissible $h$ is bounded (van der Waerden)."
+    authors:
+      - AItoBit
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 177". Classifier rationale: The document reports known partial bounds but does not claim the conjecture is fully resolved. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

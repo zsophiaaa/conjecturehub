@@ -16,7 +16,23 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-585-sweep-f7a98722
+    asserted_on: 2026-10-01
+    type: partial
+    scope: specific small n (n≤5) and asymptotic lower bounds (e.g., maxEdges n ≥ 3n‑5 for n≥7)
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-01
+    source:
+      title: "formal-conjectures PR #6774: feat(ErdosProblems/585): add Erdős Problem 585"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6774
+      kind: github
+      quote: "`erdos_585.variants.lower_bound` (PRS95) and `erdos_585.variants.upper_bound` (CJMM24, Theorem 2 with $k = 2$), both `research solved`."
+    authors:
+      - roberthuynh
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 585". Classifier rationale: The PR reports partial results and bounds but does not claim a full proof of the conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
