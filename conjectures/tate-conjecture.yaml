@@ -10,7 +10,25 @@ openness_basis:
   meaning: no_solution_known_to_community
   asserted_by: wikipedia
   note: Listed under "Unsolved problems in number theory" on English Wikipedia.
-claims: []
+claims:
+  - id: tate-conjecture-sweep-1036864f
+    asserted_on: 2026-10-01
+    type: partial
+    scope: supersingular irreducible symplectic varieties of known types (K3^{[n]}, OG6, OG10, Kum^n) with specified Artin invariant restrictions
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-01
+    source:
+      title: "Supersingular Tate conjecture for irreducible symplectic varieties of known types: I"
+      url: https://arxiv.org/abs/2609.38801
+      kind: arxiv
+      quote: We prove that ... any product of those irreducible symplectic varieties satisfies the supersingular Tate conjecture for the whole ℓ‑adic or crystalline cohomology ring.
+    authors:
+      - Lie Fu
+      - Xuanlin Huang
+      - Zhiyuan Li
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Tate conjecture". Classifier rationale: The paper claims a proof of the Tate conjecture for a restricted class of varieties. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q7687975
     source: wikidata
