@@ -33,7 +33,23 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: erdos-243-sweep-74685a92
+    asserted_on: 2026-09-30
+    type: partial
+    scope: assuming the increment bound hypothesis
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-01
+    source:
+      title: "formal-conjectures PR #6523: Erdős 243: add cubic-rate irrationality and slow-growth rigidity"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6523
+      kind: github
+      quote: The increment bound is an extra hypothesis, so the unrestricted problem remains open.
+    authors:
+      - wcook04
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős problem 243". Classifier rationale: The document adds solved variants but explicitly says the original Erdős 243 remains open. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/243.lean
     source: google-deepmind/formal-conjectures
