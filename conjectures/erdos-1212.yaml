@@ -38,7 +38,22 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2026-04-04
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: erdos-1212-sweep-4ca58110
+    asserted_on: 2026-10-02
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-02
+    source:
+      title: "formal-conjectures PR #6788: Erdos Problem 1212 as solved"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6788
+      kind: github
+      quote: the construction provides an infinite simple path in the composite-restricted visible lattice
+    authors:
+      - SrijanRoy123-github
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdos Problem 1212". Classifier rationale: The PR states that Li’s construction proves the conjecture and updates its status to solved. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/1212.lean
     source: google-deepmind/formal-conjectures
