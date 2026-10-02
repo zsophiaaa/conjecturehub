@@ -12,7 +12,26 @@ openness_basis:
   meaning: unknown
   asserted_by: wikidata
   note: Identity record only. No statement or status has been ingested for this conjecture yet.
-claims: []
+claims:
+  - id: hidden-subgroup-problem-sweep-72d9d8b3
+    asserted_on: 2026-10-02
+    type: disproved
+    scope: abelian state hidden subgroup problem on mixed states
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-02
+    source:
+      title: Quantum state isomorphism problems for groups
+      url: https://arxiv.org/abs/2605.12615
+      kind: arxiv
+      quote: we resolve an open question ... we show that this problem is QSZK-hard in the worst case, thereby ruling out an efficient quantum algorithm unless QSZK = BQP.
+    authors:
+      - Alexandru Gheorghiu
+      - Dale Jacobs
+      - Saeed Mehraban
+      - Arsalan Motamedi
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "hidden subgroup problem". Classifier rationale: The paper claims hardness, thereby disproving the existence of an efficient quantum algorithm for this specific HSP case. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q5752087
     source: wikidata
