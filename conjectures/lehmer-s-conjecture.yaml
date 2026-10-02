@@ -11,7 +11,22 @@ openness_basis:
   meaning: no_solution_known_to_community
   asserted_by: wikipedia
   note: Listed under "Unsolved problems in number theory" on English Wikipedia.
-claims: []
+claims:
+  - id: lehmer-s-conjecture-sweep-cafe5d3b
+    asserted_on: 2026-10-02
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-02
+    source:
+      title: A proof of Lehmer's permutation conjecture for neighbor-swap graphs
+      url: https://arxiv.org/abs/2610.01240
+      kind: arxiv
+      quote: This article proves the reformulated conjecture, and with it Lehmer's conjecture.
+    authors:
+      - Tom Verhoeff
+    notes: "Filed automatically by the arXiv new submissions sweep. Matched on \"Lehmer's conjecture\". Classifier rationale: The abstract explicitly states that the paper proves Lehmer's conjecture. Unreviewed: this records that a claim was made, not that it is correct."
 provenance:
   - url: https://www.wikidata.org/wiki/Q6518929
     source: wikidata

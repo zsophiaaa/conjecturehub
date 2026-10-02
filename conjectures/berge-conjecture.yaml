@@ -10,7 +10,24 @@ openness_basis:
   meaning: unknown
   asserted_by: wikidata
   note: Identity record only. No statement or status has been ingested for this conjecture yet.
-claims: []
+claims:
+  - id: berge-conjecture-sweep-5bb4c83f
+    asserted_on: 2026-10-02
+    type: partial
+    scope: bridgeless claw-free cubic graphs
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-02
+    source:
+      title: Perfect matching covers of claw-free cubic graphs
+      url: https://arxiv.org/abs/2610.01137
+      kind: arxiv
+      quote: In this paper, we prove that the Berge conjecture holds for bridgeless claw-free cubic graphs.
+    authors:
+      - Huaibin Zhou
+      - Xiumei Wang
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Berge conjecture". Classifier rationale: The paper claims a proof of the conjecture restricted to a specific class of graphs. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q4891455
     source: wikidata

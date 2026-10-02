@@ -10,7 +10,39 @@ openness_basis:
   meaning: no_solution_known_to_community
   asserted_by: wikipedia
   note: Listed under "Unsolved problems in geometry" on English Wikipedia.
-claims: []
+claims:
+  - id: pompeiu-problem-sweep-1cbaadad
+    asserted_on: 2026-10-01
+    type: disproved
+    scope: N = 1
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-02
+    source:
+      title: "formal-conjectures PR #6764: Fix misformalizations for Selfridge and Pompeiu Problem"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6764
+      kind: github
+      quote: I also changed the two theorems (disproofs) to be for N = 1 (the planar case), leaving open the other dimensions.
+    authors:
+      - codrut3
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Pompeiu problem". Classifier rationale: The pull request explicitly says the theorems are disproofs for the N=1 case, indicating a claimed resolution for that dimension. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: pompeiu-problem-sweep-3467150f
+    asserted_on: 2026-10-01
+    type: disproved
+    scope: N = 1 (the planar case)
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-02
+    source:
+      title: "formal-conjectures: Fix misformalizations for Selfridge and Pompeiu Problem (#6764) For the pseudo-Selfridge criterion, I added $n>1$ as a requirement to avoid the trivial $n=1$ counterexample. Fixes #6573 For the Pompei"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/df3f12d7bd06feb3f71ae37abae0ca7cb798d9b1
+      kind: github
+      quote: I also changed the two theorems (disproofs) to be for N = 1 (the planar case), leaving open the other dimensions.
+    authors:
+      - codrut3
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Pompeiu problem". Classifier rationale: The commit states that the Pompeiu problem has been disproved for the planar case (N=1). Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q3406234
     source: wikidata
