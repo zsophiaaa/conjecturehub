@@ -15,7 +15,22 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-256-sweep-6e139230
+    asserted_on: 2026-10-03
+    type: disproved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-03
+    source:
+      title: "formal-conjectures PR #6811: feat(ErdosProblems): add Erdős Problem 256"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6811
+      kind: github
+      quote: "`erdos_256`: is there $c > 0$ with \\log f(n) \\gg n^c? Stated as `answer(False)`."
+    authors:
+      - AItoBit
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 256". Classifier rationale: The PR explicitly states the answer to the existence question is False, indicating a claimed disproof. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
