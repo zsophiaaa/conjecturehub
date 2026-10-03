@@ -55,7 +55,39 @@ openness_basis:
   meaning: no_published_solution_known_to_curator
   asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: inverse-galois-problem-sweep-87fc7c21
+    asserted_on: 2026-10-03
+    type: partial
+    scope: finite symmetric groups
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-03
+    source:
+      title: "formal-conjectures PR #6830: feat(Wikipedia/InverseGalois): formal proof that S_n is a Galois group over Q"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6830
+      kind: github
+      quote: formal proof that S_n is a Galois group over Q ... every finite symmetric group is the Galois group of a Galois extension of \(\mathbb{Q}\).
+    authors:
+      - anatoliiohorodnyk
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Inverse Galois problem". Classifier rationale: The document reports a formal proof of the symmetric‑group case, which is a partial resolution of the Inverse Galois Problem. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: inverse-galois-problem-sweep-5a07e35f
+    asserted_on: 2026-10-03
+    type: partial
+    scope: finite symmetric groups
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-03
+    source:
+      title: "formal-conjectures: feat(Wikipedia/InverseGalois): formal proof that S_n is a Galois group over Q (#6830) Closes #6829. This PR adds a `formal_proof` link to a kernel-checked Lean 4 proof of the `research solved` stateme"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/89294ea02bd7cd678d59984add52cb4baef3dbf4
+      kind: github
+      quote: "`InverseGalois.inverse_galois_problem.variants.symmetric_group`: every finite symmetric group is the Galois group of a Galois extension of \\(\\mathbb{Q}\\)."
+    authors:
+      - anatoliiohorodnyk
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Inverse Galois problem". Classifier rationale: The document announces a formal proof that symmetric groups satisfy the inverse Galois property, which is a partial resolution of the full conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/InverseGalois.lean
     source: google-deepmind/formal-conjectures

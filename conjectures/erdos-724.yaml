@@ -17,7 +17,22 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-724-sweep-b9aa4291
+    asserted_on: 2026-10-03
+    type: partial
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-03
+    source:
+      title: "formal-conjectures PR #6814: feat(ErdosProblems/724): add Erdős Problem 724"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6814
+      kind: github
+      quote: "Solved: Euler's conjecture is false (Bose–Parker–Shrikhande, $f(n) \\geq 2$ for $n \\geq 7$), and the lower bounds $n^{1/91}$ (Chowla–Erdős–Straus), $n^{1/17}$ (Wilson) and $n^{1/14.8}$ (Beth)."
+    authors:
+      - veljjanoski
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 724". Classifier rationale: The document reports known lower bounds but does not claim a full proof or disproof of the conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

@@ -43,7 +43,22 @@ openness_basis:
   meaning: no_published_solution_known_to_curator
   asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: komlos-conjecture-sweep-858154d6
+    asserted_on: 2026-10-02
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-03
+    source:
+      title: Komlos conjecture - proof and subsequent digestion https:// arxiv.org/pdf/2609.20979
+      url: https://mathstodon.xyz/@RiemCare/117372780962677945
+      kind: mastodon
+      quote: Komlos conjecture - proof and subsequent digestion
+    authors:
+      - RiemCare
+    notes: 'Filed automatically by the Mathstodon sweep. Matched on "Komlós conjecture". Classifier rationale: The document title asserts that a proof of the Komlós conjecture has been provided. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/KomlosConjecture.lean
     source: google-deepmind/formal-conjectures

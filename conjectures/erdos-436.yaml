@@ -17,7 +17,23 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-436-sweep-58e183bb
+    asserted_on: 2026-10-02
+    type: proved
+    scope: Λ(k,2) is finite for all k ≥ 2
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-03
+    source:
+      title: "formal-conjectures PR #6804: feat(ErdosProblems/436): state the problem on runs of kth power residues"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6804
+      kind: github
+      quote: "`erdos_436.parts.i`: Λ(k, 2) is finite for all k ≥ 2. Solved by Hildebrand [Hi91]."
+    authors:
+      - DisturbedCrow
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 436". Classifier rationale: The document states that part i of Erdős Problem 436 has been solved. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
