@@ -10,7 +10,24 @@ openness_basis:
   meaning: unknown
   asserted_by: wikidata
   note: Identity record only. No statement or status has been ingested for this conjecture yet.
-claims: []
+claims:
+  - id: syz-conjecture-sweep-d83a6b49
+    asserted_on: 2026-10-05
+    type: proved
+    scope: for irreducible symplectic varieties deformation equivalent to moduli spaces of sheaves on K3 surfaces
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-05
+    source:
+      title: The SYZ conjecture for singular moduli spaces of sheaves on K3 surfaces
+      url: https://arxiv.org/abs/2510.01005
+      kind: arxiv
+      quote: In this paper we prove the SYZ conjecture
+    authors:
+      - Claudio Onorati
+      - Ángel David Ríos Ortiz
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "SYZ conjecture". Classifier rationale: The abstract explicitly states a proof of the SYZ conjecture in the described setting. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q7395295
     source: wikidata
