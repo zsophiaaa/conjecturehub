@@ -73,7 +73,24 @@ openness_basis:
   meaning: no_published_solution_known_to_curator
   asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: union-closed-sets-conjecture-sweep-87df87d3
+    asserted_on: 2026-10-05
+    type: partial
+    scope: proved c_UC ≥ 0.3828852549667978
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-05
+    source:
+      title: Beyond Liu's 0.382709 threshold for the union-closed sets conjecture
+      url: https://arxiv.org/abs/2610.02295
+      kind: arxiv
+      quote: we obtain $c_{\mathrm{UC}}\ge 0.3828852549667978$.
+    authors:
+      - Simone Costa
+      - Ankan Sadhu
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Union-closed sets conjecture". Classifier rationale: The paper improves the known lower bound but does not claim a full proof of the conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/UnionClosed.lean
     source: google-deepmind/formal-conjectures

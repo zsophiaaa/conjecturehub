@@ -43,7 +43,24 @@ openness_basis:
   meaning: no_published_solution_known_to_curator
   asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: abc-conjecture-sweep-ae51f3ed
+    asserted_on: 2026-10-05
+    type: partial
+    scope: asymptotic bound X ≤ 9/2
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-05
+    source:
+      title: The quality plane of $abc$-triples and the decomposition into gains
+      url: https://arxiv.org/abs/2610.03212
+      kind: arxiv
+      quote: we obtain \limsup X\le 9/2 and \limsup Y\le 27/2 as the radical tends to infinity.
+    authors:
+      - R. Laniewski
+      - K. Müller
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "*abc* conjecture". Classifier rationale: The paper gives weaker asymptotic bounds, not a proof or disproof. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/ABC.lean
     source: google-deepmind/formal-conjectures
