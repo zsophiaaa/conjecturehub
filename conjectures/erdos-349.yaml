@@ -96,7 +96,23 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: erdos-349-sweep-b1ee53b5
+    asserted_on: 2026-10-05
+    type: partial
+    scope: t = 1, 1 < α < 3/2
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-06
+    source:
+      title: "formal-conjectures PR #4470: ErdosProblems/349: (1, α) is a good pair for 1 < α < 3/2 (positive result)"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/4470
+      kind: github
+      quote: This is a partial result on an open problem — Erdős Problem 349 itself remains open.
+    authors:
+      - cepadugato
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 349". Classifier rationale: The PR claims a positive result for a restricted range, not a full resolution. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/349.lean
     source: google-deepmind/formal-conjectures
