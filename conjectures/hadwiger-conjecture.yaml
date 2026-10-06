@@ -11,7 +11,23 @@ openness_basis:
   meaning: no_solution_known_to_community
   asserted_by: wikipedia
   note: Listed under "Unsolved problems in graph theory" on English Wikipedia.
-claims: []
+claims:
+  - id: hadwiger-conjecture-sweep-fba55024
+    asserted_on: 2026-10-06
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-06
+    source:
+      title: A Proof of the Linear Hadwiger Conjecture
+      url: https://arxiv.org/abs/2610.05291
+      kind: arxiv
+      quote: We show that there exists $C\in\mathbb{N}$ such that $K_t$-minor free graphs are $Ct$-colorable.
+    authors:
+      - Sergey Norin
+      - Raphael Steiner
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Hadwiger conjecture". Classifier rationale: The abstract explicitly claims a proof of the linear Hadwiger conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q1128435
     source: wikidata
