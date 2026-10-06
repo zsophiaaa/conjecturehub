@@ -193,6 +193,22 @@ claims:
     authors:
       - Terence Tao
     notes: "τ(m) is similar to 2^ω(m); #647 is similar to but slightly weaker than part of Erdős #679, and much stronger than #413 or #248. Context for proof strategy, not a resolution."
+  - id: erdos-647-sweep-80f77c16
+    asserted_on: 2026-10-06
+    type: partial
+    scope: n > 84
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-06
+    source:
+      title: "formal-conjectures PR #4407: Add formal-proof links and sharpen Erdős #647 candidate reductions"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/4407
+      kind: github
+      quote: explicit failed shifts exclude every `25 ≤ n ≤ 84`; every remaining candidate is above 84, divisible by 2520, and lies in one of the two formalized prime-chain families
+    authors:
+      - Mnehmos
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős #647". Classifier rationale: The PR reports partial progress and a reformulation but does not claim a full proof or disproof, keeping the conjecture open. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/647.lean
     source: google-deepmind/formal-conjectures
