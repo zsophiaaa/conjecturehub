@@ -96,7 +96,39 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: erdos-349-sweep-f927e14b
+    asserted_on: 2026-10-06
+    type: partial
+    scope: t ≥ 2, 1 < α < 3/2 (arbitrarily close to 3/2)
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-06
+    source:
+      title: "formal-conjectures PR #4483: ErdosProblems/349: good pairs on the strip 1 < α < 3/2 for t ≥ 2, reaching arbitrarily close to 3/2"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/4483
+      kind: github
+      quote: This is a PARTIAL result on the still-OPEN Erdős Problem 349
+    authors:
+      - cepadugato
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 349". Classifier rationale: The PR reports partial progress but states the problem remains open. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: erdos-349-sweep-dfa51540
+    asserted_on: 2026-10-06
+    type: partial
+    scope: for 1 < α < 3/2 and 0 < t < 2
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-06
+    source:
+      title: "formal-conjectures PR #4478: ErdosProblems/349: eventual completeness for all 0 < t < 2 on the strip 1 < α < 3/2"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/4478
+      kind: github
+      quote: on the strip $1 < \alpha < 3/2$ — eventual completeness holds for **all** $0 < t < 2$ (this PR)
+    authors:
+      - cepadugato
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 349". Classifier rationale: The PR states it adds a partial result and explicitly says it does not resolve the conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/349.lean
     source: google-deepmind/formal-conjectures
