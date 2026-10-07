@@ -11,7 +11,22 @@ openness_basis:
   meaning: no_solution_known_to_community
   asserted_by: wikipedia
   note: Listed under "Unsolved problems in graph theory" on English Wikipedia.
-claims: []
+claims:
+  - id: barnette-s-conjecture-sweep-9e9ac91e
+    asserted_on: 2026-10-06
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-07
+    source:
+      title: "OpenAI: Proves that every finite simple cubic bipartite planar 3-vertex-connected graph has a Hamiltonian cycle, resolving Barnette’s conjecture. https:// github.com/openai/math/bl"
+      url: https://mathstodon.xyz/@sioum/117396409409887913
+      kind: mastodon
+      quote: "OpenAI: Proves that every finite simple cubic bipartite planar 3-vertex-connected graph has a Hamiltonian cycle, resolving Barnette’s conjecture."
+    authors:
+      - Sang-il Oum
+    notes: "Filed automatically by the Mathstodon sweep. Matched on \"Barnette's conjecture\". Classifier rationale: The document explicitly states that a proof has been provided, resolving the conjecture. Unreviewed: this records that a claim was made, not that it is correct."
 provenance:
   - url: https://www.wikidata.org/wiki/Q4861653
     source: wikidata

@@ -13,7 +13,22 @@ openness_basis:
   meaning: no_solution_known_to_community
   asserted_by: wikipedia
   note: Listed under "Unsolved problems in graph theory" on English Wikipedia.
-claims: []
+claims:
+  - id: second-neighborhood-problem-sweep-41b694a1
+    asserted_on: 2026-10-06
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-07
+    source:
+      title: "OpenAI: A proof of Seymour's second-neighborhood conjecture https:// github.com/openai/math/blob/ma in/preprints/A-proof-of-Seymours-second-neighborhood-conjecture-September-23-202"
+      url: https://mathstodon.xyz/@sioum/117396401586720863
+      kind: mastodon
+      quote: "OpenAI: A proof of Seymour's second-neighborhood conjecture"
+    authors:
+      - Sang-il Oum
+    notes: 'Filed automatically by the Mathstodon sweep. Matched on "second neighborhood conjecture". Classifier rationale: The document’s title explicitly claims a proof of the conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q60792926
     source: wikidata
