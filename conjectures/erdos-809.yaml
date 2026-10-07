@@ -16,7 +16,22 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-809-sweep-116bc705
+    asserted_on: 2026-10-06
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-07
+    source:
+      title: "formal-conjectures PR #6634: feat(ErdosProblems): 809"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6634
+      kind: github
+      quote: "The main theorem ... link to Lean proofs ... #print axioms Erdos809.erdos_809 reports only propext, Classical.choice, Quot.sound."
+    authors:
+      - Asad-Shahab
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 809". Classifier rationale: The pull request states that the main theorem (the conjecture) has been formally proved in Lean. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

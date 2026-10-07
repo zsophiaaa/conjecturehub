@@ -15,7 +15,23 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-149-sweep-267138db
+    asserted_on: 2026-10-07
+    type: partial
+    scope: Δ ≤ 3 and large Δ
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-07
+    source:
+      title: "formal-conjectures PR #6665: feat(ErdosProblems): add Erdős Problem 149 (strong chromatic index)"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6665
+      kind: github
+      quote: "`erdos_149.variants.max_degree_le_three` (solved, `sorry`): $sq(G) \\le 10$ when $\\Delta \\le 3$ (Andersen; Horák, He and Trotter)."
+    authors:
+      - AItoBit
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 149". Classifier rationale: The PR records partial results for special cases while marking the main conjecture as open. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

@@ -14,7 +14,22 @@ openness_basis:
   meaning: no_solution_known_to_community
   asserted_by: wikipedia
   note: Listed under "Unsolved problems in number theory" on English Wikipedia.
-claims: []
+claims:
+  - id: riemann-hypothesis-sweep-4a2dc7c7
+    asserted_on: 2026-10-07
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: secondary
+    state: active
+    recorded_on: 2026-10-07
+    source:
+      title: Riemann hypothesis
+      url: https://en.wikipedia.org/wiki/Riemann_hypothesis
+      kind: wikipedia
+      quote: adding a secondary source that includes an independent proof.
+    authors:
+      - Sławomir Biały
+    notes: 'Filed automatically by the Wikipedia edits sweep. Matched on "Riemann hypothesis". Classifier rationale: The edit summary states that a source with an independent proof was added, asserting a proof of the conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q205966
     source: wikidata

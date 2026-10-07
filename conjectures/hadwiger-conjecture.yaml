@@ -11,7 +11,38 @@ openness_basis:
   meaning: no_solution_known_to_community
   asserted_by: wikipedia
   note: Listed under "Unsolved problems in graph theory" on English Wikipedia.
-claims: []
+claims:
+  - id: hadwiger-conjecture-sweep-dbd60b62
+    asserted_on: 2026-10-06
+    type: partial
+    scope: list chromatic number O(t) for K_t-minor-free graphs
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-07
+    source:
+      title: 'OpenAI: The list chromatic number of the K_t-minor-free graph is at most O(t) "Linear (list) Hadwiger Conjecture" https:// github.com/openai/math/blob/ma in/preprints/A-linear-list'
+      url: https://mathstodon.xyz/@sioum/117396453863854074
+      kind: mastodon
+      quote: The list chromatic number of the K_t-minor-free graph is at most O(t) "Linear (list) Hadwiger Conjecture"
+    authors:
+      - Sang-il Oum
+    notes: 'Filed automatically by the Mathstodon sweep. Matched on "Hadwiger conjecture". Classifier rationale: The document asserts a linear bound for the list‑coloring version, which is a partial progress on Hadwiger. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: hadwiger-conjecture-sweep-665d8db4
+    asserted_on: 2026-10-07
+    type: counterexample
+    evidence_tier: unverified_claim
+    attestation: secondary
+    state: active
+    recorded_on: 2026-10-07
+    source:
+      title: Hadwiger conjecture (graph theory)
+      url: https://en.wikipedia.org/wiki/Hadwiger_conjecture_(graph_theory)
+      kind: wikipedia
+      quote: Referenced the Open AI October 6 Counter example drop..
+    authors:
+      - FaroukHarb
+    notes: 'Filed automatically by the Wikipedia edits sweep. Matched on "Hadwiger conjecture". Classifier rationale: The edit summary states that a counterexample to the Hadwiger conjecture was referenced. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q1128435
     source: wikidata

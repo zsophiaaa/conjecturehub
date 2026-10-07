@@ -17,7 +17,23 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-162-sweep-d3e1f904
+    asserted_on: 2026-10-07
+    type: counterexample
+    scope: α = 1/2
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-07
+    source:
+      title: "formal-conjectures PR #6675: feat(ErdosProblems/162): add Erdős Problem 162"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6675
+      kind: github
+      quote: the failure of the claim at α = 1/2
+    authors:
+      - AItoBit
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 162". Classifier rationale: The PR states the conjecture fails for α=1/2, providing a counterexample. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

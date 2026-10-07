@@ -16,7 +16,22 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-129-sweep-a5354165
+    asserted_on: 2026-10-07
+    type: disproved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-07
+    source:
+      title: "formal-conjectures PR #6655: feat(ErdosProblems): add Erdős Problem 129"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6655
+      kind: github
+      quote: The statement as written has a negative answer, as observed by Antonio Girao.
+    authors:
+      - AItoBit
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 129". Classifier rationale: The PR states the conjecture is false, indicating a disproof. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

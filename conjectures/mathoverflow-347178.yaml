@@ -37,7 +37,23 @@ openness_basis:
   meaning: no_published_solution_known_to_curator
   asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: mathoverflow-347178-sweep-1e08bfb5
+    asserted_on: 2026-10-07
+    type: proved
+    scope: bounded-only variant
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-07
+    source:
+      title: "formal-conjectures PR #6668: feat(Mathoverflow/347178): resolve the bounded-only variant"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6668
+      kind: github
+      quote: Records a positive answer to `mathoverflow_347178.variants.bounded_only`
+    authors:
+      - inozemtsev
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Mathoverflow 347178". Classifier rationale: The PR claims a proof for the bounded-only version of the conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Mathoverflow/347178.lean
     source: google-deepmind/formal-conjectures
