@@ -34,6 +34,36 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/380
       kind: dataset
+  - id: erdos-380-sweep-f7116c8e
+    asserted_on: 2026-10-07
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-07
+    source:
+      title: "formal-conjectures PR #6890: feat(ErdosProblems): formalize problem 380 and structural results"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6890
+      kind: github
+      quote: Mark the problem solved and cite Tao, arXiv:2603.27990v3, Theorem 1.7
+    authors:
+      - AItoBit
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 380". Classifier rationale: The pull request explicitly declares the conjecture solved and cites a theorem as proof. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: erdos-380-sweep-1aab3bbd
+    asserted_on: 2026-10-07
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-07
+    source:
+      title: "formal-conjectures PR #6887: feat(ErdosProblems): add Erdős Problem 380"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6887
+      kind: github
+      quote: proved by Tao
+    authors:
+      - AItoBit
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 380". Classifier rationale: The PR description states the conjecture has been proved by Tao. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
