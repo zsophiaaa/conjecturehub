@@ -42,7 +42,23 @@ openness_basis:
   meaning: no_published_solution_known_to_curator
   asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: zariski-cancellation-sweep-4f321b8a
+    asserted_on: 2026-10-07
+    type: counterexample
+    scope: over ℂ, n = 4
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-07
+    source:
+      title: "formal-conjectures PR #6898: feat: mark problems solved in the OpenAI math release and link formal proofs"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6898
+      kind: github
+      quote: Zariski cancellation (false over ℂ, n = 4)
+    authors:
+      - mo271
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Zariski Cancellation". Classifier rationale: The document states the conjecture is false over ℂ in dimension 4, indicating a counterexample. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Arxiv/2208.14736/ZariskiCancellation.lean
     source: google-deepmind/formal-conjectures

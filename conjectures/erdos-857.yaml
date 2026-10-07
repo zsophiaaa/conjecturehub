@@ -27,7 +27,22 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: erdos-857-sweep-7987b5e0
+    asserted_on: 2026-10-07
+    type: partial
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-07
+    source:
+      title: "formal-conjectures PR #4268: feat(Paper): three-sunflower-free set systems"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/4268
+      kind: github
+      quote: record the v2 solved statements, the Mantel-tight structural reduction, and the open t >= 3 / t = 2 constant questions
+    authors:
+      - SproutSeeds
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 857". Classifier rationale: The PR mentions open questions related to Erdős Problem 857, indicating no full resolution but partial progress. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/857.lean
     source: google-deepmind/formal-conjectures
