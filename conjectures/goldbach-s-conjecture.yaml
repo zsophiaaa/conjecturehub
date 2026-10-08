@@ -37,7 +37,23 @@ openness_basis:
   meaning: no_published_solution_known_to_curator
   asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: goldbach-s-conjecture-sweep-77a9298a
+    asserted_on: 2026-10-08
+    type: partial
+    scope: up to 10^13
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-08
+    source:
+      title: A Lock-Free, Fully GPU-Resident Architecture for the Verification of Goldbach's Conjecture
+      url: https://arxiv.org/abs/2603.07850
+      kind: arxiv
+      quote: It verifies Goldbach's conjecture to $10^{12}$ ... and to $10^{13}$ in 3246 seconds on a single NVIDIA RTX 5090...
+    authors:
+      - Isaac Llorente-Saguer
+    notes: "Filed automatically by the arXiv new submissions sweep. Matched on \"Goldbach's conjecture\". Classifier rationale: The document reports computational verification up to a large bound, which is partial progress, not a full proof. Unreviewed: this records that a claim was made, not that it is correct."
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/GoldbachConjecture.lean
     source: google-deepmind/formal-conjectures

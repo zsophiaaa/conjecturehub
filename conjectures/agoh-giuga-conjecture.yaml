@@ -93,7 +93,22 @@ openness_basis:
   meaning: no_published_solution_known_to_curator
   asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: agoh-giuga-conjecture-sweep-05259f2b
+    asserted_on: 2026-10-08
+    type: partial
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-08
+    source:
+      title: Idempotence in Carmichael and Giuga numbers and its application to the Agoh-Giuga conjecture
+      url: https://arxiv.org/abs/2610.09129
+      kind: arxiv
+      quote: we will find a new alternative condition, based on idempotence, that a number must satisfy to be a counterexample to the Agoh-Giuga conjecture and which, therefore, presumably, no number will ever satisfy.
+    authors:
+      - Miguel Ángel López
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Agoh-Giuga conjecture". Classifier rationale: The paper offers a new condition for potential counterexamples but does not claim a proof or disproof of the conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/AgohGiuga.lean
     source: google-deepmind/formal-conjectures
