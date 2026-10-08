@@ -96,7 +96,23 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: erdos-349-sweep-4e4ee2e7
+    asserted_on: 2026-10-08
+    type: partial
+    scope: t = 3/2, α = 2
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-08
+    source:
+      title: "formal-conjectures: ErdosProblems/349: (3/2, 2) is not a good pair (mod-3 obstruction) (#4234) ## Summary Stacked on #4233 (its commits are included). Adds one further **fully-proven partial result** on the open Erdős Pr"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/9cccfebf9824ccaf25ccbf8a13044960b9c5aff5
+      kind: github
+      quote: "`theorem three_halves_two_not_isGoodPair : ¬ IsGoodPair (3/2) 2`"
+    authors:
+      - cepadugato
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 349". Classifier rationale: The document proves a specific case of the conjecture is false, constituting a partial result. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/349.lean
     source: google-deepmind/formal-conjectures

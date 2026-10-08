@@ -17,7 +17,39 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-436-sweep-fc450512
+    asserted_on: 2026-10-08
+    type: resolved_by_prior_literature
+    scope: two-residue limit superior finiteness
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-08
+    source:
+      title: "formal-conjectures PR #6961: feat(ErdosProblems): formalize problem 436 including growth rates"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6961
+      kind: github
+      quote: fin... finiteness of the two-residue limit superior (solved by Hildebrand)
+    authors:
+      - AItoBit
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 436". Classifier rationale: The PR states that the two‑residue finiteness question has already been solved by Hildebrand. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: erdos-436-sweep-388c656d
+    asserted_on: 2026-10-08
+    type: partial
+    scope: Λ(k,2) finite for all k (part i)
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-08
+    source:
+      title: "formal-conjectures PR #6944: feat(ErdosProblems/436): add Erdős Problem 436"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6944
+      kind: github
+      quote: "Solved: `parts.i` ($\\Lambda(k,2) < \\infty$ for all $k \\geq 2$, Hildebrand [Hi91]) as `answer(True)`."
+    authors:
+      - veljjanoski
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 436". Classifier rationale: The document reports part i proved and part ii still open, indicating a partial resolution. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

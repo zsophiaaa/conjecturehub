@@ -16,7 +16,23 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2026-04-16
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-670-sweep-9b35b6b4
+    asserted_on: 2026-10-08
+    type: disproved
+    scope: uniform in d
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-08
+    source:
+      title: "formal-conjectures: feat(ErdosProblems/670): add Erdős Problem 670 (#6792) Adds Erdős Problem 670: $n$ points in $\\mathbb{R}^d$ whose pairwise distances differ by at least $1$. Is the diameter at least $(1+o(1))n^2$? - T"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/e87ec728e936c3a42ab1d6dc26ee7854134a2949
+      kind: github
+      quote: Ho's counterexample in dimension n^2 - n ...; and the reading with o(1) uniform in d, which Ho's result disproves.
+    authors:
+      - veljjanoski
+    notes: "Filed automatically by the formal-conjectures commits sweep. Matched on \"Erdős Problem 670\". Classifier rationale: The document states that Ho's result provides a counterexample that disproves the uniform‑in‑d version of the conjecture. Unreviewed: this records that a claim was made, not that it is correct."
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

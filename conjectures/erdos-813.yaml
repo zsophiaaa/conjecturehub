@@ -15,7 +15,23 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-813-sweep-66fc050a
+    asserted_on: 2026-10-08
+    type: partial
+    scope: lower half (lower bound) of the question
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-08
+    source:
+      title: "formal-conjectures PR #6825: feat(ErdosProblems/813): add Erdős Problem 813"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6825
+      kind: github
+      quote: "Solved: ... and, as a consequence, the lower half of the question (`variants.lower`, `answer(True)`). So only the upper half is open."
+    authors:
+      - veljjanoski
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 813". Classifier rationale: The document claims the lower bound part of the conjecture has been proved, leaving only the upper half unresolved. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
