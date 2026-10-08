@@ -15,7 +15,23 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-388-sweep-f3d3f2d6
+    asserted_on: 2026-10-07
+    type: partial
+    scope: for a,b ≤12, k1 ≤8, 3 ≤ k2 ≤8, product ≤10^15
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-08
+    source:
+      title: "formal-conjectures PR #6797: feat(ErdosProblems/388): add Erdős Problem 388"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6797
+      kind: github
+      quote: A search with $a, b \leq 12$, $k_1 \leq 8$, $3 \leq k_2 \leq 8$ and products up to $10^{15}$ found at most $3$ solutions for each $(a, b, k_1, k_2)$.
+    authors:
+      - veljjanoski
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 388". Classifier rationale: The document reports computational evidence but does not claim a proof or disproof. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

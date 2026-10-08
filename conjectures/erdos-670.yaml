@@ -16,7 +16,23 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2026-04-16
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-670-sweep-1fe38a0d
+    asserted_on: 2026-10-07
+    type: counterexample
+    scope: reading with o(1) uniform in d
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-08
+    source:
+      title: "formal-conjectures PR #6792: feat(ErdosProblems/670): add Erdős Problem 670"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6792
+      kind: github
+      quote: Ho's counterexample ... which Ho's result disproves.
+    authors:
+      - veljjanoski
+    notes: "Filed automatically by the formal-conjectures pull requests sweep. Matched on \"Erdős Problem 670\". Classifier rationale: The document reports Ho's counterexample disproving the uniform‑in‑d version of the conjecture. Unreviewed: this records that a claim was made, not that it is correct."
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

@@ -26,7 +26,22 @@ openness_basis:
   meaning: no_published_solution_known_to_curator
   asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: chvatal-s-conjecture-sweep-4112bad2
+    asserted_on: 2026-10-07
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-08
+    source:
+      title: "formal-conjectures: chore: update status of Chvatal's conjecture (#6886) The conjecture was proved last month in https://arxiv.org/abs/2609.19123 and then formalized in https://github.com/boonsuan/chvatal"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/73b4f4cda1e465c6fb5b2206818ed2f6699aa07f
+      kind: github
+      quote: The conjecture was proved last month in https://arxiv.org/abs/2609.19123
+    authors:
+      - dwrensha
+    notes: "Filed automatically by the formal-conjectures commits sweep. Matched on \"Chvátal's Conjecture\". Classifier rationale: The document explicitly claims a proof of the conjecture. Unreviewed: this records that a claim was made, not that it is correct."
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Paper/Chvatal.lean
     source: google-deepmind/formal-conjectures
