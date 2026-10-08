@@ -16,7 +16,23 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-604-sweep-2fde9f62
+    asserted_on: 2026-10-07
+    type: partial
+    scope: lower bound n^{c-o(1)}
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-08
+    source:
+      title: "formal-conjectures PR #6796: feat(ErdosProblems/604): add Erdős Problem 604"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6796
+      kind: github
+      quote: "Solved: the grid upper bound $O(n/\\sqrt{\\log n})$, and the Katz–Tardos lower bound $n^{c-o(1)}$ with $c = (48-14e)/(55-16e)$."
+    authors:
+      - veljjanoski
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 604". Classifier rationale: The document notes partial progress (solved bounds) while stating the main question remains open. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
