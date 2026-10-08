@@ -16,7 +16,23 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-766-sweep-6288055f
+    asserted_on: 2026-10-08
+    type: partial
+    scope: for k ≥ 3 and all large n, the case l = ⌊k^2/4⌋+1
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-08
+    source:
+      title: "formal-conjectures PR #6964: feat(ErdosProblems/766): add Erdős Problem 766"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6964
+      kind: github
+      quote: "Solved: `variants.dirac_erdos`, $f(n;k,\\lfloor k^2/4\\rfloor+1) \\leq \\lfloor n^2/4 \\rfloor + 1$ for $k \\geq 3$ and all large $n$."
+    authors:
+      - veljjanoski
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 766". Classifier rationale: The document reports a specific partial result but does not claim a full proof or disproof of the conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

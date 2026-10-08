@@ -58,7 +58,23 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: erdos-184-sweep-b47b8f3d
+    asserted_on: 2026-10-08
+    type: partial
+    scope: K_{3,n-3} decompositions
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-08
+    source:
+      title: "formal-conjectures: feat: link formal proofs for Erdős 508, Erdős 184 and Agoh–Giuga (#6819) This PR adds `formal_proof` links to kernel-checked Lean 4 proofs of three `research solved` statements: Erdős 508 (`HadwigerNe"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/99111aa0bca98596efe062d92347881166dfb98e
+      kind: github
+      quote: there is $c > 0$ such that, for all sufficiently large $n$, every decomposition of $K_{3,n-3}$ (on vertex set \{0, \dots, n-1\}) into edge-disjoint cycles and edges uses at least $(1+c) n$ pieces.
+    authors:
+      - anatoliiohorodnyk
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 184". Classifier rationale: The document reports a formal proof of a lower‑bound variant, which is genuine partial progress on Erdős 184. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/184.lean
     source: google-deepmind/formal-conjectures
