@@ -17,7 +17,39 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-382-sweep-bb682937
+    asserted_on: 2026-10-08
+    type: partial
+    scope: v - u ≤ v^{1/2+o(1)} bound
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-08
+    source:
+      title: "formal-conjectures PR #6799: feat(ErdosProblems/382): add Erdős Problem 382"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6799
+      kind: github
+      quote: "Solved: $v - u \\leq v^{1/2+o(1)}$, which Erdős and Graham [ErGr80] report follows from results of Ramachandra."
+    authors:
+      - veljjanoski
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 382". Classifier rationale: The document provides a partial result but states the conjecture remains open. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: erdos-382-sweep-692fd1bb
+    asserted_on: 2026-10-08
+    type: partial
+    scope: v - u \leq v^{1/2+o(1)}
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-08
+    source:
+      title: "formal-conjectures: feat(ErdosProblems/382): add Erdős Problem 382 (#6799) Adds Erdős Problem 382: if the largest prime factor of $\\prod_{u \\leq m \\leq v} m$ appears with exponent at least $2$, is $v - u = v^{o(1)}$? Can"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/1f204a8563fdef1730248be068961f879fa78cbd
+      kind: github
+      quote: "Solved: $v - u \\leq v^{1/2+o(1)}$, which Erdős and Graham [ErGr80] report follows from results of Ramachandra."
+    authors:
+      - veljjanoski
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 382". Classifier rationale: The commit notes the conjecture is open but records a known partial bound. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

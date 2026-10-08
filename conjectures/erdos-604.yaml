@@ -16,7 +16,23 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-604-sweep-6b91f5ef
+    asserted_on: 2026-10-08
+    type: partial
+    scope: partial bounds (upper O(n/√log n), lower n^{c‑o(1)})
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-08
+    source:
+      title: "formal-conjectures: feat(ErdosProblems/604): add Erdős Problem 604 (#6796) Adds Erdős Problem 604, the pinned distance problem: must some point of $A \\subset \\mathbb{R}^2$, $|A| = n$, have $\\gg n^{1-o(1)}$ (or even $\\gg "
+      url: https://github.com/google-deepmind/formal-conjectures/commit/5a5f6c719161e58b3bcb8f3cfc0261cd4c77f0e5
+      kind: github
+      quote: "Solved: the grid upper bound $O(n/\\sqrt{\\log n})$, and the Katz–Tardos lower bound $n^{c-o(1)}$."
+    authors:
+      - veljjanoski
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 604". Classifier rationale: The commit notes solved partial results but states the main question remains open. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

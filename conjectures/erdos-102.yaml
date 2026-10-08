@@ -15,7 +15,23 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-102-sweep-1cd7eb9f
+    asserted_on: 2026-10-08
+    type: proved
+    scope: hunter and upper_sqrt variants
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-08
+    source:
+      title: "formal-conjectures PR #6821: feat(ErdosProblems/102): formal proofs of the hunter and upper_sqrt variants"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6821
+      kind: github
+      quote: "feat(ErdosProblems/102): formal proofs of the hunter and upper_sqrt variants."
+    authors:
+      - anatoliiohorodnyk
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 102". Classifier rationale: The pull request reports that Lean‑checked formal proofs of two variants of Erdős Problem 102 have been completed. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

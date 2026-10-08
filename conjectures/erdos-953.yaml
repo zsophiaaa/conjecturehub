@@ -18,7 +18,23 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-953-sweep-aabbdc6d
+    asserted_on: 2026-10-07
+    type: partial
+    scope: upper bound M(R)=O(sqrt R)
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-08
+    source:
+      title: "formal-conjectures PR #3977: Add Erdős 953 upper-bound formal proof link"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/3977
+      kind: github
+      quote: The theorem formalizes ... that M(R) is O(sqrt R).
+    authors:
+      - AllenGrahamHart
+    notes: "Filed automatically by the formal-conjectures pull requests sweep. Matched on \"Erdős Problem 953\". Classifier rationale: The PR announces a formal proof of the conjecture's upper‑bound part, not the full statement. Unreviewed: this records that a claim was made, not that it is correct."
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

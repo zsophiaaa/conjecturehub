@@ -10,7 +10,39 @@ openness_basis:
   meaning: unknown
   asserted_by: wikidata
   note: Identity record only. No statement or status has been ingested for this conjecture yet.
-claims: []
+claims:
+  - id: fontaine-mazur-conjecture-sweep-05dd2ff6
+    asserted_on: 2026-10-08
+    type: proved
+    scope: p=3, regular two-dimensional case over Q
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-08
+    source:
+      title: On the Fontaine-Mazur conjecture for $p=3$
+      url: https://arxiv.org/abs/2412.06812
+      kind: arxiv
+      quote: We prove the remaining $p=3$ cases of the regular two-dimensional Fontaine-Mazur conjecture over $\mathbb{Q}$
+    authors:
+      - Xinyao Zhang
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Fontaine–Mazur conjecture". Classifier rationale: The abstract explicitly claims a proof of the remaining p=3 cases. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: fontaine-mazur-conjecture-sweep-de6f8876
+    asserted_on: 2026-10-08
+    type: partial
+    scope: residually reducible, multiplicity-free case (p≥5, and p=3 outside one explicit local dihedral case)
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-08
+    source:
+      title: Modular points and dimensions of Eisenstein deformation spaces
+      url: https://arxiv.org/abs/2512.21249
+      kind: arxiv
+      quote: we establish the irregular Fontaine--Mazur conjecture in the residually reducible, multiplicity-free case for $p\geq 5$, and for $p=3$ outside one explicit local dihedral case.
+    authors:
+      - Xinyao Zhang
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Fontaine–Mazur conjecture". Classifier rationale: The paper claims to prove a specific case of the Fontaine–Mazur conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q5465120
     source: wikidata

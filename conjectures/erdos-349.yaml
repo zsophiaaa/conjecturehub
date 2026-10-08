@@ -96,7 +96,39 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: erdos-349-sweep-a6afc390
+    asserted_on: 2026-10-07
+    type: partial
+    scope: t ≥ 3 and α ∈ [5/3, 2)
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-08
+    source:
+      title: "formal-conjectures PR #4235: ErdosProblems/349: entire-completeness single-gap criterion and the band [5/3, 2)"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/4235
+      kind: github
+      quote: "`floorSeq_not_entirelyComplete_of_le_two` — application: for `t ≥ 3` and `α ∈ [5/3, 2)`, the sequence `⌊t·αⁿ⌋` is **not entirely complete**"
+    authors:
+      - cepadugato
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 349". Classifier rationale: The document proves non‑entire‑completeness for a specific parameter range, which is a partial disproof of the conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: erdos-349-sweep-a4b48ea9
+    asserted_on: 2026-10-07
+    type: partial
+    scope: t ≥ 2, 1 < α ≤ 1 + 1/(2⌊t⌋+2)
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-08
+    source:
+      title: "formal-conjectures PR #4485: ErdosProblems/349: (t, α) is a good pair for all t ≥ 2 and 1 < α ≤ 1 + 1/(2⌊t⌋+2)"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/4485
+      kind: github
+      quote: for **every** $t \ge 2$ ... and every $\alpha$ with $1 < \alpha \le 1 + \frac{1}{2\lfloor t\rfloor + 2}$, the pair $(t, \alpha)$ is a good pair
+    authors:
+      - cepadugato
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 349". Classifier rationale: The PR reports a new partial result covering a specific sub‑band of parameters but explicitly states it does not resolve the full conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/349.lean
     source: google-deepmind/formal-conjectures

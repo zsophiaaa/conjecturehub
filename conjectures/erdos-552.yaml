@@ -18,7 +18,23 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-552-sweep-7728db6a
+    asserted_on: 2026-10-08
+    type: partial
+    scope: the bound R(C4, S_{n+1}) ≤ R(C4, S_n) + 2
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-08
+    source:
+      title: "formal-conjectures PR #6904: ErdosProblems/552: Chen's bound R(C4, S_{n+1}) ≤ R(C4, S_n) + 2 (solved)"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6904
+      kind: github
+      quote: The main question of Erdős Problem 552 stays open.
+    authors:
+      - agnt-gg
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 552". Classifier rationale: Document reports a solved variant but states the original problem remains open. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

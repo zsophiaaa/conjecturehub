@@ -66,7 +66,23 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: erdos-1-sweep-28c0b60c
+    asserted_on: 2026-10-08
+    type: partial
+    scope: n = 6
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-08
+    source:
+      title: "formal-conjectures PR #4118: ErdosProblems/1 least_N_6: prove via {11,17,20,22,23,24} witness"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/4118
+      kind: github
+      quote: the smallest `N` admitting a 6-element sum-distinct subset of `{1, …, N}` is 24
+    authors:
+      - koishi70
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 1". Classifier rationale: The document proves the conjecture for the specific case of six elements. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/1.lean
     source: google-deepmind/formal-conjectures
