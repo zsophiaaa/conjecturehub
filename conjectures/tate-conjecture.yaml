@@ -10,7 +10,23 @@ openness_basis:
   meaning: no_solution_known_to_community
   asserted_by: wikipedia
   note: Listed under "Unsolved problems in number theory" on English Wikipedia.
-claims: []
+claims:
+  - id: tate-conjecture-sweep-73287389
+    asserted_on: 2026-10-09
+    type: proved
+    scope: abelian fivefolds over finite fields
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-09
+    source:
+      title: The Tate conjecture for abelian fivefolds over finite fields
+      url: https://arxiv.org/abs/2609.06265
+      kind: arxiv
+      quote: We prove the Tate conjecture for abelian fivefolds over finite fields.
+    authors:
+      - Ningyi Li
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Tate conjecture". Classifier rationale: The abstract explicitly states a proof of the Tate conjecture for this class of varieties. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q7687975
     source: wikidata

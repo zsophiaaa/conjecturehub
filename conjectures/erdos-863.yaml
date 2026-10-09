@@ -31,6 +31,22 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/863
       kind: dataset
+  - id: erdos-863-sweep-eccf6de0
+    asserted_on: 2026-10-09
+    type: proved
+    scope: for r ≥ 2
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-09
+    source:
+      title: "formal-conjectures PR #6108: Add Erdős Problem 863 (B₂[r] sets: sums versus differences), linked to the formal proof"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6108
+      kind: github
+      quote: "research solved', 'answer(True)': for `r ≥ 2`, if `sumMax r N ∼ c √N` and `diffMax r N ∼ c' √N` then `c ≠ c'`, resp. `c' < c`"
+    authors:
+      - Konamiu
+    notes: "Filed automatically by the formal-conjectures pull requests sweep. Matched on \"Erdős Problem 863\". Classifier rationale: The pull request states the conjecture's parts are solved with a formal proof. Unreviewed: this records that a claim was made, not that it is correct."
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
