@@ -28,6 +28,22 @@ claims:
       title: erdosproblems.com records this problem as "decidable"
       url: https://www.erdosproblems.com/475
       kind: dataset
+  - id: erdos-475-sweep-897d1eea
+    asserted_on: 2026-10-08
+    type: partial
+    scope: all sufficiently large primes
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-09
+    source:
+      title: "formal-conjectures PR #6430: Erdős Problem 475: valid orderings with distinct partial sums"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6430
+      kind: github
+      quote: the source records the problem as proved for all sufficiently large primes and as resolved up to a finite check, so the universal statement is not proved.
+    authors:
+      - elio040208
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős problem 475". Classifier rationale: The PR notes existing partial results but does not claim a full proof or disproof. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
