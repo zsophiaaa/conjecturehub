@@ -10,7 +10,26 @@ openness_basis:
   meaning: unknown
   asserted_by: wikidata
   note: Identity record only. No statement or status has been ingested for this conjecture yet.
-claims: []
+claims:
+  - id: dittert-conjecture-sweep-f8ce1551
+    asserted_on: 2026-10-09
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-09
+    source:
+      title: A Proof of the Dittert Conjecture via Boundary Rigidity
+      url: https://arxiv.org/abs/2610.10545
+      kind: arxiv
+      quote: We prove the conjecture for every $n \geq 2$.
+    authors:
+      - Xinan Dai
+      - Wenhao Deng
+      - Yingdong Shi
+      - Tailin Wu
+      - Yuchen Yang
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Dittert conjecture". Classifier rationale: The abstract explicitly states a full proof of the Dittert conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q55609730
     source: wikidata

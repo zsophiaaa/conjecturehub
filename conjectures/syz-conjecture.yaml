@@ -10,7 +10,23 @@ openness_basis:
   meaning: unknown
   asserted_by: wikidata
   note: Identity record only. No statement or status has been ingested for this conjecture yet.
-claims: []
+claims:
+  - id: syz-conjecture-sweep-476486d0
+    asserted_on: 2026-10-09
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-09
+    source:
+      title: Hyperk\"ahler SYZ conjecture
+      url: https://arxiv.org/abs/2610.12277
+      kind: arxiv
+      quote: 'We prove the hyperk"ahler SYZ conjecture: the sections of some power of a non-trivial nef isotropic line bundle define a Lagrangian fibration.'
+    authors:
+      - Philip Engel
+      - Mirko Mauri
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "SYZ conjecture". Classifier rationale: The abstract explicitly states a proof of the hyperkähler SYZ conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q7395295
     source: wikidata

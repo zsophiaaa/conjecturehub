@@ -27,6 +27,36 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/157
       kind: dataset
+  - id: erdos-157-sweep-952b1ecb
+    asserted_on: 2026-10-09
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-09
+    source:
+      title: "formal-conjectures PR #6673: feat(ErdosProblems/157): add Erdős Problem 157"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6673
+      kind: github
+      quote: solved by Pilatte (Compositio Math. 2024, arXiv:2303.09659)
+    authors:
+      - AItoBit
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 157". Classifier rationale: The pull request notes the problem is solved by Pilatte. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: erdos-157-sweep-9cd6591f
+    asserted_on: 2026-10-09
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-09
+    source:
+      title: "formal-conjectures: feat(ErdosProblems/157): add Erdős Problem 157 (#6673) Adds [Erdős Problem 157](https://www.erdosproblems.com/157): does there exist an infinite Sidon set which is an asymptotic basis of order 3? **Co"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/87d97fa7626c7b39ee4c8565d3acfa5a048d6cae
+      kind: github
+      quote: "`erdos_157` (`research solved`, `answer(True)`): solved by Pilatte (Compositio Math. 2024, arXiv:2303.09659)."
+    authors:
+      - AItoBit
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 157". Classifier rationale: The document claims the conjecture has been solved by Pilatte. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

@@ -11,7 +11,22 @@ openness_basis:
   meaning: no_solution_known_to_community
   asserted_by: wikipedia
   note: Listed under "Unsolved problems in graph theory" on English Wikipedia.
-claims: []
+claims:
+  - id: hadwiger-conjecture-sweep-2186dfeb
+    asserted_on: 2026-10-09
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-09
+    source:
+      title: Tweaking the constant in the Linear Hadwiger Theorem
+      url: https://arxiv.org/abs/2610.10831
+      kind: arxiv
+      quote: Norin and Steiner recently proved the Linear Hadwiger Conjecture.
+    authors:
+      - David R. Wood
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Hadwiger conjecture". Classifier rationale: The abstract states that the conjecture has been proved. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q1128435
     source: wikidata

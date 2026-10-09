@@ -22,6 +22,24 @@ claims:
       url: https://en.wikipedia.org/wiki/Bogomolov_conjecture
       kind: wikipedia
     notes: Standing taken from English Wikipedia's categorisation (Wikipedia categorises this as proved). Nobody here has read the paper that settled it, which is what the secondary attestation says; replace this claim with one citing that paper when someone has it to hand.
+  - id: bogomolov-conjecture-sweep-7ba96732
+    asserted_on: 2026-10-09
+    type: proved
+    scope: over arbitrary globally valued fields
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-09
+    source:
+      title: Uniform Height Gaps in Arbitrary Characteristics
+      url: https://arxiv.org/abs/2610.11905
+      kind: arxiv
+      quote: we prove ... and proves the Bogomolov conjecture for an arbitrary globally valued field.
+    authors:
+      - Alice Lin
+      - Frank Lu
+      - Jit Wu Yap
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Bogomolov conjecture". Classifier rationale: The abstract explicitly states a proof of the Bogomolov conjecture in that setting. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q4937703
     source: wikidata
