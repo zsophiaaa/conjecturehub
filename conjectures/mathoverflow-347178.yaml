@@ -37,7 +37,39 @@ openness_basis:
   meaning: no_published_solution_known_to_curator
   asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: mathoverflow-347178-sweep-1e08bfb5
+    asserted_on: 2026-10-09
+    type: partial
+    scope: bounded-only variant
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-09
+    source:
+      title: "formal-conjectures PR #6668: feat(Mathoverflow/347178): resolve the bounded-only variant"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6668
+      kind: github
+      quote: records a positive answer to `mathoverflow_347178.variants.bounded_only`
+    authors:
+      - inozemtsev
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Mathoverflow 347178". Classifier rationale: The PR claims a proof for the bounded-only version, which is a partial resolution of the original conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: mathoverflow-347178-sweep-e2a07a91
+    asserted_on: 2026-10-09
+    type: partial
+    scope: assuming the function is bounded (bounded-only variant)
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-09
+    source:
+      title: "formal-conjectures: feat(Mathoverflow/347178): resolve the bounded-only variant (#6668) Records a positive answer to `mathoverflow_347178.variants.bounded_only` and links the complete Lean proof through `formal_proof usi"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/d01b1f0b9c8438c9e0d64ab3ef474355162752fb
+      kind: github
+      quote: Records a positive answer to `mathoverflow_347178.variants.bounded_only`
+    authors:
+      - inozemtsev
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Mathoverflow 347178". Classifier rationale: The commit claims a proof for the bounded-only variant, which is a restricted case of the original conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Mathoverflow/347178.lean
     source: google-deepmind/formal-conjectures

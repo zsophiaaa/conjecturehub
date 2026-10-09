@@ -14,7 +14,38 @@ openness_basis:
   meaning: no_solution_known_to_community
   asserted_by: wikipedia
   note: Listed under "Unsolved problems in number theory" on English Wikipedia.
-claims: []
+claims:
+  - id: riemann-hypothesis-sweep-e14e8cc9
+    asserted_on: 2026-10-09
+    type: reformulation
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-09
+    source:
+      title: Finite-radius Jensen and relative-entropy formulations of the Balazard--Saias--Yor criterion
+      url: https://arxiv.org/abs/2610.10584
+      kind: arxiv
+      quote: We give two explicit reformulations of a Balazard--Saias--Yor type criterion for the Riemann hypothesis.
+    authors:
+      - Henning Wunderlich
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Riemann hypothesis". Classifier rationale: The document presents reformulations of a criterion for RH without claiming a proof or disproof. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: riemann-hypothesis-sweep-8099c6dc
+    asserted_on: 2026-10-09
+    type: partial
+    scope: zero-free half-plane bound for Dirichlet L-functions
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-09
+    source:
+      title: Slightly improved zero-free half-planes for the quasi-Riemann hypothesis
+      url: https://arxiv.org/abs/2610.12234
+      kind: arxiv
+      quote: we slightly improve the bound ... to be B_new = 0.874957069799…
+    authors:
+      - Baiying Liu
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Riemann hypothesis". Classifier rationale: The paper reports a modest improvement in zero-free region, which is partial progress toward the Riemann hypothesis. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q205966
     source: wikidata

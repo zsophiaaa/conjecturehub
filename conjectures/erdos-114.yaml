@@ -28,6 +28,22 @@ claims:
       title: erdosproblems.com records this problem as "falsifiable"
       url: https://www.erdosproblems.com/114
       kind: dataset
+  - id: erdos-114-sweep-0fd0dc1a
+    asserted_on: 2026-10-09
+    type: partial
+    scope: "variants: large n, n=2, n=1"
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-09
+    source:
+      title: "formal-conjectures: feat(ErdosProblems): add Erdős Problem 114 (#6649) Fixes https://github.com/google-deepmind/formal-conjectures/issues/358 Adds [Erdős Problem 114](https://www.erdosproblems.com/114): is the length of "
+      url: https://github.com/google-deepmind/formal-conjectures/commit/636a800b20ce39d88f106e7d215c9ed00e66be9f
+      kind: github
+      quote: "`erdos_114.variants.large_n`: Tao's result for all sufficiently large $n$ (solved, `sorry`)."
+    authors:
+      - AItoBit
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 114". Classifier rationale: The commit records solved special cases but states the main question remains open. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

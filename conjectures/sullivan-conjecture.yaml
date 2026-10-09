@@ -26,6 +26,22 @@ claims:
       Standing taken from English Wikipedia's categorisation (Wikipedia categorises this as proved). Nobody here has read the paper that settled it, which is what the secondary attestation says; replace this claim with one citing that paper when someone has it to hand.
 
       Reviewed 2026-08-03: Sullivan's literal 1971 p-completion statement was false and had to be restated before it could be proved. Miller's theorem (Annals, 1984) settles the standard form; the non-trivial-action version followed from Dwyer–Miller–Neisendorfer, Carlsson and Lannes. See https://en.wikipedia.org/wiki/Sullivan_conjecture.
+  - id: sullivan-conjecture-sweep-74afce2d
+    asserted_on: 2026-10-09
+    type: partial
+    scope: single-graph case
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-09
+    source:
+      title: A linear upper bound for Berge saturation numbers
+      url: https://arxiv.org/abs/2610.11409
+      kind: arxiv
+      quote: "We prove the single-graph case: \\(\\text{sat}_k(n,\\text{Berge-}F)=O_{F,k}(n)\\) for every fixed integer \\(k\\ge2\\) and every fixed finite simple graph \\(F\\) with at least one edge."
+    authors:
+      - Tianying Xie
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Sullivan conjecture". Classifier rationale: The paper claims to prove the conjectured linear bound for the case of a single forbidden graph, which is a partial resolution of the conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q17089125
     source: wikidata

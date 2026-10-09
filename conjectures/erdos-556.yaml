@@ -30,6 +30,22 @@ claims:
       title: erdosproblems.com records this problem as "decidable"
       url: https://www.erdosproblems.com/556
       kind: dataset
+  - id: erdos-556-sweep-5f519859
+    asserted_on: 2026-10-08
+    type: partial
+    scope: asymptotically for large n
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-09
+    source:
+      title: "formal-conjectures PR #6012: feat(ErdosProblems): formalise Erdős Problem 556 (3-colour cycle Ramsey number)"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6012
+      kind: github
+      quote: Kept open since, although Łuczak gives the asymptotic and KSS05 / BeSk09 settle large odd / even $n$, the inequality for all $n$ is not established.
+    authors:
+      - raopratik
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 556". Classifier rationale: The PR states the conjecture remains open but cites partial results for large n. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
