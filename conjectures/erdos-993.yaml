@@ -27,6 +27,22 @@ claims:
       title: erdosproblems.com records this problem as "falsifiable"
       url: https://www.erdosproblems.com/993
       kind: dataset
+  - id: erdos-993-sweep-0e1a1990
+    asserted_on: 2026-10-09
+    type: partial
+    scope: spider variants S(2^k) and S(2^a,1)
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-09
+    source:
+      title: "formal-conjectures PR #4192: feat(ErdosProblems): Erdős 993 for trees and forests, with spider tie-balance variants"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/4192
+      kind: github
+      quote: "Erdős #993 remains open."
+    authors:
+      - AlperTheKing
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős #993". Classifier rationale: The document reports solved variants but states the main conjecture is still open. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

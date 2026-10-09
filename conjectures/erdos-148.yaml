@@ -19,7 +19,39 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-148-sweep-a4b7691a
+    asserted_on: 2026-10-08
+    type: partial
+    scope: cases k ≤ 3
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-09
+    source:
+      title: "formal-conjectures PR #6663: feat(ErdosProblems/148): add small values of F"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6663
+      kind: github
+      quote: "`F_two : F 2 = 0` (proved)."
+    authors:
+      - AItoBit
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 148". Classifier rationale: The PR claims proofs for the small cases k=2 and k=3, which is partial progress on Erdős Problem 148. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: erdos-148-sweep-a46b740b
+    asserted_on: 2026-10-08
+    type: partial
+    scope: cases k ≤ 3
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-09
+    source:
+      title: "formal-conjectures: feat(ErdosProblems/148): add small values of F (#6663) Adds small values of `F k` to Erdős Problem 148. - `F_two : F 2 = 0` (proved). - `F_three : F 3 = 1` (proved). The only solution is $1 = 1/2 + 1/"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/f2890580d1d9630c6baa1e5124edd518b6cdc23c
+      kind: github
+      quote: "`F_two : F 2 = 0` (proved)."
+    authors:
+      - AItoBit
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 148". Classifier rationale: The commit reports proofs for the small cases k=2 and k=3, which are partial progress on Erdős Problem 148. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
