@@ -28,6 +28,22 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/496
       kind: dataset
+  - id: erdos-496-sweep-9fb0af1f
+    asserted_on: 2026-10-10
+    type: proved
+    scope: positive coefficient hypothesis
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-10
+    source:
+      title: "formal-conjectures PR #7044: feat(ErdosProblems): add problem 496 with the positive coefficient hypothesis"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/7044
+      kind: github
+      quote: State the solved positive‑coefficient question with `answer(True)` and cite Margulis [Ma89].
+    authors:
+      - AItoBit
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős problem 496". Classifier rationale: The PR asserts that the positive‑coefficient version of Erdős Problem 496 is solved, citing Margulis. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

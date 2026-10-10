@@ -15,7 +15,22 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-460-sweep-35ea49d8
+    asserted_on: 2026-10-10
+    type: reformulation
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-10
+    source:
+      title: "formal-conjectures PR #7019: feat(ErdosProblems): add truncated questions for problem 460"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/7019
+      kind: github
+      quote: Adds all three truncated reciprocal-sum questions for Erdős problem 460 ... These formulations follow the displayed truncated question and retain the historical variant explicitly.
+    authors:
+      - AItoBit
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős problem 460". Classifier rationale: The document introduces truncated versions of the problem, reformulating the original conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

@@ -10,7 +10,23 @@ openness_basis:
   meaning: no_solution_known_to_community
   asserted_by: wikipedia
   note: Listed under "Unsolved problems in geometry" on English Wikipedia.
-claims: []
+claims:
+  - id: hilbert-smith-conjecture-sweep-4ba7be9b
+    asserted_on: 2026-10-10
+    type: partial
+    scope: second-countable smooth variant
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-10
+    source:
+      title: "formal-conjectures PR #7043: Hilbert–Smith: add second-countable variants with a formal proof"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/7043
+      kind: github
+      quote: Adds two solved variants to `FormalConjectures/HilbertProblems/5.lean`
+    authors:
+      - adbrw
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Hilbert–Smith conjecture". Classifier rationale: The PR proves restricted second‑countable variants while stating the full Hilbert–Smith conjecture remains open. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q5761258
     source: wikidata
