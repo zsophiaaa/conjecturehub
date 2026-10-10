@@ -55,7 +55,23 @@ openness_basis:
   meaning: no_published_solution_known_to_curator
   asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: inverse-galois-problem-sweep-e81b2463
+    asserted_on: 2026-10-10
+    type: partial
+    scope: abelian and cyclic groups
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-10
+    source:
+      title: "formal-conjectures PR #6956: feat: link formal proofs for Gerstenhaber, inverse Galois (abelian, cyclic), Kaplansky u ≠ 3 and three more"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6956
+      kind: github
+      quote: inverse Galois problem for abelian and cyclic groups
+    authors:
+      - anatoliiohorodnyk
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Inverse Galois problem". Classifier rationale: The PR links formal proofs that settle the conjecture for abelian and cyclic groups only. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/InverseGalois.lean
     source: google-deepmind/formal-conjectures
