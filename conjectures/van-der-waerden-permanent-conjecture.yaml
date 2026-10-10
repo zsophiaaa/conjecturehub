@@ -12,7 +12,22 @@ openness_basis:
   meaning: unknown
   asserted_by: wikidata
   note: Identity record only. No statement or status has been ingested for this conjecture yet.
-claims: []
+claims:
+  - id: van-der-waerden-permanent-conjecture-sweep-91d88258
+    asserted_on: 2026-10-10
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-10
+    source:
+      title: "formal-conjectures PR #7064: feat(OEIS/1818): link Lean proof of conjecture 1"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/7064
+      kind: github
+      quote: proved mathematically by She, Sun and Xia (Theorem 1.3(ii)).
+    authors:
+      - VictorLiwentao
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "permanent". Classifier rationale: The document states the conjecture has been proved and formalized in Lean. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q16636852
     source: wikidata

@@ -44,7 +44,22 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-09-28
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: erdos-1054-sweep-9d063336
+    asserted_on: 2026-10-10
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-10
+    source:
+      title: "formal-conjectures PR #7098: feat(ErdosProblems/1054): mark parts solved and link the formal proof"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/7098
+      kind: github
+      quote: marks all three parts of Erdős Problem 1054 as solved with links to the registered Lean 4 proofs.
+    authors:
+      - linrock
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 1054". Classifier rationale: The pull request states that formal Lean 4 proofs for all parts of the problem have been provided, indicating a claimed resolution. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/1054.lean
     source: google-deepmind/formal-conjectures
