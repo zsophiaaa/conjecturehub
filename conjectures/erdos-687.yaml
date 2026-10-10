@@ -18,7 +18,23 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-687-sweep-a8904c0c
+    asserted_on: 2026-10-09
+    type: partial
+    scope: upper bound $Y(x) \ll x^2$
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-10
+    source:
+      title: "formal-conjectures PR #6864: feat(ErdosProblems/687): add Erdős Problem 687"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6864
+      kind: github
+      quote: "Solved: $Y(x) \\ll x^2$ (from Iwaniec's bound for Jacobsthal's function)"
+    authors:
+      - veljjanoski
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 687". Classifier rationale: The document reports a weaker bound as a solved result, which is partial progress on the conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

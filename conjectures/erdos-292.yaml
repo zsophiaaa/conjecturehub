@@ -30,6 +30,22 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/292
       kind: dataset
+  - id: erdos-292-sweep-7c325e7c
+    asserted_on: 2026-10-10
+    type: partial
+    scope: closure under doubling, closure under multiplication, and prime-power exclusion variants
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-10
+    source:
+      title: "formal-conjectures PR #7059: feat(ErdosProblems/292): prove three Egyptian-fraction variants"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/7059
+      kind: github
+      quote: "I prove three elementary solved variants of Erdős 292: closure under doubling, closure under multiplication, and exclusion of positive prime powers from the set of largest denominators of Egyptian-fraction representations of one."
+    authors:
+      - bengoechea
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős problem 292". Classifier rationale: The PR claims proofs of specific variants but not the full conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

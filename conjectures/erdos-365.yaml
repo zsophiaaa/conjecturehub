@@ -19,7 +19,23 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-09-20
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-365-sweep-bcd8c2ee
+    asserted_on: 2026-10-09
+    type: disproved
+    scope: first question
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-10
+    source:
+      title: "formal-conjectures: feat(ErdosProblems): prove first part of problem 365 (#6881) Prove the negative answer to the first question of Erdős Problem 365 using Golomb's pair `12167 = 23^3` and `12168 = 2^3 * 3^2 * 13^2`. Che"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/dc6995d9248a8e5bde2587b1f219b981cbf48acb
+      kind: github
+      quote: Prove the negative answer to the first question of Erdős Problem 365 using Golomb's pair `12167 = 23^3` and `12168 = 2^3 * 3^2 * 13^2`.
+    authors:
+      - AItoBit
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 365". Classifier rationale: The commit claims a proof that the first question has a negative answer. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

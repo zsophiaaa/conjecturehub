@@ -18,7 +18,23 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-654-sweep-67a872a4
+    asserted_on: 2026-10-10
+    type: disproved
+    scope: the (1‑o(1))n version
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-10
+    source:
+      title: "formal-conjectures PR #6798: feat(ErdosProblems/654): add Erdős Problem 654"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6798
+      kind: github
+      quote: "Solved, negative: the $(1-o(1))n$ version. The construction of [Fe26] ... has ... at most $3m-1$ distances from each point;"
+    authors:
+      - veljjanoski
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 654". Classifier rationale: The document states a construction that disproves the (1‑o(1))n distance claim. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

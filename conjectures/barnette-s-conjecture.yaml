@@ -11,7 +11,22 @@ openness_basis:
   meaning: no_solution_known_to_community
   asserted_by: wikipedia
   note: Listed under "Unsolved problems in graph theory" on English Wikipedia.
-claims: []
+claims:
+  - id: barnette-s-conjecture-sweep-e3c44f73
+    asserted_on: 2026-10-10
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: secondary
+    state: active
+    recorded_on: 2026-10-10
+    source:
+      title: Barnette's conjecture
+      url: https://en.wikipedia.org/wiki/Barnette's_conjecture
+      kind: wikipedia
+      quote: add purported proof
+    authors:
+      - Furorimpius
+    notes: "Filed automatically by the Wikipedia edits sweep. Matched on \"Barnette's conjecture\". Classifier rationale: The edit summary claims a proof of Barnette's conjecture was added. Unreviewed: this records that a claim was made, not that it is correct."
 provenance:
   - url: https://www.wikidata.org/wiki/Q4861653
     source: wikidata
