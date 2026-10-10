@@ -13,7 +13,23 @@ openness_basis:
   meaning: unknown
   asserted_by: wikidata
   note: Identity record only. No statement or status has been ingested for this conjecture yet.
-claims: []
+claims:
+  - id: hilbert-s-twelfth-problem-sweep-c0044f18
+    asserted_on: 2026-10-09
+    type: proved
+    scope: real quadratic fields
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-10
+    source:
+      title: Last week I was finally ready to start learning the relevant math and working on the problem, but then Radchenko and Wheeler dropped an LLM-generated proof (based on an earlier LLM
+      url: https://mathstodon.xyz/@MarisOzols/117413021953315546
+      kind: mastodon
+      quote: And it also resolved the Hilbert's twelfth problem for real quadratic fields, btw!
+    authors:
+      - Māris Ozols
+    notes: "Filed automatically by the Mathstodon sweep. Matched on \"Hilbert's twelfth problem\". Classifier rationale: The document claims a proof that settles the conjecture for real quadratic fields. Unreviewed: this records that a claim was made, not that it is correct."
 provenance:
   - url: https://www.wikidata.org/wiki/Q1093498
     source: wikidata

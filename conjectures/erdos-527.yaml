@@ -28,6 +28,21 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/527
       kind: dataset
+  - id: erdos-527-sweep-c52692ba
+    asserted_on: 2026-10-10
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-10
+    source:
+      title: "formal-conjectures PR #7078: feat(ErdosProblems/527): add solved statement with verified Lean proof"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/7078
+      kind: github
+      quote: solved by Michelen and Sawhney (2025), Theorem 1.1
+    authors:
+      - AItoBit
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős problem 527". Classifier rationale: The document states that Erdős problem 527 has been solved and formalized in Lean. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

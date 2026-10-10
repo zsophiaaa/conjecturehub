@@ -29,6 +29,22 @@ claims:
       url: https://www.erdosproblems.com/526
       kind: dataset
     notes: Upstream records this as solved without specifying the direction.
+  - id: erdos-526-sweep-fdf1b8d7
+    asserted_on: 2026-10-10
+    type: proved
+    scope: infinitely-often variant
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-10
+    source:
+      title: "formal-conjectures PR #7076: feat(ErdosProblems/526): state short-arc coverage and verified limsup criterion"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/7076
+      kind: github
+      quote: Adds Erdős problem 526 with a corrected complete-coverage statement and a verified proof link for its infinitely-often variant.
+    authors:
+      - AItoBit
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős problem 526". Classifier rationale: The PR claims a verified proof exists for the infinitely‑often variant of Erdős Problem 526. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

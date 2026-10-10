@@ -16,7 +16,37 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-667-sweep-2ec6a59e
+    asserted_on: 2026-10-09
+    type: reformulation
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-10
+    source:
+      title: "formal-conjectures PR #4370: feat(ErdosProblems): formalise Erdős problem 667"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/4370
+      kind: github
+      quote: "`erdos_667` (`research open`) — is `q ↦ c(p, q)` strictly increasing on `1 ≤ q ≤ binom(p-1, 2) + 1`?"
+    authors:
+      - hbakkaoui-hash
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 667". Classifier rationale: The document only formalises the conjecture and labels it as an open research problem. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: erdos-667-sweep-0374f2bc
+    asserted_on: 2026-10-09
+    type: reformulation
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-10
+    source:
+      title: "formal-conjectures: feat(ErdosProblems): formalise Erdős problem 667 (#4370) fixes #865 Formalises the statement of [Erdős Problem 667](https://www.erdosproblems.com/667), a problem of Erdős, Faudree, Rousseau, and Schel"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/8e5f40c6a7dc1cd2d6b2c642fb728957de9a10d6
+      kind: github
+      quote: "`erdos_667` (`research open`) — is `q ↦ c(p, q)` strictly increasing on `1 ≤ q ≤ binom(p-1, 2) + 1`?"
+    authors:
+      - hbakkaoui-hash
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 667". Classifier rationale: The commit formalises the conjecture and marks it as an open research problem. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
