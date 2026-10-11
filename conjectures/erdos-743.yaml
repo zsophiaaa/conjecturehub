@@ -27,6 +27,22 @@ claims:
       title: erdosproblems.com records this problem as "falsifiable"
       url: https://www.erdosproblems.com/743
       kind: dataset
+  - id: erdos-743-sweep-3931a00f
+    asserted_on: 2026-10-10
+    type: partial
+    scope: various special cases (e.g., n ≤ 9, bounded maximum degree, stars or paths)
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-11
+    source:
+      title: "formal-conjectures: feat(ErdosProblems/743): add Erdős Problem 743 (#6945) Adds Erdős Problem 743, Gyárfás' tree packing conjecture: if $T_k$ is a tree with $k$ vertices for $2 \\leq k \\leq n$, can $K_n$ be written as the"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/cca8d33f00642461c479b7218fee0442d5ac8e93
+      kind: github
+      quote: "Solved variants: each tree a star or a path, and all but at most two trees stars [GyLe78]; n ≤ 9 [Fi83b]; the smallest ⌊n/√2⌋ trees [Bo83]; bounded maximum degree for large n [JKKO19]; ..."
+    authors:
+      - veljjanoski
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 743". Classifier rationale: The document lists several known partial results but states the main conjecture remains open. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

@@ -17,7 +17,23 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-626-sweep-6b6d1995
+    asserted_on: 2026-10-10
+    type: partial
+    scope: existence of the limits in parts i and ii
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-11
+    source:
+      title: "formal-conjectures PR #6817: feat(ErdosProblems/626): add Erdős Problem 626"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6817
+      kind: github
+      quote: "parts.i (open): does \\lim g_k(n)/\\log n exist? `parts.ii` (open): does \\lim \\log h^{(m)}(n)/\\log n exist?"
+    authors:
+      - veljjanoski
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 626". Classifier rationale: The document reports that the main limit questions remain open but mentions solved bounds, indicating partial progress. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
