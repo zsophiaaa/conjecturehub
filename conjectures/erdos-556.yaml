@@ -30,6 +30,22 @@ claims:
       title: erdosproblems.com records this problem as "decidable"
       url: https://www.erdosproblems.com/556
       kind: dataset
+  - id: erdos-556-sweep-4fc4410f
+    asserted_on: 2026-10-11
+    type: partial
+    scope: asymptotic / large n
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-11
+    source:
+      title: "formal-conjectures: feat(ErdosProblems): formalise Erdős Problem 556 (3-colour cycle Ramsey number) (#6012) Formalises [Erdős Problem 556](https://www.erdosproblems.com/556), the Bondy–Erdős conjecture, from #2131. The c"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/77390bafb44eb68ad245ea5188144827b25464cc
+      kind: github
+      quote: Kept open since, although Łuczak gives the asymptotic and KSS05 / BeSk09 settle large odd / even n, the inequality for all n is not established.
+    authors:
+      - raopratik
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 556". Classifier rationale: The commit states the conjecture is still open but mentions asymptotic and large‑n results, indicating partial progress. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
