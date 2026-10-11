@@ -18,7 +18,38 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-408-sweep-dba97162
+    asserted_on: 2026-10-11
+    type: partial
+    scope: assuming a form of the Elliott–Halberstam conjecture
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-11
+    source:
+      title: "formal-conjectures PR #6861: feat(ErdosProblems/408): add Erdős Problem 408"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6861
+      kind: github
+      quote: "[EGPS90] answers both questions positively, conditionally on a form of the Elliott–Halberstam conjecture."
+    authors:
+      - veljjanoski
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 408". Classifier rationale: The document reports a conditional positive result, not an unconditional proof. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: erdos-408-sweep-8c8dafe5
+    asserted_on: 2026-10-11
+    type: partial
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-11
+    source:
+      title: "formal-conjectures: feat(ErdosProblems/408): add Erdős Problem 408 (#6861) Adds Erdős Problem 408: with $f(n) = \\min\\{k \\geq 1 : \\phi_k(n) = 1\\}$, does $f(n)/\\log n$ have a distribution function, and is it almost always "
+      url: https://github.com/google-deepmind/formal-conjectures/commit/bfd33d9d6f4ed21ee50a6fba6d581608c4ac9df1
+      kind: github
+      quote: "Open: - `parts.i` (distribution function): a monotone $F$ ..."
+    authors:
+      - veljjanoski
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 408". Classifier rationale: The document states the conjecture is open but notes conditional positive results, indicating partial progress. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
