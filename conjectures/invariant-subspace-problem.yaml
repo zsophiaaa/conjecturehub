@@ -52,7 +52,23 @@ openness_basis:
   meaning: no_published_solution_known_to_curator
   asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: invariant-subspace-problem-sweep-090a21a8
+    asserted_on: 2026-10-11
+    type: partial
+    scope: normal operator case
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-11
+    source:
+      title: "formal-conjectures: feat(Wikipedia/InvariantSubspaceProblem): formal proof links for the normal operator case (#7104) This adds two formal_proof links to Invariant_subspace_problem_normal_operator, and fixes a typo in it"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/7742071bc85bef50d71a9c812a98c2548d1dfa0c
+      kind: github
+      quote: formal proof links for the normal operator case
+    authors:
+      - zblore
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Invariant Subspace Problem". Classifier rationale: The commit reports a formal proof for the invariant subspace problem restricted to normal operators. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/InvariantSubspaceProblem.lean
     source: google-deepmind/formal-conjectures

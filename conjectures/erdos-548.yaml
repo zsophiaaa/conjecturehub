@@ -27,6 +27,21 @@ claims:
       title: erdosproblems.com records this problem as "falsifiable"
       url: https://www.erdosproblems.com/548
       kind: dataset
+  - id: erdos-548-sweep-163c1c4b
+    asserted_on: 2026-10-11
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-11
+    source:
+      title: "formal-conjectures: feat(ErdosProblems): add Erdős 557 (solved) and mark Erdős 547 solved (#6028) Closes #788. Closes #5407. ## Summary - **New: `FormalConjectures/ErdosProblems/557.lean`** — Erdős problem 557 (Erdős–Gra"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/fe7a1ce420f636ae374fd7dd0b64727fd6edc3c4
+      kind: github
+      quote: The ... Erdős–Sós theorem (Erdős problem 548), whose machine-checked proof ... is imported as a pinned Lake dependency
+    authors:
+      - zhangjun725
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős problem 548". Classifier rationale: The document states that a machine‑checked proof of Erdős problem 548 has been imported, indicating it is claimed to be solved. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
