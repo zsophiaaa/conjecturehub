@@ -4,8 +4,8 @@ ids:
   wikidata: Q5166684
   wikipedia: https://en.wikipedia.org/wiki/Thrackle
 notability:
-  wikipedia_language_editions: 3
-  measured_on: 2026-08-03
+  wikipedia_language_editions: 4
+  measured_on: 2026-10-11
 openness_basis:
   meaning: unknown
   asserted_by: wikidata
@@ -21,4 +21,4 @@ provenance:
       - ids.mathworld
       - notability.wikipedia_language_editions
     license: CC0-1.0
-    retrieved: 2026-08-03
+    retrieved: 2026-10-11

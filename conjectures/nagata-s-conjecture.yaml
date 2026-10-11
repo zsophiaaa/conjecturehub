@@ -3,6 +3,9 @@ title: Nagata's conjecture
 ids:
   wikidata: Q6958656
   wikipedia: https://en.wikipedia.org/wiki/Nagata%27s_conjecture
+  external:
+    - label: VibeMathed
+      url: https://vibemathed.com/problem/nagata-conjecture-plane-curves
 notability:
   wikipedia_language_editions: 4
   measured_on: 2026-08-03
@@ -42,3 +45,10 @@ provenance:
       - claims
     license: CC-BY-SA-4.0
     retrieved: 2026-08-03
+  - url: https://vibemathed.com/api/dataset
+    source: vibemathed
+    fields:
+      - ids.external
+    license: CC-BY-4.0
+    retrieved: 2026-10-11
+    upstream_version: 2026-10-11T13:00:49.141Z
