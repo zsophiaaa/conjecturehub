@@ -10,7 +10,23 @@ openness_basis:
   meaning: no_solution_known_to_community
   asserted_by: wikipedia
   note: Listed under "Unsolved problems in number theory" on English Wikipedia.
-claims: []
+claims:
+  - id: tate-conjecture-sweep-76b4793d
+    asserted_on: 2026-10-12
+    type: partial
+    scope: ordinary Calabi-Yau threefolds over finite fields
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-12
+    source:
+      title: The Tate Conjecture for Ordinary Calabi-Yau Threefolds
+      url: https://arxiv.org/abs/2610.13939
+      kind: arxiv
+      quote: prove the integral geometric Tate conjecture for ordinary Calabi-Yau threefolds over finite fields
+    authors:
+      - Lukas Brantner
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Tate conjecture". Classifier rationale: The paper claims a proof of the Tate conjecture in this specific setting, which is a partial resolution. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q7687975
     source: wikidata
