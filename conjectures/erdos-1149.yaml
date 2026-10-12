@@ -27,6 +27,21 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/1149
       kind: dataset
+  - id: erdos-1149-sweep-39ca2f98
+    asserted_on: 2026-10-11
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-12
+    source:
+      title: "formal-conjectures PR #7161: feat(ErdosProblems/1149): add Erdős Problem 1149"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/7161
+      kind: github
+      quote: This was proved by Bergelson and Richter ([arXiv:1611.08044](https://arxiv.org/abs/1611.08044), Springer 2017, pp. 109-135), so it is a plain `research solved` theorem
+    authors:
+      - mnn31
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 1149". Classifier rationale: The document explicitly states the conjecture has been proved. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

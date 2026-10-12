@@ -62,6 +62,21 @@ claims:
       title: erdosproblems.com records this problem as "disproved"
       url: https://www.erdosproblems.com/266
       kind: dataset
+  - id: erdos-266-sweep-76ab10a4
+    asserted_on: 2026-10-11
+    type: disproved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-12
+    source:
+      title: "formal-conjectures PR #7171: feat(ErdosProblems/266): formal_proof link for variants.all_rationals"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/7171
+      kind: github
+      quote: there is a strictly increasing sequence $a_n$ of positive integers such that \sum_{n} \frac{1}{a_n + t} is rational for every $t \in \mathbb{Q}$ with $t \neq -a_n$ for all $n$.
+    authors:
+      - benkeene
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős problem 266". Classifier rationale: The PR cites the Kovač–Tao construction showing the sum is rational for all rational shifts, contradicting the conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/266.lean
     source: google-deepmind/formal-conjectures

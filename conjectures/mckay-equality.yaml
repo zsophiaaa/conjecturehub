@@ -41,6 +41,21 @@ claims:
       - Adele Maltempo
       - Carolina Vallejo
     notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "McKay conjecture". Classifier rationale: The paper proves a special case of the McKay conjecture, constituting partial progress. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: mckay-equality-sweep-c2a4544b
+    asserted_on: 2026-10-11
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-12
+    source:
+      title: "formal-conjectures PR #7163: feat(ErdosProblems/88): add Erdős Problem 88"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/7163
+      kind: github
+      quote: Kwan, Sah, Sauermann and Sawhney proved it (arXiv:2208.02874, Forum Math. Pi 11 (2023), e21), so `erdos_88` is `research solved`.
+    authors:
+      - mnn31
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "McKay conjecture". Classifier rationale: The document states that the Erdős‑McKay conjecture has been proved, indicating resolution of the McKay equality conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q28401746
     source: wikidata

@@ -12,7 +12,22 @@ openness_basis:
   meaning: unknown
   asserted_by: wikidata
   note: Identity record only. No statement or status has been ingested for this conjecture yet.
-claims: []
+claims:
+  - id: van-der-waerden-permanent-conjecture-sweep-7ac649de
+    asserted_on: 2026-10-11
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-12
+    source:
+      title: "formal-conjectures: feat(OEIS/1818): link Lean proof of conjecture 1 (#7064) Fixes #7063. Records Wentao Li's Lean formalization of **Zhi-Wei Sun's first permanent conjecture** on [OEIS A001818](https://oeis.org/A001818)"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/be19e5af578acb20c367f7977d835b82ea396109
+      kind: github
+      quote: proved mathematically by She, Sun and Xia (Theorem 1.3(ii)).
+    authors:
+      - VictorLiwentao
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "permanent". Classifier rationale: The document states that the conjecture has been proved in the cited theorem. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q16636852
     source: wikidata

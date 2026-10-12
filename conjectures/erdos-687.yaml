@@ -18,7 +18,23 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-687-sweep-6eef49bf
+    asserted_on: 2026-10-11
+    type: partial
+    scope: Y(x) = o(x^2)
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-12
+    source:
+      title: "formal-conjectures PR #7183: feat(ErdosProblems/687, GreensOpenProblems/46): add Erdős 687, mark green_46.improve_upper solved"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/7183
+      kind: github
+      quote: "`erdos_687.parts.i`: $Y(x) = o(x^2)$. Solved, with `formal_proof` link."
+    authors:
+      - 30k30
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős #687". Classifier rationale: The PR claims a formal proof for part i of Erdős 687, leaving other parts open. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

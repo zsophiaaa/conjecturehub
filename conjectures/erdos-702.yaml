@@ -27,6 +27,22 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/702
       kind: dataset
+  - id: erdos-702-sweep-c966e4f3
+    asserted_on: 2026-10-11
+    type: proved
+    scope: for sufficiently large n (∀ᶠ n in atTop) for each fixed k ≥ 4
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-12
+    source:
+      title: "formal-conjectures PR #7156: feat(ErdosProblems/702): add Erdős Problem 702"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/7156
+      kind: github
+      quote: Frankl proved it (Bull. Austral. Math. Soc. 1977), so the main statement is tagged `research solved`.
+    authors:
+      - mnn31
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 702". Classifier rationale: The document states that Frankl proved the conjecture (in an eventual sense), marking it as solved. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

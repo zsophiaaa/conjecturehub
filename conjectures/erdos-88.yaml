@@ -28,6 +28,21 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/88
       kind: dataset
+  - id: erdos-88-sweep-c2a4544b
+    asserted_on: 2026-10-11
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-12
+    source:
+      title: "formal-conjectures PR #7163: feat(ErdosProblems/88): add Erdős Problem 88"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/7163
+      kind: github
+      quote: Kwan, Sah, Sauermann and Sawhney proved it (arXiv:2208.02874, Forum Math. Pi 11 (2023), e21), so `erdos_88` is `research solved`.
+    authors:
+      - mnn31
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 88". Classifier rationale: The document states that a paper has proved the conjecture, declaring it solved. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
