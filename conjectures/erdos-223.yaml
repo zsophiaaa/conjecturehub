@@ -29,6 +29,21 @@ claims:
       url: https://www.erdosproblems.com/223
       kind: dataset
     notes: Upstream records this as solved without specifying the direction.
+  - id: erdos-223-sweep-3d78a41c
+    asserted_on: 2026-10-11
+    type: resolved_by_prior_literature
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-12
+    source:
+      title: "formal-conjectures PR #6786: Add Erdős 223 diameter-pair formalization with copyright header"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6786
+      kind: github
+      quote: All four statements have `category research solved`
+    authors:
+      - AItoBit
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 223". Classifier rationale: The PR states that existing literature (Swanepoel) provides exact formulas, marking the conjecture as solved. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
