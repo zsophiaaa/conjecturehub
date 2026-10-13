@@ -17,7 +17,22 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-836-sweep-eae4b6b4
+    asserted_on: 2026-10-13
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-13
+    source:
+      title: "formal-conjectures PR #7278: feat(ErdosProblems/836): mark solved and link formal proofs"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/7278
+      kind: github
+      quote: Marks Erdős Problem 836 as solved and links the verified Lean 4 proofs
+    authors:
+      - linrock
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 836". Classifier rationale: The PR explicitly states the conjecture is solved via formal proofs. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
