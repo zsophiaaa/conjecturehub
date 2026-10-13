@@ -16,7 +16,22 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-625-sweep-3e4cb109
+    asserted_on: 2026-10-13
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-13
+    source:
+      title: "formal-conjectures PR #7258: feat(ErdosProblems): formalise 625 and link its full proof"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/7258
+      kind: github
+      quote: "feat(ErdosProblems): formalise 625 and link its full proof."
+    authors:
+      - AItoBit
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős problem 625". Classifier rationale: The pull request claims to provide a complete formal proof of Erdős Problem 625. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
