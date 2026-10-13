@@ -63,6 +63,22 @@ claims:
       title: erdosproblems.com records this problem as "falsifiable"
       url: https://www.erdosproblems.com/617
       kind: dataset
+  - id: erdos-617-sweep-aa9f1b96
+    asserted_on: 2026-10-13
+    type: partial
+    scope: r = 5
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-13
+    source:
+      title: "formal-conjectures PR #7223: ErdosProblems/617: add the five-colour variant"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/7223
+      kind: github
+      quote: A Noncomputational Proof of the Five-Colour Case of the Erdős–Gyárfás Balanced-Colouring Conjecture
+    authors:
+      - RhudeJJJJ
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 617". Classifier rationale: The pull request announces a written proof for the five‑colour case, which settles only that specific instance. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/617.lean
     source: google-deepmind/formal-conjectures

@@ -15,7 +15,23 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-467-sweep-132f21e6
+    asserted_on: 2026-10-13
+    type: partial
+    scope: restricted interval
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-13
+    source:
+      title: "formal-conjectures PR #7013: feat(ErdosProblems): state interpretations of problem 467"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/7013
+      kind: github
+      quote: Includes a short proved lemma for restricting the covered interval.
+    authors:
+      - AItoBit
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős problem 467". Classifier rationale: The PR presents a lemma but explicitly states it does not solve the open problem. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
