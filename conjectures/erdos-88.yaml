@@ -28,6 +28,21 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/88
       kind: dataset
+  - id: erdos-88-sweep-1249c0d7
+    asserted_on: 2026-10-12
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-13
+    source:
+      title: "formal-conjectures: feat(ErdosProblems/88): add Erdős Problem 88 (#7163) Adds [Erdős Problem 88](https://www.erdosproblems.com/88), the Erdős-McKay conjecture: for every ε > 0 there is δ > 0 such that every graph on n ve"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/34ee0e3c5fd52d202d62a71094a37970cb5fb870
+      kind: github
+      quote: Kwan, Sah, Sauermann and Sawhney proved it ([arXiv:2208.02874], Forum Math. Pi 11 (2023), e21), so `erdos_88` is `research solved`.
+    authors:
+      - mnn31
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 88". Classifier rationale: The document states that the conjecture has been proved by the cited authors. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
