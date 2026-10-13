@@ -27,6 +27,21 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/622
       kind: dataset
+  - id: erdos-622-sweep-06040446
+    asserted_on: 2026-10-13
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-13
+    source:
+      title: "formal-conjectures PR #7210: feat: formalize Erdős problem 622 and its asymptotic bound"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/7210
+      kind: github
+      quote: The positive-density answer follows from the stronger result with ε = c = 1/4.
+    authors:
+      - AItoBit
+    notes: "Filed automatically by the formal-conjectures pull requests sweep. Matched on \"Erdős problem 622\". Classifier rationale: The pull request states that a formalized proof establishes the conjecture's positive-density answer. Unreviewed: this records that a claim was made, not that it is correct."
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
