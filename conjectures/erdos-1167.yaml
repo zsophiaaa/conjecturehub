@@ -62,7 +62,23 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2026-01-23
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: erdos-1167-sweep-c195a624
+    asserted_on: 2026-10-13
+    type: partial
+    scope: finite_targets (all κ_α finite)
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-14
+    source:
+      title: "formal-conjectures PR #7216: feat(ErdosProblems/1167): mark finite_targets as solved"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/7216
+      kind: github
+      quote: "`feat(ErdosProblems/1167): mark finite_targets as solved`"
+    authors:
+      - mnn31
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 1167". Classifier rationale: The pull request states that the finite‑targets variant of Erdős Problem 1167 has been solved, which is a partial resolution of the conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/1167.lean
     source: google-deepmind/formal-conjectures

@@ -44,7 +44,22 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-09-28
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: erdos-1054-sweep-719adf7c
+    asserted_on: 2026-10-13
+    type: disproved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-14
+    source:
+      title: 'formal-conjectures: feat(ErdosProblems/1054): mark parts solved and link the formal proof (#7098) Fixes #6733. Addresses the "Erdős 1054 — `parts.i` and `parts.ii`" item of #6591 and marks all three parts of Erdős Proble'
+      url: https://github.com/google-deepmind/formal-conjectures/commit/929392d28c9749ea37514c8772ac3668db709b2e
+      kind: github
+      quote: the development proves that for every `A ≥ 1` a positive lower density ... of odd integers satisfy `f(n) > A n`, together with the Tao–Kovač small‑ratio upper bound ...
+    authors:
+      - linrock
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 1054". Classifier rationale: The document reports a formal Lean proof that shows f(n) is not o(n), thereby disproving the conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/1054.lean
     source: google-deepmind/formal-conjectures
