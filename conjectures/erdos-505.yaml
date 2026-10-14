@@ -63,6 +63,22 @@ claims:
       title: erdosproblems.com records this problem as "disproved"
       url: https://www.erdosproblems.com/505
       kind: dataset
+  - id: erdos-505-sweep-e38db467
+    asserted_on: 2026-10-14
+    type: counterexample
+    scope: n ≥ 9
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-14
+    source:
+      title: "formal-conjectures PR #7312: feat(Borsuk): add the n ≥ 9 variant and isometry transport"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/7312
+      kind: github
+      quote: This PR adds a statement recording that Borsuk’s conjecture fails in every dimension n ≥ 9
+    authors:
+      - bengoechea
+    notes: "Filed automatically by the formal-conjectures pull requests sweep. Matched on \"Erdős Problem 505\". Classifier rationale: The PR explicitly claims counterexamples exist for all dimensions n ≥ 9, addressing the conjecture's status. Unreviewed: this records that a claim was made, not that it is correct."
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/505.lean
     source: google-deepmind/formal-conjectures

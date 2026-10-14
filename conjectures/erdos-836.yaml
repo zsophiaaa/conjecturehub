@@ -17,7 +17,22 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-836-sweep-da317065
+    asserted_on: 2026-10-13
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-14
+    source:
+      title: "formal-conjectures: feat(ErdosProblems/836): mark solved and link formal proofs (#7278) Marks Erdős Problem 836 as solved and links the verified Lean 4 proofs resolving Part (i) (disproving the O(r²) active-vertex bound "
+      url: https://github.com/google-deepmind/formal-conjectures/commit/94a155f90d6fc22891b560113ec4dbee3710cce2
+      kind: github
+      quote: Marks Erdős Problem 836 as solved and links the verified Lean 4 proofs resolving Part (i) ... and Part (ii) ...
+    authors:
+      - linrock
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 836". Classifier rationale: The commit explicitly states the problem is solved by formal proofs. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

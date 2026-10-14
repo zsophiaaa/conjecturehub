@@ -37,7 +37,24 @@ openness_basis:
   meaning: no_published_solution_known_to_curator
   asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: goldbach-s-conjecture-sweep-a5290496
+    asserted_on: 2026-10-14
+    type: partial
+    scope: sufficiently large even integers, allowing up to 6 powers of 2 (5 under GRH)
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-14
+    source:
+      title: $6$ powers of $2$ in the Linnik--Goldbach problem
+      url: https://arxiv.org/abs/2610.15784
+      kind: arxiv
+      quote: We prove that $6$ powers of $2$ suffice unconditionally and that $5$ suffice under the GRH
+    authors:
+      - Huixi Li
+      - Zhixin Liu
+    notes: "Filed automatically by the arXiv new submissions sweep. Matched on \"Goldbach's conjecture\". Classifier rationale: The paper provides a partial result toward Goldbach by allowing a bounded number of powers of two. Unreviewed: this records that a claim was made, not that it is correct."
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/GoldbachConjecture.lean
     source: google-deepmind/formal-conjectures

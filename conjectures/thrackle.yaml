@@ -10,7 +10,22 @@ openness_basis:
   meaning: unknown
   asserted_by: wikidata
   note: Identity record only. No statement or status has been ingested for this conjecture yet.
-claims: []
+claims:
+  - id: thrackle-sweep-4fa29961
+    asserted_on: 2026-10-14
+    type: partial
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-14
+    source:
+      title: "Another Brick in the Wall: A Computationally Assisted Proof of an Improved Upper Bound for Thrackles"
+      url: https://arxiv.org/abs/2610.17508
+      kind: arxiv
+      quote: we improve the known upper bound toward this conjecture to $m\le1.385(n-1)$ for $n\ge4$.
+    authors:
+      - Truman Scoppetto
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Thrackle". Classifier rationale: The paper reports a new upper bound, which is a partial result toward the Thrackle conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q5166684
     source: wikidata
