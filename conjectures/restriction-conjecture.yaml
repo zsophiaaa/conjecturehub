@@ -12,7 +12,25 @@ openness_basis:
   meaning: unknown
   asserted_by: wikidata
   note: Identity record only. No statement or status has been ingested for this conjecture yet.
-claims: []
+claims:
+  - id: restriction-conjecture-sweep-21d2f337
+    asserted_on: 2026-10-14
+    type: partial
+    scope: degenerate higher codimensional quadratic surfaces
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-14
+    source:
+      title: Sharp restriction estimates for some degenerate higher codimensional quadratic surfaces
+      url: https://arxiv.org/abs/2404.09020
+      kind: arxiv
+      quote: we investigate restriction estimates for degenerate higher codimensional quadratic surfaces and obtain sharp results for some types of degenerate cases.
+    authors:
+      - Zhenbin Cao
+      - Changxing Miao
+      - Yixuan Pang
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Fourier restriction conjecture". Classifier rationale: The paper reports new sharp restriction estimates for specific degenerate cases, which is partial progress on the Fourier restriction conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q135423966
     source: wikidata

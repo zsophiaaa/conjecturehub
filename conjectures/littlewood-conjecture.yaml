@@ -10,7 +10,24 @@ openness_basis:
   meaning: no_solution_known_to_community
   asserted_by: wikipedia
   note: Listed under "Unsolved problems in number theory" on English Wikipedia.
-claims: []
+claims:
+  - id: littlewood-conjecture-sweep-59b770bf
+    asserted_on: 2026-10-14
+    type: resolved_by_prior_literature
+    scope: metric version of the p-adic Littlewood conjecture
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-14
+    source:
+      title: A note on the $p$-adic inhomogeneous Littlewood conjecture
+      url: https://arxiv.org/abs/2610.15809
+      kind: arxiv
+      quote: Bugeaud, Haynes and Velani (2011) resolved a metric version of the $p$-adic Littlewood conjecture.
+    authors:
+      - Sam Chow
+      - Owen Jones
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Littlewood conjecture". Classifier rationale: The document reports that a metric version was already solved in earlier work. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q6653177
     source: wikidata
