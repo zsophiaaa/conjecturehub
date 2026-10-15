@@ -63,6 +63,22 @@ claims:
       title: erdosproblems.com records this problem as "falsifiable"
       url: https://www.erdosproblems.com/617
       kind: dataset
+  - id: erdos-617-sweep-aa9f1b96
+    asserted_on: 2026-10-14
+    type: partial
+    scope: r = 5 and r = 6
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-15
+    source:
+      title: "formal-conjectures PR #7223: feat(ErdosProblems/617): certify the five- and six-colour variants"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/7223
+      kind: github
+      quote: "r=5: every five-colouring of the distinct unordered pairs of a 26-element set has a six-element subset missing a colour."
+    authors:
+      - RhudeJJJJ
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 617". Classifier rationale: The document reports formal Lean certificates proving the conjecture for r=5 and r=6 while stating the general case remains open. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/617.lean
     source: google-deepmind/formal-conjectures

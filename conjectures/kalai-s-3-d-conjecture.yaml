@@ -10,7 +10,23 @@ openness_basis:
   meaning: no_solution_known_to_community
   asserted_by: wikipedia
   note: Listed under "Unsolved problems in geometry" on English Wikipedia.
-claims: []
+claims:
+  - id: kalai-s-3-d-conjecture-sweep-79c1bf0f
+    asserted_on: 2026-10-15
+    type: proved
+    scope: d = 5
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-15
+    source:
+      title: "formal-conjectures PR #7341: Formalize Kalai's 3^d conjecture and record the dimension-five proof"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/7341
+      kind: github
+      quote: records the dimension-five case as `research solved`, with a `formal_proof` link to an external Lean proof.
+    authors:
+      - KitaKen1
+    notes: "Filed automatically by the formal-conjectures pull requests sweep. Matched on \"Kalai's 3^d conjecture\". Classifier rationale: The document states that the dimension‑five case of Kalai's 3^d conjecture has been formally proved. Unreviewed: this records that a claim was made, not that it is correct."
 provenance:
   - url: https://www.wikidata.org/wiki/Q17077841
     source: wikidata
