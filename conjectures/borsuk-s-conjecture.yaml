@@ -27,6 +27,22 @@ claims:
       Standing taken from English Wikipedia's categorisation (Wikipedia categorises this as disproved). Nobody here has read the paper that settled it, which is what the secondary attestation says; replace this claim with one citing that paper when someone has it to hand.
 
       Reviewed 2026-08-03: True for n <= 3 and open for every dimension from 4 to 63, so the answer is dimension-dependent and partly unknown. Kahn–Kalai 1993 gave the first counterexample at n = 1325; Jenrich–Brouwer 2014 brought the threshold to 64. See https://en.wikipedia.org/wiki/Borsuk's_conjecture.
+  - id: borsuk-s-conjecture-sweep-e38db467
+    asserted_on: 2026-10-15
+    type: counterexample
+    scope: dimensions n ≥ 9
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-15
+    source:
+      title: "formal-conjectures PR #7312: feat(Borsuk): add the n ≥ 9 variant and isometry transport"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/7312
+      kind: github
+      quote: Borsuk's conjecture fails in every dimension n ≥ 9, citing Corollary 7.1 of OpenAI's paper *A nine-dimensional counterexample to Borsuk's covering assertion*.
+    authors:
+      - bengoechea
+    notes: "Filed automatically by the formal-conjectures pull requests sweep. Matched on \"Borsuk's conjecture\". Classifier rationale: The PR states that the conjecture is false for all dimensions n ≥ 9. Unreviewed: this records that a claim was made, not that it is correct."
 provenance:
   - url: https://www.wikidata.org/wiki/Q894242
     source: wikidata
