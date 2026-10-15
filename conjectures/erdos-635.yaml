@@ -15,7 +15,23 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2026-01-30
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-635-sweep-a5e0df4b
+    asserted_on: 2026-10-15
+    type: partial
+    scope: t = 1 case
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-15
+    source:
+      title: "formal-conjectures PR #7346: feat(ErdosProblems): formalise 635 and prove the t=1 case"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/7346
+      kind: github
+      quote: Adds a complete proof that the exact maximum for `t = 1` is `(N + 1) / 2`
+    authors:
+      - AItoBit
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős problem 635". Classifier rationale: The PR claims a proof for the t=1 case while noting the general problem remains open. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
