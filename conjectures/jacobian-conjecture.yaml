@@ -83,6 +83,23 @@ claims:
       - David Barros Hulak
       - Ruy Jose Guerra Barretto de Queiroz
     notes: Isabelle/HOL formalisation accepted into the Archive of Formal Proofs. This is the one completed machine check of the counterexample; the Lean route remains an open Mathlib pull request. Not tagged machine_verified here because that tier is reserved for proofs checked by ConjectureHub CI against our own canonical statement.
+  - id: jacobian-conjecture-sweep-7711d642
+    asserted_on: 2026-10-15
+    type: disproved
+    scope: over ℝ
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-15
+    source:
+      title: Poincar\'e compactifications of pullbacks of parallel vector fields under counterexamples to the real Jacobian conjecture
+      url: https://arxiv.org/abs/2610.19360
+      kind: arxiv
+      quote: Poincaré compactifications of pullbacks of parallel vector fields under counterexamples to the real Jacobian conjecture
+    authors:
+      - Francisco Braun
+      - Paulo Machado
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Jacobian conjecture". Classifier rationale: The paper cites existing counterexamples to the real Jacobian conjecture, implying a disproof for that case. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/JacobianConjecture.lean
     source: google-deepmind/formal-conjectures

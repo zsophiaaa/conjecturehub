@@ -13,7 +13,24 @@ openness_basis:
   meaning: no_solution_known_to_community
   asserted_by: wikipedia
   note: Listed under "Unsolved problems in graph theory" on English Wikipedia.
-claims: []
+claims:
+  - id: second-neighborhood-problem-sweep-ad2150cd
+    asserted_on: 2026-10-15
+    type: partial
+    scope: oriented graphs with minimum outdegree at most 7
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-15
+    source:
+      title: Locating a Seymour vertex in oriented graphs having minimum outdegree at most 7
+      url: https://arxiv.org/abs/2606.30588
+      kind: arxiv
+      quote: The main contribution of this article is to show that Conjecture 1.4 is true for all oriented graphs having minimum outdegree at most 7. ... this yields Seymour's Second Neighborhood Conjecture for this class of oriented graphs.
+    authors:
+      - Arpan Sadhukhan
+      - Sagnik Sen
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "second neighborhood conjecture". Classifier rationale: The paper proves the conjecture only for a restricted class, not the full statement. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q60792926
     source: wikidata
