@@ -45,7 +45,25 @@ openness_basis:
   meaning: no_published_solution_known_to_curator
   asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: gauss-circle-problem-sweep-c587ad27
+    asserted_on: 2026-10-16
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-16
+    source:
+      title: A New Bound for the Gauss Circle Problem
+      url: https://arxiv.org/abs/2610.21730
+      kind: arxiv
+      quote: We prove that $E(X)=O_\varepsilon(X^{209/670+\varepsilon})$ for every $\varepsilon>0$, uniformly for real $X\ge4$.
+    authors:
+      - Xi Cen
+      - Xitao Gao
+      - Cheng Zhang
+      - Junyong Zhang
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Gauss circle problem". Classifier rationale: The paper asserts a bound stronger than the conjectured $O(r^{1/2+\varepsilon})$, thereby claiming a proof of the conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/GaussCircleProblem.lean
     source: google-deepmind/formal-conjectures
