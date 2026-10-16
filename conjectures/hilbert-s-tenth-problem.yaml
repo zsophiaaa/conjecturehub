@@ -10,7 +10,22 @@ openness_basis:
   meaning: unknown
   asserted_by: wikidata
   note: Identity record only. No statement or status has been ingested for this conjecture yet.
-claims: []
+claims:
+  - id: hilbert-s-tenth-problem-sweep-72605f80
+    asserted_on: 2026-10-16
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-16
+    source:
+      title: 86 unknowns for Hilbert's tenth problem over the rationals
+      url: https://arxiv.org/abs/2610.20691
+      kind: arxiv
+      quote: Recently, Hilbert's Tenth Problem over the field $\mathbb Q$ of rational numbers was solved negatively by OpenAI based on a five-contact height estimate and a pole-parity construction.
+    authors:
+      - Zhi-Wei Sun
+    notes: "Filed automatically by the arXiv new submissions sweep. Matched on \"Hilbert's tenth problem\". Classifier rationale: The document asserts a complete negative solution to Hilbert's tenth problem over the rationals. Unreviewed: this records that a claim was made, not that it is correct."
 provenance:
   - url: https://www.wikidata.org/wiki/Q986147
     source: wikidata

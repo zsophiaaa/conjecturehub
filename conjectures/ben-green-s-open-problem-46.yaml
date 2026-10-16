@@ -45,7 +45,23 @@ openness_basis:
   meaning: no_published_solution_known_to_curator
   asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: ben-green-s-open-problem-46-sweep-a8904c0c
+    asserted_on: 2026-10-16
+    type: partial
+    scope: upper bound Y(x) = o(x^2)
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-16
+    source:
+      title: "formal-conjectures PR #6864: feat(ErdosProblems/687): add Erdős Problem 687"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6864
+      kind: github
+      quote: "Solved: - `parts.ii`, $Y(x) = o(x^2)$: OpenAI's bound $h(k) \\ll k^2$ for Jacobsthal's function ... gives $Y(x) \\ll x^2$"
+    authors:
+      - veljjanoski
+    notes: "Filed automatically by the formal-conjectures pull requests sweep. Matched on \"Ben Green's Open Problem 46\". Classifier rationale: The PR reports a partial result (an upper bound) related to Green's Open Problem 46 but does not claim a full proof or disproof. Unreviewed: this records that a claim was made, not that it is correct."
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/GreensOpenProblems/46.lean
     source: google-deepmind/formal-conjectures
