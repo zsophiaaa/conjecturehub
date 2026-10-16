@@ -18,7 +18,39 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-165-sweep-303e0bfc
+    asserted_on: 2026-10-16
+    type: partial
+    scope: liminf ≥ 1/2 for the normalized quotient R(3,k)·log k / k^2
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-16
+    source:
+      title: "formal-conjectures PR #4236: feat(ErdosProblems/165): asymptotics of the off-diagonal Ramsey number R(3,k)"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/4236
+      kind: github
+      quote: "Hefty–Horn–King–Pfender 2025 (solved): liminf ≥ 1/2 (arXiv:2510.19718), the current record."
+    authors:
+      - henrykmichalewski
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 165". Classifier rationale: The document lists partial results (bounds on the liminf) but does not claim a full proof or disproof of the conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: erdos-165-sweep-e57f476c
+    asserted_on: 2026-10-16
+    type: partial
+    scope: asymptotic bounds (upper and lower)
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-16
+    source:
+      title: "formal-conjectures PR #6677: feat(ErdosProblems/165): add Erdős Problem 165"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6677
+      kind: github
+      quote: "`erdos_165.variants.upper` (solved): Shearer's $R(3,k) \\le (1+o(1))k^2/\\log k`."
+    authors:
+      - AItoBit
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 165". Classifier rationale: The PR records that upper and lower asymptotic bounds for the conjecture have been solved, indicating partial resolution. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
