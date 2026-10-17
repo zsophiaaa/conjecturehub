@@ -17,7 +17,23 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-676-sweep-28f66c21
+    asserted_on: 2026-10-17
+    type: partial
+    scope: residue criterion and finite exceptions
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-17
+    source:
+      title: "formal-conjectures PR #7428: test(ErdosProblems/676): prove residue criterion and finite exceptions"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/7428
+      kind: github
+      quote: This is a partial contribution. The eventual representation question remains open, and its statement and placeholder proof are unchanged.
+    authors:
+      - AItoBit
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 676". Classifier rationale: The PR reports partial progress but states the full problem is still open. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

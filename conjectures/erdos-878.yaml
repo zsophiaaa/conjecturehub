@@ -17,7 +17,39 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-878-sweep-05fbf888
+    asserted_on: 2026-10-17
+    type: disproved
+    scope: parts.iii_eventually
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-17
+    source:
+      title: "formal-conjectures PR #7418: feat(ErdosProblems/878): add Erdős Problem 878 and link formal refutation of `parts.iii_eventually`"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/7418
+      kind: github
+      quote: marks `erdos_878.parts.iii_eventually` as `research solved`, and links the verified Lean 4 proof disproving eventual equality $\max_{n \le x} f(n) = \max_{n \le x} F(n)$.
+    authors:
+      - ilpauzner
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 878". Classifier rationale: The PR states a formal Lean proof refutes the eventual equality part of Erdős Problem 878. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: erdos-878-sweep-46bf2f1e
+    asserted_on: 2026-10-17
+    type: partial
+    scope: four entries recorded as research solved (parts i, ii, variant sharp, original formula 17)
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-17
+    source:
+      title: "formal-conjectures PR #7424: Formalize Erdős Problem 878 and record four external Lean proofs"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/7424
+      kind: github
+      quote: It records four entries as `research solved`, with `formal_proof` links to external Lean proofs.
+    authors:
+      - KitaKen1
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 878". Classifier rationale: The PR claims that specific parts of Erdős Problem 878 have been formally proved. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
