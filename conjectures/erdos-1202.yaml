@@ -31,6 +31,21 @@ claims:
       url: https://www.erdosproblems.com/1202
       kind: dataset
     notes: Upstream records this as solved without specifying the direction.
+  - id: erdos-1202-sweep-368b4d44
+    asserted_on: 2026-10-17
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-17
+    source:
+      title: "formal-conjectures PR #7417: feat(ErdosProblems): add Erdős Problem 1202"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/7417
+      kind: github
+      quote: "The answer is negative: according to erdosproblems.com, it was solved by Price with GPT-5.4 Pro."
+    authors:
+      - SpyderJR
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 1202". Classifier rationale: The PR claims the conjecture has been resolved with a negative answer. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

@@ -28,6 +28,21 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/652
       kind: dataset
+  - id: erdos-652-sweep-90461fb8
+    asserted_on: 2026-10-17
+    type: resolved_by_prior_literature
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-17
+    source:
+      title: "formal-conjectures PR #7413: feat(ErdosProblems): formalize problem 652 and variants"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/7413
+      kind: github
+      quote: The main question is marked `research solved` based on Mathialagan's published Theorem 14.
+    authors:
+      - AItoBit
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 652". Classifier rationale: The PR claims the conjecture is solved by citing an existing published theorem. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

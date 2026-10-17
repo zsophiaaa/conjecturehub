@@ -15,7 +15,23 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-420-sweep-36df87dd
+    asserted_on: 2026-10-17
+    type: partial
+    scope: infinitely many n
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-17
+    source:
+      title: "formal-conjectures: feat(ErdosProblems/420): add Erdős Problem 420 (#6862) Adds Erdős Problem 420 on $F(f,n) = \\tau((n + \\lfloor f(n) \\rfloor)!)/\\tau(n!)$: does $F((\\log n)^C, n) \\to \\infty$ for large $C$? Are the values"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/0c7a022a5a20f15710cfd43428fb720f498ef29f
+      kind: github
+      quote: "Proved tests: $F(f,n) = 1$ when $f(n) h$ if and only if $F(h, n) \\log n \\log\\log n \\log\\log\\log\\log n / (9(\\log\\log\\log n)^3)$ for infinitely many $n$."
+    authors:
+      - veljjanoski
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 420". Classifier rationale: The commit records partial progress but does not claim a full proof or disproof. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
