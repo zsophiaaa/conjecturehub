@@ -17,7 +17,39 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-626-sweep-6b6d1995
+    asserted_on: 2026-10-17
+    type: partial
+    scope: bounds of Kostochka and Erdős on g_k(n) and Erdős's bounds on h^{(m)}(n)
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-17
+    source:
+      title: "formal-conjectures PR #6817: feat(ErdosProblems/626): add Erdős Problem 626"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6817
+      kind: github
+      quote: "Solved: the bounds of Kostochka and Erdős on $g_k(n)$, and Erdős's bounds on $h^{(m)}(n)$."
+    authors:
+      - veljjanoski
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 626". Classifier rationale: The document reports that certain bounds have been proved while the existence of the limits remains open. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: erdos-626-sweep-2d94588a
+    asserted_on: 2026-10-17
+    type: partial
+    scope: bounds on g_k(n) and h^{(m)}(n)
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-17
+    source:
+      title: "formal-conjectures: feat(ErdosProblems/626): add Erdős Problem 626 (#6817) Adds Erdős Problem 626 on girth and chromatic number: $g_k(n)$ is the largest $m$ such that some graph on $n$ vertices has chromatic number $k$ a"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/b78cd38b00b42914862e918152a65887b2779830
+      kind: github
+      quote: "Solved: the bounds of Kostochka and Erdős on $g_k(n)$, and Erdős's bounds on $h^{(m)}(n)$."
+    authors:
+      - veljjanoski
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 626". Classifier rationale: The document states that specific bounds have been solved while the existence of the limits remains open. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

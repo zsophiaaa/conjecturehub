@@ -18,7 +18,22 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-573-sweep-e0da4e90
+    asserted_on: 2026-10-17
+    type: partial
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-17
+    source:
+      title: "formal-conjectures: feat(ErdosProblems/573): add Erdős Problem 573 (#6800) Adds Erdős Problem 573: is $\\mathrm{ex}(n;\\{C_3,C_4\\}) \\sim (n/2)^{3/2}$? - `cycleExtremalNumber L n`: the maximum number of edges of a graph on "
+      url: https://github.com/google-deepmind/formal-conjectures/commit/5a5a31f84084d58d853be65895e725da32ba6a69
+      kind: github
+      quote: "Open: the main question."
+    authors:
+      - veljjanoski
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 573". Classifier rationale: The document states the conjecture remains open while noting related partial results. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

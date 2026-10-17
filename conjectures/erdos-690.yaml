@@ -30,6 +30,22 @@ claims:
       url: https://www.erdosproblems.com/690
       kind: dataset
     notes: Upstream records this as solved without specifying the direction.
+  - id: erdos-690-sweep-5c54e940
+    asserted_on: 2026-10-17
+    type: proved
+    scope: large‑k variant (k ≥ 21)
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-17
+    source:
+      title: "formal-conjectures PR #7422: fix(ErdosProblems/690): mark the large-k variant solved following Wang and Crapis"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/7422
+      kind: github
+      quote: mark the large‑k variant solved following Wang and Crapis. ... prove that $d_k(p)$ is not unimodal for every $k \geq 4$, which covers the $k \geq 21$ range this variant asks about.
+    authors:
+      - bengoechea
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 690". Classifier rationale: The PR states that a preprint proves the large‑k case, marking that variant as solved. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

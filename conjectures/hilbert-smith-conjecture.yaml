@@ -10,7 +10,22 @@ openness_basis:
   meaning: no_solution_known_to_community
   asserted_by: wikipedia
   note: Listed under "Unsolved problems in geometry" on English Wikipedia.
-claims: []
+claims:
+  - id: hilbert-smith-conjecture-sweep-e90612f8
+    asserted_on: 2026-10-17
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: secondary
+    state: active
+    recorded_on: 2026-10-17
+    source:
+      title: Hilbert–Smith conjecture
+      url: https://en.wikipedia.org/wiki/Hilbert%E2%80%93Smith_conjecture
+      kind: wikipedia
+      quote: Add formal proof in Palomar Registry.
+    authors:
+      - PalomarScout
+    notes: 'Filed automatically by the Wikipedia edits sweep. Matched on "Hilbert–Smith conjecture". Classifier rationale: The edit summary states that a formal proof has been added, indicating a claimed proof of the conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q5761258
     source: wikidata
