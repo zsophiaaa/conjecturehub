@@ -65,6 +65,8 @@ ids:
       url: https://www.erdosproblems.com/forum/thread/138
     - label: VibeMathed
       url: https://vibemathed.com/problem/erdos-138
+    - label: VibeMathed (erdos-138-superexponential-van-der-waerden)
+      url: https://vibemathed.com/problem/erdos-138-superexponential-van-der-waerden
 openness_basis:
   meaning: no_published_solution_known_to_curator
   asserted_by: erdosproblems.com
@@ -98,8 +100,8 @@ provenance:
     fields:
       - ids.external
     license: CC-BY-4.0
-    retrieved: 2026-08-03
-    upstream_version: 2026-08-03T16:16:11.083Z
+    retrieved: 2026-10-18
+    upstream_version: 2026-10-18T11:16:30.628Z
   - url: https://www.erdosproblems.com/138
     source: conjecturehub-curator
     fields:
