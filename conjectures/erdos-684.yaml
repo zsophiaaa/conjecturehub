@@ -21,7 +21,23 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-684-sweep-fca77127
+    asserted_on: 2026-10-18
+    type: partial
+    scope: explicit bounds on growth rate
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-18
+    source:
+      title: "formal-conjectures PR #7438: feat: add known bounds for Erdős problem 684"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/7438
+      kind: github
+      quote: "Adds two known bounds for Erdős 684, using the modern small-prime cutoff `p ≤ k` and full prime-power multiplicities: ... The optimal growth rate remains open."
+    authors:
+      - AItoBit
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős problem 684". Classifier rationale: The document reports new bounds but says the optimal growth rate is still open, indicating partial progress. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
