@@ -48,7 +48,22 @@ openness_basis:
   meaning: no_published_solution_known_to_curator
   asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: mean-value-problem-sweep-63bc1c63
+    asserted_on: 2026-10-18
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: secondary
+    state: active
+    recorded_on: 2026-10-18
+    source:
+      title: Mean value problem
+      url: https://en.wikipedia.org/wiki/Mean_value_problem
+      kind: wikipedia
+      quote: Moving [[:Category:Solved problems in mathematics]] to [[:Category:Formerly unsolved problems in mathematics]]
+    authors:
+      - JJMC89 bot III
+    notes: 'Filed automatically by the Wikipedia edits sweep. Matched on "Mean value problem". Classifier rationale: The edit summary states the problem has been moved to the solved category, indicating a claim it is now solved. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/MeanValueProblem.lean
     source: google-deepmind/formal-conjectures
