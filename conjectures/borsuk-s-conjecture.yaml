@@ -5,8 +5,8 @@ ids:
   wikipedia: https://en.wikipedia.org/wiki/Borsuk%27s_conjecture
   mathworld: https://mathworld.wolfram.com/BorsuksConjecture.html
 notability:
-  wikipedia_language_editions: 9
-  measured_on: 2026-08-03
+  wikipedia_language_editions: 10
+  measured_on: 2026-10-18
 openness_basis:
   meaning: unknown
   asserted_by: wikidata
@@ -37,7 +37,7 @@ provenance:
       - ids.mathworld
       - notability.wikipedia_language_editions
     license: CC0-1.0
-    retrieved: 2026-08-03
+    retrieved: 2026-10-18
   - url: https://en.wikipedia.org/wiki/Borsuk's_conjecture
     source: wikipedia
     fields:

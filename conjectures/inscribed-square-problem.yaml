@@ -53,8 +53,8 @@ ids:
     - label: arxiv/2005.09193
       url: https://arxiv.org/abs/2005.09193
 notability:
-  wikipedia_language_editions: 15
-  measured_on: 2026-08-03
+  wikipedia_language_editions: 16
+  measured_on: 2026-10-18
 openness_basis:
   meaning: no_published_solution_known_to_curator
   asserted_by: google-deepmind/formal-conjectures
@@ -81,4 +81,4 @@ provenance:
       - ids.mathworld
       - notability.wikipedia_language_editions
     license: CC0-1.0
-    retrieved: 2026-08-03
+    retrieved: 2026-10-18
