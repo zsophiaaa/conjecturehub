@@ -27,6 +27,38 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/211
       kind: dataset
+  - id: erdos-211-sweep-38b8b8b1
+    asserted_on: 2026-10-19
+    type: proved
+    scope: main Erdős–Beck bound, quadratic case, and sharpness construction
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-19
+    source:
+      title: "formal-conjectures PR #6770: feat(ErdosProblems): add Erdős Problem 211"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6770
+      kind: github
+      quote: The main Erdős–Beck bound, quadratic case, and sharpness construction are tagged `research solved`.
+    authors:
+      - AItoBit
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 211". Classifier rationale: The PR states these parts are solved, indicating a claimed proof. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: erdos-211-sweep-62828b4e
+    asserted_on: 2026-10-19
+    type: proved
+    scope: main bound and quadratic case
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-19
+    source:
+      title: "formal-conjectures: feat(ErdosProblems): add Erdős Problem 211 (#6770) Adds Erdős Problem 211 and three variants using finite sets of distinct points and their determined affine lines. The main Erdős–Beck bound, quadrati"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/d3c3250c611fdcd2f19dfc1b4dd0199e8d553700
+      kind: github
+      quote: The main Erdős–Beck bound, quadratic case, and sharpness construction are tagged `research solved`.
+    authors:
+      - AItoBit
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 211". Classifier rationale: The commit explicitly marks those parts as solved, indicating a proof claim. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

@@ -16,7 +16,39 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-766-sweep-6288055f
+    asserted_on: 2026-10-19
+    type: partial
+    scope: the case $l = \lfloor k^2/4\rfloor+1$ for $3 \le k \le n$
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-19
+    source:
+      title: "formal-conjectures PR #6964: feat(ErdosProblems/766): add Erdős Problem 766"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6964
+      kind: github
+      quote: "Solved: `variants.dirac_erdos`, $f_1(n;k,\\lfloor k^2/4\\rfloor+1) \\leq \\lfloor n^2/4 \\rfloor + 1$ for $3 \\leq k \\leq n$, as in [Er64c, p. 34]"
+    authors:
+      - veljjanoski
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 766". Classifier rationale: The document reports a specific bound proved for a special case, indicating partial progress rather than a full resolution. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: erdos-766-sweep-f34ef669
+    asserted_on: 2026-10-19
+    type: partial
+    scope: the case $l = \lfloor k^2/4\rfloor+1$ for $3 \le k \le n$
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-19
+    source:
+      title: "formal-conjectures: feat(ErdosProblems/766): add Erdős Problem 766 (#6964) Adds Erdős Problem 766: estimate $f(n;k,l)$ for $k \\binom{n}{2}$). API lemma `forcingNumber_le`; proved tests $f_1(n;k,0) = 0$ for $k \\leq n$ and"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/95b199bfbc08f7b1183196bab59ed3b08f27c2c9
+      kind: github
+      quote: "Solved: `variants.dirac_erdos`, $f_1(n;k,\\lfloor k^2/4\\rfloor+1) \\leq \\lfloor n^2/4 \\rfloor + 1$ for $3 \\leq k \\leq n$"
+    authors:
+      - veljjanoski
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 766". Classifier rationale: The commit proves a specific bound for a special case, which is a partial result toward the conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
