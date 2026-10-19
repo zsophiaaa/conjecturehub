@@ -17,7 +17,22 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-820-sweep-75233172
+    asserted_on: 2026-10-19
+    type: partial
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-19
+    source:
+      title: "formal-conjectures: feat(ErdosProblems/820): add Erdős Problem 820 (#6794) Adds Erdős Problem 820: $H(n)$ is the least $l$ with some $k < l$ such that $(k^n-1, l^n-1) = 1$. Is $H(n) = 3$ infinitely often? - `H` and `K` u"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/83a3255ebf4382fb736c8b6f785de304915d9f0f
+      kind: github
+      quote: "Solved: Erdős's lower bound \\exp(n^{c/(\\log\\log n)^2}) for infinitely many n [Er74b]."
+    authors:
+      - veljjanoski
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 820". Classifier rationale: The document reports a known partial result related to the conjecture while stating the main question remains open. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

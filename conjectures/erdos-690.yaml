@@ -30,6 +30,38 @@ claims:
       url: https://www.erdosproblems.com/690
       kind: dataset
     notes: Upstream records this as solved without specifying the direction.
+  - id: erdos-690-sweep-5c54e940
+    asserted_on: 2026-10-19
+    type: proved
+    scope: k ≥ 21
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-19
+    source:
+      title: "formal-conjectures PR #7422: fix(ErdosProblems/690): mark the large-k variant solved following Wang and Crapis"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/7422
+      kind: github
+      quote: mark the large-$k$ variant solved following Wang and Crapis. ... prove that $d_k(p)$ is not unimodal for every $k \geq 4$, which covers the $k \geq 21$ range this variant asks about.
+    authors:
+      - bengoechea
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 690". Classifier rationale: The document states that a preprint proves the large‑k case, marking that variant as solved. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: erdos-690-sweep-6d096e8a
+    asserted_on: 2026-10-19
+    type: proved
+    scope: k ≥ 21
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-19
+    source:
+      title: "formal-conjectures: fix(ErdosProblems/690): mark the large-k variant solved following Wang and Crapis (#7422) This change records that the large-$k$ variant of Erdős Problem 690 is settled. Wang and Crapis, *A Complete A"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/89fe1f5615d36315fd959789caceab793019d070
+      kind: github
+      quote: Wang and Crapis, *A Complete Answer to Erdős Problem 690* (arXiv:2605.08542, 2026), prove that $d_k(p)$ is not unimodal for every $k \geq 4$, which covers the $k \geq 21$ range this variant asks about.
+    authors:
+      - bengoechea
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 690". Classifier rationale: The commit records that the large‑k variant is settled based on the cited preprint proving the required statement. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

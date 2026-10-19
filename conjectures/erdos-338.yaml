@@ -16,7 +16,39 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-338-sweep-5b933899
+    asserted_on: 2026-10-19
+    type: partial
+    scope: specific examples (Bateman's example, order‑four result for squares, forum's order‑three/restricted‑order‑six example)
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-19
+    source:
+      title: "formal-conjectures PR #6868: feat(ErdosProblems): formalize problem 338 with examples"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6868
+      kind: github
+      quote: Includes proofs of Bateman's example, the order-four result for squares, and the forum's order-three/restricted-order-six example, including survival after finite removal.
+    authors:
+      - AItoBit
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 338". Classifier rationale: The PR proves particular cases related to Problem 338 but does not claim a full solution, constituting partial progress. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: erdos-338-sweep-3b9e94ec
+    asserted_on: 2026-10-19
+    type: partial
+    scope: various special cases (e.g., order 2, squares, triangular numbers)
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-19
+    source:
+      title: "formal-conjectures: feat(ErdosProblems/338): add Erdős Problem 338 (#6793) Adds Erdős Problem 338 on the restricted order of additive bases. - Definitions: `HasOrder` (at most $h$ summands) and `HasRestrictedOrder` (at m"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/098a96fcabe9a6fb32355410d9d1251b59a3f2e4
+      kind: github
+      quote: "Solved variants: Bateman's example; Kelly (≤ 4 for order 2, and ≤ 3 with positive lower density); ..."
+    authors:
+      - veljjanoski
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 338". Classifier rationale: The document lists solved special cases but explicitly marks the main statements as open. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
