@@ -26,7 +26,22 @@ openness_basis:
   meaning: no_published_solution_known_to_curator
   asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: gottschalk-s-surjunctivity-conjecture-sweep-85d64129
+    asserted_on: 2026-10-19
+    type: counterexample
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-19
+    source:
+      title: "formal-conjectures PR #7440: fix(Wikipedia/SurjunctiveGroup): `gottschalk_surjunctivity_conjecture` is false"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/7440
+      kind: github
+      quote: "Gottschalk's surjunctivity conjecture is false: two preprints ... construct a group that is not surjunctive."
+    authors:
+      - KevorkianPhilippe
+    notes: "Filed automatically by the formal-conjectures pull requests sweep. Matched on \"Gottschalk's surjunctivity conjecture\". Classifier rationale: The document claims a constructed group provides a counterexample, disproving the conjecture. Unreviewed: this records that a claim was made, not that it is correct."
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/SurjunctiveGroup.lean
     source: google-deepmind/formal-conjectures
