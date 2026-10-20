@@ -15,7 +15,23 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-644-sweep-a5df95dd
+    asserted_on: 2026-10-19
+    type: partial
+    scope: r ≥ 3
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-20
+    source:
+      title: "formal-conjectures PR #7359: feat(ErdosProblems): prove finiteness of the bound in problem 644"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/7359
+      kind: github
+      quote: Both conjectures remain open and unchanged.
+    authors:
+      - AItoBit
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős problem 644". Classifier rationale: The PR proves a related bound but explicitly states the conjecture is still open. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

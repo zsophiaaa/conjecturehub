@@ -28,6 +28,36 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/652
       kind: dataset
+  - id: erdos-652-sweep-90461fb8
+    asserted_on: 2026-10-19
+    type: resolved_by_prior_literature
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-20
+    source:
+      title: "formal-conjectures PR #7413: feat(ErdosProblems): formalize problem 652 and variants"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/7413
+      kind: github
+      quote: The main question is marked `research solved` based on Mathialagan's published Theorem 14.
+    authors:
+      - AItoBit
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 652". Classifier rationale: The PR states the conjecture is considered solved by citing an existing theorem. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: erdos-652-sweep-af9247c6
+    asserted_on: 2026-10-19
+    type: resolved_by_prior_literature
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-20
+    source:
+      title: "formal-conjectures: feat(ErdosProblems): formalize problem 652 and variants (#7413) Formalizes Erdős Problem 652 and the related results recorded on its source page and discussion: the first-point example, the product bo"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/c25d32657d61799883e46acde87d19384f945403
+      kind: github
+      quote: The main question is marked `research solved` based on Mathialagan's published Theorem 14.
+    authors:
+      - AItoBit
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 652". Classifier rationale: The commit states the conjecture is considered solved by citing an existing published theorem. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
