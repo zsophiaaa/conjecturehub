@@ -16,7 +16,23 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-174-sweep-ff011bba
+    asserted_on: 2026-10-20
+    type: partial
+    scope: the case of a single point
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-20
+    source:
+      title: "formal-conjectures: feat(ErdosProblems/174): add Erdős Problem 174 (#7469) Adds Erdős Problem 174 (Euclidean Ramsey sets): a finite $A \\subset \\mathbb{R}^n$ is Ramsey if for every $k \\geq 1$ there is $d$ such that every "
+      url: https://github.com/google-deepmind/formal-conjectures/commit/006a2ab1b05ba271125efb8dfdc3ad32e9d4cca1
+      kind: github
+      quote: "Test (proved): a single point is Ramsey."
+    authors:
+      - veljjanoski
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 174". Classifier rationale: The document reports a proved special case but states the full conjecture remains open. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

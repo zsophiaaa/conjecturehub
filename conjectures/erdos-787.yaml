@@ -15,7 +15,22 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-787-sweep-d84c7d3e
+    asserted_on: 2026-10-20
+    type: partial
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-20
+    source:
+      title: "formal-conjectures: feat(ErdosProblems/787): add Erdős Problem 787 (#7466) Adds Erdős Problem 787 (Erdős–Moser): $g(n)$ is the largest $m$ such that every set $A$ of $n$ reals has a subset $B$ with $|B| \\geq m$ and $b_1 "
+      url: https://github.com/google-deepmind/formal-conjectures/commit/3276098ad4955e81df9cf79ee5a85d2e747bd095
+      kind: github
+      quote: "Solved: ... Klarner $g(n) \\gg \\log n$; Choi $g(n) \\ll n^{2/5+o(1)}$; Sanders $(\\log n)^{1+c} \\ll g(n)$; Ruzsa $g(n) \\le \\exp(O(\\sqrt{\\log n}))$; Beker $(\\log n)^{1+1/68+o(1)} \\ll g(n)$."
+    authors:
+      - veljjanoski
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 787". Classifier rationale: The document reports known bounds but explicitly marks the estimate as open, indicating partial progress. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
