@@ -15,7 +15,22 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-976-sweep-59b27d5f
+    asserted_on: 2026-10-20
+    type: partial
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-20
+    source:
+      title: "formal-conjectures PR #7480: feat(ErdosProblems/976): add Erdős Problem 976"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/7480
+      kind: github
+      quote: "Open: `erdos_976` ... `erdos_976.parts.i` ($n^{1+c}$) and `erdos_976.parts.ii` ($n^d$), both yes/no."
+    authors:
+      - veljjanoski
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 976". Classifier rationale: The document lists known lower‑bound results and explicitly states the conjecture’s parts are still open, indicating partial progress. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

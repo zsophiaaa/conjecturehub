@@ -16,7 +16,22 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-10-17
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-1086-sweep-f52011cd
+    asserted_on: 2026-10-20
+    type: partial
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-20
+    source:
+      title: "formal-conjectures PR #7483: feat(ErdosProblems/1086): add Erdős Problem 1086"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/7483
+      kind: github
+      quote: "Solved: Erdős–Purdy [ErPu71] $g(n) \\gg n^2\\log\\log n$; Raz–Sharir [RaSh17] $g(n) \\ll n^{20/9}$."
+    authors:
+      - veljjanoski
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 1086". Classifier rationale: The document lists known lower and upper bounds, indicating partial progress rather than a full resolution. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

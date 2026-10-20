@@ -28,6 +28,36 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/444
       kind: dataset
+  - id: erdos-444-sweep-046dcc48
+    asserted_on: 2026-10-20
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-20
+    source:
+      title: "formal-conjectures PR #7164: feat(ErdosProblems/444): add Erdős Problem 444"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/7164
+      kind: github
+      quote: Erdős and Sárközy proved this ... so it is tagged `research solved` with `answer(True)`.
+    authors:
+      - mnn31
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 444". Classifier rationale: The document reports a known proof and marks the conjecture as solved. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: erdos-444-sweep-920e0e0b
+    asserted_on: 2026-10-20
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-20
+    source:
+      title: "formal-conjectures: feat(ErdosProblems/444): add Erdős Problem 444 (#7164) Adds [Erdős Problem 444](https://www.erdosproblems.com/444): for an infinite A ⊆ ℕ, with d_A(n) the number of a ∈ A dividing n, is it true that f"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/9ec85714f25a77eec5a86d91f7e207b3e90e1678
+      kind: github
+      quote: Erdős and Sárközy proved this (Some asymptotic formulas on generalized divisor functions IV, Studia Sci. Math. Hungar. 1980), so it is tagged `research solved` with `answer(True)`.
+    authors:
+      - mnn31
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 444". Classifier rationale: The commit notes that Erdős and Sárközy proved the statement, marking it as solved. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

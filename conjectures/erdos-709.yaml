@@ -17,7 +17,38 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-709-sweep-3cb72c27
+    asserted_on: 2026-10-20
+    type: partial
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-20
+    source:
+      title: "formal-conjectures: feat(ErdosProblems/709): add Erdős Problem 709 (#7460) Adds Erdős Problem 709 (Erdős–Surányi): $f(n)$ is the least $c$ such that, for every set $A$ of $n$ integers $\\geq 2$, every interval of $c\\max(A"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/8f332f06504523550e04a9cd9a4f4166a2162d9e
+      kind: github
+      quote: 'Open: `erdos_709`, "good bounds" as the order of magnitude, `f =Θ[atTop] erdos_709.answer`.'
+    authors:
+      - veljjanoski
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 709". Classifier rationale: The document states the problem remains open and only partial bounds are known. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: erdos-709-sweep-ba2a67bf
+    asserted_on: 2026-10-20
+    type: partial
+    scope: singleton case
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-20
+    source:
+      title: "formal-conjectures: feat(ErdosProblems/709): formalize the singleton case (#7474) Adds the interval and matching definitions from Erdős Problem 709, proves monotonicity and a multiple-in-every-window lemma, and establish"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/d573b686298f40690dd94441c9e1abc3cda7cd61
+      kind: github
+      quote: establishes the exact singleton case
+    authors:
+      - AItoBit
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 709". Classifier rationale: The commit states it proves the conjecture for the singleton case, which is a partial resolution. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

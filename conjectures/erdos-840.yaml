@@ -16,7 +16,23 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-840-sweep-d14f27d5
+    asserted_on: 2026-10-20
+    type: partial
+    scope: upper bound on constant
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-20
+    source:
+      title: "formal-conjectures: feat(ErdosProblems/840): add Erdős Problem 840 (#7464) Adds Erdős Problem 840: how large can a quasi-Sidon subset of $\\{1, \\ldots, N\\}$ be, where $A$ is quasi-Sidon if $|A+A| = (1+o(1))\\binom{|A|}{2}$"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/1eb1344caf6ea92c3b8663d2aa6e6db7ee07c030
+      kind: github
+      quote: "Solved: [ErFr91] (already in [Er81h]): $2/\\sqrt{3}$ is attained, and every attained constant is $\\leq 2$; [Pi06]: every attained constant is $\\leq (1/4 + 1/(\\pi+2)^2)^{-1/2} = 1.863\\ldots$."
+    authors:
+      - veljjanoski
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 840". Classifier rationale: The document provides partial results (bounds) while stating the conjecture remains open. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

@@ -15,7 +15,22 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-802-sweep-34bebd92
+    asserted_on: 2026-10-20
+    type: partial
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-20
+    source:
+      title: "formal-conjectures: feat(ErdosProblems/802): add Erdős Problem 802 (#7165) Adds [Erdős Problem 802](https://www.erdosproblems.com/802), the Ajtai, Erdős, Komlós and Szemerédi conjecture: does every K_r-free graph on n ve"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/fd095e0956ee3a8f32f328569df1bcb66ee551fa
+      kind: github
+      quote: It is open on the page, so the main statement is `research open` with `answer(sorry)`.
+    authors:
+      - mnn31
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 802". Classifier rationale: The commit states the conjecture remains open and lists partial results, indicating no full resolution. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

@@ -28,6 +28,36 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/237
       kind: dataset
+  - id: erdos-237-sweep-2f0d0e72
+    asserted_on: 2026-10-20
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-20
+    source:
+      title: "formal-conjectures PR #7157: feat(ErdosProblems/237): add Erdős Problem 237"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/7157
+      kind: github
+      quote: Chen and Ding proved that it is ([arXiv:2201.10727]), so the main statement is `research solved` with `answer(True)`.
+    authors:
+      - mnn31
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 237". Classifier rationale: The document states that Chen and Ding have proved the conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: erdos-237-sweep-8a1d9a7c
+    asserted_on: 2026-10-20
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-20
+    source:
+      title: "formal-conjectures: feat(ErdosProblems/237): add Erdős Problem 237 (#7157) Adds [Erdős Problem 237](https://www.erdosproblems.com/237): if A ⊆ ℕ satisfies |A ∩ {1, ..., N}| ≫ log N for all large N, and f(n) counts the so"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/700645f8e588c32b68a8ce918f474a5cb5fa8172
+      kind: github
+      quote: Chen and Ding proved that it is ([arXiv:2201.10727]), so the main statement is `research solved` with `answer(True)`.
+    authors:
+      - mnn31
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 237". Classifier rationale: The commit states that Chen and Ding proved the conjecture, marking it as solved. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

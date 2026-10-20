@@ -17,7 +17,23 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-725-sweep-ed2e9998
+    asserted_on: 2026-10-20
+    type: partial
+    scope: k = o((log n)^{3/2-ε}) and k < n^{1/3-δ}
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-20
+    source:
+      title: "formal-conjectures: feat(ErdosProblems/725): add Erdős Problem 725 (#7468) Adds Erdős Problem 725: give an asymptotic formula for the number $L(k,n)$ of $k \\times n$ Latin rectangles. - Definitions: `IsLatinRectangle M` "
+      url: https://github.com/google-deepmind/formal-conjectures/commit/7ce66f8e8700721f1616b3669c503b4aa205eb1b
+      kind: github
+      quote: "Solved: [ErKa46] $L(k,n) \\sim e^{-\\binom{k}{2}}(n!)^k$ for $k = o((\\log n)^{3/2-\\epsilon})$; [Ya51] the same for $k < n^{1/3-\\delta}$"
+    authors:
+      - veljjanoski
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 725". Classifier rationale: The document reports asymptotic formulas that hold only for restricted ranges of k, indicating partial progress rather than a full resolution. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

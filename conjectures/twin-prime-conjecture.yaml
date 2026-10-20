@@ -29,7 +29,23 @@ openness_basis:
   meaning: no_published_solution_known_to_curator
   asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: twin-prime-conjecture-sweep-625fffb3
+    asserted_on: 2026-10-20
+    type: partial
+    scope: assuming Bombieri–Vinogradov
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-20
+    source:
+      title: "formal-conjectures PR #5558: feat(OptimizationConstants): bounded prime gap constant"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/5558
+      kind: github
+      quote: The 246, 600, and 70000000 results link to Axiom Math's Lean development with `conditional formal_proof`, explicitly recording its Bombieri–Vinogradov assumption.
+    authors:
+      - felixpernegger
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Twin prime conjecture". Classifier rationale: The document reports conditional bounded‑gap results and formalisation, not a proof or disproof of the twin prime conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/TwinPrimes.lean
     source: google-deepmind/formal-conjectures
