@@ -15,7 +15,22 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-679-sweep-fe09ea30
+    asserted_on: 2026-10-19
+    type: disproved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-20
+    source:
+      title: "formal-conjectures: feat(ErdosProblems/679): link the additive refutation proof (#7435) State both questions in Erdős problem 679 and link an unconditional Lean proof of the known additive refutation. For every real C an"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/753e368cfbde59597ebda852e43e7d81e4efce81
+      kind: github
+      quote: link the additive refutation proof
+    authors:
+      - AItoBit
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős problem 679". Classifier rationale: The commit states that an unconditional Lean proof of the known additive refutation is linked, indicating the conjecture has been disproved. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

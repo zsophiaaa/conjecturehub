@@ -50,7 +50,23 @@ openness_basis:
   meaning: no_published_solution_known_to_curator
   asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: casas-alvero-conjecture-sweep-de31ee16
+    asserted_on: 2026-10-20
+    type: partial
+    scope: infinitely many degrees n
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-20
+    source:
+      title: A dimension bound towards the Casas-Alvero Conjecture
+      url: https://arxiv.org/abs/2402.18717
+      kind: arxiv
+      quote: Consequently for infinitely many degrees $n$, we show that the associated arithmetic Casas-Alvero scheme has finitely many rational points over any characteristic zero field.
+    authors:
+      - Soham Ghosh
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Casas-Alvero Conjecture". Classifier rationale: The paper gives dimension bounds and partial rigidity results but does not claim a full proof or disproof of the conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Paper/CasasAlvero.lean
     source: google-deepmind/formal-conjectures

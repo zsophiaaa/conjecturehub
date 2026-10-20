@@ -10,7 +10,23 @@ openness_basis:
   meaning: no_solution_known_to_community
   asserted_by: wikipedia
   note: Listed under "Unsolved problems in geometry" on English Wikipedia.
-claims: []
+claims:
+  - id: hilbert-smith-conjecture-sweep-4ba7be9b
+    asserted_on: 2026-10-19
+    type: partial
+    scope: assuming second countability, smooth case
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-20
+    source:
+      title: "formal-conjectures PR #7043: Hilbert–Smith: add second-countable variants with a formal proof"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/7043
+      kind: github
+      quote: "The main statements `hilbert_smith_conjecture` and `hilbert_smith_padic_formulation` stay `research open`: the formal proof assumes second countability and gives a `C^∞` rather than an analytic Lie structure."
+    authors:
+      - adbrw
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Hilbert–Smith conjecture". Classifier rationale: The document reports that the original conjecture remains open but a restricted second‑countable variant has been formally proved. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q5761258
     source: wikidata

@@ -10,7 +10,24 @@ openness_basis:
   meaning: no_solution_known_to_community
   asserted_by: wikipedia
   note: Listed under "Unsolved problems in geometry" on English Wikipedia.
-claims: []
+claims:
+  - id: section-conjecture-sweep-5b88163c
+    asserted_on: 2026-10-20
+    type: partial
+    scope: generic n‑pointed genus‑g curve over its function field
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-20
+    source:
+      title: The section conjecture for generic pointed curves
+      url: https://arxiv.org/abs/2610.24986
+      kind: arxiv
+      quote: We prove Grothendieck's section conjecture for the generic $n$-pointed genus-$g$ curve over $K$.
+    authors:
+      - Ma Luo
+      - Tatsunari Watanabe
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "section conjecture". Classifier rationale: The document claims a proof for a specific generic case, which constitutes partial progress on the conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q7444680
     source: wikidata

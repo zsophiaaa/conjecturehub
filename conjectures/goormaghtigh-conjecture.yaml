@@ -10,7 +10,23 @@ openness_basis:
   meaning: no_solution_known_to_community
   asserted_by: wikipedia
   note: Listed under "Unsolved problems in number theory" on English Wikipedia.
-claims: []
+claims:
+  - id: goormaghtigh-conjecture-sweep-123866be
+    asserted_on: 2026-10-20
+    type: partial
+    scope: primes < 10^{700}
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-20
+    source:
+      title: No new Goormaghtigh primes up to $10^{700}$
+      url: https://arxiv.org/abs/2410.03677
+      kind: arxiv
+      quote: We show that there are no other Goormaghtigh primes less than $10^{700}$.
+    authors:
+      - Jon Grantham
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Goormaghtigh conjecture". Classifier rationale: The paper reports a computational bound, which is a partial result toward the conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q593203
     source: wikidata

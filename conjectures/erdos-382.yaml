@@ -17,7 +17,39 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-382-sweep-68dbaf1d
+    asserted_on: 2026-10-20
+    type: partial
+    scope: case where the largest prime factor appears with exponent at least 2
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-20
+    source:
+      title: "formal-conjectures PR #7471: feat(ErdosProblems/382): prove lt_two_mul_of_largestPrimeRepeated"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/7471
+      kind: github
+      quote: "Proves `lt_two_mul_of_largestPrimeRepeated` in Erdős Problem 382: if the largest prime factor of \\prod_{u \\leq m \\leq v} m appears with exponent at least $2$, then $v v/2$"
+    authors:
+      - veljjanoski
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 382". Classifier rationale: The PR reports a proof of a specific substatement, not a full resolution of the conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: erdos-382-sweep-eeed211b
+    asserted_on: 2026-10-20
+    type: partial
+    scope: largest prime factor exponent ≥ 2
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-20
+    source:
+      title: "formal-conjectures: feat(ErdosProblems/382): prove lt_two_mul_of_largestPrimeRepeated (#7471) Proves `lt_two_mul_of_largestPrimeRepeated` in Erdős Problem 382: if the largest prime factor of $\\prod_{u \\leq m \\leq v} m$ a"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/e30c4c3defa569bb11dd45abfd71bfc2ead85669
+      kind: github
+      quote: "Proves `lt_two_mul_of_largestPrimeRepeated` in Erdős Problem 382: if the largest prime factor of \\(\\prod_{u \\leq m \\leq v} m\\) appears with exponent at least $2$, then $v v/2$"
+    authors:
+      - veljjanoski
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 382". Classifier rationale: The commit reports a partial result toward Erdős Problem 382, not a full resolution. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
