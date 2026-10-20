@@ -10,7 +10,23 @@ openness_basis:
   meaning: no_solution_known_to_community
   asserted_by: wikipedia
   note: Listed under "Unsolved problems in graph theory" on English Wikipedia.
-claims: []
+claims:
+  - id: erdos-hajnal-conjecture-sweep-34654a23
+    asserted_on: 2026-10-20
+    type: proved
+    scope: excluding paths
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-20
+    source:
+      title: The Erdős-Hajnal conjecture for excluding paths has been proved independently by at least 2 groups, 1. Tung Nguyen at Oxford 2. Google DeepMind Also claimed by Yuwen Zhou at UBC ..
+      url: https://mathstodon.xyz/@sioum/117472202136889540
+      kind: mastodon
+      quote: The Erdős-Hajnal conjecture for excluding paths has been proved independently by at least 2 groups
+    authors:
+      - Sang-il Oum
+    notes: 'Filed automatically by the Mathstodon sweep. Matched on "Erdős–Hajnal conjecture". Classifier rationale: The post claims a proof for the Erdős‑Hajnal conjecture restricted to the case of excluding paths. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q16974940
     source: wikidata

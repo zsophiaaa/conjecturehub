@@ -38,7 +38,23 @@ openness_basis:
   meaning: no_published_solution_known_to_curator
   asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: lonely-runner-conjecture-sweep-8bbd515a
+    asserted_on: 2026-10-20
+    type: partial
+    scope: one-entry modifications (tight instances)
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-20
+    source:
+      title: "Tight instances of the Lonely Runner Conjecture: one-entry modifications and the growth of speeds"
+      url: https://arxiv.org/abs/2608.13599
+      kind: arxiv
+      quote: We complete the classification of arbitrary one-entry modifications ... for n≥4 such a set is tight if and only if it is of Goddyn--Wong type or is one of the two sporadic sets ...
+    authors:
+      - Yuhan Zhang
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Lonely runner conjecture". Classifier rationale: The paper gives a classification of tight instances for a restricted class of speed sets, which is partial progress on the conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/LonelyRunnerConjecture.lean
     source: google-deepmind/formal-conjectures

@@ -19,7 +19,22 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-860-sweep-e2b16b1f
+    asserted_on: 2026-10-20
+    type: partial
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-20
+    source:
+      title: "formal-conjectures PR #7465: feat(ErdosProblems/860): add Erdős Problem 860"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/7465
+      kind: github
+      quote: "Solved: [ErPo80] $h(n) \\ll n^{3/2}/(\\log n)^{1/2}$; Erdős–Selfridge $h(n) > (3-o(1))n$; Ruzsa $h(n)/n \\to \\infty$."
+    authors:
+      - veljjanoski
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 860". Classifier rationale: The document reports existing partial bounds on h(n) but does not claim a complete solution. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

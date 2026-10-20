@@ -18,7 +18,23 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2026-04-04
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-1186-sweep-3e4c96f2
+    asserted_on: 2026-10-20
+    type: partial
+    scope: k = 3
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-20
+    source:
+      title: "formal-conjectures PR #7467: feat(ErdosProblems/1186): add Erdős Problem 1186"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/7467
+      kind: github
+      quote: 'Open: `erdos_1186`, "reasonable bounds" as the order of magnitude of $\delta_k$ as $k \to \infty".'
+    authors:
+      - veljjanoski
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 1186". Classifier rationale: The document states the conjecture is open but lists known partial bounds, indicating partial progress. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
