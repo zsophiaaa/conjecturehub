@@ -16,7 +16,23 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-661-sweep-1fa6b8fd
+    asserted_on: 2026-10-20
+    type: partial
+    scope: le_minimalDistinctDistances variant
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-20
+    source:
+      title: "formal-conjectures: feat(ErdosProblems/661): prove le_minimalDistinctDistances (#7490) Proves `erdos_661.variants.le_minimalDistinctDistances` in Erdős Problem 661: $F(n) \\leq f(2n)$. The proof follows the docstring. Tak"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/fa8752b0889c3483b0921b297aa27aa2117cc391
+      kind: github
+      quote: "Proves `erdos_661.variants.le_minimalDistinctDistances` in Erdős Problem 661: $F(n) \\leq f(2n)$."
+    authors:
+      - veljjanoski
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 661". Classifier rationale: The commit claims a proof of a specific variant of Erdős Problem 661, not the full conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
