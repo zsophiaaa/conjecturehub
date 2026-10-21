@@ -18,7 +18,23 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-165-sweep-e57f476c
+    asserted_on: 2026-10-21
+    type: partial
+    scope: upper and lower bounds
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-21
+    source:
+      title: "formal-conjectures PR #6677: feat(ErdosProblems/165): add Erdős Problem 165"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6677
+      kind: github
+      quote: "`erdos_165.variants.upper` (solved): Shearer's $R(3,k) \\le (1+o(1))k^2/\\log k`."
+    authors:
+      - AItoBit
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 165". Classifier rationale: The PR reports that upper and lower bound variants are solved, while the main asymptotic formula remains open. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

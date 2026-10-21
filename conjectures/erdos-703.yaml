@@ -29,6 +29,22 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/703
       kind: dataset
+  - id: erdos-703-sweep-05e362bf
+    asserted_on: 2026-10-21
+    type: proved
+    scope: the case k = 0 (T(n,0)=2^{n-1} for n≥1)
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-21
+    source:
+      title: "formal-conjectures PR #7498: feat(ErdosProblems/703): prove zero"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/7498
+      kind: github
+      quote: "Proves `erdos_703.variants.zero` in Erdős Problem 703: $T(n, 0) = 2^{n-1}$ for $n \\geq 1$."
+    authors:
+      - veljjanoski
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 703". Classifier rationale: The document states that a formal proof of the zero variant of Erdős Problem 703 has been provided. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

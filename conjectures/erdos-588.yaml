@@ -18,7 +18,37 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-588-sweep-4f7afc2f
+    asserted_on: 2026-10-21
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-21
+    source:
+      title: "formal-conjectures PR #7500: feat(ErdosProblems/588): link formal proof of trivial_upper"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/7500
+      kind: github
+      quote: the linked theorem is exactly the statement here.
+    authors:
+      - veljjanoski
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 588". Classifier rationale: The pull request adds a formal Lean4 proof of the Erdős Problem 588 statement. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: erdos-588-sweep-7e07097b
+    asserted_on: 2026-10-21
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-21
+    source:
+      title: "formal-conjectures: feat(ErdosProblems/588): link formal proof of trivial_upper (#7500) Adds `formal_proof using lean4` to `erdos_588.variants.trivial_upper` in Erdős Problem 588: $f_k(n) \\cdot k(k-1) \\leq n(n-1)$ for $k"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/7e22230525928f25cc521d84ddaea9a550f5bd5f
+      kind: github
+      quote: Adds `formal_proof using lean4` to `erdos_588.variants.trivial_upper` ... the linked theorem is exactly the statement here.
+    authors:
+      - veljjanoski
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 588". Classifier rationale: The commit reports a formal proof of the Erdős Problem 588 statement. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
