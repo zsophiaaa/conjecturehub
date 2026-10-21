@@ -63,6 +63,22 @@ claims:
       title: erdosproblems.com records this problem as "falsifiable"
       url: https://www.erdosproblems.com/617
       kind: dataset
+  - id: erdos-617-sweep-aa9f1b96
+    asserted_on: 2026-10-20
+    type: partial
+    scope: r = 3, 5, 6 (specific cases)
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-21
+    source:
+      title: "formal-conjectures PR #7223: feat(ErdosProblems/617): certify r=3,5,6 and the affine construction"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/7223
+      kind: github
+      quote: "- **r=3:** every three-colouring of the distinct unordered pairs of an arbitrary ten-element type has a four-element subset missing a colour."
+    authors:
+      - RhudeJJJJ
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 617". Classifier rationale: The document reports formal proofs for the conjecture in the cases r=3,5,6, while noting the general conjecture remains open. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/617.lean
     source: google-deepmind/formal-conjectures

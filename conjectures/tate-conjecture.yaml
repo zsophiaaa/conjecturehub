@@ -10,7 +10,25 @@ openness_basis:
   meaning: no_solution_known_to_community
   asserted_by: wikipedia
   note: Listed under "Unsolved problems in number theory" on English Wikipedia.
-claims: []
+claims:
+  - id: tate-conjecture-sweep-7067bceb
+    asserted_on: 2026-10-21
+    type: proved
+    scope: for the classified SNC (p,k)-plane surfaces described in the paper
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-21
+    source:
+      title: Classification of SNC $(p,k)$-planes with Hodge structures of K3 type
+      url: https://arxiv.org/abs/2610.27961
+      kind: arxiv
+      quote: we also prove that Tate and Mumford-Tate conjectures hold for such surfaces.
+    authors:
+      - Federico Fallucca
+      - Matteo Penegini
+      - Anna Ulivi
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Tate conjecture". Classifier rationale: The abstract explicitly states a proof of the Tate conjecture for the surfaces under consideration. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q7687975
     source: wikidata

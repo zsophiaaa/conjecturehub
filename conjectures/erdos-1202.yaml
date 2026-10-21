@@ -31,6 +31,21 @@ claims:
       url: https://www.erdosproblems.com/1202
       kind: dataset
     notes: Upstream records this as solved without specifying the direction.
+  - id: erdos-1202-sweep-81f0d319
+    asserted_on: 2026-10-20
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-21
+    source:
+      title: "formal-conjectures: feat(ErdosProblems): add Erdős Problem 1202 (#7417) This PR adds the statement of Erdős Problem 1202 in Lean. The answer is negative: according to erdosproblems.com, it was solved by Price with GPT-5."
+      url: https://github.com/google-deepmind/formal-conjectures/commit/90d18f666eb98adec4eee4d12f1d37e30b4eb204
+      kind: github
+      quote: "The answer is negative: according to erdosproblems.com, it was solved by Price with GPT-5.4 Pro."
+    authors:
+      - SpyderJR
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 1202". Classifier rationale: The commit states the conjecture has been solved (negative answer) by a cited source. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
