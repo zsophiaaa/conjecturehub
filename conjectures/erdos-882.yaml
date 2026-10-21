@@ -29,6 +29,36 @@ claims:
       url: https://www.erdosproblems.com/882
       kind: dataset
     notes: Upstream records this as solved without specifying the direction.
+  - id: erdos-882-sweep-a6a417a5
+    asserted_on: 2026-10-21
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-21
+    source:
+      title: "formal-conjectures PR #5093: feat(ErdosProblems): add statement for Erdős Problem 882"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/5093
+      kind: github
+      quote: The problem is listed as solved, with answer `(1+o(1)) log₂ n`
+    authors:
+      - ToshiDad
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 882". Classifier rationale: The document states the conjecture has been proved and provides a formal proof reference. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: erdos-882-sweep-7316b280
+    asserted_on: 2026-10-21
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-21
+    source:
+      title: "formal-conjectures: feat(ErdosProblems): add statement for Erdős Problem 882 (#5093) Adds a formalisation of [Erdős Problem 882](https://www.erdosproblems.com/882) (Erdős and Sárközy): the size of the largest `A ⊆ {1,..."
+      url: https://github.com/google-deepmind/formal-conjectures/commit/eb42d60a36cb1bc5ae4624b1d8b727a954d23c01
+      kind: github
+      quote: "The problem is listed as solved, with answer `(1+o(1)) log₂ n` ... **This one is proved**: a `sorry`-free Lean 4 proof is hosted at https://github.com/ToshiDad/erdos-882"
+    authors:
+      - ToshiDad
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 882". Classifier rationale: The commit states that a complete proof of Erdős Problem 882 has been formalised and is available. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

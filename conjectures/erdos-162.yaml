@@ -17,7 +17,23 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-162-sweep-7a1e76a6
+    asserted_on: 2026-10-21
+    type: partial
+    scope: variant half (F(n, 1/2) = n + 1)
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-21
+    source:
+      title: "formal-conjectures PR #7497: feat(ErdosProblems/162): prove half"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/7497
+      kind: github
+      quote: "Proves `erdos_162.variants.half` in Erdős Problem 162: $F(n, 1/2) = n + 1$."
+    authors:
+      - veljjanoski
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 162". Classifier rationale: The PR claims a proof of a specific variant, which constitutes partial progress on the conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
