@@ -11,7 +11,27 @@ openness_basis:
   meaning: no_solution_known_to_community
   asserted_by: wikipedia
   note: Listed under "Unsolved problems in mathematics" on English Wikipedia.
-claims: []
+claims:
+  - id: generalized-riemann-hypothesis-sweep-672cc28e
+    asserted_on: 2026-10-21
+    type: partial
+    scope: primitive real-valued Dirichlet characters with conductor 3 ≤ m ≤ 400
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-21
+    source:
+      title: Upper Bounds on the de Bruijn-Newman constant for Dirichlet $L$-functions with primitive real-valued characters
+      url: https://arxiv.org/abs/2610.27343
+      kind: arxiv
+      quote: We prove the unconditional uniform bound Λ_L ≤ 953/3200 ... for every primitive real-valued character of conductor 3≤m≤400.
+    authors:
+      - Ricardo Freire
+      - Cristian González-Riquelme
+      - Claudio Muñoz
+      - Felipe Poblete
+      - Vicente Salinas
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Generalized Riemann hypothesis". Classifier rationale: The paper provides an upper bound on the de Bruijn–Newman constant, which is equivalent to a partial result toward GRH but does not resolve it. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q685140
     source: wikidata
