@@ -30,6 +30,21 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/980
       kind: dataset
+  - id: erdos-980-sweep-307824d3
+    asserted_on: 2026-10-22
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-22
+    source:
+      title: "formal-conjectures: feat(ErdosProblems/980): add Erdős Problem 980 (#7535) Adds Erdős Problem 980: let $n_k(p)$ be the least $k$-th power nonresidue mod $p$. Is $\\sum_{p 0$? - Definitions: `leastNonresidue k p` and `resi"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/5be487be1b2dd553821e3c8a9b34f6caa9f0e6e0
+      kind: github
+      quote: "Solved (yes): `erdos_980` (Elliott [El67b]), and the case $k=2$ with $c_2=\\sum_k p_k/2^k$ (Erdős [Er61e])."
+    authors:
+      - veljjanoski
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 980". Classifier rationale: The commit explicitly marks the conjecture as solved. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

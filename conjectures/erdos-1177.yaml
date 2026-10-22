@@ -21,7 +21,22 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2026-01-23
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-1177-sweep-200c52de
+    asserted_on: 2026-10-22
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-22
+    source:
+      title: "formal-conjectures PR #3790: Record the resolution of Erdős Problem 1177"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/3790
+      kind: github
+      quote: All three parts are marked solved.
+    authors:
+      - henrykmichalewski
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 1177". Classifier rationale: The pull request reports that Erdős Problem 1177 has been resolved as solved according to Li, Corollary 1.4. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

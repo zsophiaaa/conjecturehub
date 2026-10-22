@@ -17,7 +17,23 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-820-sweep-abc859af
+    asserted_on: 2026-10-22
+    type: partial
+    scope: lemmas H_spec, H_eq_three_iff, H_one_to_ten
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-22
+    source:
+      title: "formal-conjectures: feat(ErdosProblems/820): prove H_spec, H_eq_three_iff and H_one_to_ten (#7496) Proves the API lemmas `H_spec` and `H_eq_three_iff` and the test `H_one_to_ten` in Erdős Problem 820. - `H_spec`: for $n "
+      url: https://github.com/google-deepmind/formal-conjectures/commit/bfb0bd798d4d268e96247fccf9dac2958fee1eb2
+      kind: github
+      quote: prove H_spec, H_eq_three_iff and H_one_to_ten
+    authors:
+      - veljjanoski
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 820". Classifier rationale: The commit reports proving specific lemmas and a test, not the full conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
