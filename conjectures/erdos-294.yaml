@@ -28,6 +28,21 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/294
       kind: dataset
+  - id: erdos-294-sweep-30daa75b
+    asserted_on: 2026-10-22
+    type: resolved_by_prior_literature
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-22
+    source:
+      title: "formal-conjectures PR #7531: feat(ErdosProblems/294): add Erdős Problem 294"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/7531
+      kind: github
+      quote: "Solved: `erdos_294`, the Liu–Sawhney bound [LiSa24, Theorem 1.6] ..."
+    authors:
+      - veljjanoski
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 294". Classifier rationale: The document states the conjecture is solved by citing existing Liu–Sawhney bounds. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

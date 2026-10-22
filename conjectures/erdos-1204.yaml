@@ -19,7 +19,23 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2026-04-04
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-1204-sweep-7ee2efdd
+    asserted_on: 2026-10-22
+    type: partial
+    scope: bounds on A(k) and B(k)
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-22
+    source:
+      title: "formal-conjectures: feat(ErdosProblems/1204): add Erdős Problem 1204 (#7486) Adds Erdős Problem 1204 (Elliott): a sequence $0 \\leq a_1 < \\cdots < a_k$ is admissible if it misses a residue class modulo every prime. Let $A"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/7464cc3c63e02e24130581225a03fe03cfc04f0f
+      kind: github
+      quote: "Solved: $(1/2+o(1))k\\log k \\leq A(k) \\leq (1+o(1))k\\log k$ (Elliott [El65], Polymath [Po14c]); $B(k) \\leq (1/2+o(1))k\\log k$."
+    authors:
+      - veljjanoski
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 1204". Classifier rationale: The document provides partial results (bounds) but does not claim the full asymptotic statements are proved. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

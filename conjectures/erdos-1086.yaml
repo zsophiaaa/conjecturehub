@@ -16,7 +16,38 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-10-17
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-1086-sweep-f52011cd
+    asserted_on: 2026-10-22
+    type: partial
+    scope: general bounds
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-22
+    source:
+      title: "formal-conjectures PR #7483: feat(ErdosProblems/1086): add Erdős Problem 1086"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/7483
+      kind: github
+      quote: "Open: `erdos_1086`, `=Θ[atTop] erdos_1086.answer`."
+    authors:
+      - veljjanoski
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 1086". Classifier rationale: The PR notes the conjecture is open and lists known partial bounds. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: erdos-1086-sweep-f814c390
+    asserted_on: 2026-10-22
+    type: partial
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-22
+    source:
+      title: "formal-conjectures: feat(ErdosProblems/1086): add Erdős Problem 1086 (#7483) Adds Erdős Problem 1086 (Oppenheim's question): $g(n)$ is the maximum number of triangles of the same non-zero area with vertices among $n$ poi"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/a7b87c8d0bb60e73782045d614d4a24907b87b8a
+      kind: github
+      quote: "Open: `erdos_1086`"
+    authors:
+      - veljjanoski
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 1086". Classifier rationale: The commit states the conjecture is still open while noting known partial bounds. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
