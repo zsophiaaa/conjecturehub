@@ -10,7 +10,23 @@ openness_basis:
   meaning: no_solution_known_to_community
   asserted_by: wikipedia
   note: Listed under "Unsolved problems in geometry" on English Wikipedia.
-claims: []
+claims:
+  - id: filling-area-conjecture-sweep-b888ef82
+    asserted_on: 2026-10-22
+    type: partial
+    scope: n = 4
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-22
+    source:
+      title: Examples of absolutely minimal polyhedral chains in maximum norm spaces
+      url: https://arxiv.org/abs/2610.29593
+      kind: arxiv
+      quote: The example for n=4 gives the lower bound 11π^2/20≈5.42828 for Gromov's filling area conjecture.
+    authors:
+      - Roger Züst
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Filling area conjecture". Classifier rationale: The paper provides a new lower bound for the conjecture in the case n=4, which is partial progress. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q5448828
     source: wikidata

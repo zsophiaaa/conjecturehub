@@ -32,6 +32,21 @@ claims:
       url: https://www.erdosproblems.com/721
       kind: dataset
     notes: Upstream records this as solved without specifying the direction.
+  - id: erdos-721-sweep-08d00245
+    asserted_on: 2026-10-22
+    type: resolved_by_prior_literature
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-22
+    source:
+      title: "formal-conjectures PR #7506: feat(ErdosProblems/721): state the solved upper and lower bounds"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/7506
+      kind: github
+      quote: "feat(ErdosProblems/721): state the solved upper and lower bounds ... with `category research solved`, ... citing Schoen and Hunter."
+    authors:
+      - AItoBit
+    notes: "Filed automatically by the formal-conjectures pull requests sweep. Matched on \"Erdős Problem 721\". Classifier rationale: The PR reports that the problem's bounds are already solved in existing literature, not a new proof. Unreviewed: this records that a claim was made, not that it is correct."
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
