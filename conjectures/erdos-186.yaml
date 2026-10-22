@@ -30,6 +30,21 @@ claims:
       url: https://www.erdosproblems.com/186
       kind: dataset
     notes: Upstream records this as solved without specifying the direction.
+  - id: erdos-186-sweep-ffc957d5
+    asserted_on: 2026-10-22
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-22
+    source:
+      title: "formal-conjectures: feat(ErdosProblems/186): add Erdős Problem 186 (#7530) Adds Erdős Problem 186: let $F(N)$ be the maximal size of a non-averaging $A\\subseteq\\{1,\\ldots,N\\}$ (no element is the mean of at least two othe"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/4e3b651fc7b5715a717afe5991eeee224fce89c5
+      kind: github
+      quote: "Solved: `erdos_186`, $\\log F(N)/\\log N \\to 1/4$, from Bosznay's lower bound $N^{1/4}\\ll F(N)$ [Bo89] and Pham–Zakharov's $F(N)\\leq N^{1/4+o(1)}$ [PhZa24, Theorem 1]; both bounds ... are also variants."
+    authors:
+      - veljjanoski
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 186". Classifier rationale: The commit explicitly declares the conjecture solved by citing matching lower and upper bounds. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

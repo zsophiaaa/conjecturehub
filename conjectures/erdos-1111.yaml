@@ -15,7 +15,23 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-12-07
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-1111-sweep-7de4db9a
+    asserted_on: 2026-10-21
+    type: partial
+    scope: cases c=2 and c=3 (e.g., d(t,2) ≤ binom(t,2)+1, d(3,3) ≤ 8)
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-22
+    source:
+      title: "formal-conjectures PR #7485: feat(ErdosProblems/1111): add Erdős Problem 1111"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/7485
+      kind: github
+      quote: "Solved: $d(t,2) \\leq \\binom{t}{2}+1$ via Wagon [Wa80b]; the case $c = 3$ and $d(3,3) \\leq 8$ [ElEr85]; Nguyen–Scott–Seymour [NSS24] ..."
+    authors:
+      - veljjanoski
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 1111". Classifier rationale: The PR notes partial results for specific parameter values while stating the conjecture remains open. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

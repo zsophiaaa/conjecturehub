@@ -27,6 +27,21 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/771
       kind: dataset
+  - id: erdos-771-sweep-4f974a4f
+    asserted_on: 2026-10-22
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-22
+    source:
+      title: "formal-conjectures: feat(ErdosProblems/771): add Erdős Problem 771 (#7533) Adds Erdős Problem 771: let $f(n)$ be maximal such that for every $m\\geq 1$ some $S\\subseteq\\{1,\\ldots,n\\}$ with $|S|=f(n)$ has no subset summing"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/fac7fd87f0d2c83b5b17fe769dfcff77f32059d9
+      kind: github
+      quote: "Solved (yes): `erdos_771`, $f(n)\\sim\\frac{n}{2\\log n}$, from the Erdős–Graham lower bound and the Alon–Freiman upper bound [AlFr88]"
+    authors:
+      - veljjanoski
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 771". Classifier rationale: The commit explicitly declares the conjecture solved with a proof sketch referencing known bounds. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

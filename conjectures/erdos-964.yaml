@@ -28,6 +28,21 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/964
       kind: dataset
+  - id: erdos-964-sweep-1a88c526
+    asserted_on: 2026-10-22
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-22
+    source:
+      title: "formal-conjectures: feat(ErdosProblems/964): add Erdős Problem 964 (#7534) Adds Erdős Problem 964: is the sequence $\\tau(n+1)/\\tau(n)$ everywhere dense in $(0,\\infty)$? The answer is yes. - Definition: `tauRatio n` $=\\ta"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/5e85c0ad93846c8ca96d492a02b816a1c34026d2
+      kind: github
+      quote: "The answer is yes. - Solved: `erdos_964` (every positive real is in the closure of the values for $n\\geq 1$)"
+    authors:
+      - veljjanoski
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 964". Classifier rationale: The commit states the conjecture has been solved affirmatively. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

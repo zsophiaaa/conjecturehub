@@ -28,6 +28,21 @@ claims:
       title: erdosproblems.com records this problem as "disproved"
       url: https://www.erdosproblems.com/59
       kind: dataset
+  - id: erdos-59-sweep-8e902a74
+    asserted_on: 2026-10-22
+    type: disproved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-22
+    source:
+      title: "formal-conjectures: feat(ErdosProblems/59): add Erdős Problem 59 (#7529) Adds Erdős Problem 59: is the number of graphs on $n$ vertices which do not contain $G$ at most $2^{(1+o(1))\\mathrm{ex}(n;G)}$? The answer is no. -"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/fce3640c6120d1a972277aa06b5912e1a2fe6e01
+      kind: github
+      quote: The answer is no.
+    authors:
+      - veljjanoski
+    notes: "Filed automatically by the formal-conjectures commits sweep. Matched on \"Erdős Problem 59\". Classifier rationale: The document explicitly states that the conjecture's proposed bound is false. Unreviewed: this records that a claim was made, not that it is correct."
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
