@@ -27,6 +27,21 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/577
       kind: dataset
+  - id: erdos-577-sweep-dfff508d
+    asserted_on: 2026-10-22
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-22
+    source:
+      title: "formal-conjectures PR #7130: feat(ErdosProblems): add problem 577"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/7130
+      kind: github
+      quote: Marks the result as research solved and cites Wang's 2010 paper.
+    authors:
+      - AItoBit
+    notes: "Filed automatically by the formal-conjectures pull requests sweep. Matched on \"Erdős Problem 577\". Classifier rationale: The PR asserts the conjecture has been solved by Wang's 2010 paper. Unreviewed: this records that a claim was made, not that it is correct."
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

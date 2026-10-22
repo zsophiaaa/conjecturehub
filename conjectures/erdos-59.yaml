@@ -28,6 +28,21 @@ claims:
       title: erdosproblems.com records this problem as "disproved"
       url: https://www.erdosproblems.com/59
       kind: dataset
+  - id: erdos-59-sweep-39604663
+    asserted_on: 2026-10-22
+    type: disproved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-22
+    source:
+      title: "formal-conjectures PR #7529: feat(ErdosProblems/59): add Erdős Problem 59"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/7529
+      kind: github
+      quote: The answer is no.
+    authors:
+      - veljjanoski
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 59". Classifier rationale: The pull request explicitly states that the conjecture is false. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

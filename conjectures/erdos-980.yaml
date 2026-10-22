@@ -30,6 +30,21 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/980
       kind: dataset
+  - id: erdos-980-sweep-ff1b1220
+    asserted_on: 2026-10-22
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-22
+    source:
+      title: "formal-conjectures PR #7535: feat(ErdosProblems/980): add Erdős Problem 980"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/7535
+      kind: github
+      quote: "Solved (yes): `erdos_980` (Elliott [El67b]), and the case $k=2$ with $c_2=\\sum_k p_k/2^k$ (Erdős [Er61e])."
+    authors:
+      - veljjanoski
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 980". Classifier rationale: The PR explicitly states the conjecture is solved. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

@@ -30,6 +30,21 @@ claims:
       url: https://www.erdosproblems.com/186
       kind: dataset
     notes: Upstream records this as solved without specifying the direction.
+  - id: erdos-186-sweep-820f88f1
+    asserted_on: 2026-10-22
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-22
+    source:
+      title: "formal-conjectures PR #7530: feat(ErdosProblems/186): add Erdős Problem 186"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/7530
+      kind: github
+      quote: "Solved: `erdos_186`, $\\log F(N)/\\log N \\to 1/4$, from Bosznay's lower bound $N^{1/4}\\ll F(N)$ [Bo89] and Pham–Zakharov's $F(N)\\leq N^{1/4+o(1)}$ [PhZa24, Theorem 1]."
+    authors:
+      - veljjanoski
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 186". Classifier rationale: The pull request declares the conjecture solved with exponent 1/4. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

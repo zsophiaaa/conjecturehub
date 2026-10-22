@@ -16,7 +16,37 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-10-17
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-1087-sweep-d5bfd5e1
+    asserted_on: 2026-10-22
+    type: partial
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-22
+    source:
+      title: "formal-conjectures PR #7484: feat(ErdosProblems/1087): add Erdős Problem 1087"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/7484
+      kind: github
+      quote: "Open: `erdos_1087`, read as $f(n) \\ll n^{3+\\varepsilon}$ for every $\\varepsilon > 0$."
+    authors:
+      - veljjanoski
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 1087". Classifier rationale: The document reports the conjecture as still open, indicating only partial progress. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: erdos-1087-sweep-8917a102
+    asserted_on: 2026-10-22
+    type: partial
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-22
+    source:
+      title: "formal-conjectures: feat(ErdosProblems/1087): add Erdős Problem 1087 (#7484) Adds Erdős Problem 1087 (Erdős–Purdy): $f(n)$ is the maximum number of 4-point subsets of $n$ points in the plane that are degenerate (two of t"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/8fe07945f8418297fe9906e7166be3d09cc712dc
+      kind: github
+      quote: "Solved: [ErPu71] $n^3\\log n \\ll f(n) \\ll n^{7/2}$."
+    authors:
+      - veljjanoski
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 1087". Classifier rationale: The document reports known bounds on f(n), indicating partial progress but no full resolution. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

@@ -16,7 +16,22 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-10-01
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-1066-sweep-4aa40ab6
+    asserted_on: 2026-10-22
+    type: partial
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-22
+    source:
+      title: "formal-conjectures: feat(ErdosProblems/1066): add Erdős Problem 1066 (#7482) Adds Erdős Problem 1066: for $n$ points in the plane with all distances at least $1$, join points at distance exactly $1$; $g(n)$ is the larges"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/dd4777c0668537f1916bbd6ea709f9c163b2d81a
+      kind: github
+      quote: "Solved: Pollack [Po85] $g(n) \\geq n/4$; Swanepoel [Sw02] $g(n) \\geq 8n/31$; Pach–Tóth [PaTo96] $5/16$ upper bound."
+    authors:
+      - veljjanoski
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 1066". Classifier rationale: The commit lists known bounds but explicitly marks the conjecture as open, indicating partial progress. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
