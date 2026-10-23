@@ -62,6 +62,21 @@ claims:
       title: erdosproblems.com records this problem as "disproved"
       url: https://www.erdosproblems.com/266
       kind: dataset
+  - id: erdos-266-sweep-4d1782ac
+    asserted_on: 2026-10-22
+    type: disproved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-23
+    source:
+      title: "formal-conjectures: feat(ErdosProblems/266): formal_proof link for variants.all_rationals (#7171) Fixes #7170. Records a Lean formalization of the Kovač–Tao construction behind the negative answer to Erdős problem 266 (S"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/46fa354f257e79fb1bf641b7fb1e2acc8df004fa
+      kind: github
+      quote: Theorem 2.11 of Kovač–Tao ... there is a strictly increasing sequence $a_n$ of positive integers such that \sum_{n} \frac{1}{a_n + t} is rational for every $t \in \mathbb{Q}$ ...
+    authors:
+      - benkeene
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős problem 266". Classifier rationale: The document reports the Kovač–Tao construction that provides a counterexample, thus disproving Erdős Problem 266. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/266.lean
     source: google-deepmind/formal-conjectures

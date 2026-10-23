@@ -10,7 +10,26 @@ openness_basis:
   meaning: unknown
   asserted_by: wikidata
   note: Identity record only. No statement or status has been ingested for this conjecture yet.
-claims: []
+claims:
+  - id: hilbert-s-tenth-problem-sweep-946dbd8e
+    asserted_on: 2026-10-23
+    type: resolved_by_prior_literature
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-23
+    source:
+      title: "Diophantine Equations over $\\mathbb Z$: Universal Bounds and Parallel Formalization"
+      url: https://arxiv.org/abs/2506.20909
+      kind: arxiv
+      quote: Hilbert's Tenth Problem (H10) asks about the decidability of Diophantine equations and has been answered negatively by Davis, Putnam, Robinson and Matiyasevich.
+    authors:
+      - Jonas Bayer
+      - Marco David
+      - Malte Hassler
+      - Yuri Matiyasevich
+      - Dierk Schleicher
+    notes: "Filed automatically by the arXiv new submissions sweep. Matched on \"Hilbert's tenth problem\". Classifier rationale: The document merely restates the known negative solution, not presenting a new proof. Unreviewed: this records that a claim was made, not that it is correct."
 provenance:
   - url: https://www.wikidata.org/wiki/Q986147
     source: wikidata

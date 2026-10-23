@@ -11,7 +11,22 @@ openness_basis:
   meaning: no_solution_known_to_community
   asserted_by: wikipedia
   note: Listed under "Unsolved problems in graph theory" on English Wikipedia.
-claims: []
+claims:
+  - id: barnette-s-conjecture-sweep-65b1b482
+    asserted_on: 2026-10-23
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-23
+    source:
+      title: A note on the proof of Barnette's conjecture
+      url: https://arxiv.org/abs/2610.30490
+      kind: arxiv
+      quote: We present a digested exposition of OpenAI's generated proof of Barnette's conjecture
+    authors:
+      - Zhentao Li
+    notes: "Filed automatically by the arXiv new submissions sweep. Matched on \"Barnette's conjecture\". Classifier rationale: The paper states it is presenting an exposition of a proof, implying the conjecture is claimed to be proved. Unreviewed: this records that a claim was made, not that it is correct."
 provenance:
   - url: https://www.wikidata.org/wiki/Q4861653
     source: wikidata
