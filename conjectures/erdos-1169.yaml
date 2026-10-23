@@ -28,6 +28,22 @@ claims:
       title: erdosproblems.com records this problem as "not disprovable"
       url: https://www.erdosproblems.com/1169
       kind: dataset
+  - id: erdos-1169-sweep-53c3026a
+    asserted_on: 2026-10-23
+    type: partial
+    scope: assuming CH
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-23
+    source:
+      title: "formal-conjectures: Add Erdős Problem 1169 (ω₁² ↛ (ω₁², k)² ordinal Ramsey) (#4214) Formalises [Erdős Problem 1169](https://www.erdosproblems.com/1169): does $\\omega_1^2 \\not\\to (\\omega_1^2,3)^2$ hold? The question is op"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/dbc2db9ee32219c8c1e26db64b2b7f3ed7b33324
+      kind: github
+      quote: The question is open; Hajnal proved the negative relation under CH.
+    authors:
+      - henrykmichalewski
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 1169". Classifier rationale: The document notes the conjecture is still open but reports a partial result under the Continuum Hypothesis. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
