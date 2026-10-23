@@ -38,7 +38,22 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: erdos-306-sweep-addcf1a6
+    asserted_on: 2026-10-23
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-23
+    source:
+      title: "formal-conjectures: feat(ErdosProblems/306): mark solved and link the formal proofs (#7295) Links the verified Lean 4 proofs for the unlinked statements in [`FormalConjectures/ErdosProblems/306.lean`](https://github.com/"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/d9c9d8ea1b3b1f2e617fd5e449bdda120872bbd3
+      kind: github
+      quote: resolving the main conjecture
+    authors:
+      - linrock
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem #306". Classifier rationale: The commit states the conjecture has been solved and linked to formal proofs. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/306.lean
     source: google-deepmind/formal-conjectures

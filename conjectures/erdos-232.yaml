@@ -28,6 +28,36 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/232
       kind: dataset
+  - id: erdos-232-sweep-e30c590c
+    asserted_on: 2026-10-23
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-23
+    source:
+      title: "formal-conjectures PR #7555: feat(ErdosProblems/232): add Erdős Problem 232"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/7555
+      kind: github
+      quote: "Solved: `erdos_232` ($m_1\\leq 1/4$);"
+    authors:
+      - veljjanoski
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 232". Classifier rationale: The document states the conjecture has been solved with a proof. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: erdos-232-sweep-4759c3a5
+    asserted_on: 2026-10-23
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-23
+    source:
+      title: "formal-conjectures: feat(ErdosProblems/232): add Erdős Problem 232 (#7555) Adds Erdős Problem 232 (Moser): let $m_1$ be the supremum of the upper densities of measurable planar sets with no two points at distance $1$. Is"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/c4890c7727e344679f1564cac06b33dd0b9069a8
+      kind: github
+      quote: "Solved: `erdos_232` ($m_1\\leq 1/4$);"
+    authors:
+      - veljjanoski
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 232". Classifier rationale: The commit explicitly declares the conjecture resolved with a formal proof. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

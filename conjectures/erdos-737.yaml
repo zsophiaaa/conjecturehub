@@ -28,6 +28,36 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/737
       kind: dataset
+  - id: erdos-737-sweep-5b563a48
+    asserted_on: 2026-10-23
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-23
+    source:
+      title: "formal-conjectures PR #7560: feat(ErdosProblems/737): add Erdős Problem 737"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/7560
+      kind: github
+      quote: The answer is yes (Thomassen [Th83]).
+    authors:
+      - veljjanoski
+    notes: "Filed automatically by the formal-conjectures pull requests sweep. Matched on \"Erdős Problem 737\". Classifier rationale: The document claims the conjecture is resolved by Thomassen's theorem. Unreviewed: this records that a claim was made, not that it is correct."
+  - id: erdos-737-sweep-d7497ba2
+    asserted_on: 2026-10-23
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-23
+    source:
+      title: "formal-conjectures: feat(ErdosProblems/737): add Erdős Problem 737 (#7560) Adds Erdős Problem 737 (Erdős–Hajnal–Shelah): if $G$ has chromatic number $\\aleph_1$, must some edge lie on cycles of all sufficiently large leng"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/a4baeabc1cc2ce665cea3b4b2e5277899891c50a
+      kind: github
+      quote: The answer is yes (Thomassen [Th83]).
+    authors:
+      - veljjanoski
+    notes: "Filed automatically by the formal-conjectures commits sweep. Matched on \"Erdős Problem 737\". Classifier rationale: The document claims the conjecture is resolved positively by Thomassen's 1983 result. Unreviewed: this records that a claim was made, not that it is correct."
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

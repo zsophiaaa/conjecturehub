@@ -27,6 +27,37 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/717
       kind: dataset
+  - id: erdos-717-sweep-b58d2d94
+    asserted_on: 2026-10-23
+    type: proved
+    scope: n ≥ 2
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-23
+    source:
+      title: "formal-conjectures PR #7559: feat(ErdosProblems/717): add Erdős Problem 717"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/7559
+      kind: github
+      quote: "Solved: `erdos_717`, Fox–Lee–Sudakov [FLS13, Theorem 1.1] (for $n\\geq2$)"
+    authors:
+      - veljjanoski
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 717". Classifier rationale: The pull request explicitly says the conjecture is solved by a known theorem. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: erdos-717-sweep-b9ac8dfb
+    asserted_on: 2026-10-23
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-23
+    source:
+      title: "formal-conjectures: feat(ErdosProblems/717): add Erdős Problem 717 (#7559) Adds Erdős Problem 717 (Erdős–Fajtlowicz): is $\\chi(G)\\ll\\frac{n^{1/2}}{\\log n}\\sigma(G)$, where $\\sigma(G)$ is the largest $k$ such that $G$ con"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/5f0c67a7168f0100b59f3dac6bcb851d79e3bfc3
+      kind: github
+      quote: "Solved: `erdos_717`, Fox–Lee–Sudakov [FLS13, Theorem 1.1] (for $n\\geq2$); ... The answer is yes."
+    authors:
+      - veljjanoski
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 717". Classifier rationale: The commit states the conjecture is solved, citing a published theorem. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

@@ -28,6 +28,36 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/957
       kind: dataset
+  - id: erdos-957-sweep-ca8fd623
+    asserted_on: 2026-10-23
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-23
+    source:
+      title: "formal-conjectures PR #7556: feat(ErdosProblems/957): add Erdős Problem 957"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/7556
+      kind: github
+      quote: "The answer is yes. - Solved: `erdos_957` (the ε form, uniform over all n-point sets)"
+    authors:
+      - veljjanoski
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 957". Classifier rationale: The pull request explicitly declares the conjecture solved and links to formal proofs. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: erdos-957-sweep-0aad7302
+    asserted_on: 2026-10-23
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-23
+    source:
+      title: "formal-conjectures: feat(ErdosProblems/957): add Erdős Problem 957 (#7556) Adds Erdős Problem 957 (Erdős–Pach): for $n$ points in the plane with minimum distance $d_1$ and maximum distance $d_k$, is $f(d_1)f(d_k)\\leq(\\fr"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/45723c5bc3a100dae0b6e3d1c827e179ea7109c3
+      kind: github
+      quote: The answer is yes.
+    authors:
+      - veljjanoski
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 957". Classifier rationale: The commit states the conjecture has been solved and provides a formal proof link. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
