@@ -28,6 +28,22 @@ claims:
       url: https://www.erdosproblems.com/1069
       kind: dataset
     notes: Upstream records this as solved without specifying the direction.
+  - id: erdos-1069-sweep-349c3b4f
+    asserted_on: 2026-10-22
+    type: proved
+    scope: k ≥ 2
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-23
+    source:
+      title: "formal-conjectures: feat(ErdosProblems/1069): add Erdős Problem 1069 (#7536) Adds Erdős Problem 1069 (Erdős, Croft, and Purdy): the number of $k$-rich lines determined by $n$ points in the plane is $\\ll n^2/k^3$ for $k\\l"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/94c0f0f070f1c615228a3525efd76e6454419e6c
+      kind: github
+      quote: "Solved: `erdos_1069`, proved by Szemerédi and Trotter [SzTr83]; $k\\geq 2$ is required, since for $k\\leq 1$ there are infinitely many such lines."
+    authors:
+      - veljjanoski
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 1069". Classifier rationale: The commit states the conjecture has been solved by a known proof. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

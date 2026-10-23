@@ -28,6 +28,36 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/656
       kind: dataset
+  - id: erdos-656-sweep-9f497289
+    asserted_on: 2026-10-23
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-23
+    source:
+      title: "formal-conjectures PR #7532: feat(ErdosProblems/656): add Erdős Problem 656"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/7532
+      kind: github
+      quote: "- Solved (yes): `erdos_656`, using the existing `Set.upperDensity`; the shift $t$ is an integer, as on the site."
+    authors:
+      - veljjanoski
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 656". Classifier rationale: The PR explicitly declares the conjecture solved, citing a theorem that implies the statement. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: erdos-656-sweep-d5f20b60
+    asserted_on: 2026-10-23
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-23
+    source:
+      title: "formal-conjectures: feat(ErdosProblems/656): add Erdős Problem 656 (#7532) Adds Erdős Problem 656 (Erdős's $B+B+t$ question): if $A\\subseteq\\mathbb{N}$ has positive upper density, must there be an infinite $B\\subseteq A$"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/4456eedeb6d0ad41d492dbdf0db7df99197a5550
+      kind: github
+      quote: "Solved (yes): `erdos_656`"
+    authors:
+      - veljjanoski
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 656". Classifier rationale: The commit explicitly states the conjecture is solved. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

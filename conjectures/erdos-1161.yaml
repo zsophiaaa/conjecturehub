@@ -28,6 +28,38 @@ claims:
       url: https://www.erdosproblems.com/1161
       kind: dataset
     notes: Upstream records this as solved without specifying the direction.
+  - id: erdos-1161-sweep-fbe6a161
+    asserted_on: 2026-10-23
+    type: resolved_by_prior_literature
+    scope: for all sufficiently large n
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-23
+    source:
+      title: "formal-conjectures PR #7553: feat(ErdosProblems/1161): add Erdős Problem 1161"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/7553
+      kind: github
+      quote: "Solved (`question value`): `erdos_1161`, Beker's theorem [Be25d, Theorem 1.2]: for all large $n$, the set of $k$ at which $f_k(n)$ is maximal is `erdos_1161.answer n`"
+    authors:
+      - veljjanoski
+    notes: "Filed automatically by the formal-conjectures pull requests sweep. Matched on \"Erdős Problem 1161\". Classifier rationale: The document claims the conjecture is settled by Beker's existing theorem. Unreviewed: this records that a claim was made, not that it is correct."
+  - id: erdos-1161-sweep-ccf22ff2
+    asserted_on: 2026-10-23
+    type: resolved_by_prior_literature
+    scope: for all sufficiently large n
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-23
+    source:
+      title: "formal-conjectures: feat(ErdosProblems/1161): add Erdős Problem 1161 (#7553) Adds Erdős Problem 1161: let $f_k(n)$ count the elements of $S_n$ of order $k$. For which $k$ is $f_k(n)$ maximal? - Definitions: `f k n` (perm"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/4776a513272bd6d5855891aa223efdb452c49bba
+      kind: github
+      quote: "Solved (`question value`): `erdos_1161`, Beker's theorem [Be25d, Theorem 1.2]: for all large $n$, the set of $k$ at which $f_k(n)$ is maximal is `erdos_1161.answer n`"
+    authors:
+      - veljjanoski
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 1161". Classifier rationale: The commit claims the conjecture is settled by an existing theorem of Beker. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

@@ -10,7 +10,23 @@ openness_basis:
   meaning: unknown
   asserted_by: wikidata
   note: Identity record only. No statement or status has been ingested for this conjecture yet.
-claims: []
+claims:
+  - id: thrackle-sweep-0a9370e6
+    asserted_on: 2026-10-23
+    type: partial
+    scope: n ≥ 4
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-23
+    source:
+      title: "Conway's thrackle conjecture: a new upper bound of $\\frac43n$"
+      url: https://arxiv.org/abs/2610.31589
+      kind: arxiv
+      quote: We prove that every thrackle on $n\ge4$ vertices has at most \left\lfloor4(n-1)/3\right\rfloor edges.
+    authors:
+      - Dániel Gábor Simon
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Thrackle". Classifier rationale: The paper provides a new upper bound but does not claim a full proof or disproof of the thrackle conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q5166684
     source: wikidata

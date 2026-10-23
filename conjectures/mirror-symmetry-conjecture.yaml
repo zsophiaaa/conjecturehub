@@ -10,7 +10,24 @@ openness_basis:
   meaning: unknown
   asserted_by: wikidata
   note: Identity record only. No statement or status has been ingested for this conjecture yet.
-claims: []
+claims:
+  - id: mirror-symmetry-conjecture-sweep-50238e97
+    asserted_on: 2026-10-23
+    type: partial
+    scope: parabolic type A character varieties with generic semisimple monodromy
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-23
+    source:
+      title: Counting stringy points on a family of character varieties
+      url: https://arxiv.org/abs/2411.05563
+      kind: arxiv
+      quote: In particular, they satisfy the Betti Topological Mirror Symmetry Conjecture of T. Hausel and M. Thaddeus
+    authors:
+      - Lucas de Amorin
+      - Martin Mereb
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "mirror symmetry conjecture". Classifier rationale: The paper claims a proof that this family satisfies the stated mirror symmetry conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q97366912
     source: wikidata

@@ -28,6 +28,36 @@ claims:
       url: https://www.erdosproblems.com/360
       kind: dataset
     notes: Upstream records this as solved without specifying the direction.
+  - id: erdos-360-sweep-4c1b0125
+    asserted_on: 2026-10-23
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-23
+    source:
+      title: "formal-conjectures PR #7554: feat(ErdosProblems/360): add Erdős Problem 360"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/7554
+      kind: github
+      quote: "Solved (`question value`, with the answer filled in as `erdos_360.answer`): `erdos_360`, Conlon–Fox–Pham [CFP21, Theorem 1.5] $$f(n)\\asymp\\frac{n^{1/3}(n/\\phi(n))}{(\\log n)^{1/3}(\\log\\log n)^{2/3}}.$$"
+    authors:
+      - veljjanoski
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 360". Classifier rationale: The PR explicitly marks the problem as solved by citing a theorem that gives the asymptotic growth. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: erdos-360-sweep-73efe535
+    asserted_on: 2026-10-23
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-23
+    source:
+      title: "formal-conjectures: feat(ErdosProblems/360): add Erdős Problem 360 (#7554) Adds Erdős Problem 360: let $f(n)$ be the least number of classes in a partition of $\\{1,\\ldots,n-1\\}$ such that $n$ is not a sum of distinct ele"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/2339a443df71ec66ad5cfe1a74dd6efbab38aadd
+      kind: github
+      quote: "Solved (`question value`, with the answer filled in as `erdos_360.answer`): `erdos_360`, Conlon–Fox–Pham [CFP21, Theorem 1.5] $$f(n)\\asymp\\frac{n^{1/3}(n/\\phi(n))}{(\\log n)^{1/3}(\\log\\log n)^{2/3}}.$$"
+    authors:
+      - veljjanoski
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 360". Classifier rationale: The commit explicitly marks the conjecture as solved, citing a theorem that provides the asymptotic formula. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

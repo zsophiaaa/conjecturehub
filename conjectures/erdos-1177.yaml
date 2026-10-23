@@ -21,7 +21,22 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2026-01-23
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-1177-sweep-5df97cf3
+    asserted_on: 2026-10-23
+    type: resolved_by_prior_literature
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-23
+    source:
+      title: "formal-conjectures: Record the resolution of Erdős Problem 1177 (#3790) Updates the three statements of [Erdős Problem 1177](https://www.erdosproblems.com/1177) with the yes/no/yes resolution from [Li, Corollary 1.4](htt"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/34d9d85f25162e6ca7e39a020a133b7317addb3c
+      kind: github
+      quote: Updates the three statements of Erdős Problem 1177 with the yes/no/yes resolution from Li, Corollary 1.4.
+    authors:
+      - henrykmichalewski
+    notes: "Filed automatically by the formal-conjectures commits sweep. Matched on \"Erdős Problem 1177\". Classifier rationale: The commit records that Li's published corollary resolves the conjecture. Unreviewed: this records that a claim was made, not that it is correct."
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

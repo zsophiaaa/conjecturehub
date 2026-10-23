@@ -31,6 +31,21 @@ claims:
       title: erdosproblems.com records this problem as "disproved"
       url: https://www.erdosproblems.com/1081
       kind: dataset
+  - id: erdos-1081-sweep-53016545
+    asserted_on: 2026-10-22
+    type: disproved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-23
+    source:
+      title: "formal-conjectures: feat(ErdosProblems/1081): add Erdős Problem 1081 (#7537) Adds Erdős Problem 1081: let $A(x)$ count the $n\\leq x$ that are a sum of two squarefull numbers. Is $A(x)\\sim c\\frac{x}{\\sqrt{\\log x}}$ for so"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/e250bb10908e2b3b4eb8be2f934a364b4a864fa6
+      kind: github
+      quote: The answer is no.
+    authors:
+      - veljjanoski
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 1081". Classifier rationale: The commit explicitly states the conjecture is solved with a negative answer. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
