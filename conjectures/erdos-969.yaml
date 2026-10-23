@@ -17,7 +17,23 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-969-sweep-dc80657a
+    asserted_on: 2026-10-23
+    type: partial
+    scope: order-of-magnitude bounds (E = O(g) and E ≠ o(g))
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-23
+    source:
+      title: "formal-conjectures: Add Erdős problem 969 (#4091) Formalize the order-of-magnitude question for the squarefree-counting error as an upper bound and a matching oscillation lower bound, reuse Mathlib’s `Squarefree`, and re"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/8b6f60420bc885f2b9854e4ab4926c5e14cfdefc
+      kind: github
+      quote: The answer scale satisfies `E = O(g)` and `E ≠ o(g)`.
+    authors:
+      - putonthetableacat55
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős problem 969". Classifier rationale: The document records known upper and lower bounds but does not claim a complete resolution. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
