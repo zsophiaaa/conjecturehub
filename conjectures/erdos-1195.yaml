@@ -30,6 +30,21 @@ claims:
       url: https://www.erdosproblems.com/1195
       kind: dataset
     notes: Upstream records this as solved without specifying the direction.
+  - id: erdos-1195-sweep-e8b4d351
+    asserted_on: 2026-10-24
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-24
+    source:
+      title: "formal-conjectures PR #7585: feat(ErdosProblems/1195): add Erdős Problem 1195"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/7585
+      kind: github
+      quote: This was settled by Ho Boon Suan and GPT-5.4 Pro on the problem's forum thread.
+    authors:
+      - veljjanoski
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 1195". Classifier rationale: The pull request states the problem has been solved and provides a formal proof link. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
