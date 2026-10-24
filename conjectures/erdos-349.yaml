@@ -96,7 +96,23 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: erdos-349-sweep-52e7a04b
+    asserted_on: 2026-10-24
+    type: partial
+    scope: band 3/2 ≤ α < φ and 2 ≤ tα < 3
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-24
+    source:
+      title: "formal-conjectures PR #7572: ErdosProblems/349: good pairs on the band 3/2 <= alpha < phi, 2 <= t*alpha < 3 (partial result)"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/7572
+      kind: github
+      quote: i.e. $(t,\alpha)$ is a good pair when $3/2 \le \alpha < \varphi$ and $2 \le t\alpha < 3$ (in fact every positive integer is a sum of distinct terms there; ...).
+    authors:
+      - cepadugato
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 349". Classifier rationale: The document adds a partial result covering a specific parameter band but explicitly states it does not resolve the full problem. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/349.lean
     source: google-deepmind/formal-conjectures

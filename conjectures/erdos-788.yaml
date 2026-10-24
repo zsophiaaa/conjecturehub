@@ -15,7 +15,22 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-788-sweep-b3abad61
+    asserted_on: 2026-10-24
+    type: resolved_by_prior_literature
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-24
+    source:
+      title: "formal-conjectures PR #7588: feat(ErdosProblems): record 788 exponent and quantitative formal proof"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/7588
+      kind: github
+      quote: "Proof provenance: Shouqiao Wang, A Proposed Solution to Erdős Problem 788. This is a reproduction and statement contribution, not a new mathematical solution."
+    authors:
+      - AItoBit
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 788". Classifier rationale: The PR reports that an existing external proof solves the problem and merely formalizes it. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
