@@ -17,7 +17,23 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-791-sweep-c2ba2ad1
+    asserted_on: 2026-10-25
+    type: resolved_by_prior_literature
+    scope: the explicit question g(n) ~ 2 sqrt(n) (negative answer)
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-25
+    source:
+      title: "formal-conjectures PR #7599: feat(ErdosProblems): formalize the negative asymptotic answer to problem 791"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/7599
+      kind: github
+      quote: The negative answer is due to Mrose (1979).
+    authors:
+      - AItoBit
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős problem 791". Classifier rationale: The PR states the negative answer is already known from prior work. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
