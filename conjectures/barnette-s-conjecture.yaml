@@ -4,6 +4,9 @@ ids:
   wikidata: Q4861653
   wikipedia: https://en.wikipedia.org/wiki/Barnette%27s_conjecture
   mathworld: https://mathworld.wolfram.com/BarnettesConjecture.html
+  external:
+    - label: VibeMathed
+      url: https://vibemathed.com/problem/barnette-conjecture
 notability:
   wikipedia_language_editions: 5
   measured_on: 2026-08-03
@@ -29,3 +32,10 @@ provenance:
       - openness_basis
     license: CC-BY-SA-4.0
     retrieved: 2026-08-03
+  - url: https://vibemathed.com/api/dataset
+    source: vibemathed
+    fields:
+      - ids.external
+    license: CC-BY-4.0
+    retrieved: 2026-10-25
+    upstream_version: 2026-10-25T11:41:44.539Z

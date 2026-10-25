@@ -3,6 +3,9 @@ title: Hilbert–Smith conjecture
 ids:
   wikidata: Q5761258
   wikipedia: https://en.wikipedia.org/wiki/Hilbert%E2%80%93Smith_conjecture
+  external:
+    - label: VibeMathed
+      url: https://vibemathed.com/problem/hilbert-smith-conjecture
 notability:
   wikipedia_language_editions: 4
   measured_on: 2026-08-03
@@ -28,3 +31,10 @@ provenance:
       - openness_basis
     license: CC-BY-SA-4.0
     retrieved: 2026-08-03
+  - url: https://vibemathed.com/api/dataset
+    source: vibemathed
+    fields:
+      - ids.external
+    license: CC-BY-4.0
+    retrieved: 2026-10-25
+    upstream_version: 2026-10-25T11:41:44.539Z

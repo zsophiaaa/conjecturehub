@@ -7,8 +7,8 @@ ids:
   wikipedia: https://en.wikipedia.org/wiki/Discrete_logarithm_problem
   mathworld: https://mathworld.wolfram.com/DiscreteLogarithm.html
 notability:
-  wikipedia_language_editions: 2
-  measured_on: 2026-08-03
+  wikipedia_language_editions: 0
+  measured_on: 2026-10-25
 openness_basis:
   meaning: no_solution_known_to_community
   asserted_by: wikipedia
@@ -24,7 +24,7 @@ provenance:
       - ids.mathworld
       - notability.wikipedia_language_editions
     license: CC0-1.0
-    retrieved: 2026-08-03
+    retrieved: 2026-10-25
   - url: https://en.wikipedia.org/wiki/Discrete_logarithm
     source: wikipedia
     fields:
