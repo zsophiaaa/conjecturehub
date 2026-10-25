@@ -18,7 +18,23 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2026-04-04
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-1189-sweep-a606d8a7
+    asserted_on: 2026-10-25
+    type: partial
+    scope: parts.iv
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-25
+    source:
+      title: "formal-conjectures PR #7608: feat(ErdosProblems/1189): add Erdős Problem 1189"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/7608
+      kind: github
+      quote: "Solved: `parts.iv`, by Sun [Su07]."
+    authors:
+      - veljjanoski
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 1189". Classifier rationale: The pull request claims that part iv of Erdős Problem 1189 has been solved by Sun. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

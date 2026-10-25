@@ -28,6 +28,21 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/284
       kind: dataset
+  - id: erdos-284-sweep-4e18a929
+    asserted_on: 2026-10-25
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-25
+    source:
+      title: "formal-conjectures PR #7601: feat(ErdosProblems/284): add Erdős Problem 284"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/7601
+      kind: github
+      quote: "- Solved: `erdos_284`, stated as $f(k)/k\\to 1/(e-1)$ [ErGr80, p. 33]; essentially solved by Croot [Cr01]."
+    authors:
+      - veljjanoski
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 284". Classifier rationale: The pull request explicitly marks the conjecture as solved, citing prior literature. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
