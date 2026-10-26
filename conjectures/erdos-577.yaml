@@ -27,6 +27,21 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/577
       kind: dataset
+  - id: erdos-577-sweep-c28226db
+    asserted_on: 2026-10-25
+    type: resolved_by_prior_literature
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-26
+    source:
+      title: "formal-conjectures: feat(ErdosProblems): add problem 577 (#7130) Adds the statement of Erdős Problem 577: a graph on 4k vertices with minimum degree at least 2k contains k vertex-disjoint 4-cycles. Uses Mathlib's injecti"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/5f8fd3a5747dabf2541609130d749a37e493de89
+      kind: github
+      quote: Marks the result as research solved and cites Wang's 2010 paper.
+    authors:
+      - AItoBit
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 577". Classifier rationale: The commit asserts the conjecture is solved by referencing an existing paper. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

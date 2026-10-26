@@ -28,6 +28,21 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/733
       kind: dataset
+  - id: erdos-733-sweep-33f42fad
+    asserted_on: 2026-10-26
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-26
+    source:
+      title: "formal-conjectures PR #7578: feat(ErdosProblems/733): add Erdős Problem 733"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/7578
+      kind: github
+      quote: "Solved: `erdos_733` (∃ C > 0, for every $n$ the set is finite and has at most \\exp(C\\sqrt n) elements), proved by Szemerédi and Trotter [SzTr83]."
+    authors:
+      - veljjanoski
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 733". Classifier rationale: The document explicitly claims the conjecture has been proved by Szemerédi and Trotter. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
