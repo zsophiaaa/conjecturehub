@@ -83,6 +83,24 @@ claims:
       - David Barros Hulak
       - Ruy Jose Guerra Barretto de Queiroz
     notes: Isabelle/HOL formalisation accepted into the Archive of Formal Proofs. This is the one completed machine check of the counterexample; the Lean route remains an open Mathlib pull request. Not tagged machine_verified here because that tier is reserved for proofs checked by ConjectureHub CI against our own canonical statement.
+  - id: jacobian-conjecture-sweep-b89b4494
+    asserted_on: 2026-10-26
+    type: partial
+    scope: real Jacobian conjecture in ℝ^n
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-26
+    source:
+      title: Global injectivity and real Jacobian conjecture in $\mathbb{R}^n$
+      url: https://arxiv.org/abs/2610.32391
+      kind: arxiv
+      quote: obtaining two necessary and sufficient conditions for the real Jacobian conjecture in \mathbb{R}^n by qualitative theory of differential equations.
+    authors:
+      - Xinhao Hu
+      - Jaume Llibre
+      - Yilei Tang
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Jacobian conjecture". Classifier rationale: The paper gives partial results (conditions) for the real version, not a full proof or disproof. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/JacobianConjecture.lean
     source: google-deepmind/formal-conjectures
