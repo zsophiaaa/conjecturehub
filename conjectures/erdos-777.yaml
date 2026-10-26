@@ -29,6 +29,22 @@ claims:
       url: https://www.erdosproblems.com/777
       kind: dataset
     notes: Upstream records this as solved without specifying the direction.
+  - id: erdos-777-sweep-8c9ee58a
+    asserted_on: 2026-10-26
+    type: resolved_by_prior_literature
+    scope: parts i, ii, iii
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-26
+    source:
+      title: "formal-conjectures PR #7583: feat(ErdosProblems/777): add Erdős Problem 777"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/7583
+      kind: github
+      quote: "Solved: `erdos_777.parts.i` (yes; Alon–Das–Glebov–Sudakov [ADGS15, Theorem 1.4, Corollary 1.5], as on the problem page), `erdos_777.parts.ii` (no; Alon–Frankl [AlFr85, Example 6.1]), `erdos_777.parts.iii` (yes; Alon–Frankl [AlFr85, Theorem 1.4, $k=1$])."
+    authors:
+      - veljjanoski
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 777". Classifier rationale: The PR reports that all three parts of Erdős Problem 777 are settled in existing literature. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

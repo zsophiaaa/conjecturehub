@@ -15,7 +15,23 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-790-sweep-da29b53d
+    asserted_on: 2026-10-26
+    type: partial
+    scope: divergence question (l(n)/√n tends to infinity)
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-26
+    source:
+      title: "formal-conjectures PR #7598: feat(ErdosProblems): formalize problem 790 and known bounds"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/7598
+      kind: github
+      quote: "The divergence question is tagged solved: the published lower bound implies l(n)/√n tends to infinity."
+    authors:
+      - AItoBit
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős problem 790". Classifier rationale: The document reports that one sub‑question of Erdős problem 790 is solved while other parts remain open. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
