@@ -15,7 +15,22 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-934-sweep-70c03ba1
+    asserted_on: 2026-10-26
+    type: partial
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-26
+    source:
+      title: "formal-conjectures: feat(ErdosProblems/934): add Erdős Problem 934 (#7605) Closes #1026. Adds Erdős Problem 934 (Erdős–Nešetřil): let $h_t(d)$ be the least number of edges that forces, in every graph with maximum degree "
+      url: https://github.com/google-deepmind/formal-conjectures/commit/194b741f0d3f1bc2a09db801048eeeaf9e8a0fa5
+      kind: github
+      quote: "Open (`question value`): an exact expression for $h_t(d)$, all $t\\geq 1$ and $d$."
+    authors:
+      - veljjanoski
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 934". Classifier rationale: The document lists known bounds and states the problem is open, indicating partial progress. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

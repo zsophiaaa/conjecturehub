@@ -18,7 +18,23 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2026-04-04
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-1189-sweep-a6d6878e
+    asserted_on: 2026-10-26
+    type: partial
+    scope: part iv
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-26
+    source:
+      title: "formal-conjectures: feat(ErdosProblems/1189): add Erdős Problem 1189 (#7608) Adds Erdős Problem 1189: irreducible covering sets $1 1$ form an irreducible covering set? - Definitions: `IsCoveringSet`, `IsIrreducibleCoveri"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/74e21835baaa69c54542db9536469e1534154cd2
+      kind: github
+      quote: "Solved: `parts.iv`, by Sun [Su07]."
+    authors:
+      - veljjanoski
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 1189". Classifier rationale: The commit notes that part iv of Erdős Problem 1189 has been solved, while other parts remain open. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

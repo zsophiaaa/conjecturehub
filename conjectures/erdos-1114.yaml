@@ -28,6 +28,21 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/1114
       kind: dataset
+  - id: erdos-1114-sweep-cbeb94a6
+    asserted_on: 2026-10-26
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-26
+    source:
+      title: "formal-conjectures: feat(ErdosProblems/1114): add Erdős Problem 1114 (#7577) Adds Erdős Problem 1114 (Bálint): if the roots of a real polynomial form an arithmetic progression, then the gaps between consecutive zeros of "
+      url: https://github.com/google-deepmind/formal-conjectures/commit/f153efa8fdc078131e214547781d631e2d257daf
+      kind: github
+      quote: "Solved: `erdos_1114` (Bálint [Ba60b]), for $f$ of degree $N+1$ with roots $a, a+d, \\ldots, a+Nd$ ..."
+    authors:
+      - veljjanoski
+    notes: "Filed automatically by the formal-conjectures commits sweep. Matched on \"Erdős Problem 1114\". Classifier rationale: The commit explicitly records that the conjecture has been solved by Bálint's paper. Unreviewed: this records that a claim was made, not that it is correct."
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

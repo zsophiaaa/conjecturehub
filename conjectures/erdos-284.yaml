@@ -28,6 +28,21 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/284
       kind: dataset
+  - id: erdos-284-sweep-2db41355
+    asserted_on: 2026-10-26
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-26
+    source:
+      title: "formal-conjectures: feat(ErdosProblems/284): add Erdős Problem 284 (#7601) Adds Erdős Problem 284 (Erdős–Graham): let $f(k)$ be the largest $n_1$ such that $1=\\frac{1}{n_1}+\\cdots+\\frac{1}{n_k}$ with $n_1<\\cdots<n_k$. Is"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/09215996126bf40899be6cbe826d6f53a6b2ae35
+      kind: github
+      quote: "- Solved: `erdos_284`, stated as $f(k)/k\\to 1/(e-1)$ [ErGr80, p. 33]; essentially solved by Croot [Cr01]."
+    authors:
+      - veljjanoski
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 284". Classifier rationale: The commit explicitly marks the conjecture as solved, citing a proof by Croot. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

@@ -16,7 +16,23 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-627-sweep-8a8eb2da
+    asserted_on: 2026-10-26
+    type: partial
+    scope: Tutte–Zykov variant
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-26
+    source:
+      title: "formal-conjectures: feat(ErdosProblems/627): prove the Tutte–Zykov variant (#7259) Replaces the placeholder in `erdos_627.variants.tutte_zykov` with a complete proof: for every `k ≥ 2`, there is a finite graph with cliqu"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/1e79eb940d9865ffa4017615b54e403bee6be38e
+      kind: github
+      quote: The main limit-existence question in Erdős problem 627 remains open and unchanged.
+    authors:
+      - AItoBit
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős problem 627". Classifier rationale: The document states the original problem is still open while proving a related variant. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
