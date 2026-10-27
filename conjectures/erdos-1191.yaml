@@ -16,7 +16,23 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2026-04-04
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-1191-sweep-c7a1cb70
+    asserted_on: 2026-10-27
+    type: partial
+    scope: part i (the infinite Sidon subset liminf statement)
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-27
+    source:
+      title: "formal-conjectures PR #7640: feat(ErdosProblems/1191): add solved dyadic, Legendre-Fenchel, and Haar sawtooth variants with Lean proof links"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/7640
+      kind: github
+      quote: "Updates `erdos_1191.parts.i` to `@[category research solved, question, AMS 5 11]`: every infinite Sidon subset $A \\subseteq \\mathbb{N}$ satisfies ..."
+    authors:
+      - doublegate
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem #1191". Classifier rationale: The PR states that part i of Erdős Problem 1191 is now marked solved with formal Lean proofs. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
