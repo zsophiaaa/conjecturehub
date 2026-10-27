@@ -83,6 +83,39 @@ claims:
       - David Barros Hulak
       - Ruy Jose Guerra Barretto de Queiroz
     notes: Isabelle/HOL formalisation accepted into the Archive of Formal Proofs. This is the one completed machine check of the counterexample; the Lean route remains an open Mathlib pull request. Not tagged machine_verified here because that tier is reserved for proofs checked by ConjectureHub CI against our own canonical statement.
+  - id: jacobian-conjecture-sweep-557dfacc
+    asserted_on: 2026-10-27
+    type: partial
+    scope: n = 2
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-27
+    source:
+      title: The generalized Dixmier conjecture and the two-dimensional Jacobian conjecture
+      url: https://arxiv.org/abs/2610.33919
+      kind: arxiv
+      quote: We prove that the two-dimensional Jacobian conjecture \(\mathrm{JC}_2\) implies the generalized Dixmier conjecture \(\mathrm{DC}'_1\)
+    authors:
+      - Alexey Kanel-Belov
+      - Timofey Fedorov
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Jacobian conjecture". Classifier rationale: The paper establishes conditional implications for the two‑dimensional case but does not claim a full proof or disproof. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: jacobian-conjecture-sweep-935c5a70
+    asserted_on: 2026-10-27
+    type: counterexample
+    scope: n ≥ 3, degree d ≥ 7, assuming X(n,d) is irreducible
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-27
+    source:
+      title: On mappings with Jacobian one
+      url: https://arxiv.org/abs/2607.20597
+      kind: arxiv
+      quote: In particular if the set X(n,d) is irreducible, and n≥ 3, d≥ 7, then a generic element of this set is a counterexample to the Jacobian Conjecture.
+    authors:
+      - Zbigniew Jelonek
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Jacobian conjecture". Classifier rationale: The abstract asserts that generic elements under those conditions are counterexamples, implying a disproof claim. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/JacobianConjecture.lean
     source: google-deepmind/formal-conjectures

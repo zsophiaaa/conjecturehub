@@ -24,6 +24,22 @@ claims:
     authors:
       - Liang Guo
     notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Novikov conjecture". Classifier rationale: The paper proves the equivariant coarse Novikov conjecture under a specific geometric hypothesis, which is a partial result for the Novikov conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: novikov-conjecture-sweep-fa1b2ad5
+    asserted_on: 2026-10-27
+    type: partial
+    scope: for the constructed groups G_r
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-27
+    source:
+      title: Projections in reduced group C*-algebras with prescribed trace values in (0,1)
+      url: https://arxiv.org/abs/2610.35674
+      kind: arxiv
+      quote: The groups $G_r$ have torsion and satisfy the maximal strong Novikov conjecture.
+    authors:
+      - Guoliang Yu
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Novikov conjecture". Classifier rationale: The paper claims the specific groups it builds satisfy a version of the Novikov conjecture, which is a partial result. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q7064908
     source: wikidata
