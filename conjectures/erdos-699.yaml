@@ -54,6 +54,22 @@ claims:
       title: erdosproblems.com records this problem as "falsifiable"
       url: https://www.erdosproblems.com/699
       kind: dataset
+  - id: erdos-699-sweep-0fb623b8
+    asserted_on: 2026-10-27
+    type: partial
+    scope: when j^2 < n
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-27
+    source:
+      title: "formal-conjectures PR #7637: feat(ErdosProblems/699): add solved variant for j^2 < n with Lean proof link"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/7637
+      kind: github
+      quote: Erdős Problem 699 holds whenever $j^2 < n$, so every counterexample has $n \le j^2$.
+    authors:
+      - Paulee314
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 699". Classifier rationale: The document claims a proof of the conjecture under the additional hypothesis j^2 < n. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/699.lean
     source: google-deepmind/formal-conjectures

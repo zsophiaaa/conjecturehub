@@ -12,7 +12,22 @@ openness_basis:
   meaning: unknown
   asserted_by: wikidata
   note: Identity record only. No statement or status has been ingested for this conjecture yet.
-claims: []
+claims:
+  - id: kakeya-needle-problem-sweep-625e61dd
+    asserted_on: 2026-10-27
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-27
+    source:
+      title: "Had a nap and dreamed all the mathematicians lost their jobs due to AI and had to become Joe Rogan-esque podcast grifters for money. Woke up and found out the slop machine has now "
+      url: https://mathstodon.xyz/@oissinodonnell/117510474687903543
+      kind: mastodon
+      quote: the slop machine has now proved the Kakeya conjecture in all dimensions.
+    authors:
+      - Oissin O'Donnell
+    notes: 'Filed automatically by the Mathstodon sweep. Matched on "Kakeya conjecture". Classifier rationale: The post explicitly states that the conjecture has been proved. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q3406254
     source: wikidata

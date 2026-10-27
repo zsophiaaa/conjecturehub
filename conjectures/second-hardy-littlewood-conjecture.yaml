@@ -10,7 +10,23 @@ openness_basis:
   meaning: no_solution_known_to_community
   asserted_by: wikipedia
   note: Listed under "Unsolved problems in number theory" on English Wikipedia.
-claims: []
+claims:
+  - id: second-hardy-littlewood-conjecture-sweep-b08601d1
+    asserted_on: 2026-10-27
+    type: counterexample
+    scope: all imaginary quadratic fields of class number 1 except one
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-27
+    source:
+      title: Admissible sets of integers in imaginary quadratic fields of class number 1
+      url: https://arxiv.org/abs/2610.34556
+      kind: arxiv
+      quote: explicit counter-examples to a generalisation of the second Hardy-Littlewood conjecture in all bar one of the fields.
+    authors:
+      - Daniel Shiu
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Second Hardy–Littlewood conjecture". Classifier rationale: The paper claims to disprove a variation of the Second Hardy–Littlewood conjecture by providing explicit counter‑examples. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q2920423
     source: wikidata

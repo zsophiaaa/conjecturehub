@@ -12,7 +12,22 @@ openness_basis:
   meaning: unknown
   asserted_by: wikidata
   note: Identity record only. No statement or status has been ingested for this conjecture yet.
-claims: []
+claims:
+  - id: exponential-time-hypothesis-sweep-629970ea
+    asserted_on: 2026-10-27
+    type: disproved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-27
+    source:
+      title: "@ johncarlosbaez You might be interested in the recently announced AI proof of the falsity of the exponential time hypothesis, since the Octonions show up in an essential way."
+      url: https://mathstodon.xyz/@algebravic/117513473344543500
+      kind: mastodon
+      quote: recently announced AI proof of the falsity of the exponential time hypothesis
+    authors:
+      - Algebravic
+    notes: 'Filed automatically by the Mathstodon sweep. Matched on "exponential time hypothesis". Classifier rationale: The post explicitly claims an AI proof that falsifies the exponential time hypothesis. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q5421532
     source: wikidata

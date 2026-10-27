@@ -10,7 +10,24 @@ openness_basis:
   meaning: unknown
   asserted_by: wikidata
   note: Identity record only. No statement or status has been ingested for this conjecture yet.
-claims: []
+claims:
+  - id: dixmier-conjecture-sweep-557dfacc
+    asserted_on: 2026-10-27
+    type: partial
+    scope: first Weyl algebra A_1
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-27
+    source:
+      title: The generalized Dixmier conjecture and the two-dimensional Jacobian conjecture
+      url: https://arxiv.org/abs/2610.33919
+      kind: arxiv
+      quote: We prove that the two-dimensional Jacobian conjecture \(\mathrm{JC}_2\) implies the generalized Dixmier conjecture \(\mathrm{DC}'_1\) for the first Weyl algebra $A_1$.
+    authors:
+      - Alexey Kanel-Belov
+      - Timofey Fedorov
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Dixmier conjecture". Classifier rationale: The paper establishes an implication between JC_2 and the generalized Dixmier conjecture but does not claim a full proof or disproof. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q5284929
     source: wikidata
