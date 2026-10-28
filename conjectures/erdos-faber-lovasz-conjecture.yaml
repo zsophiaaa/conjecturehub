@@ -10,7 +10,37 @@ openness_basis:
   meaning: no_solution_known_to_community
   asserted_by: wikipedia
   note: Listed under "Unsolved problems in graph theory" on English Wikipedia.
-claims: []
+claims:
+  - id: erdos-faber-lovasz-conjecture-sweep-d5bc3359
+    asserted_on: 2026-10-27
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-28
+    source:
+      title: "formal-conjectures PR #7641: feat(ErdosProblems/19): add PBD completion, shadow-slack, and three-tier discharging variants"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/7641
+      kind: github
+      quote: '"[Pa26] closes this finite-to-asymptotic gap unconditionally across all n \ge 3"'
+    authors:
+      - doublegate
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős–Faber–Lovász conjecture". Classifier rationale: The document reports that the cited paper claims to resolve the conjecture for all n ≥ 3. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: erdos-faber-lovasz-conjecture-sweep-95f44f27
+    asserted_on: 2026-10-27
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-28
+    source:
+      title: "erdosproblems PR #512: Problem 19: Update status to proved (Lean) and link OEIS A030050, A001200, A000798"
+      url: https://github.com/teorth/erdosproblems/pull/512
+      kind: github
+      quote: Update status to proved (Lean)
+    authors:
+      - doublegate
+    notes: 'Filed automatically by the erdosproblems pull requests sweep. Matched on "Erdős–Faber–Lovász conjecture". Classifier rationale: The pull request states the Erdős–Faber–Lovász conjecture has been proved and the status was changed to "proved". Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q5385322
     source: wikidata
