@@ -35,7 +35,22 @@ openness_basis:
   meaning: no_published_solution_known_to_curator
   asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: mathoverflow-75792-sweep-d222e408
+    asserted_on: 2026-10-28
+    type: resolved_by_prior_literature
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-28
+    source:
+      title: "formal-conjectures PR #7660: feat(formal_proof): link Lean proofs for 22 solved statements"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/7660
+      kind: github
+      quote: The 22 results are known theorems and two disproofs ... none claims a new result.
+    authors:
+      - danielpuri1901
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Mathoverflow 75792". Classifier rationale: The PR links a Lean formalization of the conjecture, stating it is a known theorem rather than a new proof. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Mathoverflow/75792.lean
     source: google-deepmind/formal-conjectures

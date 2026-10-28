@@ -29,6 +29,37 @@ claims:
       url: https://www.erdosproblems.com/777
       kind: dataset
     notes: Upstream records this as solved without specifying the direction.
+  - id: erdos-777-sweep-8c9ee58a
+    asserted_on: 2026-10-28
+    type: resolved_by_prior_literature
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-28
+    source:
+      title: "formal-conjectures PR #7583: feat(ErdosProblems/777): add Erdős Problem 777"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/7583
+      kind: github
+      quote: "Solved: `erdos_777.parts.i` (yes; Alon–Das–Glebov–Sudakov [ADGS15, Theorem 1.4, Corollary 1.5], as on the problem page), `erdos_777.parts.ii` (no; Alon–Frankl [AlFr85, Example 6.1]), `erdos_777.parts.iii` (yes; Alon–Frankl [AlFr85, Theorem 1.4, $k=1$])."
+    authors:
+      - veljjanoski
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 777". Classifier rationale: The PR states that each part of Erdős Problem 777 has been settled by cited prior results. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: erdos-777-sweep-83b8341c
+    asserted_on: 2026-10-28
+    type: resolved_by_prior_literature
+    scope: parts i, ii, iii
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-28
+    source:
+      title: "formal-conjectures: feat(ErdosProblems/777): add Erdős Problem 777 (#7583) Adds Erdős Problem 777 (Daykin–Erdős): three questions on the number of comparable pairs in a family $\\mathcal{F}$ of $m$ subsets of $\\{1,\\ldots,"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/5a2fb85045c86e4a184b15ce7531ba199a3c4580
+      kind: github
+      quote: "`Solved: erdos_777.parts.i (yes; Alon–Das–Glebov–Sudakov [ADGS15, Theorem 1.4, Corollary 1.5]), erdos_777.parts.ii (no; Alon–Frankl [AlFr85, Example 6.1]), erdos_777.parts.iii (yes; Alon–Frankl [AlFr85, Theorem 1.4, $k=1$])`"
+    authors:
+      - veljjanoski
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 777". Classifier rationale: The commit reports that each of the three questions in Erdős Problem 777 has been settled by prior published results. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

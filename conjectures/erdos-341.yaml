@@ -35,7 +35,22 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: erdos-341-sweep-65f4c8c9
+    asserted_on: 2026-10-28
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-28
+    source:
+      title: "formal-conjectures PR #7645: Erdős 341: statement requires positive, strictly increasing sequence"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/7645
+      kind: github
+      quote: The linked formal proof was written against the earlier `ℤ` statement; its witness sequence is a strictly increasing sequence of positive integers, so it also satisfies the new hypotheses.
+    authors:
+      - maximusrufus
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 341". Classifier rationale: The document states that a formal proof of the conjecture exists and meets the updated statement. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/341.lean
     source: google-deepmind/formal-conjectures
