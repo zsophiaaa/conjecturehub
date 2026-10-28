@@ -28,6 +28,37 @@ claims:
       title: erdosproblems.com records this problem as "decidable"
       url: https://www.erdosproblems.com/19
       kind: dataset
+  - id: erdos-19-sweep-d5bc3359
+    asserted_on: 2026-10-28
+    type: partial
+    scope: n ≤ 12
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-28
+    source:
+      title: "formal-conjectures PR #7641: feat(ErdosProblems/19): add n ≤ 12 variant [RoAl14], PBD arithmetic lemmas, and projective plane witnesses"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/7641
+      kind: github
+      quote: proving EFL for $n \le 12$
+    authors:
+      - doublegate
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem #19". Classifier rationale: The PR notes the conjecture remains open but records a proved variant for n ≤ 12. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: erdos-19-sweep-95f44f27
+    asserted_on: 2026-10-28
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-28
+    source:
+      title: "erdosproblems PR #512: Problem 19: Update status to proved (Lean) and link OEIS A030050, A001200, A000798"
+      url: https://github.com/teorth/erdosproblems/pull/512
+      kind: github
+      quote: '"Mathematical Resolution (informal_status.state: \"proved\")"'
+    authors:
+      - doublegate
+    notes: "Filed automatically by the erdosproblems pull requests sweep. Matched on \"Erdős Problem #19\". Classifier rationale: The PR explicitly states that the conjecture's informal status is updated to proved. Unreviewed: this records that a claim was made, not that it is correct."
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

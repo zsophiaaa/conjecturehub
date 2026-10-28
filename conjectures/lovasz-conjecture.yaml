@@ -13,7 +13,22 @@ openness_basis:
   meaning: no_solution_known_to_community
   asserted_by: wikipedia
   note: Listed under "Unsolved problems in graph theory" on English Wikipedia.
-claims: []
+claims:
+  - id: lovasz-conjecture-sweep-95f44f27
+    asserted_on: 2026-10-28
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-28
+    source:
+      title: "erdosproblems PR #512: Problem 19: Update status to proved (Lean) and link OEIS A030050, A001200, A000798"
+      url: https://github.com/teorth/erdosproblems/pull/512
+      kind: github
+      quote: 'Mathematical Resolution (informal_status.state: "proved")'
+    authors:
+      - doublegate
+    notes: "Filed automatically by the erdosproblems pull requests sweep. Matched on \"Lovász conjecture\". Classifier rationale: The pull request explicitly updates the conjecture's status to proved. Unreviewed: this records that a claim was made, not that it is correct."
 provenance:
   - url: https://www.wikidata.org/wiki/Q957938
     source: wikidata
