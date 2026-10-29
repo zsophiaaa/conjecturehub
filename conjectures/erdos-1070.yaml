@@ -15,7 +15,22 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-10-05
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-1070-sweep-dbb7e7a2
+    asserted_on: 2026-10-29
+    type: disproved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-29
+    source:
+      title: "formal-conjectures: feat(ErdosProblems/1070): add Erdős Problem 1070 (#7654) Closes #1110. Adds Erdős Problem 1070: let $f(n)$ be the largest $m$ such that any $n$ points in $\\mathbb{R}^2$ contain $m$ points with no two "
+      url: https://github.com/google-deepmind/formal-conjectures/commit/757f41c6b145f2d85800ab1da7028a19f170379b
+      kind: github
+      quote: "Solved: `erdos_1070.parts.ii`, negated ($f(n)\\geq n/4$ fails for some $n$), by Dúcz and Varga (arXiv:2606.28157, Theorem 1)"
+    authors:
+      - veljjanoski
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 1070". Classifier rationale: The commit explicitly reports that the inequality $f(n)\ge n/4$ is false for some $n$, i.e., the conjecture is disproved. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

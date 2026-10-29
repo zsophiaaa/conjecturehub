@@ -15,7 +15,38 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-983-sweep-70841a3e
+    asserted_on: 2026-10-29
+    type: disproved
+    scope: part i (infinitely many n)
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-29
+    source:
+      title: "formal-conjectures PR #7652: feat(ErdosProblems/983): add Erdős Problem 983"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/7652
+      kind: github
+      quote: Liam Price and GPT-5.5 Pro showed on the forum that $f(\pi(n)+1,n)=2\pi(n^{1/2})+1$ infinitely often
+    authors:
+      - veljjanoski
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 983". Classifier rationale: The document claims a counterexample occurs infinitely often, negating part i of the conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: erdos-983-sweep-14933d6d
+    asserted_on: 2026-10-29
+    type: disproved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-29
+    source:
+      title: "formal-conjectures: feat(ErdosProblems/983): add Erdős Problem 983 (#7652) Closes #1054. Adds Erdős Problem 983: let $f(k,n)$ be the least $r$ such that any $A\\subseteq\\{1,\\ldots,n\\}$ with $\\lvert A\\rvert=k$ has $r$ prim"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/1ce9faf64743e234077a5775a75e55d378961293
+      kind: github
+      quote: Liam Price and GPT-5.5 Pro showed on the forum that $f(\pi(n)+1,n)=2\pi(n^{1/2})+1$ infinitely often
+    authors:
+      - veljjanoski
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 983". Classifier rationale: The document claims a counterexample occurs infinitely often, negating the conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
