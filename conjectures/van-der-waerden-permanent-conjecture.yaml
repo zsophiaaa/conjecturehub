@@ -12,7 +12,22 @@ openness_basis:
   meaning: unknown
   asserted_by: wikidata
   note: Identity record only. No statement or status has been ingested for this conjecture yet.
-claims: []
+claims:
+  - id: van-der-waerden-permanent-conjecture-sweep-3bd9c30b
+    asserted_on: 2026-10-29
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-29
+    source:
+      title: "formal-conjectures PR #7672: feat(OEIS): link Lean proof for A002454"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/7672
+      kind: github
+      quote: Links a Lean proof of the A002454 permanent identity for every natural `n` and every primitive complex `(2n+1)`-th root
+    authors:
+      - VictorLiwentao
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "permanent". Classifier rationale: The PR states that a Lean formal proof of the conjecture has been provided. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q16636852
     source: wikidata
