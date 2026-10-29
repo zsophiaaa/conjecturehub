@@ -17,7 +17,23 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-436-sweep-06f0ace2
+    asserted_on: 2026-10-29
+    type: partial
+    scope: variant two_two (Λ(2,2) = 9)
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-29
+    source:
+      title: "formal-conjectures PR #7667: Link Lean proof of Erdős Problem 436 variant two_two"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/7667
+      kind: github
+      quote: Link Lean proof of Erdős Problem 436 variant two_two.
+    authors:
+      - karlesmarin
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 436". Classifier rationale: The document reports a formal proof of a specific variant, which is a partial result on the conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
