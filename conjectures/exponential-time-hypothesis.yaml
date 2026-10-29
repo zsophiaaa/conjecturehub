@@ -12,7 +12,22 @@ openness_basis:
   meaning: unknown
   asserted_by: wikidata
   note: Identity record only. No statement or status has been ingested for this conjecture yet.
-claims: []
+claims:
+  - id: exponential-time-hypothesis-sweep-4ae2507c
+    asserted_on: 2026-10-29
+    type: disproved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-29
+    source:
+      title: "Both OpenAI and Anthropic claim to have disproved a big conjecture on computational complexity on the same day: the exponential time hypothesis. (The same day? 🤔) Many problems th"
+      url: https://mathstodon.xyz/@johncarlosbaez/117524387900939380
+      kind: mastodon
+      quote: "Both OpenAI and Anthropic claim to have disproved a big conjecture on computational complexity on the same day: the exponential time hypothesis."
+    authors:
+      - John Carlos Baez
+    notes: 'Filed automatically by the Mathstodon sweep. Matched on "exponential time hypothesis". Classifier rationale: The post states that the ETH has been disproved by AI companies. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q5421532
     source: wikidata

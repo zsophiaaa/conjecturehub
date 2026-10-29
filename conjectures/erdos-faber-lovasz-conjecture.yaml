@@ -10,7 +10,23 @@ openness_basis:
   meaning: no_solution_known_to_community
   asserted_by: wikipedia
   note: Listed under "Unsolved problems in graph theory" on English Wikipedia.
-claims: []
+claims:
+  - id: erdos-faber-lovasz-conjecture-sweep-d5bc3359
+    asserted_on: 2026-10-29
+    type: partial
+    scope: n ≤ 12
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-29
+    source:
+      title: "formal-conjectures PR #7641: feat(ErdosProblems/19): add n ≤ 12 variant [RoAl14], PBD arithmetic lemmas, and projective plane witnesses"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/7641
+      kind: github
+      quote: recording Romero and Alonso-Pecina's `[RoAl14]` theorem for $n \le 12`
+    authors:
+      - doublegate
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős–Faber–Lovász conjecture". Classifier rationale: The PR states the conjecture is open but adds a solved variant proving it for n ≤ 12. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q5385322
     source: wikidata
