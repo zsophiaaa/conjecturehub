@@ -28,6 +28,21 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/752
       kind: dataset
+  - id: erdos-752-sweep-2f35bad2
+    asserted_on: 2026-10-30
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-30
+    source:
+      title: "formal-conjectures PR #6379: Add Erdős Problem 752 (cycle lengths in graphs of large girth), link the formal proof"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6379
+      kind: github
+      quote: "`erdos_752` (`research solved`, `answer(True)`) for `s ≥ 1` and all large `k`, every finite graph with minimum degree `≥ k` and girth `> 2s` has `≫_s k^s` distinct cycle lengths (Sudakov–Verstraëte [SuVe08])."
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 752". Classifier rationale: The PR states that a formal proof of the conjecture has been added and marked as research solved. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
