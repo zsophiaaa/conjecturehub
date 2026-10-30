@@ -16,7 +16,22 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2026-04-16
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-670-sweep-21ca3f14
+    asserted_on: 2026-10-29
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-30
+    source:
+      title: "formal-conjectures: feat(ErdosProblems/670): link formal proof of choose_two (#7503) Adds `formal_proof using lean4` to `erdos_670.variants.choose_two` in Erdős Problem 670: a set of $n \\neq 2$ points with separated dist"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/1fa86bf887301dd779730a89cbc8cb91fbfe3299
+      kind: github
+      quote: Adds `formal_proof using lean4` to `erdos_670.variants.choose_two` ... the linked theorem is exactly the statement here.
+    authors:
+      - veljjanoski
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 670". Classifier rationale: The document reports a formal Lean4 proof of the full Erdős Problem 670 statement. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
