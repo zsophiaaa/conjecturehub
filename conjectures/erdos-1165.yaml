@@ -28,6 +28,21 @@ claims:
       url: https://www.erdosproblems.com/1165
       kind: dataset
     notes: Upstream records this as solved without specifying the direction.
+  - id: erdos-1165-sweep-d4f801cb
+    asserted_on: 2026-10-30
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-30
+    source:
+      title: "formal-conjectures PR #7689: feat(ErdosProblems/1165): add Erdős Problem 1165"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/7689
+      kind: github
+      quote: "Solved (`question value`, answer filled in): `erdos_1165`, probability $1$ for $r=3$ and $0$ for $r\\geq 4$, by Hao, Li, Okada and Zheng [HLOZ24, Theorem 1.1]."
+    authors:
+      - veljjanoski
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 1165". Classifier rationale: The pull request states the conjecture has been solved with a specific theorem. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

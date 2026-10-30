@@ -28,6 +28,22 @@ claims:
       url: https://www.erdosproblems.com/1118
       kind: dataset
     notes: Upstream records this as solved without specifying the direction.
+  - id: erdos-1118-sweep-9b4af04f
+    asserted_on: 2026-10-30
+    type: partial
+    scope: parts i and ii
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-30
+    source:
+      title: "formal-conjectures PR #7686: feat(ErdosProblems/1118): add Erdős Problem 1118"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/7686
+      kind: github
+      quote: "Solved: `erdos_1118.parts.i`, Hayman's conjecture … and `erdos_1118.parts.ii` (`question`, answer no, Gol'dberg)."
+    authors:
+      - veljjanoski
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 1118". Classifier rationale: The pull request explicitly claims that parts i and ii of Erdős Problem 1118 have been solved. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

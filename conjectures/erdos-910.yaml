@@ -27,6 +27,22 @@ claims:
       title: erdosproblems.com records this problem as "disproved"
       url: https://www.erdosproblems.com/910
       kind: dataset
+  - id: erdos-910-sweep-edeaad73
+    asserted_on: 2026-10-30
+    type: disproved
+    scope: assuming the continuum hypothesis
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-30
+    source:
+      title: "formal-conjectures PR #7697: feat(ErdosProblems/910): add Erdős Problem 910"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/7697
+      kind: github
+      quote: Rudin's theorem ... This disproves a conjecture of Erdős [Er44, p. 443].
+    authors:
+      - veljjanoski
+    notes: "Filed automatically by the formal-conjectures pull requests sweep. Matched on \"Erdős Problem 910\". Classifier rationale: The document reports that Rudin's theorem disproves the conjecture (under CH). Unreviewed: this records that a claim was made, not that it is correct."
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

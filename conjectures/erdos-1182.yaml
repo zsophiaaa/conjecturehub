@@ -16,7 +16,23 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2026-03-07
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-1182-sweep-4818ddfa
+    asserted_on: 2026-10-30
+    type: partial
+    scope: part ii (F(n)=Θ(n))
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-30
+    source:
+      title: "formal-conjectures PR #7690: feat(ErdosProblems/1182): add Erdős Problem 1182"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/7690
+      kind: github
+      quote: "Solved: `erdos_1182.parts.ii` ($F(n)=\\Theta(n)$, answer filled in)"
+    authors:
+      - veljjanoski
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 1182". Classifier rationale: The PR states that part ii of Erdős Problem 1182 is solved with F(n)=Θ(n). Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
