@@ -22,6 +22,23 @@ claims:
       url: https://en.wikipedia.org/wiki/Bogomolov_conjecture
       kind: wikipedia
     notes: Standing taken from English Wikipedia's categorisation (Wikipedia categorises this as proved). Nobody here has read the paper that settled it, which is what the secondary attestation says; replace this claim with one citing that paper when someone has it to hand.
+  - id: bogomolov-conjecture-sweep-803b7605
+    asserted_on: 2026-10-30
+    type: partial
+    scope: split endomorphisms of (P^1)^n with degree ≥2 (at most one exceptional)
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-30
+    source:
+      title: Non-Archimedean Rigidity and the Uniform Dynamical Manin--Mumford for $\left(\mathbb{P}^1\right)^n$
+      url: https://arxiv.org/abs/2610.40152
+      kind: arxiv
+      quote: We also obtain uniform statements for the dynamical Bogomolov conjecture.
+    authors:
+      - Jit Wu Yap
+      - Zhuchao Ji
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Bogomolov conjecture". Classifier rationale: The paper claims uniform results for the dynamical Bogomolov conjecture, not a full proof. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q4937703
     source: wikidata

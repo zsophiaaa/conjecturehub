@@ -29,6 +29,21 @@ claims:
       url: https://www.erdosproblems.com/1001
       kind: dataset
     notes: Upstream records this as solved without specifying the direction.
+  - id: erdos-1001-sweep-3a2b2fe7
+    asserted_on: 2026-10-29
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-30
+    source:
+      title: "formal-conjectures PR #7581: feat(ErdosProblems/1001): add Erdős Problem 1001"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/7581
+      kind: github
+      quote: "`formal_proof` links to plby/lean-proofs (at commit 8822f7dd): `erdos_1001` and `erdos_1001_sparse`, with the same definitions. Checked with `lake --wfail build 'FormalConjectures.ErdosProblems.«1001»'`."
+    authors:
+      - veljjanoski
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 1001". Classifier rationale: The document states that a formal proof of the conjecture exists in the linked Lean files. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

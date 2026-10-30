@@ -29,6 +29,36 @@ claims:
       title: erdosproblems.com records this problem as "disproved"
       url: https://www.erdosproblems.com/110
       kind: dataset
+  - id: erdos-110-sweep-b05af2e8
+    asserted_on: 2026-10-29
+    type: resolved_by_prior_literature
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-30
+    source:
+      title: "formal-conjectures PR #7579: feat(ErdosProblems/110): add Erdős Problem 110"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/7579
+      kind: github
+      quote: "Solved: `erdos_110` (the negation; Lambie-Hanson [La20, Theorem A] in ZFC, after Komjáth–Shelah's consistency result [KoSh05])."
+    authors:
+      - veljjanoski
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 110". Classifier rationale: The PR states the conjecture is settled negatively by citing an existing theorem. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: erdos-110-sweep-57efac0f
+    asserted_on: 2026-10-29
+    type: disproved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-30
+    source:
+      title: "formal-conjectures: feat(ErdosProblems/110): add Erdős Problem 110 (#7579) Closes #340. Adds Erdős Problem 110 (Erdős–Hajnal–Szemerédi): is there $F(n)$ such that every graph with chromatic number $\\aleph_1$ has, for all"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/8ab8f9af0807799b761f333da8e440bc742ffd45
+      kind: github
+      quote: The answer is no.
+    authors:
+      - veljjanoski
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 110". Classifier rationale: The commit declares the conjecture is resolved negatively (disproved). Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

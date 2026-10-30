@@ -10,7 +10,27 @@ openness_basis:
   meaning: no_solution_known_to_community
   asserted_by: wikipedia
   note: Listed under "Unsolved problems in geometry" on English Wikipedia.
-claims: []
+claims:
+  - id: rota-s-basis-conjecture-sweep-12736460
+    asserted_on: 2026-10-30
+    type: partial
+    scope: asymptotic variant
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-30
+    source:
+      title: Approximation Algorithms for Matroid-Intersection Coloring with Applications to Rota's Basis Conjecture
+      url: https://arxiv.org/abs/2604.03735
+      kind: arxiv
+      quote: This yields the first polynomial-time constructive algorithm for an asymptotic variant of Rota's Basis Conjecture.
+    authors:
+      - Stephen Arndt
+      - Benjamin Moseley
+      - Kirk Pruhs
+      - Chaitanya Swamy
+      - Michael Zlatin
+    notes: "Filed automatically by the arXiv new submissions sweep. Matched on \"Rota's basis conjecture\". Classifier rationale: The paper reports a constructive algorithm for an asymptotic version, which is partial progress, not a full resolution. Unreviewed: this records that a claim was made, not that it is correct."
 provenance:
   - url: https://www.wikidata.org/wiki/Q7370200
     source: wikidata

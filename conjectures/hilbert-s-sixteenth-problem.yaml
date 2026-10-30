@@ -10,7 +10,24 @@ openness_basis:
   meaning: no_solution_known_to_community
   asserted_by: wikipedia
   note: Listed under "Unsolved problems in geometry" on English Wikipedia.
-claims: []
+claims:
+  - id: hilbert-s-sixteenth-problem-sweep-e809c5a6
+    asserted_on: 2026-10-30
+    type: partial
+    scope: planar piecewise linear systems with a straight switching line
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-30
+    source:
+      title: A Sharp Bound of Crossing Limit Cycle for Planar piecewise linear Systems with a Straight Switching Line
+      url: https://arxiv.org/abs/2610.39490
+      kind: arxiv
+      quote: we prove that any such system admits at most three crossing limit cycles... this result establishes that three is the sharp uniform upper bound.
+    authors:
+      - Zijie Xu
+      - Jiang Yu
+    notes: "Filed automatically by the arXiv new submissions sweep. Matched on \"Hilbert's sixteenth problem\". Classifier rationale: The paper resolves a specific case of Hilbert's sixteenth problem concerning crossing limit cycles in piecewise linear systems. Unreviewed: this records that a claim was made, not that it is correct."
 provenance:
   - url: https://www.wikidata.org/wiki/Q2509489
     source: wikidata

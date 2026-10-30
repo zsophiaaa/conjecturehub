@@ -28,6 +28,37 @@ claims:
       url: https://www.erdosproblems.com/1116
       kind: dataset
     notes: Upstream records this as solved without specifying the direction.
+  - id: erdos-1116-sweep-aa2ef604
+    asserted_on: 2026-10-29
+    type: proved
+    scope: entire functions, finite a≠b
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-30
+    source:
+      title: "formal-conjectures PR #7580: feat(ErdosProblems/1116): add Erdős Problem 1116"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/7580
+      kind: github
+      quote: "Solved: `erdos_1116`, for entire $f$ and finite $a\\neq b$ (Gol'dberg [Go78], Toppila [To76, Theorem 3])."
+    authors:
+      - veljjanoski
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 1116". Classifier rationale: The document states the conjecture is solved for the entire case with literature references. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: erdos-1116-sweep-365524e2
+    asserted_on: 2026-10-29
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-30
+    source:
+      title: "formal-conjectures: feat(ErdosProblems/1116): add Erdős Problem 1116 (#7580) Adds Erdős Problem 1116 (Hayman's Problem 1.25): is there a meromorphic (or entire) $f$ with $\\limsup_{r\\to\\infty} n(r,a)/n(r,b)=\\infty$ for al"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/e650a8a843dbecdb2784ccec2db9bf07b10e69d4
+      kind: github
+      quote: The answer is yes.
+    authors:
+      - veljjanoski
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 1116". Classifier rationale: The commit states the conjecture is answered affirmatively, implying a proof. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

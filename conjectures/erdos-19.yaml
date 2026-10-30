@@ -28,6 +28,22 @@ claims:
       title: erdosproblems.com records this problem as "decidable"
       url: https://www.erdosproblems.com/19
       kind: dataset
+  - id: erdos-19-sweep-d5bc3359
+    asserted_on: 2026-10-30
+    type: partial
+    scope: n ≤ 12
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-30
+    source:
+      title: "formal-conjectures PR #7641: feat(ErdosProblems/19): add n ≤ 12 variant [RoAl14], PBD arithmetic lemmas, and projective plane witnesses"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/7641
+      kind: github
+      quote: recording Romero and Alonso-Pecina's [RoAl14] theorem for $n \le 12$
+    authors:
+      - doublegate
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem #19". Classifier rationale: The PR notes a proven variant of the Erdős–Faber–Lovász conjecture for n ≤ 12. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

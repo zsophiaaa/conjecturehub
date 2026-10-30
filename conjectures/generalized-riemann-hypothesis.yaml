@@ -11,7 +11,23 @@ openness_basis:
   meaning: no_solution_known_to_community
   asserted_by: wikipedia
   note: Listed under "Unsolved problems in mathematics" on English Wikipedia.
-claims: []
+claims:
+  - id: generalized-riemann-hypothesis-sweep-b4514c92
+    asserted_on: 2026-10-30
+    type: partial
+    scope: asymptotic proportion of real zeros of Jensen polynomials tends to one
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-30
+    source:
+      title: An asymptotic Jensen-Polya criterion for GRH
+      url: https://arxiv.org/abs/2610.38870
+      kind: arxiv
+      quote: the proportion of real zeros tends to one with error $O_K(\sqrt{\log d/d})$.
+    authors:
+      - Ken Ono
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Generalized Riemann hypothesis". Classifier rationale: The paper proves an asymptotic real‑rootedness result for Jensen polynomials, which is partial progress toward GRH but not a full proof. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q685140
     source: wikidata

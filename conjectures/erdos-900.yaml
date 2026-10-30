@@ -27,6 +27,36 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/900
       kind: dataset
+  - id: erdos-900-sweep-d5b134f8
+    asserted_on: 2026-10-29
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-30
+    source:
+      title: "formal-conjectures PR #7582: feat(ErdosProblems/900): add Erdős Problem 900"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/7582
+      kind: github
+      quote: "Solved: `erdos_900` ([AKS81]), with \\(\\lfloor cn\\rfloor\\) edges, path length counted in edges, probability tending to $1$, and $f(c)>0$ for all $c>1/2$."
+    authors:
+      - veljjanoski
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 900". Classifier rationale: The pull request states the conjecture has been solved by AKS81 and links to a formal proof. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: erdos-900-sweep-8b910d68
+    asserted_on: 2026-10-29
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-30
+    source:
+      title: "formal-conjectures: feat(ErdosProblems/900): add Erdős Problem 900 (#7582) Adds Erdős Problem 900 (Ajtai–Komlós–Szemerédi): there is $f$ with $f(c)\\to 0$ as $c\\to 1/2$ and $f(c)\\to 1$ as $c\\to\\infty$ such that a random g"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/313fc2e8c110c30111e10e5fd5fad806bb9d39da
+      kind: github
+      quote: "Solved: `erdos_900` ([AKS81]), with \\lfloor cn\\rfloor edges, path length counted in edges, probability tending to $1$, and $f(c)>0$ for all $c>1/2$."
+    authors:
+      - veljjanoski
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 900". Classifier rationale: The commit explicitly declares the conjecture solved, citing the AKS81 result. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

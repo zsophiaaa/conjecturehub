@@ -28,6 +28,36 @@ claims:
       url: https://www.erdosproblems.com/1205
       kind: dataset
     notes: Upstream records this as solved without specifying the direction.
+  - id: erdos-1205-sweep-026f8294
+    asserted_on: 2026-10-29
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-30
+    source:
+      title: "formal-conjectures PR #7576: feat(ErdosProblems/1205): add Erdős Problem 1205"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/7576
+      kind: github
+      quote: "Solved (`question value`, answer filled in as `Real.log x`): `erdos_1205`, $F(x)\\sim\\log x$."
+    authors:
+      - veljjanoski
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 1205". Classifier rationale: The pull request states the conjecture is solved and provides a formal proof link. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: erdos-1205-sweep-302e703d
+    asserted_on: 2026-10-29
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-30
+    source:
+      title: "formal-conjectures: feat(ErdosProblems/1205): add Erdős Problem 1205 (#7576) Adds Erdős Problem 1205: let $F(x)$ be maximal such that there are congruence classes $a_n \\bmod n$ ($n\\leq x$) with every $m\\leq x$ satisfying"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/73fd2163079aa04c3eb61f6c521d1235b9212d19
+      kind: github
+      quote: "Solved (`question value`, answer filled in as `Real.log x`): `erdos_1205`, $F(x)\\sim\\log x$."
+    authors:
+      - veljjanoski
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 1205". Classifier rationale: The commit declares the conjecture solved and links to a formal proof. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
