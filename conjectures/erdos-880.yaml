@@ -28,6 +28,22 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/880
       kind: dataset
+  - id: erdos-880-sweep-0e540145
+    asserted_on: 2026-10-30
+    type: disproved
+    scope: k ≥ 3
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-31
+    source:
+      title: "formal-conjectures PR #6260: Add Erdős Problem 880 (gaps in restricted sumsets of additive bases), link the formal proof"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/6260
+      kind: github
+      quote: it is false that for every additive basis `A` of order `k` ... the restricted sums have bounded gaps
+    authors:
+      - Konamiu
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 880". Classifier rationale: The PR claims a formal proof that the conjecture is false, providing a counterexample for orders k≥3. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

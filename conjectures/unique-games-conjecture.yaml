@@ -10,7 +10,22 @@ openness_basis:
   meaning: no_solution_known_to_community
   asserted_by: wikipedia
   note: Listed under "Unsolved problems in computer science" on English Wikipedia.
-claims: []
+claims:
+  - id: unique-games-conjecture-sweep-5198fbe0
+    asserted_on: 2026-10-30
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-31
+    source:
+      title: "Talk by Dana Moshkovitz: The Unique Games Conjecture &#8211; Proved (!!?)"
+      url: https://scottaaronson.blog/?p=10232
+      kind: blog
+      quote: OpenAI’s recent proof
+    authors:
+      - Scott
+    notes: 'Filed automatically by the Shtetl-Optimized sweep. Matched on "Unique games conjecture". Classifier rationale: The blog reports a claimed proof of the Unique Games Conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q7886950
     source: wikidata

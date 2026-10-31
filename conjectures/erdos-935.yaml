@@ -18,7 +18,23 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-09-04
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-935-sweep-2c421b83
+    asserted_on: 2026-10-30
+    type: partial
+    scope: parts ii, ell_two, mahler
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-31
+    source:
+      title: "formal-conjectures PR #7699: feat(ErdosProblems/935): link formal proofs of parts.ii, ell_two and mahler"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/7699
+      kind: github
+      quote: Links formal proofs of three solved statements in Erdős Problem 935.
+    authors:
+      - veljjanoski
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 935". Classifier rationale: The PR states that formal proofs of three parts of the problem have been provided, indicating partial resolution. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
