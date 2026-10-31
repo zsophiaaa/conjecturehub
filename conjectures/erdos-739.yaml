@@ -28,6 +28,22 @@ claims:
       title: erdosproblems.com records this problem as "not provable"
       url: https://www.erdosproblems.com/739
       kind: dataset
+  - id: erdos-739-sweep-84d2468e
+    asserted_on: 2026-10-30
+    type: independence
+    scope: ZFC
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-10-31
+    source:
+      title: "formal-conjectures PR #7703: feat(ErdosProblems/739): add Erdős Problem 739"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/7703
+      kind: github
+      quote: Komjáth [Ko88b] showed that the statement is not provable in ZFC
+    authors:
+      - Nas01010101
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 739". Classifier rationale: The document reports a known independence result for the conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
