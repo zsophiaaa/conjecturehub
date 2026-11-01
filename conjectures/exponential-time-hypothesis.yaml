@@ -6,8 +6,8 @@ ids:
   wikidata: Q5421532
   wikipedia: https://en.wikipedia.org/wiki/Exponential_time_hypothesis
 notability:
-  wikipedia_language_editions: 6
-  measured_on: 2026-08-03
+  wikipedia_language_editions: 8
+  measured_on: 2026-11-01
 openness_basis:
   meaning: unknown
   asserted_by: wikidata
@@ -23,4 +23,4 @@ provenance:
       - ids.mathworld
       - notability.wikipedia_language_editions
     license: CC0-1.0
-    retrieved: 2026-08-03
+    retrieved: 2026-11-01
