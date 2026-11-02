@@ -33,6 +33,22 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/986
       kind: dataset
+  - id: erdos-986-sweep-66c08f58
+    asserted_on: 2026-11-02
+    type: proved
+    scope: for each fixed s ≥ 5 and every ε > 0
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-02
+    source:
+      title: "formal-conjectures PR #7752: feat(ErdosProblems/986): add sharp log-exponent variants for s ≥ 5"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/7752
+      kind: github
+      quote: For each fixed `s ≥ 5` and every `ε > 0`, `R(s,k) ≥ k^(s-1) / (log k)^(s-2+ε)` for all large `k`.
+    authors:
+      - Sanexxxx777
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 986". Classifier rationale: The PR states that the OpenAI math release provides a Lean proof of these bounds, marking the variants as "research solved". Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
