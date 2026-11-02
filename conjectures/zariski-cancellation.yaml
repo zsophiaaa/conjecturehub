@@ -42,7 +42,23 @@ openness_basis:
   meaning: no_published_solution_known_to_curator
   asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: zariski-cancellation-sweep-025f89f4
+    asserted_on: 2026-11-02
+    type: counterexample
+    scope: k = ℂ, n = 4
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-02
+    source:
+      title: "formal-conjectures PR #7729: feat(Arxiv/2208.14736): bridge the OpenAI cancellation counterexample"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/7729
+      kind: github
+      quote: "`A` is not isomorphic to `MvPolynomial (Fin 4) ℂ`"
+    authors:
+      - Sanexxxx777
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Zariski Cancellation". Classifier rationale: The PR reports an OpenAI theorem providing a concrete algebra that is not isomorphic to a 4‑variable polynomial ring, claiming a counterexample to Zariski Cancellation. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Arxiv/2208.14736/ZariskiCancellation.lean
     source: google-deepmind/formal-conjectures

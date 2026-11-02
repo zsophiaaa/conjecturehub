@@ -12,7 +12,22 @@ openness_basis:
   meaning: unknown
   asserted_by: wikidata
   note: Identity record only. No statement or status has been ingested for this conjecture yet.
-claims: []
+claims:
+  - id: exponential-time-hypothesis-sweep-2293fa35
+    asserted_on: 2026-11-02
+    type: disproved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-02
+    source:
+      title: Lowered crossover points of Anthropic's subexponential 3-SAT algorithm
+      url: https://arxiv.org/abs/2610.41622
+      kind: arxiv
+      quote: The October 2026 refutations of the Exponential Time Hypothesis count satisfying assignments in time $2^{o(n)}$
+    authors:
+      - Ruhollah Majdoddin
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "exponential time hypothesis". Classifier rationale: The abstract states that ETH has been refuted in prior work. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q5421532
     source: wikidata
