@@ -10,7 +10,22 @@ openness_basis:
   meaning: no_solution_known_to_community
   asserted_by: wikipedia
   note: Listed under "Unsolved problems in mathematics" on English Wikipedia.
-claims: []
+claims:
+  - id: naimark-s-problem-sweep-56a07dbf
+    asserted_on: 2026-11-03
+    type: counterexample
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-03
+    source:
+      title: "formal-conjectures PR #7775: feat(Paper/NaimarkProblem): add Naimark's problem"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/7775
+      kind: github
+      quote: "Add Naimark's problem, which has a negative answer in ZFC: Tanaka (arXiv:2609.26930, 22 Sep 2026) and, independently, the OpenAI math release (preprint *A counterexample to Naimark's problem in ZFC*)"
+    authors:
+      - Sanexxxx777
+    notes: "Filed automatically by the formal-conjectures pull requests sweep. Matched on \"Naimark's problem\". Classifier rationale: The document claims a counterexample to Naimark's problem, resolving it negatively. Unreviewed: this records that a claim was made, not that it is correct."
 provenance:
   - url: https://www.wikidata.org/wiki/Q6959670
     source: wikidata

@@ -15,7 +15,23 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-12-12
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-1033-sweep-838c1025
+    asserted_on: 2026-11-03
+    type: counterexample
+    scope: ε < 2(√3‑1) − 978/668
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-03
+    source:
+      title: "formal-conjectures PR #7777: feat(ErdosProblems/1033): link the Palomar entry for the formal proof"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/7777
+      kind: github
+      quote: This refutes the statement for every $ε$ below $2(\sqrt 3 - 1) - 978/668$.
+    authors:
+      - ukniusanqian-alt
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 1033". Classifier rationale: The document reports an explicit counterexample that disproves the conjecture for the stated range. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
