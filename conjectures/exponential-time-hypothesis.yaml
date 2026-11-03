@@ -12,7 +12,29 @@ openness_basis:
   meaning: unknown
   asserted_by: wikidata
   note: Identity record only. No statement or status has been ingested for this conjecture yet.
-claims: []
+claims:
+  - id: exponential-time-hypothesis-sweep-f27fd08d
+    asserted_on: 2026-11-03
+    type: disproved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-03
+    source:
+      title: ETH is Dead, Long Live SH
+      url: https://arxiv.org/abs/2611.02650
+      kind: arxiv
+      quote: Impagliazzo and Paturi's 1999 Exponential Time Hypothesis (ETH) is false
+    authors:
+      - MIT Hardness Group
+      - Josh Brunner
+      - Erik D. Demaine
+      - Fabian Frei
+      - Timothy Gomez
+      - Markus Hecher
+      - Jeffery Li
+      - Jayson Lynch
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "exponential time hypothesis". Classifier rationale: The abstract explicitly states that ETH is false, indicating a claimed disproof. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q5421532
     source: wikidata

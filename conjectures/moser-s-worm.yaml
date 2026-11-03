@@ -55,7 +55,23 @@ openness_basis:
   meaning: no_published_solution_known_to_curator
   asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: moser-s-worm-sweep-24139e16
+    asserted_on: 2026-11-03
+    type: partial
+    scope: planar convex translation covers (lower bound)
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-03
+    source:
+      title: Promotion and Extension of General Escape-Covering Duality Relationship
+      url: https://arxiv.org/abs/2611.00569
+      kind: arxiv
+      quote: we prove $ W \ge f(\sqrt3/9)+c_1>0.15545785378555$
+    authors:
+      - Zhipeng Deng
+    notes: "Filed automatically by the arXiv new submissions sweep. Matched on \"Moser's Worm\". Classifier rationale: The document gives a new lower bound for the worm constant, which is partial progress, not a full resolution. Unreviewed: this records that a claim was made, not that it is correct."
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/MoserWorm.lean
     source: google-deepmind/formal-conjectures

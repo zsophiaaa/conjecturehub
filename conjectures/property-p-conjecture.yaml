@@ -24,6 +24,22 @@ claims:
       url: https://en.wikipedia.org/wiki/Property_P_conjecture
       kind: wikipedia
     notes: Standing taken from English Wikipedia's categorisation (Wikipedia categorises this as proved). Nobody here has read the paper that settled it, which is what the secondary attestation says; replace this claim with one citing that paper when someone has it to hand.
+  - id: property-p-conjecture-sweep-0e4a4226
+    asserted_on: 2026-11-03
+    type: partial
+    scope: when Newton coefficients are log-concave without internal zeros
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-03
+    source:
+      title: A log-concavity criterion for finite nonnegative linearization
+      url: https://arxiv.org/abs/2611.01561
+      kind: arxiv
+      quote: we prove that property (P) holds for every product, ... whenever the Newton coefficients of the profile $d_i=b_i+c_i$ are log-concave without internal zeros.
+    authors:
+      - Leslie P. Polzer
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Property P". Classifier rationale: The paper proves property (P) under a specific log-concavity condition, which is a partial result toward the conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q7250222
     source: wikidata

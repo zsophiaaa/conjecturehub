@@ -22,6 +22,23 @@ claims:
       url: https://en.wikipedia.org/wiki/Hanna_Neumann_conjecture
       kind: wikipedia
     notes: Standing taken from English Wikipedia's categorisation (Wikipedia categorises this as proved). Nobody here has read the paper that settled it, which is what the secondary attestation says; replace this claim with one citing that paper when someone has it to hand.
+  - id: hanna-neumann-conjecture-sweep-c92ca828
+    asserted_on: 2026-11-03
+    type: proved
+    scope: special case (not-necessarily-cyclic subgroups)
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-03
+    source:
+      title: Probabilistic Hanna Neumann Conjectures
+      url: https://arxiv.org/abs/2601.00053
+      kind: arxiv
+      quote: gives a new proof of this special case of the Friedman-Mineyev theorem (i.e. the Hanna Neumann conjecture).
+    authors:
+      - Yotam Shomroni
+      - Noam Ta Shma
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Hanna Neumann conjecture". Classifier rationale: The paper states it provides a new proof of a special case of the Hanna Neumann conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q2993315
     source: wikidata

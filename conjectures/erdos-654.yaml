@@ -18,7 +18,23 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-654-sweep-6cd8d59f
+    asserted_on: 2026-11-03
+    type: proved
+    scope: parts i and variants.feng
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-03
+    source:
+      title: "formal-conjectures PR #7781: feat(ErdosProblems/654): link a Palomar entry for the formal proofs"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/7781
+      kind: github
+      quote: Links formal proofs of the two solved statements in Erdős Problem 654.
+    authors:
+      - ukniusanqian-alt
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 654". Classifier rationale: The PR states that formal proofs of two statements of Erdős Problem 654 have been provided. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

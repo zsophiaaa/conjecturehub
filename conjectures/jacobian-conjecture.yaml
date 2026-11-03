@@ -83,6 +83,24 @@ claims:
       - David Barros Hulak
       - Ruy Jose Guerra Barretto de Queiroz
     notes: Isabelle/HOL formalisation accepted into the Archive of Formal Proofs. This is the one completed machine check of the counterexample; the Lean route remains an open Mathlib pull request. Not tagged machine_verified here because that tier is reserved for proofs checked by ConjectureHub CI against our own canonical statement.
+  - id: jacobian-conjecture-sweep-fccc60e6
+    asserted_on: 2026-11-03
+    type: counterexample
+    scope: N ≥ 3
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-03
+    source:
+      title: Counterexamples to the Jacobian Conjecture from the viewpoint of lineability
+      url: https://arxiv.org/abs/2611.03572
+      kind: arxiv
+      quote: family of polynomial counterexamples to the recently solved Jacobian Conjecture for $N\ge3$
+    authors:
+      - L. Bernal-González
+      - M. C. Calderón-Moreno
+      - J. A. Prado-Bassas
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Jacobian conjecture". Classifier rationale: The paper asserts the existence of counterexamples for dimensions N≥3, indicating a claimed disproof of the conjecture in that range. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/JacobianConjecture.lean
     source: google-deepmind/formal-conjectures

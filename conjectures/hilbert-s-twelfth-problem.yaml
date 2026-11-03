@@ -13,7 +13,25 @@ openness_basis:
   meaning: unknown
   asserted_by: wikidata
   note: Identity record only. No statement or status has been ingested for this conjecture yet.
-claims: []
+claims:
+  - id: hilbert-s-twelfth-problem-sweep-5e0f5267
+    asserted_on: 2026-11-03
+    type: partial
+    scope: certain CM fields
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-03
+    source:
+      title: On the Hasse-Sugawara problem and its application to Hilbert's twelfth problem
+      url: https://arxiv.org/abs/2611.02495
+      kind: arxiv
+      quote: We also construct an explicit integer translate of a Weber value whose relative norms generate every intermediate field, and express these generators using extended form class groups.
+    authors:
+      - Ho Yun Jung
+      - Ja Kyung Koo
+      - Dong Hwa Shin
+    notes: "Filed automatically by the arXiv new submissions sweep. Matched on \"Hilbert's twelfth problem\". Classifier rationale: The paper reports constructing explicit generators for class fields, which is a partial advance toward Hilbert's twelfth problem. Unreviewed: this records that a claim was made, not that it is correct."
 provenance:
   - url: https://www.wikidata.org/wiki/Q1093498
     source: wikidata
