@@ -27,6 +27,38 @@ claims:
       title: erdosproblems.com records this problem as "disproved"
       url: https://www.erdosproblems.com/910
       kind: dataset
+  - id: erdos-910-sweep-edeaad73
+    asserted_on: 2026-11-03
+    type: disproved
+    scope: assuming the continuum hypothesis
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-04
+    source:
+      title: "formal-conjectures PR #7697: feat(ErdosProblems/910): add Erdős Problem 910"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/7697
+      kind: github
+      quote: Rudin's theorem ... assuming the continuum hypothesis, there is a connected set ... This disproves a conjecture of Erdős
+    authors:
+      - veljjanoski
+    notes: "Filed automatically by the formal-conjectures pull requests sweep. Matched on \"Erdős Problem 910\". Classifier rationale: The document states that Rudin's CH‑based construction disproves Erdős Problem 910. Unreviewed: this records that a claim was made, not that it is correct."
+  - id: erdos-910-sweep-ab8a8d61
+    asserted_on: 2026-11-03
+    type: disproved
+    scope: assuming the continuum hypothesis
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-04
+    source:
+      title: "formal-conjectures: feat(ErdosProblems/910): add Erdős Problem 910 (#7697) Adds Erdős Problem 910: does every connected set in $\\mathbb{R}^n$ contain a connected subset which is not a point and not homeomorphic to the or"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/e87cdee6afae9327f4cfae459acad5a5c038e8fb
+      kind: github
+      quote: This disproves a conjecture of Erdős [Er44, p. 443].
+    authors:
+      - veljjanoski
+    notes: "Filed automatically by the formal-conjectures commits sweep. Matched on \"Erdős Problem 910\". Classifier rationale: The document reports Rudin's CH‑based construction as a disproof of Erdős Problem 910. Unreviewed: this records that a claim was made, not that it is correct."
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
