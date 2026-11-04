@@ -14,7 +14,22 @@ openness_basis:
   meaning: no_solution_known_to_community
   asserted_by: wikipedia
   note: Listed under "Unsolved problems in number theory" on English Wikipedia.
-claims: []
+claims:
+  - id: riemann-hypothesis-sweep-73ce2d5b
+    asserted_on: 2026-11-04
+    type: reformulation
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-04
+    source:
+      title: RH-Conditional Positivity in a Theta-Kernel Langevin Model
+      url: https://arxiv.org/abs/2611.04359
+      kind: arxiv
+      quote: At the undeformed density that entire matrix hierarchy is equivalent to RH.
+    authors:
+      - U Jin Choi
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Riemann hypothesis". Classifier rationale: The paper presents an equivalence between RH and a matrix hierarchy, reformulating the conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q205966
     source: wikidata

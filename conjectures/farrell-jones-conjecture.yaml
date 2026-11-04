@@ -10,7 +10,24 @@ openness_basis:
   meaning: no_solution_known_to_community
   asserted_by: wikipedia
   note: Listed under "Unsolved problems in mathematics" on English Wikipedia.
-claims: []
+claims:
+  - id: farrell-jones-conjecture-sweep-45a8a0a1
+    asserted_on: 2026-11-04
+    type: partial
+    scope: graph products of pairs and fundamental groups of polyhedral products
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-04
+    source:
+      title: Combination Theorems and the Farrell--Jones Conjecture for Graph Products of Pairs
+      url: https://arxiv.org/abs/2611.03847
+      kind: arxiv
+      quote: we ... prove a vertexwise combination theorem for graph products of pairs.
+    authors:
+      - I. Gkeneralis
+      - S. Prassidis
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Farrell–Jones conjecture". Classifier rationale: The paper claims to establish the Farrell–Jones conjecture for specific classes of groups. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q5436273
     source: wikidata

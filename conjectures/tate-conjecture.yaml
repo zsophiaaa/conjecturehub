@@ -10,7 +10,23 @@ openness_basis:
   meaning: no_solution_known_to_community
   asserted_by: wikipedia
   note: Listed under "Unsolved problems in number theory" on English Wikipedia.
-claims: []
+claims:
+  - id: tate-conjecture-sweep-c4351a21
+    asserted_on: 2026-11-04
+    type: partial
+    scope: various cases of moduli spaces of stable curves
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-04
+    source:
+      title: On the Hodge and Tate conjectures for moduli spaces of curves
+      url: https://arxiv.org/abs/2605.20453
+      kind: arxiv
+      quote: verifies these conjectures in a surprisingly wide range of cases
+    authors:
+      - Sam Payne
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Tate conjecture". Classifier rationale: The document reports partial verification of the Tate conjecture for many cases. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q7687975
     source: wikidata
