@@ -28,6 +28,22 @@ claims:
       title: erdosproblems.com records this problem as "disproved"
       url: https://www.erdosproblems.com/651
       kind: dataset
+  - id: erdos-651-sweep-3f723cc0
+    asserted_on: 2026-11-04
+    type: disproved
+    scope: k ≥ 3
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-04
+    source:
+      title: "formal-conjectures PR #7800: feat(ErdosProblems/651): add Erdős Problem 651"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/7800
+      kind: github
+      quote: "Solved: `erdos_651` is stated with `¬`: the answer is no, by Pohoata and Zakharov [PoZa22, Theorem 1.1], who proved $f_3(n)\\leq 2^{o(n)}$."
+    authors:
+      - veljjanoski
+    notes: "Filed automatically by the formal-conjectures pull requests sweep. Matched on \"Erdős Problem 651\". Classifier rationale: The document claims the conjecture is false, citing Pohoata and Zakharov's subexponential upper bound. Unreviewed: this records that a claim was made, not that it is correct."
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

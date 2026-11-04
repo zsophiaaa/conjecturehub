@@ -43,7 +43,23 @@ openness_basis:
   meaning: no_published_solution_known_to_curator
   asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: abc-conjecture-sweep-a365f856
+    asserted_on: 2026-11-04
+    type: partial
+    scope: weak form
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-04
+    source:
+      title: On the $abc$ conjecture
+      url: https://arxiv.org/abs/2611.05217
+      kind: arxiv
+      quote: we prove ... a weak form of the $abc$ conjecture
+    authors:
+      - Christophe Soulé
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "*abc* conjecture". Classifier rationale: The paper claims to prove a weak form, not the full conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/ABC.lean
     source: google-deepmind/formal-conjectures

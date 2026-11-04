@@ -56,7 +56,24 @@ openness_basis:
   meaning: no_published_solution_known_to_curator
   asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: kaplansky-s-conjectures-sweep-20bb8af5
+    asserted_on: 2026-11-04
+    type: counterexample
+    scope: fields of positive characteristic (characteristic p)
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-04
+    source:
+      title: Kaplansky's conjectures fail for torsion-free hyperbolic groups in positive characteristic
+      url: https://arxiv.org/abs/2611.04599
+      kind: arxiv
+      quote: we show that all four fail in positive characteristic... with a non-trivial idempotent, zero divisor and unit
+    authors:
+      - Nidhal Mghirbi
+      - Seth Douglas
+    notes: "Filed automatically by the arXiv new submissions sweep. Matched on \"Kaplansky's Conjectures\". Classifier rationale: The abstract asserts the existence of torsion‑free hyperbolic groups whose group algebras have non‑trivial zero divisors in characteristic p. Unreviewed: this records that a claim was made, not that it is correct."
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/Kaplansky.lean
     source: google-deepmind/formal-conjectures
