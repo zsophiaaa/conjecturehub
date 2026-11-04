@@ -28,6 +28,38 @@ claims:
       url: https://www.erdosproblems.com/1115
       kind: dataset
     notes: Upstream records this as solved without specifying the direction.
+  - id: erdos-1115-sweep-69673ead
+    asserted_on: 2026-11-03
+    type: counterexample
+    scope: the "in particular" question (ℓ(r) ≪ r)
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-04
+    source:
+      title: "formal-conjectures PR #7694: feat(ErdosProblems/1115): add Erdős Problem 1115"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/7694
+      kind: github
+      quote: "Solved (`question`, answer no): `erdos_1115`, for the \"in particular\" question, by Gol'dberg and Eremenko [GoEr79]: ... the length ... is not $O(r)$."
+    authors:
+      - veljjanoski
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 1115". Classifier rationale: The document states a known result that provides a counterexample to the claim that one can always find a path with ℓ(r) ≪ r. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: erdos-1115-sweep-c74454e7
+    asserted_on: 2026-11-03
+    type: disproved
+    scope: the 'in particular' question (whether one can always find Γ with ℓ(r) ≪ r)
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-04
+    source:
+      title: "formal-conjectures: feat(ErdosProblems/1115): add Erdős Problem 1115 (#7694) Adds Erdős Problem 1115: let $f$ be an entire function of finite order and $\\Gamma$ a rectifiable path on which $f(z)\\to\\infty$, and let $\\ell("
+      url: https://github.com/google-deepmind/formal-conjectures/commit/110d267ae96ebb7349b4466ef6f596bef2619104
+      kind: github
+      quote: "Solved (`question`, answer no): ... by Gol'dberg and Eremenko [GoEr79]: for every ρ∈[0,∞] there is an entire f of order ρ such that ... the length ... is not O(r)."
+    authors:
+      - veljjanoski
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 1115". Classifier rationale: The document reports a negative answer to the specific sub‑question, indicating the conjecture is disproved for that case. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

@@ -17,7 +17,23 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2026-01-23
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-1160-sweep-8d29db2c
+    asserted_on: 2026-11-03
+    type: partial
+    scope: odd n, m ≥ 3619
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-04
+    source:
+      title: "formal-conjectures: feat(ErdosProblems/1160): add Erdős Problem 1160 (#7688) Adds Erdős Problem 1160: let $g(n)$ be the number of groups of order $n$. If $n\\leq 2^m$, then $g(n)\\leq g(2^m)$. - Definition: `g`, the number"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/91de7907319346b089ceb4749313feb0f94fe269
+      kind: github
+      quote: Pantelidakis's result for odd $n$ and $m\geq 3619$ is mentioned but not stated
+    authors:
+      - veljjanoski
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 1160". Classifier rationale: The commit notes an existing partial result for the conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
