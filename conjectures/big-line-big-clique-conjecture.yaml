@@ -10,7 +10,23 @@ openness_basis:
   meaning: unknown
   asserted_by: wikidata
   note: Identity record only. No statement or status has been ingested for this conjecture yet.
-claims: []
+claims:
+  - id: big-line-big-clique-conjecture-sweep-51769f66
+    asserted_on: 2026-11-05
+    type: partial
+    scope: ℓ ≤ 5
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-05
+    source:
+      title: "formal-conjectures PR #7803: feat(GreensOpenProblems/70): add Green's Open Problem 70"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/7803
+      kind: github
+      quote: "Solved variants: `five_visible` (the case ℓ=5, [ABBCDHKLPW11, Theorem 5])"
+    authors:
+      - veljjanoski
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Big-line-big-clique conjecture". Classifier rationale: The document reports partial results for the conjecture (the case ℓ=5) while stating the conjecture remains open. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q116882024
     source: wikidata
