@@ -46,6 +46,21 @@ claims:
       url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Other/SuffixPrefixAvoidance.lean
       kind: dataset
     notes: Imported from the upstream `research solved` category. The statement is formalized; the proof has not been machine-checked by ConjectureHub.
+  - id: suffix-prefix-avoidance-bound-sweep-9025fb82
+    asserted_on: 2026-11-04
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-05
+    source:
+      title: "formal-conjectures PR #7714: Link Lean proof of suffix_prefix_avoidance_bound (Zakharov 2026)"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/7714
+      kind: github
+      quote: Link Lean proof of suffix_prefix_avoidance_bound (Zakharov 2026).
+    authors:
+      - karlesmarin
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Suffix-prefix avoidance bound". Classifier rationale: The PR announces a Lean formalization that proves the conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Other/SuffixPrefixAvoidance.lean
     source: google-deepmind/formal-conjectures
