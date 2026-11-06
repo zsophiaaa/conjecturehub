@@ -83,6 +83,22 @@ claims:
       - David Barros Hulak
       - Ruy Jose Guerra Barretto de Queiroz
     notes: Isabelle/HOL formalisation accepted into the Archive of Formal Proofs. This is the one completed machine check of the counterexample; the Lean route remains an open Mathlib pull request. Not tagged machine_verified here because that tier is reserved for proofs checked by ConjectureHub CI against our own canonical statement.
+  - id: jacobian-conjecture-sweep-ada73d6b
+    asserted_on: 2026-11-06
+    type: counterexample
+    scope: dimensions > 2
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-06
+    source:
+      title: Counterexamples to the Jacobian conjecture in dimensions greater than two
+      url: https://arxiv.org/abs/2608.00222
+      kind: arxiv
+      quote: It was refuted in dimension three by Alpöge on July 19, 2026... the counterexamples ... produce counterexamples in every dimension greater than two.
+    authors:
+      - Shuhong Gao
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Jacobian conjecture". Classifier rationale: The paper claims explicit counterexamples disproving the Jacobian conjecture in all dimensions greater than two. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/JacobianConjecture.lean
     source: google-deepmind/formal-conjectures

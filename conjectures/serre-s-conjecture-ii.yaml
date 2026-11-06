@@ -10,7 +10,25 @@ openness_basis:
   meaning: no_solution_known_to_community
   asserted_by: wikipedia
   note: Listed under "Unsolved problems in number theory" on English Wikipedia.
-claims: []
+claims:
+  - id: serre-s-conjecture-ii-sweep-073b50eb
+    asserted_on: 2026-11-06
+    type: partial
+    scope: complete discretely valued fields of dimension 2
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-06
+    source:
+      title: Central simple algebras, Milnor $K$-theory and homogeneous spaces over complete discretely valued fields of dimension 2
+      url: https://arxiv.org/abs/2501.01403
+      kind: arxiv
+      quote: Serre's Conjecture II holds for the field $K$.
+    authors:
+      - Philippe Gille
+      - Diego Izquierdo
+      - Giancarlo Lucchini Arteche
+    notes: "Filed automatically by the arXiv new submissions sweep. Matched on \"Serre's conjecture II\". Classifier rationale: The paper asserts the conjecture is proved for a specific class of fields, which is a partial resolution. Unreviewed: this records that a claim was made, not that it is correct."
 provenance:
   - url: https://www.wikidata.org/wiki/Q17103221
     source: wikidata
