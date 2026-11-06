@@ -10,7 +10,23 @@ openness_basis:
   meaning: unknown
   asserted_by: wikidata
   note: Identity record only. No statement or status has been ingested for this conjecture yet.
-claims: []
+claims:
+  - id: big-line-big-clique-conjecture-sweep-2975af7b
+    asserted_on: 2026-11-06
+    type: partial
+    scope: ℓ = 5
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-06
+    source:
+      title: "formal-conjectures: feat(GreensOpenProblems/70): add Green's Open Problem 70 (#7803) Closes #1690. Adds Ben Green's Open Problem 70 [Gr24]: for fixed $k$ and $\\ell$, does every set of $n\\geq n_0(k,\\ell)$ points in $\\math"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/d437c224a7452da352dfc5bfdcb89c57b5b81101
+      kind: github
+      quote: "Solved variants: `five_visible` (the case ℓ=5, [ABBCDHKLPW11, Theorem 5])"
+    authors:
+      - veljjanoski
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Big-line-big-clique conjecture". Classifier rationale: The document states the conjecture is open but records a solved special case (ℓ=5). Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q116882024
     source: wikidata

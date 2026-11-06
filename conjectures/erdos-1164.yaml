@@ -27,6 +27,21 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/1164
       kind: dataset
+  - id: erdos-1164-sweep-c5a3bb6d
+    asserted_on: 2026-11-06
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-06
+    source:
+      title: "formal-conjectures: feat(ErdosProblems/1164): add Erdős Problem 1164 (#7798) Adds Erdős Problem 1164 (Erdős and Taylor [ErTa60, p. 153], [Va99, 6.76]): let $R_n$ be the largest radius such that a random walk in $\\mathbb{"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/20a5a5aa8310a6c0be1ee5fb26ffaee747901edf
+      kind: github
+      quote: "- Solved: `erdos_1164` (yes), proved independently by Révész and Kesten, as reported in [DPRZ04, Section 1.3]."
+    authors:
+      - veljjanoski
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 1164". Classifier rationale: The commit notes that the conjecture has been solved and proved by Révész and Kesten. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

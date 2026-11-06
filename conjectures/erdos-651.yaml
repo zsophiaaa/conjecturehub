@@ -28,6 +28,22 @@ claims:
       title: erdosproblems.com records this problem as "disproved"
       url: https://www.erdosproblems.com/651
       kind: dataset
+  - id: erdos-651-sweep-9a913915
+    asserted_on: 2026-11-06
+    type: disproved
+    scope: k ≥ 3
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-06
+    source:
+      title: "formal-conjectures: feat(ErdosProblems/651): add Erdős Problem 651 (#7800) Adds Erdős Problem 651 [Er97e]: let $f_k(n)$ be the smallest integer such that any $f_k(n)$ points in general position in $\\mathbb{R}^k$ contain "
+      url: https://github.com/google-deepmind/formal-conjectures/commit/7242b768c23757c55e12e1488e1fade2a02237f9
+      kind: github
+      quote: "`erdos_651` is stated with `¬`: the answer is no, by Pohoata and Zakharov [PoZa22, Theorem 1.1], who proved $f_3(n)\\leq 2^{o(n)}$."
+    authors:
+      - veljjanoski
+    notes: "Filed automatically by the formal-conjectures commits sweep. Matched on \"Erdős Problem 651\". Classifier rationale: The document claims the conjecture is false, citing Pohoata and Zakharov's subexponential upper bound for k≥3. Unreviewed: this records that a claim was made, not that it is correct."
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

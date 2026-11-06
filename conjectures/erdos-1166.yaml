@@ -27,6 +27,21 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/1166
       kind: dataset
+  - id: erdos-1166-sweep-99174c59
+    asserted_on: 2026-11-06
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-06
+    source:
+      title: "formal-conjectures: feat(ErdosProblems/1166): add Erdős Problem 1166 (#7799) Adds Erdős Problem 1166 (Erdős and Révész, [Va99, 6.78]): for the simple random walk in $\\mathbb{Z}^2$, is the number of sites that are a favou"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/4292b7a749d88f70dcf9bdb08d17b6a11efeb154
+      kind: github
+      quote: "Solved: `erdos_1166` (yes)."
+    authors:
+      - veljjanoski
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 1166". Classifier rationale: The commit explicitly claims the conjecture is solved by providing an O((log n)^2) bound. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
