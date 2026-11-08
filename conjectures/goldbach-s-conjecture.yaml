@@ -31,8 +31,8 @@ ids:
     - label: Goldbach's Conjecture Wikipedia Page
       url: https://en.wikipedia.org/wiki/Goldbach%27s_conjecture
 notability:
-  wikipedia_language_editions: 58
-  measured_on: 2026-08-03
+  wikipedia_language_editions: 59
+  measured_on: 2026-11-08
 openness_basis:
   meaning: no_published_solution_known_to_curator
   asserted_by: google-deepmind/formal-conjectures
@@ -59,4 +59,4 @@ provenance:
       - ids.mathworld
       - notability.wikipedia_language_editions
     license: CC0-1.0
-    retrieved: 2026-08-03
+    retrieved: 2026-11-08
