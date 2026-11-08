@@ -49,7 +49,22 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: erdos-272-sweep-9e8ad6b6
+    asserted_on: 2026-11-08
+    type: resolved_by_prior_literature
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-08
+    source:
+      title: "erdosproblems PR #532: Link Erdős problem 272 to OEIS A401861"
+      url: https://github.com/teorth/erdosproblems/pull/532
+      kind: github
+      quote: adds A401861, which gives the maximum size of a family of distinct subsets of {1, ..., n} whose pairwise intersections are nonempty arithmetic progressions, exactly the quantity asked for in Problem 272.
+    authors:
+      - manman4
+    notes: 'Filed automatically by the erdosproblems pull requests sweep. Matched on "Erdős problem 272". Classifier rationale: The PR links the problem to an existing OEIS sequence that purportedly provides the exact answer. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/272.lean
     source: google-deepmind/formal-conjectures

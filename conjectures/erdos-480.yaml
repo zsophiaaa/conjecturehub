@@ -54,6 +54,21 @@ claims:
       url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/480.lean
       kind: dataset
     notes: Imported from the upstream `research solved` category. The statement is formalized; the proof has not been machine-checked by ConjectureHub.
+  - id: erdos-480-sweep-8f232a33
+    asserted_on: 2026-11-08
+    type: resolved_by_prior_literature
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-08
+    source:
+      title: "erdosproblems PR #525: Link Erdős problem 480 to OEIS A381579"
+      url: https://github.com/teorth/erdosproblems/pull/525
+      kind: github
+      quote: They also prove that this constant is best possible (van Doorn discusses their construction in the comments).
+    authors:
+      - manman4
+    notes: "Filed automatically by the erdosproblems pull requests sweep. Matched on \"Erdős problem 480\". Classifier rationale: The document states that the conjecture's bound was already proved in earlier literature. Unreviewed: this records that a claim was made, not that it is correct."
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/480.lean
     source: google-deepmind/formal-conjectures
