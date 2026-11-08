@@ -4,8 +4,8 @@ ids:
   wikidata: Q6377720
   wikipedia: https://en.wikipedia.org/wiki/Kato%27s_conjecture
 notability:
-  wikipedia_language_editions: 2
-  measured_on: 2026-08-03
+  wikipedia_language_editions: 3
+  measured_on: 2026-11-08
 openness_basis:
   meaning: unknown
   asserted_by: wikidata
@@ -32,7 +32,7 @@ provenance:
       - ids.mathworld
       - notability.wikipedia_language_editions
     license: CC0-1.0
-    retrieved: 2026-08-03
+    retrieved: 2026-11-08
   - url: https://en.wikipedia.org/wiki/Kato's_conjecture
     source: wikipedia
     fields:
