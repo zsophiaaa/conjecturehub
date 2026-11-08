@@ -56,6 +56,21 @@ claims:
       url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/427.lean
       kind: dataset
     notes: Imported from the upstream `research solved` category. The statement is formalized; the proof has not been machine-checked by ConjectureHub.
+  - id: erdos-427-sweep-1e4a9c39
+    asserted_on: 2026-11-08
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-08
+    source:
+      title: "erdosproblems PR #520: Link A398776 to problem 427"
+      url: https://github.com/teorth/erdosproblems/pull/520
+      kind: github
+      quote: The remarks give an affirmative answer using Shiu's result, so each such least positive length exists.
+    authors:
+      - manman4
+    notes: "Filed automatically by the erdosproblems pull requests sweep. Matched on \"Erdős Problem 427\". Classifier rationale: The document states that Shiu's result provides an affirmative answer, implying a proof of the conjecture. Unreviewed: this records that a claim was made, not that it is correct."
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/427.lean
     source: google-deepmind/formal-conjectures

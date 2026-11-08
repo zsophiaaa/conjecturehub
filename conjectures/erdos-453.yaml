@@ -56,6 +56,21 @@ claims:
       title: erdosproblems.com records this problem as "disproved"
       url: https://www.erdosproblems.com/453
       kind: dataset
+  - id: erdos-453-sweep-15768e0e
+    asserted_on: 2026-11-08
+    type: disproved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-08
+    source:
+      title: "erdosproblems PR #524: Link Erdős problem 453 to OEIS A028388"
+      url: https://github.com/teorth/erdosproblems/pull/524
+      kind: github
+      quote: Pomerance proved that the answer is no.
+    authors:
+      - manman4
+    notes: 'Filed automatically by the erdosproblems pull requests sweep. Matched on "Erdős problem 453". Classifier rationale: The document states that Pomerance proved the conjecture false, providing counterexample indices. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/453.lean
     source: google-deepmind/formal-conjectures

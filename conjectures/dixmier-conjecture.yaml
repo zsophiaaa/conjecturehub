@@ -10,7 +10,23 @@ openness_basis:
   meaning: unknown
   asserted_by: wikidata
   note: Identity record only. No statement or status has been ingested for this conjecture yet.
-claims: []
+claims:
+  - id: dixmier-conjecture-sweep-81a83779
+    asserted_on: 2026-11-08
+    type: partial
+    scope: dimension = 3
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-08
+    source:
+      title: "formal-conjectures PR #7829: feat(Arxiv/math.0608009): formal proof links for the Dixmier conjecture"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/7829
+      kind: github
+      quote: The result in dimension 3 isn't new. Pickhardt and the Omniscience Research Agent published it in July 2026
+    authors:
+      - zblore
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Dixmier conjecture". Classifier rationale: Document states that the dimension‑3 case of the Dixmier conjecture has already been proved. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q5284929
     source: wikidata
