@@ -37,7 +37,23 @@ openness_basis:
   meaning: no_published_solution_known_to_curator
   asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: goldbach-s-conjecture-sweep-5c1033dc
+    asserted_on: 2026-11-09
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-09
+    source:
+      title: An Elementary Proof of the Binary Goldbach Conjecture
+      url: https://arxiv.org/abs/2611.09007
+      kind: arxiv
+      quote: We establish the binary Goldbach conjecture which asserts that every even positive integer greater than four can be expressed as a sum of two odd primes.
+    authors:
+      - Khaled Qazaqzeh
+      - Aymen Rawashdeh
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Goldbach conjecture". Classifier rationale: The paper claims to prove the full binary Goldbach conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/GoldbachConjecture.lean
     source: google-deepmind/formal-conjectures

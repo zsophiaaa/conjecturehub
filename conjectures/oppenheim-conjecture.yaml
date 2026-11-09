@@ -22,6 +22,24 @@ claims:
       url: https://en.wikipedia.org/wiki/Oppenheim_conjecture
       kind: wikipedia
     notes: Standing taken from English Wikipedia's categorisation (Wikipedia categorises this as proved). Nobody here has read the paper that settled it, which is what the secondary attestation says; replace this claim with one citing that paper when someone has it to hand.
+  - id: oppenheim-conjecture-sweep-59397b3e
+    asserted_on: 2026-11-09
+    type: partial
+    scope: special diagonal forms of signature (3,3)
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-09
+    source:
+      title: Values of ternary quadratic forms at integers and the Berry-Tabor conjecture for 3-tori
+      url: https://arxiv.org/abs/2601.03209
+      kind: arxiv
+      quote: we are able to resolve for special diagonal forms of signature (3,3) in various scalings
+    authors:
+      - Wooyeon Kim
+      - Jens Marklof
+      - Matthew Welsh
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Oppenheim conjecture". Classifier rationale: The paper reports a partial resolution of the quantitative Oppenheim conjecture for a restricted class of forms. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q7098547
     source: wikidata
