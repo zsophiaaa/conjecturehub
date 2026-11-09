@@ -11,7 +11,23 @@ openness_basis:
   meaning: no_solution_known_to_community
   asserted_by: wikipedia
   note: Listed under "Unsolved problems in number theory" on English Wikipedia.
-claims: []
+claims:
+  - id: birch-and-swinnerton-dyer-conjecture-sweep-95739a34
+    asserted_on: 2026-11-09
+    type: partial
+    scope: supersingular elliptic curves (special case)
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-09
+    source:
+      title: Triple product $p$-adic $L$-functions for finite slope families and a $p$-adic Gross-Zagier formula
+      url: https://arxiv.org/abs/2403.18620
+      kind: arxiv
+      quote: demonstrate an application to a special case of the equivariant Birch and Swinnerton-Dyer conjecture for supersingular elliptic curves.
+    authors:
+      - Ting-Han Huang
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Birch and Swinnerton-Dyer conjecture". Classifier rationale: The paper reports a partial result addressing a special case of the conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q527863
     source: wikidata
