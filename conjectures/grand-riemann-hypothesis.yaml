@@ -10,7 +10,22 @@ openness_basis:
   meaning: no_solution_known_to_community
   asserted_by: wikipedia
   note: Listed under "Unsolved problems in mathematics" on English Wikipedia.
-claims: []
+claims:
+  - id: grand-riemann-hypothesis-sweep-bd12b151
+    asserted_on: 2026-11-10
+    type: disproved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-10
+    source:
+      title: Automorphic line measures in the half-plane and the Grand Riemann Hypothesis
+      url: https://arxiv.org/abs/2302.07834
+      kind: arxiv
+      quote: The Grand Riemann Hypothesis, a special case of which needs being analyzed, is disproved
+    authors:
+      - Andre Unterberger
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Grand Riemann hypothesis". Classifier rationale: The abstract explicitly states that the Grand Riemann Hypothesis is disproved. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q5595032
     source: wikidata
