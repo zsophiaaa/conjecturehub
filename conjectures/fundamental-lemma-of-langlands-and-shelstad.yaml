@@ -28,6 +28,23 @@ claims:
       - François Loeser
       - Dimitri Wyss
     notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Fundamental lemma". Classifier rationale: The paper claims a proof of a motivic version, not a full resolution of the original conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: fundamental-lemma-of-langlands-and-shelstad-sweep-9c24cedb
+    asserted_on: 2026-11-10
+    type: partial
+    scope: unit element of the Hecke algebra
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-10
+    source:
+      title: A relative trace formula for the orthogonal Gan-Gross-Prasad model and the proof of its fundamental lemma
+      url: https://arxiv.org/abs/2611.12724
+      kind: arxiv
+      quote: Finally, we prove the fundamental lemma for the unit element of the Hecke algebra.
+    authors:
+      - Zhengyu Mao
+      - Chen Wan
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Fundamental lemma". Classifier rationale: The paper asserts a proof of the fundamental lemma only for the unit element, which is a partial result. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q57510
     source: wikidata

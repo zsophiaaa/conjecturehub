@@ -10,7 +10,39 @@ openness_basis:
   meaning: no_solution_known_to_community
   asserted_by: wikipedia
   note: Listed under "Unsolved problems in geometry" on English Wikipedia.
-claims: []
+claims:
+  - id: pompeiu-problem-sweep-6b267add
+    asserted_on: 2026-11-10
+    type: disproved
+    scope: plane
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-10
+    source:
+      title: A Talenti-type result for the Pompeiu-Schiffer Conjecture
+      url: https://arxiv.org/abs/2611.11615
+      kind: arxiv
+      quote: In August 2026 it was disproved in the plane by computer-assisted constructions.
+    authors:
+      - Diaraf Seck
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Pompeiu problem". Classifier rationale: The paper states the Pompeiu problem was disproved in the plane. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: pompeiu-problem-sweep-0720aee0
+    asserted_on: 2026-11-10
+    type: disproved
+    scope: in the plane and many higher dimensions
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-10
+    source:
+      title: A Talenti-type rigidity theorem and P-function constraints for the Pompeiu--Schiffer problem in every dimension
+      url: https://arxiv.org/abs/2611.11620
+      kind: arxiv
+      quote: In 2026 it was disproved in the plane and in many higher dimensions by computer-assisted and analytic constructions.
+    authors:
+      - Diaraf Seck
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Pompeiu problem". Classifier rationale: The abstract explicitly states the conjecture has been disproved in those settings. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q3406234
     source: wikidata

@@ -10,7 +10,23 @@ openness_basis:
   meaning: no_solution_known_to_community
   asserted_by: wikipedia
   note: Listed under "Unsolved problems in geometry" on English Wikipedia.
-claims: []
+claims:
+  - id: borel-conjecture-sweep-f7b40a08
+    asserted_on: 2026-11-10
+    type: partial
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-10
+    source:
+      title: Combinatorial Properties of the Raisonnier Filter
+      url: https://arxiv.org/abs/2602.23340
+      kind: arxiv
+      quote: We also draw some conclusions regarding the Borel and dual Borel Conjectures.
+    authors:
+      - Spyridon Dialiatsis
+      - Yurii Khomskii
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Borel conjecture". Classifier rationale: The abstract mentions conclusions about the conjecture but does not claim a full proof or disproof. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q4138792
     source: wikidata

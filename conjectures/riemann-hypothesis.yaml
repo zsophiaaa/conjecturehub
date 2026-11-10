@@ -14,7 +14,37 @@ openness_basis:
   meaning: no_solution_known_to_community
   asserted_by: wikipedia
   note: Listed under "Unsolved problems in number theory" on English Wikipedia.
-claims: []
+claims:
+  - id: riemann-hypothesis-sweep-58313095
+    asserted_on: 2026-11-10
+    type: reformulation
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-10
+    source:
+      title: A quantitative two-interval criterion for the Riemann hypothesis
+      url: https://arxiv.org/abs/2611.10726
+      kind: arxiv
+      quote: We prove that the Riemann hypothesis is equivalent to the Cauchy‑Schwarz inequality on every such pair at all sufficiently large separations
+    authors:
+      - Payam Danesh
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Riemann hypothesis". Classifier rationale: The document presents an equivalence criterion for RH but does not claim a proof or disproof. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: riemann-hypothesis-sweep-bd12b151
+    asserted_on: 2026-11-10
+    type: disproved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-10
+    source:
+      title: Automorphic line measures in the half-plane and the Grand Riemann Hypothesis
+      url: https://arxiv.org/abs/2302.07834
+      kind: arxiv
+      quote: The Grand Riemann Hypothesis, a special case of which needs being analyzed, is disproved
+    authors:
+      - Andre Unterberger
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Riemann hypothesis". Classifier rationale: The abstract explicitly states that the Grand Riemann Hypothesis is disproved, which includes the Riemann hypothesis. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q205966
     source: wikidata

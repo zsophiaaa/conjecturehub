@@ -28,7 +28,24 @@ openness_basis:
   meaning: no_published_solution_known_to_curator
   asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: conway-s-99-graph-problem-sweep-7d2338d6
+    asserted_on: 2026-11-10
+    type: partial
+    scope: circulant graphs
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-10
+    source:
+      title: A Forced-Structure Reduction and Verifiable Bounds for Conway's 99-Graph
+      url: https://arxiv.org/abs/2608.11211
+      kind: arxiv
+      quote: We also prove by exhaustive enumeration that no circulant graph on Z/99 satisfies more than 68.0% of the CAISc constraints.
+    authors:
+      - Aalok Thakkar
+      - Simone Severini
+    notes: "Filed automatically by the arXiv new submissions sweep. Matched on \"Conway's 99-graph problem\". Classifier rationale: The paper reports partial results and reductions but explicitly states it does not resolve the existence problem. Unreviewed: this records that a claim was made, not that it is correct."
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/Conway99Graph.lean
     source: google-deepmind/formal-conjectures
