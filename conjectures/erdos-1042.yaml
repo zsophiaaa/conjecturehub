@@ -27,6 +27,37 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/1042
       kind: dataset
+  - id: erdos-1042-sweep-e98abd2b
+    asserted_on: 2026-11-09
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-10
+    source:
+      title: "formal-conjectures PR #7693: feat(ErdosProblems/1042): add Erdős Problem 1042"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/7693
+      kind: github
+      quote: "- Solved: `erdos_1042.parts.i` (yes) and `erdos_1042.parts.ii` (yes), as answered by Ghosh and Ramachandran [GhRa24, Example 2.7 and Theorem 2.1(a)]."
+    authors:
+      - veljjanoski
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 1042". Classifier rationale: The pull request explicitly marks both parts of Erdős Problem 1042 as solved. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: erdos-1042-sweep-555e9085
+    asserted_on: 2026-11-09
+    type: proved
+    scope: parts i and ii
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-10
+    source:
+      title: "formal-conjectures: feat(ErdosProblems/1042): add Erdős Problem 1042 (#7693) Adds Erdős Problem 1042 (Erdős, Herzog and Piranian [EHP58, Problem 6]): let $F\\subset\\mathbb{C}$ be closed of transfinite diameter $1$, not co"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/e6fd15240d5e8913202c6f87103a5a53c45c443e
+      kind: github
+      quote: "Solved: `erdos_1042.parts.i` (yes) and `erdos_1042.parts.ii` (yes), as answered by Ghosh and Ramachandran [GhRa24, Example 2.7 and Theorem 2.1(a)]."
+    authors:
+      - veljjanoski
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 1042". Classifier rationale: The commit explicitly states that both parts of Erdős Problem 1042 have been solved. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
