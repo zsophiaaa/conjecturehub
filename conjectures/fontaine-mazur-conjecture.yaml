@@ -10,7 +10,23 @@ openness_basis:
   meaning: unknown
   asserted_by: wikidata
   note: Identity record only. No statement or status has been ingested for this conjecture yet.
-claims: []
+claims:
+  - id: fontaine-mazur-conjecture-sweep-de6f8876
+    asserted_on: 2026-11-10
+    type: proved
+    scope: weight-one case over Q for p≥5
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-10
+    source:
+      title: Modular points and dimensions of Eisenstein deformation spaces
+      url: https://arxiv.org/abs/2512.21249
+      kind: arxiv
+      quote: we prove the weight-one Fontaine-Mazur conjecture over $\mathbb{Q}$ for $p\geq 5$, with no hypothesis on the residual representation.
+    authors:
+      - Xinyao Zhang
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Fontaine–Mazur conjecture". Classifier rationale: The abstract explicitly states a proof of the weight‑one Fontaine‑Mazur conjecture in that setting. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q5465120
     source: wikidata
