@@ -29,6 +29,22 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/748
       kind: dataset
+  - id: erdos-748-sweep-fc27167d
+    asserted_on: 2026-11-11
+    type: partial
+    scope: lower bound $f(n) \ge 2^{n/2}$
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-11
+    source:
+      title: "formal-conjectures PR #7895: feat(ErdosProblems/748): prove lower_bound"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/7895
+      kind: github
+      quote: "Proves `erdos_748.variants.lower_bound` in Erdős Problem 748: $f(n) \\geq 2^{n/2}$"
+    authors:
+      - veljjanoski
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 748". Classifier rationale: The pull request claims a proof of the lower‑bound variant of Erdős Problem 748. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

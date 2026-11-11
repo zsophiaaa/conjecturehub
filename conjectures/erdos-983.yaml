@@ -15,7 +15,39 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-983-sweep-781239cb
+    asserted_on: 2026-11-11
+    type: proved
+    scope: variant le_primeCounting
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-11
+    source:
+      title: "formal-conjectures PR #7894: feat(ErdosProblems/983): prove le_primeCounting"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/7894
+      kind: github
+      quote: Proves `erdos_983.variants.le_primeCounting` in Erdős Problem 983
+    authors:
+      - veljjanoski
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 983". Classifier rationale: The PR explicitly states it proves a variant of Erdős Problem 983. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: erdos-983-sweep-38ac1061
+    asserted_on: 2026-11-11
+    type: partial
+    scope: le_primeCounting variant
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-11
+    source:
+      title: "formal-conjectures: feat(ErdosProblems/983): prove le_primeCounting (#7894) Proves `erdos_983.variants.le_primeCounting` in Erdős Problem 983: $f(k, n) \\leq \\pi(n)$ when $\\pi(n) \\pi(n)$ elements of $A$ are counted, and t"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/481e61e870cb9f023794083070c7023229c4c069
+      kind: github
+      quote: "Proves `erdos_983.variants.le_primeCounting` in Erdős Problem 983: $f(k, n) \\leq \\pi(n)$"
+    authors:
+      - veljjanoski
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 983". Classifier rationale: The commit announces a proof of a specific variant, indicating partial progress on the conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

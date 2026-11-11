@@ -28,6 +28,22 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/1114
       kind: dataset
+  - id: erdos-1114-sweep-d881dbfe
+    asserted_on: 2026-11-11
+    type: partial
+    scope: variant rolle
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-11
+    source:
+      title: "formal-conjectures PR #7905: feat(ErdosProblems/1114): prove rolle"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/7905
+      kind: github
+      quote: Proves `erdos_1114.variants.rolle` in Erdős Problem 1114.
+    authors:
+      - veljjanoski
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 1114". Classifier rationale: The PR claims to prove a specific variant of the conjecture, not the full statement. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
