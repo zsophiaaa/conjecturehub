@@ -50,7 +50,23 @@ openness_basis:
   meaning: no_published_solution_known_to_curator
   asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: casas-alvero-conjecture-sweep-332508a6
+    asserted_on: 2026-11-11
+    type: partial
+    scope: assuming a uniform local Łojasiewicz type hypothesis
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-11
+    source:
+      title: A conditional proof of the Casas-Alvero conjecture
+      url: https://arxiv.org/abs/2501.09272
+      kind: arxiv
+      quote: we prove the Casas-Alvero conjecture for polynomials of any degree $d\geq 3$ over any characteristic $0$ field, under a uniform local {\L}ojasiewicz type hypothesis
+    authors:
+      - Soham Ghosh
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Casas-Alvero Conjecture". Classifier rationale: The paper claims a conditional proof, not an unconditional resolution. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Paper/CasasAlvero.lean
     source: google-deepmind/formal-conjectures

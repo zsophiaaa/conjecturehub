@@ -14,7 +14,23 @@ openness_basis:
   meaning: no_solution_known_to_community
   asserted_by: wikipedia
   note: Listed under "Unsolved problems in graph theory" on English Wikipedia.
-claims: []
+claims:
+  - id: reconstruction-conjecture-sweep-bedbf1a4
+    asserted_on: 2026-11-11
+    type: partial
+    scope: graphs with only two types of cards in the deck
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-11
+    source:
+      title: Two Types of Cards in Kelly-Ulam Conjecture
+      url: https://arxiv.org/abs/2611.13728
+      kind: arxiv
+      quote: It was possible to prove that graphs with this property are uniquely reconstructed by their card deck.
+    authors:
+      - Max Zinchenko
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Kelly–Ulam conjecture". Classifier rationale: The abstract states a proof for the reconstruction conjecture restricted to the two‑card‑type case. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q7302789
     source: wikidata
