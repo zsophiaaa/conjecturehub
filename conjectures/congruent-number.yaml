@@ -48,7 +48,23 @@ openness_basis:
   meaning: no_published_solution_known_to_curator
   asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: congruent-number-sweep-3ad3876d
+    asserted_on: 2026-11-11
+    type: partial
+    scope: n = 1
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-11
+    source:
+      title: "formal-conjectures PR #7909: feat(Wikipedia/CongruentNumber): link formal proof of not_congruentNumber_1"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/7909
+      kind: github
+      quote: '"$1$ is not a congruent number."'
+    authors:
+      - veljjanoski
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Congruent Number". Classifier rationale: The document presents a formal proof that the integer 1 is not a congruent number, a specific case of the conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/CongruentNumber.lean
     source: google-deepmind/formal-conjectures
