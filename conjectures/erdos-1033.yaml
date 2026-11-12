@@ -15,7 +15,37 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-12-12
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-1033-sweep-c9316bc3
+    asserted_on: 2026-11-12
+    type: counterexample
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-12
+    source:
+      title: "formal-conjectures PR #7780: feat(ErdosProblems/1033): link the Palomar entry for the formal proof"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/7780
+      kind: github
+      quote: This refutes the statement for every $\varepsilon$ below $2(\sqrt 3 - 1) - 978/668$.
+    authors:
+      - ukniusanqian-alt
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 1033". Classifier rationale: The document reports a formal proof providing an explicit counterexample that disproves the conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: erdos-1033-sweep-40390db4
+    asserted_on: 2026-11-11
+    type: counterexample
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-12
+    source:
+      title: "formal-conjectures: feat(ErdosProblems/1033): link the Palomar entry for the formal proof (#7780) Links a formal proof of `erdos_1033` (the first question of Erdős Problem 1033, answered negatively). The link points to t"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/b76eef5f6443d95cebf9f09716bc3474266fc528
+      kind: github
+      quote: Links a formal proof of `erdos_1033` (the first question of Erdős Problem 1033, answered negatively).
+    authors:
+      - ukniusanqian-alt
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 1033". Classifier rationale: The document reports a formal proof providing a counterexample to the conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

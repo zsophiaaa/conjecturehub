@@ -53,6 +53,21 @@ claims:
     authors:
       - Jineon Baek
     notes: Theorem 1.1.1 shows Gerver's sofa attains the maximum area, about 2.2195, settling the sofa constant. Still arXiv v1 with no journal reference, so the tier is preprint rather than published. Scoped because the uniqueness question this record displays is untouched by it.
+  - id: moving-sofa-problem-sweep-565624e9
+    asserted_on: 2026-11-11
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-12
+    source:
+      title: "formal-conjectures: feat(Wikipedia/MovingSofa): state the ambidextrous sofa conjecture (#6424) Closes #6423. Adds Romik's ambidextrous variant to `Wikipedia/MovingSofa.lean`: a shape that can turn both right and left aro"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/691719db2653905d5fa0775408370fb058e4c59f
+      kind: github
+      quote: Baek (2024) proved that no moving sofa has larger area, so the sofa constant equals |G|.
+    authors:
+      - frvnkliu
+    notes: "Filed automatically by the formal-conjectures commits sweep. Matched on \"Moving Sofa Problem\". Classifier rationale: The document reports Baek's 2024 proof that settles the Moving Sofa Problem. Unreviewed: this records that a claim was made, not that it is correct."
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/MovingSofa.lean
     source: google-deepmind/formal-conjectures

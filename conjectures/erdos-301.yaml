@@ -18,7 +18,22 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-301-sweep-dd779e3c
+    asserted_on: 2026-11-12
+    type: reformulation
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-12
+    source:
+      title: "formal-conjectures PR #7918: feat(ErdosProblems/301): add Erdős Problem 301"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/7918
+      kind: github
+      quote: "feat(ErdosProblems/301): add Erdős Problem 301"
+    authors:
+      - tombudd
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 301". Classifier rationale: The document only formalizes the conjecture in Lean and does not claim any proof or disproof. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

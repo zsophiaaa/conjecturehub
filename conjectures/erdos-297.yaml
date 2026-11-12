@@ -31,6 +31,36 @@ claims:
       url: https://www.erdosproblems.com/297
       kind: dataset
     notes: Upstream records this as solved without specifying the direction.
+  - id: erdos-297-sweep-4ae7d2c4
+    asserted_on: 2026-11-12
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-12
+    source:
+      title: "formal-conjectures PR #7682: feat(ErdosProblems/297): add Erdős Problem 297"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/7682
+      kind: github
+      quote: "Solved: `erdos_297` (research solved). The question is formalised as the growth rate ... equal to ... by Liu–Sawhney (arXiv:2404.07113, Thm 1.2) and Conlon–Fox–He–Mubayi–Pham–Suk–Verstraëte (arXiv:2404.16016, Thm 1)."
+    authors:
+      - Nas01010101
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 297". Classifier rationale: The PR claims the conjecture has been resolved by recent research. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: erdos-297-sweep-a2d35f65
+    asserted_on: 2026-11-12
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-12
+    source:
+      title: "formal-conjectures: feat(ErdosProblems/297): add Erdős Problem 297 (#7682) Closes #7681. Adds Erdős Problem 297: the number of $A\\subseteq\\{1,\\ldots,N\\}$ with $\\sum_{n\\in A}\\frac1n=1$. - Definitions: `count`, `massIntegr"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/4eedb568cd9e3da93eeff8a0b63910bd3738194e
+      kind: github
+      quote: "Solved: `erdos_297` (research solved)."
+    authors:
+      - Nas01010101
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 297". Classifier rationale: The commit states the conjecture has been solved by recent research. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
