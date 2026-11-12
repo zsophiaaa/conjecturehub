@@ -28,6 +28,22 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/1130
       kind: dataset
+  - id: erdos-1130-sweep-edeb432d
+    asserted_on: 2026-11-11
+    type: proved
+    scope: part i (inequality)
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-12
+    source:
+      title: "formal-conjectures: feat(ErdosProblems/1129, ErdosProblems/1130): add Erdős Problems 1129 and 1130 (#7801) Adds Erdős Problems 1129 and 1130, on the optimal nodes for Lagrange interpolation on $[-1,1]$. Erdős Problem 113"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/e4e4a9b0b6031c663a293de43a0f29a379ae03e0
+      kind: github
+      quote: "`parts.i` (yes, solved)"
+    authors:
+      - veljjanoski
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 1130". Classifier rationale: The commit states that part i of Erdős Problem 1130 is solved. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
