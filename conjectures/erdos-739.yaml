@@ -28,6 +28,38 @@ claims:
       title: erdosproblems.com records this problem as "not provable"
       url: https://www.erdosproblems.com/739
       kind: dataset
+  - id: erdos-739-sweep-84d2468e
+    asserted_on: 2026-11-12
+    type: independence
+    scope: ZFC
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-12
+    source:
+      title: "formal-conjectures PR #7703: feat(ErdosProblems/739): add Erdős Problem 739"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/7703
+      kind: github
+      quote: Komjáth [Ko88b] showed that the statement is not provable in ZFC
+    authors:
+      - Nas01010101
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 739". Classifier rationale: The document reports a known independence result for the conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: erdos-739-sweep-6d583cc2
+    asserted_on: 2026-11-12
+    type: independence
+    scope: ZFC
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-12
+    source:
+      title: "formal-conjectures: feat(ErdosProblems/739): add Erdős Problem 739 (#7703) Closes #4462. Adds Erdős Problem 739: if a graph has infinite chromatic number $\\mathfrak{m}$, does it have a subgraph with chromatic number $\\ma"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/a425ca3eb797fe927cb88c950565fdcbbbbada70
+      kind: github
+      quote: Komjáth [Ko88b] showed that the statement is not provable in ZFC
+    authors:
+      - Nas01010101
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 739". Classifier rationale: The commit notes a known independence result for the conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
