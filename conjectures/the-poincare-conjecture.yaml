@@ -70,6 +70,21 @@ claims:
       url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Millenium/Poincare.lean
       kind: dataset
     notes: Imported from the upstream `research solved` category. The statement is formalized; the proof has not been machine-checked by ConjectureHub.
+  - id: the-poincare-conjecture-sweep-6f966f95
+    asserted_on: 2026-11-12
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-12
+    source:
+      title: "The Poincare conjecture in HOL Light, formalized by Claude Opus 5.5 following Perelman. ~ John Harrison. https:// github.com/hol-light-family/Po incare # HOL_Light # AI4Math # AI #"
+      url: https://mathstodon.xyz/@Jose_A_Alonso/117604353631720722
+      kind: mastodon
+      quote: The Poincare conjecture in HOL Light, formalized by Claude Opus 5.5 following Perelman.
+    authors:
+      - José A. Alonso
+    notes: "Filed automatically by the Mathstodon sweep. Matched on \"The Poincaré Conjecture\". Classifier rationale: The document reports formalizing the conjecture based on Perelman's proof, indicating it is considered proved. Unreviewed: this records that a claim was made, not that it is correct."
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Millenium/Poincare.lean
     source: google-deepmind/formal-conjectures
