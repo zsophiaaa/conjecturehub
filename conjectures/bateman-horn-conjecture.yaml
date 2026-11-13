@@ -39,7 +39,24 @@ openness_basis:
   meaning: no_published_solution_known_to_curator
   asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: bateman-horn-conjecture-sweep-d2d59829
+    asserted_on: 2026-11-13
+    type: partial
+    scope: systems of linear forms together with a quadratic norm form
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-13
+    source:
+      title: "Prime values of linear forms and a quadratic form: one proof and two arithmetic applications"
+      url: https://arxiv.org/abs/2611.16062
+      kind: arxiv
+      quote: we further establish an asymptotic formula which matches the prediction by the multivariate Bateman-Horn conjecture.
+    authors:
+      - Niven Achenjang
+      - Katharine Woo
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Bateman-Horn Conjecture". Classifier rationale: The paper proves the Bateman‑Horn prediction for a specific family, which is a partial result rather than a full resolution. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/BatemanHornConjecture.lean
     source: google-deepmind/formal-conjectures

@@ -54,7 +54,23 @@ openness_basis:
   meaning: no_published_solution_known_to_curator
   asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: first-hardy-littlewood-conjecture-sweep-0bdc04af
+    asserted_on: 2026-11-13
+    type: partial
+    scope: assuming Delange Hypothesis (DH) or Wintner Assumption (WA)
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-13
+    source:
+      title: General elementary methods meeting elementary properties of correlations
+      url: https://arxiv.org/abs/2309.17101
+      kind: arxiv
+      quote: We proved, on Hardy‑Ramanujan Journal, the Hardy‑Littlewood Conjecture on 2k‑twin primes ... a new conditional proof of quoted H‑L Conjecture.
+    authors:
+      - Giovanni Coppola
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Hardy-Littlewood conjecture". Classifier rationale: The paper claims a conditional proof of the conjecture under specific hypotheses, which is partial progress. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/HardyLittlewood.lean
     source: google-deepmind/formal-conjectures

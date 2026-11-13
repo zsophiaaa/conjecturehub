@@ -10,7 +10,55 @@ openness_basis:
   meaning: unknown
   asserted_by: wikidata
   note: Identity record only. No statement or status has been ingested for this conjecture yet.
-claims: []
+claims:
+  - id: hilbert-s-tenth-problem-sweep-ff76455b
+    asserted_on: 2026-11-13
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-13
+    source:
+      title: $\mathbb Z$ is Diophantine over $\mathbb Q$ with 28 unknowns
+      url: https://arxiv.org/abs/2611.14605
+      kind: arxiv
+      quote: Recently, OpenAI proved that Hilbert's Tenth Problem over the field $\mathbb Q$ of rational numbers has a negative solution.
+    authors:
+      - Zhi-Wei Sun
+    notes: "Filed automatically by the arXiv new submissions sweep. Matched on \"Hilbert's tenth problem\". Classifier rationale: The paper explicitly states that a proof of a negative solution to Hilbert's Tenth Problem over Q has been obtained. Unreviewed: this records that a claim was made, not that it is correct."
+  - id: hilbert-s-tenth-problem-sweep-8ac38b1c
+    asserted_on: 2026-11-13
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-13
+    source:
+      title: A Diophantine definition of $\mathbb{Z}$ in $\mathbb{Q}$
+      url: https://arxiv.org/abs/2611.16130
+      kind: arxiv
+      quote: We prove that the integers form a Diophantine subset of the rational numbers.
+    authors:
+      - Ashay Burungale
+    notes: "Filed automatically by the arXiv new submissions sweep. Matched on \"Hilbert's tenth problem\". Classifier rationale: The paper claims a Diophantine definition of ℤ in ℚ, which resolves Hilbert's tenth problem over ℚ. Unreviewed: this records that a claim was made, not that it is correct."
+  - id: hilbert-s-tenth-problem-sweep-b748ea60
+    asserted_on: 2026-11-13
+    type: partial
+    scope: conditional on abc conjecture, Dickson's conjecture, and finiteness of 2‑primary parts of Shafarevich–Tate groups
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-13
+    source:
+      title: Why should $\mathbb{Z}$ be Diophantine in $\mathbb{Q}$?
+      url: https://arxiv.org/abs/2611.17124
+      kind: arxiv
+      quote: We give a Diophantine definition of the integers in the rational numbers conditional on the $abc$ conjecture, Dickson's conjecture, and finiteness of $2$-primary parts of Shafarevich--Tate groups.
+    authors:
+      - Alexander Kozachinskiy
+      - Hector Pasten
+      - Xavier Vidaux
+    notes: "Filed automatically by the arXiv new submissions sweep. Matched on \"Hilbert's tenth problem\". Classifier rationale: The paper provides a conditional Diophantine definition, representing partial progress on Hilbert's tenth problem over Q. Unreviewed: this records that a claim was made, not that it is correct."
 provenance:
   - url: https://www.wikidata.org/wiki/Q986147
     source: wikidata
