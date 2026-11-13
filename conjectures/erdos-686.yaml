@@ -72,7 +72,23 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: erdos-686-sweep-95af3a94
+    asserted_on: 2026-11-12
+    type: partial
+    scope: k = 2, r = 25; k = 4, r = 4 and r = 25
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-13
+    source:
+      title: "formal-conjectures PR #7915: feat(ErdosProblems/686): prove the k = 2 (r = 25) and k = 4 (r = 4, 25) impossibility variants"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/7915
+      kind: github
+      quote: "`twenty_five_two`: 25 is not a ratio of two products of 2 consecutive integers (`k = 2`, `m ≥ n + 2`)."
+    authors:
+      - universe2explorer
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 686". Classifier rationale: The PR proves impossibility for specific (k, r) cases, which is partial progress on Erdős Problem 686. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/686.lean
     source: google-deepmind/formal-conjectures
