@@ -14,7 +14,23 @@ openness_basis:
   meaning: no_solution_known_to_community
   asserted_by: wikipedia
   note: Listed under "Unsolved problems in number theory" on English Wikipedia.
-claims: []
+claims:
+  - id: riemann-hypothesis-sweep-4d79bf7e
+    asserted_on: 2026-11-13
+    type: partial
+    scope: half-plane Re(s) > 599/600
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-13
+    source:
+      title: Proof of the Quasi Riemann Hypothesis using $\mathbb Q[i]$
+      url: https://arxiv.org/abs/2611.16665
+      kind: arxiv
+      quote: we prove that ... has no zeros in the half-plane Re s>599/600, thereby obtaining the same zero-free half-plane for the Riemann ζ-function.
+    authors:
+      - Xin Hang Ji
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Riemann hypothesis". Classifier rationale: The paper claims a new zero‑free half‑plane for ζ(s), which is a partial result toward the Riemann hypothesis. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q205966
     source: wikidata

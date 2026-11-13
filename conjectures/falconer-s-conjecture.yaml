@@ -10,7 +10,24 @@ openness_basis:
   meaning: no_solution_known_to_community
   asserted_by: wikipedia
   note: Listed under "Unsolved problems in geometry" on English Wikipedia.
-claims: []
+claims:
+  - id: falconer-s-conjecture-sweep-613708a5
+    asserted_on: 2026-11-13
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-13
+    source:
+      title: Falconer's conjecture through descent and chaining
+      url: https://arxiv.org/abs/2611.14867
+      kind: arxiv
+      quote: OpenAI proved that a compact set $E\subset{\mathbb R}^d$ of Hausdorff dimension greater than $\frac{d}{2}$ determines a set of Euclidean distances of positive length.
+    authors:
+      - Will Burstein
+      - Alex Iosevich
+      - Alexia Yavicoli
+    notes: "Filed automatically by the arXiv new submissions sweep. Matched on \"Falconer's conjecture\". Classifier rationale: The abstract states a complete proof of the theorem that is precisely Falconer's conjecture. Unreviewed: this records that a claim was made, not that it is correct."
 provenance:
   - url: https://www.wikidata.org/wiki/Q5431790
     source: wikidata
