@@ -10,7 +10,22 @@ openness_basis:
   meaning: no_solution_known_to_community
   asserted_by: wikipedia
   note: Listed under "Unsolved problems in number theory" on English Wikipedia.
-claims: []
+claims:
+  - id: lindelof-hypothesis-sweep-da45bf26
+    asserted_on: 2026-11-14
+    type: partial
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-14
+    source:
+      title: "formal-conjectures PR #7996: Lindelöf hypothesis"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/7996
+      kind: github
+      quote: together with proven bounds on this constant.
+    authors:
+      - flow158
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Lindelöf hypothesis". Classifier rationale: The document reports proven bounds on the constant related to the hypothesis, indicating partial progress. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q911528
     source: wikidata
