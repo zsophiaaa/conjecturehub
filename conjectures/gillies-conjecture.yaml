@@ -4,8 +4,8 @@ ids:
   wikidata: Q17017065
   wikipedia: https://en.wikipedia.org/wiki/Gillies%27_conjecture
 notability:
-  wikipedia_language_editions: 1
-  measured_on: 2026-08-03
+  wikipedia_language_editions: 2
+  measured_on: 2026-11-15
 openness_basis:
   meaning: no_solution_known_to_community
   asserted_by: wikipedia
@@ -21,7 +21,7 @@ provenance:
       - ids.mathworld
       - notability.wikipedia_language_editions
     license: CC0-1.0
-    retrieved: 2026-08-03
+    retrieved: 2026-11-15
   - url: https://en.wikipedia.org/wiki/Gillies'_conjecture
     source: wikipedia
     fields:

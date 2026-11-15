@@ -4,8 +4,8 @@ ids:
   wikidata: Q135650206
   wikipedia: https://en.wikipedia.org/wiki/Hartmanis%E2%80%93Stearns_conjecture
 notability:
-  wikipedia_language_editions: 2
-  measured_on: 2026-08-03
+  wikipedia_language_editions: 3
+  measured_on: 2026-11-15
 openness_basis:
   meaning: no_solution_known_to_community
   asserted_by: wikipedia
@@ -21,7 +21,7 @@ provenance:
       - ids.mathworld
       - notability.wikipedia_language_editions
     license: CC0-1.0
-    retrieved: 2026-08-03
+    retrieved: 2026-11-15
   - url: https://en.wikipedia.org/wiki/Hartmanis%E2%80%93Stearns_conjecture
     source: wikipedia
     fields:
