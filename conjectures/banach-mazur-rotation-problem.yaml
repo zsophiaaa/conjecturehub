@@ -32,7 +32,23 @@ openness_basis:
   meaning: no_published_solution_known_to_curator
   asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: banach-mazur-rotation-problem-sweep-680ef1be
+    asserted_on: 2026-11-15
+    type: partial
+    scope: finite-dimensional case
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-15
+    source:
+      title: "formal-conjectures: feat(Arxiv/math.0110202): formal proof link for the finite-dimensional Banach-Mazur problem (#7833) This adds a formal_proof link to banach_mazur_rotation_problem.finite_dimensional in BanachMazurRota"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/803aa4c1b4447c56124c726ce17badc027aae1a5
+      kind: github
+      quote: formal proof link for the finite-dimensional Banach-Mazur problem
+    authors:
+      - zblore
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Banach-Mazur Rotation Problem". Classifier rationale: The document reports a formal proof of the finite-dimensional version, which is a partial resolution of the conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Arxiv/math.0110202/BanachMazurRotation.lean
     source: google-deepmind/formal-conjectures
