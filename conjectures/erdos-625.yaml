@@ -16,7 +16,37 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-625-sweep-84209426
+    asserted_on: 2026-11-16
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-16
+    source:
+      title: "formal-conjectures PR #8016: feat(ErdosProblems): 625"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/8016
+      kind: github
+      quote: Adds Erdős Problem 625 as a solved question, linked to its formal proof through the Palomar registry.
+    authors:
+      - SamPetkov
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 625". Classifier rationale: The PR states the problem is solved and provides a formal proof reference. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: erdos-625-sweep-d7cf3df7
+    asserted_on: 2026-11-16
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-16
+    source:
+      title: "erdosproblems PR #541: Record Lean solution for Erdős Problem 625"
+      url: https://github.com/teorth/erdosproblems/pull/541
+      kind: github
+      quote: Records a Lean formalization of a solution to Erdős Problem 625.
+    authors:
+      - SamPetkov
+    notes: 'Filed automatically by the erdosproblems pull requests sweep. Matched on "Erdős Problem 625". Classifier rationale: The PR states that a Lean-checked theorem provides a solution, indicating the conjecture is claimed solved. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
