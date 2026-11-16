@@ -17,7 +17,39 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2026-04-04
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-1194-sweep-37553b8b
+    asserted_on: 2026-11-16
+    type: partial
+    scope: two variants (exists_perfect_difference_set and greedy_upper_bound)
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-16
+    source:
+      title: "formal-conjectures PR #7760: feat(ErdosProblems/1194): link Isabelle proofs of two variants"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/7760
+      kind: github
+      quote: Links Isabelle/HOL proofs of two variants of Erdős Problem 1194.
+    authors:
+      - karlesmarin
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 1194". Classifier rationale: The document reports formal proofs of two specific variants, indicating partial progress on the conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: erdos-1194-sweep-b2b93cd5
+    asserted_on: 2026-11-16
+    type: partial
+    scope: two variants (exists_perfect_difference_set, greedy_upper_bound)
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-16
+    source:
+      title: "formal-conjectures: feat(ErdosProblems/1194): link Isabelle proofs of two variants (#7760) Links Isabelle/HOL proofs of two variants of Erdős Problem 1194. - `erdos_1194.variants.exists_perfect_difference_set`: [`perfect"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/0f264e10f9d16db75d9f08d99dd495562fb2fed3
+      kind: github
+      quote: Links Isabelle/HOL proofs of two variants of Erdős Problem 1194.
+    authors:
+      - karlesmarin
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 1194". Classifier rationale: The commit reports formal proofs of two variants, indicating partial resolution. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
