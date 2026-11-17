@@ -48,7 +48,23 @@ openness_basis:
   meaning: no_published_solution_known_to_curator
   asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: congruent-number-sweep-ff84059a
+    asserted_on: 2026-11-17
+    type: partial
+    scope: assuming GRH
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-17
+    source:
+      title: On elliptic curves with prescribed analytic rank at least $2$
+      url: https://arxiv.org/abs/2611.21447
+      kind: arxiv
+      quote: infinitely many congruent number curves with odd analytic rank between $3$ and $17$
+    authors:
+      - Francesco Naccarato
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Congruent Number". Classifier rationale: The abstract reports a conditional existence result for congruent number curves, which is a partial advance, not a full resolution. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/CongruentNumber.lean
     source: google-deepmind/formal-conjectures

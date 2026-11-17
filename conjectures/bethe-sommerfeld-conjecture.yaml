@@ -9,7 +9,25 @@ openness_basis:
   meaning: unknown
   asserted_by: wikidata
   note: Identity record only. No statement or status has been ingested for this conjecture yet.
-claims: []
+claims:
+  - id: bethe-sommerfeld-conjecture-sweep-0373b26a
+    asserted_on: 2026-11-17
+    type: counterexample
+    scope: periodic divergence-form operators
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-17
+    source:
+      title: "The Maxwell Bethe-Sommerfeld problem I: Thin-layer induction and results for planar TE modes"
+      url: https://arxiv.org/abs/2611.20188
+      kind: arxiv
+      quote: we obtain densely many counterexamples to the Bethe-Sommerfeld Conjecture (BSC) for divergence-form operators.
+    authors:
+      - Habib Ammari
+      - Yu Gao
+      - Jiayu Qiu
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Bethe-Sommerfeld conjecture". Classifier rationale: The abstract explicitly states that the authors produce counterexamples to the Bethe‑Sommerfeld conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q119795143
     source: wikidata

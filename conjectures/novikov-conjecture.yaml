@@ -24,6 +24,23 @@ claims:
     authors:
       - Liang Guo
     notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Novikov conjecture". Classifier rationale: The paper proves the equivariant coarse Novikov conjecture under a specific geometric hypothesis, which is a partial result for the Novikov conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: novikov-conjecture-sweep-9ed8a058
+    asserted_on: 2026-11-17
+    type: partial
+    scope: proper metric spaces with bounded geometry that admit coarse embeddings into admissible ℓ^p‑Busemann spaces
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-17
+    source:
+      title: $\ell^p$-Busemann space and the coarse Novikov conjecture
+      url: https://arxiv.org/abs/2611.19678
+      kind: arxiv
+      quote: we prove that the rational coarse Novikov conjecture holds for proper metric spaces with bounded geometry that admit coarse embeddings into admissible ℓ^p‑Busemann spaces.
+    authors:
+      - Chao Tong
+      - Xianjin Wang
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Novikov conjecture". Classifier rationale: The paper claims a proof of the rational coarse Novikov conjecture for a restricted class of spaces. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q7064908
     source: wikidata

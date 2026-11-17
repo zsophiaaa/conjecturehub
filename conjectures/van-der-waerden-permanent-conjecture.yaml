@@ -12,7 +12,39 @@ openness_basis:
   meaning: unknown
   asserted_by: wikidata
   note: Identity record only. No statement or status has been ingested for this conjecture yet.
-claims: []
+claims:
+  - id: van-der-waerden-permanent-conjecture-sweep-af721550
+    asserted_on: 2026-11-17
+    type: partial
+    scope: n = 2, 3, 4
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-17
+    source:
+      title: "formal-conjectures PR #8044: feat/8029-chollet-permanent"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/8044
+      kind: github
+      quote: "`variants.two`, `.variants.three` and `.variants.four` mention the solved cases. n = 2, 3, 4 (`research solved`)."
+    authors:
+      - aryanamol10
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "permanent". Classifier rationale: The PR states that the conjecture is open in general but solved for dimensions 2, 3, and 4. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: van-der-waerden-permanent-conjecture-sweep-b6ea374d
+    asserted_on: 2026-11-17
+    type: partial
+    scope: n ≤ 3, real 4×4 matrices, complex 4×4 matrices
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-17
+    source:
+      title: "formal-conjectures PR #8055: feat(Paper): add Chollet's permanent conjecture"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/8055
+      kind: github
+      quote: "I also added the known special cases as solved variants: $n \\le 3$ (Gregorac–Hentzel 1987), real $4 \\times 4$ matrices (Hutchinson 2021) and complex $4 \\times 4$ matrices (Rodtes 2024)."
+    authors:
+      - lars-lewerenz
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "permanent". Classifier rationale: The PR reports that certain low‑dimensional cases have been solved, which is partial progress on the conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q16636852
     source: wikidata
