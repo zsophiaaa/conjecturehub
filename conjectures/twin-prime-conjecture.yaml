@@ -29,7 +29,25 @@ openness_basis:
   meaning: no_published_solution_known_to_curator
   asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: twin-prime-conjecture-sweep-b7dabaee
+    asserted_on: 2026-11-17
+    type: partial
+    scope: assuming Ratios Conjecture for the Riemann zeta function
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-17
+    source:
+      title: Landau's problems through ratios of $L$-functions
+      url: https://arxiv.org/abs/2611.18825
+      kind: arxiv
+      quote: Very recently, Lee announced a proof of the Twin Prime Conjecture assuming the Ratios Conjecture for the Riemann zeta function.
+    authors:
+      - Haozhe Gou
+      - Victor Y. Wang
+      - Max Wenqiang Xu
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Twin prime conjecture". Classifier rationale: The paper reports a conditional proof, not an unconditional resolution. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/TwinPrimes.lean
     source: google-deepmind/formal-conjectures

@@ -66,7 +66,22 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: erdos-593-sweep-9107393d
+    asserted_on: 2026-11-17
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-17
+    source:
+      title: "formal-conjectures PR #8045: Erdős 593: mark as solved and fill in the answer"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/8045
+      kind: github
+      quote: "Erdős 593: mark as solved and fills in `erdos_593.answer`."
+    authors:
+      - SamPetkov
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 593". Classifier rationale: The pull request explicitly states the conjecture is solved and provides a formal proof. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/593.lean
     source: google-deepmind/formal-conjectures
