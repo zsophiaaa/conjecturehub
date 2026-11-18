@@ -22,6 +22,27 @@ claims:
       url: https://en.wikipedia.org/wiki/Mizohata%E2%80%93Takeuchi_conjecture
       kind: wikipedia
     notes: Standing taken from English Wikipedia's categorisation (Wikipedia categorises this as disproved). Nobody here has read the paper that settled it, which is what the secondary attestation says; replace this claim with one citing that paper when someone has it to hand.
+  - id: mizohata-takeuchi-conjecture-sweep-b031035f
+    asserted_on: 2026-11-18
+    type: disproved
+    scope: local conjecture for the paraboloid and the sphere
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-18
+    source:
+      title: Power loss for the local Mizohata--Takeuchi estimate on smooth hypersurfaces
+      url: https://arxiv.org/abs/2611.22465
+      kind: arxiv
+      quote: This result, in particular, disproves the so-called local Mizohata--Takeuchi conjectures for the paraboloid and the sphere
+    authors:
+      - Hannah Cairo
+      - Inbo Gottlieb Fenves
+      - Vjekoslav Kovač
+      - Itamar Oliveira
+      - Dmitrii Zakharov
+      - Ruixiang Zhang
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Mizohata–Takeuchi conjecture". Classifier rationale: The paper explicitly states it disproves the local versions of the conjecture for those surfaces. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q135915966
     source: wikidata
