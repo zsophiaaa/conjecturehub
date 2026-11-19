@@ -10,7 +10,22 @@ openness_basis:
   meaning: unknown
   asserted_by: wikidata
   note: Identity record only. No statement or status has been ingested for this conjecture yet.
-claims: []
+claims:
+  - id: mirror-symmetry-conjecture-sweep-d30cf350
+    asserted_on: 2026-11-19
+    type: reformulation
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-19
+    source:
+      title: Convergence of the big J-function of a GKM manifold
+      url: https://arxiv.org/abs/2611.23650
+      kind: arxiv
+      quote: formulate an equivariant mirror symmetry conjecture for GKM manifolds
+    authors:
+      - Todor Milanov
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "mirror symmetry conjecture". Classifier rationale: The document only proposes a new formulation of the mirror symmetry conjecture, without claiming a proof or disproof. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q97366912
     source: wikidata

@@ -10,7 +10,25 @@ openness_basis:
   meaning: unknown
   asserted_by: wikidata
   note: Identity record only. No statement or status has been ingested for this conjecture yet.
-claims: []
+claims:
+  - id: berge-conjecture-sweep-e2ea475c
+    asserted_on: 2026-11-19
+    type: partial
+    scope: r ≥ n
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-19
+    source:
+      title: Covering dense $r$-graphs by perfect matchings
+      url: https://arxiv.org/abs/2611.24019
+      kind: arxiv
+      quote: If r≥ n, then τ(G)≤2r-1, which implies that the generalized Berge conjecture holds for r≥ n
+    authors:
+      - Jingchao Lai
+      - Danyi Li
+      - Weigen Yan
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Berge conjecture". Classifier rationale: The paper proves the conjecture for the case r≥ n, which is a partial resolution. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q4891455
     source: wikidata
