@@ -16,7 +16,52 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-625-sweep-84209426
+    asserted_on: 2026-11-19
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-20
+    source:
+      title: "formal-conjectures PR #8016: feat(ErdosProblems): 625"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/8016
+      kind: github
+      quote: Adds Erdős Problem 625 as a solved question, linked to its formal proof through the Palomar registry.
+    authors:
+      - SamPetkov
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 625". Classifier rationale: The document states that a formal proof of the conjecture has been provided. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: erdos-625-sweep-3e4cb109
+    asserted_on: 2026-11-19
+    type: resolved_by_prior_literature
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-20
+    source:
+      title: "formal-conjectures PR #7258: feat(ErdosProblems): formalise 625 and link its full proof"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/7258
+      kind: github
+      quote: "feat(ErdosProblems): formalise 625 and link its full proof."
+    authors:
+      - AItoBit
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős problem 625". Classifier rationale: The PR states that a full proof of Erdős problem 625 already exists and is linked. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: erdos-625-sweep-46bb4da9
+    asserted_on: 2026-11-19
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-20
+    source:
+      title: "formal-conjectures: feat(ErdosProblems): 625 (#8016) Adds Erdős Problem 625 as a solved question, linked to its formal proof through the Palomar registry. - `erdos_625` (`@[category research solved, question]`): for `G ∼"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/d8d031d4998c78575159ccab9a7a9e95ce043883
+      kind: github
+      quote: Adds Erdős Problem 625 as a solved question, linked to its formal proof through the Palomar registry.
+    authors:
+      - SamPetkov
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 625". Classifier rationale: The commit explicitly declares the problem solved and provides a formal proof reference. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

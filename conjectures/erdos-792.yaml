@@ -15,7 +15,37 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-792-sweep-f4e79b89
+    asserted_on: 2026-11-19
+    type: partial
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-20
+    source:
+      title: "formal-conjectures PR #7612: Add verified classical bounds for Erdős 792"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/7612
+      kind: github
+      quote: "This is partial coverage: the sharp order of the excess over n/3 remains open."
+    authors:
+      - AItoBit
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős problem 792". Classifier rationale: The document reports only partial progress and explicitly states no full solution. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: erdos-792-sweep-dca00671
+    asserted_on: 2026-11-19
+    type: reformulation
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-20
+    source:
+      title: "formal-conjectures: feat(ErdosProblems/792): add Erdős Problem 792 (#7860) Closes #949. Adds [Erdős Problem 792](https://www.erdosproblems.com/792), on the largest size guaranteed for a sum-free subset of any set of n in"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/7faa88c89efb3c1fc2c65f19f58ed9abcb2986b2
+      kind: github
+      quote: The main statement and its answer remain `by sorry`.
+    authors:
+      - arujbansal
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 792". Classifier rationale: The commit formalizes the conjecture and explicitly states it remains open, not resolved. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
