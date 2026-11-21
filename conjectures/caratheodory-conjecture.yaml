@@ -12,7 +12,22 @@ openness_basis:
   meaning: unknown
   asserted_by: wikidata
   note: Identity record only. No statement or status has been ingested for this conjecture yet.
-claims: []
+claims:
+  - id: caratheodory-conjecture-sweep-fd3358b4
+    asserted_on: 2026-11-20
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-21
+    source:
+      title: "Meanwhile, Levent Alpöge, claims to have used Claude to prove the Riemann Hypothesis after a month and two weeks of work: https:// alpo.ge/remark.pdf He's already used Claude to se"
+      url: https://mathstodon.xyz/@johncarlosbaez/117651285641853015
+      kind: mastodon
+      quote: He's already used Claude to settle the Jacobian conjecture, the Caratheodory conjecture, and the question about the existence of complex structures on the 6-sphere.
+    authors:
+      - John Carlos Baez
+    notes: 'Filed automatically by the Mathstodon sweep. Matched on "Carathéodory conjecture". Classifier rationale: The post asserts that Alpöge has settled (proved) the Carathéodory conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q5037753
     source: wikidata

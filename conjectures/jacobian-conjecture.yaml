@@ -83,6 +83,21 @@ claims:
       - David Barros Hulak
       - Ruy Jose Guerra Barretto de Queiroz
     notes: Isabelle/HOL formalisation accepted into the Archive of Formal Proofs. This is the one completed machine check of the counterexample; the Lean route remains an open Mathlib pull request. Not tagged machine_verified here because that tier is reserved for proofs checked by ConjectureHub CI against our own canonical statement.
+  - id: jacobian-conjecture-sweep-fd3358b4
+    asserted_on: 2026-11-20
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-21
+    source:
+      title: "Meanwhile, Levent Alpöge, claims to have used Claude to prove the Riemann Hypothesis after a month and two weeks of work: https:// alpo.ge/remark.pdf He's already used Claude to se"
+      url: https://mathstodon.xyz/@johncarlosbaez/117651285641853015
+      kind: mastodon
+      quote: He's already used Claude to settle the Jacobian conjecture
+    authors:
+      - John Carlos Baez
+    notes: 'Filed automatically by the Mathstodon sweep. Matched on "Jacobian conjecture". Classifier rationale: The document claims the Jacobian conjecture has been settled. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/JacobianConjecture.lean
     source: google-deepmind/formal-conjectures
