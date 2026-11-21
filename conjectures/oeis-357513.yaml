@@ -49,6 +49,21 @@ claims:
     authors:
       - Ondrej Kutal
     notes: The entry now reads "This conjecture is now proved; see Links." The $m = 1$ case was settled by AlphaProof, reported by Moritz Firsching in January 2026, and the general $m$ statement by Ondrej Kutal in July 2026 with a Lean formalisation. The exceptional primes are exactly those $p$ with $p - 1 \mid 2m + 4$ and $p \nmid 2m + 7$, all at most $2m + 5$. Relayed from the OEIS entry; ConjectureHub has not checked either proof.
+  - id: oeis-357513-sweep-642e3103
+    asserted_on: 2026-11-21
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-21
+    source:
+      title: "formal-conjectures PR #8122: feat(OEIS/357513): mark general supercongruence as solved"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/8122
+      kind: github
+      quote: It proves the statement with the exceptions $p < 2m + 6$.
+    authors:
+      - felixpernegger
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "general_supercongruence". Classifier rationale: The PR explicitly marks the conjecture as research solved and links a formal proof. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/OEIS/357513.lean
     source: google-deepmind/formal-conjectures
