@@ -11,7 +11,37 @@ openness_basis:
   meaning: no_solution_known_to_community
   asserted_by: wikipedia
   note: Listed under "Unsolved problems in mathematics" on English Wikipedia.
-claims: []
+claims:
+  - id: generalized-riemann-hypothesis-sweep-091a5388
+    asserted_on: 2026-11-21
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-21
+    source:
+      title: "formal-conjectures PR #8111: set the status of the (generalized) Riemann hypothesis to solved"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/8111
+      kind: github
+      quote: set the status of the (generalized) Riemann hypothesis to solved
+    authors:
+      - smmercuri
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Generalized Riemann hypothesis". Classifier rationale: The pull request explicitly claims the conjecture is solved. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: generalized-riemann-hypothesis-sweep-c5e961cd
+    asserted_on: 2026-11-21
+    type: reformulation
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-21
+    source:
+      title: "formal-conjectures PR #8113: feat(Millennium/RiemannHypothesis): GRH is equivalent to its critical-strip form"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/8113
+      kind: github
+      quote: "`generalized_riemann_hypothesis_iff_critical_strip`: every zero of $L(\\chi, s)$ with $0 < \\mathrm{Re}(s) < 1$ has real part $1/2$, if and only if `generalized_riemann_hypothesis` holds as stated here"
+    authors:
+      - korbonits
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Generalized Riemann hypothesis". Classifier rationale: The PR asserts an equivalence of two formulations of GRH, not a proof or disproof. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q685140
     source: wikidata
