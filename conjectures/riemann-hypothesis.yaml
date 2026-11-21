@@ -14,7 +14,37 @@ openness_basis:
   meaning: no_solution_known_to_community
   asserted_by: wikipedia
   note: Listed under "Unsolved problems in number theory" on English Wikipedia.
-claims: []
+claims:
+  - id: riemann-hypothesis-sweep-091a5388
+    asserted_on: 2026-11-21
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-21
+    source:
+      title: "formal-conjectures PR #8111: set the status of the (generalized) Riemann hypothesis to solved"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/8111
+      kind: github
+      quote: set the status of the (generalized) Riemann hypothesis to solved.
+    authors:
+      - smmercuri
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Riemann hypothesis". Classifier rationale: The pull request explicitly claims the conjecture has been solved. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: riemann-hypothesis-sweep-c5e961cd
+    asserted_on: 2026-11-21
+    type: reformulation
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-21
+    source:
+      title: "formal-conjectures PR #8113: feat(Millennium/RiemannHypothesis): GRH is equivalent to its critical-strip form"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/8113
+      kind: github
+      quote: GRH is equivalent to its critical-strip form.
+    authors:
+      - korbonits
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Riemann hypothesis". Classifier rationale: The PR states an equivalence between two formulations of the Generalized Riemann Hypothesis, not a proof or disproof. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q205966
     source: wikidata
