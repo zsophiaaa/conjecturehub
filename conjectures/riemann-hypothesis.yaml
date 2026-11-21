@@ -14,7 +14,22 @@ openness_basis:
   meaning: no_solution_known_to_community
   asserted_by: wikipedia
   note: Listed under "Unsolved problems in number theory" on English Wikipedia.
-claims: []
+claims:
+  - id: riemann-hypothesis-sweep-54e8e7a9
+    asserted_on: 2026-11-21
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-21
+    source:
+      title: People are starting to puzzle together the proof of the Riemann Hypothesis. The Lean version has been independently verified, so it's almost certainly true. Here is a high-level ov
+      url: https://mathstodon.xyz/@pbloem/117655649125216162
+      kind: mastodon
+      quote: The Lean version has been independently verified, so it's almost certainly true.
+    authors:
+      - Peter Bloem
+    notes: 'Filed automatically by the Mathstodon sweep. Matched on "Riemann hypothesis". Classifier rationale: The post claims a verified Lean proof, implying the conjecture is resolved. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q205966
     source: wikidata
