@@ -14,7 +14,67 @@ openness_basis:
   meaning: no_solution_known_to_community
   asserted_by: wikipedia
   note: Listed under "Unsolved problems in number theory" on English Wikipedia.
-claims: []
+claims:
+  - id: riemann-hypothesis-sweep-c5e961cd
+    asserted_on: 2026-11-20
+    type: reformulation
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-21
+    source:
+      title: "formal-conjectures PR #8113: feat(Millennium/RiemannHypothesis): GRH is equivalent to its critical-strip form"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/8113
+      kind: github
+      quote: GRH is equivalent to its critical-strip form.
+    authors:
+      - korbonits
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Riemann hypothesis". Classifier rationale: The PR states an equivalence between two formulations of the Generalized Riemann Hypothesis. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: riemann-hypothesis-sweep-091a5388
+    asserted_on: 2026-11-20
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-21
+    source:
+      title: "formal-conjectures PR #8111: set the status of the (generalized) Riemann hypothesis to solved"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/8111
+      kind: github
+      quote: set the status of the (generalized) Riemann hypothesis to solved
+    authors:
+      - smmercuri
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Riemann hypothesis". Classifier rationale: The pull request explicitly claims the conjecture has been solved. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: riemann-hypothesis-sweep-4ff13b1e
+    asserted_on: 2026-11-20
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-21
+    source:
+      title: Fan Chang, Hong Liu, and Maio Liu Proved Chvátal&#8217;s 1972 conjecture
+      url: https://gilkalai.wordpress.com/2026/11/20/fan-chang-hong-liu-and-maio-liu-proved-chvatals-1972-conjecture/
+      kind: blog
+      quote: Levent Alpöge also announced a proof of the Riemann Hypothesis.
+    authors:
+      - Gil Kalai
+    notes: 'Filed automatically by the Combinatorics and more (Gil Kalai) sweep. Matched on "Riemann hypothesis". Classifier rationale: The blog post states that a proof of the Riemann Hypothesis was announced. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: riemann-hypothesis-sweep-fd3358b4
+    asserted_on: 2026-11-20
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-21
+    source:
+      title: "Meanwhile, Levent Alpöge, claims to have used Claude to prove the Riemann Hypothesis after a month and two weeks of work: https:// alpo.ge/remark.pdf He's already used Claude to se"
+      url: https://mathstodon.xyz/@johncarlosbaez/117651285641853015
+      kind: mastodon
+      quote: Levent Alpöge, claims to have used Claude to prove the Riemann Hypothesis after a month and two weeks of work
+    authors:
+      - John Carlos Baez
+    notes: 'Filed automatically by the Mathstodon sweep. Matched on "Riemann hypothesis". Classifier rationale: The document reports a claimed proof of the conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q205966
     source: wikidata
