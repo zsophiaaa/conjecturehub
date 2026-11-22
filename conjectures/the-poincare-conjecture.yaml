@@ -70,6 +70,21 @@ claims:
       url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Millenium/Poincare.lean
       kind: dataset
     notes: Imported from the upstream `research solved` category. The statement is formalized; the proof has not been machine-checked by ConjectureHub.
+  - id: the-poincare-conjecture-sweep-d59e19cf
+    asserted_on: 2026-11-22
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-22
+    source:
+      title: Will the Clay Mathematics Institute Ever Pay Out a Single Dollar for the Millennium Prize Problems?
+      url: https://mathoverflow.net/questions/518090/will-the-clay-mathematics-institute-ever-pay-out-a-single-dollar-for-the-millenn
+      kind: mathoverflow
+      quote: Was Grigori Perelman solving the Poincare conjecture ...
+    authors:
+      - Matthew Albano
+    notes: 'Filed automatically by the MathOverflow [conjectures] sweep. Matched on "The Poincaré Conjecture". Classifier rationale: The document states that Perelman solved the Poincaré conjecture, indicating a proof. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Millenium/Poincare.lean
     source: google-deepmind/formal-conjectures

@@ -28,6 +28,37 @@ claims:
       url: https://www.erdosproblems.com/504
       kind: dataset
     notes: Upstream records this as solved without specifying the direction.
+  - id: erdos-504-sweep-5da5ea2d
+    asserted_on: 2026-11-22
+    type: proved
+    scope: main theorem and endpoint
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-22
+    source:
+      title: "formal-conjectures PR #8189: feat: link complete Lean formal proofs for Erdős 504 (main theorem and endpoint)"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/8189
+      kind: github
+      quote: link complete Lean formal proofs for Erdős 504 (main theorem and endpoint). This PR adds `formal_proof` links for the two currently unlinked solved statements of Erdős problem 504
+    authors:
+      - mavis-codee
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős problem 504". Classifier rationale: The PR states that formal Lean proofs exist for the main theorem and endpoint, indicating they are proved. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: erdos-504-sweep-6c8d3bdb
+    asserted_on: 2026-11-22
+    type: resolved_by_prior_literature
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-22
+    source:
+      title: "erdosproblems PR #547: Link Erdős problem 504 to its complete Lean formalization (main theorem and endpoint)"
+      url: https://github.com/teorth/erdosproblems/pull/547
+      kind: github
+      quote: the mathematics was solved in the literature (Szekeres 1941; Erdős–Szekeres 1960/61); this entry records the formalization only.
+    authors:
+      - mavis-codee
+    notes: 'Filed automatically by the erdosproblems pull requests sweep. Matched on "Erdős problem 504". Classifier rationale: The document states the conjecture was already solved in prior literature and the PR only adds a Lean formalization. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
