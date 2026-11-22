@@ -32,8 +32,8 @@ ids:
     - label: "*Poznámka k homogénnym experimentom s konečnými automatmi*"
       url: https://dml.cz/bitstream/handle/10338.dmlcz/126647/MathSlov_14-1964-3_2.pdf
 notability:
-  wikipedia_language_editions: 6
-  measured_on: 2026-08-03
+  wikipedia_language_editions: 7
+  measured_on: 2026-11-22
 openness_basis:
   meaning: no_published_solution_known_to_curator
   asserted_by: google-deepmind/formal-conjectures
@@ -60,4 +60,4 @@ provenance:
       - ids.mathworld
       - notability.wikipedia_language_editions
     license: CC0-1.0
-    retrieved: 2026-08-03
+    retrieved: 2026-11-22
