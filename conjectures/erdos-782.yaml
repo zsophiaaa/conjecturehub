@@ -15,7 +15,22 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-782-sweep-0dc38470
+    asserted_on: 2026-11-22
+    type: disproved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-22
+    source:
+      title: "formal-conjectures PR #8105: Mark Erdős Problem 782(i) as solved"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/8105
+      kind: github
+      quote: The answer is no. The external Lean theorem proves the exact negation of the original FC statement.
+    authors:
+      - KitaKen1
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 782". Classifier rationale: The document claims a formal proof of the negation, marking the conjecture as solved (disproved). Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

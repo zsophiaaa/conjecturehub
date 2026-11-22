@@ -16,7 +16,37 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-625-sweep-d7cf3df7
+    asserted_on: 2026-11-22
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-22
+    source:
+      title: "erdosproblems PR #541: Record Lean solution for Erdős Problem 625"
+      url: https://github.com/teorth/erdosproblems/pull/541
+      kind: github
+      quote: Records a Lean formalization of a solution to Erdős Problem 625.
+    authors:
+      - SamPetkov
+    notes: 'Filed automatically by the erdosproblems pull requests sweep. Matched on "Erdős Problem 625". Classifier rationale: The document reports a formal proof establishing the conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: erdos-625-sweep-c2222b0f
+    asserted_on: 2026-11-22
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-22
+    source:
+      title: "erdosproblems: Merge pull request #541 from SamPetkov/record-lean-solution-625 Record Lean solution for Erdős Problem 625"
+      url: https://github.com/teorth/erdosproblems/commit/6a2d456d6af7ad0d22a513b0af67b85859311b3e
+      kind: github
+      quote: Record Lean solution for Erdős Problem 625
+    authors:
+      - teorth
+    notes: 'Filed automatically by the erdosproblems commits sweep. Matched on "Erdős Problem 625". Classifier rationale: The commit message states that a Lean solution for the problem has been recorded, implying a proof. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
