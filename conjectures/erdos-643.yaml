@@ -16,7 +16,23 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-643-sweep-90c86859
+    asserted_on: 2026-11-23
+    type: proved
+    scope: part (ii)
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-23
+    source:
+      title: "formal-conjectures PR #8197: Erdős #643: mark part (ii) solved and link the Palomar formalization"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/8197
+      kind: github
+      quote: "marks Erdős #643(ii) as solved"
+    authors:
+      - icekylinx
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős #643". Classifier rationale: The pull request states that part (ii) of the conjecture is solved via a formal Lean proof. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

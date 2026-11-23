@@ -28,6 +28,21 @@ claims:
       url: https://www.erdosproblems.com/504
       kind: dataset
     notes: Upstream records this as solved without specifying the direction.
+  - id: erdos-504-sweep-6c8d3bdb
+    asserted_on: 2026-11-23
+    type: resolved_by_prior_literature
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-23
+    source:
+      title: "erdosproblems PR #547: Link Erdős problem 504 to its complete Lean formalization (main theorem and endpoint)"
+      url: https://github.com/teorth/erdosproblems/pull/547
+      kind: github
+      quote: the mathematics was solved in the literature (Szekeres 1941; Erdős–Szekeres 1960/61); this entry records the formalization only.
+    authors:
+      - mavis-codee
+    notes: 'Filed automatically by the erdosproblems pull requests sweep. Matched on "Erdős problem 504". Classifier rationale: The PR states the problem is already solved in published work and only the formalization is new. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
