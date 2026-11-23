@@ -28,6 +28,22 @@ claims:
       - François Loeser
       - Dimitri Wyss
     notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Fundamental lemma". Classifier rationale: The paper claims a proof of a motivic version, not a full resolution of the original conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: fundamental-lemma-of-langlands-and-shelstad-sweep-204bc37e
+    asserted_on: 2026-11-23
+    type: proved
+    scope: quasi-split unramified groups
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-23
+    source:
+      title: The weighted fundamental lemma for non-split groups
+      url: https://arxiv.org/abs/2611.26750
+      kind: arxiv
+      quote: In this work, we prove the Weighted Fundamental Lemma for Lie algebras for general (quasi-split) unramified $G$.
+    authors:
+      - Cass Halleck-Dubé
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Fundamental lemma". Classifier rationale: The abstract explicitly states a proof of the weighted fundamental lemma for the stated class of groups. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q57510
     source: wikidata
