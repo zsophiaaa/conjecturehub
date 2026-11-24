@@ -16,7 +16,39 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2026-03-07
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-1183-sweep-b1c74cbd
+    asserted_on: 2026-11-23
+    type: proved
+    scope: variant f_ge (the inequality $f(n) \ge (n+1)/2$)
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-24
+    source:
+      title: "formal-conjectures PR #7902: feat(ErdosProblems/1183): prove f_ge"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/7902
+      kind: github
+      quote: "prove f_ge. Proves `erdos_1183.variants.f_ge` in Erdős Problem 1183: $f(n) \\geq (n + 1)/2$."
+    authors:
+      - veljjanoski
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 1183". Classifier rationale: The document states that the variant f_ge of Erdős Problem 1183 has been proved. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: erdos-1183-sweep-4a169477
+    asserted_on: 2026-11-23
+    type: proved
+    scope: the inequality f(n) \ge (n+1)/2
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-24
+    source:
+      title: "formal-conjectures: feat(ErdosProblems/1183): prove f_ge (#7902) Proves `erdos_1183.variants.f_ge` in Erdős Problem 1183: $f(n) \\geq (n + 1)/2$. The proof follows the docstring. The initial segments $\\lbrace i : i < k \\r"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/a61918922db94b6a1aece60f0e090a6b5e1aaa1e
+      kind: github
+      quote: "Proves `erdos_1183.variants.f_ge` in Erdős Problem 1183: $f(n) \\geq (n + 1)/2$."
+    authors:
+      - veljjanoski
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 1183". Classifier rationale: The commit explicitly states it proves the stated inequality for Erdős Problem 1183. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

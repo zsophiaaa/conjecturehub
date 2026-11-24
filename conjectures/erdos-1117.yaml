@@ -15,7 +15,23 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-12-29
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-1117-sweep-5d6ecc10
+    asserted_on: 2026-11-23
+    type: proved
+    scope: Part (i) (limsup version)
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-24
+    source:
+      title: "formal-conjectures PR #8187: feat(ErdosProblems): add Erdős Problem 1117"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/8187
+      kind: github
+      quote: "`Part (i)` (solved, Herzog–Piranian): `∃ f, Differentiable f ∧ ¬ IsMonomial f ∧ atTop.limsup ν = ⊤`"
+    authors:
+      - maugomez77
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 1117". Classifier rationale: The document states that Part (i) of Erdős Problem 1117 has been solved. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

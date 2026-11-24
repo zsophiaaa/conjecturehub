@@ -48,7 +48,39 @@ openness_basis:
   meaning: no_published_solution_known_to_curator
   asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: congruent-number-sweep-3ad3876d
+    asserted_on: 2026-11-23
+    type: partial
+    scope: n = 1
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-24
+    source:
+      title: "formal-conjectures PR #7909: feat(Wikipedia/CongruentNumber): link formal proof of not_congruentNumber_1"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/7909
+      kind: github
+      quote: '"$1$ is not a congruent number."'
+    authors:
+      - veljjanoski
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Congruent Number". Classifier rationale: The document reports a formal proof that the specific case n=1 is not congruent. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: congruent-number-sweep-7a3241df
+    asserted_on: 2026-11-23
+    type: proved
+    scope: n = 1
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-24
+    source:
+      title: "formal-conjectures: feat(Wikipedia/CongruentNumber): link formal proof of not_congruentNumber_1 (#7909) Adds `formal_proof using lean4` to `not_congruentNumber_1` in `Wikipedia/CongruentNumber.lean`: $1$ is not a congrue"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/c838aa56952977606ad2e03d2fad81aacdc82b55
+      kind: github
+      quote: '"$1$ is not a congruent number."'
+    authors:
+      - veljjanoski
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Congruent Number". Classifier rationale: The commit supplies a formal Lean4 proof that the integer 1 is not a congruent number, settling that specific case. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/CongruentNumber.lean
     source: google-deepmind/formal-conjectures

@@ -14,7 +14,23 @@ openness_basis:
   meaning: no_solution_known_to_community
   asserted_by: wikipedia
   note: Listed under "Unsolved problems in graph theory" on English Wikipedia.
-claims: []
+claims:
+  - id: reconstruction-conjecture-sweep-145b0cf8
+    asserted_on: 2026-11-23
+    type: partial
+    scope: disconnected case and edge‑reconstruction cases (Lovász and Müller conditions)
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-24
+    source:
+      title: "formal-conjectures: feat(Wikipedia/ReconstructionConjecture): link formal proofs of the disconnected, Lovász and Müller cases (#7992) Links formal proofs of `reconstruction_conjecture.variants.disconnected`, `edge_recons"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/14b9cafe313c2457d733b1d284483841f74e8c6f
+      kind: github
+      quote: Links formal proofs of `reconstruction_conjecture.variants.disconnected`, `edge_reconstruction_conjecture.variants.lovasz` and `edge_reconstruction_conjecture.variants.mueller`.
+    authors:
+      - VictorLiwentao
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "reconstruction conjecture". Classifier rationale: The document announces formal proofs of particular variants, not a full resolution of the reconstruction conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q7302789
     source: wikidata
