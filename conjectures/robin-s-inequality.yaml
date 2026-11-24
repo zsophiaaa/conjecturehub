@@ -10,7 +10,23 @@ openness_basis:
   meaning: unknown
   asserted_by: wikidata
   note: Identity record only. No statement or status has been ingested for this conjecture yet.
-claims: []
+claims:
+  - id: robin-s-inequality-sweep-2ecd07bc
+    asserted_on: 2026-11-24
+    type: partial
+    scope: assuming RH false
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-24
+    source:
+      title: On the Least Colossally Abundant Exception to Robin's Inequality
+      url: https://arxiv.org/abs/2510.23889
+      kind: arxiv
+      quote: we demonstrate that if the Riemann Hypothesis is false, then the least CA counterexample, $n$, must be constrained to the band $e^\gamma<G(n)<e^\gamma \left(1+\frac{c}{(\log n)^b}\right)$
+    authors:
+      - Bruce Zimov
+    notes: "Filed automatically by the arXiv new submissions sweep. Matched on \"Robin's inequality\". Classifier rationale: The paper gives conditional constraints on a possible counterexample, but does not claim a full proof or disproof. Unreviewed: this records that a claim was made, not that it is correct."
 provenance:
   - url: https://www.wikidata.org/wiki/Q137179159
     source: wikidata

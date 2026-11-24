@@ -83,6 +83,22 @@ claims:
       - David Barros Hulak
       - Ruy Jose Guerra Barretto de Queiroz
     notes: Isabelle/HOL formalisation accepted into the Archive of Formal Proofs. This is the one completed machine check of the counterexample; the Lean route remains an open Mathlib pull request. Not tagged machine_verified here because that tier is reserved for proofs checked by ConjectureHub CI against our own canonical statement.
+  - id: jacobian-conjecture-sweep-1bcc6b4a
+    asserted_on: 2026-11-24
+    type: counterexample
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-24
+    source:
+      title: Around the base ideal and the base locus of a Keller map
+      url: https://arxiv.org/abs/2611.29705
+      kind: arxiv
+      quote: using invertible affine transformations on the recent counterexample to the Jacobian Conjecture announced by Alp\"oge
+    authors:
+      - Bartomeu Enrich Lucas
+      - Francesc Planas-Vilanova
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Jacobian conjecture". Classifier rationale: The abstract states that a recent counterexample to the Jacobian Conjecture has been announced, implying the conjecture is claimed to be false. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/JacobianConjecture.lean
     source: google-deepmind/formal-conjectures

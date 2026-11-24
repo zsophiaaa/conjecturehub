@@ -11,7 +11,24 @@ openness_basis:
   meaning: unknown
   asserted_by: wikidata
   note: Identity record only. No statement or status has been ingested for this conjecture yet.
-claims: []
+claims:
+  - id: hodge-conjecture-sweep-f2531a6e
+    asserted_on: 2026-11-24
+    type: partial
+    scope: infinitely many new cases for Klein varieties
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-24
+    source:
+      title: Hodge cycles of Klein hypersurfaces
+      url: https://arxiv.org/abs/2611.29763
+      kind: arxiv
+      quote: providing infinitely many new cases of the Hodge conjecture for Klein varieties.
+    authors:
+      - Mario Pastrana
+      - Roberto Villaflor
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Hodge conjecture". Classifier rationale: The paper claims to prove the conjecture for many new specific Klein varieties, which is partial progress. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q1143138
     source: wikidata

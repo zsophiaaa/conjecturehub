@@ -10,7 +10,39 @@ openness_basis:
   meaning: no_solution_known_to_community
   asserted_by: wikipedia
   note: Listed under "Unsolved problems in number theory" on English Wikipedia.
-claims: []
+claims:
+  - id: tate-conjecture-sweep-4309b168
+    asserted_on: 2026-11-24
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-24
+    source:
+      title: The Tate Conjecture in Positive Characteristic
+      url: https://arxiv.org/abs/2611.28178
+      kind: arxiv
+      quote: we prove that ... and consequently, based on Kahn's early work, the Tate conjecture at positive characteristics.
+    authors:
+      - Yunhao Sun
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Tate conjecture". Classifier rationale: The abstract states the authors claim to prove the Tate conjecture in positive characteristic. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: tate-conjecture-sweep-d766d3b5
+    asserted_on: 2026-11-24
+    type: proved
+    scope: abelian fourfolds over finitely generated fields
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-24
+    source:
+      title: The Tate conjecture for abelian fourfolds
+      url: https://arxiv.org/abs/2611.30237
+      kind: arxiv
+      quote: We prove the Tate conjecture for non-CM and non-ordinary abelian fourfolds over positive characteristic function fields... this establishes the Tate conjecture for abelian fourfolds over finitely generated fields.
+    authors:
+      - Matt Broe
+      - Ruofan Jiang
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Tate conjecture". Classifier rationale: The abstract explicitly states a proof of the Tate conjecture for that class of abelian fourfolds. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q7687975
     source: wikidata

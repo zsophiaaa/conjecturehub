@@ -9,7 +9,22 @@ openness_basis:
   meaning: unknown
   asserted_by: wikidata
   note: Identity record only. No statement or status has been ingested for this conjecture yet.
-claims: []
+claims:
+  - id: aharoni-korman-conjecture-sweep-c93fc9b3
+    asserted_on: 2026-11-24
+    type: disproved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-24
+    source:
+      title: The structure of FAC posets and the Aharoni--Korman conjecture
+      url: https://arxiv.org/abs/2607.02500
+      kind: arxiv
+      quote: While a counterexample to this conjecture was recently discovered, in this paper we prove that the conjecture does hold true for a broad class of countable posets.
+    authors:
+      - Lawrence Hollom
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Aharoni-Korman conjecture". Classifier rationale: The paper states a counterexample to the Aharoni‑Korman conjecture, indicating it is disproved. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q131679304
     source: wikidata
