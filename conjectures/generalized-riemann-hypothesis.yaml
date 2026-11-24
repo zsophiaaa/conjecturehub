@@ -11,7 +11,37 @@ openness_basis:
   meaning: no_solution_known_to_community
   asserted_by: wikipedia
   note: Listed under "Unsolved problems in mathematics" on English Wikipedia.
-claims: []
+claims:
+  - id: generalized-riemann-hypothesis-sweep-091a5388
+    asserted_on: 2026-11-24
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-24
+    source:
+      title: "formal-conjectures PR #8111: set the status of the (generalized) Riemann hypothesis to solved"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/8111
+      kind: github
+      quote: set the status of the (generalized) Riemann hypothesis to solved
+    authors:
+      - smmercuri
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Generalized Riemann hypothesis". Classifier rationale: The pull request explicitly claims the conjecture has been solved. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: generalized-riemann-hypothesis-sweep-04657a71
+    asserted_on: 2026-11-24
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-24
+    source:
+      title: "formal-conjectures: set the status of the (generalized) Riemann hypothesis to solved (#8111) https://alpo.ge/remark.pdf"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/6bc2f7490a49cc0258406ffb675483f4318a04b5
+      kind: github
+      quote: set the status of the (generalized) Riemann hypothesis to solved
+    authors:
+      - smmercuri
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Generalized Riemann hypothesis". Classifier rationale: The commit message explicitly states the conjecture is solved, indicating a claimed proof. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q685140
     source: wikidata

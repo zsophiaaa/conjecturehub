@@ -39,7 +39,23 @@ openness_basis:
   meaning: no_published_solution_known_to_curator
   asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: bateman-horn-conjecture-sweep-6ad10396
+    asserted_on: 2026-11-24
+    type: partial
+    scope: over finite fields
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-24
+    source:
+      title: Explicit Error Term in the Chebotarev Density Theorem for Function Fields
+      url: https://arxiv.org/abs/2611.28155
+      kind: arxiv
+      quote: We apply it to ... the Bateman-Horn conjecture over finite fields.
+    authors:
+      - Ido Benbenishty Shpilka
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Bateman-Horn Conjecture". Classifier rationale: The abstract mentions applying the new error term to a version of the Bateman-Horn conjecture over finite fields, indicating partial progress rather than a full resolution. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/BatemanHornConjecture.lean
     source: google-deepmind/formal-conjectures

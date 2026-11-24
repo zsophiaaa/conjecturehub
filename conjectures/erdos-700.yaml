@@ -64,7 +64,23 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: erdos-700-sweep-629c4bf0
+    asserted_on: 2026-11-24
+    type: partial
+    scope: up to n = 1000
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-24
+    source:
+      title: "erdosproblems PR #549: Link Erdős problem 700 to OEIS A402268"
+      url: https://github.com/teorth/erdosproblems/pull/549
+      kind: github
+      quote: I computed f(k) directly for every composite k ... The result is the 52 listed terms of A402268 (48 of them ≤ 1000), with no extra or missing term.
+    authors:
+      - WorldianAI
+    notes: 'Filed automatically by the erdosproblems pull requests sweep. Matched on "Erdős Problem 700". Classifier rationale: The PR reports computational verification of the conjecture for composites up to about 1000, but does not claim a full proof. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/700.lean
     source: google-deepmind/formal-conjectures
