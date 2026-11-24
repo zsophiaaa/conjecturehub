@@ -29,6 +29,38 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/748
       kind: dataset
+  - id: erdos-748-sweep-fc27167d
+    asserted_on: 2026-11-23
+    type: partial
+    scope: lower bound f(n) ≥ 2^{n/2}
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-24
+    source:
+      title: "formal-conjectures PR #7895: feat(ErdosProblems/748): prove lower_bound"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/7895
+      kind: github
+      quote: Proves `erdos_748.variants.lower_bound` ... $f(n) \geq 2^{n/2}$
+    authors:
+      - veljjanoski
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 748". Classifier rationale: The PR claims to prove a lower‑bound variant of Erdős Problem 748, which is a partial result rather than a full resolution. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: erdos-748-sweep-8c62eceb
+    asserted_on: 2026-11-23
+    type: partial
+    scope: lower bound f(n) ≥ 2^{n/2}
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-24
+    source:
+      title: "formal-conjectures: feat(ErdosProblems/748): prove lower_bound (#7895) Proves `erdos_748.variants.lower_bound` in Erdős Problem 748: $f(n) \\geq 2^{n/2}$, where $f(n)$ is the number of sum-free subsets of $\\lbrace 1, \\dot"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/1cd5c2cb043e29c3642fd95106c3707d5980d37f
+      kind: github
+      quote: "Proves `erdos_748.variants.lower_bound` in Erdős Problem 748: $f(n) \\geq 2^{n/2}$"
+    authors:
+      - veljjanoski
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 748". Classifier rationale: The commit claims a new lower‑bound result, which is a partial resolution of the conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

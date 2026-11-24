@@ -17,7 +17,22 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-724-sweep-3816973f
+    asserted_on: 2026-11-23
+    type: disproved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-24
+    source:
+      title: "formal-conjectures: feat(ErdosProblems/724): prove euler_conjecture (#7698) Proves `erdos_724.variants.euler_conjecture` in Erdős Problem 724: Euler's conjecture that $f(n) = 1$ for every $n \\equiv 2 \\pmod 4$ is false. T"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/af6289a9812a607c3a68cb8a0b223734396370c9
+      kind: github
+      quote: Euler's conjecture that $f(n) = 1$ for every $n \equiv 2 \pmod 4$ is false.
+    authors:
+      - veljjanoski
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 724". Classifier rationale: The commit explicitly states the conjecture is false and provides a counterexample. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

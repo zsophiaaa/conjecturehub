@@ -10,7 +10,23 @@ openness_basis:
   meaning: no_solution_known_to_community
   asserted_by: wikipedia
   note: Listed under "Unsolved problems in number theory" on English Wikipedia.
-claims: []
+claims:
+  - id: second-hardy-littlewood-conjecture-sweep-9dee7793
+    asserted_on: 2026-11-23
+    type: partial
+    scope: under RH, for y ≥ (2+ε)x^{1/2}(log x)^2/(8π) and y ≤ x
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-24
+    source:
+      title: "formal-conjectures PR #8223: feat(ErdosProblems/855): add RH-conditional variants (Chahal et al.)"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/8223
+      kind: github
+      quote: Under RH, for every ε > 0 there is x_ε such that π(x+y) ≤ π(x)+π(y) for all integers x ≥ x_ε and (2+ε)x^{1/2}(log x)^2/(8π) ≤ y ≤ x.
+    authors:
+      - mnn31
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Second Hardy–Littlewood conjecture". Classifier rationale: The document reports RH‑conditional partial results but states the main conjecture remains open. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q2920423
     source: wikidata

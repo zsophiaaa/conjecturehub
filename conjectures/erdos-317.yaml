@@ -36,7 +36,38 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: erdos-317-sweep-ee5cb92a
+    asserted_on: 2026-11-23
+    type: partial
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-24
+    source:
+      title: "formal-conjectures PR #7899: feat(ErdosProblems/317): prove claim2_inequality"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/7899
+      kind: github
+      quote: Proves `Erdos317.claim2_inequality` ... if the sum ... is nonzero, then its absolute value is at least $1 / L$.
+    authors:
+      - veljjanoski
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 317". Classifier rationale: The document proves a related lower‑bound claim, which is partial progress but does not resolve the conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: erdos-317-sweep-c3ce487c
+    asserted_on: 2026-11-23
+    type: partial
+    scope: for all n
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-24
+    source:
+      title: "formal-conjectures: feat(ErdosProblems/317): prove claim2_inequality (#7899) Proves `Erdos317.claim2_inequality` in Erdős Problem 317: for $\\delta_k \\in \\lbrace -1, 0, 1 \\rbrace$, if the sum of $\\delta_k / k$ over $1 \\le"
+      url: https://github.com/google-deepmind/formal-conjectures/commit/1d3feb7ddcfd6d922c49a96b5134dba488b7de1c
+      kind: github
+      quote: Proves `Erdos317.claim2_inequality` ... if the sum ... is nonzero, then its absolute value is at least $1 / L$, where $L = \mathrm{lcm}(1, \dots, n)$.
+    authors:
+      - veljjanoski
+    notes: 'Filed automatically by the formal-conjectures commits sweep. Matched on "Erdős Problem 317". Classifier rationale: The commit proves a subsidiary inequality related to the conjecture but does not resolve the original statement. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/317.lean
     source: google-deepmind/formal-conjectures
