@@ -14,7 +14,22 @@ openness_basis:
   meaning: no_solution_known_to_community
   asserted_by: wikipedia
   note: Listed under "Unsolved problems in number theory" on English Wikipedia.
-claims: []
+claims:
+  - id: riemann-hypothesis-sweep-a40f62cf
+    asserted_on: 2026-11-24
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-25
+    source:
+      title: "formal-conjectures PR #8258: feat(Wikipedia/CramerConjecture): add unconditional sqrt-log prime gap bound (RH proved)"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/8258
+      kind: github
+      quote: since the Riemann Hypothesis is proved ([Al26] Alpöge)
+    authors:
+      - laughingbear
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Riemann hypothesis". Classifier rationale: The pull request explicitly claims RH has been proved. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q205966
     source: wikidata
