@@ -13,7 +13,25 @@ openness_basis:
   meaning: no_solution_known_to_community
   asserted_by: wikipedia
   note: Listed under "Unsolved problems in graph theory" on English Wikipedia.
-claims: []
+claims:
+  - id: second-neighborhood-problem-sweep-7e95c5eb
+    asserted_on: 2026-11-25
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-25
+    source:
+      title: A short proof of Seymour's Second Neighborhood Conjecture
+      url: https://arxiv.org/abs/2611.32872
+      kind: arxiv
+      quote: We give a short alternative proof of Seymour's Second Neighborhood Conjecture, recently proved by OpenAI.
+    authors:
+      - Romain Bourneuf
+      - Pierre Charbit
+      - Samuel Coulomb
+      - Stéphan Thomassé
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "second neighborhood conjecture". Classifier rationale: The paper states it provides a proof of the conjecture, indicating the conjecture is claimed to be resolved. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q60792926
     source: wikidata

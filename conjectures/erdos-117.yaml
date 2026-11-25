@@ -15,7 +15,22 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-08-31
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-117-sweep-e1095a5c
+    asserted_on: 2026-11-25
+    type: resolved_by_prior_literature
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-25
+    source:
+      title: "formal-conjectures PR #8289: feat(ErdosProblems/117): formalize Erdős Problem 117 (abelian subgroup covers)"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/8289
+      kind: github
+      quote: "formalizes the main research statements (`@[category research solved, AMS 20]`): - `erdos_117`: Pyber's exponential lower and upper bounds..., - `erdos_117.variants.lecomte_exact`: Lecomte's exact formula `h(n) = 2 ^ ((n - 1) / 2) + 1` for `n ≥ 9`..., - `erdos_117.variants.lecomte_small`: exact small values `h(n) = n` for `3 ≤ n ≤ 6` and `h(7) = h(8) = 10`."
+    authors:
+      - alpalbayrak91-boop
+    notes: "Filed automatically by the formal-conjectures pull requests sweep. Matched on \"Erdős Problem 117\". Classifier rationale: The PR records that the conjecture's statements are already proved in existing literature and are being formalized, not newly solved. Unreviewed: this records that a claim was made, not that it is correct."
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

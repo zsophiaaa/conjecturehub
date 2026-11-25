@@ -14,7 +14,52 @@ openness_basis:
   meaning: no_solution_known_to_community
   asserted_by: wikipedia
   note: Listed under "Unsolved problems in number theory" on English Wikipedia.
-claims: []
+claims:
+  - id: riemann-hypothesis-sweep-23669ef1
+    asserted_on: 2026-11-25
+    type: reformulation
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-25
+    source:
+      title: The local Weil explicit formula and related structures
+      url: https://arxiv.org/abs/2611.33001
+      kind: arxiv
+      quote: We characterize the Riemann hypothesis by the uniform boundedness of the diagonal values of the reproducing kernels.
+    authors:
+      - Masatoshi Suzuki
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Riemann hypothesis". Classifier rationale: The abstract states a new equivalent formulation of RH, not a proof or disproof. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: riemann-hypothesis-sweep-e6606126
+    asserted_on: 2026-11-25
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-25
+    source:
+      title: I think I found the link to this web in one of the latest posts from @ johncarlosbaez . But the stupid "Mastodon" app for my iPad made me lose track of the thread. Anyhow, the link
+      url: https://mathstodon.xyz/@polnasam/117677276856348580
+      kind: mastodon
+      quote: Levent Alpöge's proof of the Riemann Hypothesis
+    authors:
+      - polnasam
+    notes: 'Filed automatically by the Mathstodon sweep. Matched on "Riemann hypothesis". Classifier rationale: The post claims a proof of RH exists via Levent Alpöge. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: riemann-hypothesis-sweep-5401395d
+    asserted_on: 2026-11-25
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-25
+    source:
+      title: G.R.H. Polymath
+      url: https://terrytao.wordpress.com/2026/11/24/g-r-h-polymath/
+      kind: blog
+      quote: Levent Alpöge announced a Lean certicate containing a proof of the Generalized Riemann hypothesis.
+    authors:
+      - Terence Tao
+    notes: "Filed automatically by the What's new (Terence Tao) sweep. Matched on \"Riemann hypothesis\". Classifier rationale: The document reports a claimed proof of the (Generalized) Riemann hypothesis. Unreviewed: this records that a claim was made, not that it is correct."
 provenance:
   - url: https://www.wikidata.org/wiki/Q205966
     source: wikidata
