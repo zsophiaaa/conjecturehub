@@ -11,7 +11,22 @@ openness_basis:
   meaning: no_solution_known_to_community
   asserted_by: wikipedia
   note: Listed under "Unsolved problems in mathematics" on English Wikipedia.
-claims: []
+claims:
+  - id: generalized-riemann-hypothesis-sweep-5401395d
+    asserted_on: 2026-11-25
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-25
+    source:
+      title: G.R.H. Polymath
+      url: https://terrytao.wordpress.com/2026/11/24/g-r-h-polymath/
+      kind: blog
+      quote: Levent Alpöge announced a Lean certicate containing a proof of the Generalized Riemann hypothesis.
+    authors:
+      - Terence Tao
+    notes: "Filed automatically by the What's new (Terence Tao) sweep. Matched on \"Generalized Riemann hypothesis\". Classifier rationale: The document reports a claimed proof of the conjecture. Unreviewed: this records that a claim was made, not that it is correct."
 provenance:
   - url: https://www.wikidata.org/wiki/Q685140
     source: wikidata

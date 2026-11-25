@@ -10,7 +10,24 @@ openness_basis:
   meaning: no_solution_known_to_community
   asserted_by: wikipedia
   note: Listed under "Unsolved problems in number theory" on English Wikipedia.
-claims: []
+claims:
+  - id: tate-conjecture-sweep-2d253811
+    asserted_on: 2026-11-25
+    type: proved
+    scope: one-cycles on quotient models of smooth projective separably rationally connected varieties with finite group action
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-25
+    source:
+      title: Integral Hodge/Tate conjecture of quotients via weak approximation
+      url: https://arxiv.org/abs/2611.32494
+      kind: arxiv
+      quote: The integral Hodge and Tate conjectures for one-cycles consequently descend to such quotient models.
+    authors:
+      - Yang Cao
+      - Zhiyu Tian
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "Tate conjecture". Classifier rationale: The abstract states a proof that the Tate conjecture holds for one-cycles in the described quotient setting. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q7687975
     source: wikidata
