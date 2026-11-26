@@ -10,7 +10,24 @@ openness_basis:
   meaning: no_solution_known_to_community
   asserted_by: wikipedia
   note: Listed under "Unsolved problems in number theory" on English Wikipedia.
-claims: []
+claims:
+  - id: serre-s-conjecture-ii-sweep-637d4bfb
+    asserted_on: 2026-11-26
+    type: partial
+    scope: reduction from characteristic 0 to positive characteristic
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-26
+    source:
+      title: Transfer principles for Galois cohomology and Serre's conjecture II
+      url: https://arxiv.org/abs/2308.00903
+      kind: arxiv
+      quote: In particular, we prove that Serre's conjecture II for characteristic $0$ fields implies Serre's conjecture II for positive characteristic fields.
+    authors:
+      - Diego Izquierdo
+      - Giancarlo Lucchini Arteche
+    notes: "Filed automatically by the arXiv new submissions sweep. Matched on \"Serre's conjecture II\". Classifier rationale: The paper establishes a conditional implication, not a full proof or disproof. Unreviewed: this records that a claim was made, not that it is correct."
 provenance:
   - url: https://www.wikidata.org/wiki/Q17103221
     source: wikidata
