@@ -41,6 +41,22 @@ claims:
       - Adele Maltempo
       - Carolina Vallejo
     notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "McKay conjecture". Classifier rationale: The paper proves a special case of the McKay conjecture, constituting partial progress. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: mckay-equality-sweep-355c4222
+    asserted_on: 2026-11-26
+    type: partial
+    scope: symplectic groups
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-26
+    source:
+      title: The inductive Galois-McKay conjecture for groups of Lie type C
+      url: https://arxiv.org/abs/2611.34497
+      kind: arxiv
+      quote: We prove the inductive Galois-McKay conjecture for the symplectic groups.
+    authors:
+      - Lucas Ruhstorfer
+    notes: 'Filed automatically by the arXiv new submissions sweep. Matched on "McKay conjecture". Classifier rationale: The paper reports a partial result (inductive version) for a class of groups, not a full proof of the McKay equality. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q28401746
     source: wikidata

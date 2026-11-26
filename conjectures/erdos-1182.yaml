@@ -16,7 +16,23 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2026-03-07
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-1182-sweep-e28911be
+    asserted_on: 2026-11-25
+    type: partial
+    scope: variants.chvatal, variants.F_ge_pred
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-26
+    source:
+      title: "formal-conjectures PR #8292: feat(ErdosProblems/1182): add formal_proof links for variants.chvatal and F_ge_pred"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/8292
+      kind: github
+      quote: add formal_proof links for variants.chvatal and F_ge_pred. This links external Lean proofs for two research-solved statements in Erdős Problem 1182
+    authors:
+      - laughingbear
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 1182". Classifier rationale: The document reports formal Lean proofs for two specific variants of Erdős Problem 1182. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

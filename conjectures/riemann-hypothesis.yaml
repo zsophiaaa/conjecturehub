@@ -14,7 +14,22 @@ openness_basis:
   meaning: no_solution_known_to_community
   asserted_by: wikipedia
   note: Listed under "Unsolved problems in number theory" on English Wikipedia.
-claims: []
+claims:
+  - id: riemann-hypothesis-sweep-a68904bf
+    asserted_on: 2026-11-26
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-26
+    source:
+      title: OpenAI's efforts in Yang Mills, QCD and their SU(5) model is now available. Just as Levent Alpoge's Lean proof of the Riemann Hypothesis was greatly assisted by the efforts of many
+      url: https://mathstodon.xyz/@ScottCaveny/117680829475801005
+      kind: mastodon
+      quote: Levent Alpoge's Lean proof of the Riemann Hypothesis was greatly assisted by the efforts of many
+    authors:
+      - ScottCaveny
+    notes: 'Filed automatically by the Mathstodon sweep. Matched on "Riemann hypothesis". Classifier rationale: The document asserts that a Lean proof of the Riemann Hypothesis exists. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q205966
     source: wikidata
