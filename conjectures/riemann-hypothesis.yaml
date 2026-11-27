@@ -14,7 +14,22 @@ openness_basis:
   meaning: no_solution_known_to_community
   asserted_by: wikipedia
   note: Listed under "Unsolved problems in number theory" on English Wikipedia.
-claims: []
+claims:
+  - id: riemann-hypothesis-sweep-64466edc
+    asserted_on: 2026-11-26
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-27
+    source:
+      title: "RE: https:// bsky.brid.gy/r/https://bsky.ap p/profile/did:plc:tnde52rcbqxotp7a2cl7bmxu/post/3n3amcdwxwk2v I'm not quite regretting the Covid crisis yet, but yes, I'm getting pretty"
+      url: https://mathstodon.xyz/@jeanas/117685094942539916
+      kind: mastodon
+      quote: after the proof of the Riemann hypothesis
+    authors:
+      - Jean Abou Samra (new account)
+    notes: 'Filed automatically by the Mathstodon sweep. Matched on "Riemann hypothesis". Classifier rationale: The post claims RH has been proved. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q205966
     source: wikidata

@@ -105,6 +105,22 @@ claims:
       title: erdosproblems.com records this problem as "verifiable"
       url: https://www.erdosproblems.com/835
       kind: dataset
+  - id: erdos-835-sweep-9ec43ea6
+    asserted_on: 2026-11-26
+    type: partial
+    scope: 3 ≤ k ≤ 15
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-27
+    source:
+      title: "formal-conjectures PR #8338: feat(ErdosProblems/835): add solved cases k = 10, 12 and close 3 ≤ k ≤ 15"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/8338
+      kind: github
+      quote: settle all 3 ≤ k ≤ 15, leaving k = 16 (J(32, 16)) as the smallest open case.
+    authors:
+      - keremakir
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem #835". Classifier rationale: The document reports that the conjecture has been resolved (disproved) for all k in the range 3 to 15. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/835.lean
     source: google-deepmind/formal-conjectures
