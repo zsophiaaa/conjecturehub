@@ -27,6 +27,22 @@ claims:
       title: erdosproblems.com records this problem as "decidable"
       url: https://www.erdosproblems.com/580
       kind: dataset
+  - id: erdos-580-sweep-5af36383
+    asserted_on: 2026-11-27
+    type: partial
+    scope: all sufficiently large n
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-27
+    source:
+      title: "formal-conjectures PR #8360: feat(ErdosProblems/580): Erdős–Füredi–Loebl–Sós n/2–n/2–n/2 conjecture"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/8360
+      kind: github
+      quote: adds `erdos_580.variants.zhao`, the solved case for all sufficiently large $n$ [Zh11].
+    authors:
+      - timlantin
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 580". Classifier rationale: The document reports a known partial solution for large n, not a full resolution. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
