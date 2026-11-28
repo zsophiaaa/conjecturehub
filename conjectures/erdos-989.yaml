@@ -28,6 +28,21 @@ claims:
       url: https://www.erdosproblems.com/989
       kind: dataset
     notes: Upstream records this as solved without specifying the direction.
+  - id: erdos-989-sweep-63386e3f
+    asserted_on: 2026-11-27
+    type: resolved_by_prior_literature
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-28
+    source:
+      title: "formal-conjectures PR #8453: feat(ErdosProblems/989): Beck's irregularities of distribution for discs"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/8453
+      kind: github
+      quote: Erdős Problem 989 (solved, Beck 1987)
+    authors:
+      - timlantin
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 989". Classifier rationale: The pull request states the problem is solved by Beck 1987, indicating prior literature resolution. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

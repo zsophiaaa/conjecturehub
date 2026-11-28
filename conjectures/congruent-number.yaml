@@ -48,7 +48,23 @@ openness_basis:
   meaning: no_published_solution_known_to_curator
   asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: congruent-number-sweep-0d55643d
+    asserted_on: 2026-11-28
+    type: partial
+    scope: n = 10 (and 10k^2)
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-28
+    source:
+      title: "formal-conjectures PR #8505: feat(Wikipedia/CongruentNumber): add not_congruentNumber_10 and link a formal proof"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/8505
+      kind: github
+      quote: "`¬ CongruentNumber.congruentNumber 10` (and the $10k^2$ form)"
+    authors:
+      - EulersMules
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Congruent Number". Classifier rationale: The pull request reports a formal proof that 10 (and its square multiples) is not a congruent number. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/CongruentNumber.lean
     source: google-deepmind/formal-conjectures

@@ -70,6 +70,22 @@ claims:
       url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Millenium/Poincare.lean
       kind: dataset
     notes: Imported from the upstream `research solved` category. The statement is formalized; the proof has not been machine-checked by ConjectureHub.
+  - id: the-poincare-conjecture-sweep-60c9afc5
+    asserted_on: 2026-11-27
+    type: proved
+    scope: dimension 3
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-28
+    source:
+      title: "formal-conjectures PR #8445: docs: cite the verified Lean proof of the Poincaré conjecture"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/8445
+      kind: github
+      quote: The linked MathDB submission proves the same homotopy-sphere statement, including the Hausdorff and charted-space hypotheses.
+    authors:
+      - NicholasWierenga
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "The Poincaré Conjecture". Classifier rationale: Document reports a verified Lean proof of the three‑dimensional Poincaré conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Millenium/Poincare.lean
     source: google-deepmind/formal-conjectures

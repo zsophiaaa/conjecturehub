@@ -50,7 +50,23 @@ openness_basis:
   meaning: no_published_solution_known_to_curator
   asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: oppermann-s-conjecture-sweep-dec8e63c
+    asserted_on: 2026-11-28
+    type: partial
+    scope: assuming the A053000 bound
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-28
+    source:
+      title: "formal-conjectures PR #8542: Correct the A053000 attribution and prove its link to Oppermann’s conjecture"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/8542
+      kind: github
+      quote: The new theorem proves this implication in Lean. Both conjectures remain open.
+    authors:
+      - frido22
+    notes: "Filed automatically by the formal-conjectures pull requests sweep. Matched on \"Oppermann's Conjecture\". Classifier rationale: The document proves a conditional implication related to Oppermann's conjecture but states the conjecture itself is still open. Unreviewed: this records that a claim was made, not that it is correct."
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/Oppermann.lean
     source: google-deepmind/formal-conjectures

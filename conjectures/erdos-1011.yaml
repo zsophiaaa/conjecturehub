@@ -15,7 +15,23 @@ openness_basis:
   asserted_by: erdosproblems.com
   asserted_on: 2025-09-10
   note: No formalization is indexed for this problem yet; read the statement upstream.
-claims: []
+claims:
+  - id: erdos-1011-sweep-a381acd6
+    asserted_on: 2026-11-27
+    type: partial
+    scope: n ≥ 47 (five‑colour threshold)
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-28
+    source:
+      title: "formal-conjectures PR #8463: feat(ErdosProblems/1011): record the five-colour threshold for n ≥ 47"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/8463
+      kind: github
+      quote: "For every $n\\ge47$, an $n$-vertex graph of chromatic number at least five contains a triangle if it has at least $\\lfloor(n-6)^2/4\\rfloor+6$ edges. ... General Erdős #1011 remains open."
+    authors:
+      - prabhavag
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős #1011". Classifier rationale: The PR proves the five‑colour threshold for all $n\ge47$, but states the full conjecture is still open. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
