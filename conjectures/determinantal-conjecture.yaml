@@ -28,7 +28,23 @@ openness_basis:
   meaning: no_published_solution_known_to_curator
   asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: determinantal-conjecture-sweep-83b0a6a2
+    asserted_on: 2026-11-28
+    type: proved
+    scope: n = 2
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-28
+    source:
+      title: "formal-conjectures PR #8564: Prove the two-by-two Marcus–de Oliveira determinantal conjecture"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/8564
+      kind: github
+      quote: This proves the existing Marcus–de Oliveira determinantal conjecture for two-by-two normal complex matrices with arbitrary spectra.
+    authors:
+      - frido22
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Determinantal conjecture". Classifier rationale: The document claims a proof for the 2×2 case of the conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/DeterminantalConjecture.lean
     source: google-deepmind/formal-conjectures
