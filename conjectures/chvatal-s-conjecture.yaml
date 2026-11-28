@@ -26,7 +26,22 @@ openness_basis:
   meaning: no_published_solution_known_to_curator
   asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: chvatal-s-conjecture-sweep-92102568
+    asserted_on: 2026-11-28
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-28
+    source:
+      title: "formal-conjectures PR #8588: feat(ErdosProblems/701): mark as solved with a formal proof"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/8588
+      kind: github
+      quote: Chang, Liu and Liu proved the conjecture in [arXiv:2609.19123].
+    authors:
+      - max-otc
+    notes: "Filed automatically by the formal-conjectures pull requests sweep. Matched on \"Chvátal's Conjecture\". Classifier rationale: The PR states the conjecture is marked as research solved based on a new proof. Unreviewed: this records that a claim was made, not that it is correct."
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Paper/Chvatal.lean
     source: google-deepmind/formal-conjectures

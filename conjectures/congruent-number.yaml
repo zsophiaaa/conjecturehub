@@ -48,7 +48,55 @@ openness_basis:
   meaning: no_published_solution_known_to_curator
   asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: congruent-number-sweep-23460ceb
+    asserted_on: 2026-11-28
+    type: partial
+    scope: n = 17 (and 17k^2)
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-28
+    source:
+      title: "formal-conjectures PR #8597: feat(Wikipedia/CongruentNumber): add not_congruentNumber_17 and link a formal proof"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/8597
+      kind: github
+      quote: 17 (and every $17k^2$) is not a congruent number.
+    authors:
+      - EulersMules
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Congruent Number". Classifier rationale: The PR claims a formal proof that 17 and its square‑multiple are not congruent numbers, resolving that specific case. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: congruent-number-sweep-bed0916b
+    asserted_on: 2026-11-28
+    type: partial
+    scope: numbers of the form pq (and pq·k^2) with distinct primes p,q ≡ 3 mod 8
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-28
+    source:
+      title: "formal-conjectures PR #8596: feat(Wikipedia/CongruentNumber): add not_congruentNumber_pq and link a formal proof"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/8596
+      kind: github
+      quote: if $p$ and $q$ are distinct primes with $p \equiv q \equiv 3 \pmod{8}$, then $pq$ (and every $pq k^2$) is not a congruent number.
+    authors:
+      - EulersMules
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Congruent Number". Classifier rationale: The PR provides a formal proof of a specific infinite family of non‑congruent numbers, which is a partial result on the Congruent Number conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: congruent-number-sweep-2353933d
+    asserted_on: 2026-11-28
+    type: partial
+    scope: primes p ≡ 5 (mod 8), numbers 2p and 2p·k^2
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-28
+    source:
+      title: "formal-conjectures PR #8590: feat(Wikipedia/CongruentNumber): add not_congruentNumber_two_p and link a formal proof"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/8590
+      kind: github
+      quote: if $p$ is a prime with $p \equiv 5 \pmod{8}$, then $2p$ (and every $2p k^2$) is not a congruent number.
+    authors:
+      - EulersMules
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Congruent Number". Classifier rationale: The PR asserts a new theorem proving non‑congruence for a specific infinite family, which is a partial result on the Congruent Number conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/CongruentNumber.lean
     source: google-deepmind/formal-conjectures

@@ -78,6 +78,21 @@ claims:
       url: https://www.erdosproblems.com/321
       kind: dataset
     notes: Upstream records this as solved without specifying the direction.
+  - id: erdos-321-sweep-0f1bd294
+    asserted_on: 2026-11-28
+    type: partial
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-28
+    source:
+      title: "formal-conjectures PR #8576: Prove a finite lower bound for Erdős Problem 321"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/8576
+      kind: github
+      quote: This PR formalizes the doubling criterion and the resulting lower bound of $2^{|U(N)|}$ distinct sums, giving $|U(N)|\le R(N)$.
+    authors:
+      - frido22
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 321". Classifier rationale: The document claims a new lower‑bound result, which is a partial resolution of the conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/ErdosProblems/321.lean
     source: google-deepmind/formal-conjectures

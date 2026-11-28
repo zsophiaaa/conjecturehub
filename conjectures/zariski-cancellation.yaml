@@ -42,7 +42,39 @@ openness_basis:
   meaning: no_published_solution_known_to_curator
   asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: zariski-cancellation-sweep-0631fcbf
+    asserted_on: 2026-11-28
+    type: partial
+    scope: dimension 2
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-28
+    source:
+      title: "formal-conjectures PR #8605: feat(Arxiv/2208.14736/ZariskiCancellation): link Palomar formal proof of dim_two"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/8605
+      kind: github
+      quote: two-dimensional Zariski cancellation over an arbitrary field `k` of any characteristic
+    authors:
+      - yooeonwoo
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Zariski Cancellation". Classifier rationale: The PR links a formal proof of the two‑dimensional case, which is a partial resolution of the conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: zariski-cancellation-sweep-94ba5746
+    asserted_on: 2026-11-28
+    type: partial
+    scope: dimension 2
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-28
+    source:
+      title: "formal-conjectures PR #8603: feat(Arxiv/2208.14736): link Palomar formal proof of zariski_cancellation_problem.variants.dim_two"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/8603
+      kind: github
+      quote: this establishes only the dimension-2 variant `dim_two`
+    authors:
+      - yooeonwoo
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Zariski Cancellation". Classifier rationale: The document reports a formal proof of the conjecture in the case of two variables, not the full statement. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Arxiv/2208.14736/ZariskiCancellation.lean
     source: google-deepmind/formal-conjectures

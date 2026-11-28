@@ -12,7 +12,39 @@ openness_basis:
   meaning: unknown
   asserted_by: wikidata
   note: Identity record only. No statement or status has been ingested for this conjecture yet.
-claims: []
+claims:
+  - id: van-der-waerden-permanent-conjecture-sweep-27d2cb1c
+    asserted_on: 2026-11-28
+    type: partial
+    scope: divisibility bound for integer matrices with odd entries
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-28
+    source:
+      title: "formal-conjectures PR #8584: Formalize Kräuter’s minimum permanent conjecture and prove its divisibility bound"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/8584
+      kind: github
+      quote: prove its divisibility bound
+    authors:
+      - frido22
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "permanent". Classifier rationale: The PR reports a partial result (a divisibility bound) but states the full conjecture remains open. Unreviewed: this records that a claim was made, not that it is correct.'
+  - id: van-der-waerden-permanent-conjecture-sweep-02ed69da
+    asserted_on: 2026-11-28
+    type: partial
+    scope: positive even orders
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-28
+    source:
+      title: "formal-conjectures PR #8575: Formalize Vu’s zero-permanent conjecture for random sign matrices"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/8575
+      kind: github
+      quote: It also constructs a zero-permanent matrix in each positive even order by balancing the signs in the first column and filling the remaining columns with ones.
+    authors:
+      - frido22
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "permanent". Classifier rationale: The document reports a construction giving a lower bound for p_n in even orders, which is partial progress but not a full resolution. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q16636852
     source: wikidata
