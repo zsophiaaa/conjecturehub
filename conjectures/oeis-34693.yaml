@@ -45,7 +45,22 @@ openness_basis:
   meaning: no_published_solution_known_to_curator
   asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: oeis-34693-sweep-421c56c6
+    asserted_on: 2026-11-28
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-28
+    source:
+      title: "formal-conjectures PR #8606: Add Lean 4 formal_proof links for Erdős #44, #282, and #295"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/8606
+      kind: github
+      quote: All 3 proofs are self-contained, verified in Lean `v4.36.0` + Mathlib `v4.36.0` with **0 errors, 0 warnings, 0 `sorry`, 0 `native_decide`**
+    authors:
+      - aimer-qz
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "exists_k". Classifier rationale: The PR states that a formal Lean proof of the conjecture exists. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/OEIS/34693.lean
     source: google-deepmind/formal-conjectures

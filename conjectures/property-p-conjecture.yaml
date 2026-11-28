@@ -24,6 +24,22 @@ claims:
       url: https://en.wikipedia.org/wiki/Property_P_conjecture
       kind: wikipedia
     notes: Standing taken from English Wikipedia's categorisation (Wikipedia categorises this as proved). Nobody here has read the paper that settled it, which is what the secondary attestation says; replace this claim with one citing that paper when someone has it to hand.
+  - id: property-p-conjecture-sweep-b7b5981e
+    asserted_on: 2026-11-28
+    type: partial
+    scope: parts.i
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-28
+    source:
+      title: "formal-conjectures PR #8610: feat(ErdosProblems/318): prove parts.i"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/8610
+      kind: github
+      quote: "Proves `erdos_318.parts.i`: there is a set with positive density that does not have property `P₁`."
+    authors:
+      - Varshavia
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Property P". Classifier rationale: The pull request claims to prove part i of the property P conjecture. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://www.wikidata.org/wiki/Q7250222
     source: wikidata

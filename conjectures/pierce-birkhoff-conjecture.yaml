@@ -41,7 +41,23 @@ openness_basis:
   meaning: no_published_solution_known_to_curator
   asserted_by: google-deepmind/formal-conjectures
   note: Categorized upstream as "research open" at v4.32.0.
-claims: []
+claims:
+  - id: pierce-birkhoff-conjecture-sweep-29e296ce
+    asserted_on: 2026-11-28
+    type: proved
+    scope: dimension 2
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-28
+    source:
+      title: "formal-conjectures PR #8604: feat(Wikipedia/PierceBirkhoff): link Palomar formal proof of pierce_birkhoff_conjecture_dim_two"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/8604
+      kind: github
+      quote: this establishes only the dimension-2 theorem `pierce_birkhoff_conjecture_dim_two` and does not affect the higher-dimensional conjecture
+    authors:
+      - yooeonwoo
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Pierce–Birkhoff conjecture". Classifier rationale: The document reports a formal proof of the conjecture for the case n=2. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/google-deepmind/formal-conjectures/blob/v4.32.0/FormalConjectures/Wikipedia/PierceBirkhoff.lean
     source: google-deepmind/formal-conjectures
