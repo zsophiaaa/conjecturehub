@@ -27,6 +27,21 @@ claims:
       title: erdosproblems.com records this problem as "proved"
       url: https://www.erdosproblems.com/908
       kind: dataset
+  - id: erdos-908-sweep-2d7e1b2e
+    asserted_on: 2026-11-27
+    type: proved
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-28
+    source:
+      title: "formal-conjectures PR #8452: feat(ErdosProblems/908): Laczkovich decomposition of functions with measurable differences"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/8452
+      kind: github
+      quote: (solved, Laczkovich 1980)
+    authors:
+      - timlantin
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 908". Classifier rationale: The document explicitly labels Erdős Problem 908 as solved by Laczkovich (1980). Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems

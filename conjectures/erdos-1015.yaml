@@ -29,6 +29,21 @@ claims:
       url: https://www.erdosproblems.com/1015
       kind: dataset
     notes: Upstream records this as solved without specifying the direction.
+  - id: erdos-1015-sweep-6a087983
+    asserted_on: 2026-11-27
+    type: resolved_by_prior_literature
+    evidence_tier: unverified_claim
+    attestation: primary
+    state: active
+    recorded_on: 2026-11-28
+    source:
+      title: "formal-conjectures PR #8454: feat(ErdosProblems/1015): covering a 2-coloured K_n by monochromatic copies of K_t"
+      url: https://github.com/google-deepmind/formal-conjectures/pull/8454
+      kind: github
+      quote: Adds [Erdős Problem 1015] (solved, Burr–Erdős–Spencer 1975).
+    authors:
+      - timlantin
+    notes: 'Filed automatically by the formal-conjectures pull requests sweep. Matched on "Erdős Problem 1015". Classifier rationale: The document states the problem is already solved in a 1975 paper. Unreviewed: this records that a claim was made, not that it is correct.'
 provenance:
   - url: https://github.com/teorth/erdosproblems/blob/d031865128a7ddccd85e8099f0f818211cfc9a41/data/problems.yaml
     source: teorth/erdosproblems
